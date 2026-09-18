@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian FLM",
+  "version": "0.1.0",
+  "description": "Exports academic source data from FLM for local import.",
+  "permissions": ["storage"],
+  "host_permissions": [],
+  "action": { "default_title": "Obsidian FLM" }
+}

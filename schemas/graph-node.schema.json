@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obsidian-flm.local/schemas/graph-node.schema.json",
+  "title": "Graph node",
+  "description": "Placeholder storage-neutral graph node contract.",
+  "type": "object",
+  "properties": { "id": { "type": "string" }, "type": { "type": "string" } },
+  "required": ["id", "type"],
+  "additionalProperties": true
+}

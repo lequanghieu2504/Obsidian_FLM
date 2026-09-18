@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obsidian-flm.local/schemas/graph-edge.schema.json",
+  "title": "Graph edge",
+  "description": "Placeholder edge contract with explicit relation category.",
+  "type": "object",
+  "properties": {
+    "sourceId": { "type": "string" },
+    "targetId": { "type": "string" },
+    "relation": { "type": "string" },
+    "category": { "enum": ["official", "inferred"] }
+  },
+  "required": ["sourceId", "targetId", "relation", "category"],
+  "additionalProperties": true
+}

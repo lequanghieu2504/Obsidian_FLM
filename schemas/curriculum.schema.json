@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obsidian-flm.local/schemas/curriculum.schema.json",
+  "title": "Curriculum",
+  "description": "Placeholder contract for a canonical curriculum.",
+  "type": "object",
+  "properties": { "id": { "type": "string" } },
+  "required": ["id"],
+  "additionalProperties": true
+}

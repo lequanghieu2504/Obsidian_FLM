@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obsidian-flm.local/schemas/syllabus.schema.json",
+  "title": "Syllabus",
+  "description": "Placeholder contract for a canonical syllabus.",
+  "type": "object",
+  "properties": { "id": { "type": "string" } },
+  "required": ["id"],
+  "additionalProperties": true
+}

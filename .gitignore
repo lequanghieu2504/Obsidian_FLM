@@ -1,0 +1,17 @@
+.dart_tool/
+.packages
+build/
+coverage/
+*.iml
+node_modules/
+dist/
+*.tsbuildinfo
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+local_data/
+.env
+.env.*
+!.env.example
+*.log

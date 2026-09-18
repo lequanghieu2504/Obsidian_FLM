@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obsidian-flm.local/schemas/course.schema.json",
+  "title": "Course",
+  "description": "Placeholder contract for a canonical course.",
+  "type": "object",
+  "properties": { "id": { "type": "string" } },
+  "required": ["id"],
+  "additionalProperties": true
+}

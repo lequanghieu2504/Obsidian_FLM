@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obsidian-flm.local/schemas/course-package.schema.json",
+  "title": "Course transport package",
+  "type": "object",
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "source": { "const": "FLM" },
+    "exportedAt": { "type": "string", "format": "date-time" },
+    "data": { "type": "object" }
+  },
+  "required": ["schemaVersion", "source", "exportedAt", "data"],
+  "additionalProperties": false
+}
