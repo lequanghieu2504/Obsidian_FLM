@@ -42,6 +42,11 @@ export interface SyllabusData {
   sections: Array<{ heading: string; headers: string[]; rows: string[][] }>;
 }
 
+export interface FailedSubject {
+  code: string;
+  reason: string;
+}
+
 export interface CrawlProgress {
   status: 'idle' | 'crawling' | 'cancelled' | 'complete' | 'error';
   curriculumId?: string;
@@ -51,6 +56,7 @@ export interface CrawlProgress {
   uniqueSubjectCount: number;
   completed: number;
   failed: number;
+  failures: FailedSubject[];
   currentSubject?: string;
   error?: string;
   canExport: boolean;

@@ -17,6 +17,16 @@ function render(progress: CrawlProgress): void {
   element('progress').textContent = `${progress.completed} completed · ${progress.failed} failed`;
   element('current').textContent = progress.currentSubject ?? progress.status;
   element('error').textContent = progress.error ?? '';
+  const failuresPanel = element<HTMLElement>('failures-panel');
+  const failures = element<HTMLUListElement>('failures');
+  failures.replaceChildren(...progress.failures.map((failure) => {
+    const item = document.createElement('li');
+    const code = document.createElement('strong');
+    code.textContent = failure.code;
+    item.append(code, document.createTextNode(` — ${failure.reason}`));
+    return item;
+  }));
+  failuresPanel.hidden = progress.failures.length === 0;
   const active = progress.status === 'crawling';
   crawl.disabled = !detection.valid || active;
   cancel.disabled = !active;

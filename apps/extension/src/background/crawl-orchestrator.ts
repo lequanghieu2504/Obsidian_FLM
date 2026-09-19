@@ -4,7 +4,7 @@ import { extractComboDetail, extractComboList } from '../extractors/combo';
 import { extractCurriculum } from '../extractors/curriculum';
 import { extractSyllabusDetail, extractSyllabusResults } from '../extractors/syllabus';
 import { PackageBuilder } from '../transport/package-builder';
-import type { ComboDetail, ComboSummary, CrawlProgress, CurriculumData, SyllabusData } from '../types/models';
+import type { ComboDetail, ComboSummary, CrawlProgress, CurriculumData, FailedSubject, SyllabusData } from '../types/models';
 import { uniqueRealSubjectCodes } from '../utils/subjects';
 
 const FLM = 'https://flm.fpt.edu.vn';
@@ -14,8 +14,6 @@ const delay = (ms: number, signal: AbortSignal) => new Promise<void>((resolve, r
 });
 
 interface Source { html: string; url: string }
-interface FailedSubject { code: string; reason: string }
-
 export class CrawlOrchestrator {
   private controller?: AbortController;
   private readonly sources = new Map<string, Source>();
@@ -24,17 +22,17 @@ export class CrawlOrchestrator {
   private comboDetails: ComboDetail[] = [];
   private syllabi: SyllabusData[] = [];
   private failedSubjects: FailedSubject[] = [];
-  private progress: CrawlProgress = { status: 'idle', seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed: 0, canExport: false, canRetry: false };
+  private progress: CrawlProgress = { status: 'idle', seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed: 0, failures: [], canExport: false, canRetry: false };
 
   constructor(private readonly requestDelayMs = 400, private readonly retries = 2) {}
-  getProgress(): CrawlProgress { return { ...this.progress }; }
+  getProgress(): CrawlProgress { return { ...this.progress, failures: this.failedSubjects.map((failure) => ({ ...failure })) }; }
   cancel(): void { this.controller?.abort(new DOMException('Crawl cancelled', 'AbortError')); }
 
   async start(curriculumId: string): Promise<void> {
     this.controller?.abort();
     this.controller = new AbortController();
     this.sources.clear(); this.combos = []; this.comboDetails = []; this.syllabi = []; this.failedSubjects = [];
-    this.progress = { status: 'crawling', curriculumId, seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed: 0, canExport: false, canRetry: false };
+    this.progress = { status: 'crawling', curriculumId, seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed: 0, failures: [], canExport: false, canRetry: false };
     try {
       const curriculumSource = await this.fetchPage(`${FLM}/gui/role/student/CurriculumDetails?curid=${encodeURIComponent(curriculumId)}`);
       const curriculumDocument = this.document(curriculumSource);
@@ -74,7 +72,8 @@ export class CrawlOrchestrator {
     this.controller = new AbortController();
     const subjects = this.failedSubjects.map(({ code }) => code);
     this.failedSubjects = [];
-    this.progress.failed = 0; this.progress.status = 'crawling'; this.progress.canRetry = false;
+    this.progress.failed = 0; this.progress.failures = []; this.progress.error = undefined;
+    this.progress.status = 'crawling'; this.progress.canRetry = false;
     await this.crawlSubjects(subjects);
     this.progress.status = this.controller.signal.aborted ? 'cancelled' : 'complete';
     this.progress.canRetry = this.failedSubjects.length > 0;
@@ -105,16 +104,22 @@ export class CrawlOrchestrator {
       try {
         const search = await this.fetchPage(`${FLM}/gui/role/student/SyllabusManagement?searchOn=Code&keyword=${encodeURIComponent(code)}`);
         const results = extractSyllabusResults(this.document(search), search.url).filter((item) => item.isActive);
+        if (!results.length) throw new Error('No active syllabus found');
         for (const result of results) {
           if (this.sources.has(`raw/syllabi/${result.id}.html`)) continue;
           const source = await this.fetchPage(result.href);
+          const syllabus = extractSyllabusDetail(this.document(source), result.id);
+          if (!Object.keys(syllabus.metadata).length && !syllabus.sections.length) {
+            throw new Error(`Syllabus ${result.id} did not contain recognizable data`);
+          }
           this.sources.set(`raw/syllabi/${result.id}.html`, source);
-          this.syllabi.push(extractSyllabusDetail(this.document(source), result.id));
+          this.syllabi.push(syllabus);
         }
         this.progress.completed += 1;
       } catch (error) {
         this.failedSubjects.push({ code, reason: error instanceof Error ? error.message : String(error) });
         this.progress.failed = this.failedSubjects.length;
+        this.progress.failures = this.failedSubjects.map((failure) => ({ ...failure }));
       }
     }
   }
