@@ -3,8 +3,10 @@ import { describe, expect, it } from 'vitest';
 import { isAuthenticationPage } from '../src/extractors/auth';
 import { extractComboDetail, extractComboList } from '../src/extractors/combo';
 import { extractCurriculum, isSeComboPlaceholder } from '../src/extractors/curriculum';
-import { extractSyllabusResults } from '../src/extractors/syllabus';
+import { extractSyllabusDetail, extractSyllabusResults } from '../src/extractors/syllabus';
 import { uniqueRealSubjectCodes } from '../src/utils/subjects';
+import { assertComboDetailHasSubjects, assertSeComboCoverage } from '../src/utils/combo-validation';
+import { resolvePackageStatus } from '../src/utils/package-status';
 import { PackageBuilder } from '../src/transport/package-builder';
 
 const doc = (html: string) => parseHTML(html).document as unknown as Document;
@@ -32,6 +34,28 @@ describe('curriculum extraction', () => {
 
   it('handles missing and malformed tables without throwing', () => {
     expect(extractCurriculum(doc('<table><tr><td>Name</td><td>Only metadata</td></tr></table>'), '9')).toMatchObject({ plos: [], subjects: [] });
+  });
+
+  it('extracts credits from the live FLM NoCredit header', () => {
+    const value = extractCurriculum(doc(`<table><tr><th>Subject Code</th><th>Subject Name</th><th>Semester</th><th>NoCredit</th></tr>
+      <tr><td>PRF192</td><td>Programming Fundamentals</td><td>1</td><td>3</td></tr></table>`), '3335');
+    expect(value.subjects[0]).toMatchObject({ code: 'PRF192', credits: '3' });
+  });
+
+  it('extracts live PLO headers, decision number, and curriculum action links', () => {
+    const value = extractCurriculum(doc(`
+      <table><tr><th>Field</th><th>Value</th></tr>
+        <tr><td>DecisionNo MM/dd/yyyy:</td><td>1140/QĐ-ĐHFPT dated 09/11/2026</td></tr>
+        <tr><td></td><td><a href="/PO/Index?id=3335">View PO</a><a href="/Compo/ViewComBo?cur_id=3335">View Combo</a><a href="/Elective/ViewElective?cur_id=3335">View Elective</a></td></tr></table>
+      <table><tr><th>#</th><th>PLO Name</th><th>PLO Description</th></tr>
+        <tr><td>1</td><td>PLO1</td><td>Apply foundational knowledge</td></tr></table>`), '3335');
+    expect(value.metadata.decision).toBe('1140/QĐ-ĐHFPT dated 09/11/2026');
+    expect(value.metadata.links).toEqual({
+      'View PO': 'https://flm.fpt.edu.vn/PO/Index?id=3335',
+      'View Combo': 'https://flm.fpt.edu.vn/Compo/ViewComBo?cur_id=3335',
+      'View Elective': 'https://flm.fpt.edu.vn/Elective/ViewElective?cur_id=3335',
+    });
+    expect(value.plos).toEqual([{ code: 'PLO1', description: 'Apply foundational knowledge' }]);
   });
 });
 
@@ -61,6 +85,18 @@ describe('subject collection', () => {
   });
 });
 
+describe('combo structural validation', () => {
+  it('requires parsed combos when the curriculum contains SE placeholders', () => {
+    expect(() => assertSeComboCoverage([{ code: 'SE_COM*1', isPlaceholder: true }], [])).toThrow(/no SE combo/i);
+    expect(() => assertSeComboCoverage([{ code: 'PRF192', isPlaceholder: false }], [])).not.toThrow();
+  });
+
+  it('rejects an empty selected combo detail', () => {
+    const combo = { id: '340', code: 'SE_COM5.2', href: 'https://flm.fpt.edu.vn/Compo/Detail/340' };
+    expect(() => assertComboDetailHasSubjects(combo, { id: '340', subjects: [] })).toThrow(/SE_COM5\.2.*340/i);
+  });
+});
+
 describe('syllabus result extraction', () => {
   it('reads active and approved values from checkbox state and keeps all rows', () => {
     const document = doc(`<table><tr><th>Subject Code</th><th>Name</th><th>IsActive</th><th>IsApproved</th><th>Action</th></tr>
@@ -76,6 +112,28 @@ describe('syllabus result extraction', () => {
   it('returns no results for a missing result table', () => expect(extractSyllabusResults(doc('<p>none</p>'), 'https://flm.fpt.edu.vn')).toEqual([]));
 });
 
+describe('lossless syllabus detail extraction', () => {
+  it('preserves checkbox state, inputs, textarea, selected options, and links', () => {
+    const document = doc(`
+      <table>
+        <tr><td>IsScored</td><td><input type="checkbox" checked disabled></td></tr>
+        <tr><td>IsPublished</td><td><input type="checkbox" disabled></td></tr>
+        <tr><td>Credit</td><td><input name="credit" value="3"></td></tr>
+        <tr><td>Tools</td><td></td></tr>
+        <tr><td>Note</td><td><textarea>Academic note</textarea></td></tr>
+        <tr><td>Level</td><td><select><option value="1">Basic</option><option value="2" selected>Advanced</option></select></td></tr>
+        <tr><td>Material</td><td><a href="/material/10">Course book</a></td></tr>
+      </table>`);
+    const syllabus = extractSyllabusDetail(document, '10', 'https://flm.fpt.edu.vn/gui/role/student/SyllabusDetails?sylID=10');
+    expect(syllabus.metadata).toMatchObject({ IsScored: 'true', IsPublished: 'false', Credit: '3', Tools: '', Note: 'Academic note', Level: 'Advanced' });
+    expect(syllabus.sections[0].rows.map((row) => row[1])).toEqual(['true', 'false', '3', '', 'Academic note', 'Advanced', 'Course book']);
+    expect(syllabus.sections[0].richRows[0][1].controls[0]).toMatchObject({ type: 'checkbox', checked: true });
+    expect(syllabus.sections[0].richRows[1][1].controls[0]).toMatchObject({ type: 'checkbox', checked: false });
+    expect(syllabus.sections[0].richRows[5][1].controls[0].selectedOptions).toEqual([{ text: 'Advanced', value: '2' }]);
+    expect(syllabus.sections[0].richRows[6][1].links).toEqual([{ text: 'Course book', href: 'https://flm.fpt.edu.vn/material/10' }]);
+  });
+});
+
 describe('authentication detection', () => {
   it('detects a structural login form and a login redirect', () => {
     const login = doc('<form><input name="username"><input type="password"><button type="submit">Continue</button></form>');
@@ -89,6 +147,18 @@ describe('authentication detection', () => {
 });
 
 describe('package builder', () => {
+  const progress = (status: 'idle' | 'crawling' | 'cancelled' | 'complete' | 'error', failed = 0) => ({
+    status, seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed, failures: [], canExport: true, canRetry: failed > 0,
+  });
+
+  it('marks incomplete, failed, cancelled, and errored crawls explicitly', () => {
+    expect(resolvePackageStatus(progress('complete'))).toBe('complete');
+    expect(resolvePackageStatus(progress('complete', 1))).toBe('partial');
+    expect(resolvePackageStatus(progress('crawling'))).toBe('partial');
+    expect(resolvePackageStatus(progress('cancelled'))).toBe('cancelled');
+    expect(resolvePackageStatus(progress('error'))).toBe('error');
+  });
+
   it('creates a ZIP-compatible single-file package', async () => {
     const archive = new PackageBuilder();
     archive.addJson('manifest.json', { version: 1 });

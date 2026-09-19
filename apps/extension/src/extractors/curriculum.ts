@@ -7,11 +7,11 @@ export const isSeComboPlaceholder = (code: string): boolean => /^SE_COM(?:\*|\b)
 export function extractCurriculum(document: Document, curriculumId: string): CurriculumData {
   const values = extractLabelValues(document);
   const subjectTable = findTable(document, ['Subject Code', 'Subject Name']);
-  const ploTable = findTable(document, ['PLO']);
+  const ploTable = findTable(document, ['PLO Name', 'PLO Description']) ?? findTable(document, ['PLO']);
   const plos: Plo[] = [];
   if (ploTable) {
     const headers = tableHeaders(ploTable);
-    const codeAt = Math.max(0, headerIndex(headers, 'PLO', 'PLO Code', 'Code'));
+    const codeAt = Math.max(0, headerIndex(headers, 'PLO', 'PLO Name', 'PLO Code', 'Code'));
     const descriptionAt = headerIndex(headers, 'Description', 'PLO Description', 'Name');
     for (const row of dataRows(ploTable)) {
       const rowCells = cells(row);
@@ -33,11 +33,18 @@ export function extractCurriculum(document: Document, curriculumId: string): Cur
         code,
         name: value('Subject Name', 'Name'),
         semester: value('Semester'),
-        credits: value('Credits', 'Credit'),
+        credits: value('Credits', 'Credit', 'NoCredit', 'No Credit'),
         prerequisite: value('Prerequisite', 'Pre-requisite', 'Note'),
         isPlaceholder: isComboPlaceholder(code),
       });
     }
+  }
+  const links: Record<string, string> = {};
+  for (const link of document.querySelectorAll('a[href]')) {
+    const label = clean(link.textContent);
+    if (!/^View (PO|Combo|Elective)$/i.test(label)) continue;
+    const href = link.getAttribute('href');
+    if (href) links[label] = new URL(href, 'https://flm.fpt.edu.vn').href;
   }
   return {
     metadata: {
@@ -46,7 +53,8 @@ export function extractCurriculum(document: Document, curriculumId: string): Cur
       name: lookup(values, 'Name', 'Curriculum Name'),
       englishName: lookup(values, 'English Name'),
       description: lookup(values, 'Description'),
-      decision: lookup(values, 'Decision'),
+      decision: lookup(values, 'Decision', 'DecisionNo MM/dd/yyyy', 'Decision No'),
+      links,
     },
     plos,
     subjects,

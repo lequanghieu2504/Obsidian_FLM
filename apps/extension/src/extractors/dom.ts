@@ -29,7 +29,8 @@ export function headerIndex(headers: string[], ...names: string[]): number {
 
 export function dataRows(table: Element): HTMLTableRowElement[] {
   const rows = Array.from(table.querySelectorAll('tr')) as HTMLTableRowElement[];
-  return rows.filter((row, index) => index > 0 && cells(row).some((cell) => clean(cell.textContent)));
+  const headerRow = table.querySelector('thead tr') ?? rows.find((row) => row.querySelector(':scope > th'));
+  return rows.filter((row) => row !== headerRow && cells(row).some((cell) => clean(cell.textContent) || cell.querySelector('input, textarea, select')));
 }
 
 export function extractLabelValues(document: ParentNode): Record<string, string> {

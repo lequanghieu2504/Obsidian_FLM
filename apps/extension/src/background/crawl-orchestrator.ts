@@ -5,6 +5,8 @@ import { extractCurriculum } from '../extractors/curriculum';
 import { extractSyllabusDetail, extractSyllabusResults } from '../extractors/syllabus';
 import { PackageBuilder } from '../transport/package-builder';
 import type { ComboDetail, ComboSummary, CrawlProgress, CurriculumData, FailedSubject, SyllabusData } from '../types/models';
+import { assertComboDetailHasSubjects, assertSeComboCoverage } from '../utils/combo-validation';
+import { resolvePackageStatus } from '../utils/package-status';
 import { uniqueRealSubjectCodes } from '../utils/subjects';
 
 const FLM = 'https://flm.fpt.edu.vn';
@@ -46,12 +48,14 @@ export class CrawlOrchestrator {
       const combos = extractComboList(this.document(comboSource), comboSource.url);
       this.combos = combos;
       this.sources.set('raw/combo-list.html', comboSource);
+      assertSeComboCoverage(curriculum.subjects, combos);
       this.progress.seComboCount = combos.length;
       for (const combo of combos) {
         const source = await this.fetchPage(combo.href);
         const detail = extractComboDetail(this.document(source), combo.id);
-        this.comboDetails.push(detail);
         this.sources.set(`raw/combo-details/${combo.id}.html`, source);
+        assertComboDetailHasSubjects(combo, detail);
+        this.comboDetails.push(detail);
       }
       const subjects = uniqueRealSubjectCodes([...curriculum.subjects, ...this.comboDetails.flatMap((combo) => combo.subjects)]);
       this.progress.uniqueSubjectCount = subjects.length;
@@ -91,6 +95,8 @@ export class CrawlOrchestrator {
     archive.addJson('manifest.json', {
       format: 'flm-curriculum-package', version: 1, createdAt: new Date().toISOString(),
       source: FLM, curriculumId: this.curriculum.metadata.curriculumId,
+      status: resolvePackageStatus(this.getProgress()),
+      error: this.progress.error,
       counts: { combos: this.comboDetails.length, syllabi: this.syllabi.length, failedSubjects: this.failedSubjects.length },
       failures: this.failedSubjects,
     });
@@ -108,7 +114,7 @@ export class CrawlOrchestrator {
         for (const result of results) {
           if (this.sources.has(`raw/syllabi/${result.id}.html`)) continue;
           const source = await this.fetchPage(result.href);
-          const syllabus = extractSyllabusDetail(this.document(source), result.id);
+          const syllabus = extractSyllabusDetail(this.document(source), result.id, source.url);
           if (!Object.keys(syllabus.metadata).length && !syllabus.sections.length) {
             throw new Error(`Syllabus ${result.id} did not contain recognizable data`);
           }

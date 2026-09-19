@@ -46,6 +46,7 @@ function render(progress: CrawlProgress): void {
   cancel.disabled = !active;
   retry.disabled = active || !progress.canRetry;
   exportButton.disabled = active || !progress.canExport;
+  element('export-label').textContent = progress.canExport && progress.status !== 'complete' ? 'Export partial' : 'Export';
   if (active && !timer) timer = window.setInterval(refresh, 500);
   if (!active && timer) { clearInterval(timer); timer = undefined; }
 }

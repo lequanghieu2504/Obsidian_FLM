@@ -5,6 +5,7 @@ export interface CurriculumMetadata {
   englishName?: string;
   description?: string;
   decision?: string;
+  links?: Record<string, string>;
 }
 
 export interface Plo { code: string; description: string }
@@ -39,7 +40,22 @@ export interface SyllabusSummary {
 export interface SyllabusData {
   id: string;
   metadata: Record<string, string>;
-  sections: Array<{ heading: string; headers: string[]; rows: string[][] }>;
+  sections: Array<{ heading: string; headers: string[]; rows: string[][]; richRows: SyllabusCell[][] }>;
+}
+
+export interface SyllabusControl {
+  tag: 'input' | 'textarea' | 'select';
+  type?: string;
+  name?: string;
+  value?: string;
+  checked?: boolean;
+  selectedOptions?: Array<{ text: string; value: string }>;
+}
+
+export interface SyllabusCell {
+  text: string;
+  links: Array<{ text: string; href: string }>;
+  controls: SyllabusControl[];
 }
 
 export interface FailedSubject {
