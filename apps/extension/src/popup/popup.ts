@@ -14,9 +14,21 @@ function render(progress: CrawlProgress): void {
   element('curriculum').textContent = [progress.curriculumCode ?? detection.curriculumCode, progress.curriculumName ?? detection.curriculumName, progress.curriculumId ?? detection.curriculumId].filter(Boolean).join(' · ');
   element('combos').textContent = String(progress.seComboCount);
   element('subjects').textContent = String(progress.uniqueSubjectCount);
-  element('progress').textContent = `${progress.completed} completed · ${progress.failed} failed`;
-  element('current').textContent = progress.currentSubject ?? progress.status;
-  element('error').textContent = progress.error ?? '';
+  element('completed').textContent = String(progress.completed);
+  element('failed').textContent = String(progress.failed);
+  const processed = progress.completed + progress.failed;
+  const total = progress.uniqueSubjectCount;
+  const percent = total ? Math.min(100, Math.round((processed / total) * 100)) : 0;
+  element('progress').textContent = `${processed} / ${total}`;
+  element('current').textContent = progress.currentSubject ? `Crawling ${progress.currentSubject}` : progress.status === 'idle' ? 'Ready to crawl' : progress.status;
+  element<HTMLElement>('progress-fill').style.width = `${percent}%`;
+  document.querySelector<HTMLElement>('.progress-track')?.setAttribute('aria-valuenow', String(percent));
+  const statusBadge = element('status-badge');
+  statusBadge.textContent = progress.status;
+  statusBadge.className = `status-badge ${progress.status}`;
+  const error = element('error');
+  error.textContent = progress.error ?? '';
+  error.hidden = !progress.error;
   const failuresPanel = element<HTMLElement>('failures-panel');
   const failures = element<HTMLUListElement>('failures');
   failures.replaceChildren(...progress.failures.map((failure) => {
@@ -27,6 +39,7 @@ function render(progress: CrawlProgress): void {
     return item;
   }));
   failuresPanel.hidden = progress.failures.length === 0;
+  element('failure-count').textContent = String(progress.failures.length);
   const active = progress.status === 'crawling';
   crawl.disabled = !detection.valid || active;
   cancel.disabled = !active;
@@ -56,8 +69,10 @@ async function initialize(): Promise<void> {
     }
   }
   element('page-status').textContent = detection.valid
-    ? `Curriculum detected (ID ${detection.curriculumId})`
+    ? `Curriculum ID ${detection.curriculumId} is ready to crawl.`
     : 'Open an FLM Curriculum Details or Combo Management page before crawling.';
+  element('page-title').textContent = detection.valid ? 'FLM page connected' : 'No curriculum detected';
+  element('page-card').className = `page-card ${detection.valid ? 'valid' : 'invalid'}`;
   await refresh();
 }
 

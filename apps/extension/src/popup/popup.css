@@ -1,13 +1,52 @@
-:root { color-scheme: light dark; font: 13px/1.4 system-ui, sans-serif; }
-body { margin: 0; min-width: 320px; }
-main { padding: 16px; }
-h1 { font-size: 17px; margin: 0 0 12px; }
-h2 { font-size: 14px; margin: 0 0 6px; }
-dl { display: grid; grid-template-columns: 88px 1fr; gap: 5px 10px; margin: 12px 0; }
-dt { color: #777; } dd { margin: 0; overflow-wrap: anywhere; }
-.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-button { padding: 7px 9px; }
-#error { color: #c33; min-height: 1.4em; }
-#failures-panel { margin: 10px 0; max-height: 150px; overflow: auto; color: #c33; }
-#failures { margin: 0; padding-left: 20px; }
-#failures li { margin-bottom: 4px; overflow-wrap: anywhere; }
+:root { color-scheme: dark; font: 13px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #e8edf5; background: #0b0e14; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 380px; background: #0b0e14; }
+main { padding: 18px; }
+.app-header { display: flex; align-items: center; gap: 11px; margin-bottom: 16px; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; flex: 0 0 auto; border: 1px solid rgba(167,139,250,.35); border-radius: 11px; color: #fff; font-size: 16px; font-weight: 800; background: linear-gradient(145deg,#7c3aed,#4f46e5); box-shadow: 0 8px 24px rgba(79,70,229,.25); }
+.brand-copy { min-width: 0; flex: 1; }
+h1 { margin: 0; font-size: 15px; line-height: 1.25; letter-spacing: -.01em; }
+.brand-copy p { margin: 2px 0 0; color: #7f899a; font-size: 11px; }
+.status-badge { padding: 4px 8px; border: 1px solid #293141; border-radius: 999px; color: #a4adba; background: #121722; font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.status-badge.crawling { color: #c4b5fd; border-color: rgba(139,92,246,.4); background: rgba(124,58,237,.14); }
+.status-badge.complete { color: #6ee7b7; border-color: rgba(16,185,129,.35); background: rgba(16,185,129,.1); }
+.status-badge.error,.status-badge.cancelled { color: #fda4af; border-color: rgba(244,63,94,.35); background: rgba(244,63,94,.1); }
+.page-card { display: flex; align-items: flex-start; gap: 10px; padding: 11px 12px; border: 1px solid #242b38; border-radius: 12px; background: #111620; }
+.page-indicator { width: 8px; height: 8px; margin-top: 5px; flex: 0 0 auto; border-radius: 50%; background: #64748b; box-shadow: 0 0 0 4px rgba(100,116,139,.1); }
+.page-card.valid { border-color: rgba(16,185,129,.26); }
+.page-card.valid .page-indicator { background: #34d399; box-shadow: 0 0 0 4px rgba(52,211,153,.1); }
+.page-card.invalid .page-indicator { background: #fb7185; box-shadow: 0 0 0 4px rgba(251,113,133,.1); }
+.page-card strong { display: block; font-size: 12px; }
+.page-card p { margin: 2px 0 0; color: #8d96a5; font-size: 11px; }
+.workspace { margin-top: 12px; }
+.curriculum-card { padding: 12px; border: 1px solid #202735; border-radius: 12px; background: #0f141d; }
+.eyebrow { display: block; margin-bottom: 4px; color: #737e90; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.curriculum-card strong { display: block; color: #dfe5ef; font-size: 12px; overflow-wrap: anywhere; }
+.stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; margin-top: 8px; }
+.stat { padding: 10px 8px; border: 1px solid #202735; border-radius: 11px; text-align: center; background: #0f141d; }
+.stat span { display: block; color: #f7f9fc; font-size: 18px; font-weight: 750; line-height: 1.1; }
+.stat small { display: block; margin-top: 4px; color: #707b8d; font-size: 9px; }
+.stat.success span { color: #6ee7b7; } .stat.danger span { color: #fda4af; }
+.progress-block { margin-top: 12px; }
+.progress-copy { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 7px; color: #8c96a6; font-size: 10px; }
+#current { max-width: 260px; overflow: hidden; color: #cbd3df; text-overflow: ellipsis; white-space: nowrap; }
+.progress-track { height: 5px; overflow: hidden; border-radius: 99px; background: #1d2431; }
+#progress-fill { display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg,#7c3aed,#a78bfa); transition: width .25s ease; }
+.global-error { margin: 10px 0 0; padding: 9px 10px; border: 1px solid rgba(244,63,94,.25); border-radius: 10px; color: #fecdd3; background: rgba(244,63,94,.08); font-size: 11px; }
+.failures-panel { margin-top: 12px; padding: 11px 12px; border: 1px solid rgba(244,63,94,.22); border-radius: 12px; background: rgba(127,29,29,.08); }
+.section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px; }
+h2 { margin: 0; color: #fecdd3; font-size: 12px; }
+#failure-count { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 99px; color: #fecdd3; background: rgba(244,63,94,.14); font-size: 10px; font-weight: 700; }
+#failures { max-height: 135px; margin: 0; padding: 0; overflow: auto; list-style: none; }
+#failures li { padding: 7px 0; border-top: 1px solid rgba(244,63,94,.12); color: #9ca6b5; font-size: 10px; overflow-wrap: anywhere; }
+#failures strong { color: #fda4af; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+.button { min-height: 38px; padding: 0 12px; border: 1px solid #293141; border-radius: 10px; color: #cbd3df; background: #151b26; font: inherit; font-size: 11px; font-weight: 650; cursor: pointer; transition: border-color .15s ease,background .15s ease,transform .15s ease; }
+.button:not(:disabled):hover { border-color: #465166; background: #1b2330; }
+.button:not(:disabled):active { transform: translateY(1px); }
+.button:disabled { color: #596273; border-color: #1c2330; background: #10151e; cursor: not-allowed; }
+.button.primary,.button.export { display: flex; align-items: center; justify-content: space-between; }
+.button.primary:not(:disabled) { color: #fff; border-color: #6d4ee7; background: linear-gradient(135deg,#6d4ee7,#5146d8); box-shadow: 0 7px 18px rgba(79,70,229,.18); }
+.button.export:not(:disabled) { color: #d1fae5; border-color: rgba(16,185,129,.4); background: rgba(16,185,129,.12); }
+.button b { font-size: 15px; font-weight: 500; }
+[hidden] { display: none !important; }
