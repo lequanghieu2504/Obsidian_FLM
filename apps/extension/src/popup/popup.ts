@@ -11,7 +11,8 @@ let timer: number | undefined;
 
 function render(progress: CrawlProgress): void {
   element('details').hidden = false;
-  element('curriculum').textContent = [progress.curriculumCode ?? detection.curriculumCode, progress.curriculumName ?? detection.curriculumName, progress.curriculumId ?? detection.curriculumId].filter(Boolean).join(' · ');
+  const code = progress.curriculumCode ?? detection.curriculumCode;
+  element('curriculum').textContent = code || (progress.curriculumId ? `ID #${progress.curriculumId}` : (detection.curriculumId ? `ID #${detection.curriculumId}` : '—'));
   element('combos').textContent = String(progress.seComboCount);
   element('subjects').textContent = String(progress.uniqueSubjectCount);
   element('completed').textContent = String(progress.completed);
@@ -69,9 +70,9 @@ async function initialize(): Promise<void> {
     }
   }
   element('page-status').textContent = detection.valid
-    ? `Curriculum ID ${detection.curriculumId} is ready to crawl.`
-    : 'Open an FLM Curriculum Details or Combo Management page before crawling.';
-  element('page-title').textContent = detection.valid ? 'FLM page connected' : 'No curriculum detected';
+    ? `Curriculum #${detection.curriculumId} ready to crawl`
+    : 'Open an FLM Curriculum page';
+  element('page-title').textContent = detection.valid ? 'FLM Connected' : 'No Curriculum Detected';
   element('page-card').className = `page-card ${detection.valid ? 'valid' : 'invalid'}`;
   await refresh();
 }
