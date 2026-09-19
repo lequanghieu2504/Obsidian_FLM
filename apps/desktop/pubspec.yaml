@@ -7,6 +7,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  webview_windows: any
+  dio: any
+  html: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
