@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian FLM</title>
+    <link rel="stylesheet" href="/src/popup/popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>Obsidian FLM</h1>
+      <p id="page-status">Checking the current page…</p>
+      <dl id="details" hidden>
+        <dt>Curriculum</dt><dd id="curriculum">—</dd>
+        <dt>SE combos</dt><dd id="combos">—</dd>
+        <dt>Subjects</dt><dd id="subjects">—</dd>
+        <dt>Progress</dt><dd id="progress">—</dd>
+        <dt>Current</dt><dd id="current">—</dd>
+      </dl>
+      <p id="error" role="alert"></p>
+      <div class="actions">
+        <button id="crawl" disabled>Crawl</button>
+        <button id="cancel" disabled>Cancel</button>
+        <button id="retry" disabled>Retry Failed</button>
+        <button id="export" disabled>Export Package</button>
+      </div>
+    </main>
+    <script type="module" src="/src/popup/popup.ts"></script>
+  </body>
+</html>

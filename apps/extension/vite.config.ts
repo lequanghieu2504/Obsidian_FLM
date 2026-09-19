@@ -5,8 +5,12 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: 'src/background/index.ts',
-      output: { entryFileNames: 'background.js' },
+      input: {
+        background: 'src/background/index.ts',
+        content: 'src/content/flm-content-script.ts',
+        popup: 'popup.html',
+      },
+      output: { entryFileNames: '[name].js' },
     },
   },
 });
