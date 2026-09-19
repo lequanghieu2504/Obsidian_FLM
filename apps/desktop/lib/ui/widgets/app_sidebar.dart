@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
+import '../../app/theme/app_colors.dart';
 
 class AppSidebar extends StatelessWidget {
   final int selectedIndex;
@@ -16,11 +16,10 @@ class AppSidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 110,
+      width: 100,
       decoration: const BoxDecoration(
         color: AppColors.sidebarBackground,
-        // Viền nhạt tạo cảm giác nổi
-        border: Border(right: BorderSide(color: Color(0xFFE0E0E0), width: 1)),
+        border: Border(right: BorderSide(color: Color(0xFFE2E8F0), width: 1)), // slate-200
       ),
       child: Column(
         children: [
@@ -31,9 +30,16 @@ class AppSidebar extends StatelessWidget {
             height: 48,
             decoration: BoxDecoration(
               gradient: AppColors.getGradient(0),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.primary.withOpacity(0.3),
+                  blurRadius: 12,
+                  offset: const Offset(0, 4),
+                )
+              ]
             ),
-            child: const Icon(Icons.menu_book, color: Colors.white),
+            child: const Icon(Icons.school_rounded, color: Colors.white, size: 28),
           ),
           const SizedBox(height: 48),
           
@@ -47,19 +53,19 @@ class AppSidebar extends StatelessWidget {
           // User Avatar
           if (userName != null) ...[
             Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                color: AppColors.getGradient(2).colors.first,
+              width: 44,
+              height: 44,
+              decoration: const BoxDecoration(
+                color: AppColors.primaryLighter,
                 shape: BoxShape.circle,
               ),
               child: Center(
                 child: Text(
                   userName!.substring(0, 1).toUpperCase(),
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: AppColors.primaryDark,
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 20,
                   ),
                 ),
               ),
@@ -82,21 +88,35 @@ class AppSidebar extends StatelessWidget {
     return GestureDetector(
       onTap: () => onItemSelected(index),
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 16),
+        margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        decoration: isSelected
+            ? BoxDecoration(
+                color: AppColors.primary,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primary.withOpacity(0.3),
+                    blurRadius: 8,
+                    offset: const Offset(0, 4),
+                  )
+                ]
+              )
+            : null,
         child: Column(
           children: [
             Icon(
               icon,
-              size: 28,
-              color: isSelected ? AppColors.getGradient(0).colors.first : AppColors.textSub.withOpacity(0.5),
+              size: 26,
+              color: isSelected ? Colors.white : AppColors.textSub,
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 4),
             Text(
               label,
               style: TextStyle(
-                fontSize: 10,
+                fontSize: 11,
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                color: isSelected ? AppColors.getGradient(0).colors.first : AppColors.textSub.withOpacity(0.5),
+                color: isSelected ? Colors.white : AppColors.textSub,
               ),
             ),
           ],

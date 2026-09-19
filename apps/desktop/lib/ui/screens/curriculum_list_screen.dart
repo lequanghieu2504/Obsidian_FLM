@@ -6,7 +6,7 @@ import '../../models/subject.dart';
 import '../../utils/custom_toast.dart';
 import '../../utils/html_parser.dart';
 import '../../services/storage_service.dart';
-import '../theme/app_colors.dart';
+import '../../app/theme/app_colors.dart';
 import '../widgets/gradient_card.dart';
 import 'subject_scraping_screen.dart';
 import 'curriculum_detail_screen.dart';
@@ -33,8 +33,8 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
   Widget build(BuildContext context) {
     // Filter list
     final filteredList = widget.curricula.where((c) {
-      return c.name.toLowerCase().contains(_searchQuery.toLowerCase()) || 
-             c.code.toLowerCase().contains(_searchQuery.toLowerCase());
+      return c.name.toLowerCase().contains(_searchQuery.toLowerCase()) ||
+          c.code.toLowerCase().contains(_searchQuery.toLowerCase());
     }).toList();
 
     return Scaffold(
@@ -87,10 +87,15 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                         onChanged: (val) => setState(() => _searchQuery = val),
                         decoration: InputDecoration(
                           hintText: 'Search majors...',
-                          hintStyle: TextStyle(fontFamily: 'Segoe UI', color: AppColors.textSub.withOpacity(0.5), fontSize: 14),
-                          prefixIcon: const Icon(Icons.search, color: AppColors.textSub, size: 20),
+                          hintStyle: TextStyle(
+                              fontFamily: 'Segoe UI',
+                              color: AppColors.textSub.withOpacity(0.5),
+                              fontSize: 14),
+                          prefixIcon: const Icon(Icons.search,
+                              color: AppColors.textSub, size: 20),
                           border: InputBorder.none,
-                          contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                          contentPadding:
+                              const EdgeInsets.symmetric(vertical: 12),
                         ),
                       ),
                     ),
@@ -105,15 +110,23 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                         children: [
                           IconButton(
                             icon: const Icon(Icons.grid_view_rounded),
-                            color: _isGridView ? AppColors.getGradient(0).colors.first : AppColors.textSub,
+                            color: _isGridView
+                                ? AppColors.getGradient(0).colors.first
+                                : AppColors.textSub,
                             onPressed: () => setState(() => _isGridView = true),
                             tooltip: 'Grid View',
                           ),
-                          Container(width: 1, height: 24, color: Colors.grey.withOpacity(0.2)),
+                          Container(
+                              width: 1,
+                              height: 24,
+                              color: Colors.grey.withOpacity(0.2)),
                           IconButton(
                             icon: const Icon(Icons.view_list_rounded),
-                            color: !_isGridView ? AppColors.getGradient(0).colors.first : AppColors.textSub,
-                            onPressed: () => setState(() => _isGridView = false),
+                            color: !_isGridView
+                                ? AppColors.getGradient(0).colors.first
+                                : AppColors.textSub,
+                            onPressed: () =>
+                                setState(() => _isGridView = false),
                             tooltip: 'List View',
                           ),
                         ],
@@ -124,12 +137,14 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
               ],
             ),
           ),
-          
+
           // Danh sách Ngành
           Expanded(
             child: filteredList.isEmpty
-                ? const Center(child: Text('No curricula found.', style: TextStyle(fontFamily: 'Segoe UI')))
-                : _isGridView 
+                ? const Center(
+                    child: Text('No curricula found.',
+                        style: TextStyle(fontFamily: 'Segoe UI')))
+                : _isGridView
                     ? _buildGridView(filteredList)
                     : _buildListView(filteredList),
           ),
@@ -172,7 +187,8 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
           cursor: SystemMouseCursors.click,
           child: ListTile(
             onTap: () => _handleItemClick(item),
-            contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
               side: BorderSide(color: Colors.grey.withOpacity(0.1)),
@@ -191,7 +207,11 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
             ),
             title: Text(
               item.name,
-              style: const TextStyle(fontFamily: 'Segoe UI', fontWeight: FontWeight.bold, fontSize: 16, color: AppColors.textMain),
+              style: const TextStyle(
+                  fontFamily: 'Segoe UI',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: AppColors.textMain),
             ),
             subtitle: Padding(
               padding: const EdgeInsets.only(top: 4),
@@ -199,13 +219,15 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                 item.description,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontFamily: 'Segoe UI', color: AppColors.textSub),
+                style: const TextStyle(
+                    fontFamily: 'Segoe UI', color: AppColors.textSub),
               ),
             ),
             trailing: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: AppColors.getGradient(index).colors.first.withOpacity(0.1),
+                color:
+                    AppColors.getGradient(index).colors.first.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
@@ -226,13 +248,14 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
 
   void _handleItemClick(Curriculum item) async {
     // Kiem tra xem data mon hoc da ton tai chua
-    final file = File('\${Directory.current.path}/data/curriculum_detail_\${item.code}.json');
+    final file = File(
+        '\${Directory.current.path}/data/curriculum_detail_\${item.code}.json');
     if (await file.exists()) {
       try {
         final jsonStr = await file.readAsString();
         final List<dynamic> jsonList = jsonDecode(jsonStr);
         final subjects = jsonList.map((e) => Subject.fromJson(e)).toList();
-        
+
         if (!mounted) return;
         Navigator.of(context).push(
           MaterialPageRoute(
@@ -253,23 +276,23 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
       context: context,
       builder: (dialogContext) {
         return Dialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           elevation: 0,
           backgroundColor: Colors.transparent,
           child: Container(
             constraints: const BoxConstraints(maxWidth: 500),
             padding: const EdgeInsets.all(32),
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(24),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  blurRadius: 30,
-                  offset: const Offset(0, 10),
-                )
-              ]
-            ),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(24),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 30,
+                    offset: const Offset(0, 10),
+                  )
+                ]),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -277,9 +300,13 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       decoration: BoxDecoration(
-                        color: AppColors.getGradient(0).colors.first.withOpacity(0.1),
+                        color: AppColors.getGradient(0)
+                            .colors
+                            .first
+                            .withOpacity(0.1),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
@@ -293,7 +320,8 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                     ),
                     const Spacer(),
                     IconButton(
-                      icon: const Icon(Icons.close_rounded, color: AppColors.textSub),
+                      icon: const Icon(Icons.close_rounded,
+                          color: AppColors.textSub),
                       onPressed: () => Navigator.of(dialogContext).pop(),
                     )
                   ],
@@ -335,8 +363,9 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                   height: 56,
                   child: ElevatedButton(
                     onPressed: () async {
-                      Navigator.of(dialogContext).pop(); // Đóng dialog bằng dialogContext
-                      
+                      Navigator.of(dialogContext)
+                          .pop(); // Đóng dialog bằng dialogContext
+
                       if (!mounted) return;
                       final result = await Navigator.of(context).push(
                         MaterialPageRoute(
@@ -350,24 +379,28 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                       if (!mounted) return;
 
                       if (result == 'SUCCESS') {
-                        CustomToast.show(context, 'Đã tải xong HTML chi tiết của ${item.code}!');
-                        
+                        CustomToast.show(context,
+                            'Đã tải xong HTML chi tiết của ${item.code}!');
+
                         try {
                           // Đọc file HTML
-                          final file = File('curriculum_detail_${item.code}.html');
+                          final file =
+                              File('curriculum_detail_${item.code}.html');
                           final htmlStr = await file.readAsString();
-                          
+
                           // Parse HTML thành danh sách Môn học
-                          final subjects = HtmlParser.parseCurriculumDetail(htmlStr);
-                          
+                          final subjects =
+                              HtmlParser.parseCurriculumDetail(htmlStr);
+
                           // Lưu vào Local Storage
-                          await StorageService().saveCurriculumDetails(item.code, subjects);
-                          
+                          await StorageService()
+                              .saveCurriculumDetails(item.code, subjects);
+
                           // Xóa file HTML thừa
                           await file.delete();
-                          
+
                           if (!mounted) return;
-                          
+
                           // Chuyển sang màn hình Roadmap
                           Navigator.of(context).push(
                             MaterialPageRoute(
@@ -378,17 +411,24 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                             ),
                           );
                         } catch (e) {
-                          CustomToast.show(context, 'Lỗi khi xử lý dữ liệu: \$e', isError: true);
+                          CustomToast.show(
+                              context, 'Lỗi khi xử lý dữ liệu: \$e',
+                              isError: true);
                         }
                       }
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.getGradient(0).colors.first,
                       foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
                       elevation: 0,
                     ),
-                    child: const Text('Select Major & Scrape Subjects', style: TextStyle(fontFamily: 'Segoe UI', fontSize: 16, fontWeight: FontWeight.bold)),
+                    child: const Text('Select Major & Scrape Subjects',
+                        style: TextStyle(
+                            fontFamily: 'Segoe UI',
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold)),
                   ),
                 ),
               ],
