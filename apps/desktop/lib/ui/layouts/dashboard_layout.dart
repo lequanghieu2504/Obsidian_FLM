@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
+import '../../app/theme/app_colors.dart';
 import '../widgets/app_sidebar.dart';
+import '../../models/subject.dart';
+import '../screens/curriculum_detail_screen.dart';
+import '../screens/subjects_screen.dart';
 
 class DashboardLayout extends StatefulWidget {
-  final Widget child;
+  final String curriculumCode;
+  final List<Subject> subjects;
   final String? userName;
 
   const DashboardLayout({
     super.key,
-    required this.child,
+    required this.curriculumCode,
+    required this.subjects,
     this.userName,
   });
 
@@ -18,78 +23,201 @@ class DashboardLayout extends StatefulWidget {
 
 class _DashboardLayoutState extends State<DashboardLayout> {
   int _selectedIndex = 0;
+  bool _isChatOpen = true;
+  bool _isSidebarOpen = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.sidebarBackground, // Nền cho toàn app
+      backgroundColor: AppColors.background,
       body: Row(
         children: [
-          // Cột 1: Sidebar
+          // 1. Sidebar (Trái)
           AppSidebar(
             selectedIndex: _selectedIndex,
             onItemSelected: (index) {
               setState(() => _selectedIndex = index);
             },
             userName: widget.userName,
+            isOpen: _isSidebarOpen,
+            onToggle: () {
+              setState(() => _isSidebarOpen = !_isSidebarOpen);
+            },
           ),
           
-          // Cột 2: Main Content (Trắng tinh, bo tròn)
+          // 2. Main Content (Giữa)
           Expanded(
-            flex: 5,
-            child: Container(
-              margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 16), // Thêm horizontal margin
-              padding: const EdgeInsets.all(32), // Thêm padding cho nội dung bên trong
-              decoration: BoxDecoration(
-                color: AppColors.mainContentBackground,
-                borderRadius: BorderRadius.circular(40),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.02),
-                    blurRadius: 20,
-                    offset: const Offset(0, 10),
-                  )
-                ],
-              ),
-              clipBehavior: Clip.antiAlias,
-              child: widget.child,
+            child: Column(
+              children: [
+                // Topbar
+                Container(
+                  height: 72,
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  decoration: BoxDecoration(
+                    color: AppColors.background,
+                    border: Border(bottom: BorderSide(color: const Color(0xFFE2E8F0))),
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        _selectedIndex == 0 ? 'Tổng quan' : 'Quản lý môn học',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.textMain,
+                        ),
+                      ),
+                      const Spacer(),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: AppColors.primary.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: const Text('Dữ liệu mẫu', style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold, fontSize: 12)),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          setState(() => _isChatOpen = !_isChatOpen);
+                        },
+                        icon: const Icon(Icons.chat_bubble_outline_rounded, size: 18),
+                        label: const Text('Trợ lý'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _isChatOpen ? AppColors.primary : AppColors.surface,
+                          foregroundColor: _isChatOpen ? Colors.white : AppColors.textMain,
+                          elevation: 0,
+                          side: BorderSide(color: _isChatOpen ? AppColors.primary : const Color(0xFFE2E8F0)),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                // Nơi chứa màn hình thực tế (CurriculumDetailScreen, SubjectsScreen)
+                Expanded(
+                  child: IndexedStack(
+                    index: _selectedIndex,
+                    children: [
+                      CurriculumDetailScreen(
+                        curriculumCode: widget.curriculumCode,
+                        subjects: widget.subjects,
+                      ),
+                      SubjectsScreen(
+                        curriculumCode: widget.curriculumCode,
+                        subjects: widget.subjects,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
           
-          // Cột 3: Right Panel (Mờ nhạt, Activity / To-do)
-          Container(
-            width: 320,
-            color: AppColors.rightPanelBackground,
-            padding: const EdgeInsets.all(32),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Recent Activity',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.textMain,
-                  ),
+          // 3. Chatbot Panel (Phải)
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+            width: _isChatOpen ? 360 : 0,
+            decoration: const BoxDecoration(
+              color: AppColors.surface,
+              border: Border(left: BorderSide(color: Color(0xFFE2E8F0))),
+            ),
+            child: ClipRect(
+              child: OverflowBox(
+                minWidth: 360,
+                maxWidth: 360,
+                child: Column(
+                  children: [
+                    // Chat Header
+                    Container(
+                      padding: const EdgeInsets.all(24),
+                      decoration: const BoxDecoration(
+                        border: Border(bottom: BorderSide(color: Color(0xFFE2E8F0))),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: AppColors.primary.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: const Icon(Icons.smart_toy_rounded, color: AppColors.primary),
+                          ),
+                          const SizedBox(width: 16),
+                          const Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Trợ lý học vụ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: AppColors.textMain)),
+                                Text('Dựa trên khung chương trình của bạn', style: TextStyle(fontSize: 12, color: AppColors.textSub)),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    // Chat Body (Mô phỏng)
+                    Expanded(
+                      child: ListView(
+                        padding: const EdgeInsets.all(24),
+                        children: [
+                          _buildChatBubble('Chào bạn! Mình trả lời dựa trên khung chương trình ngành Kỹ thuật phần mềm. Bạn có thể hỏi về môn tiên quyết, số tín chỉ còn lại...', isBot: true),
+                          const SizedBox(height: 16),
+                          _buildChatBubble('Kỳ tới mình nên đăng ký những môn nào?', isBot: false),
+                          const SizedBox(height: 16),
+                          _buildChatBubble('Kỳ tới bạn nên ưu tiên đăng ký PRJ301 và SWR302 vì đây là các môn tiên quyết quan trọng cho SWP391 ở học kỳ 5.', isBot: true),
+                        ],
+                      ),
+                    ),
+                    // Chat Input
+                    Container(
+                      padding: const EdgeInsets.all(24),
+                      decoration: const BoxDecoration(
+                        border: Border(top: BorderSide(color: Color(0xFFE2E8F0))),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              _buildSuggestionChip('Kỳ tới nên học gì?'),
+                              const SizedBox(width: 8),
+                              _buildSuggestionChip('Còn bao nhiêu tín chỉ?'),
+                            ],
+                          ),
+                          const SizedBox(height: 16),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: AppColors.background,
+                              borderRadius: BorderRadius.circular(24),
+                              border: Border.all(color: const Color(0xFFE2E8F0)),
+                            ),
+                            child: Row(
+                              children: [
+                                const Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: 'Hỏi về môn học...',
+                                      hintStyle: TextStyle(color: AppColors.textSub, fontSize: 14),
+                                      border: InputBorder.none,
+                                      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                                    ),
+                                  ),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.send_rounded, color: AppColors.primary),
+                                  onPressed: () {},
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
                 ),
-                const SizedBox(height: 24),
-                _buildActivityItem(Icons.sync_rounded, 'Synchronized', 'K19B Curriculum loaded'),
-                _buildActivityItem(Icons.login_rounded, 'Logged in', 'Via Google Account'),
-                
-                const SizedBox(height: 48),
-                const Text(
-                  "To Do's",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.textMain,
-                  ),
-                ),
-                const SizedBox(height: 24),
-                _buildTodoItem('Choose a major to scrape', true),
-                _buildTodoItem('Wait for background scraper', false),
-                _buildTodoItem('View Curriculum Details', false),
-              ],
+              ),
             ),
           )
         ],
@@ -97,57 +225,36 @@ class _DashboardLayoutState extends State<DashboardLayout> {
     );
   }
 
-  Widget _buildActivityItem(IconData icon, String title, String subtitle) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 24),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: AppColors.getGradient(0).colors.first.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(icon, color: AppColors.getGradient(0).colors.first, size: 24),
+  Widget _buildChatBubble(String text, {required bool isBot}) {
+    return Align(
+      alignment: isBot ? Alignment.centerLeft : Alignment.centerRight,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: isBot ? AppColors.background : AppColors.primary,
+          borderRadius: BorderRadius.circular(16).copyWith(
+            topLeft: isBot ? const Radius.circular(4) : const Radius.circular(16),
+            bottomRight: !isBot ? const Radius.circular(4) : const Radius.circular(16),
           ),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title, style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.textMain)),
-                const SizedBox(height: 4),
-                Text(subtitle, style: const TextStyle(fontSize: 12, color: AppColors.textSub)),
-              ],
-            ),
-          )
-        ],
+          border: isBot ? Border.all(color: const Color(0xFFE2E8F0)) : null,
+        ),
+        child: Text(
+          text,
+          style: TextStyle(color: isBot ? AppColors.textMain : Colors.white, height: 1.5),
+        ),
       ),
     );
   }
 
-  Widget _buildTodoItem(String text, bool isDone) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: Row(
-        children: [
-          Icon(
-            isDone ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
-            color: isDone ? Colors.green : AppColors.textSub.withOpacity(0.5),
-            size: 20,
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Text(
-              text,
-              style: TextStyle(
-                color: isDone ? AppColors.textSub : AppColors.textMain,
-                decoration: isDone ? TextDecoration.lineThrough : null,
-              ),
-            ),
-          ),
-        ],
+  Widget _buildSuggestionChip(String text) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: AppColors.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
       ),
+      child: Text(text, style: const TextStyle(fontSize: 12, color: AppColors.textSub, fontWeight: FontWeight.w500)),
     );
   }
 }

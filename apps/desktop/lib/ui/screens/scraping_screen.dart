@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:webview_windows/webview_windows.dart';
+import '../../app/theme/app_colors.dart';
 
 class ScrapingScreen extends StatefulWidget {
   final String cohort;
@@ -50,10 +51,15 @@ class _ScrapingScreenState extends State<ScrapingScreen> {
 
           if (isCaptcha == true) {
             _hasSearched = false; // Reset nếu bị quăng lại captcha
-            if (mounted)
+            if (mounted) {
               setState(
                   () => _status = 'Vui lòng tích vào CAPTCHA để tiếp tục...');
+            }
             return;
+          } else if (_status.contains('CAPTCHA')) {
+            if (mounted) {
+              setState(() => _status = 'Đang tải dữ liệu...');
+            }
           }
 
           // Kiểm tra xem đã có bảng kết quả chưa (có nhiều hơn 1 thẻ table do thẻ đầu tiên là thẻ search của flm)
@@ -62,7 +68,9 @@ class _ScrapingScreenState extends State<ScrapingScreen> {
 
           if (hasResults == true) {
             timer.cancel();
-            if (mounted) setState(() => _status = 'Đang xử lý dữ liệu...');
+            if (mounted) {
+              setState(() => _status = 'Đang xử lý dữ liệu...');
+            }
 
             // Chạy JS để bóc tách bảng thành JSON
             final jsonStr = await _controller.executeScript('''
@@ -101,9 +109,10 @@ class _ScrapingScreenState extends State<ScrapingScreen> {
 
           // Nếu chưa có kết quả và chưa bấm Search -> Tự động điền form và Search
           if (!_hasSearched) {
-            if (mounted)
+            if (mounted) {
               setState(() =>
                   _status = 'Đang tự động tìm từ khóa ${widget.cohort}...');
+            }
             _hasSearched = true; // Đánh dấu đã bấm để không bấm lại liên tục
 
             await _controller.executeScript('''
@@ -115,8 +124,9 @@ class _ScrapingScreenState extends State<ScrapingScreen> {
                }
             ''');
           } else {
-            if (mounted)
+            if (mounted) {
               setState(() => _status = 'Đang chờ máy chủ FLM phản hồi...');
+            }
           }
         } catch (e) {
           debugPrint('Execute script error: $e');
@@ -140,8 +150,9 @@ class _ScrapingScreenState extends State<ScrapingScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Đồng bộ dữ liệu'),
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
+        elevation: 0,
       ),
       body: Center(
         child: Column(

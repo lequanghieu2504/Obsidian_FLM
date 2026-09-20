@@ -1,105 +1,244 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
+import '../../app/theme/app_colors.dart';
 
 class AppSidebar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemSelected;
   final String? userName;
+  final bool isOpen;
+  final VoidCallback onToggle;
 
   const AppSidebar({
     super.key,
     required this.selectedIndex,
     required this.onItemSelected,
     this.userName,
+    required this.isOpen,
+    required this.onToggle,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 110,
-      decoration: const BoxDecoration(
-        color: AppColors.sidebarBackground,
-        // Viền nhạt tạo cảm giác nổi
-        border: Border(right: BorderSide(color: Color(0xFFE0E0E0), width: 1)),
-      ),
-      child: Column(
-        children: [
-          const SizedBox(height: 32),
-          // Logo placeholder
-          Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              gradient: AppColors.getGradient(0),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: const Icon(Icons.menu_book, color: Colors.white),
-          ),
-          const SizedBox(height: 48),
-          
-          // Menu Items
-          _buildMenuItem(0, Icons.dashboard_rounded, 'Dashboard'),
-          _buildMenuItem(1, Icons.calendar_month_rounded, 'Calendar'),
-          _buildMenuItem(2, Icons.book_rounded, 'Subjects'),
-          
-          const Spacer(),
-          
-          // User Avatar
-          if (userName != null) ...[
-            Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                color: AppColors.getGradient(2).colors.first,
-                shape: BoxShape.circle,
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+      width: isOpen ? 260 : 80,
+      color: AppColors.sidebarBackground,
+      child: ClipRect(
+        child: OverflowBox(
+          minWidth: 260,
+          maxWidth: 260,
+          alignment: Alignment.topLeft,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Brand Logo
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 24.0, vertical: 32.0),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 32,
+                      height: 32,
+                      decoration: BoxDecoration(
+                        color: AppColors.primary,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Icon(Icons.school_rounded,
+                          color: Colors.white, size: 18),
+                    ),
+                    const SizedBox(width: 12),
+                    const Expanded(
+                      child: Text(
+                        'Lộ Trình',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.textMain,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              child: Center(
-                child: Text(
-                  userName!.substring(0, 1).toUpperCase(),
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+
+              // Toggle Button
+              InkWell(
+                onTap: onToggle,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+                  child: Icon(
+                    isOpen
+                        ? Icons.keyboard_double_arrow_left_rounded
+                        : Icons.keyboard_double_arrow_right_rounded,
+                    color: AppColors.textSub,
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              userName!.split(' ').last,
-              style: const TextStyle(fontSize: 12, color: AppColors.textMain, fontWeight: FontWeight.w600),
-              overflow: TextOverflow.ellipsis,
-            ),
-            const SizedBox(height: 32),
-          ]
-        ],
+
+              const SizedBox(height: 16),
+              // Navigation
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Column(
+                    children: [
+                      _buildNavItem(0, Icons.grid_view_rounded, 'Tổng quan'),
+                      _buildNavItem(1, Icons.menu_book_rounded, 'Môn học'),
+                    ],
+                  ),
+                ),
+              ),
+
+              // User Profile & Logout
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: const BoxDecoration(
+                  border: Border(top: BorderSide(color: Color(0xFFE2E8F0))),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          width: 40,
+                          height: 40,
+                          decoration: const BoxDecoration(
+                            color: AppColors.primary,
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Center(
+                            child: Text(
+                              'MA',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                userName ?? 'Minh Anh',
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColors.textMain),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const Text(
+                                'K19, SE',
+                                style: TextStyle(
+                                    fontSize: 12, color: AppColors.textSub),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    OutlinedButton.icon(
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pop(); // Quay lại trang nhập niên khóa
+                      },
+                      icon: const Icon(Icons.swap_horiz_rounded, size: 16),
+                      label: const Text('Đổi khóa / ngành'),
+                      style: OutlinedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 40),
+                        foregroundColor: AppColors.textSub,
+                        side: const BorderSide(color: Color(0xFFE2E8F0)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 
-  Widget _buildMenuItem(int index, IconData icon, String label) {
+  Widget _buildNavItem(int index, IconData icon, String title,
+      {String? badge}) {
     final isSelected = selectedIndex == index;
-    return GestureDetector(
-      onTap: () => onItemSelected(index),
-      child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 16),
-        child: Column(
-          children: [
-            Icon(
-              icon,
-              size: 28,
-              color: isSelected ? AppColors.getGradient(0).colors.first : AppColors.textSub.withOpacity(0.5),
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 8),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => onItemSelected(index),
+          borderRadius: BorderRadius.circular(12),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: isSelected ? Colors.white : Colors.transparent,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: isSelected
+                  ? [
+                      BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.05),
+                          blurRadius: 10,
+                          offset: const Offset(0, 2))
+                    ]
+                  : null,
             ),
-            const SizedBox(height: 6),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 10,
-                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                color: isSelected ? AppColors.getGradient(0).colors.first : AppColors.textSub.withOpacity(0.5),
-              ),
+            child: Row(
+              children: [
+                Icon(
+                  icon,
+                  color: isSelected ? AppColors.primary : AppColors.textSub,
+                  size: 20,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      fontWeight:
+                          isSelected ? FontWeight.bold : FontWeight.w500,
+                      color:
+                          isSelected ? AppColors.textMain : AppColors.textSub,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                if (badge != null)
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: isSelected
+                          ? AppColors.primaryBg
+                          : const Color(0xFFE2E8F0),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Text(
+                      badge,
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                        color: isSelected
+                            ? AppColors.primary
+                            : AppColors.textSub,
+                      ),
+                    ),
+                  )
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

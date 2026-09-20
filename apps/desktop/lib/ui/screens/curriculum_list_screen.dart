@@ -3,13 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import '../../models/curriculum.dart';
 import '../../models/subject.dart';
-import '../../utils/custom_toast.dart';
-import '../../utils/html_parser.dart';
-import '../../services/storage_service.dart';
-import '../theme/app_colors.dart';
-import '../widgets/gradient_card.dart';
-import 'subject_scraping_screen.dart';
+import '../../app/theme/app_colors.dart';
+import '../layouts/dashboard_layout.dart';
 import 'curriculum_detail_screen.dart';
+import 'curriculum_preview_screen.dart';
 
 class CurriculumListScreen extends StatefulWidget {
   final List<Curriculum> curricula;
@@ -26,71 +23,135 @@ class CurriculumListScreen extends StatefulWidget {
 }
 
 class _CurriculumListScreenState extends State<CurriculumListScreen> {
-  bool _isGridView = true;
   String _searchQuery = '';
+  String? _selectedCode;
+  bool _isListView = false;
+
+  List<Curriculum> get filteredList {
+    if (_searchQuery.isEmpty) return widget.curricula;
+    final q = _searchQuery.toLowerCase();
+    return widget.curricula.where((c) {
+      return c.code.toLowerCase().contains(q) ||
+          c.name.toLowerCase().contains(q) ||
+          c.description.toLowerCase().contains(q);
+    }).toList();
+  }
+
+  void _handleItemClick(Curriculum item) async {
+    setState(() => _selectedCode = item.code);
+
+    final file = File(
+        '${Directory.current.path}/data/curriculum_detail_${item.code}.json');
+    bool isCached = await file.exists();
+
+    if (!mounted) return;
+
+    // Luôn luôn vào màn hình Preview, để user xác nhận
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CurriculumPreviewScreen(curriculum: item),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    // Filter list
-    final filteredList = widget.curricula.where((c) {
-      return c.name.toLowerCase().contains(_searchQuery.toLowerCase()) || 
-             c.code.toLowerCase().contains(_searchQuery.toLowerCase());
-    }).toList();
-
     return Scaffold(
-      backgroundColor: Colors.transparent, // Để lộ nền của DashboardLayout
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Header
-          Padding(
-            padding: const EdgeInsets.only(top: 16, bottom: 32),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
+      backgroundColor: AppColors.background,
+      body: Center(
+        child: Container(
+          constraints:
+              const BoxConstraints(maxWidth: 1000), // Responsive Max Width
+          padding: const EdgeInsets.all(32.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Header Setup 2
+              Padding(
+                padding: const EdgeInsets.only(bottom: 32),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.looks_two_rounded,
+                            color: AppColors.primaryLight, size: 24),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Thiết lập lần đầu, bước 2 trên 2',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color:
+                                AppColors.primaryLight.withValues(alpha: 0.8),
+                            letterSpacing: 0.5,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
                     const Text(
-                      'Curriculum List',
+                      'Bạn học chuyên ngành nào?',
                       style: TextStyle(
-                        fontFamily: 'Segoe UI',
                         fontSize: 32,
                         fontWeight: FontWeight.w900,
                         color: AppColors.textMain,
-                        letterSpacing: -0.5,
+                        letterSpacing: -1,
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Select your major for cohort ${widget.cohort}',
-                      style: const TextStyle(
-                        fontFamily: 'Segoe UI',
-                        fontSize: 16,
-                        color: AppColors.textSub,
+                    const SizedBox(height: 8),
+                    RichText(
+                      text: TextSpan(
+                        style: const TextStyle(
+                            fontSize: 15,
+                            color: AppColors.textSub,
+                            height: 1.5,
+                            fontFamily: 'Segoe UI'),
+                        children: [
+                          const TextSpan(
+                              text:
+                                  'Chọn ngành để xem khung chương trình khóa '),
+                          TextSpan(
+                              text: widget.cohort,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.textMain)),
+                          const TextSpan(
+                              text:
+                                  '. Bạn có thể đổi lại sau trong mục Đổi khóa hoặc ngành.'),
+                        ],
                       ),
                     ),
                   ],
                 ),
-                // Thanh công cụ: Tìm kiếm & Đổi View
-                Row(
+              ),
+
+              // Search Bar & View Toggle
+              Container(
+                margin: const EdgeInsets.only(bottom: 24),
+                child: Row(
                   children: [
-                    Container(
-                      width: 250,
-                      height: 44,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(22),
-                        border: Border.all(color: Colors.grey.withOpacity(0.2)),
-                      ),
-                      child: TextField(
-                        onChanged: (val) => setState(() => _searchQuery = val),
-                        decoration: InputDecoration(
-                          hintText: 'Search majors...',
-                          hintStyle: TextStyle(fontFamily: 'Segoe UI', color: AppColors.textSub.withOpacity(0.5), fontSize: 14),
-                          prefixIcon: const Icon(Icons.search, color: AppColors.textSub, size: 20),
-                          border: InputBorder.none,
-                          contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: const Color(0xFFE2E8F0)),
+                        ),
+                        child: TextField(
+                          onChanged: (val) =>
+                              setState(() => _searchQuery = val),
+                          decoration: const InputDecoration(
+                            hintText:
+                                'Tìm chuyên ngành (VD: Kỹ thuật phần mềm)',
+                            hintStyle: TextStyle(
+                                color: AppColors.textSub, fontSize: 15),
+                            prefixIcon: Icon(Icons.search_rounded,
+                                color: AppColors.textSub),
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(
+                                horizontal: 24, vertical: 16),
+                          ),
                         ),
                       ),
                     ),
@@ -99,303 +160,158 @@ class _CurriculumListScreenState extends State<CurriculumListScreen> {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                        border: Border.all(color: const Color(0xFFE2E8F0)),
                       ),
                       child: Row(
                         children: [
                           IconButton(
-                            icon: const Icon(Icons.grid_view_rounded),
-                            color: _isGridView ? AppColors.getGradient(0).colors.first : AppColors.textSub,
-                            onPressed: () => setState(() => _isGridView = true),
-                            tooltip: 'Grid View',
+                            icon: Icon(Icons.grid_view_rounded,
+                                color: !_isListView
+                                    ? AppColors.primary
+                                    : AppColors.textSub),
+                            onPressed: () =>
+                                setState(() => _isListView = false),
+                            tooltip: 'Lưới',
                           ),
-                          Container(width: 1, height: 24, color: Colors.grey.withOpacity(0.2)),
                           IconButton(
-                            icon: const Icon(Icons.view_list_rounded),
-                            color: !_isGridView ? AppColors.getGradient(0).colors.first : AppColors.textSub,
-                            onPressed: () => setState(() => _isGridView = false),
-                            tooltip: 'List View',
+                            icon: Icon(Icons.view_list_rounded,
+                                color: _isListView
+                                    ? AppColors.primary
+                                    : AppColors.textSub),
+                            onPressed: () => setState(() => _isListView = true),
+                            tooltip: 'Danh sách',
                           ),
                         ],
                       ),
                     )
                   ],
                 ),
-              ],
-            ),
+              ),
+
+              // Grid / List View
+              Expanded(
+                child: filteredList.isEmpty
+                    ? const Center(
+                        child: Text('Không tìm thấy chuyên ngành nào.',
+                            style: TextStyle(color: AppColors.textSub)),
+                      )
+                    : (_isListView ? _buildListView() : _buildGridView()),
+              ),
+            ],
           ),
-          
-          // Danh sách Ngành
-          Expanded(
-            child: filteredList.isEmpty
-                ? const Center(child: Text('No curricula found.', style: TextStyle(fontFamily: 'Segoe UI')))
-                : _isGridView 
-                    ? _buildGridView(filteredList)
-                    : _buildListView(filteredList),
-          ),
-        ],
+        ),
       ),
     );
   }
 
-  Widget _buildGridView(List<Curriculum> list) {
+  Widget _buildGridView() {
     return GridView.builder(
-      padding: const EdgeInsets.only(bottom: 24, right: 16),
+      padding: const EdgeInsets.only(bottom: 60),
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 350,
-        mainAxisSpacing: 24,
-        crossAxisSpacing: 24,
-        childAspectRatio: 1.1,
+        maxCrossAxisExtent: 320,
+        mainAxisSpacing: 16,
+        crossAxisSpacing: 16,
+        mainAxisExtent: 180, // Đủ cao để hiển thị tự do và không bị overflow
       ),
-      itemCount: list.length,
+      itemCount: filteredList.length,
       itemBuilder: (context, index) {
-        final item = list[index];
-        return GradientCard(
-          gradient: AppColors.getGradient(index),
-          title: item.name,
-          subtitle: item.description,
-          badgeText: item.code,
-          onTap: () => _handleItemClick(item),
+        return _buildCardItem(filteredList[index]);
+      },
+    );
+  }
+
+  Widget _buildListView() {
+    return ListView.builder(
+      padding: const EdgeInsets.only(bottom: 40),
+      itemCount: filteredList.length,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 12.0),
+          child: _buildCardItem(filteredList[index]),
         );
       },
     );
   }
 
-  Widget _buildListView(List<Curriculum> list) {
-    return ListView.separated(
-      padding: const EdgeInsets.only(bottom: 24, right: 16),
-      itemCount: list.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 12),
-      itemBuilder: (context, index) {
-        final item = list[index];
-        return MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: ListTile(
-            onTap: () => _handleItemClick(item),
-            contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            shape: RoundedRectangleBorder(
+  Widget _buildCardItem(Curriculum item) {
+    final isSelected = _selectedCode == item.code;
+
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: () => _handleItemClick(item),
+        borderRadius: BorderRadius.circular(16),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+              color: isSelected ? AppColors.primaryBg : Colors.white,
               borderRadius: BorderRadius.circular(16),
-              side: BorderSide(color: Colors.grey.withOpacity(0.1)),
-            ),
-            tileColor: Colors.white,
-            leading: Container(
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                gradient: AppColors.getGradient(index),
-                borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: isSelected ? AppColors.primary : const Color(0xFFE2E8F0),
+                width: isSelected ? 2 : 1,
               ),
-              child: const Center(
-                child: Icon(Icons.school_rounded, color: Colors.white),
-              ),
-            ),
-            title: Text(
-              item.name,
-              style: const TextStyle(fontFamily: 'Segoe UI', fontWeight: FontWeight.bold, fontSize: 16, color: AppColors.textMain),
-            ),
-            subtitle: Padding(
-              padding: const EdgeInsets.only(top: 4),
-              child: Text(
-                item.description,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontFamily: 'Segoe UI', color: AppColors.textSub),
-              ),
-            ),
-            trailing: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-              decoration: BoxDecoration(
-                color: AppColors.getGradient(index).colors.first.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                item.code,
-                style: TextStyle(
-                  fontFamily: 'Segoe UI',
-                  color: AppColors.getGradient(index).colors.first,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12,
-                ),
-              ),
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  void _handleItemClick(Curriculum item) async {
-    // Kiem tra xem data mon hoc da ton tai chua
-    final file = File('\${Directory.current.path}/data/curriculum_detail_\${item.code}.json');
-    if (await file.exists()) {
-      try {
-        final jsonStr = await file.readAsString();
-        final List<dynamic> jsonList = jsonDecode(jsonStr);
-        final subjects = jsonList.map((e) => Subject.fromJson(e)).toList();
-        
-        if (!mounted) return;
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => CurriculumDetailScreen(
-              curriculumCode: item.code,
-              subjects: subjects,
-            ),
-          ),
-        );
-        return; // Dừng lại, không hiện Dialog nữa
-      } catch (e) {
-        debugPrint('Error loading saved curriculum detail: \$e');
-      }
-    }
-
-    if (!mounted) return;
-    showDialog(
-      context: context,
-      builder: (dialogContext) {
-        return Dialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          child: Container(
-            constraints: const BoxConstraints(maxWidth: 500),
-            padding: const EdgeInsets.all(32),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(24),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  blurRadius: 30,
-                  offset: const Offset(0, 10),
+                  color: Colors.black.withValues(alpha: 0.02),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
                 )
-              ]
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                      decoration: BoxDecoration(
-                        color: AppColors.getGradient(0).colors.first.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Text(
-                        item.code,
-                        style: TextStyle(
-                          fontFamily: 'Segoe UI',
-                          color: AppColors.getGradient(0).colors.first,
-                          fontWeight: FontWeight.bold,
-                        ),
+              ]),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color:
+                          isSelected ? AppColors.primary : AppColors.background,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Text(
+                      item.code,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                        color: isSelected ? Colors.white : AppColors.textMain,
                       ),
                     ),
-                    const Spacer(),
-                    IconButton(
-                      icon: const Icon(Icons.close_rounded, color: AppColors.textSub),
-                      onPressed: () => Navigator.of(dialogContext).pop(),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 24),
-                Text(
-                  item.name,
-                  style: const TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 24,
-                    fontWeight: FontWeight.w900,
-                    color: AppColors.textMain,
-                    height: 1.2,
                   ),
+                  if (isSelected)
+                    const Icon(Icons.check_circle_rounded,
+                        color: AppColors.primary, size: 20)
+                ],
+              ),
+              const SizedBox(height: 16),
+              Text(
+                item.name,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color:
+                      isSelected ? AppColors.primaryDark : AppColors.textMain,
                 ),
-                const SizedBox(height: 16),
-                const Text(
-                  'Description',
-                  style: TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.textMain,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  item.description,
-                  style: const TextStyle(
-                    fontFamily: 'Segoe UI',
-                    fontSize: 14,
-                    color: AppColors.textSub,
-                    height: 1.5,
-                  ),
-                ),
-                const SizedBox(height: 32),
-                SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton(
-                    onPressed: () async {
-                      Navigator.of(dialogContext).pop(); // Đóng dialog bằng dialogContext
-                      
-                      if (!mounted) return;
-                      final result = await Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => SubjectScrapingScreen(
-                            detailUrl: item.detailUrl,
-                            curriculumCode: item.code,
-                          ),
-                        ),
-                      );
-
-                      if (!mounted) return;
-
-                      if (result == 'SUCCESS') {
-                        CustomToast.show(context, 'Đã tải xong HTML chi tiết của ${item.code}!');
-                        
-                        try {
-                          // Đọc file HTML
-                          final file = File('curriculum_detail_${item.code}.html');
-                          final htmlStr = await file.readAsString();
-                          
-                          // Parse HTML thành danh sách Môn học
-                          final subjects = HtmlParser.parseCurriculumDetail(htmlStr);
-                          
-                          // Lưu vào Local Storage
-                          await StorageService().saveCurriculumDetails(item.code, subjects);
-                          
-                          // Xóa file HTML thừa
-                          await file.delete();
-                          
-                          if (!mounted) return;
-                          
-                          // Chuyển sang màn hình Roadmap
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => CurriculumDetailScreen(
-                                curriculumCode: item.code,
-                                subjects: subjects,
-                              ),
-                            ),
-                          );
-                        } catch (e) {
-                          CustomToast.show(context, 'Lỗi khi xử lý dữ liệu: \$e', isError: true);
-                        }
-                      }
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.getGradient(0).colors.first,
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                      elevation: 0,
-                    ),
-                    child: const Text('Select Major & Scrape Subjects', style: TextStyle(fontFamily: 'Segoe UI', fontSize: 16, fontWeight: FontWeight.bold)),
-                  ),
-                ),
-              ],
-            ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 6),
+              Text(
+                item.description.isNotEmpty
+                    ? item.description
+                    : 'FPT University',
+                style: const TextStyle(fontSize: 13, color: AppColors.textSub),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 }
