@@ -4,9 +4,10 @@ import { extractComboDetail, extractComboList } from '../extractors/combo';
 import { extractCurriculum } from '../extractors/curriculum';
 import { extractSyllabusDetail, extractSyllabusResults } from '../extractors/syllabus';
 import { PackageBuilder } from '../transport/package-builder';
-import type { ComboDetail, ComboSummary, CrawlProgress, CurriculumData, FailedSubject, SyllabusData } from '../types/models';
+import type { ComboDetail, ComboSummary, CrawlProgress, CurriculumData, FailedSubject, FlmRole, SyllabusData } from '../types/models';
 import { assertComboDetailHasSubjects, assertSeComboCoverage } from '../utils/combo-validation';
 import { resolvePackageStatus } from '../utils/package-status';
+import { rolePage } from '../utils/flm-role';
 import { uniqueRealSubjectCodes } from '../utils/subjects';
 
 const FLM = 'https://flm.fpt.edu.vn';
@@ -24,19 +25,21 @@ export class CrawlOrchestrator {
   private comboDetails: ComboDetail[] = [];
   private syllabi: SyllabusData[] = [];
   private failedSubjects: FailedSubject[] = [];
+  private role: FlmRole = 'student';
   private progress: CrawlProgress = { status: 'idle', seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed: 0, failures: [], canExport: false, canRetry: false };
 
   constructor(private readonly requestDelayMs = 400, private readonly retries = 2) {}
   getProgress(): CrawlProgress { return { ...this.progress, failures: this.failedSubjects.map((failure) => ({ ...failure })) }; }
   cancel(): void { this.controller?.abort(new DOMException('Crawl cancelled', 'AbortError')); }
 
-  async start(curriculumId: string): Promise<void> {
+  async start(curriculumId: string, role: FlmRole = 'student'): Promise<void> {
     this.controller?.abort();
     this.controller = new AbortController();
     this.sources.clear(); this.combos = []; this.comboDetails = []; this.syllabi = []; this.failedSubjects = [];
-    this.progress = { status: 'crawling', curriculumId, seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed: 0, failures: [], canExport: false, canRetry: false };
+    this.role = role;
+    this.progress = { status: 'crawling', curriculumId, role, seComboCount: 0, uniqueSubjectCount: 0, completed: 0, failed: 0, failures: [], canExport: false, canRetry: false };
     try {
-      const curriculumSource = await this.fetchPage(`${FLM}/gui/role/student/CurriculumDetails?curid=${encodeURIComponent(curriculumId)}`);
+      const curriculumSource = await this.fetchPage(`${FLM}${rolePage(role, 'CurriculumDetails')}?curid=${encodeURIComponent(curriculumId)}`);
       const curriculumDocument = this.document(curriculumSource);
       const curriculum = extractCurriculum(curriculumDocument, curriculumId);
       if (!curriculum.metadata.curriculumCode && curriculum.subjects.length === 0) throw new Error('Curriculum page did not contain the expected FLM structure');
@@ -95,6 +98,7 @@ export class CrawlOrchestrator {
     archive.addJson('manifest.json', {
       format: 'flm-curriculum-package', version: 1, createdAt: new Date().toISOString(),
       source: FLM, curriculumId: this.curriculum.metadata.curriculumId,
+      role: this.role,
       status: resolvePackageStatus(this.getProgress()),
       error: this.progress.error,
       counts: { combos: this.comboDetails.length, syllabi: this.syllabi.length, failedSubjects: this.failedSubjects.length },
@@ -108,7 +112,7 @@ export class CrawlOrchestrator {
       if (this.controller!.signal.aborted) break;
       this.progress.currentSubject = code;
       try {
-        const search = await this.fetchPage(`${FLM}/gui/role/student/SyllabusManagement?searchOn=Code&keyword=${encodeURIComponent(code)}`);
+        const search = await this.fetchPage(`${FLM}${rolePage(this.role, 'SyllabusManagement')}?searchOn=Code&keyword=${encodeURIComponent(code)}`);
         const results = extractSyllabusResults(this.document(search), search.url).filter((item) => item.isActive);
         if (!results.length) throw new Error('No active syllabus found');
         for (const result of results) {

@@ -11,6 +11,6 @@ npm run typecheck
 npm run build
 ```
 
-Load `dist/` as an unpacked extension. Log in to FLM, open a `CurriculumDetails?curid=...` page, open the extension, and explicitly click **Crawl**. Crawls are never started by login, navigation, or extension startup.
+Load `dist/` as an unpacked extension. Open a student or guest `CurriculumDetails?curid=...` page, open the extension, and explicitly click **Crawl**. The detected role is reused for curriculum and syllabus requests. Crawls are never started by login, navigation, or extension startup.
 
 The export is a single ZIP-compatible `.flmpkg` containing `manifest.json`, full response HTML under `raw/`, and parsed academic JSON under `extracted/`.

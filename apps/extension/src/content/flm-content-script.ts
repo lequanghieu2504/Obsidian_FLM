@@ -1,6 +1,7 @@
 function detectPage() {
   const url = new URL(location.href);
-  const isCurriculumDetails = /\/gui\/role\/student\/CurriculumDetails\/?$/i.test(url.pathname);
+  const roleMatch = url.pathname.match(/\/gui\/role\/(student|guest)\/CurriculumDetails\/?$/i);
+  const isCurriculumDetails = Boolean(roleMatch);
   const isComboManagement = /\/Compo\/ViewComBo\/?$/i.test(url.pathname);
   if (url.hostname.toLowerCase() !== 'flm.fpt.edu.vn' || (!isCurriculumDetails && !isComboManagement)) {
     return { valid: false };
@@ -9,6 +10,8 @@ function detectPage() {
     ? url.searchParams.get('curid')
     : url.searchParams.get('cur_id');
   if (!curriculumId || !/^\d+$/.test(curriculumId)) return { valid: false };
+  const linkedRole = document.querySelector('a[href*="/gui/role/guest/"]') ? 'guest' : 'student';
+  const role = (roleMatch?.[1]?.toLowerCase() === 'guest' ? 'guest' : roleMatch?.[1] ? 'student' : linkedRole);
 
   // Keep this entry point dependency-free. Manifest content scripts are loaded
   // as classic scripts, so a Rollup-generated ESM import would make Chrome
@@ -27,6 +30,7 @@ function detectPage() {
     // the background crawler validates the fetched response before exporting.
     valid: true,
     curriculumId,
+    role,
     curriculumCode: values.curriculumcode,
     curriculumName: values.name ?? values.curriculumname,
   };

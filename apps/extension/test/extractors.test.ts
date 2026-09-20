@@ -7,6 +7,7 @@ import { extractSyllabusDetail, extractSyllabusResults } from '../src/extractors
 import { uniqueRealSubjectCodes } from '../src/utils/subjects';
 import { assertComboDetailHasSubjects, assertSeComboCoverage } from '../src/utils/combo-validation';
 import { resolvePackageStatus } from '../src/utils/package-status';
+import { normalizeFlmRole, rolePage } from '../src/utils/flm-role';
 import { PackageBuilder } from '../src/transport/package-builder';
 
 const doc = (html: string) => parseHTML(html).document as unknown as Document;
@@ -167,5 +168,14 @@ describe('package builder', () => {
     expect(Array.from(bytes.slice(0, 4))).toEqual([0x50, 0x4b, 0x03, 0x04]);
     expect(new TextDecoder().decode(bytes)).toContain('raw/curriculum.html');
     expect(Array.from(bytes.slice(-22, -18))).toEqual([0x50, 0x4b, 0x05, 0x06]);
+  });
+});
+
+describe('FLM role routing', () => {
+  it('supports student and guest page paths without accepting arbitrary roles', () => {
+    expect(rolePage('student', 'CurriculumDetails')).toBe('/gui/role/student/CurriculumDetails');
+    expect(rolePage('guest', 'SyllabusManagement')).toBe('/gui/role/guest/SyllabusManagement');
+    expect(normalizeFlmRole('guest')).toBe('guest');
+    expect(normalizeFlmRole('admin')).toBe('student');
   });
 });

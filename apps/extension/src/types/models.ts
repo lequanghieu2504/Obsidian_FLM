@@ -63,11 +63,14 @@ export interface FailedSubject {
   reason: string;
 }
 
+export type FlmRole = 'student' | 'guest';
+
 export interface CrawlProgress {
   status: 'idle' | 'crawling' | 'cancelled' | 'complete' | 'error';
   curriculumId?: string;
   curriculumCode?: string;
   curriculumName?: string;
+  role?: FlmRole;
   seComboCount: number;
   uniqueSubjectCount: number;
   completed: number;

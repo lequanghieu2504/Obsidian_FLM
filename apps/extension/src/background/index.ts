@@ -1,4 +1,5 @@
 import { CrawlOrchestrator } from './crawl-orchestrator';
+import { normalizeFlmRole } from '../utils/flm-role';
 
 const crawler = new CrawlOrchestrator();
 
@@ -6,7 +7,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message?.type === 'GET_PROGRESS') { sendResponse(crawler.getProgress()); return; }
   if (message?.type === 'CANCEL_CRAWL') { crawler.cancel(); sendResponse({ ok: true }); return; }
   if (message?.type === 'START_CRAWL') {
-    crawler.start(String(message.curriculumId)).then(() => sendResponse(crawler.getProgress()));
+    crawler.start(String(message.curriculumId), normalizeFlmRole(message.role)).then(() => sendResponse(crawler.getProgress()));
     return true;
   }
   if (message?.type === 'RETRY_FAILED') {

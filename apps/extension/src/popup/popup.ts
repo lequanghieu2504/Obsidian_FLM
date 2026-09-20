@@ -1,6 +1,6 @@
-import type { CrawlProgress } from '../types/models';
+import type { CrawlProgress, FlmRole } from '../types/models';
 
-type Detection = { valid: boolean; curriculumId?: string; curriculumCode?: string; curriculumName?: string };
+type Detection = { valid: boolean; curriculumId?: string; curriculumCode?: string; curriculumName?: string; role?: FlmRole };
 const element = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const crawl = element<HTMLButtonElement>('crawl');
 const cancel = element<HTMLButtonElement>('cancel');
@@ -71,14 +71,14 @@ async function initialize(): Promise<void> {
     }
   }
   element('page-status').textContent = detection.valid
-    ? `Curriculum #${detection.curriculumId} ready to crawl`
+    ? `Curriculum #${detection.curriculumId} ready · ${detection.role ?? 'student'}`
     : 'Open an FLM Curriculum page';
   element('page-title').textContent = detection.valid ? 'FLM Connected' : 'No Curriculum Detected';
   element('page-card').className = `page-card ${detection.valid ? 'valid' : 'invalid'}`;
   await refresh();
 }
 
-crawl.addEventListener('click', () => { void chrome.runtime.sendMessage({ type: 'START_CRAWL', curriculumId: detection.curriculumId }); void refresh(); });
+crawl.addEventListener('click', () => { void chrome.runtime.sendMessage({ type: 'START_CRAWL', curriculumId: detection.curriculumId, role: detection.role }); void refresh(); });
 cancel.addEventListener('click', () => { void chrome.runtime.sendMessage({ type: 'CANCEL_CRAWL' }); void refresh(); });
 retry.addEventListener('click', () => { void chrome.runtime.sendMessage({ type: 'RETRY_FAILED' }); void refresh(); });
 exportButton.addEventListener('click', () => { void chrome.runtime.sendMessage({ type: 'EXPORT_PACKAGE' }); });
