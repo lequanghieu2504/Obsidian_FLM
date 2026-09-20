@@ -1,0 +1,159 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:obsidian_flm_desktop/features/subjects/application/subject_detail_controller.dart';
+import 'package:obsidian_flm_desktop/features/subjects/presentation/subject_detail_screen.dart';
+import 'package:obsidian_flm_desktop/models/subject.dart';
+
+import 'test_support.dart';
+
+void main() {
+  testWidgets(
+    'selected metadata and curriculum render; resize preserves draft; failures retry',
+    (tester) async {
+      tester.view.resetPhysicalSize();
+      tester.view.physicalSize = const Size(1440, 1000);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+      final llm = TestLlm()..fail = true;
+      final selected = workspace();
+      await tester.pumpWidget(
+        MaterialApp(
+          home: SubjectDetailScreen(
+            curriculumCode: selected.curriculumCode,
+            subject: selected.subject,
+            controllerFactory: (actual) async => SubjectDetailController(
+              workspace: actual,
+              repository: MemoryRepository(),
+              llm: llm,
+              keys: MemoryKeys(),
+            ),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(find.text('BIT_SE_K19B'), findsOneWidget);
+      expect(find.text('Java Web Application Development'), findsOneWidget);
+      expect(find.text('Semester'), findsOneWidget);
+      expect(find.text('4'), findsOneWidget);
+      expect(find.text('Credits'), findsOneWidget);
+      expect(find.text('3'), findsOneWidget);
+      expect(find.text('Prerequisite'), findsOneWidget);
+      expect(find.text('DBI202, PRO192'), findsOneWidget);
+      await tester.enterText(find.byType(TextField), 'Explain a servlet');
+      tester.view.physicalSize = const Size(600, 850);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Gemini Assistant').first);
+      await tester.pumpAndSettle();
+      expect(find.text('Explain a servlet'), findsOneWidget);
+      await tester.tap(find.widgetWithText(FilledButton, 'Send'));
+      await tester.pumpAndSettle();
+      expect(find.text('Gemini is unavailable. Please retry.'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+      llm.fail = false;
+      await tester.tap(find.text('Retry answer'));
+      await tester.pumpAndSettle();
+      expect(find.text('Test response'), findsOneWidget);
+      expect(llm.context, contains('Code: PRJ301'));
+      await tester.tap(find.byTooltip('Clear conversation'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Cancel'));
+      await tester.pumpAndSettle();
+      expect(find.text('Test response'), findsOneWidget);
+      await tester.tap(find.byTooltip('Clear conversation'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.widgetWithText(FilledButton, 'Clear conversation'));
+      await tester.pumpAndSettle();
+      expect(find.text('Test response'), findsNothing);
+    },
+  );
+
+  testWidgets('long metadata and scaled text fit a narrow viewport', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(375, 800);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(
+      MaterialApp(
+        builder: (context, child) => MediaQuery(
+          data: MediaQuery.of(
+            context,
+          ).copyWith(textScaler: const TextScaler.linear(1.6)),
+          child: child!,
+        ),
+        home: SubjectDetailScreen(
+          curriculumCode: 'BIT_SE_K19B',
+          subject: Subject(
+            semester: 4,
+            code: 'PRJ301',
+            name: 'A very long subject name ' * 8,
+            credits: '3',
+            preRequisite: 'A long prerequisite description ' * 12,
+          ),
+          controllerFactory: (actual) async => SubjectDetailController(
+            workspace: actual,
+            repository: MemoryRepository(),
+            llm: TestLlm(),
+            keys: MemoryKeys(),
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+    await tester.tap(find.text('Gemini Assistant').first);
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('missing key disables send and key can be configured securely', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1200, 900);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    final keys = MemoryKeys()..value = null;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: SubjectDetailScreen(
+          curriculumCode: workspace().curriculumCode,
+          subject: workspace().subject,
+          controllerFactory: (actual) async => SubjectDetailController(
+            workspace: actual,
+            repository: MemoryRepository(),
+            llm: TestLlm(),
+            keys: keys,
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'Question');
+    expect(
+      tester
+          .widget<FilledButton>(find.widgetWithText(FilledButton, 'Send'))
+          .onPressed,
+      isNull,
+    );
+    await tester.tap(find.byTooltip('Add Gemini key'));
+    await tester.pumpAndSettle();
+    final secretField = find.byWidgetPredicate(
+      (widget) => widget is TextField && widget.obscureText,
+    );
+    await tester.enterText(secretField, 'new-test-key');
+    await tester.pump();
+    await tester.tap(find.text('Save key'));
+    await tester.pumpAndSettle();
+    expect(keys.value, 'new-test-key');
+    expect(find.text('new-test-key'), findsNothing);
+    expect(
+      tester
+          .widget<FilledButton>(find.widgetWithText(FilledButton, 'Send'))
+          .onPressed,
+      isNotNull,
+    );
+  });
+}

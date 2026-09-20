@@ -3,13 +3,23 @@ description: Local-first desktop client for Obsidian_FLM.
 publish_to: none
 version: 0.1.0+1
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ">=3.10.0 <4.0.0"
+  flutter: ">=3.38.0"
 dependencies:
+  file_selector: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_secure_storage: ^11.2.0
+  http: ^1.6.0
+  path: ^1.9.1
+  path_provider: ^2.1.6
+  url_launcher: ^6.3.2
+  uuid: ^4.6.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
 flutter:
   uses-material-design: true
+  assets:
+    - data/
