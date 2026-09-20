@@ -1,0 +1,4835 @@
+{
+  "id": "13166",
+  "metadata": {
+    "Syllabus ID": "13166",
+    "Syllabus Name": "Operating System_Hệ điều hành",
+    "Course Name English": "Operating System",
+    "Subject Code": "OSG202",
+    "Learning-Teaching Method": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study'",
+    "Pre-Requisite": "",
+    "Description": "At the end of this course, students will be able to perceive: 1) Background knowledge: (ABET e) -The role of operating system, - important OS concepts, - the mechanism of operating system, and - main problems of Operating system. 2) Practice skills: (ABET k) - Using basic shell command in Linux system fluently. - Fundamental of shell, C language on Linux. - Main problems of Operating system through some simulative exercises. 3) Information searching, reading and selection skills (ABET i) 4) Working in group, documenting and presenation skills (ABET g)",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "- Internet - Linux operating system server and/ or desktop - MARIE simulator - AI tools (ChatGPT/Copilot/Gamma…) and other simulation software if deemed appropriate.",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "932/QĐ-ĐHFPT dated 08/22/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "8/22/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13166"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13166"
+        ],
+        [
+          "Syllabus Name:",
+          "Operating System_Hệ điều hành"
+        ],
+        [
+          "Course Name English:",
+          "Operating System"
+        ],
+        [
+          "Subject Code:",
+          "OSG202"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Social Constructivism,In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study'"
+        ],
+        [
+          "Pre-Requisite:",
+          ""
+        ],
+        [
+          "Description:",
+          "At the end of this course, students will be able to perceive: 1) Background knowledge: (ABET e) -The role of operating system, - important OS concepts, - the mechanism of operating system, and - main problems of Operating system. 2) Practice skills: (ABET k) - Using basic shell command in Linux system fluently. - Fundamental of shell, C language on Linux. - Main problems of Operating system through some simulative exercises. 3) Information searching, reading and selection skills (ABET i) 4) Working in group, documenting and presenation skills (ABET g)"
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Internet - Linux operating system server and/ or desktop - MARIE simulator - AI tools (ChatGPT/Copilot/Gamma…) and other simulation software if deemed appropriate."
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "932/QĐ-ĐHFPT dated 08/22/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "8/22/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13166",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Operating System_Hệ điều hành",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Operating System",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "OSG202",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study'",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "At the end of this course, students will be able to perceive: 1) Background knowledge: (ABET e) -The role of operating system, - important OS concepts, - the mechanism of operating system, and - main problems of Operating system. 2) Practice skills: (ABET k) - Using basic shell command in Linux system fluently. - Fundamental of shell, C language on Linux. - Main problems of Operating system through some simulative exercises. 3) Information searching, reading and selection skills (ABET i) 4) Working in group, documenting and presenation skills (ABET g)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Internet - Linux operating system server and/ or desktop - MARIE simulator - AI tools (ChatGPT/Copilot/Gamma…) and other simulation software if deemed appropriate.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "932/QĐ-ĐHFPT dated 08/22/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8/22/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Modern Operating Systems (4th edition or 3rd or 2nd)",
+          "Andrew S. Tanenbaum",
+          "Pearson",
+          "2014 (4th)",
+          "4th or 3rd or 2nd",
+          "9781292061429 or 9780133591620 (4th Edition)",
+          "True",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "Connecting with Computer Science",
+          "Creg Anderson, David Ferrro, Robert Hilbon",
+          "Thomson course Technology",
+          "2010",
+          "2nd Edition",
+          "978-1439080351",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "3",
+          "Understanding operating systems",
+          "Ann McIver McHoes and Ida M. Flynn",
+          "Cengage Learning",
+          "2008",
+          "8th",
+          "978-1305674257",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "4",
+          "http://courses.knox.edu/cs226/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "5",
+          "AI Notes:https://www.https://notegpt.io/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Modern Operating Systems (4th edition or 3rd or 2nd)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Andrew S. Tanenbaum",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Pearson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2014 (4th)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4th or 3rd or 2nd",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781292061429 or 9780133591620 (4th Edition)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Connecting with Computer Science",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creg Anderson, David Ferrro, Robert Hilbon",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Thomson course Technology",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2010",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2nd Edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1439080351",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understanding operating systems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Ann McIver McHoes and Ida M. Flynn",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cengage Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2008",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8th",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1305674257",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "http://courses.knox.edu/cs226/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI Notes:https://www.https://notegpt.io/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "11 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand the main concepts of operating system"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Understand the main concepts of process management"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Understand the main concepts of memory management"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Understand the main concepts of file systems"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Understand the main concepts of I/O systems"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Understand the main concepts of deadlock"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Using Linux operating system"
+        ],
+        [
+          "8",
+          "CLO8",
+          "Using basic shell command in Linux system fluently"
+        ],
+        [
+          "9",
+          "CLO9",
+          "Understand basic Shell language on Linux"
+        ],
+        [
+          "10",
+          "CLO10",
+          "Understand basic C/C++ language on Linux"
+        ],
+        [
+          "11",
+          "CLO11",
+          "Using AI tools to futher explore the main concepts of OS's components"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the main concepts of operating system",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the main concepts of process management",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the main concepts of memory management",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the main concepts of file systems",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the main concepts of I/O systems",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the main concepts of deadlock",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Using Linux operating system",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Using basic shell command in Linux system fluently",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand basic Shell language on Linux",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand basic C/C++ language on Linux",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Using AI tools to futher explore the main concepts of OS's components",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Chapter 1: Introduction1.1. What is an operating system",
+          "Offline",
+          "LO1,LO11",
+          "I",
+          "Textbook/ReferencesSlidesChatGPT()",
+          "OSG202",
+          "Lecture chapter 1 in the textbook focus on 1.1Use ChatGPT to explore content more extensively than in the textbook based on keywords provided by the teacher, such as: single user, multi-user, single tasking, multi-tasking",
+          ""
+        ],
+        [
+          "2",
+          "1.2 History of operating system",
+          "Offline",
+          "LO1,LO11",
+          "I",
+          "Textbook/ReferencesSlidesChatGPT",
+          "",
+          "Lecture chapter 1 in the textbook focus on 1.2Use ChatGPT to learn more about the history of operating systems based on the keywords provided in class",
+          ""
+        ],
+        [
+          "3",
+          "1.3. Computer hardware review",
+          "Offline",
+          "LO1",
+          "I",
+          "Textbook/ReferencesSlides",
+          "",
+          "Lecture chapter 1 in the textbook",
+          ""
+        ],
+        [
+          "4",
+          "Chapter 1 Problems",
+          "Offline",
+          "LO1",
+          "ITU",
+          "Textbook/ReferencesSlides",
+          "",
+          "Lecture chapter 1 in the textbook",
+          ""
+        ],
+        [
+          "5",
+          "Overview of Linux Operating systemOverview of Linux Command",
+          "Offline",
+          "LO7, LO8,LO11",
+          "TU",
+          "Tutorial LabsChatGPT",
+          "",
+          "Research Internet/Textbook/References at home in advanceUsing ChatGPT to learn basic Linux operating system commands from the textbookDo practice",
+          ""
+        ],
+        [
+          "6",
+          "Short practice of using Linux OS",
+          "Offline",
+          "LO9,LO11",
+          "TU",
+          "Tutorial LabsChatGPT",
+          "",
+          "Research Internet/Textbook/References at home in advanceUsing ChatGPT to learn basic Linux operating system commands from the textbookDo practice",
+          ""
+        ],
+        [
+          "7",
+          "1.4 The Operating System Zoo1.5 Operating System Concepts",
+          "Offline",
+          "LO1,LO11",
+          "IT",
+          "Textbook/References Slides AI Notes (https://www.https://notegpt.io/)",
+          "",
+          "Lecture chapter 1 in the textbook focus on 1.4, 1.5Use 'AI Notes' to see additional explanations about different operating systems.",
+          ""
+        ],
+        [
+          "8",
+          "1.6 System Calls1.7 Operating System Structure",
+          "Offline",
+          "LO1,LO11",
+          "IT",
+          "Textbook/References Slides AI Notes (https://www.https://notegpt.io/)ChatGPT",
+          "",
+          "Lecture chapter 1 in the textbook focus on 1.6, 1.7Use ChatGPT/AI Notes to learn about System Calls and the structures of the Operating System",
+          ""
+        ],
+        [
+          "9",
+          "Chapter 1 Problems",
+          "Offline",
+          "LO1, LO7",
+          "U",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "10",
+          "Guiding Lab 1",
+          "Offline",
+          "LO8, LO9",
+          "U",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "11",
+          "Chapter 2: Processes and Threads2.1 Processes2.2 Threads",
+          "Offline",
+          "LO2,LO11",
+          "ITU",
+          "Textbook/References SlidesChatGPT",
+          "",
+          "Lecture chapter 2 in the textbook focus on 2.1, 2.2Use ChatGPT to learn about Threads and Processes",
+          ""
+        ],
+        [
+          "12",
+          "2.3 Interprocess Communication",
+          "Offline",
+          "LO2,LO11",
+          "ITU",
+          "Textbook/References SlidesChatGPT",
+          "",
+          "Lecture chapter 2 in the textbook focus on 2.3Use ChatGPT to learn about IPC and the solutions based on the keywords in the lesson",
+          ""
+        ],
+        [
+          "13",
+          "Chapter 2 ProblemsReview Lab 1",
+          "Offline",
+          "LO2, LO7, LO8, LO9",
+          "U",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "14",
+          "Guiding Lab 2",
+          "Offline",
+          "LO7, LO8, LO9",
+          "U",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "15",
+          "Chapter 2 Problems",
+          "Offline",
+          "LO2, LO7, LO8, LO9",
+          "TU",
+          "Textbook/ReferencesSlides",
+          "",
+          "Lecture chapter 2 in the textbook",
+          ""
+        ],
+        [
+          "16",
+          "2.4 Scheduling",
+          "Offline",
+          "LO2,LO11",
+          "TU",
+          "Textbook/References SlidesMARIE SimulatorChatGPT/Copilot",
+          "",
+          "Lecture chapter 2 in the textbook focus on 2.4Use ChatGPT to learn about topics related to FCFS, Shortest Job First, Round Robin, and Priority.",
+          ""
+        ],
+        [
+          "17",
+          "2.5 Classical IPC Problems",
+          "Offline",
+          "LO2, LO7, LO8, LO9,LO11",
+          "TU",
+          "Textbook/References SlidesChatGPT",
+          "",
+          "Lecture chapter 2 in the textbook focus on 2.5Use ChatGPT to learn about topics related to the keywords and solutions in IPC",
+          ""
+        ],
+        [
+          "18",
+          "Chapter 2 Problems",
+          "Offline",
+          "LO7,LO8, LO9",
+          "TU",
+          "Textbook/ReferencesSlides",
+          "",
+          "Learn Problems",
+          ""
+        ],
+        [
+          "19",
+          "Shell programming",
+          "Offline",
+          "LO7, LO8, LO9",
+          "T",
+          "Tutorial LabsChatGPT",
+          "",
+          "Do labUse ChatGPT to learn about commands related to Shell programming",
+          ""
+        ],
+        [
+          "20",
+          "Practice shell programming",
+          "Offline",
+          "LO7, LO8, LO9",
+          "T",
+          "Tutorial Labs",
+          "",
+          "Do lab",
+          ""
+        ],
+        [
+          "21",
+          "Practice shell programming (continue)",
+          "Offline",
+          "LO7, LO8, LO9",
+          "U",
+          "Tutorial Labs",
+          "",
+          "Do lab",
+          ""
+        ],
+        [
+          "22",
+          "Review Lab 2Chapter 2 Problems",
+          "Offline",
+          "LO3, LO8",
+          "T",
+          "Textbook/ReferencesSlides",
+          "",
+          "Learn Problems",
+          ""
+        ],
+        [
+          "23",
+          "Chapter 3: Memory management3.1 No Memory Abstraction",
+          "Offline",
+          "LO3, LO8,LO11",
+          "T",
+          "Textbook/References Slides AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 3 in the textbook focus on 3.1Use AI Notes Q&A to answer questions related to memory management in the operating system",
+          ""
+        ],
+        [
+          "24",
+          "3.2 A Memory Abstraction: Address Spaces",
+          "Offline",
+          "LO3, LO8,LO11",
+          "T",
+          "Textbook/References slides AI Notes (https://www.https://notegpt.io/)Cached simulator",
+          "",
+          "Lecture chapter 3 in the textbook focus on 3.2Use AI Notes Q&A to answer questions related to memory management in the operating system.",
+          ""
+        ],
+        [
+          "25",
+          "3.3 Virtual Memory",
+          "Offline",
+          "LO3, LO8,LO11",
+          "T",
+          "Textbook/References slides AI Notes (https://www.https://notegpt.io/)Cached simulator",
+          "",
+          "Lecture chapter 3 in the textbook focus on 3.3Use AI Notes Q&A to answer questions related to memory management in the operating system",
+          ""
+        ],
+        [
+          "26",
+          "3.4 Page Replacement Algorithms",
+          "Offline",
+          "LO3, LO8,LO11",
+          "T",
+          "Textbook/References SlidesChatGPT/Copilot/GammaMARIE Simulator",
+          "",
+          "Lecture chapter 3 in the textbook focus on 3.4Use AI Notes Q&A to answer questions related to memory management in the operating system",
+          ""
+        ],
+        [
+          "27",
+          "Guiding Presentation - topic's selection- Chapter 7: Virtuallization and The Cloud- Chapter 10: CASE STUDY 1: UNIX, LINUX, and ANDROID- Chapter 11: CASE STUDY 2: WINDOWS 8",
+          "Offline",
+          "LO3, LO8",
+          "I",
+          "Textbook/References Tutorial LabsGamma/ AI Notes (https://www.https://notegpt.io/)",
+          "",
+          "Apply the tools that have been learned to develop presentation content",
+          ""
+        ],
+        [
+          "28",
+          "3.5 Design Issues for Paging Systems3.6 Implementation Issues",
+          "Offline",
+          "LO3, LO8,LO11",
+          "I",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 3 in the textbook focus on 3.5, 3.6Use AI Notes Q&A to answer questions related to memory management in the operating system",
+          ""
+        ],
+        [
+          "29",
+          "3.7 Segmentation",
+          "Offline",
+          "LO3, LO8,LO11",
+          "T",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT",
+          "",
+          "Lecture chapter 3 in the textbook focus on 3.7Use AI Notes Q&A to answer questions related to memory management in the operating systemUse ChatGPT to learn more about the mechanism and keywords related to Segmentation and other solutions",
+          ""
+        ],
+        [
+          "30",
+          "Chapter 3 Problems",
+          "Offline",
+          "LO3, LO8",
+          "TU",
+          "Textbook/References",
+          "",
+          "Lecture chapter 3 in the textbook",
+          ""
+        ],
+        [
+          "31",
+          "Guilding lab 3",
+          "Offline",
+          "LO3, LO8",
+          "TU",
+          "Textbook/References",
+          "",
+          "Lecture chapter 3 in the textbook",
+          ""
+        ],
+        [
+          "32",
+          "Progress Test 1 and Review",
+          "Offline",
+          "LO3, LO8",
+          "TU",
+          "Textbook/References",
+          "",
+          "Lecture chapter 3 in the textbook",
+          ""
+        ],
+        [
+          "33",
+          "Review Problems",
+          "Offline",
+          "LO3, LO8",
+          "TU",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "34",
+          "Chapter 4: Files4.1 Files4.2 Directories",
+          "Offline",
+          "LO4, LO9, LO10",
+          "IT",
+          "Textbook/References SlidesChatGPT",
+          "",
+          "Lecture chapter 4 in the textbook focus on 4.1, 4.2Use ChatGPT to learn about the concepts of Files, Directories, and their organization in operating systems.",
+          ""
+        ],
+        [
+          "35",
+          "4.3 File System Implementation4.4 File System Management and Optimization4.5 Example File Systems",
+          "Offline",
+          "LO4, LO9, LO10,LO11",
+          "IT",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 4 in the textbook focus on 4.3, 4.4.Use ChatGPT to further explore the contents of the lessonUse ChatGPT or NoteGPT to generate simple file system simulations, then test them in Python or Javause NoteGPT to explore how these file systems worked",
+          ""
+        ],
+        [
+          "36",
+          "Review Lab3",
+          "Offline",
+          "LO4, LO9, LO10",
+          "",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "37",
+          "Guiding Lab 4",
+          "Offline",
+          "LO4, LO9, LO10",
+          "U",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "38",
+          "Chapter 4 Problems",
+          "Offline",
+          "LO4, LO9, LO10",
+          "U",
+          "Textbook/ReferencesSlides",
+          "",
+          "Lecture chapter 4 in the textbook",
+          ""
+        ],
+        [
+          "39",
+          "C programming in Linux",
+          "Offline",
+          "LO4, LO9, LO10",
+          "T",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "40",
+          "Guiding Lab",
+          "Offline",
+          "LO4, LO9, LO10",
+          "T",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "41",
+          "Chapter 5: Input/ Output5.1 Principles of I/O Hardware5.2 Principles of I/O Software",
+          "Offline",
+          "LO4, LO5, LO9, LO10",
+          "U",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Do LabLecture chapter 5 in the textbook focus on 5.1, 5.2Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "42",
+          "5.3 I/O Software Layers",
+          "Offline",
+          "LO5, LO10,LO11",
+          "TU",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 5 in the textbook focus on 5.3Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "43",
+          "5.4 Disks",
+          "Offline",
+          "LO5, LO10,LO11",
+          "TU",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 5 in the textbook focus on 5.4Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "44",
+          "5.5 Clocks5.6 User Intrefaces: Keyboard, Mouse, Monitor",
+          "Offline",
+          "LO5, LO10,LO11",
+          "TU",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 5 in the textbook focus on 5.6Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "45",
+          "5.5 Clocks5.6 User Intrefaces: Keyboard, Mouse, Monitor",
+          "Offline",
+          "LO5, LO10,LO11",
+          "TU",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 5 in the textbook focus on 5.6Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "46",
+          "5.7 Thin Clients5.8 Power Management",
+          "Offline",
+          "LO5, LO10,LO11",
+          "TU",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 5 in the textbook fFocus on 5.7, 5.8Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "47",
+          "Review lab 4",
+          "Offline",
+          "LO5, LO10",
+          "TU",
+          "Tutorial Labs",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "48",
+          "Chapter 5 Problems",
+          "Offline",
+          "LO5, LO10",
+          "TU",
+          "Textbook/ReferencesSlides",
+          "",
+          "Lecture chapter 5 in the textbook",
+          ""
+        ],
+        [
+          "49",
+          "Chapter 6: Deadlock6.1 Resources6.2 Introduction to Deadlocks6.3 The Ostrich Algorithm",
+          "Offline",
+          "LO6, LO9, LO10,LO11",
+          "IT",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 6 in the textbook focus on 6.1, 6.2, 6.3Use ChatGPT to further explore the contents of the lessonUse ChatGPT/Copilot to generate scripts that describe deadlock, and then use NoteGPT/ChatGPT/Copilot to explane these scipts.",
+          ""
+        ],
+        [
+          "50",
+          "6.4 Deadlock Detection and Recovery6.5 Deadlock Avoidance",
+          "Offline",
+          "LO6, LO9, LO10,LO11",
+          "",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 6 in the textbook focus on 6.4, 6.5Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "51",
+          "6.6 Deadlock Prevention6.7 Other Issues",
+          "Offline",
+          "LO6, LO9, LO10,LO11",
+          "IT",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 6 in the textbook focus on 6.6, 6.7Use ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "52",
+          "Chapter 6 ProblemsGuiding Problems",
+          "Offline",
+          "LO6, LO9, LO10,LO11",
+          "ITU",
+          "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+          "",
+          "Lecture chapter 6 in the textbookUse ChatGPT to further explore the contents of the lesson",
+          ""
+        ],
+        [
+          "53",
+          "Progress Test 2 and Review",
+          "Offline",
+          "LO6, LO9, LO10",
+          "TU",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "54",
+          "Review Problems",
+          "Offline",
+          "LO6, LO9, LO10",
+          "TU",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "55",
+          "Chapter 7, 10, 11 Presentation",
+          "Offline",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "56",
+          "Chapter 7, 10, 11 Presentation",
+          "Offline",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "57",
+          "Chapter 7, 10, 11 Presentation",
+          "Offline",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "58",
+          "Chapter 7, 10, 11 Presentation",
+          "Offline",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "59",
+          "Chapter 7, 10, 11 Presentation",
+          "Offline",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "60",
+          "Discussion of current research areas. Review Course",
+          "Offline",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: Introduction1.1. What is an operating system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlidesChatGPT()",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "OSG202",
+            "links": [
+              {
+                "text": "OSG202",
+                "href": "https://flm.fpt.edu.vn/download/12841/S/1_OSG202.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 1 in the textbook focus on 1.1Use ChatGPT to explore content more extensively than in the textbook based on keywords provided by the teacher, such as: single user, multi-user, single tasking, multi-tasking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.2 History of operating system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlidesChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 1 in the textbook focus on 1.2Use ChatGPT to learn more about the history of operating systems based on the keywords provided in class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.3. Computer hardware review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 1 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 1 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Overview of Linux Operating systemOverview of Linux Command",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7, LO8,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial LabsChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Research Internet/Textbook/References at home in advanceUsing ChatGPT to learn basic Linux operating system commands from the textbookDo practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Short practice of using Linux OS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO9,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial LabsChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Research Internet/Textbook/References at home in advanceUsing ChatGPT to learn basic Linux operating system commands from the textbookDo practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.4 The Operating System Zoo1.5 Operating System Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Slides AI Notes (https://www.https://notegpt.io/)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 1 in the textbook focus on 1.4, 1.5Use 'AI Notes' to see additional explanations about different operating systems.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.6 System Calls1.7 Operating System Structure",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Slides AI Notes (https://www.https://notegpt.io/)ChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 1 in the textbook focus on 1.6, 1.7Use ChatGPT/AI Notes to learn about System Calls and the structures of the Operating System",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Processes and Threads2.1 Processes2.2 Threads",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References SlidesChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 2 in the textbook focus on 2.1, 2.2Use ChatGPT to learn about Threads and Processes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.3 Interprocess Communication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References SlidesChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 2 in the textbook focus on 2.3Use ChatGPT to learn about IPC and the solutions based on the keywords in the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2 ProblemsReview Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 2 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.4 Scheduling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References SlidesMARIE SimulatorChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 2 in the textbook focus on 2.4Use ChatGPT to learn about topics related to FCFS, Shortest Job First, Round Robin, and Priority.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.5 Classical IPC Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO7, LO8, LO9,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References SlidesChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 2 in the textbook focus on 2.5Use ChatGPT to learn about topics related to the keywords and solutions in IPC",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7,LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Shell programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial LabsChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do labUse ChatGPT to learn about commands related to Shell programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice shell programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice shell programming (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 2Chapter 2 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3: Memory management3.1 No Memory Abstraction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Slides AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook focus on 3.1Use AI Notes Q&A to answer questions related to memory management in the operating system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.2 A Memory Abstraction: Address Spaces",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References slides AI Notes (https://www.https://notegpt.io/)Cached simulator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook focus on 3.2Use AI Notes Q&A to answer questions related to memory management in the operating system.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.3 Virtual Memory",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References slides AI Notes (https://www.https://notegpt.io/)Cached simulator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook focus on 3.3Use AI Notes Q&A to answer questions related to memory management in the operating system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.4 Page Replacement Algorithms",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References SlidesChatGPT/Copilot/GammaMARIE Simulator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook focus on 3.4Use AI Notes Q&A to answer questions related to memory management in the operating system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Presentation - topic's selection- Chapter 7: Virtuallization and The Cloud- Chapter 10: CASE STUDY 1: UNIX, LINUX, and ANDROID- Chapter 11: CASE STUDY 2: WINDOWS 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial LabsGamma/ AI Notes (https://www.https://notegpt.io/)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply the tools that have been learned to develop presentation content",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.5 Design Issues for Paging Systems3.6 Implementation Issues",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook focus on 3.5, 3.6Use AI Notes Q&A to answer questions related to memory management in the operating system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.7 Segmentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook focus on 3.7Use AI Notes Q&A to answer questions related to memory management in the operating systemUse ChatGPT to learn more about the mechanism and keywords related to Segmentation and other solutions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guilding lab 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1 and Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 3 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4: Files4.1 Files4.2 Directories",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References SlidesChatGPT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 4 in the textbook focus on 4.1, 4.2Use ChatGPT to learn about the concepts of Files, Directories, and their organization in operating systems.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 File System Implementation4.4 File System Management and Optimization4.5 Example File Systems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO9, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 4 in the textbook focus on 4.3, 4.4.Use ChatGPT to further explore the contents of the lessonUse ChatGPT or NoteGPT to generate simple file system simulations, then test them in Python or Javause NoteGPT to explore how these file systems worked",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 4 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "C programming in Linux",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5: Input/ Output5.1 Principles of I/O Hardware5.2 Principles of I/O Software",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO5, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do LabLecture chapter 5 in the textbook focus on 5.1, 5.2Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.3 I/O Software Layers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 5 in the textbook focus on 5.3Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.4 Disks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 5 in the textbook focus on 5.4Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.5 Clocks5.6 User Intrefaces: Keyboard, Mouse, Monitor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 5 in the textbook focus on 5.6Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.5 Clocks5.6 User Intrefaces: Keyboard, Mouse, Monitor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 5 in the textbook focus on 5.6Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.7 Thin Clients5.8 Power Management",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 5 in the textbook fFocus on 5.7, 5.8Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review lab 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5 Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/ReferencesSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 5 in the textbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6: Deadlock6.1 Resources6.2 Introduction to Deadlocks6.3 The Ostrich Algorithm",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO6, LO9, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 6 in the textbook focus on 6.1, 6.2, 6.3Use ChatGPT to further explore the contents of the lessonUse ChatGPT/Copilot to generate scripts that describe deadlock, and then use NoteGPT/ChatGPT/Copilot to explane these scipts.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.4 Deadlock Detection and Recovery6.5 Deadlock Avoidance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO6, LO9, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 6 in the textbook focus on 6.4, 6.5Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.6 Deadlock Prevention6.7 Other Issues",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO6, LO9, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 6 in the textbook focus on 6.6, 6.7Use ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6 ProblemsGuiding Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO6, LO9, LO10,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook/References Tutorial Labs AI Notes (https://www.https://notegpt.io/)ChatGPT/Copilot",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture chapter 6 in the textbookUse ChatGPT to further explore the contents of the lesson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2 and Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO6, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO6, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7, 10, 11 Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7, 10, 11 Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7, 10, 11 Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7, 10, 11 Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7, 10, 11 Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discussion of current research areas. Review Course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Lab",
+          "on-going",
+          "4",
+          "20.0%",
+          ">0",
+          "in lab session",
+          "LO7, LO8, LO9, LO10",
+          "practical exercises",
+          "N/A",
+          "technical aspect of studied topics",
+          "guided by instructor",
+          ""
+        ],
+        [
+          "2",
+          "Presentation",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "~20'/group",
+          "LO1, LO2, LO3, LO4, LO5, LO6,LO11",
+          "use Presentation Rubic sheet",
+          "N/A",
+          "a selelected topic",
+          "prepare at home, working in group, present in class hours",
+          ""
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "2",
+          "20.0%",
+          ">0",
+          "10'-30'",
+          "LO1, LO2, LO3, LO4, LO5, LO6",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "10-30 (At least 10*n questions where n is the number of Chapters covered in the test.)",
+          "Current chapter(s)Each Progess Test covers at least 01 Chapter and at most 03 Chapters, and overall they must cover all learned Chapters of the course.",
+          "in class/remote, by instructor",
+          "Instruction and shedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has resposibility to review the test for students after graded."
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "1",
+          "40.0%",
+          "4",
+          "60'",
+          "LO1, LO2, LO3, LO4, LO5, LO6",
+          "Multiple choicesMarked by Computer",
+          "50",
+          "concepts, algorithms; All chapters from 1 to 6; more than 70% new questions (for the current semester);",
+          "by exam board,",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in lab session",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7, LO8, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "practical exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "technical aspect of studied topics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "guided by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "~20'/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6,LO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "use Presentation Rubic sheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "a selelected topic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "prepare at home, working in group, present in class hours",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10'-30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10-30 (At least 10*n questions where n is the number of Chapters covered in the test.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Current chapter(s)Each Progess Test covers at least 01 Chapter and at most 03 Chapters, and overall they must cover all learned Chapters of the course.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class/remote, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instruction and shedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has resposibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "concepts, algorithms; All chapters from 1 to 6; more than 70% new questions (for the current semester);",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board,",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -7,9 +7,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # No third-party graph-drawing package: the knowledge graph is drawn with
+  # a hand-rolled canvas (Stack/Positioned/CustomPaint) in
+  # lib/features/knowledge_graph/presentation/widgets/concept_graph_canvas.dart.
+  # A `graphview: ^1.5.1` dependency lived here through "Lần 4" of that
+  # feature; see its README.md "Lần 5" for why it was dropped.
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
 flutter:
   uses-material-design: true
+  assets:
+    - data/subject/
+    - data/concepts/
