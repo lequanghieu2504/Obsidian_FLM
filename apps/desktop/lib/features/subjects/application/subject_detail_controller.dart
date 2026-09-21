@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 
 import '../../assistant/application/llm_client.dart';
+import '../../knowledge_graph/data/subject_repository.dart';
+import '../../knowledge_graph/domain/subject_record.dart';
 import '../domain/subject_workspace.dart';
 
 class SubjectDetailController extends ChangeNotifier {
@@ -10,6 +12,7 @@ class SubjectDetailController extends ChangeNotifier {
     required this.llm,
     required this.keys,
     this.attachmentProcessor,
+    this.syllabusRepository = const SubjectRepository(),
   });
 
   final SubjectWorkspace workspace;
@@ -17,6 +20,15 @@ class SubjectDetailController extends ChangeNotifier {
   final LlmClient llm;
   final GeminiKeyStore keys;
   final ChatAttachmentProcessor? attachmentProcessor;
+
+  /// Loads this subject's full FLM syllabus record from `data/subject/`
+  /// (the knowledge-graph feature's own repository, reused here so the
+  /// detail screen and the Gemini prompt both show/send the richer data
+  /// instead of just the curriculum's Code/Name/Semester/Credits).
+  final SubjectRepository syllabusRepository;
+  SubjectRecord? syllabus;
+  bool syllabusLoading = true;
+  String? syllabusError;
   List<UserResource> _resources = [];
   List<ChatMessage> _messages = [];
   List<UserResource> get resources => List.unmodifiable(_resources);
@@ -68,7 +80,22 @@ class SubjectDetailController extends ChangeNotifier {
   }
 
   Future<void> load() async {
-    await Future.wait([loadResources(), loadChat(), loadKey()]);
+    await Future.wait([loadResources(), loadChat(), loadKey(), loadSyllabus()]);
+  }
+
+  Future<void> loadSyllabus() async {
+    syllabusLoading = true;
+    syllabusError = null;
+    _changed();
+    try {
+      syllabus = await syllabusRepository.loadByCode(workspace.subjectCode);
+    } catch (_) {
+      syllabus = null;
+      syllabusError = 'Cannot load the full syllabus for this subject.';
+    } finally {
+      syllabusLoading = false;
+      _changed();
+    }
   }
 
   Future<void> loadResources() async {
@@ -279,7 +306,7 @@ class SubjectDetailController extends ChangeNotifier {
         id: DateTime.now().microsecondsSinceEpoch.toString(),
         role: ChatRole.assistant,
         content: await llm.send(
-          context: const SubjectPromptBuilder().build(workspace),
+          context: const SubjectPromptBuilder().build(workspace, syllabus: syllabus),
           messages: messages,
           attachments: attachments,
         ),

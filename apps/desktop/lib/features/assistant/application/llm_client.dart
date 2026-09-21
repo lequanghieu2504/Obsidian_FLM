@@ -1,3 +1,4 @@
+import '../../knowledge_graph/domain/subject_record.dart';
 import '../../subjects/domain/subject_workspace.dart';
 
 abstract interface class LlmClient {
@@ -38,22 +39,64 @@ abstract interface class GeminiKeyStore {
 class SubjectPromptBuilder {
   const SubjectPromptBuilder();
 
-  String build(SubjectWorkspace workspace) {
+  /// [syllabus] is this subject's full FLM syllabus record, loaded from
+  /// `data/subject/` (see `SubjectRepository.loadByCode`) — null if no
+  /// matching file was found, in which case the prompt falls back to just
+  /// the curriculum's own [SubjectWorkspace.subject] fields.
+  String build(SubjectWorkspace workspace, {SubjectRecord? syllabus}) {
     final subject = workspace.subject;
-    return '''You are assisting the user with the selected Subject.
-Current curriculum: ${workspace.curriculumCode}
-Current subject:
-Code: ${subject.code}
-Name: ${subject.name}
-Semester: ${subject.semester}
-Credits: ${subject.credits}
-Prerequisite: ${subject.preRequisite.isEmpty ? 'Not provided' : subject.preRequisite}
+    final buffer = StringBuffer();
 
-These fields are the only academic source context provided. Do not invent
-syllabus content or claim that general knowledge came from FLM. Clearly distinguish
-general explanations from the provided metadata. If information is unavailable,
-say so. Files are included only when the user explicitly attaches them to the
-current message.
-''';
+    buffer.writeln('You are assisting the user with the selected Subject.');
+    buffer.writeln('Current curriculum: ${workspace.curriculumCode}');
+    buffer.writeln('Current subject:');
+    buffer.writeln('Code: ${subject.code}');
+    buffer.writeln('Name: ${subject.name}');
+    buffer.writeln('Semester: ${subject.semester}');
+    buffer.writeln('Credits: ${subject.credits}');
+    buffer.writeln(
+      'Prerequisite: '
+      '${subject.preRequisite.isEmpty ? 'Not provided' : subject.preRequisite}',
+    );
+
+    if (syllabus == null) {
+      buffer.writeln(
+        'No detailed syllabus record was found for this subject in '
+        'data/subject/ — only the fields above are available.',
+      );
+    } else {
+      buffer.writeln();
+      buffer.writeln('Full syllabus (from data/subject/):');
+      buffer.writeln('Syllabus name: ${syllabus.syllabusName}');
+      buffer.writeln('Course name (English): ${syllabus.courseNameEnglish}');
+      buffer.writeln('Degree level: ${syllabus.degreeLevel}');
+      buffer.writeln(
+        'Learning-teaching method: ${syllabus.learningTeachingMethod}',
+      );
+      buffer.writeln(
+        'Prerequisite (syllabus wording): '
+        '${syllabus.prerequisiteRaw.isEmpty ? 'Not provided' : syllabus.prerequisiteRaw}',
+      );
+      buffer.writeln(
+        'Description: '
+        '${syllabus.description.isEmpty ? 'Not provided' : syllabus.description}',
+      );
+      if (syllabus.learningOutcomes.isNotEmpty) {
+        buffer.writeln('Course learning outcomes (CLOs):');
+        for (final outcome in syllabus.learningOutcomes) {
+          buffer.writeln('- ${outcome.code}: ${outcome.detail}');
+        }
+      }
+    }
+
+    buffer.writeln();
+    buffer.writeln(
+      'These fields are the only academic source context provided. Do not '
+      'invent syllabus content or claim that general knowledge came from '
+      'FLM. Clearly distinguish general explanations from the provided '
+      'metadata. If information is unavailable, say so. Files are included '
+      'only when the user explicitly attaches them to the current message.',
+    );
+    return buffer.toString();
   }
 }

@@ -153,6 +153,8 @@ class SubjectResourcesPanel extends StatelessWidget {
                     value: prerequisiteDisplay(subject),
                     wide: true,
                   ),
+                  const SizedBox(height: 24),
+                  _SyllabusSection(controller: controller),
                   const SizedBox(height: 32),
                   const Divider(),
                   const SizedBox(height: 24),
@@ -291,6 +293,113 @@ class _InformationField extends StatelessWidget {
           SelectableText(value, style: theme.textTheme.bodyLarge),
         ],
       ),
+    );
+  }
+}
+
+/// The subject's full FLM syllabus (`data/subject/<id>.json`, loaded by
+/// `SubjectDetailController.loadSyllabus` via the knowledge-graph feature's
+/// `SubjectRepository`) — description, learning outcomes, and the other
+/// fields the curriculum file (`Subject`) doesn't carry. This is the same
+/// record sent to Gemini as context (`SubjectPromptBuilder`), shown here so
+/// the user can see exactly what the assistant already knows about the
+/// subject.
+class _SyllabusSection extends StatelessWidget {
+  const _SyllabusSection({required this.controller});
+  final SubjectDetailController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    if (controller.syllabusLoading) {
+      return const Padding(
+        padding: EdgeInsets.symmetric(vertical: 12),
+        child: LinearProgressIndicator(
+          semanticsLabel: 'Loading full syllabus',
+        ),
+      );
+    }
+
+    final syllabus = controller.syllabus;
+    if (syllabus == null) {
+      return Text(
+        controller.syllabusError ??
+            'No detailed syllabus found in data/subject/ for this subject.',
+        style: theme.textTheme.bodyMedium?.copyWith(
+          color: theme.colorScheme.onSurfaceVariant,
+        ),
+      );
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Syllabus', style: theme.textTheme.titleLarge),
+        const SizedBox(height: 16),
+        Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          children: [
+            if (syllabus.syllabusName.isNotEmpty)
+              _InformationField(
+                label: 'Syllabus name',
+                value: syllabus.syllabusName,
+                wide: true,
+              ),
+            if (syllabus.courseNameEnglish.isNotEmpty)
+              _InformationField(
+                label: 'Course name (English)',
+                value: syllabus.courseNameEnglish,
+                wide: true,
+              ),
+            if (syllabus.degreeLevel.isNotEmpty)
+              _InformationField(
+                label: 'Degree level',
+                value: syllabus.degreeLevel,
+              ),
+            if (syllabus.learningTeachingMethod.isNotEmpty)
+              _InformationField(
+                label: 'Learning-teaching method',
+                value: syllabus.learningTeachingMethod,
+                wide: true,
+              ),
+          ],
+        ),
+        if (syllabus.description.isNotEmpty) ...[
+          const SizedBox(height: 16),
+          _InformationField(
+            label: 'Description',
+            value: syllabus.description,
+            wide: true,
+          ),
+        ],
+        if (syllabus.learningOutcomes.isNotEmpty) ...[
+          const SizedBox(height: 16),
+          Text('Learning outcomes', style: theme.textTheme.labelLarge),
+          const SizedBox(height: 8),
+          ...syllabus.learningOutcomes.map(
+            (outcome) => Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: SelectableText.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: '${outcome.code}: ',
+                      style: theme.textTheme.bodyLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    TextSpan(
+                      text: outcome.detail,
+                      style: theme.textTheme.bodyLarge,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ],
     );
   }
 }

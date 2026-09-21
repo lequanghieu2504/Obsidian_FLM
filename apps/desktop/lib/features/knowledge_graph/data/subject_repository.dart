@@ -38,4 +38,15 @@ class SubjectRepository {
     }
     return subjects;
   }
+
+  /// Convenience lookup used by other features (e.g. the subjects feature's
+  /// detail screen, which wants one subject's full syllabus record by its
+  /// business code) that don't need every subject, just one.
+  Future<SubjectRecord?> loadByCode(String subjectCode) async {
+    final all = await loadAll();
+    for (final subject in all) {
+      if (subject.subjectCode == subjectCode) return subject;
+    }
+    return null;
+  }
 }

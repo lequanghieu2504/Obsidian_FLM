@@ -8,11 +8,16 @@ import '../domain/knowledge_graph_builder.dart';
 import '../domain/subject_record.dart';
 import 'widgets/concept_graph_canvas.dart';
 import 'widgets/graph_tooltip.dart';
-import 'widgets/subject_detail_panel.dart';
 
 /// The "graph" half of [KnowledgeGraphPage] — the concept graph for one
 /// already-known subject — without its picker grid, search box or back
 /// button, so it can be embedded as a tab inside [SubjectDetailScreen].
+///
+/// Deliberately does **not** show [SubjectDetailPanel] on node tap: full
+/// subject metadata (description, CLOs, ...) now lives in the detail
+/// screen's own "Subject & resources" tab (see `SubjectResourcesPanel`),
+/// so repeating it here on every node tap would just be a duplicate.
+/// Tapping a node still selects/highlights it on the canvas.
 ///
 /// Loads the same `data/subject/` + `data/concepts/concepts.json` assets
 /// independently (this tab may be opened before the subjects feature's own
@@ -40,7 +45,6 @@ class SubjectKnowledgeGraphTab extends StatefulWidget {
 
 class _SubjectKnowledgeGraphTabState extends State<SubjectKnowledgeGraphTab> {
   late Future<KnowledgeGraph?> _loadFuture;
-  Map<String, SubjectRecord> _subjectsByCode = const {};
   String? _selectedNodeId;
 
   @override
@@ -67,9 +71,14 @@ class _SubjectKnowledgeGraphTabState extends State<SubjectKnowledgeGraphTab> {
     ]);
     final subjects = results[0] as List<SubjectRecord>;
     final conceptsByCode = results[1] as Map<String, SubjectConcepts>;
-    _subjectsByCode = {for (final s in subjects) s.subjectCode: s};
 
-    final subject = _subjectsByCode[widget.subjectCode];
+    SubjectRecord? subject;
+    for (final candidate in subjects) {
+      if (candidate.subjectCode == widget.subjectCode) {
+        subject = candidate;
+        break;
+      }
+    }
     if (subject == null) return null;
 
     final concepts =
@@ -119,56 +128,33 @@ class _SubjectKnowledgeGraphTabState extends State<SubjectKnowledgeGraphTab> {
           );
         }
 
-        final selectedNode = _selectedNodeId == null
-            ? null
-            : knowledgeGraph.nodesById[_selectedNodeId];
-
-        return Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: ColoredBox(
-                color: Theme.of(context).colorScheme.surface,
-                child: Column(
-                  children: [
-                    if (knowledgeGraph.edges.isEmpty)
-                      Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: Text(
-                          'Chưa có dữ liệu chủ đề được biên soạn cho môn '
-                          'này — chỉ có node của chính môn học.',
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                      ),
-                    Expanded(
-                      child: ConceptGraphCanvas(
-                        key: ValueKey('subject-tab-graph-${widget.subjectCode}'),
-                        knowledgeGraph: knowledgeGraph,
-                        subjectId: widget.subjectCode,
-                        selectedNodeId: _selectedNodeId,
-                        isHighlighted: _neverHighlighted,
-                        onNodeTap: _onNodeTap,
-                        tooltipMessage: graphNodeTooltipMessage,
-                      ),
-                    ),
-                  ],
+        return ColoredBox(
+          color: Theme.of(context).colorScheme.surface,
+          child: Column(
+            children: [
+              if (knowledgeGraph.edges.isEmpty)
+                Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Text(
+                    'Chưa có dữ liệu chủ đề được biên soạn cho môn này — chỉ '
+                    'có node của chính môn học.',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ),
-              ),
-            ),
-            if (selectedNode != null)
-              SizedBox(
-                width: 380,
-                child: SubjectDetailPanel(
-                  node: selectedNode,
-                  subject: _subjectsByCode[
-                      selectedNode.attributes['subjectCode']?.toString() ??
-                          selectedNode.id],
+              Expanded(
+                child: ConceptGraphCanvas(
+                  key: ValueKey('subject-tab-graph-${widget.subjectCode}'),
                   knowledgeGraph: knowledgeGraph,
-                  onClose: () => setState(() => _selectedNodeId = null),
+                  subjectId: widget.subjectCode,
+                  selectedNodeId: _selectedNodeId,
+                  isHighlighted: _neverHighlighted,
+                  onNodeTap: _onNodeTap,
+                  tooltipMessage: graphNodeTooltipMessage,
                 ),
               ),
-          ],
+            ],
+          ),
         );
       },
     );
