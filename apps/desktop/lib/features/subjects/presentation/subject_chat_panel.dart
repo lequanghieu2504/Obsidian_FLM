@@ -6,8 +6,15 @@ import '../application/subject_detail_controller.dart';
 import '../domain/subject_workspace.dart';
 
 class SubjectChatPanel extends StatefulWidget {
-  const SubjectChatPanel({super.key, required this.controller});
+  const SubjectChatPanel({super.key, required this.controller, this.onCollapse});
   final SubjectDetailController controller;
+
+  /// Shown as a "Minimize" button in the header when set. The panel itself
+  /// doesn't track a collapsed state — the parent (which owns the layout
+  /// the panel sits in, e.g. [SubjectDetailScreen]'s resizable split) does,
+  /// so collapsing can actually give the freed-up space back to the pane
+  /// next to it instead of just shrinking this widget in place.
+  final VoidCallback? onCollapse;
   @override
   State<SubjectChatPanel> createState() => _SubjectChatPanelState();
 }
@@ -90,6 +97,19 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
     );
   }
 
+  /// Copies a message's raw (unrendered) content — so pasting it elsewhere
+  /// keeps the Markdown source (`**bold**`, `- bullet`, ...) rather than
+  /// whatever [SimpleMarkdown] happened to render it as here.
+  Future<void> _copyMessage(String content) async {
+    await Clipboard.setData(ClipboardData(text: content));
+    if (!mounted) return;
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        const SnackBar(content: Text('Copied to clipboard'), duration: Duration(seconds: 2)),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -134,6 +154,12 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
                           : _clear,
                       icon: const Icon(Icons.delete_sweep_outlined),
                     ),
+                    if (widget.onCollapse != null)
+                      IconButton(
+                        tooltip: 'Minimize assistant',
+                        onPressed: widget.onCollapse,
+                        icon: const Icon(Icons.unfold_less),
+                      ),
                   ],
                 ),
               ],
@@ -214,6 +240,20 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
                                   style: theme.textTheme.labelLarge?.copyWith(
                                     color: onBubbleColor,
                                     fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                const Spacer(),
+                                SizedBox(
+                                  width: 28,
+                                  height: 28,
+                                  child: IconButton(
+                                    padding: EdgeInsets.zero,
+                                    tooltip: 'Copy message',
+                                    iconSize: 16,
+                                    color: onBubbleColor,
+                                    onPressed: () =>
+                                        _copyMessage(message.content),
+                                    icon: const Icon(Icons.copy_outlined),
                                   ),
                                 ),
                               ],

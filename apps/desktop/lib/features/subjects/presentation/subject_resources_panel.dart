@@ -554,32 +554,17 @@ class OtherSyllabusFieldsPanel extends StatelessWidget {
 /// Dedicated tab for one of a syllabus's other tables (reference materials,
 /// week-by-week session plan, an assessment breakdown, constructive
 /// questions, ...) drawn as an actual data grid — header row, zebra-striped
-/// body rows, horizontal scroll for wide tables — instead of joined bullet
-/// text. Some of these tables run to dozens or hundreds of rows (e.g. a
-/// full bank of constructive questions), so the vertical scroll also gets
-/// an always-visible [Scrollbar], in addition to the horizontal one
-/// [_DataGrid] draws for its own axis.
-class SyllabusTablePanel extends StatefulWidget {
+/// body rows, horizontal *and* vertical scroll for wide/tall tables —
+/// instead of joined bullet text. All the scrolling (and the scrollbars
+/// for it) now lives in [_DataGrid]; see its doc comment for why the two
+/// axes are nested the way they are.
+class SyllabusTablePanel extends StatelessWidget {
   const SyllabusTablePanel({super.key, required this.section});
   final SyllabusSection section;
 
   @override
-  State<SyllabusTablePanel> createState() => _SyllabusTablePanelState();
-}
-
-class _SyllabusTablePanelState extends State<SyllabusTablePanel> {
-  final _verticalController = ScrollController();
-
-  @override
-  void dispose() {
-    _verticalController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final section = widget.section;
     return Card(
       clipBehavior: Clip.antiAlias,
       child: Column(
@@ -608,17 +593,7 @@ class _SyllabusTablePanelState extends State<SyllabusTablePanel> {
           ),
           Divider(height: 1, color: theme.colorScheme.outlineVariant),
           Expanded(
-            child: Scrollbar(
-              controller: _verticalController,
-              thumbVisibility: true,
-              child: SingleChildScrollView(
-                controller: _verticalController,
-                child: _DataGrid(
-                  headers: section.headers,
-                  rows: section.rows,
-                ),
-              ),
-            ),
+            child: _DataGrid(headers: section.headers, rows: section.rows),
           ),
         ],
       ),
@@ -633,11 +608,18 @@ class _SyllabusTablePanelState extends State<SyllabusTablePanel> {
 /// long-text columns (topic, description) get room to wrap rather than
 /// forcing every column to the same width.
 ///
-/// Wide tables (most syllabus tables have 6+ columns) scroll horizontally
-/// under an always-visible [Scrollbar] — a `StatefulWidget` only so it can
-/// own the [ScrollController] that ties the scrollbar's thumb to that one
-/// scroll view (an unscoped `Scrollbar` can't tell which of the nested
-/// horizontal/vertical scroll views it belongs to).
+/// Tall tables (the session plan alone runs 60 rows) need a vertical
+/// scrollbar, and wide ones (most syllabus tables have 6+ columns) need a
+/// horizontal one. The two scroll views used to be nested with vertical on
+/// the *outside* and horizontal on the *inside*, which put the horizontal
+/// [Scrollbar] at the bottom of the full scrolled content instead of the
+/// bottom of the visible panel — on a 60-row table it sat some 3000px
+/// below the fold, effectively undiscoverable. They're nested the other
+/// way round here instead: horizontal is the outer scroll view, sized by
+/// the [Expanded] this widget sits in, so its `Scrollbar` is always pinned
+/// to the bottom of the visible panel regardless of vertical scroll
+/// position; vertical scrolling happens inside a fixed-width [SizedBox]
+/// (the table's full rendered width) nested inside that.
 class _DataGrid extends StatefulWidget {
   const _DataGrid({required this.headers, required this.rows});
   final List<String> headers;
@@ -649,10 +631,12 @@ class _DataGrid extends StatefulWidget {
 
 class _DataGridState extends State<_DataGrid> {
   final _horizontalController = ScrollController();
+  final _verticalController = ScrollController();
 
   @override
   void dispose() {
     _horizontalController.dispose();
+    _verticalController.dispose();
     super.dispose();
   }
 
@@ -673,24 +657,90 @@ class _DataGridState extends State<_DataGrid> {
     final rows = widget.rows;
 
     if (headers.isEmpty) {
-      return Padding(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            for (final row in rows)
-              if (row.any((cell) => cell.isNotEmpty))
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Text(
-                    row.where((cell) => cell.isNotEmpty).join(' · '),
-                    style: theme.textTheme.bodyMedium,
+      return Scrollbar(
+        controller: _verticalController,
+        thumbVisibility: true,
+        child: SingleChildScrollView(
+          controller: _verticalController,
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              for (final row in rows)
+                if (row.any((cell) => cell.isNotEmpty))
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 6),
+                    child: Text(
+                      row.where((cell) => cell.isNotEmpty).join(' · '),
+                      style: theme.textTheme.bodyMedium,
+                    ),
                   ),
-                ),
-          ],
+            ],
+          ),
         ),
       );
     }
+
+    final columnWidths = [
+      for (var i = 0; i < headers.length; i++) _columnWidth(i),
+    ];
+    final tableWidth = columnWidths.fold<double>(0, (sum, w) => sum + w);
+
+    final table = Table(
+      border: TableBorder(
+        horizontalInside: BorderSide(color: theme.colorScheme.outlineVariant),
+        top: BorderSide(color: theme.colorScheme.outlineVariant),
+        bottom: BorderSide(color: theme.colorScheme.outlineVariant),
+      ),
+      columnWidths: {
+        for (var i = 0; i < headers.length; i++)
+          i: FixedColumnWidth(columnWidths[i]),
+      },
+      defaultVerticalAlignment: TableCellVerticalAlignment.top,
+      children: [
+        TableRow(
+          decoration: BoxDecoration(
+            color: theme.colorScheme.surfaceContainerHighest,
+          ),
+          children: [
+            for (final header in headers)
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                child: Text(
+                  header,
+                  style: theme.textTheme.labelLarge?.copyWith(
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+          ],
+        ),
+        for (var r = 0; r < rows.length; r++)
+          TableRow(
+            decoration: BoxDecoration(
+              color: r.isEven
+                  ? theme.colorScheme.surface
+                  : theme.colorScheme.surfaceContainerLow,
+            ),
+            children: [
+              for (var c = 0; c < headers.length; c++)
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 10,
+                  ),
+                  child: Text(
+                    c < rows[r].length ? rows[r][c] : '',
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                ),
+            ],
+          ),
+      ],
+    );
 
     return Scrollbar(
       controller: _horizontalController,
@@ -699,60 +749,16 @@ class _DataGridState extends State<_DataGrid> {
         controller: _horizontalController,
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-        child: Table(
-          border: TableBorder(
-            horizontalInside: BorderSide(color: theme.colorScheme.outlineVariant),
-            top: BorderSide(color: theme.colorScheme.outlineVariant),
-            bottom: BorderSide(color: theme.colorScheme.outlineVariant),
-          ),
-          columnWidths: {
-            for (var i = 0; i < headers.length; i++)
-              i: FixedColumnWidth(_columnWidth(i)),
-          },
-          defaultVerticalAlignment: TableCellVerticalAlignment.top,
-          children: [
-            TableRow(
-              decoration: BoxDecoration(
-                color: theme.colorScheme.surfaceContainerHighest,
-              ),
-              children: [
-                for (final header in headers)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 10,
-                    ),
-                    child: Text(
-                      header,
-                      style: theme.textTheme.labelLarge?.copyWith(
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-              ],
+        child: SizedBox(
+          width: tableWidth,
+          child: Scrollbar(
+            controller: _verticalController,
+            thumbVisibility: true,
+            child: SingleChildScrollView(
+              controller: _verticalController,
+              child: table,
             ),
-            for (var r = 0; r < rows.length; r++)
-              TableRow(
-                decoration: BoxDecoration(
-                  color: r.isEven
-                      ? theme.colorScheme.surface
-                      : theme.colorScheme.surfaceContainerLow,
-                ),
-                children: [
-                  for (var c = 0; c < headers.length; c++)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 10,
-                      ),
-                      child: Text(
-                        c < rows[r].length ? rows[r][c] : '',
-                        style: theme.textTheme.bodyMedium,
-                      ),
-                    ),
-                ],
-              ),
-          ],
+          ),
         ),
       ),
     );

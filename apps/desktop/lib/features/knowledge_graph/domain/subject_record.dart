@@ -117,11 +117,19 @@ class SubjectRecord {
     caseSensitive: false,
   );
 
+  /// The [SyllabusSection.heading] a subject's reference-materials /
+  /// textbook table is normalized to (see [_resolveHeading]). Public so
+  /// callers that want to single that table out — e.g. the Gemini prompt
+  /// builder, to surface it as its own clearly-labeled block instead of a
+  /// generic table dump — key off this instead of duplicating the literal
+  /// string.
+  static const referenceMaterialsHeading = 'Reference materials';
+
   static String _resolveHeading(String heading, List<String> headers) {
     if (!_genericTableHeading.hasMatch(heading.trim())) return heading;
     final normalizedHeaders = headers.map((h) => h.toLowerCase()).toSet();
     if (normalizedHeaders.contains('materialdescription')) {
-      return 'Reference materials';
+      return referenceMaterialsHeading;
     }
     if (normalizedHeaders.contains('learningteachingtype')) {
       return 'Session plan';

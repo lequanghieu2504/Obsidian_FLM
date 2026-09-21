@@ -104,6 +104,23 @@ class SubjectPromptBuilder {
         }
       }
 
+      final materialLines = syllabus.sections
+          .where(
+            (section) =>
+                section.heading == SubjectRecord.referenceMaterialsHeading,
+          )
+          .expand(_materialLines)
+          .toList();
+      if (materialLines.isNotEmpty) {
+        buffer.writeln();
+        buffer.writeln(
+          'Reference materials / Tài liệu môn học (from data/subject/):',
+        );
+        for (final line in materialLines) {
+          buffer.writeln('- $line');
+        }
+      }
+
       final extraMetadata = syllabus.metadata.entries.where(
         (entry) =>
             !namedMetadataKeys.contains(entry.key) && entry.value.isNotEmpty,
@@ -120,6 +137,10 @@ class SubjectPromptBuilder {
       }
 
       for (final section in syllabus.sections) {
+        // Already surfaced above as its own labeled block.
+        if (section.heading == SubjectRecord.referenceMaterialsHeading) {
+          continue;
+        }
         if (section.rows.isEmpty) continue;
         buffer.writeln();
         buffer.writeln('${section.heading}:');
@@ -145,5 +166,49 @@ class SubjectPromptBuilder {
       'only when the user explicitly attaches them to the current message.',
     );
     return buffer.toString();
+  }
+
+  /// Turns each row of a [SubjectRecord.referenceMaterialsHeading] table
+  /// into one human-readable line: `<description> (detail, detail, ...)`.
+  /// Reads columns by name rather than position, since which of
+  /// author/publisher/edition/ISBN/note are actually filled in varies a lot
+  /// per subject (a plain URL reference usually only has
+  /// `materialdescription` + the `is*` flags) — this skips whatever's blank
+  /// instead of printing bare `key: ` noise for it.
+  static Iterable<String> _materialLines(SyllabusSection section) sync* {
+    final columnIndex = {
+      for (var i = 0; i < section.headers.length; i++)
+        section.headers[i].toLowerCase(): i,
+    };
+    String cell(List<String> row, String column) {
+      final index = columnIndex[column];
+      if (index == null || index >= row.length) return '';
+      return row[index].trim();
+    }
+
+    for (final row in section.rows) {
+      final description = cell(row, 'materialdescription');
+      if (description.isEmpty) continue;
+      final author = cell(row, 'author');
+      final publisher = cell(row, 'publisher');
+      final edition = cell(row, 'edition');
+      final isbn = cell(row, 'isbn');
+      final note = cell(row, 'note');
+      final details = <String>[
+        if (author.isNotEmpty) 'author: $author',
+        if (publisher.isNotEmpty) 'publisher: $publisher',
+        if (edition.isNotEmpty) 'edition: $edition',
+        if (isbn.isNotEmpty) 'ISBN: $isbn',
+        if (cell(row, 'ismainmaterial').toLowerCase() == 'true')
+          'main material',
+        if (cell(row, 'isonline').toLowerCase() == 'true')
+          'available online',
+        if (cell(row, 'ishardcopy').toLowerCase() == 'true') 'hardcopy',
+        if (note.isNotEmpty) 'note: $note',
+      ];
+      yield details.isEmpty
+          ? description
+          : '$description (${details.join(', ')})';
+    }
   }
 }

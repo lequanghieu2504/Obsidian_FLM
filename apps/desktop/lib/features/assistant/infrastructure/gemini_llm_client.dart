@@ -27,10 +27,11 @@ class GeminiLlmClient implements LlmClient {
     http.Client? client,
     this.model = const String.fromEnvironment(
       'GEMINI_MODEL',
-      defaultValue: 'gemini-3.6-flash',
+      defaultValue: 'gemini-3.5-flash-lite',
     ),
     this.timeout = const Duration(seconds: 60),
     this.maxAttempts = 3,
+    this.maxHistoryMessages = 20,
   }) : _client = client ?? http.Client();
 
   final GeminiKeyStore keys;
@@ -45,6 +46,17 @@ class GeminiLlmClient implements LlmClient {
   /// often than not instead of surfacing an error the user has to notice
   /// and retry by hand.
   final int maxAttempts;
+
+  /// How many of the most recent [ChatMessage]s to actually send as
+  /// conversation history. The controller keeps (and persists) the whole
+  /// chat, but resending all of it on every turn makes each request grow
+  /// linearly with the conversation's length — a long-running chat can
+  /// burn through a free-tier token/request quota in a handful of turns
+  /// even though the user only asked a short question. Trimming to the
+  /// most recent messages keeps per-request cost roughly constant; set to
+  /// a large value (or override per instance) if full history is wanted
+  /// for a short-lived chat.
+  final int maxHistoryMessages;
 
   static final Random _jitter = Random();
 
@@ -82,18 +94,24 @@ class GeminiLlmClient implements LlmClient {
         'Content-Type': 'application/json',
         'x-goog-api-key': key.trim(),
       };
+      // Only the tail of the conversation is sent to Gemini (see
+      // [maxHistoryMessages]) — the full history stays in [messages] for
+      // the caller/UI, this is just what goes over the wire.
+      final sentMessages = messages.length > maxHistoryMessages
+          ? messages.sublist(messages.length - maxHistoryMessages)
+          : messages;
       final body = jsonEncode({
         'systemInstruction': {
           'parts': [
             {'text': context},
           ],
         },
-        'contents': messages.indexed
+        'contents': sentMessages.indexed
             .map(
               (entry) => {
                 ...(() {
                   final (index, m) = entry;
-                  final isCurrentMessage = index == messages.length - 1;
+                  final isCurrentMessage = index == sentMessages.length - 1;
                   return {
                     'role': m.role == ChatRole.user ? 'user' : 'model',
                     'parts': [
@@ -128,7 +146,12 @@ class GeminiLlmClient implements LlmClient {
           404 =>
             'The configured Gemini model is unavailable. Update GEMINI_MODEL and retry.',
           429 =>
-            'Gemini quota or rate limit reached (retried automatically). Wait a moment, then retry.',
+            'Gemini quota or rate limit reached (retried automatically). '
+            'If this keeps happening, your API key has likely hit its '
+            'daily free-tier request/token cap for this model — that '
+            'resets at midnight Pacific time, not after a short wait. '
+            'Check aistudio.google.com/rate-limit for your actual limits, '
+            'or switch GEMINI_MODEL / enable billing for higher quota.',
           503 =>
             "Gemini's servers are temporarily overloaded (retried automatically). Please try again in a moment.",
           _ =>
@@ -192,8 +215,9 @@ class GeminiLlmClient implements LlmClient {
   ) async {
     for (var attempt = 1; attempt <= maxAttempts; attempt++) {
       final isLastAttempt = attempt == maxAttempts;
+      http.Response? response;
       try {
-        final response = await _client
+        response = await _client
             .post(uri, headers: headers, body: body)
             .timeout(timeout);
         if (isLastAttempt || !_retryableStatusCodes.contains(response.statusCode)) {
@@ -204,10 +228,23 @@ class GeminiLlmClient implements LlmClient {
       } on SocketException {
         if (isLastAttempt) rethrow;
       }
-      // Exponential backoff (400ms, 800ms, 1600ms, ...) plus up to 200ms of
-      // jitter so several concurrent retries don't all land on the server
-      // at the exact same moment.
-      final backoffMs = 400 * pow(2, attempt - 1).toInt();
+      // Gemini (like most APIs) sometimes tells us exactly how long to
+      // wait via `Retry-After` on 429/503 — that is far more accurate
+      // than guessing, and in particular a long value here is a strong
+      // signal this is a hard daily quota rather than a momentary burst,
+      // where our own short backoff would just waste an attempt.
+      final retryAfter = _retryAfterDuration(response);
+      if (retryAfter != null && retryAfter > const Duration(seconds: 5)) {
+        throw const WorkspaceFailure(
+          'Gemini quota exhausted for now (server asked to wait longer than '
+          'this app retries automatically). Please try again later.',
+        );
+      }
+      final backoffMs = retryAfter?.inMilliseconds ??
+          // Exponential backoff (400ms, 800ms, 1600ms, ...) plus up to
+          // 200ms of jitter so several concurrent retries don't all land
+          // on the server at the exact same moment.
+          400 * pow(2, attempt - 1).toInt();
       await Future.delayed(
         Duration(milliseconds: backoffMs + _jitter.nextInt(200)),
       );
@@ -215,6 +252,17 @@ class GeminiLlmClient implements LlmClient {
     // Unreachable: the loop above always returns or rethrows on the last
     // attempt. Only here to satisfy the analyzer's return-type check.
     throw const WorkspaceFailure('Gemini is unavailable. Please retry later.');
+  }
+
+  /// Parses the `Retry-After` header (seconds, per RFC 9110) off a
+  /// response, if present and valid. Returns null when absent/unparseable
+  /// so the caller falls back to its own backoff schedule.
+  Duration? _retryAfterDuration(http.Response? response) {
+    final raw = response?.headers['retry-after'];
+    if (raw == null) return null;
+    final seconds = int.tryParse(raw.trim());
+    if (seconds == null || seconds < 0) return null;
+    return Duration(seconds: seconds);
   }
 
   @override
