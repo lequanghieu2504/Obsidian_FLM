@@ -104,6 +104,31 @@ class SubjectRecord {
   /// is shown/sent twice.
   static const _syllabusDetailsHeading = 'Syllabus Details';
 
+  /// FLM's raw export gives most tables a meaningful heading (e.g.
+  /// `"6 Constructive question(s)"`, `"5 assessment(s)"`) but leaves the
+  /// reference-materials table and the week-by-week session-plan table
+  /// named generically — literally `"Table 2"`, `"Table 3"` or `"Table 4"`
+  /// depending on which optional sections a given subject's file happens to
+  /// have. Those two are recognized by their column shape (stable across
+  /// subjects, unlike the numbering) and given a real name; any other
+  /// generic-looking heading falls back to something better than "Table N".
+  static final RegExp _genericTableHeading = RegExp(
+    r'^Table\s*\d+$',
+    caseSensitive: false,
+  );
+
+  static String _resolveHeading(String heading, List<String> headers) {
+    if (!_genericTableHeading.hasMatch(heading.trim())) return heading;
+    final normalizedHeaders = headers.map((h) => h.toLowerCase()).toSet();
+    if (normalizedHeaders.contains('materialdescription')) {
+      return 'Reference materials';
+    }
+    if (normalizedHeaders.contains('learningteachingtype')) {
+      return 'Session plan';
+    }
+    return 'Additional information';
+  }
+
   factory SubjectRecord.fromJson(
     Map<String, dynamic> json, {
     required String fallbackId,
@@ -143,7 +168,13 @@ class SubjectRecord {
       }
       if (heading == _syllabusDetailsHeading) continue;
 
-      sections.add(SyllabusSection(heading: heading, headers: headers, rows: rows));
+      sections.add(
+        SyllabusSection(
+          heading: _resolveHeading(heading, headers),
+          headers: headers,
+          rows: rows,
+        ),
+      );
     }
 
     final syllabusId = field('Syllabus ID').isNotEmpty

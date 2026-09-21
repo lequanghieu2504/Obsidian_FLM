@@ -15,8 +15,10 @@ import 'widgets/graph_tooltip.dart';
 ///
 /// Deliberately does **not** show [SubjectDetailPanel] on node tap: full
 /// subject metadata (description, CLOs, ...) now lives in the detail
-/// screen's own "Subject & resources" tab (see `SubjectResourcesPanel`),
-/// so repeating it here on every node tap would just be a duplicate.
+/// screen's own Detail-side tabs (see `SubjectOverviewPanel`,
+/// `LearningOutcomesPanel`, `OtherSyllabusFieldsPanel`, and
+/// `SyllabusTablePanel` in `subject_resources_panel.dart`), so repeating it
+/// here on every node tap would just be a duplicate.
 /// Tapping a node still selects/highlights it on the canvas.
 ///
 /// Loads the same `data/subject/` + `data/concepts/concepts.json` assets

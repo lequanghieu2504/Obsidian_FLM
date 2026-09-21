@@ -8,8 +8,20 @@ import '../application/subject_detail_controller.dart';
 import '../domain/subject_display.dart';
 import '../domain/subject_workspace.dart';
 
-class SubjectResourcesPanel extends StatelessWidget {
-  const SubjectResourcesPanel({super.key, required this.controller});
+/// [syllabus.metadata], minus the handful of keys already shown as
+/// dedicated fields elsewhere (syllabus name, description, ...) —
+/// everything else the raw file carries (grading scale, workload, tools,
+/// approval/admin info, ...) so nothing the Gemini prompt already has is
+/// hidden from the "Other syllabus fields" tab.
+Map<String, String> otherSyllabusMetadata(SubjectRecord syllabus) => {
+  for (final entry in syllabus.metadata.entries)
+    if (!SubjectPromptBuilder.namedMetadataKeys.contains(entry.key) &&
+        entry.value.isNotEmpty)
+      entry.key: entry.value,
+};
+
+class SubjectOverviewPanel extends StatelessWidget {
+  const SubjectOverviewPanel({super.key, required this.controller});
   final SubjectDetailController controller;
 
   Future<void> _import(BuildContext context) async {
@@ -442,118 +454,173 @@ class _SyllabusSection extends StatelessWidget {
             wide: true,
           ),
         ],
-        if (syllabus.learningOutcomes.isNotEmpty) ...[
-          const SizedBox(height: 24),
-          Text(
-            'Learning outcomes',
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w700,
+      ],
+    );
+  }
+}
+
+/// Dedicated tab for a subject's learning outcomes (CLOs) — split out of
+/// the overview so this doesn't turn into one long scrolling page.
+class LearningOutcomesPanel extends StatelessWidget {
+  const LearningOutcomesPanel({super.key, required this.controller});
+  final SubjectDetailController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final outcomes = controller.syllabus?.learningOutcomes ?? const [];
+    return Card(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const _SectionHeader(
+              icon: Icons.flag_outlined,
+              title: 'Learning outcomes',
+            ),
+            const SizedBox(height: 16),
+            for (final outcome in outcomes)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: SelectableText.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: '${outcome.code}: ',
+                        style: theme.textTheme.bodyLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: theme.colorScheme.primary,
+                        ),
+                      ),
+                      TextSpan(
+                        text: outcome.detail,
+                        style: theme.textTheme.bodyLarge,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Dedicated tab for the syllabus metadata that isn't already shown as a
+/// named field elsewhere (grading scale, workload, tools, approval/admin
+/// info, ...).
+class OtherSyllabusFieldsPanel extends StatelessWidget {
+  const OtherSyllabusFieldsPanel({super.key, required this.controller});
+  final SubjectDetailController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    final syllabus = controller.syllabus;
+    final fields = syllabus == null
+        ? const <String, String>{}
+        : otherSyllabusMetadata(syllabus);
+    return Card(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const _SectionHeader(
+              icon: Icons.list_alt_outlined,
+              title: 'Other syllabus fields',
+            ),
+            const SizedBox(height: 16),
+            Wrap(
+              spacing: 12,
+              runSpacing: 12,
+              children: [
+                for (final entry in fields.entries)
+                  _InformationField(
+                    label: entry.key,
+                    value: entry.value,
+                    wide: entry.value.length > 48,
+                  ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Dedicated tab for one of a syllabus's other tables (reference materials,
+/// week-by-week session plan, an assessment breakdown, constructive
+/// questions, ...) drawn as an actual data grid — header row, zebra-striped
+/// body rows, horizontal scroll for wide tables — instead of joined bullet
+/// text. Some of these tables run to dozens or hundreds of rows (e.g. a
+/// full bank of constructive questions), so the vertical scroll also gets
+/// an always-visible [Scrollbar], in addition to the horizontal one
+/// [_DataGrid] draws for its own axis.
+class SyllabusTablePanel extends StatefulWidget {
+  const SyllabusTablePanel({super.key, required this.section});
+  final SyllabusSection section;
+
+  @override
+  State<SyllabusTablePanel> createState() => _SyllabusTablePanelState();
+}
+
+class _SyllabusTablePanelState extends State<SyllabusTablePanel> {
+  final _verticalController = ScrollController();
+
+  @override
+  void dispose() {
+    _verticalController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final section = widget.section;
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 8),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    section.heading,
+                    style: theme.textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                Text(
+                  '${section.rows.length} dòng',
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 8),
-          ...syllabus.learningOutcomes.map(
-            (outcome) => Padding(
-              padding: const EdgeInsets.only(bottom: 6),
-              child: SelectableText.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: '${outcome.code}: ',
-                      style: theme.textTheme.bodyLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: theme.colorScheme.primary,
-                      ),
-                    ),
-                    TextSpan(
-                      text: outcome.detail,
-                      style: theme.textTheme.bodyLarge,
-                    ),
-                  ],
+          Divider(height: 1, color: theme.colorScheme.outlineVariant),
+          Expanded(
+            child: Scrollbar(
+              controller: _verticalController,
+              thumbVisibility: true,
+              child: SingleChildScrollView(
+                controller: _verticalController,
+                child: _DataGrid(
+                  headers: section.headers,
+                  rows: section.rows,
                 ),
               ),
             ),
           ),
         ],
-        if (_otherMetadata(syllabus).isNotEmpty) ...[
-          const SizedBox(height: 24),
-          Text(
-            'Other syllabus fields',
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Wrap(
-            spacing: 12,
-            runSpacing: 12,
-            children: [
-              for (final entry in _otherMetadata(syllabus).entries)
-                _InformationField(
-                  label: entry.key,
-                  value: entry.value,
-                  wide: entry.value.length > 48,
-                ),
-            ],
-          ),
-        ],
-        for (final section in syllabus.sections)
-          if (section.rows.isNotEmpty) ...[
-            const SizedBox(height: 16),
-            _SyllabusTableSection(section: section),
-          ],
-      ],
-    );
-  }
-
-  /// [syllabus.metadata], minus the handful of keys already shown as
-  /// dedicated fields above — everything else the raw file carries
-  /// (grading scale, workload, tools, approval/admin info, ...) so the
-  /// panel never hides a field the Gemini prompt already has.
-  Map<String, String> _otherMetadata(SubjectRecord syllabus) => {
-    for (final entry in syllabus.metadata.entries)
-      if (!SubjectPromptBuilder.namedMetadataKeys.contains(entry.key) &&
-          entry.value.isNotEmpty)
-        entry.key: entry.value,
-  };
-}
-
-/// One of a syllabus's other tables (materials/references, week-by-week
-/// session plan, an assessment breakdown, ...) drawn as an actual data
-/// grid — header row, zebra-striped body rows, horizontal scroll for wide
-/// tables — instead of joined bullet text. Collapsed by default since
-/// these can run to dozens of rows.
-class _SyllabusTableSection extends StatelessWidget {
-  const _SyllabusTableSection({required this.section});
-  final SyllabusSection section;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return Card(
-      margin: EdgeInsets.zero,
-      clipBehavior: Clip.antiAlias,
-      child: Theme(
-        data: theme.copyWith(dividerColor: Colors.transparent),
-        child: ExpansionTile(
-          title: Text(
-            section.heading,
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          subtitle: Text(
-            '${section.rows.length} dòng',
-            style: theme.textTheme.bodySmall?.copyWith(
-              color: theme.colorScheme.onSurfaceVariant,
-            ),
-          ),
-          childrenPadding: EdgeInsets.zero,
-          children: [
-            Divider(height: 1, color: theme.colorScheme.outlineVariant),
-            _DataGrid(headers: section.headers, rows: section.rows),
-            const SizedBox(height: 8),
-          ],
-        ),
       ),
     );
   }
@@ -565,14 +632,33 @@ class _SyllabusTableSection extends StatelessWidget {
 /// so short columns (session number, Yes/No flags) stay narrow and
 /// long-text columns (topic, description) get room to wrap rather than
 /// forcing every column to the same width.
-class _DataGrid extends StatelessWidget {
+///
+/// Wide tables (most syllabus tables have 6+ columns) scroll horizontally
+/// under an always-visible [Scrollbar] — a `StatefulWidget` only so it can
+/// own the [ScrollController] that ties the scrollbar's thumb to that one
+/// scroll view (an unscoped `Scrollbar` can't tell which of the nested
+/// horizontal/vertical scroll views it belongs to).
+class _DataGrid extends StatefulWidget {
   const _DataGrid({required this.headers, required this.rows});
   final List<String> headers;
   final List<List<String>> rows;
 
+  @override
+  State<_DataGrid> createState() => _DataGridState();
+}
+
+class _DataGridState extends State<_DataGrid> {
+  final _horizontalController = ScrollController();
+
+  @override
+  void dispose() {
+    _horizontalController.dispose();
+    super.dispose();
+  }
+
   double _columnWidth(int index) {
-    var maxLen = index < headers.length ? headers[index].length : 0;
-    for (final row in rows) {
+    var maxLen = index < widget.headers.length ? widget.headers[index].length : 0;
+    for (final row in widget.rows) {
       if (index < row.length && row[index].length > maxLen) {
         maxLen = row[index].length;
       }
@@ -583,6 +669,8 @@ class _DataGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final headers = widget.headers;
+    final rows = widget.rows;
 
     if (headers.isEmpty) {
       return Padding(
@@ -604,63 +692,68 @@ class _DataGrid extends StatelessWidget {
       );
     }
 
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-      child: Table(
-        border: TableBorder(
-          horizontalInside: BorderSide(color: theme.colorScheme.outlineVariant),
-          top: BorderSide(color: theme.colorScheme.outlineVariant),
-          bottom: BorderSide(color: theme.colorScheme.outlineVariant),
-        ),
-        columnWidths: {
-          for (var i = 0; i < headers.length; i++)
-            i: FixedColumnWidth(_columnWidth(i)),
-        },
-        defaultVerticalAlignment: TableCellVerticalAlignment.top,
-        children: [
-          TableRow(
-            decoration: BoxDecoration(
-              color: theme.colorScheme.surfaceContainerHighest,
-            ),
-            children: [
-              for (final header in headers)
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 10,
-                  ),
-                  child: Text(
-                    header,
-                    style: theme.textTheme.labelLarge?.copyWith(
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-            ],
+    return Scrollbar(
+      controller: _horizontalController,
+      thumbVisibility: true,
+      child: SingleChildScrollView(
+        controller: _horizontalController,
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+        child: Table(
+          border: TableBorder(
+            horizontalInside: BorderSide(color: theme.colorScheme.outlineVariant),
+            top: BorderSide(color: theme.colorScheme.outlineVariant),
+            bottom: BorderSide(color: theme.colorScheme.outlineVariant),
           ),
-          for (var r = 0; r < rows.length; r++)
+          columnWidths: {
+            for (var i = 0; i < headers.length; i++)
+              i: FixedColumnWidth(_columnWidth(i)),
+          },
+          defaultVerticalAlignment: TableCellVerticalAlignment.top,
+          children: [
             TableRow(
               decoration: BoxDecoration(
-                color: r.isEven
-                    ? theme.colorScheme.surface
-                    : theme.colorScheme.surfaceContainerLow,
+                color: theme.colorScheme.surfaceContainerHighest,
               ),
               children: [
-                for (var c = 0; c < headers.length; c++)
+                for (final header in headers)
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 12,
                       vertical: 10,
                     ),
                     child: Text(
-                      c < rows[r].length ? rows[r][c] : '',
-                      style: theme.textTheme.bodyMedium,
+                      header,
+                      style: theme.textTheme.labelLarge?.copyWith(
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
               ],
             ),
-        ],
+            for (var r = 0; r < rows.length; r++)
+              TableRow(
+                decoration: BoxDecoration(
+                  color: r.isEven
+                      ? theme.colorScheme.surface
+                      : theme.colorScheme.surfaceContainerLow,
+                ),
+                children: [
+                  for (var c = 0; c < headers.length; c++)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 10,
+                      ),
+                      child: Text(
+                        c < rows[r].length ? rows[r][c] : '',
+                        style: theme.textTheme.bodyMedium,
+                      ),
+                    ),
+                ],
+              ),
+          ],
+        ),
       ),
     );
   }

@@ -40,7 +40,7 @@ class SubjectPromptBuilder {
   const SubjectPromptBuilder();
 
   /// Metadata keys already surfaced as named fields (here, and in
-  /// `SubjectResourcesPanel`'s UI) — public so both skip the same set
+  /// `SubjectOverviewPanel`'s UI) — public so both skip the same set
   /// when dumping [SubjectRecord.metadata]'s remaining entries, instead
   /// of drifting out of sync with two separately maintained lists.
   static const namedMetadataKeys = {

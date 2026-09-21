@@ -44,9 +44,19 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
 
   Future<void> _send() async {
     final draft = _text.text;
+    if (draft.trim().isEmpty) return;
+    // Reset the composer as soon as the question is sent, rather than
+    // waiting on the (possibly slow) Gemini round-trip — the user should
+    // see the input box clear right after asking.
+    _text.clear();
     final accepted = await widget.controller.send(draft);
     if (!mounted) return;
-    if (accepted && _text.text == draft) _text.clear();
+    if (!accepted) {
+      // Sending was rejected (e.g. a selected attachment failed to
+      // prepare) — restore what the user typed instead of losing it.
+      _text.text = draft;
+      _text.selection = TextSelection.collapsed(offset: draft.length);
+    }
     _focus.requestFocus();
   }
 
