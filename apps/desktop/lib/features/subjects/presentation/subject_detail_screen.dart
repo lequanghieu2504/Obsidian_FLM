@@ -54,6 +54,11 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   int _generation = 0;
   final _chatKey = GlobalKey();
 
+  /// User-adjustable width of the left ("Detail") pane on wide layouts —
+  /// null until the user drags the handle at least once, in which case
+  /// [_wideLayout] falls back to a proportional default.
+  double? _detailPaneWidth;
+
   @override
   void initState() {
     super.initState();
@@ -99,6 +104,92 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
     super.dispose();
   }
 
+  static const double _minPaneWidth = 340;
+  static const double _handleWidth = 20;
+
+  Widget _wideLayout(
+    BoxConstraints constraints,
+    Widget information,
+    Widget chat,
+    Widget knowledgeGraph,
+  ) {
+    final available = constraints.maxWidth - 48 - _handleWidth;
+    final maxPaneWidth = (available - _minPaneWidth).clamp(
+      _minPaneWidth,
+      double.infinity,
+    );
+    final detailWidth = (_detailPaneWidth ?? available * 0.58).clamp(
+      _minPaneWidth,
+      maxPaneWidth,
+    );
+
+    return DefaultTabController(
+      length: 2,
+      child: Column(
+        children: [
+          const TabBar(
+            tabs: [
+              Tab(text: 'Detail'),
+              Tab(text: 'Knowledge Graph'),
+            ],
+          ),
+          Expanded(
+            child: TabBarView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      SizedBox(width: detailWidth, child: information),
+                      _PaneResizeHandle(
+                        width: _handleWidth,
+                        onDrag: (dx) => setState(() {
+                          _detailPaneWidth = (detailWidth + dx).clamp(
+                            _minPaneWidth,
+                            maxPaneWidth,
+                          );
+                        }),
+                      ),
+                      Expanded(child: chat),
+                    ],
+                  ),
+                ),
+                knowledgeGraph,
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _narrowLayout(Widget information, Widget chat, Widget knowledgeGraph) {
+    return DefaultTabController(
+      length: 3,
+      child: Column(
+        children: [
+          const TabBar(
+            tabs: [
+              Tab(text: 'Subject & resources'),
+              Tab(text: 'Gemini Assistant'),
+              Tab(text: 'Knowledge Graph'),
+            ],
+          ),
+          Expanded(
+            child: TabBarView(
+              children: [
+                Padding(padding: const EdgeInsets.all(16), child: information),
+                Padding(padding: const EdgeInsets.all(16), child: chat),
+                knowledgeGraph,
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final controller = _controller;
@@ -136,72 +227,59 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                     final knowledgeGraph = SubjectKnowledgeGraphTab(
                       subjectCode: widget.subject.code,
                     );
-                    if (constraints.maxWidth >= 960) {
-                      return DefaultTabController(
-                        length: 2,
-                        child: Column(
-                          children: [
-                            const TabBar(
-                              tabs: [
-                                Tab(text: 'Detail'),
-                                Tab(text: 'Knowledge Graph'),
-                              ],
-                            ),
-                            Expanded(
-                              child: TabBarView(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(24),
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.stretch,
-                                      children: [
-                                        Expanded(flex: 3, child: information),
-                                        const SizedBox(width: 24),
-                                        Expanded(flex: 2, child: chat),
-                                      ],
-                                    ),
-                                  ),
-                                  knowledgeGraph,
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }
-                    return DefaultTabController(
-                      length: 3,
-                      child: Column(
-                        children: [
-                          const TabBar(
-                            tabs: [
-                              Tab(text: 'Subject & resources'),
-                              Tab(text: 'Gemini Assistant'),
-                              Tab(text: 'Knowledge Graph'),
-                            ],
-                          ),
-                          Expanded(
-                            child: TabBarView(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(16),
-                                  child: information,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(16),
-                                  child: chat,
-                                ),
-                                knowledgeGraph,
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
+                    return constraints.maxWidth >= 960
+                        ? _wideLayout(constraints, information, chat, knowledgeGraph)
+                        : _narrowLayout(information, chat, knowledgeGraph);
                   },
                 ),
               ),
+      ),
+    );
+  }
+}
+
+/// Draggable divider between the detail and chat panes on wide layouts —
+/// the "chat panel width the user can customize" this screen didn't have
+/// before (it was a fixed 3:2 flex split).
+class _PaneResizeHandle extends StatefulWidget {
+  const _PaneResizeHandle({required this.width, required this.onDrag});
+  final double width;
+  final ValueChanged<double> onDrag;
+
+  @override
+  State<_PaneResizeHandle> createState() => _PaneResizeHandleState();
+}
+
+class _PaneResizeHandleState extends State<_PaneResizeHandle> {
+  bool _hover = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return MouseRegion(
+      cursor: SystemMouseCursors.resizeColumn,
+      onEnter: (_) => setState(() => _hover = true),
+      onExit: (_) => setState(() => _hover = false),
+      child: GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onHorizontalDragUpdate: (details) => widget.onDrag(details.delta.dx),
+        child: SizedBox(
+          width: widget.width,
+          child: Align(
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 150),
+              curve: Curves.easeOut,
+              width: 4,
+              height: double.infinity,
+              decoration: BoxDecoration(
+                color: _hover
+                    ? theme.colorScheme.primary
+                    : theme.colorScheme.outlineVariant,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

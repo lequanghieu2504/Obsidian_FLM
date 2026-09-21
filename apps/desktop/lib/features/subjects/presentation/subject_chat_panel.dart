@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../assistant/presentation/simple_markdown.dart';
 import '../application/subject_detail_controller.dart';
 import '../domain/subject_workspace.dart';
 
@@ -172,33 +173,46 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
                       final message = controller
                           .messages[controller.messages.length - 1 - index];
                       final isUser = message.role == ChatRole.user;
+                      final bubbleColor = isUser
+                          ? theme.colorScheme.primaryContainer
+                          : theme.colorScheme.surfaceContainerHighest;
+                      final onBubbleColor = isUser
+                          ? theme.colorScheme.onPrimaryContainer
+                          : theme.colorScheme.onSurface;
                       return Container(
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: isUser
-                              ? theme.colorScheme.primaryContainer
-                              : theme.colorScheme.surfaceContainerHighest,
-                          borderRadius: BorderRadius.circular(12),
+                          color: bubbleColor,
+                          borderRadius: BorderRadius.circular(16),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              isUser ? 'You' : 'Gemini',
-                              style: theme.textTheme.labelLarge?.copyWith(
-                                color: isUser
-                                    ? theme.colorScheme.onPrimaryContainer
-                                    : theme.colorScheme.onSurface,
-                              ),
+                            Row(
+                              children: [
+                                Icon(
+                                  isUser
+                                      ? Icons.person_outline
+                                      : Icons.auto_awesome_outlined,
+                                  size: 16,
+                                  color: onBubbleColor,
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  isUser ? 'You' : 'Gemini',
+                                  style: theme.textTheme.labelLarge?.copyWith(
+                                    color: onBubbleColor,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
                             ),
-                            const SizedBox(height: 8),
-                            SelectableText(
-                              message.content,
-                              style: TextStyle(
-                                color: isUser
-                                    ? theme.colorScheme.onPrimaryContainer
-                                    : theme.colorScheme.onSurface,
+                            const SizedBox(height: 10),
+                            SimpleMarkdown(
+                              data: message.content,
+                              baseStyle: theme.textTheme.bodyLarge?.copyWith(
+                                color: onBubbleColor,
                                 height: 1.5,
                               ),
                             ),

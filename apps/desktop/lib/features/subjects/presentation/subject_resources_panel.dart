@@ -104,22 +104,26 @@ class SubjectResourcesPanel extends StatelessWidget {
                 children: [
                   Text(
                     controller.workspace.curriculumCode,
-                    style: theme.textTheme.labelLarge,
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                      letterSpacing: 0.4,
+                    ),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 8),
                   SelectableText(
                     subject.code,
                     style: theme.textTheme.headlineMedium?.copyWith(
                       color: theme.colorScheme.primary,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 4),
                   SelectableText(
                     displayName.primary,
                     style: theme.textTheme.headlineSmall,
                   ),
                   if (displayName.secondary case final secondary?) ...[
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 4),
                     SelectableText(
                       secondary,
                       style: theme.textTheme.titleLarge?.copyWith(
@@ -128,10 +132,10 @@ class SubjectResourcesPanel extends StatelessWidget {
                       ),
                     ),
                   ],
-                  const SizedBox(height: 24),
-                  Text(
-                    'Subject information',
-                    style: theme.textTheme.titleLarge,
+                  const SizedBox(height: 32),
+                  const _SectionHeader(
+                    icon: Icons.menu_book_outlined,
+                    title: 'Subject information',
                   ),
                   const SizedBox(height: 16),
                   Wrap(
@@ -155,10 +159,10 @@ class SubjectResourcesPanel extends StatelessWidget {
                     value: prerequisiteDisplay(subject),
                     wide: true,
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 32),
                   _SyllabusSection(controller: controller),
                   const SizedBox(height: 32),
-                  const Divider(),
+                  Divider(color: theme.colorScheme.outlineVariant),
                   const SizedBox(height: 24),
                   Wrap(
                     alignment: WrapAlignment.spaceBetween,
@@ -166,9 +170,9 @@ class SubjectResourcesPanel extends StatelessWidget {
                     spacing: 16,
                     runSpacing: 12,
                     children: [
-                      Text(
-                        'Your resources (${controller.resources.length})',
-                        style: theme.textTheme.titleLarge,
+                      _SectionHeader(
+                        icon: Icons.folder_outlined,
+                        title: 'Your resources (${controller.resources.length})',
                       ),
                       FilledButton.icon(
                         onPressed:
@@ -182,8 +186,11 @@ class SubjectResourcesPanel extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 12),
-                  const Text(
+                  Text(
                     'Resources stay on this device unless you explicitly attach them to a Gemini message.',
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
                   ),
                   if (controller.resourceBusy ||
                       controller.resourcesLoading) ...[
@@ -211,17 +218,27 @@ class SubjectResourcesPanel extends StatelessWidget {
                   if (!controller.resourcesLoading &&
                       controller.resourcesReady &&
                       controller.resources.isEmpty)
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 32),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 32),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Icon(Icons.folder_open_outlined, size: 40),
-                          SizedBox(height: 12),
-                          Text('Keep your study files together'),
-                          SizedBox(height: 8),
+                          Icon(
+                            Icons.folder_open_outlined,
+                            size: 40,
+                            color: theme.colorScheme.onSurfaceVariant,
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            'Keep your study files together',
+                            style: theme.textTheme.titleMedium,
+                          ),
+                          const SizedBox(height: 8),
                           Text(
                             'Add notes, slides, spreadsheets, images, or any other file. A local copy will be kept for this Subject.',
+                            style: theme.textTheme.bodyMedium?.copyWith(
+                              color: theme.colorScheme.onSurfaceVariant,
+                            ),
                           ),
                         ],
                       ),
@@ -268,6 +285,35 @@ class SubjectResourcesPanel extends StatelessWidget {
   }
 }
 
+/// Consistent section header — icon + a colored, bold title — used for
+/// every major block of this panel so the visual hierarchy comes from
+/// size/weight/color (per the design system), not from every header
+/// looking the same.
+class _SectionHeader extends StatelessWidget {
+  const _SectionHeader({required this.icon, required this.title});
+  final IconData icon;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(icon, size: 22, color: theme.colorScheme.primary),
+        const SizedBox(width: 8),
+        Text(
+          title,
+          style: theme.textTheme.titleLarge?.copyWith(
+            color: theme.colorScheme.primary,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 class _InformationField extends StatelessWidget {
   const _InformationField({
     required this.label,
@@ -290,9 +336,18 @@ class _InformationField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label, style: theme.textTheme.labelLarge),
+          Text(
+            label,
+            style: theme.textTheme.labelMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           const SizedBox(height: 4),
-          SelectableText(value, style: theme.textTheme.bodyLarge),
+          SelectableText(
+            value,
+            style: theme.textTheme.bodyLarge?.copyWith(height: 1.4),
+          ),
         ],
       ),
     );
@@ -324,19 +379,31 @@ class _SyllabusSection extends StatelessWidget {
 
     final syllabus = controller.syllabus;
     if (syllabus == null) {
-      return Text(
-        controller.syllabusError ??
-            'No detailed syllabus found in data/subject/ for this subject.',
-        style: theme.textTheme.bodyMedium?.copyWith(
-          color: theme.colorScheme.onSurfaceVariant,
-        ),
+      return Row(
+        children: [
+          Icon(
+            Icons.info_outline,
+            size: 18,
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              controller.syllabusError ??
+                  'No detailed syllabus found in data/subject/ for this subject.',
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
+            ),
+          ),
+        ],
       );
     }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Syllabus', style: theme.textTheme.titleLarge),
+        const _SectionHeader(icon: Icons.article_outlined, title: 'Syllabus'),
         const SizedBox(height: 16),
         Wrap(
           spacing: 12,
@@ -376,8 +443,13 @@ class _SyllabusSection extends StatelessWidget {
           ),
         ],
         if (syllabus.learningOutcomes.isNotEmpty) ...[
-          const SizedBox(height: 16),
-          Text('Learning outcomes', style: theme.textTheme.labelLarge),
+          const SizedBox(height: 24),
+          Text(
+            'Learning outcomes',
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
           const SizedBox(height: 8),
           ...syllabus.learningOutcomes.map(
             (outcome) => Padding(
@@ -389,6 +461,7 @@ class _SyllabusSection extends StatelessWidget {
                       text: '${outcome.code}: ',
                       style: theme.textTheme.bodyLarge?.copyWith(
                         fontWeight: FontWeight.bold,
+                        color: theme.colorScheme.primary,
                       ),
                     ),
                     TextSpan(
@@ -402,10 +475,12 @@ class _SyllabusSection extends StatelessWidget {
           ),
         ],
         if (_otherMetadata(syllabus).isNotEmpty) ...[
-          const SizedBox(height: 16),
+          const SizedBox(height: 24),
           Text(
             'Other syllabus fields',
-            style: theme.textTheme.labelLarge,
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
           ),
           const SizedBox(height: 8),
           Wrap(
@@ -439,7 +514,9 @@ class _SyllabusSection extends StatelessWidget {
 }
 
 /// One of a syllabus's other tables (materials/references, week-by-week
-/// session plan, an assessment breakdown, ...) — collapsed by default since
+/// session plan, an assessment breakdown, ...) drawn as an actual data
+/// grid — header row, zebra-striped body rows, horizontal scroll for wide
+/// tables — instead of joined bullet text. Collapsed by default since
 /// these can run to dozens of rows.
 class _SyllabusTableSection extends StatelessWidget {
   const _SyllabusTableSection({required this.section});
@@ -447,31 +524,140 @@ class _SyllabusTableSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Card(
       margin: EdgeInsets.zero,
-      child: ExpansionTile(
-        title: Text(section.heading),
-        subtitle: Text('${section.rows.length} dòng'),
+      clipBehavior: Clip.antiAlias,
+      child: Theme(
+        data: theme.copyWith(dividerColor: Colors.transparent),
+        child: ExpansionTile(
+          title: Text(
+            section.heading,
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          subtitle: Text(
+            '${section.rows.length} dòng',
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+          childrenPadding: EdgeInsets.zero,
+          children: [
+            Divider(height: 1, color: theme.colorScheme.outlineVariant),
+            _DataGrid(headers: section.headers, rows: section.rows),
+            const SizedBox(height: 8),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// A plain, scrollable data grid — header row + zebra-striped body rows —
+/// for tabular `SyllabusSection` data whose columns aren't known ahead of
+/// time. Column widths are sized from each column's longest cell (capped),
+/// so short columns (session number, Yes/No flags) stay narrow and
+/// long-text columns (topic, description) get room to wrap rather than
+/// forcing every column to the same width.
+class _DataGrid extends StatelessWidget {
+  const _DataGrid({required this.headers, required this.rows});
+  final List<String> headers;
+  final List<List<String>> rows;
+
+  double _columnWidth(int index) {
+    var maxLen = index < headers.length ? headers[index].length : 0;
+    for (final row in rows) {
+      if (index < row.length && row[index].length > maxLen) {
+        maxLen = row[index].length;
+      }
+    }
+    return (maxLen * 6.8 + 28).clamp(90, 320);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    if (headers.isEmpty) {
+      return Padding(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            for (final row in rows)
+              if (row.any((cell) => cell.isNotEmpty))
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 6),
+                  child: Text(
+                    row.where((cell) => cell.isNotEmpty).join(' · '),
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                ),
+          ],
+        ),
+      );
+    }
+
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+      child: Table(
+        border: TableBorder(
+          horizontalInside: BorderSide(color: theme.colorScheme.outlineVariant),
+          top: BorderSide(color: theme.colorScheme.outlineVariant),
+          bottom: BorderSide(color: theme.colorScheme.outlineVariant),
+        ),
+        columnWidths: {
+          for (var i = 0; i < headers.length; i++)
+            i: FixedColumnWidth(_columnWidth(i)),
+        },
+        defaultVerticalAlignment: TableCellVerticalAlignment.top,
         children: [
-          for (final row in section.rows)
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-              child: SelectableText(_rowText(row)),
+          TableRow(
+            decoration: BoxDecoration(
+              color: theme.colorScheme.surfaceContainerHighest,
+            ),
+            children: [
+              for (final header in headers)
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 10,
+                  ),
+                  child: Text(
+                    header,
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          for (var r = 0; r < rows.length; r++)
+            TableRow(
+              decoration: BoxDecoration(
+                color: r.isEven
+                    ? theme.colorScheme.surface
+                    : theme.colorScheme.surfaceContainerLow,
+              ),
+              children: [
+                for (var c = 0; c < headers.length; c++)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 10,
+                    ),
+                    child: Text(
+                      c < rows[r].length ? rows[r][c] : '',
+                      style: theme.textTheme.bodyMedium,
+                    ),
+                  ),
+              ],
             ),
         ],
       ),
     );
-  }
-
-  String _rowText(List<String> row) {
-    final headers = section.headers;
-    final parts = <String>[];
-    for (var i = 0; i < row.length; i++) {
-      final value = row[i];
-      if (value.isEmpty) continue;
-      final label = i < headers.length ? headers[i] : null;
-      parts.add(label == null || label.isEmpty ? value : '$label: $value');
-    }
-    return parts.join(' · ');
   }
 }
