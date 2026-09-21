@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
@@ -29,12 +30,30 @@ class GeminiLlmClient implements LlmClient {
       defaultValue: 'gemini-3.6-flash',
     ),
     this.timeout = const Duration(seconds: 60),
+    this.maxAttempts = 3,
   }) : _client = client ?? http.Client();
 
   final GeminiKeyStore keys;
   final http.Client _client;
   final String model;
   final Duration timeout;
+
+  /// Total attempts (the first try plus retries) for a request that fails
+  /// with a transient error. Gemini's `503` ("model overloaded") is by far
+  /// the most common one — nothing is wrong with the request, the service
+  /// is just momentarily busy, and a short backoff-and-retry clears it more
+  /// often than not instead of surfacing an error the user has to notice
+  /// and retry by hand.
+  final int maxAttempts;
+
+  static final Random _jitter = Random();
+
+  /// HTTP statuses worth an automatic retry: `503`/`502`/`504` (the
+  /// service or an intermediary is momentarily unavailable) and `429`
+  /// (rate/quota limit, which for a single user is usually a short-lived
+  /// burst rather than a hard cap). `400`/`401`/`403`/`404` are the
+  /// request's own fault and retrying them changes nothing.
+  static const _retryableStatusCodes = {429, 500, 502, 503, 504};
 
   @override
   Future<String> send({
@@ -54,57 +73,54 @@ class GeminiLlmClient implements LlmClient {
           'The configured Gemini model name is invalid.',
         );
       }
-      final response = await _client
-          .post(
-            Uri.https(
-              'generativelanguage.googleapis.com',
-              '/v1beta/models/$model:generateContent',
-            ),
-            headers: {
-              'Content-Type': 'application/json',
-              'x-goog-api-key': key.trim(),
-            },
-            body: jsonEncode({
-              'systemInstruction': {
-                'parts': [
-                  {'text': context},
-                ],
+
+      final uri = Uri.https(
+        'generativelanguage.googleapis.com',
+        '/v1beta/models/$model:generateContent',
+      );
+      final headers = {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': key.trim(),
+      };
+      final body = jsonEncode({
+        'systemInstruction': {
+          'parts': [
+            {'text': context},
+          ],
+        },
+        'contents': messages.indexed
+            .map(
+              (entry) => {
+                ...(() {
+                  final (index, m) = entry;
+                  final isCurrentMessage = index == messages.length - 1;
+                  return {
+                    'role': m.role == ChatRole.user ? 'user' : 'model',
+                    'parts': [
+                      {'text': m.content},
+                      if (isCurrentMessage)
+                        ...attachments.map(
+                          (attachment) => attachment.text != null
+                              ? {
+                                  'text':
+                                      'Attached file ${attachment.fileName}:\n${attachment.text}',
+                                }
+                              : {
+                                  'inlineData': {
+                                    'mimeType': attachment.mimeType,
+                                    'data': base64Encode(attachment.bytes!),
+                                  },
+                                },
+                        ),
+                    ],
+                  };
+                })(),
               },
-              'contents': messages.indexed
-                  .map(
-                    (entry) => {
-                      ...(() {
-                        final (index, m) = entry;
-                        final isCurrentMessage = index == messages.length - 1;
-                        return {
-                          'role': m.role == ChatRole.user ? 'user' : 'model',
-                          'parts': [
-                            {'text': m.content},
-                            if (isCurrentMessage)
-                              ...attachments.map(
-                                (attachment) => attachment.text != null
-                                    ? {
-                                        'text':
-                                            'Attached file ${attachment.fileName}:\n${attachment.text}',
-                                      }
-                                    : {
-                                        'inlineData': {
-                                          'mimeType': attachment.mimeType,
-                                          'data': base64Encode(
-                                            attachment.bytes!,
-                                          ),
-                                        },
-                                      },
-                              ),
-                          ],
-                        };
-                      })(),
-                    },
-                  )
-                  .toList(),
-            }),
-          )
-          .timeout(timeout);
+            )
+            .toList(),
+      });
+
+      final response = await _postWithRetry(uri, headers, body);
       if (response.statusCode != 200) {
         throw WorkspaceFailure(switch (response.statusCode) {
           400 || 401 || 403 =>
@@ -112,13 +128,15 @@ class GeminiLlmClient implements LlmClient {
           404 =>
             'The configured Gemini model is unavailable. Update GEMINI_MODEL and retry.',
           429 =>
-            'Gemini quota or rate limit reached. Wait or check your quota, then retry.',
+            'Gemini quota or rate limit reached (retried automatically). Wait a moment, then retry.',
+          503 =>
+            "Gemini's servers are temporarily overloaded (retried automatically). Please try again in a moment.",
           _ =>
-            'Gemini is unavailable (HTTP ${response.statusCode}). Please retry later.',
+            'Gemini is unavailable (HTTP ${response.statusCode}, retried automatically). Please retry later.',
         });
       }
-      final body = jsonDecode(response.body) as Map<String, dynamic>;
-      final candidates = body['candidates'] as List<dynamic>? ?? [];
+      final decoded = jsonDecode(response.body) as Map<String, dynamic>;
+      final candidates = decoded['candidates'] as List<dynamic>? ?? [];
       if (candidates.isEmpty) {
         throw const WorkspaceFailure(
           'Gemini returned no answer. Try rephrasing your question.',
@@ -159,6 +177,44 @@ class GeminiLlmClient implements LlmClient {
         'Unable to read Gemini settings or its response. Check your key and retry.',
       );
     }
+  }
+
+  /// POSTs [body], retrying up to [maxAttempts] times (with exponential
+  /// backoff + jitter) while the response's status is one of
+  /// [_retryableStatusCodes]. A non-retryable status, a 200, or the last
+  /// attempt returns/propagates immediately — the caller sees the same
+  /// [http.Response] (or transport exception) it always did, just after
+  /// this class already tried to ride out a transient failure.
+  Future<http.Response> _postWithRetry(
+    Uri uri,
+    Map<String, String> headers,
+    Object body,
+  ) async {
+    for (var attempt = 1; attempt <= maxAttempts; attempt++) {
+      final isLastAttempt = attempt == maxAttempts;
+      try {
+        final response = await _client
+            .post(uri, headers: headers, body: body)
+            .timeout(timeout);
+        if (isLastAttempt || !_retryableStatusCodes.contains(response.statusCode)) {
+          return response;
+        }
+      } on TimeoutException {
+        if (isLastAttempt) rethrow;
+      } on SocketException {
+        if (isLastAttempt) rethrow;
+      }
+      // Exponential backoff (400ms, 800ms, 1600ms, ...) plus up to 200ms of
+      // jitter so several concurrent retries don't all land on the server
+      // at the exact same moment.
+      final backoffMs = 400 * pow(2, attempt - 1).toInt();
+      await Future.delayed(
+        Duration(milliseconds: backoffMs + _jitter.nextInt(200)),
+      );
+    }
+    // Unreachable: the loop above always returns or rethrows on the last
+    // attempt. Only here to satisfy the analyzer's return-type check.
+    throw const WorkspaceFailure('Gemini is unavailable. Please retry later.');
   }
 
   @override

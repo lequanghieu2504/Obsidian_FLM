@@ -54,11 +54,6 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   int _generation = 0;
   final _chatKey = GlobalKey();
 
-  /// User-adjustable width of the left ("Detail") pane on wide layouts —
-  /// null until the user drags the handle at least once, in which case
-  /// [_wideLayout] falls back to a proportional default.
-  double? _detailPaneWidth;
-
   @override
   void initState() {
     super.initState();
@@ -108,21 +103,10 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   static const double _handleWidth = 20;
 
   Widget _wideLayout(
-    BoxConstraints constraints,
     Widget information,
     Widget chat,
     Widget knowledgeGraph,
   ) {
-    final available = constraints.maxWidth - 48 - _handleWidth;
-    final maxPaneWidth = (available - _minPaneWidth).clamp(
-      _minPaneWidth,
-      double.infinity,
-    );
-    final detailWidth = (_detailPaneWidth ?? available * 0.58).clamp(
-      _minPaneWidth,
-      maxPaneWidth,
-    );
-
     return DefaultTabController(
       length: 2,
       child: Column(
@@ -138,21 +122,16 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(24),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      SizedBox(width: detailWidth, child: information),
-                      _PaneResizeHandle(
-                        width: _handleWidth,
-                        onDrag: (dx) => setState(() {
-                          _detailPaneWidth = (detailWidth + dx).clamp(
-                            _minPaneWidth,
-                            maxPaneWidth,
-                          );
-                        }),
-                      ),
-                      Expanded(child: chat),
-                    ],
+                  // A dedicated widget that owns its own drag state, so
+                  // resizing never re-runs this screen's build() — the
+                  // [information]/[chat] instances below stay `identical`
+                  // across every drag frame and Flutter skips rebuilding
+                  // their (heavy) subtrees entirely.
+                  child: _ResizableSplit(
+                    left: information,
+                    right: chat,
+                    minWidth: _minPaneWidth,
+                    handleWidth: _handleWidth,
                   ),
                 ),
                 knowledgeGraph,
@@ -228,7 +207,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                       subjectCode: widget.subject.code,
                     );
                     return constraints.maxWidth >= 960
-                        ? _wideLayout(constraints, information, chat, knowledgeGraph)
+                        ? _wideLayout(information, chat, knowledgeGraph)
                         : _narrowLayout(information, chat, knowledgeGraph);
                   },
                 ),
@@ -238,9 +217,82 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   }
 }
 
-/// Draggable divider between the detail and chat panes on wide layouts —
-/// the "chat panel width the user can customize" this screen didn't have
-/// before (it was a fixed 3:2 flex split).
+/// A horizontally resizable two-pane split (left pane fixed-width, right
+/// pane fills the rest) that owns its own drag state locally.
+///
+/// This is deliberately its own [StatefulWidget] rather than inline layout
+/// in the parent screen: dragging the handle calls `setState` on *this*
+/// widget only, so it is the only thing that rebuilds on every drag frame.
+/// [left] and [right] are built once by the parent and passed down as
+/// already-constructed widget instances — since this widget's own rebuild
+/// never touches them, they stay `identical` across drag frames and
+/// Flutter's `Element.updateChild` skips rebuilding their subtrees
+/// entirely (see `identical(oldWidget, newWidget)` in the framework).
+/// Previously the parent screen's `setState` drove the resize, which
+/// recreated `SubjectResourcesPanel`/`SubjectChatPanel` on every pixel of
+/// drag and made the handle feel laggy.
+class _ResizableSplit extends StatefulWidget {
+  const _ResizableSplit({
+    required this.left,
+    required this.right,
+    required this.minWidth,
+    required this.handleWidth,
+    this.initialFraction = 0.58,
+  });
+
+  final Widget left;
+  final Widget right;
+  final double minWidth;
+  final double handleWidth;
+  final double initialFraction;
+
+  @override
+  State<_ResizableSplit> createState() => _ResizableSplitState();
+}
+
+class _ResizableSplitState extends State<_ResizableSplit> {
+  /// Null until the user drags at least once, in which case [build] falls
+  /// back to [_ResizableSplit.initialFraction] of the available width.
+  double? _leftWidth;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final available = constraints.maxWidth - widget.handleWidth;
+        final maxLeftWidth = (available - widget.minWidth).clamp(
+          widget.minWidth,
+          double.infinity,
+        );
+        final leftWidth =
+            (_leftWidth ?? available * widget.initialFraction).clamp(
+              widget.minWidth,
+              maxLeftWidth,
+            );
+        return Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(width: leftWidth, child: widget.left),
+            _PaneResizeHandle(
+              width: widget.handleWidth,
+              onDrag: (dx) => setState(() {
+                _leftWidth = (leftWidth + dx).clamp(
+                  widget.minWidth,
+                  maxLeftWidth,
+                );
+              }),
+            ),
+            Expanded(child: widget.right),
+          ],
+        );
+      },
+    );
+  }
+}
+
+/// Draggable divider between two panes — the "chat panel width the user
+/// can customize" this screen didn't have before (it was a fixed 3:2 flex
+/// split). Pure presentation; drag state lives in [_ResizableSplitState].
 class _PaneResizeHandle extends StatefulWidget {
   const _PaneResizeHandle({required this.width, required this.onDrag});
   final double width;

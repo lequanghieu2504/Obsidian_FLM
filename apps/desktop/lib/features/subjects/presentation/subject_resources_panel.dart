@@ -488,7 +488,11 @@ class _SyllabusSection extends StatelessWidget {
             runSpacing: 12,
             children: [
               for (final entry in _otherMetadata(syllabus).entries)
-                _InformationField(label: entry.key, value: entry.value),
+                _InformationField(
+                  label: entry.key,
+                  value: entry.value,
+                  wide: entry.value.length > 48,
+                ),
             ],
           ),
         ],
