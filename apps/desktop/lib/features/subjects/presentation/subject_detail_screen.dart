@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import '../../../models/subject.dart';
 import '../../assistant/infrastructure/gemini_llm_client.dart';
 import '../../assistant/infrastructure/local_chat_attachment_processor.dart';
+import '../../knowledge_graph/presentation/subject_knowledge_graph_tab.dart';
 import '../application/subject_detail_controller.dart';
 import '../data/local_subject_workspace_repository.dart';
 import '../domain/subject_workspace.dart';
@@ -132,27 +133,52 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                       key: _chatKey,
                       controller: controller,
                     );
+                    final knowledgeGraph = SubjectKnowledgeGraphTab(
+                      subjectCode: widget.subject.code,
+                    );
                     if (constraints.maxWidth >= 960) {
-                      return Padding(
-                        padding: const EdgeInsets.all(24),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                      return DefaultTabController(
+                        length: 2,
+                        child: Column(
                           children: [
-                            Expanded(flex: 3, child: information),
-                            const SizedBox(width: 24),
-                            Expanded(flex: 2, child: chat),
+                            const TabBar(
+                              tabs: [
+                                Tab(text: 'Detail'),
+                                Tab(text: 'Knowledge Graph'),
+                              ],
+                            ),
+                            Expanded(
+                              child: TabBarView(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(24),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.stretch,
+                                      children: [
+                                        Expanded(flex: 3, child: information),
+                                        const SizedBox(width: 24),
+                                        Expanded(flex: 2, child: chat),
+                                      ],
+                                    ),
+                                  ),
+                                  knowledgeGraph,
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       );
                     }
                     return DefaultTabController(
-                      length: 2,
+                      length: 3,
                       child: Column(
                         children: [
                           const TabBar(
                             tabs: [
                               Tab(text: 'Subject & resources'),
                               Tab(text: 'Gemini Assistant'),
+                              Tab(text: 'Knowledge Graph'),
                             ],
                           ),
                           Expanded(
@@ -166,6 +192,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                                   padding: const EdgeInsets.all(16),
                                   child: chat,
                                 ),
+                                knowledgeGraph,
                               ],
                             ),
                           ),

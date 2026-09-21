@@ -9,6 +9,7 @@ import '../domain/graph_model.dart';
 import '../domain/knowledge_graph_builder.dart';
 import '../domain/subject_record.dart';
 import 'widgets/concept_graph_canvas.dart';
+import 'widgets/graph_tooltip.dart';
 import 'widgets/graph_toolbar.dart';
 import 'widgets/subject_detail_panel.dart';
 import 'widgets/subject_picker_grid.dart';
@@ -126,46 +127,6 @@ class _KnowledgeGraphPageState extends State<KnowledgeGraphPage> {
     return name.contains(_query);
   }
 
-  /// Short multi-line hover text for a node, shown as a `Tooltip`. Subject
-  /// nodes get their name/credits/degree level and a trimmed description;
-  /// topic/subtopic nodes get which subject/topic they belong to.
-  String _tooltipMessage(GraphNodeData data) {
-    switch (data.type) {
-      case NodeType.topic:
-        final subjectCode = (data.attributes['subjectCode'] ?? '').toString();
-        final subtopicCount = data.attributes['subtopicCount'] ?? 0;
-        return '${data.label}\n'
-            'Chủ đề của môn $subjectCode · $subtopicCount khái niệm con';
-      case NodeType.subtopic:
-        final subjectCode = (data.attributes['subjectCode'] ?? '').toString();
-        final topicLabel = (data.attributes['topicLabel'] ?? '').toString();
-        return '${data.label}\n'
-            'Thuộc chủ đề "$topicLabel" · Môn $subjectCode';
-      case NodeType.subject:
-      default:
-        final name = (data.attributes['name'] ?? '').toString();
-        final credits = (data.attributes['credits'] ?? '').toString();
-        final degreeLevel = (data.attributes['degreeLevel'] ?? '').toString();
-        final description = (data.attributes['description'] ?? '').toString();
-
-        final lines = <String>[data.label];
-        if (name.isNotEmpty) lines.add(name);
-        final meta = [
-          if (credits.isNotEmpty && credits != '0') '$credits tín chỉ',
-          if (degreeLevel.isNotEmpty) degreeLevel,
-        ].join(' · ');
-        if (meta.isNotEmpty) lines.add(meta);
-        if (description.isNotEmpty) {
-          lines.add(
-            description.length > 160
-                ? '${description.substring(0, 160)}…'
-                : description,
-          );
-        }
-        return lines.join('\n');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -270,7 +231,7 @@ class _KnowledgeGraphPageState extends State<KnowledgeGraphPage> {
                                 selectedNodeId: _selectedNodeId,
                                 isHighlighted: _nodeMatchesQuery,
                                 onNodeTap: _onNodeTap,
-                                tooltipMessage: _tooltipMessage,
+                                tooltipMessage: graphNodeTooltipMessage,
                               ),
                             ),
                           ],
