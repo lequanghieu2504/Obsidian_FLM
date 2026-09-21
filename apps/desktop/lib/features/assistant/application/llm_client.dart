@@ -39,6 +39,22 @@ abstract interface class GeminiKeyStore {
 class SubjectPromptBuilder {
   const SubjectPromptBuilder();
 
+  /// Metadata keys already surfaced as named fields (here, and in
+  /// `SubjectResourcesPanel`'s UI) — public so both skip the same set
+  /// when dumping [SubjectRecord.metadata]'s remaining entries, instead
+  /// of drifting out of sync with two separately maintained lists.
+  static const namedMetadataKeys = {
+    'Syllabus ID',
+    'Subject Code',
+    'Syllabus Name',
+    'Course Name English',
+    'Degree Level',
+    'NoCredit',
+    'Learning-Teaching Method',
+    'Pre-Requisite',
+    'Description',
+  };
+
   /// [syllabus] is this subject's full FLM syllabus record, loaded from
   /// `data/subject/` (see `SubjectRepository.loadByCode`) — null if no
   /// matching file was found, in which case the prompt falls back to just
@@ -85,6 +101,37 @@ class SubjectPromptBuilder {
         buffer.writeln('Course learning outcomes (CLOs):');
         for (final outcome in syllabus.learningOutcomes) {
           buffer.writeln('- ${outcome.code}: ${outcome.detail}');
+        }
+      }
+
+      final extraMetadata = syllabus.metadata.entries.where(
+        (entry) =>
+            !namedMetadataKeys.contains(entry.key) && entry.value.isNotEmpty,
+      );
+      if (extraMetadata.isNotEmpty) {
+        buffer.writeln();
+        buffer.writeln(
+          'Other syllabus fields (grading scale, tools, workload, '
+          'approval/administrative info, ...):',
+        );
+        for (final entry in extraMetadata) {
+          buffer.writeln('- ${entry.key}: ${entry.value}');
+        }
+      }
+
+      for (final section in syllabus.sections) {
+        if (section.rows.isEmpty) continue;
+        buffer.writeln();
+        buffer.writeln('${section.heading}:');
+        for (final row in section.rows) {
+          final cells = section.headers.length == row.length
+              ? [
+                  for (var i = 0; i < row.length; i++)
+                    if (row[i].isNotEmpty) '${section.headers[i]}: ${row[i]}',
+                ]
+              : row.where((cell) => cell.isNotEmpty).toList();
+          if (cells.isEmpty) continue;
+          buffer.writeln('- ${cells.join(' | ')}');
         }
       }
     }

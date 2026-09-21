@@ -2,9 +2,18 @@
 /// syllabus, parsed out of the raw `data/subject/<id>.json` transport files.
 ///
 /// The raw files are FLM's own export shape (a `metadata` map plus a list of
-/// free-form `sections`/`rows`). This class extracts only the fields the
-/// knowledge graph feature needs; it intentionally does not try to model the
-/// full FLM syllabus (materials, sessions, assessments, ...).
+/// free-form `sections`/`rows`). Earlier versions of this class only kept a
+/// handful of named fields (name/credits/description/...) and silently
+/// dropped everything else in the file — grading rubric fields
+/// (`Scoring Scale`, `MinAvgMarkToPass`, `Is Scored`), `Tools`,
+/// `StudentTasks`, `Time Allocation`, the materials table, the week-by-week
+/// session plan, etc. That meant both the UI and the Gemini prompt built
+/// from a subject were missing information the source file actually has
+/// (e.g. "how is this subject graded" often lives in `Scoring Scale`/
+/// `MinAvgMarkToPass` or a dedicated assessment table, not just prose in
+/// `Description`). [metadata] and [sections] now keep the *entire* file
+/// (minus the one section that's a pure duplicate of [metadata]), so
+/// nothing from `data/subject/` is lost.
 class LearningOutcome {
   const LearningOutcome({required this.code, required this.detail});
 
@@ -13,6 +22,22 @@ class LearningOutcome {
 
   /// The full outcome description.
   final String detail;
+}
+
+/// One arbitrary table from the syllabus file — reference materials,
+/// week-by-week session plan, assessment breakdown, or whatever else a
+/// given subject's file happens to have — kept generically since the set
+/// of tables (and their columns) isn't fixed across subjects.
+class SyllabusSection {
+  const SyllabusSection({
+    required this.heading,
+    required this.headers,
+    required this.rows,
+  });
+
+  final String heading;
+  final List<String> headers;
+  final List<List<String>> rows;
 }
 
 class SubjectRecord {
@@ -27,6 +52,8 @@ class SubjectRecord {
     required this.prerequisiteRaw,
     required this.description,
     required this.learningOutcomes,
+    this.metadata = const {},
+    this.sections = const [],
   });
 
   final String syllabusId;
@@ -51,6 +78,20 @@ class SubjectRecord {
   final String description;
   final List<LearningOutcome> learningOutcomes;
 
+  /// Every `metadata` key from the raw file, verbatim (e.g. `Scoring Scale`,
+  /// `MinAvgMarkToPass`, `Is Scored`, `Time Allocation`, `Tools`,
+  /// `StudentTasks`, `Note`, `DecisionNo MM/dd/yyyy`, `IsApproved`,
+  /// `IsActive`, `ApprovedDate`, ...) — including the handful already
+  /// pulled out into named fields above, so callers that want "give me
+  /// literally everything" don't have to know which keys those were.
+  final Map<String, String> metadata;
+
+  /// Every other table in the file (materials/references, the week-by-week
+  /// session plan, an assessment breakdown, ...) — whatever a given
+  /// subject's file happens to have beyond the metadata block and the
+  /// learning-outcomes table (already parsed into [learningOutcomes]).
+  final List<SyllabusSection> sections;
+
   /// The label shown on a subject's graph node.
   String get displayLabel => subjectCode.isNotEmpty ? subjectCode : syllabusId;
 
@@ -58,28 +99,51 @@ class SubjectRecord {
   /// outcomes" table, e.g. `"5 LO(s)"`, `"12 LO(s)"`.
   static final RegExp _learningOutcomeHeading = RegExp(r'LO\(s\)\s*$');
 
+  /// The one section heading that's a pure duplicate of [metadata] (same
+  /// key/value pairs, just as a table) — kept out of [sections] so nothing
+  /// is shown/sent twice.
+  static const _syllabusDetailsHeading = 'Syllabus Details';
+
   factory SubjectRecord.fromJson(
     Map<String, dynamic> json, {
     required String fallbackId,
   }) {
-    final metadata = _asStringMap(json['metadata']);
-    String field(String key) => (metadata[key] ?? '').toString().trim();
+    final metadataRaw = _asStringMap(json['metadata']);
+    String field(String key) => (metadataRaw[key] ?? '').toString().trim();
+    final metadata = {
+      for (final entry in metadataRaw.entries)
+        entry.key: entry.value.toString().trim(),
+    };
 
-    final sections = (json['sections'] as List?) ?? const [];
+    final sectionsJson = (json['sections'] as List?) ?? const [];
     final learningOutcomes = <LearningOutcome>[];
-    for (final section in sections) {
+    final sections = <SyllabusSection>[];
+    for (final section in sectionsJson) {
       if (section is! Map) continue;
       final heading = (section['heading'] ?? '').toString();
-      if (!_learningOutcomeHeading.hasMatch(heading)) continue;
+      final headers = ((section['headers'] as List?) ?? const [])
+          .map((header) => header.toString())
+          .toList(growable: false);
+      final rawRows = (section['rows'] as List?) ?? const [];
+      final rows = <List<String>>[
+        for (final row in rawRows)
+          if (row is List)
+            row.map((cell) => cell.toString()).toList(growable: false),
+      ];
 
-      final rows = (section['rows'] as List?) ?? const [];
-      for (final row in rows) {
-        if (row is! List || row.length < 3) continue;
-        final code = row[1].toString().trim();
-        final detail = row[2].toString().trim();
-        if (code.isEmpty) continue;
-        learningOutcomes.add(LearningOutcome(code: code, detail: detail));
+      if (_learningOutcomeHeading.hasMatch(heading)) {
+        for (final row in rows) {
+          if (row.length < 3) continue;
+          final code = row[1].trim();
+          final detail = row[2].trim();
+          if (code.isEmpty) continue;
+          learningOutcomes.add(LearningOutcome(code: code, detail: detail));
+        }
+        continue;
       }
+      if (heading == _syllabusDetailsHeading) continue;
+
+      sections.add(SyllabusSection(heading: heading, headers: headers, rows: rows));
     }
 
     final syllabusId = field('Syllabus ID').isNotEmpty
@@ -99,6 +163,8 @@ class SubjectRecord {
       prerequisiteRaw: field('Pre-Requisite'),
       description: field('Description'),
       learningOutcomes: learningOutcomes,
+      metadata: metadata,
+      sections: sections,
     );
   }
 

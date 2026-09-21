@@ -2,6 +2,8 @@ import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../assistant/application/llm_client.dart';
+import '../../knowledge_graph/domain/subject_record.dart';
 import '../application/subject_detail_controller.dart';
 import '../domain/subject_display.dart';
 import '../domain/subject_workspace.dart';
@@ -399,7 +401,77 @@ class _SyllabusSection extends StatelessWidget {
             ),
           ),
         ],
+        if (_otherMetadata(syllabus).isNotEmpty) ...[
+          const SizedBox(height: 16),
+          Text(
+            'Other syllabus fields',
+            style: theme.textTheme.labelLarge,
+          ),
+          const SizedBox(height: 8),
+          Wrap(
+            spacing: 12,
+            runSpacing: 12,
+            children: [
+              for (final entry in _otherMetadata(syllabus).entries)
+                _InformationField(label: entry.key, value: entry.value),
+            ],
+          ),
+        ],
+        for (final section in syllabus.sections)
+          if (section.rows.isNotEmpty) ...[
+            const SizedBox(height: 16),
+            _SyllabusTableSection(section: section),
+          ],
       ],
     );
+  }
+
+  /// [syllabus.metadata], minus the handful of keys already shown as
+  /// dedicated fields above — everything else the raw file carries
+  /// (grading scale, workload, tools, approval/admin info, ...) so the
+  /// panel never hides a field the Gemini prompt already has.
+  Map<String, String> _otherMetadata(SubjectRecord syllabus) => {
+    for (final entry in syllabus.metadata.entries)
+      if (!SubjectPromptBuilder.namedMetadataKeys.contains(entry.key) &&
+          entry.value.isNotEmpty)
+        entry.key: entry.value,
+  };
+}
+
+/// One of a syllabus's other tables (materials/references, week-by-week
+/// session plan, an assessment breakdown, ...) — collapsed by default since
+/// these can run to dozens of rows.
+class _SyllabusTableSection extends StatelessWidget {
+  const _SyllabusTableSection({required this.section});
+  final SyllabusSection section;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.zero,
+      child: ExpansionTile(
+        title: Text(section.heading),
+        subtitle: Text('${section.rows.length} dòng'),
+        children: [
+          for (final row in section.rows)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+              child: SelectableText(_rowText(row)),
+            ),
+        ],
+      ),
+    );
+  }
+
+  String _rowText(List<String> row) {
+    final headers = section.headers;
+    final parts = <String>[];
+    for (var i = 0; i < row.length; i++) {
+      final value = row[i];
+      if (value.isEmpty) continue;
+      final label = i < headers.length ? headers[i] : null;
+      parts.add(label == null || label.isEmpty ? value : '$label: $value');
+    }
+    return parts.join(' · ');
   }
 }
