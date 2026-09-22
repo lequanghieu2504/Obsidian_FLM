@@ -1,0 +1,3370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>13136</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Statistics &amp; Probability_X&#225;c suất thống k&#234;</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b></b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>MAS291</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture,Project based learning,Problem based learning,Social Constructivism,groupwork</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Study hour (150h) = 45 contact hours (60 sessions) + 1 hour final exam + 104 hours self-study</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>MAE101 or MAC101</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Upon finishing the course, students must acquire:<br/>1. the following knowledge:(ABET a1)<br/>• The fundamental principles of probability and their applications<br/>• The frequently used probability distributions.<br/>• The basics of descriptive statistics<br/>• The inferences of statistics: parameter estimations, hypothesis testing, regressions & correlations.<br/>2. the following skills: (ABET a2)<br/>• Recognize simple statistical models and applied them to solve engineering problems.<br/>• Use at least one statistical software (Excel, Maxima) for problem solving.<br/>• Self-study skill. (ABET i)</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>Students must attend at least 80% of contact hours in order to be <br/>accepted to the final examination.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>- Internet<br/>- Computerized tools (for example Excel and DDXL add-ons) (CT)</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>932/QĐ-ĐHFPT dated 08/22/2025</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td>"On-going assessment:<br/>• 03 progress tests:             30%        (a1, i)<br/>• 02 assignments                 20%        (a2)<br/>• 01 computer project          15%<br/>Final Examination                 35%        (a1, a2)<br/> Final results                       100%<br/>Completion Criteria:   Every on-going assessment component > 0, Final Result  >=5 & Final Exam Score >=4 "</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>8/22/2025</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">4 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Montgomery D.C. & Runger G.C., Applied Statistics and Probability for Engineers</td>
+                            <td>John Wiley & Sons.</td>
+                            <td>Wiley</td>
+                            <td>2006</td>
+                            <td>4th/5th/6th/7th ed.</td>
+                            <td>9781119718871                                                                                       </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>7th ed. ISBN: 9781119718871       </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Powerpoint slides (PP).</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Computerized tools (for example Excel and DDXL add-ons) (CT)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Elementary Statistics Using Excel, 3/E,</td>
+                            <td>Mario F. Triola</td>
+                            <td>Addison-Wesley</td>
+                            <td>200</td>
+                            <td>3rd</td>
+                            <td>0321365135                                                                                          </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">9 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Discuss the roles of statistics in engineering
+LO1.1        Explain the types of reasoning of statistical inference; distinguish mechanistic models and empirical models, statistic and parameter, sample and population.
+LO1.2        Describe the different methods that engineers use to collect data.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Identify sample spaces and events, and use basic rules to calculate the probability of an event
+LO2.1	Describe the sample space and events of an experiment; distinguish continuous and discrete sample spaces; perform operations on events.
+LO2.2	Calculate the probability of an event in a discrete sample space; use addition and complementary rules to find probabilities.
+LO2.3	Calculate conditional probabilities; use multiplication rule, total probability rule and Bayes theorem to find probabilities. 
+LO2.4	Determine if two events are independent; use independence to find probabilities.
+LO2.5	Recognize a random variable; distinguish continuous and discrete random variables.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Describe the probability distribution and calculate the mean and variance of a discrete random variable
+LO3.1	Describe a discrete random variable; check if a function is a probability mass function and use it to calculate probability; find the cumulative distribution function of a discrete random variable.
+LO3.2	Compute the mean and variance of a discrete random variable. 
+LO3.3	Determine the probability, mean and variance of uniform, binomial, geometric and negative binomial, hypergeometric and Poisson distributions.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Describe the probability distribution and calculate the mean and variance of a continuous random variable
+LO4.1	Describe a continuous random variable; check if a function is a probability density function and use it to calculate probability; find the cumulative distribution function of a continuous random variable.
+LO4.2	Compute the mean and variance of a continuous random variables
+LO4.3	Apply the formulas of continuous uniform distribution and exponential distribution to solve problems.
+LO4.4	Manipulate probabilities of a standard normal distribution using Excel or table of data; standardize a normal distribution.
+LO4.5	Use normal distribution to approximate binomial and Poisson distributions.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>Describe data using numerical summaries and visual displays
+LO5.1        Find numeric summaries of data; describe data using stem-and-leaf diagrams, frequency distributions, histograms, time series plots. 
+LO5.2        Determine quartiles and construct the box plot for a data; identify outliers.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>Discuss sampling distributions and use the Central Limit Theorem to analyze sampling distribution of the means
+LO6.1	Discuss sampling distributions; find the point estimation of a parameter.
+LO6.2	Apply Central Limit Theorem to calculate probabilities regarding the sampling distribution of the means.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Construct confidence intervals for a population parameter/difference of population parameters
+LO7.1	Construct a confidence interval for the population mean/difference of two population means and interpret its meaning; determine the size of the sample to improve the estimation.
+LO7.2	Construct a confidence interval for the population proportion/difference of two population pproportions and interpret its meaning; determine the size of the sample to improve the estimation.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>Verify a claim about a population parameter/difference of population parameters using hypothesis testing
+LO8.1	Formulate the two hypotheses; identify critical values, test statistic and compute P-value for a test of hypotheses on population mean/difference of two population means
+LO8.2	Formulate the two hypotheses; identify critical values, test statistic and compute P-value for a test of hypotheses on population proportion/difference of two population proportions
+LO8.3	Identify type of errors in testing hypotheses.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>CLO9</td>
+                            <td>Construct a simple linear regression model
+LO9.1        Compute various sums of squares for a set of data pairs.
+LO9.2        Determine the equation of linear regression and the correlation coefficient; use linear regression to predict future values.
+LO9.3        Perform a hypothesis test in simple linear regression; test the significance of regression using t-test.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=13136" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>The Roles of Statistics in Engineering<br/>1.1 The Engineering Method and Statistical Thinking<br/>1.2 Collecting Engineering Data</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 1</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>The Roles of Statistics in Engineering<br/>1.3 Mechanistic and Empirical Models<br/>1.4 Probability and Probability Models</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 1</td>
+                            <td>
+                                        <a href="/download/13136/S/2_MAS291.zip" class="ContainSLink" >MAS291</a>
+
+                            </td>
+                            <td>Exercises Chapter 1<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Probability	<br/>2.1 Sample Spaces and Events</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Probability	<br/>2.2 Interpretations of Probability<br/>2.3 Addition Rules</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Probability	<br/>2.4 Conditional Probability</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Probability	<br/>2.5 Multiplication and Total Probability Rules<br/>2.6 Independence</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Probability	<br/>2.7 Bayes' Theorem</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Probability	<br/>2.8 Random Variables</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.1 Discrete Random Variables</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.2 Probability Distributions and Probability Mass Functions</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.3 Cumulative Distribution Functions</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.4 Mean and Variance of a Discrete Random Varibale</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.5 Discrete Uniform Distribution<br/>3.6 Binomial Distribution</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.7 Geometric and Negative Binomial Distributions</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.8 Hypergeometric Distribution</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Discrete Random Variables and Probability Distribution	<br/>3.9 Poisson Distribution</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Solve questions and problems for Chapters 1 - 3</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO3</td>
+                            <td></td>
+                            <td class="product">Textbook Chapters 1 - 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapters 1 - 3<br/>Assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Progress Test 1</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO3</td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.1 Continuous Random Variables<br/>4.2 Probability Distributions and Probability Density Functions</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.3 Cumulative Distribution Functions</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.4 Mean and Variance of a Continuous Random Variable</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.5 Continuous Uniform Distribution</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.6 Normal Distribution</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.6 Normal Distribution (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.7 Normal Approximation to the Binomial and Poisson Distributions</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Continuous Random Variables and Probability Distribution	<br/>4.8 Exponential Distribution</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Descriptive Statistics	<br/>6.1 Numerical Summaries</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 6</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 6<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Descriptive Statistics	<br/>6.2 Stem-and-Leaf Diagrams<br/>6.3 Frequency Distributions and Histograms</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 6</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 6<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Descriptive Statistics	<br/>6.4 Box Plots</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 6</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 6<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Descriptive Statistics	<br/>6.5 Time Sequence Plots</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 6</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 6<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Sampling Distributions and Point Estimation of Paramaters	<br/>7.1 Point Estimation</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>I</td>
+                            <td class="product">Textbook Chapter 7</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 7<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Sampling Distributions and Point Estimation of Paramaters	<br/>7.2 Sampling Distributions and the Central Limit Theorem</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>I</td>
+                            <td class="product">Textbook Chapter 7</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 7<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Solve questions and problems for Chapters 4, 6, and 7</td>
+                            <td>Offline</td>
+                            <td>LO4, LO5, LO6</td>
+                            <td></td>
+                            <td class="product">Textbook Chapters 4, 6, and 7</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapters 4, 6, and 7<br/>Assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>Progress Test 2</td>
+                            <td>Offline</td>
+                            <td>LO4, LO5, LO6</td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Statistical Intervals for a Single Sample<br/>8.1 Confidence Interval on the Mean of a Normal Distribution, Variance Known</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 8</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 8<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Statistical Intervals for a Single Sample<br/>8.1 Confidence Interval on the Mean of a Normal Distribution, Variance Known (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 8</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 8<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Statistical Intervals for a Single Sample<br/>8.2 Confidence Interval on the Mean of a Normal Distribution, Variance Unknown</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 8</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 8<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Statistical Intervals for a Single Sample<br/>8.2 Confidence Interval on the Mean of a Normal Distribution, Variance Unknown (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 8</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 8<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Statistical Intervals for a Single Sample<br/>8.4 Large-Sample Confidence Interval for a Population Proportion</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 8</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 8<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Statistical Intervals for a Single Sample<br/>8.4 Large-Sample Confidence Interval for a Population Proportion (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 8</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 8<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Test of Hypotheses for a Single Sample<br/>9.1 Hypothesis Testing</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>Test of Hypotheses for a Single Sample<br/>9.1 Hypothesis Testing (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>Test of Hypotheses for a Single Sample<br/>9.2 Tests on the Mean of a Normal Distribution, Variance Known</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>Test of Hypotheses for a Single Sample<br/>9.2 Tests on the Mean of a Normal Distribution, Variance Known (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>Test of Hypotheses for a Single Sample<br/>9.3 Tests on the Mean of a Normal Distribution, Variance Unknown</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>Test of Hypotheses for a Single Sample<br/>9.5 Tests on a Population Proportion</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>Statistical Inference for Two Samples<br/>10.1 Inference on the Difference in Means of Two Normal Distributions, Variance Known</td>
+                            <td>Offline</td>
+                            <td>LO7,LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>Statistical Inference for Two Samples<br/>10.2 Inference on the Difference in Means of Two Normal Distributions, Variance Unknown</td>
+                            <td>Offline</td>
+                            <td>LO7,LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>Statistical Inference for Two Samples<br/>10.6 Inference on the Two Proportions</td>
+                            <td>Offline</td>
+                            <td>LO7,LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Statistical Inference for Two Samples<br/>10.6 Inference on the Two Proportions (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7,LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>Simple Linear Regression and Correlation<br/>11.1 Empirical Models</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>I</td>
+                            <td class="product">Textbook Chapter 11</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 11<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>Simple Linear Regression and Correlation<br/>11.2 Simple Linear Regression</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>I</td>
+                            <td class="product">Textbook Chapter 11</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 11<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>Simple Linear Regression and Correlation<br/>11.3 Properties of the Least Squares Estimators</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 11</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 11<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>Simple Linear Regression and Correlation<br/>11.4 Hypothesis Tests in Simple Linear Regression</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 11</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 11<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>Simple Linear Regression and Correlation<br/>11.8 Correlation</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 11</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 11<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>Simple Linear Regression and Correlation<br/>11.8 Correlation (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 11</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 11<br/>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>Project presentation</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8, LO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>Project presentation (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8, LO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>Project presentation (Cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8, LO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Project</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>Progress Test 3</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8, LO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">111 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CQ1_DN</td>
+                            <td>Statistics is the science of data. What are the basic data collection methods?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are parameters of the population and statistics of a sample?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CQ2_HCM</td>
+                            <td>List some commonly used parameters and statistics.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1_DN</td>
+                            <td>An event is a subset of the sample space of a random experiment. Can we describe new events from combinations of existing events?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are the differences between empirical and mechanistic models?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1_DN</td>
+                            <td>Counting the numbers of outcomes in the sample space and various events are used to analyze the random experiments. What are important techniques?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give two different definitions of the concept of events.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ1_DN</td>
+                            <td>For discrete sample spaces S consisting of (equally likely) outcomes, the probability of an event E (a subset of S) equals the sum of the probabilities of the outcomes in E. Can we determine the probability of a joint event from the probabilities of the individual events that comprise it?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are independent events and mutually exclusive events? How do they affect the formula for computing the probabilities of the union event, the intersection event?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ1_DN</td>
+                            <td>Sometimes probabilities need to be reevaluated as additional information becomes available. Can you give the definition of conditional probabilities and some examples?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ1_HCM</td>
+                            <td>How to check whether two events are independent?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ1_DN</td>
+                            <td>Sometimes the probability of an event is given under each of several conditions. With enough of these conditional probabilities, how to recover the probability of the event?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ1_HCM</td>
+                            <td>What conditions must be fulfilled to be able to use the total probability rule?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give an example that uses the rule of total probability.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ1_DN</td>
+                            <td>Conditional probabilities commonly provide the probability of an event given a condition. But after a random experiment generates an outcome, can we find out the probability that a condition was present given an outcome?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ1_HCM</td>
+                            <td>Why is Bayes Theorem important for probability?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ1_DN</td>
+                            <td>The concept of independence is an important relationship between events. Can you give the definition of independence and some examples?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is a random variable? Give some examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ1_DN</td>
+                            <td>The probability distribution of a discrete random variable X is a description of the probabilities associated with the possible values of X. How many popular ways to describe a probability distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ1_HCM</td>
+                            <td>Compare the difference between discrete and continuous variables.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give some examples of discrete and continuous variables.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is a probability mass function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ2_HCM</td>
+                            <td>What is the difference between a probability mass function and a cumulative mass function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ1_HCM</td>
+                            <td>How do you find the probability mass function if the cumulative distribution function is given, and vice versa? Give an example to illustrate your claim.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ1_DN</td>
+                            <td>What is the simplest discrete random variable? Can we numerically summarize its probability distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give a table of data showing a car rental company&#39;s revenue over the year, what do the expected value and variance represent?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ1_DN</td>
+                            <td>How to calculate the probability of k successes in a random experiment consists of n Bernoulli trials?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give an example of a binomial random variable that you have seen in high school.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ1_DN</td>
+                            <td>Is negative binomial distribution a generalization of a geometric distribution? Why do we call this distribution a negative binomial distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ1_HCM</td>
+                            <td>How to distinguish the differences among a binomial, geometric and negative binomial random variable?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give examples of biomial, geometric, and hypergeometric distributions.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ1_DN</td>
+                            <td>In randomly sampling from a batch of items classified as successes or failures, an item may or may not be replaced before the next one is selected. Does it exist or not a general formula for computing probabilities when samples are selected without replacement?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ1_HCM</td>
+                            <td>When is a random variable called a hypergeometric variable? Show an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ1_DN</td>
+                            <td>A widely-used distribution emerges as the number of trials in a binomial experiment (with parameters n, p) increases to infinity while the mean of the distribution remains constant (n increases and p decreases accordingly). What is this?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ1_HCM</td>
+                            <td>What properties are required to use the Poisson distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give two real life examples for which Poisson distributions are used as models.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are the properties required to use the binomial distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the meaning of the expected value of a variable?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">39</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ2_HCM</td>
+                            <td>Explain how to compute expected value of a random variable by examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">40</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ1_DN</td>
+                            <td>Because the number of possible values of a continuous random variable X is uncountably infinite, X has a distinctly different distribution from the discrete random variables studied previously. How to describe the probability distribution of X?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">41</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ1_HCM</td>
+                            <td>What makes a function a density function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">42</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the cumulative distribution function of a continuous random variable and its properties?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">43</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ1_DN</td>
+                            <td>The simplest continuous distribution is analogous to its discrete counterpart. Give some information about it?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">44</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ1_HCM</td>
+                            <td>How do you find the mean of a continuous random variable?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">45</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ2_HCM</td>
+                            <td>How do you find the variance of a continuous random variable?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ1_DN</td>
+                            <td>Probabilities of intervals can be found by using the cumulative distribution function, the basic rules of probability and the symmetry of the normal distribution. Can you illustrate the method by some examples?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">47</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are the characteristics of a continuous uniform distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">48</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ1_DN</td>
+                            <td>We know how to calculate probabilities for standard normal random variables. Can we apply the method to find
+the probabilities associated with an arbitrary normal random variable?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">49</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are the main properties of normal distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">50</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ2_HCM</td>
+                            <td>What is the rule called &#39;68-95-99 rule&#39;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">51</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ1_DN</td>
+                            <td>For cases in which the number of trials is large, it is difficult to calculate probabilities by using the binomial distribution. How do statisticians deal with this problem?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">52</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ1_HCM</td>
+                            <td>How could you find the area between two values under the normal curve?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">53</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ1_DN</td>
+                            <td>It is known that, there are intimate connections between three distributions of binomial, hypergeometric and Poisson. What are they? Is it possible to use them to approximate hypergeometric and binomial probabilities?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">54</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the difference between a normal distribution and a binomial distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">55</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ1_DN</td>
+                            <td>The Poisson distribution defines a random variable to be the number of events occurring in a fixed interval of time if these events occur with a known constant mean rate and independently of time since the last event. Can we describe the probability distribution of the time between those events?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">56</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the exponential distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">57</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ2_HCM</td>
+                            <td>Where is the exponential distribution used in the real world?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">58</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ1_DN</td>
+                            <td>An important aspect of dealing with data is organizing and summarizing the data. How should we numerically summarize the information in these data?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">59</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ1_HCM</td>
+                            <td>List some ways to measure central tendency. What are the formulas?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">60</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ1_DN</td>
+                            <td>The graphical techniques are very useful in constructing and interpreting visual data displays. What are most popular techniques?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">61</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ1_HCM</td>
+                            <td>How do you construct a table of frequency distribution and the corresponding histogram? Give an illustrative example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">62</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ1_HCM</td>
+                            <td>Is a Box plot used for outlier detection? How do you find them, if possible?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">63</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give an example of time series.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">64</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CQ2_HCM</td>
+                            <td>What are the applications of time series analysis in practice?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">65</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CQ1_DN</td>
+                            <td>One of the most useful theorems in statistics called the central limit theorem. What is this?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">66</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is an unbiased and biased estimator? Give an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">67</td>
+                            <td style="text-align: center;">32</td>
+                            <td>CQ1_DN</td>
+                            <td>How to use the central limit theorem to determine the point estimate for the proportion?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">68</td>
+                            <td style="text-align: center;">32</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the difference between a population distribution and a sampling distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">69</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CQ1_HCM</td>
+                            <td>Why does the standard error of the sample mean decrease as the sample size, n, increases?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">70</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CQ2_HCM</td>
+                            <td>What is the formula for calculating the standard error of the sample mean when the sample size is n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">71</td>
+                            <td style="text-align: center;">34</td>
+                            <td>CQ1_HCM</td>
+                            <td>In what conditions is the sampling distribution of the sample mean approximately normal?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">72</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ1_DN</td>
+                            <td>There is nothing inherent in the sample mean that provides any information about how close it is to the unknown true mean. Can we produce the interval that contains the true mean of a normal distribution, variance known?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">73</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ1_HCM</td>
+                            <td>Why don&#39;t we use 100% confidence in correctly estimating the population parameters?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">74</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the difference between a confidence interval and a confidence level?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">75</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CQ2_HCM</td>
+                            <td>Analyze the influence of increasing the confidence level to the width of the corresponding confidence interval.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">76</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CQ1_DN</td>
+                            <td>Check the affirmation that &quot;The general appearance of the t distribution is similar to the standard normal distribution.&quot;</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">77</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the t-distribution?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">78</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CQ2_HCM</td>
+                            <td>When should you use the t-distribution to design a confidence interval estimate for the mean?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">79</td>
+                            <td style="text-align: center;">38</td>
+                            <td>CQ1_DN</td>
+                            <td>How to construct confidence intervals on the mean of a normal distribution when the sample is small and its variance is unknown?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">80</td>
+                            <td style="text-align: center;">38</td>
+                            <td>CQ1_HCM</td>
+                            <td>How would you interpret a 95% confidence interval for the mean?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">81</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CQ1_HCM</td>
+                            <td>When determining the required sample size for a given confidence level and the error, how does the sample size change as we increase/decrease the population proportion?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">82</td>
+                            <td style="text-align: center;">40</td>
+                            <td>CQ1_HCM</td>
+                            <td>For a fixed sample size, increasing the confidence level will widen (or make it less precise) the confidence interval. Show your opinion about this statement.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">83</td>
+                            <td style="text-align: center;">41</td>
+                            <td>CQ1_HCM</td>
+                            <td>What does P-value mean?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">84</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CQ1_DN</td>
+                            <td>What is the difference between two approaches used in hypothesis testing: critical value and p-value?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">85</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the difference between a Type I error and a Type II error?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">86</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CQ2_HCM</td>
+                            <td>How do we calculate a type II error?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">87</td>
+                            <td style="text-align: center;">43</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the difference between a one-tailed test and a two-tailed test?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">88</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the test statistic on the mean of a normal distribution with known variance?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">89</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CQ2_HCM</td>
+                            <td>What is formula for finding the test statistic on the mean of a normal distribution with known variance?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">90</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CQ1_HCM</td>
+                            <td>When do you use the t-test for testing a hypothesis?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">91</td>
+                            <td style="text-align: center;">46</td>
+                            <td>CQ1_HCM</td>
+                            <td>How can you use the p-value approach to the Z-test of the hypothesis for the proportion?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">92</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CQ1_HCM</td>
+                            <td>Which test can be used for the difference between the two means? Why?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">93</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give an example of testing the difference between the two means.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">94</td>
+                            <td style="text-align: center;">48</td>
+                            <td>CQ1_HCM</td>
+                            <td>Under what conditions should you use the pooled-variance to test the differences in the means of two independent populations?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">95</td>
+                            <td style="text-align: center;">49</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are the assumptions for the two samples&#39; proportion test?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">96</td>
+                            <td style="text-align: center;">50</td>
+                            <td>CQ1_HCM</td>
+                            <td>In two independent populations, what are the similarities and differences between the hypothesis test and the confidence interval estimate for the difference between two proportions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">97</td>
+                            <td style="text-align: center;">51</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the problem setting of simple linear regression?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">98</td>
+                            <td style="text-align: center;">51</td>
+                            <td>CQ2_HCM</td>
+                            <td>Find some applications of regression in the real world.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">99</td>
+                            <td style="text-align: center;">52</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is a dependent and independent variable? Explain them with examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">100</td>
+                            <td style="text-align: center;">53</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the interpretation of the Y intercept and the slope in the simple linear regression equation?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">101</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are the required assumptions of regression analysis?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">102</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CQ2_HCM</td>
+                            <td>Explain the meaning of the word &#39;linear&#39; in the concept &#39;linear regression&#39;.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">103</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CQ1_DN</td>
+                            <td>How to determine whether there is a significant linear relationship between two variables in the population?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">104</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the difference between the sample correlation coefficient and coefficient of determination?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">105</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CQ2_HCM</td>
+                            <td>Explain the meaning of R^2?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">106</td>
+                            <td style="text-align: center;">56</td>
+                            <td>CQ1_HCM</td>
+                            <td>Which test statistic is used to test the relationship between two variables?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">107</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CQ1_HCM</td>
+                            <td>Using the Wage dataset (education on wages) from 57 to 60. Classify the following variable: nearc4, educ, age, black, wage, IQ, married, exper, lwage, and expersq.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">108</td>
+                            <td style="text-align: center;">58</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are the coefficients slope and intercept?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">109</td>
+                            <td style="text-align: center;">58</td>
+                            <td>CQ2_HCM</td>
+                            <td>Run regression equation of educ on wage, interpret the slope and the intercept from the output.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">110</td>
+                            <td style="text-align: center;">59</td>
+                            <td>CQ1_HCM</td>
+                            <td>Suppose that you examine two models: educ on wage and educ on lwage. Which model is better? Why?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">111</td>
+                            <td style="text-align: center;">60</td>
+                            <td>CQ1_HCM</td>
+                            <td>You are interested in studying factors affecting wages. Which models should you recommend?</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">4 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Assignment</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>3 hours </td>
+                            <td>LO1, LO2, LO3, LO4, LO5, LO6</td>
+                            <td>OP1: Open // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>5--10</td>
+                            <td>Assignment 1 covers Chapters 1, 2, 3 ; Assignment 2 covers Chapters 4, 6, 7</td>
+                            <td>     OP1: Each assignment is divided into two parts: the take-home component counts for no more than 50% of the total grade, and the in-class component counts for at least 50% (this may take the form of a presentation, essay, problem-solving, etc.).<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Assignment 1: LO1, LO2, LO3<br/>Assignment 2: LO4, LO5, LO6</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Computer Project</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+15.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>5 hours</td>
+                            <td>LO7, LO8, LO9</td>
+                            <td>OP1: Open // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>N/A</td>
+                            <td>Computer Project covers Chapter 8, 9, 10, 11</td>
+                            <td>   OP1: Groups of students are required to collect secondary data (topics may be suggested by instructor), form their own questions, and apply learned knowledge and methods of inferential statistics to analyze data and make conclusions about the populations. <br/>Groups are expected to use a statistical software to perform the analysis and  present their results to other groups in class. <br/>The work (slides, source files, etc.) accounts for up to 50% of the grade, while presentation skills and the ability to answer questions account for at least 50%.<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Progress Test</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>3</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>30' </td>
+                            <td>All LOs</td>
+                            <td>OP1: MC or a suitable format // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>15</td>
+                            <td>Chapters introduced</td>
+                            <td> OP1: by instructor, and by <br/>suitable means (computer, paper, oral...)<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>OP1: Instruction and schedules for Progress tests must be presented in the  Course Implementation Plan approved by director of the campus. <br/>Test 1: LO1, LO2, LO3<br/>Test 2: LO4, LO5, LO6<br/>Test 3: LO7, LO8, LO9<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal<br/>Progress test must be taken right after the last lectures of required material.<br/><br/>Instructor has resposibility to review the test for students after graded.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Final exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+35.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>60'</td>
+                            <td></td>
+                            <td>Computer gradable<br/><br/><br/></td>
+                            <td>50</td>
+                            <td>All studied chapters <br/>3-10 questions/each.<br/>More than 70% new questions (for the current semester);<br/></td>
+                            <td>by Exam Board</td>
+                            <td>10% of questions is ABET a2-objective oriented</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

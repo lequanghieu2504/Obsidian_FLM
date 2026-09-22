@@ -1,0 +1,2775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>14466</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Scientific socialism - Chủ nghĩa x&#227; hội khoa học</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b></b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>MLN131</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture,Presentation and implementation guidelines for a creative product</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Thời gian học (103h) = 22.5 giờ học trên lớp (30 tiết) + 1 giờ thi cuối kỳ + 76.5 giờ tự học + 3 giờ học trên Coursera<br/>Study hour (103h) = 22.5 contact hours (30 sessions) + 1 hour final exam + 76.5 hours self-study + 3 hours on Coursera</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>MLN111, MLN122</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Giới thiệu môn học: Chủ nghĩa xã hội khoa học là một trong ba bộ phận của chủ nghĩa Marx-Lenin. Chủ nghĩa xã hội khoa học đã dựa trên phương pháp luận triết học duy vật biện chứng và duy vật lịch sử, đồng thời cũng dựa trên những cơ sở lý luận khoa học về các quy luật kinh tế, quan hệ kinh tế để luận giải một cách khoa học về quá trình nảy sinh cách mạng xã hội chủ nghĩa, hình thành và phát triển hình thái kinh tế - xã hội cộng sản chủ nghĩa, gắn liền với sứ mệnh lịch sử của giai cấp công nhân, nhằm giải phóng con người, giải phóng xã hội.<br/>Course introduction: Scientific socialism is one of the three parts of Marxism-Leninism. Scientific socialism is based on the philosophical methodology of dialectical materialism and historical materialism as well as scientific theoretical foundations of economic laws and economic relations to scientifically explain the advent of scientific socialism socialist revolution, the formation and development of the communist socio-economic form, associated with the historical mission of the working class, to liberate people and society.  <br/><br/>Môn học Chủ nghĩa xã hội khoa học nhằm giúp cho sinh viên: <br/>+ Về kiến thức: Sinh viên nắm được những tri thức cơ bản, cốt lõi nhất về Chủ nghĩa xã hội khoa học, một trong ba bộ phận cấu thành chủ nghĩa Mác – Lênin.<br/>+ Về kỹ năng: Sinh viên nâng cao được năng lực hiểu biết thực tiễn và khả năng vận dụng các tri thức Chủ nghĩa xã hội khoa học vào việc xem xét, đánh giá những vấn đề chính trị - xã hội của đất nước liên quan đến chủ nghĩa xã hội (CNXH) và con đường đi lên CNXH ở nước ta.<br/>+ Về thái độ: Sinh viên có thái độ chính trị, tư tưởng đúng đắn về môn học Chủ nghĩa xã hội khoa học nói riêng và nền tảng tư tưởng của Đảng ta nói chung.<br/>+ Hình thành tư duy phản biện, năng lực lý luận và ứng dụng thực tiễn các lý luận vào đời sống cá nhân và xã hội. Nhấn mạnh vai trò công dân và tinh thần trách nhiệm xã hội.  <br/>Knowledge: Students will acquire the fundamental and core knowledge of Scientific Socialism, one of the three components of Marxism–Leninism.<br/>Skills: Students will enhance their capacity to understand practical realities and apply the knowledge of Scientific Socialism in analyzing and evaluating political and social issues of the country related to socialism (XHCN) and the path toward socialism in Vietnam.<br/>Attitude: Students will develop a correct political attitude and ideology toward the subject of Scientific Socialism in particular, and the ideological foundation of the Communist Party in general. To develop critical thinking, reasoning competence, and the ability to apply theories to personal and social life. To emphasize civic roles and social responsibility.<br/><br/>Nội dung môn học bao gồm các chương: gồm 7 chương: chương 1, trình bày những vấn đề cơ bản có tính nhập môn của Chủ nghĩa xã hội khoa học (quá trình hình thành, phát triển của Chủ nghĩa xã hội khoa học); từ chương 2 đến chương 7 trình bày những nội dung cơ bản của Chủ nghĩa xã hội khoa học nhằm làm sáng tỏ những quy luật khách quan của quá trình cách mạng xã hội chủ nghĩa. <br/>The course includes 7 chapters: Chapter 1: present basic introductory issues of Scientific socialism (the advent and development of Scientific socialism); Chapter 2 to chapter 7: present the basic knowledge of Scientific socialism to clarify the objective laws of the socialist revolution process.<br/><br/>Phương pháp dạy học: Thuyết giảng và kết hợp trình chiếu các slide bài giảng, ứng dụng AI hỗ trợ quá trình học. Hướng dẫn, giao bài tập đề tài theo nhóm. Tổ chức và hướng dẫn sinh viên thảo luận nhóm, thuyết trình và thực hiện sản phẩm sáng tạo.<br/>Teaching methods: Lecturing combined with slide presentations, and applying AI to support the learning process. Providing instructions and assigning group projects. Organizing and guiding students in group discussions, presentations, and the creation of creative products.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>Sinh viên phải tham gia tối thiểu 80% thời gian môn học. Phải có giáo trình Chủ nghĩa xã hội khoa học, dành cho sinh viên bậc đại học hệ không chuyên lý luận chính trị của Bộ Giáo dục và Đào tạo. Chỉ sử dụng máy tính xách tay trong lớp cho mục đích học tập. Thực hiện đầy đủ các yêu cầu của giảng viên khi học trên lớp cũng như các chủ đề sinh viên tự chuẩn bị trước khi đến lớp. Ứng dụng AI một cách có trách nhiệm, đạo đức trong quá trình học và thực tiễn<br/>Attend at least 80% of class hours. Own textbook on Scientific socialism for non-politics majored students as promulgated by the Ministry of Education and Training. Use their own laptop in class only for learning purpose. Fulfill tasks given by the instructor in class as well as topics needed to prepare in advance. AI must be applied responsibly and ethically in both learning and practice.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>- Internet<br/>- Pdf reader<br/>- AI</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>1028/QĐ-ĐHFPT dated 08/21/2026</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td>1)'Progress tests + Assignment: 70%<br/>- Participation: 10% <br/>- 01 Progress tests: 20%<br/>- Assignment: 40 %   <br/>2) Final Exam: 30% <br/>3) Final result:100%<br/>4) Completion Criteria:  <br/>    Final Result  >=5  & Final Exam Score >=4<br/>5) Sinh viên cần hoàn thành và có chứng chỉ khóa học online trên Coursera để đủ điều kiện dự thi cuối kỳ.<br/>5) Students must complete the online Coursera course and obtain the course completion certificate to be eligible to sit the final exam.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>8/21/2026</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">8 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>C. Mác và Ph.  Ăngghen: Toàn tập<br/>Marx/Engels Collected Works</td>
+                            <td>C. Mác và Ph.  Ăngghen</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc giaNational Political Publishing House</td>
+                            <td>2004</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học <br/>Scientific socialism textbook</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Vietnam Education Publishing House</td>
+                            <td>2006</td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, dùng cho sinh viên đại học hệ chuyên lý luận chính trị<br/>Scientific socialism textbook for politics majored students</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2021</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, dùng cho sinh viên đại học hệ không chuyên lý luận chính trị<br/>Scientific socialism textbook for non-politics majored students</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2021</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, tiêu cực, góp phần xây dựng Đảng và Nhà nước ta ngày càng trong sạch, vững mạnh</td>
+                            <td>Tổng Bí thư Nguyễn Phú Trọng</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia Sự thật</td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/sach-chinh-tri/kien-quyet-kien-tri-dau-tranh-phong-chong-tham-nhung-tieu-cuc-gop-phan-xay-dung-dang-va-nha-nuoc-ta-ngay-cang-trong-sach-436</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>Tài liệu giảng dạy về phòng, chống tham nhũng dùng cho các trường đại học, cao đẳng không chuyên về luật<br/>(Phê duyệt kèm theo Quyết định số 3468/QĐ-BGDĐT ngày 06 tháng 9 năm 2014 của Bộ trưởng Bộ Giáo dục và Đào tạo)</td>
+                            <td>Chủ biên et al.</td>
+                            <td>BỘ GI&#193;O DỤC V&#192; Đ&#192;O TẠO</td>
+                            <td>2014</td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://drive.google.com/file/d/1Tf3Fyybs8puDEnp5JGw3zqezIfreh6H2/view?usp=sharing</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>V.I. Lênnin: Toàn tập<br/>Selected works [of] V. I. Lenin</td>
+                            <td>V.I. Lênnin</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc giaNational Political Publishing House</td>
+                            <td>2005</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>Khóa học ôn tập trực tuyến môn Chủ nghĩa xã hội khoa học <br/>Online review course on Scientific Socialism</td>
+                            <td>Trường Đại Học FPT  - FPT University</td>
+                            <td>Coursera</td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">10 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Nắm vững những nội dung về sự ra đời, c&#225;c giai đoạn ph&#225;t triển, đối tượng, phương ph&#225;p v&#224; &#253; nghĩa của việc nghi&#234;n cứu chủ nghĩa x&#227; hội khoa học. Nắm vững được những tri thức cơ bản, cốt l&#245;i nhất của Chủ nghĩa x&#227; hội khoa học, một trong ba bộ phận cấu th&#224;nh chủ nghĩa M&#225;c - Lenin
+To master the contents regarding the emergence, stages of development, subject, methodology, and significance of studying Scientific Socialism. To firmly grasp the fundamental and core knowledge of Scientific Socialism, one of the three integral components of Marxism–Leninism.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Nắm vững những nội dung của chủ nghĩa M&#225;c – L&#234;nin về sứ mệnh lịch sử của giai cấp c&#244;ng nh&#226;n
+Master Marxism-Leninism theory on the historical mission of the working class</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Nắm vững những quan điểm của chủ nghĩa M&#225;c – L&#234;nin về chủ nghĩa x&#227; hội, thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội bỏ qua chế độ tư bản chủ nghĩa ở Việt Nam v&#224; sự vận dụng s&#225;ng tạo của Đảng C&#244;̣ng sản Vi&#234;̣t Nam v&#224;o điều kiện cụ thể Việt Nam
+Master the Marxist-Leninist views on socialism, the transitional period towards socialism while ignoring the capitalist regime in Vietnam and the Communist Party of Vietnam&#39;s creative application to Vietnamese practices</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Nắm vững những quan điểm của chủ nghĩa M&#225;c – L&#234;nin về nền d&#226;n chủ x&#227; hội chủ nghĩa v&#224; nh&#224; nước x&#227; hội chủ nghĩa, quan điểm của Đảng C&#244;̣ng sản Vi&#234;̣t Nam về việc x&#226;y dựng v&#224; ho&#224;n thiện nền d&#226;n chủ v&#224; nh&#224; nước x&#227; hội chủ nghĩa ở Việt Nam hiện nay
+Master the Marxist-Leninist views on socialist democracy and the socialist state, the Communist Party of Vietnam&#39;s view on building and perfecting socialist democracy and state in Vietnam today</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>Nắm vững cơ cấu x&#227; hội - giai cấp v&#224; li&#234;n minh giai cấp, tầng lớp trong thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội
+Master social-class structure and alliances of class in the transitional period to socialism.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>Nắm vững những quan điểm cơ bản của chủ nghĩa M&#225;c – L&#234;nin, đường lối, ch&#237;nh s&#225;ch của Đảng v&#224; nh&#224; nước Việt Nam về vấn đề d&#226;n tộc v&#224; t&#244;n gi&#225;o
+Master fundamental viewpoints of Marxism-Leninism and the Vietnamese Party and State&#39;s  lines and policies on ethnicity, religion issues</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Nắm vững  những quan điểm cơ bản của chủ nghĩa M&#225;c – L&#234;nin về vấn đề gia đ&#236;nh trong thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội
+Master fundamental viewpoints of Marxism-Leninism on family problems in the transitional period to socialism</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>N&#226;ng cao năng lực hiểu biết thực tiễn v&#224; khả năng vận dụng c&#225;c tri thức Chủ nghĩa x&#227; hội khoa học v&#224;o việc xem x&#233;t, đ&#225;nh gi&#225; c&#225;c vấn đề ch&#237;nh trị x&#227; hội li&#234;n quan đến con đường đi l&#234;n chủ nghĩa x&#227; hội của đất nước. C&#243; th&#225;i độ ch&#237;nh trị đ&#250;ng đắn về m&#244;n học n&#243;i ri&#234;ng v&#224; nền tảng tư tưởng của Đảng n&#243;i chung. 
+To enhance practical understanding and the ability to apply the knowledge of Scientific Socialism in examining and evaluating socio-political issues related to the country’s path toward socialism. To develop a proper political attitude toward the subject in particular and toward the ideological foundation of the Party in general.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>CLO9</td>
+                            <td>H&#236;nh th&#224;nh năng lực l&#253; luận v&#224; ứng dụng thực tiễn, nhấn mạnh vai tr&#242; c&#244;ng d&#226;n v&#224; tinh thần tr&#225;ch nhiệm x&#227; hội. H&#236;nh th&#224;nh thế giới quan, phương ph&#225;p luận th&#237;ch ứng trước sự biến đổi nhanh ch&#243;ng của thời đại, khoa học c&#244;ng nghệ. Hiểu được tầm quan trọng của gi&#225; trị nh&#226;n văn, x&#227; hội trong tiến tr&#236;nh ph&#225;t triển của nh&#226;n loại.
+To develop reasoning competence and practical application skills, with an emphasis on civic roles and social responsibility. To foster a worldview and methodology capable of adapting to the rapid transformations of the era and advances in science and technology. To understand the significance of humanistic and social values in the development of humankind.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td>CLO10</td>
+                            <td>X&#226;y dựng kỹ năng lập luận, soạn thảo b&#224;i viết, thuyết tr&#236;nh, tư duy phản biện, xử l&#253; c&#225;c quan hệ x&#227; hội v&#224; hoạt động nh&#243;m. X&#226;y dựng kỹ năng th&#237;ch ứng, tự học, sử dụng AI c&#243; tr&#225;ch nhiệm, đạo đức ph&#249; hợp với quan điểm triết học, văn h&#243;a - x&#227; hội, lịch sử Việt Nam
+Develop skills of argument, writing, presentations, critical thinking, handling social relations and group activities. To build adaptability and self-learning skills, and to use AI responsibly and ethically in alignment with philosophical perspectives as well as Vietnam’s cultural, social, and historical context.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=14466" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Chương 1: Nhập môn Chủ nghĩa xã hội khoa học<br/>I. Sự ra đời của chủ nghĩa xã hội khoa học<br/><br/>Chapter 1: Introduction to Scientific socialism<br/>I. The start of Scientific Socialism</td>
+                            <td>Offline</td>
+                            <td>LO1, LO8, LO9</td>
+                            <td>I</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 11 đến trang 22.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 11 to 22.</td>
+                            <td>
+                                        <a href="https://drive.google.com/drive/folders/1QupRI2q9CcG8rycs1V7Hqd1iGvfzv1Q5?usp=drive_link" class="ContainSLink" target=_blank rel=noopener noreferrer>link1-1</a>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Chương 1: Nhập môn Chủ nghĩa xã hội khoa học<br/>II. Các giai đoạn phát triển cơ bản của chủ nghĩa xã hội khoa học<br/><br/>Chapter 1: Introduction to Scientific socialism<br/>II. The development stages of development of scientific socialism</td>
+                            <td>Offline</td>
+                            <td>LO1, LO8, LO9</td>
+                            <td>IT</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 22 đến trang 39.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 22 to 39.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Chương 1: Nhập môn Chủ nghĩa xã hội khoa học<br/>III. Đối tượng, phương pháp và ý nghĩa của việc nghiên cứu chủ nghĩa xã hội khoa học<br/><br/>Chapter 1: Introduction to Scientific socialism<br/>III. Objects, methods and significance of the study of scientific socialism</td>
+                            <td>Offline</td>
+                            <td>LO1, LO8, LO9</td>
+                            <td>IT</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 39 đến trang 49.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 39 to 49.(Edited)Restore original</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Chương 2: Sứ mệnh lịch sử của giai cấp công nhân<br/>I. Quan điểm cơ bản chủ nghĩa Mác – Lênin về giai cấp công nhân và sứ mệnh lịch sử thế giới của giai cấp công nhân<br/>Assignment<br/><br/>Chapter 2: The historical mission of the working class<br/>I. Fundamental viewpoints of Marxism-Leninism on the working class and the historical mission of the working class<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 51 đến trang 65.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 51 to 65.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Chương 2: Sứ mệnh lịch sử của giai cấp công nhân<br/>II. Giai cấp công nhân và việc thực hiện sứ mệnh lịch sử của giai cấp công nhân hiện nay<br/>Assignment<br/><br/>Chapter 2: The historical mission of the working class<br/>II. The working class and the implementation of the historical mission of the current working class<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 65 đến trang 71.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 65 to 71.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Chương 2: Sứ mệnh lịch sử của giai cấp công nhân<br/>III. Sứ mệnh lịch sử của giai cấp công nhân Việt Nam <br/>Assignment<br/><br/>Chapter 2: The historical mission of the working class<br/>III. The historical mission of the Vietnamese working class<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 72 đến trang 84.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 72 to 84.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Chương 3: Chủ nghĩa xã hội và thời kỳ quá độ lên chủ nghĩa xã hội <br/>I. Chủ nghĩa xã hội  <br/>1. Chủ nghĩa xã hội, giai đoạn đầu của hình thái kinh tế - xã hội cộng sản chủ nghĩa<br/>2. Điều kiện ra đời chủ nghĩa xã hội<br/>Assignment<br/><br/>Chapter 3: Socialism and the transitional period to socialism<br/>I. Socialism <br/>1. Socialism, the first stage of communist socio-economic form<br/>2. Conditions for the birth of socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 86 đến trang 93.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 86 to page 93.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Chương 3: Chủ nghĩa xã hội và thời kỳ quá độ lên chủ nghĩa xã hội <br/>I. Chủ nghĩa xã hội  <br/>3. Những đặc trưng bản chất của chủ nghĩa xã hội <br/>Assignment<br/><br/>Chapter 3: Socialism and the transitional period to socialism<br/>I. Socialism <br/>3. Essential features of socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 93 đến trang 103.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 93 to page 103.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Chương 3: Chủ nghĩa xã hội và thời kỳ quá độ lên chủ nghĩa xã hội <br/>II. Thời kỳ quá độ lên chủ nghĩa xã hội <br/>Assignment<br/><br/>Chapter 3: Socialism and the transitional period to socialism<br/>II. The transition period to socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 103 đến trang 109.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 103 to 109.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Chương 3: Chủ nghĩa xã hội và thời kỳ quá độ lên chủ nghĩa xã hội <br/>III. Quá độ lên chủ nghĩa xã hội ở Việt Nam<br/>Assignment<br/><br/>Chapter 3: Socialism and the transitional period to socialism<br/>III. The transition period to socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 109 đến trang 124.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 109 to 124.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Chương 4: Dân chủ xã hội chủ nghĩa và nhà nước xã hội chủ nghĩa<br/>I. Dân chủ và dân chủ xã hội chủ nghĩa<br/>1. Dân chủ và sự ra đời, phát triển của dân chủ<br/>Assignment<br/><br/>Chapter 4: Socialist democracy and socialist state<br/>I. Democracy and socialist democracy<br/>1. Democracy, the establishment, and development of democracy<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 125 đến trang 132.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 125 to page 132.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Chương 4: Dân chủ xã hội chủ nghĩa và nhà nước xã hội chủ nghĩa<br/>I. Dân chủ và dân chủ xã hội chủ nghĩa<br/>2. Dân chủ xã hội chủ nghĩa <br/>Assignment<br/><br/>Chapter 4: Socialist democracy and socialist state<br/>I. Democracy and socialist democracy<br/>2. Socialist democracy<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 132 đến trang 141.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 132 to page 141.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Chương 4: Dân chủ xã hội chủ nghĩa và nhà nước xã hội chủ nghĩa<br/>II. Nhà nước xã hội chủ nghĩa <br/>Assignment<br/><br/>Chapter 4: Socialist democracy and socialist state<br/>II. Socialist state<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 141 đến trang 149.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 141 to 149.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Chương 4: Dân chủ xã hội chủ nghĩa và nhà nước xã hội chủ nghĩa<br/>III. Dân chủ xã hội chủ nghĩa và nhà nước pháp quyền xã hội chủ nghĩa ở Việt Nam<br/>1. Dân chủ xã hội chủ nghĩa ở Việt Nam <br/>Assignment<br/><br/>Chapter 4: Socialist democracy and socialist state<br/>III. Socialist democracy and the socialist rule of law state in Vietnam<br/>1. Socialist democracy in Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 149 đến trang 155.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 149 to 155.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Chương 4: Dân chủ xã hội chủ nghĩa và nhà nước xã hội chủ nghĩa<br/>II. Dân chủ xã hội chủ nghĩa và nhà nước pháp quyền xã hội chủ nghĩa ở Việt Nam<br/>2. Nhà nước pháp quyền xã hội chủ nghĩa ở Việt Nam <br/>3. Phát huy dân chủ xã hội chủ nghĩa, xây dựng Nhà nước pháp quyền xã hội chủ nghĩa ở Việt Nam hiện nay<br/>Assignment<br/><br/>Chapter 4: Socialist democracy and socialist state<br/>II. Socialist democracy and the socialist rule of law state in Vietnam<br/>2. Socialist rule of law in Vietnam<br/>3. Promoting socialist democracy, building a socialist rule of law state in Vietnam today<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 155 đến trang 163.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 155 to page 163.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Chương 4: Dân chủ xã hội chủ nghĩa và nhà nước xã hội chủ nghĩa<br/>II. Dân chủ xã hội chủ nghĩa và nhà nước pháp quyền xã hội chủ nghĩa ở Việt Nam<br/>4. Phòng, chống tham nhũng góp phần bảo vệ chế độ, xây dựng Nhà nước pháp quyền<br/><br/>Chapter 4: Socialist democracy and the socialist state<br/>II. Socialist democracy and the socialist rule of law state in Vietnam<br/>4. Preventing and combating corruption contributes to protecting the regime and building a rule of law state<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 155 đến trang 163.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 155 to page 163.<br/><br/>Đọc tài liệu tham khảo "TÀI LIỆU GIẢNG DẠY VỀ PHÒNG, CHỐNG THAM NHŨNG DÙNG</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Chương 4: Dân chủ xã hội chủ nghĩa và nhà nước xã hội chủ nghĩa<br/>II. Dân chủ xã hội chủ nghĩa và nhà nước pháp quyền xã hội chủ nghĩa ở Việt Nam<br/>5. Trách nhiệm của công dân trong phòng, chống tham nhũng<br/><br/>Chapter 4: Socialist democracy and the socialist state<br/>II. Socialist democracy and the socialist rule of law state in Vietnam<br/>5. Citizens' responsibilities in anti-corruption<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 155 đến trang 163.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 155 to page 163.<br/><br/>Đọc tài liệu tham khảo "TÀI LIỆU GIẢNG DẠY VỀ PHÒNG, CHỐNG THAM NHŨNG DÙNG</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Chương 5: Cơ cấu xã hội- giai cấp và liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội <br/>I. Cơ cấu xã hội - giai cấp trong thời kỳ quá độ lên chủ nghĩa xã hội <br/>Assignment<br/><br/>Chapter 5: Social-class structure and alliances of class in the transition to socialism<br/>I. Social-class structure in the transition to socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO5, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 173 đến trang 177.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 173 to 177.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Chương 5: Cơ cấu xã hội- giai cấp và liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội <br/>II. Liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>Assignment<br/><br/>Chapter 5: Social-class structure and alliances of class in the transition to socialism<br/>II. Alliances of class in the transition to socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO5, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 177 đến trang 187.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 177 to 187.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Chương 5: Cơ cấu xã hội - giai cấp và liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>III. Cơ cấu xã hội - giai cấp và liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam<br/>1. Cơ cấu giai cấp - xã hội trong thời kì quá độ lên chủ nghĩa xã hội ở Việt Nam <br/>2. Liên minh giai cấp trong thời kì quá độ lên chủ nghĩa xã hội ở Việt Nam <br/>Assignment<br/><br/>Chapter 5: Social-class structure and alliances of class in the transition to socialism<br/>Social structure - classes and alliances of classes and classes in the transition to socialism in Vietnam<br/>1. Social-class structure in the period of transition to socialism in Vietnam<br/>2. Class alliances during the transition to socialism in Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO5, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 187 đến trang 205.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 187 to page 205.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>I. Dân tộc trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>1. Khái niệm, đặc trưng cơ bản của dân tộc<br/>2. Chủ nghĩa Mác - Lênin về vấn đề dân tộc<br/>Assignment<br/><br/>Chapter 6: Ethnicity, religion issues in the transition to socialism<br/>I. Ethnicity issues in the transition to socialism<br/>1. Concepts and basic characteristics of the nation<br/>2. Marxism-Leninism on national issues<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO6, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 206 đến trang 213.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 206 to page 213.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>I. Dân tộc trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>3. Dân tộc và quan hệ dân tộc ở Việt Nam <br/>Assignment<br/><br/>Chapter 6: Ethnicity, religion issues in the transition to socialism<br/>I. Ethnicity issues in the transition to socialism<br/>3. Ethnicity and ethnic relations in Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO6, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 214 đến trang 223.<br/><br/>Read in advance  the textbook of scientific socialism (2021) from page 214 to page 223.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>II. Tôn giáo trong thời kì quá độ lên chủ nghĩa xã hội <br/>1. Chủ nghĩa Mác - Lênin về tôn giáo<br/>Assignment<br/><br/>Chapter 6: Ethnicity, religion issues in the transition to socialism<br/>II. Religion issues in the transition to socialism<br/>1. Marxism-Leninism on religion<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO6, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 223 đến trang 228.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 223 to page 228.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Progress Test<br/>Review chapter 2, 3, 4, 5, 6.1</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO5, LO6</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 51 đến trang 228.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 51 to page 228.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>II. Tôn giáo trong thời kì quá độ lên chủ nghĩa xã hội <br/>2. Tôn giáo ở Việt Nam và chính sách tôn giáo của Đảng, Nhà nước ta hiện nay<br/>Assignment<br/><br/>Chapter 6: Ethnicity, religion issues in the transition to socialism<br/>II. Religion issues in the transition to socialism<br/>2. Religion in Vietnam and the current religious policy of our Party and State<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO6, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 228 đến trang 237.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 228 to page 237.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>III. Quan hệ dân tộc và tôn giáo ở Việt Nam<br/><br/>Chapter 6: Ethnicity, religion issues in the transition to socialism<br/>III. Ethnicity and religion relations</td>
+                            <td>Offline</td>
+                            <td>LO6, LO8, LO9, LO10</td>
+                            <td>IT</td>
+                            <td class="product">Sinh viên ôn tập kiến thức chương 5&6<br/><br/>Students review knowledge of chapters 5 & 6</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Chương 7: Vấn đề gia đình trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>I. Khái niệm, vị trí và chức năng của gia đình<br/>Assignment<br/><br/>Chapter 7: Family problems in the transition to socialism<br/>I. The concept, position and function of the family<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 239 đến trang 250.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 239 to page 250.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Chương 7: Vấn đề gia đình trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>II. Cơ sở xây dựng gia đình trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>Assignment<br/><br/>Chapter 7: Family problems in the transition to socialism<br/>II. Basis for building a family in the transition to socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 250 đến trang 257.<br/><br/>Read in advance the textbook of scientific socialism (2021) from page 250 to page 257.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook. <br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Chương 7: Vấn đề gia đình trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>III. Xây dựng gia đình Việt Nam trong thời kỳ quá độ lên chủ nghĩa xã hội<br/>Assignment<br/><br/>Chapter 7: Family problems in the transition to socialism<br/>Build a family in the transition to socialism in Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước  giáo trình chủ nghĩa xã hội khoa học (2021) từ trang 257 đến trang 268.<br/><br/>Read in advance the textbook of scientific socialism (2021) from pages 257 to 268.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Review Chapters 1,2,3,4,5,6,7</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>IT</td>
+                            <td class="product">Tổng kết những kiến thức quan trọng từ chương 1 đến chương 7.<br/><br/>Summarize important knowledge from chapters 1 to 7.</td>
+                            <td>
+
+                            </td>
+                            <td>- Giáo trình chủ nghĩa xã hội khoa học, dành cho hệ không chuyên lý luận chính trị. NXB chính trị quốc gia sự thật, 2021.<br/>- Đề cương bài giảng của giảng viên.<br/><br/>- Scientific socialism 2021 textbook.<br/>- Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Ôn tập kiến thức Chương 1, 2 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapters 1, 2</td>
+                            <td>Online</td>
+                            <td>CLO1, CLO2, CLO3, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 1, 2.<br/>Xem video tóm tắt nội dung Chương 1, 2.<br/><br/>Read the Chapter 1, 2 key-knowledge summary in advance.<br/>Watch the Chapter 1, 2  summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 1, 2; Ngân hàng câu hỏi trắc nghiệm ôn tập (dùng cho Mini quiz).<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 1, 2 review video; review question bank (used for the Mini quiz).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 1, 2 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapters 1, 2</td>
+                            <td>Online</td>
+                            <td>CLO1, CLO2, CLO3, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 1, 2.<br/>Xem video tóm tắt nội dung Chương 1, 2.<br/><br/>Read the Chapter 1, 2 key-knowledge summary in advance.<br/>Watch the Chapter 1, 2  summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 1, 2; Ngân hàng câu hỏi trắc nghiệm ôn tập (dùng cho Mini quiz).<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 1, 2 review video; review question bank (used for the Mini quiz).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Ôn tập kiến thức Chương 3, 4 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapters 3, 4</td>
+                            <td>Online</td>
+                            <td>CLO4, CLO5, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 3, 4.<br/>Xem video tóm tắt nội dung Chương 3, 4.<br/><br/>Read the Chapter 3, 4 key-knowledge summary in advance.<br/>Watch the Chapter 3, 4 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 3, 4 ; Ngân hàng câu hỏi trắc nghiệm ôn tập (dùng cho Mini quiz).<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 3, 4  review video; review question bank (used for the Mini quiz).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 3, 4 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapters 3, 4</td>
+                            <td>Online</td>
+                            <td>CLO4, CLO5, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 3, 4.<br/>Xem video tóm tắt nội dung Chương 3, 4.<br/><br/>Read the Chapter 3, 4 key-knowledge summary in advance.<br/>Watch the Chapter 3, 4 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 3, 4 ; Ngân hàng câu hỏi trắc nghiệm ôn tập (dùng cho Mini quiz).<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 3, 4  review video; review question bank (used for the Mini quiz).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 3, 4 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapters 3, 4</td>
+                            <td>Online</td>
+                            <td>CLO4, CLO5, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 3, 4.<br/>Xem video tóm tắt nội dung Chương 3, 4.<br/><br/>Read the Chapter 3, 4 key-knowledge summary in advance.<br/>Watch the Chapter 3, 4 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 3, 4 ; Ngân hàng câu hỏi trắc nghiệm ôn tập (dùng cho Mini quiz).<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 3, 4  review video; review question bank (used for the Mini quiz).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Ôn tập kiến thức Chương 5, 6 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapter 5, 6</td>
+                            <td>Online</td>
+                            <td>CLO6, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 5, 6.<br/>Xem video tóm tắt nội dung Chương 5, 6.<br/><br/>Read the Chapter 5, 6 key-knowledge summary in advance.<br/>Watch the Chapter 5, 6 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 5, 6.<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 5, 6 review video.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 5, 6 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapter 5, 6</td>
+                            <td>Online</td>
+                            <td>CLO6, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 5, 6.<br/>Xem video tóm tắt nội dung Chương 5, 6.<br/><br/>Read the Chapter 5, 6 key-knowledge summary in advance.<br/>Watch the Chapter 5, 6 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 5, 6.<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 5, 6 review video.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 5, 6 - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapter 5, 6</td>
+                            <td>Online</td>
+                            <td>CLO6, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 5, 6.<br/>Xem video tóm tắt nội dung Chương 5, 6.<br/><br/>Read the Chapter 5, 6 key-knowledge summary in advance.<br/>Watch the Chapter 5, 6 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 5, 6.<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 5, 6 review video.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Ôn tập kiến thức Chương 7 + Final quiz - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapter 7 + final quiz</td>
+                            <td>Online</td>
+                            <td>CLO7, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 7.<br/>Xem video tóm tắt nội dung Chương 7.<br/><br/>Read the Chapter 7 key-knowledge summary in advance.<br/>Watch the Chapter 7 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 7; Ngân hàng câu hỏi trắc nghiệm ôn tập Chương 6, 7 (dùng cho Final quiz).<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 7 review video; Chapter 7 review question bank (used for the Final quiz).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 7 + Final quiz - Học online trên Coursera<br/><br/>Online (Coursera): Review of Chapter 7 + final quiz</td>
+                            <td>Online</td>
+                            <td>CLO7, CLO8, CLO9, CLO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước tài liệu tóm tắt kiến thức trọng tâm Chương 7.<br/>Xem video tóm tắt nội dung Chương 7.<br/><br/>Read the Chapter 7 key-knowledge summary in advance.<br/>Watch the Chapter 7 summary video.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Chủ nghĩa xã hội khoa học, NXB Chính trị quốc gia Sự thật, 2021.<br/>Video ôn tập Chương 7; Ngân hàng câu hỏi trắc nghiệm ôn tập Chương 6, 7 (dùng cho Final quiz).<br/><br/>Scientific Socialism textbook, National Political Publishing House Sự Thật, 2021.<br/>Chapter 7 review video; Chapter 7 review question bank (used for the Final quiz).</td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">46 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1.1</td>
+                            <td>C&#225;c bộ phận n&#224;o hợp th&#224;nh chủ nghĩa M&#225;c - L&#234;nin? V&#224; mỗi bộ phận c&#243; vai tr&#242;, vị tr&#237; ra sao?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.2</td>
+                            <td>Mời c&#225;c bạn xem đoạn clip: “Cuba vững bước x&#226;y dựng chủ nghĩa x&#227; hội”. V&#224; Trong đoạn clip c&#243; đề cập: tại Đại hội lần thứ VIII của Đảng Cộng sản Cuba c&#243; đề cập: “Ph&#225;t triển kinh tế trong đ&#243; c&#243; việc giải quyết b&#224;i to&#225;n n&#226;ng cao năng suất lao động v&#224; th&#250;c đẩy lực lượng sản xuất trong nước, c&#249;ng việc c&#226;n bằng v&#224; bảo về an sinh x&#227; hội, đ&#226;y được xem l&#224; nhiệm vụ then chốt v&#224; bao tr&#249;m cho nhiệm vụ tiếp theo”. H&#227;y l&#253; giải c&#225;c vấn đề sau:
+- Tại sao ph&#225;t triển kinh tế phải đảm bảo an sinh x&#227; hội?
+- Những vấn đề n&#224;o c&#243; li&#234;n quan đến chủ nghĩa duy vật lịch sử, học thuyết gi&#225; trị thặng dư v&#224; học thuyết sứ mệnh lịch sử to&#224;n thế giới của giai cấp c&#244;ng nh&#226;n được đề cập đến trong đoạn clip tr&#234;n?
+- Đ&#226;u l&#224; điểm mới, điểm s&#225;ng tạo m&#224; Cuba đ&#227; vận dụng Chủ nghĩa x&#227; hội khoa học được M&#225;c - Ăngghen ph&#225;t triển.
+- Th&#244;ng qua đoạn clip n&#224;y, c&#225;c bạn h&#227;y tr&#236;nh b&#224;y đối tượng nghi&#234;n cứu, &#253; nghĩa m&#224; ch&#250;ng ta đang muốn hướng đến l&#224; g&#236;? V&#224; &#253; nghĩa của đoạn clip l&#224; g&#236;?
+ Link clip: https://youtu.be/LQ7gowOn3CA</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.3</td>
+                            <td>Mời c&#225;c bạn xem đoạn video về Đổi mới to&#224;n diện đất nước theo định hướng XHCN tr&#234;n Nh&#226;n d&#226;n TV.
+Sau khi xem xong đoạn Video c&#225;c bạn h&#227;y chỉ ra những kh&#243; khăn trước thời kỳ đổi mới, sau thời thời kỳ đổi mới c&#243; những điểm g&#236; kh&#225;c? Đ&#243; c&#243; phải l&#224; những đ&#243;ng g&#243;p quan trọng kh&#244;ng? V&#236; sao?
+Link Video: https://youtu.be/fiLdxRn9K-A</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ2.1</td>
+                            <td>Ở t&#225;c phẩm Những nguy&#234;n l&#253; của chủ nghĩa cộng sản (1847), Ph.Ăngghen khẳng định: “Giai cấp v&#244; sản l&#224; do cuộc c&#225;ch mạng c&#244;ng nghiệp sản sinh ra; cuộc c&#225;ch mạng n&#224;y xảy ra ở Anh v&#224;o nửa sau của thế kỷ trước (tức l&#224; thế kỷ XVIII - người viết), v&#224; sau đ&#243; t&#225;i diễn ở tất cả c&#225;c nước văn minh tr&#234;n thế giới...”. Đồng thời mời c&#225;c bạn xem Ph&#243;ng Sự Quốc Tế: Ng&#224;y Quốc tế lao động (nguồn link https://youtu.be/hxdKu8pDXhk) . Từ khẳng định của Ăngghen v&#224; nội dung đoạn video c&#225;c bạn vừa xem. C&#225;c bạn h&#227;y trả lời c&#225;c vấn đề sau:
+- Mối quan hệ giữa giai cấp c&#244;ng nh&#226;n v&#224; giai cấp v&#244; sản được biểu hiện như thế n&#224;o?
+- Những phương diện n&#224;o h&#236;nh th&#224;nh n&#234;n giai cấp c&#244;ng nh&#226;n?
+- Đặc điểm của giai cấp c&#244;ng nh&#226;n l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.2</td>
+                            <td>Trong t&#225;c phẩm “Tắt đ&#232;n” của Ng&#244; Tất Tố c&#243; đoạn mi&#234;u tả h&#236;nh ảnh chị Dậu: “Bu&#244;ng tay, chị vội cho&#224;ng dậy, mở cửa chạy t&#233; ra s&#226;n. Trời tối như mực v&#224; như c&#225;i tiền đồ của chị” (Tr&#237;ch Chương XVII, Tắt đ&#232;n của Ng&#244; Tất Tố). Th&#244;ng qua h&#236;nh ảnh n&#224;y, bạn c&#243; nh&#236;n nhận như thế n&#224;o về x&#227; hội l&#250;c bấy giờ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.3</td>
+                            <td>“Khi C. M&#225;c viết Tuy&#234;n ng&#244;n của Đảng Cộng sản, năm 1848, tr&#234;n thế giới chỉ c&#243; khoảng 10 - 20 triệu c&#244;ng nh&#226;n, tương đương chiếm 2% - 3% số d&#226;n to&#224;n cầu v&#224; chỉ trong v&#224;i lĩnh vực c&#243; m&#225;y m&#243;c. Đến đầu thế kỷ XX, to&#224;n thế giới c&#243; 80 triệu c&#244;ng nh&#226;n. Năm 2013, lần đầu ti&#234;n trong lịch sử c&#243; đa số cư d&#226;n tham gia v&#224;o lực lượng lao động v&#224; l&#224; người lao động ăn lương. Hiện nay c&#243; khoảng 1,6 tỷ người lao động ăn lương, tăng th&#234;m 600 triệu kể từ giữa những năm 1990, hơn 1 tỷ trong số đ&#243; l&#224; c&#244;ng nh&#226;n” (nguồn: https://www.tapchicongsan.org.vn/web/guest/nghien-cu/-/2018/819840/nhung-nhan-thuc-moi-ve-giai-cap-cong-nhan-hien-nay*.aspx). Bạn nh&#236;n nhận như thế n&#224;o về thực trạng số lượng của giai cấp c&#244;ng nh&#226;n hiện nay?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.4</td>
+                            <td>Nội dung CQ2.4. Mời c&#225;c bạn xem đoạn Kh&#244;ng thể phủ nhận sứ mệnh lịch sử của giai cấp c&#244;ng nh&#226;n (nguồn link: https://youtu.be/u-BN7BYBB4k). Th&#244;ng qua đoạn video n&#224;y c&#225;c em thấy được:
+a. Quần ch&#250;ng nh&#226;n d&#226;n lao động c&#243; vai tr&#242; g&#236;?
+b. Nội dung tổng qu&#225;t sứ mệnh lịch sử của giai cấp c&#244;ng nh&#226;n l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.5</td>
+                            <td>Mời c&#225;c bạn xem đoạn clip về Chủ nghĩa x&#227; hội kh&#244;ng bao giờ lỗi thời tr&#234;n VTV4 (nguồn link: https://youtu.be/zo0XmiVA30Q) v&#224; c&#225;c bạn cần trả lời c&#225;c vấn đề sau:
+- Chủ nghĩa tư bản hiện phổ biến tr&#234;n to&#224;n cầu, nhưng li&#234;n tục phải đối mặt với khủng hoảng...Đ&#243; l&#224; những khủng hoảng g&#236;?
+- Ng&#224;y nay chủ nghĩa x&#227; hội đ&#227; khắc phục được những hạn chế cơ bản, đặc trưng g&#236; từ kinh nghiệm của Li&#234;n X&#244;?
+- Tăng trưởng kinh tế bỏ qua c&#225;c vấn đề về m&#244;i trường m&#224; c&#225;c nh&#224; tư bản đ&#227; v&#224; đang l&#224;m đ&#227; đ&#250;ng với mục ti&#234;u m&#224; chủ nghĩa x&#227; hội hướng đến hay chưa? Đ&#226;u l&#224; mục ti&#234;u cuối c&#249;ng của chủ nghĩa x&#227; hội?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.6.</td>
+                            <td>Mời c&#225;c bạn xem đoạn video sau về Vai tr&#242; lịch sử của giai cấp c&#244;ng nh&#226;n Việt Nam (nguồn clip: https://youtu.be/YgHlIRazuDo). Th&#244;ng qua đoạn Video tr&#234;n, c&#225;c bạn h&#227;y cho biết:
+- Những phong tr&#224;o n&#224;o đ&#227; g&#243;p phần tạo n&#234;n những chiến c&#244;ng oanh liệt?
+- &#212;ng Ngọ Duy Hiểu n&#243;i rằng: C&#244;ng nh&#226;n tiếp tục l&#224; trung t&#226;m của đo&#224;n kết quần ch&#250;ng lao động? Bạn hiểu c&#226;u n&#243;i n&#224;y như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.7.</td>
+                            <td>Trong “Thư gửi Ủy ban nh&#226;n d&#226;n c&#225;c kỳ, tỉnh, huyện v&#224; l&#224;ng” của Chủ tịch Hồ Ch&#237; Minh c&#243; viết: “Nếu nước độc lập m&#224; d&#226;n kh&#244;ng hưởng hạnh ph&#250;c tự do, th&#236; độc lập cũng chẳng c&#243; nghĩa l&#253; g&#236;”? V&#224; mời c&#225;c bạn xem đoạn Video về Cải c&#225;ch ruộng đất: Chủ tịch Hồ Ch&#237; Minh kh&#243;c trước Quốc hội năm 1956 (nguồn link: https://youtu.be/qg_KwLnIae4). C&#225;c bạn l&#253; giải c&#225;c vấn đề sau:
+- Dựa v&#224;o đoạn clip c&#225;c bạn l&#253; giải v&#236; sao phải tiến h&#224;nh cải c&#225;ch ruộng đất?
+- C&#225;c bạn cần phải l&#224;m tốt c&#244;ng t&#225;c g&#236; trong giai đoạn hiện nay?
+- Ch&#250;ng ta cần c&#243; những phương hướng ra sao để x&#226;y dựng một đất nước Việt Nam ph&#225;t triển theo hướng c&#244;ng nghiệp?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.8</td>
+                            <td>Mời c&#225;c bạn xem đoạn Video về Việt Nam vươn m&#236;nh trở th&#224;nh “con hổ mới” của kinh tế Ch&#226;u &#193; (nguồn link: https://youtu.be/5_uHWdLqgZ0). Th&#244;ng qua đoạn video n&#224;y, theo c&#225;c bạn cần c&#243; những giải ph&#225;p n&#224;o để thực hiện được mục ti&#234;u đưa Việt Nam th&#224;nh một nước c&#244;ng nghiệp theo hướng hiện đại?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ3.1</td>
+                            <td>C&#243; nhận định cho rằng: Sự tan r&#227; của Li&#234;n X&#244; v&#224; c&#225;c nước Đ&#244;ng &#194;u l&#224; sự sụp đổ của chủ nghĩa x&#227; hội. Bằng l&#253; luận v&#224; thực tiễn, Anh/Chị h&#227;y tr&#236;nh b&#224;y quan điểm của m&#236;nh về nhận định tr&#234;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ3.2</td>
+                            <td>L&#234;nin nhấn mạnh y&#234;u cầu về một x&#227; hội ph&#225;t triển cao: “Thiết lập một chế độ x&#227; hội cao hơn chủ nghĩa tư bản, nghĩa l&#224; n&#226;ng cao năng suất lao động v&#224; do đ&#243; (v&#224; nhằm v&#224;o mục đ&#237;ch đ&#243;) phải tổ chức lao động theo một tr&#236;nh độ tổ chức cao hơn” [V.I L&#234;nin, To&#224;n tập, Nxb Tiến bộ, 1976, T&#226;p 36, tr. 228-229].
+1. Tổ chức một nền sản xuất x&#227; hội ở một tr&#236;nh độ cao cần tập trung v&#224;o những nh&#226;n tố n&#224;o?
+2. Nh&#226;n tố con người l&#224; trung t&#226;m t&#226;m của sự ph&#225;t triển. H&#227;y l&#224;m r&#245; nh&#226;n tố con người xem x&#233;t ở những kh&#237;a cạnh n&#224;o? Từ đ&#243; ph&#225;c thảo ra phương hướng ph&#225;t triển của bản th&#226;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.3</td>
+                            <td>Hồ Ch&#237; Minh đ&#227; nhấn mạnh: “Đặc điểm to nhất l&#224; từ một nước n&#244;ng nghiệp lạc hậu tiến thẳng l&#234;n CNXH kh&#244;ng phải kinh qua giai đoạn ph&#225;t triển tư bản chủ nghĩa” [ Hồ Ch&#237; Minh: To&#224;n tập, Nxb. Ch&#237;nh trị quốc gia, H, 2011, t.12, tr. 411]
+Bằng l&#253; luận v&#224; thực tiễn h&#227;y l&#224;m r&#245;:
+1. Những thuận lợi v&#224; kh&#243; khăn của thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội ở Việt nam.
+2 Tổng kết thực tiễn “từ một nước n&#244;ng nghiệp lạc hậu” để lại &#253; niệm g&#236; khi nhận thức về thời kỳ qu&#225; độ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.4</td>
+                            <td>H&#227;y kh&#225;i qu&#225;t c&#225;c th&#224;nh phần kinh tế của Việt Nam trước năm 1975; c&#225;c th&#224;nh phần kinh tế Việt Nam trước năm 1986 v&#224; c&#225;c th&#224;nh phần kinh tế của Việt Nam hiện nay để l&#224;m s&#225;ng tỏ thời kỳ qu&#225; độ về phương diện kinh tế tất yếu tồn tại nền kinh tế nhiều th&#224;nh phần.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ3.5</td>
+                            <td>Hồ Ch&#237; Minh đ&#227; nhấn mạnh: “Đặc điểm to nhất l&#224; từ một nước n&#244;ng nghiệp lạc hậu tiến thẳng l&#234;n CNXH kh&#244;ng phải kinh qua giai đoạn ph&#225;t triển tư bản chủ nghĩa” [Hồ Ch&#237; Minh: To&#224;n tập, Nxb. Ch&#237;nh trị quốc gia, H, 2011, t.12, tr. 411]
+Bằng l&#253; luận v&#224; thực tiễn h&#227;y l&#224;m r&#245;:
+1. Ở Việt Nam thời điểm thực hiện qu&#225; độ khi n&#224;o? 
+2. L&#224;m r&#245; nội h&#224;m của &quot;kh&#244;ng kinh qua&quot; (kh&#244;ng trải qua) giai đoạn ph&#225;t triển tư bản chủ nghĩa.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ3.6</td>
+                            <td>&quot;Trong qu&#225; tr&#236;nh c&#225;ch mạng x&#227; hội chủ nghĩa, ch&#250;ng ta phải cải tạo nền kinh tế cũ v&#224; x&#226;y dựng nền kinh tế mới, m&#224; x&#226;y dựng l&#224; nhiệm vụ chủ chốt v&#224; l&#226;u d&#224;i” [Hồ Ch&#237; Minh: To&#224;n tập, Nxb. Ch&#237;nh trị quốc gia, H, 2000, t.13, tr. 13]
+1. Qu&#225; tr&#236;nh cải tạo nền kinh tế cũ v&#224; x&#226;y dựng nền kinh tế mới ch&#250;ng ta c&#243; hạn chế n&#224;o kh&#244;ng?
+2. Đặc trưng của CNXH ở phương diện kinh tế th&#236; th&#224;nh phần kinh tế n&#224;o đ&#243;ng vai tr&#242; chủ đạo? V&#236; sao?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ4.1</td>
+                            <td>Trong cuốn G&#243;p phần ph&#234; ph&#225;n khoa kinh tế ch&#237;nh trị học. C. M&#225;c nhấn mạnh:
+“C&#225;i cối quay bằng tay đưa lại x&#227; hội c&#243; l&#227;nh ch&#250;a; c&#225;i cối xay chạy bằng hơi nước đưa lại x&#227; hội c&#243; nh&#224; tư bản c&#244;ng nghiệp.”
+Đặt v&#224;o trong điều kiện của cuộc c&#225;ch mạng c&#244;ng nghiệp 4.0 h&#227;y ph&#225;c thảo ra nền sản xuất ở Việt Nam trong thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội (để luận chứng rằng n&#243; đặt tiền đề tiến l&#234;n một x&#227; hội ưu việt.).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ4.2</td>
+                            <td>Tại Đại hội Đảng bộ th&#224;nh phố H&#224; Nội, ng&#224;y 20 th&#225;ng 6 năm 1960, Chủ tịch Hồ Ch&#237; Minh nhấn mạnh: “Muốn x&#226;y dựng chủ nghĩa x&#227; hội, phải c&#243; con người x&#227; hội chủ nghĩa v&#224; c&#243; tư tưởng x&#227; hội chủ nghĩa”.
+1. Đặt m&#236;nh v&#224;o vị thế l&#224; chủ nh&#226;n tương lai của đất nước h&#227;y luận b&#224;n về phương diện con người mới x&#227; hội chủ nghĩa.
+2. Nhận diện những lệch chuẩn trong suy nghĩ v&#224; h&#224;nh động của giới trẻ hiện nay trong học tập v&#224; lao động.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ4.3</td>
+                            <td>V&#236; sao n&#243;i d&#226;n chủ l&#224; một phạm tr&#249; lịch sử?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ4.4</td>
+                            <td>Th&#244;ng qua những v&#237; dụ thực tiễn để chứng minh sự kh&#225;c nhau về bản chất giũa d&#226;n chủ x&#227; hội chủ nghĩa v&#224; d&#226;n chủ tư sản?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ5.1</td>
+                            <td>V&#236; sao n&#243;i nh&#224; nước x&#227; hội chủ nghĩa l&#224; nh&#224; nước kiểu mới trong lịch sử? V&#224; t&#237;nh tất yếu trong việc x&#226;y dựng nh&#224; nước kiểu mới n&#224;y l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ5.2</td>
+                            <td>Giữa d&#226;n chủ v&#224; tập trung, d&#226;n chủ v&#224; tự do, d&#226;n chủ v&#224; ph&#225;p luật c&#243; m&#226;u thuẫn với nhau kh&#244;ng? Tại sao?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ5.3</td>
+                            <td>Sự kh&#225;c nhau giữa hai h&#236;nh thức d&#226;n chủ trực tiếp v&#224; gi&#225;n tiếp l&#224; g&#236;? ở Việt Nam hiện nay đang thực hiện h&#236;nh thức d&#226;n chủ n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ5.4</td>
+                            <td>Điều 4 Hiến ph&#225;p nước Cộng ho&#224; X&#227; hội chủ nghĩa Việt&#160;Nam c&#243; ghi “Đảng cộng sản Việt Nam ...giữ vai tr&#242; l&#227;nh đạo nh&#224; Nước v&#224; x&#227;&#160; hội”. h&#227;y giải th&#237;ch quan điểm tr&#234;n? từ đ&#243; phản biện luận điểm chỉ c&#243; “đa nguy&#234;n, đa đảng” mới c&#243; thể mang lại một &quot;nền d&#226;n chủ thực sự”.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ5.5</td>
+                            <td>Trong b&#224;i viết &quot;Một số vấn đề l&#253; luận v&#224; thực tiễn về chủ nghĩa x&#227; hội v&#224; con đường đi l&#234;n chủ nghĩa x&#227; hội ở Việt Nam&quot;, Tổng B&#237; thư Nguyễn Ph&#250; Trọng chỉ r&#245;: “Ch&#250;ng ta chủ trương kh&#244;ng ngừng ph&#225;t huy d&#226;n chủ, x&#226;y dựng Nh&#224; nước ph&#225;p quyền x&#227; hội chủ nghĩa thực sự của nh&#226;n d&#226;n, do nh&#226;n d&#226;n v&#224; v&#236; nh&#226;n d&#226;n, tr&#234;n cơ sở li&#234;n minh giữa c&#244;ng nh&#226;n, n&#244;ng d&#226;n v&#224; tr&#237; thức do Đảng Cộng sản Việt Nam l&#227;nh đạo...”. Từ quan điểm tr&#234;n, anh chị h&#227;y l&#224;m r&#245; bản chất của nh&#224; nước ph&#225;p quyền x&#227; hội chủ nghĩa &quot;của d&#226;n, do d&#226;n v&#224; v&#236; d&#226;n&quot; l&#224; như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ5.6</td>
+                            <td>Anh chị hiểu thế n&#224;o về chủ trương: “d&#226;n biết, d&#226;n b&#224;n, d&#226;n l&#224;m, d&#226;n kiểm tra, d&#226;n gi&#225;m s&#225;t, d&#226;n thụ hưởng” trong qu&#225; tr&#236;nh x&#226;y dựng nền d&#226;n chủ x&#227; hội chủ nghĩa v&#224; nh&#224; nước ph&#225;p quyền x&#227; hội chủ nghĩa ở Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ6.1</td>
+                            <td>Trong cơ cấu x&#227; hội, nh&#243;m cơ cấu n&#224;o c&#243; vị tr&#237; quan trọng h&#224;ng đầu, chi phối c&#225;c loại h&#236;nh cơ cấu x&#227; hội kh&#225;c? V&#236; sao?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ6.2</td>
+                            <td>Từ thực tiễn về sự biến đổi nhanh ch&#243;ng của cơ cấu lao động, việc l&#224;m. L&#224; một sinh vi&#234;n trong thời đại ng&#224;y nay, c&#225;c bạn h&#227;y đề xuất những kỹ năng cần c&#243; của một lao động trong thời đại mới.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ6.3</td>
+                            <td>Trong thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội v&#236; sao phải thực hiện li&#234;n minh giai cấp, tầng lớp?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ7.1</td>
+                            <td>Văn kiện Đại hội Đảng lần thứ IX đ&#227; khẳng định: “Trong thời kỳ qu&#225; độ, c&#243; nhiều h&#236;nh thức sở hữu, nhiều th&#224;nh phần kinh tế, giai cấp, tầng lớp x&#227; hội kh&#225;c nhau, nhưng cơ cấu, t&#237;nh chất, vị tr&#237; của c&#225;c giai cấp trong x&#227; hội ta đ&#227; thay đổi nhiều c&#249;ng với những biến đổi về kinh tế, x&#227; hội” [Đảng Cộng sản Việt Nam: Văn kiện Đại hội đại biểu to&#224;n quốc lần thứ IX, Nxb. Ch&#237;nh trị quốc gia, HN, 2001, tr.85.]
+1. Từ nhận định tr&#234;n h&#227;y l&#224;m s&#225;ng tỏ đặc điểm, vị tr&#237; của c&#225;c giai cấp, tầng lớp trong thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội.
+2. C&#225;c phương hướng cơ bản để x&#226;y dựng cơ cấu x&#227; hội – giai cấp v&#224; tăng cường li&#234;n minh giai cấp, tầng lớp trong thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội ở Việt Nam.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.2</td>
+                            <td>Trong thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội ở Việt Nam, cơ cấu x&#227; hội – giai cấp vận động biến đổi theo những quy luật n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.3</td>
+                            <td>L&#224;m r&#245; tr&#225;ch nhiệm của thanh ni&#234;n, sinh vi&#234;n trong việc g&#243;p phần củng cố khối li&#234;n minh giai cấp, tầng lớp v&#224; x&#226;y dựng khối đại đo&#224;n kết to&#224;n d&#226;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ7.4</td>
+                            <td>L&#224;m thế n&#224;o để ph&#226;n định r&#245; r&#224;ng d&#226;n tộc theo nghĩa rộng v&#224; nghĩa hẹp?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ7.5</td>
+                            <td>Trong xu thế to&#224;n cầu h&#243;a hiện nay, nước n&#224;o được hiểu l&#224; nước lớn c&#243; đặc quyền hơn nước kh&#225;c?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ8.1</td>
+                            <td>Ở Việt Nam, d&#226;n tộc Kinh chiếm đa số, c&#243; nhiều học giả cho rằng người Kinh đ&#227; chiếm dụng văn h&#243;a, kinh tế v&#224; ch&#237;nh trị của to&#224;n quốc gia - d&#226;n tộc l&#224;m của ri&#234;ng. H&#227;y t&#236;m hiểu đặc điểm d&#226;n tộc v&#224; ch&#237;nh s&#225;ch d&#226;n tộc của Nh&#224; nước ta v&#224; giải th&#237;ch vấn đề đ&#243;.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ8.2</td>
+                            <td>Ch&#250;ng ta đề cao quyền tự quyết của c&#225;c d&#226;n tộc, vậy tại sao Việt Nam c&#243; những d&#226;n tộc muốn t&#225;ch ra th&#224;nh lập quốc gia - d&#226;n tộc độc lập như &quot;Vương quốc Khmer Krom&quot;, &quot;Nh&#224; nước Đềga&quot; nhưng Nh&#224; nước ta lại ngăn cấm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ8.3</td>
+                            <td>Theo c&#225;c bạn, tại sao c&#225;c t&#244;n gi&#225;o kh&#225;c nhau lại c&#243; những &#253; thức hệ kh&#225;c nhau, thậm ch&#237; đối lập nhau?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">39</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ8.4</td>
+                            <td>Chủ nghĩa M&#225;c - L&#234;nin l&#224; chủ nghĩa duy vật biện chứng, vậy c&#243; phải l&#224; sẽ x&#243;a bỏ ho&#224;n to&#224;n t&#244;n gi&#225;o hay kh&#244;ng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">40</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ8.5</td>
+                            <td>Việt Nam l&#224; quốc gia đa t&#244;n gi&#225;o, vậy đ&#227; từng c&#243; chiến tranh t&#244;n gi&#225;o ở Việt Nam hay kh&#244;ng? Tại sao?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">41</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ9.1</td>
+                            <td>Một số quốc gia thường xuy&#234;n l&#234;n &#225;n Việt Nam đ&#224;n &#225;p t&#244;n gi&#225;o, kh&#244;ng c&#243; tự do t&#244;n gi&#225;o, đ&#224;n &#225;p c&#225;c d&#226;n tộc thiểu số ly khai, c&#225;c bạn h&#227;y đưa ra &#253; kiến của m&#236;nh v&#224; thực chứng cho n&#243;.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">42</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ9.2</td>
+                            <td>Sẽ ra sao nếu một x&#227; hội c&#243; đ&#237;ch đến của t&#236;nh y&#234;u kh&#244;ng phải l&#224; h&#244;n nh&#226;n v&#224; gia đ&#236;nh? V&#224; c&#243; phải t&#236;nh y&#234;u l&#224; mối quan hệ quan trọng nhất trong gia đ&#236;nh kh&#244;ng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">43</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ9.3</td>
+                            <td>H&#227;y t&#236;m hiểu về đại gia đ&#236;nh Hope School của FPT. Ở đ&#226;y c&#225;c chức năng của gia đ&#236;nh c&#243; được thực hiện đầy đủ v&#224; tốt nhất hay kh&#244;ng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">44</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ10.1</td>
+                            <td>H&#244;n nh&#226;n một vợ một chồng đ&#227; xuất hiện từ l&#226;u trong lịch sử x&#227; hội lo&#224;i người, nhưng trong chủ nghĩa x&#227; hội, h&#244;n nh&#226;n một vợ một chồng kh&#225;c g&#236; với c&#225;c x&#227; hội trước đ&#243;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">45</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ10.2</td>
+                            <td>Trong thời đại hiện nay ở Việt Nam, sự ph&#225;t triển của kinh tế đ&#227; dẫn đến h&#236;nh th&#224;nh v&#224; ph&#225;t triển gia đ&#236;nh hạt nh&#226;n, việc đ&#243; c&#243; l&#224;m ph&#225; vỡ c&#225;c gi&#225; trị truyền thống gia đ&#236;nh Việt hay kh&#244;ng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ10.3</td>
+                            <td>Với lối sống hiện đại, bận rộn, nhu cầu về h&#244;n nh&#226;n, gia đ&#236;nh dần trở th&#224;nh &#225;p lực cho một số người trẻ, v&#236; vậy họ kh&#244;ng muốn kết h&#244;n, kh&#244;ng muốn lập gia đ&#236;nh. C&#225;c bạn nghĩ sao về quan điểm nảy?</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">4 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Assignment</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>Phụ thuộc theo hình thức kiểm tra đánh giá của giảng viên<br/>Depending on the instructor’s chosen form of assessment</td>
+                            <td>LO2-L010</td>
+                            <td>Bài thuyết trình và sản phẩm sáng tạo, bài thuyết trình, bài kiểm tra…<br/>Presentation with creative product, presentation, quiz…</td>
+                            <td>Phụ thuộc theo hình thức kiểm tra đánh giá của giảng viên<br/>Depending on the instructor’s chosen form of assessment</td>
+                            <td>Kiến thức và kỹ năng trong phạm vi chương 2,3,4,5,6,7<br/>Cover chapter 2,3,4,5,6,7</td>
+                            <td>Bài thuyết trình và sản phẩm sáng tạo, bài thuyết trình, bài kiểm tra… (Giảng viên linh hoạt lựa chọn hình thức kiểm tra đánh giá phù hợp)<br/>Presentation with a creative product, presentation, quiz, etc. (the instructor may flexibly choose the appropriate form of assessment)</td>
+                            <td>Sinh viên làm thuyết trình và sản phẩm sáng tạo, thuyết trình, hoặc quiz tuỳ theo sĩ số lớp và điều kiện cơ sở<br/>Depending on class size and institutional conditions, students may be assessed through a presentation with a creative product, a presentation, or a quiz</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Participation</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td></td>
+                            <td>LO1-L010</td>
+                            <td>Đề xuất của giảng viên<br/>Teachers' proposal</td>
+                            <td></td>
+                            <td></td>
+                            <td>Trong lớp học<br/>in class</td>
+                            <td>Sinh viên vắng không quá 20%<br/>Absent no more than 20% of class hours</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Progress tests</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>20'</td>
+                            <td>LO2-L06</td>
+                            <td>Câu hỏi trắc nghiệm dạng đúng sai, câu hỏi trắc nghiệm dạng nhiều lựa chọn.Yes-no questions, Multiple choice questions</td>
+                            <td>20- 25</td>
+                            <td>- Kiến thức trong chương 2, 3, 4, 5, 6.1<br/>- Cover chapter: 2, 3, 4, 5, 6.1</td>
+                            <td>Trong lớp học<br/>in class</td>
+                            <td>Sinh viên không được sử dụng tài liệu.<br/> Students are not allowed to use materials.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Final exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>60'</td>
+                            <td>LO1-L09</td>
+                            <td>Câu hỏi trắc nghiệm dạng đúng sai, câu hỏi trắc nghiệm dạng nhiều lựa chọn.<br/>Yes-no questions, Multiple choice questions</td>
+                            <td>60</td>
+                            <td>Tất cả 7 chương (chương 1: 5 câu, chương 2: 5 câu, chương 3: 10 câu, chương 4: 10 câu, chương 5: 10 câu, chương 6: 10 câu, chương 7: 10 câu)<br/>All 7 chapters included (Chapter 1: 5 questions, chapter 2: 5 questions, chapter 3: 10 questions, chapter 4: 10 questions, chapter 5: 10 questions, chapter 6: 10 questions, chapter 7: 10 questions)</td>
+                            <td>Phòng Khảo thí tổ chức<br/>by Office of Assessment</td>
+                            <td>Sinh viên không được sử dụng tài liệu.<br/> Students are not allowed to use materials.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

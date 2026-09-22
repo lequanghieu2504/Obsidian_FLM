@@ -1,0 +1,3746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>13144</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>To&#225;n rời rạc</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b>Discrete mathematics</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>MAD101</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture,Project based learning,Problem based learning,Social Constructivism</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Study hour (150h) = 45 contact hours (60 sessions) + 1 hour final exam + 104 hours self-study</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Upon finishing the course, students must acquire: <br/>1. the following knowledge: (ABET a.1)<br/>• Concepts of logical expressions & predicate logic.<br/>• The method of induction and recursive definition.<br/>• Concepts of algorithms, recursive algorithms, the complexity.<br/>• Recurrence relations and divide-and-conquer algorithms.<br/>• Application of integers and congruence in information technology.<br/>• Set structure and map, counting principles and combinatorics concepts.<br/>• The terminologies and properties of graphs & trees & weighted graphs. <br/>• The applications of graphs, trees and weighted graphs in information technology. <br/><br/>2. the following skills: (ABET a.2)<br/>• Manipulate logical expressions & produce equivalent logical expressions.<br/>• Produce proof of simple mathematical propositions, including applying induction method.<br/>• Evaluate complexity of algorithms.<br/>• Solving simple congruence equations.<br/>• Apply counting techniques in evaluating various set cardinalities.<br/>• Solve counting problems, apply in analyze algorithms. <br/>• Apply graph’s algorithms to solve problems related to graph theory.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>Students must attend at least 80% of contact hours in order to be accepted to the final examination.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>- Testbank for ST1.<br/>- Powerpoint image in CD + Powerpoint prepared by previous lecturers (PP).<br/>- Computerized tools (for example C programming tools, Maxima http://maxima.sourceforge.net/) (CT)<br/>- Teaching Suggestion and Applications of Discrete Mathematics for ST1 (TS).</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>932/QĐ-ĐHFPT dated 08/22/2025</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>8/22/2025</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">6 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Adam Drozdek. Data structure and Algorithms in Java. 3rd Edition.</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Computerized tools (for example C programming tools, Maxima http://maxima.sourceforge.net/) (CT)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Discrete Mathematics and its applications</td>
+                            <td>Kenneth Rosen</td>
+                            <td>Mc.Graw Hill, IE</td>
+                            <td>2007</td>
+                            <td>Ed.7 (or 6)</td>
+                            <td>978-0073383095                                                                                      </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Powerpoint image in CD + Powerpoint prepared by previous lecturers (PP)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Teaching Suggestion and Applications of Discrete Mathematics for ST1 (TS)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>Testbank for ST1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">8 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Manipulate logical expressions and use logic for inference	
+LO1.1	Determine the truth value of a proposition; check if two propositions are equivalent; translate between logical expressions and sentences for propositional logic.
+LO1.2	Determine the truth value of a proposition; check if two propositions are equivalent; translate between logical expressions and sentences for predicate logic. 
+LO1.3	Manipulate logical expressions with nested quantifiers.
+LO1.4	Recognize the inference rules used in a valid statemment; use inference rules to draw conclusions; check if a statement is valid.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Perform basic operations on sets, functions and sequences	
+LO2.1	Distinguish basic terminologies in set theory; find the power set and cartersian product; represent a subset using binary bits.
+LO2.2	Perform operations on sets; check if two sets are equal.
+LO2.3	Determine if a given rule represents a function; perform operations on functions and manipulate functions inlvolving the floor and the ceiling functions. 
+LO2.4	Determine if a function is one-to-one, onto or a bijection, and describe how these properties can be used to compare two sets.
+LO2.5	Find a formula for a sequence; evaluate a finite sum with a possible use of special summations.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Analyze basic algorithms written in pseudo codes and determine their complexities	
+LO3.1	Determine if a procedure is an algorithm; work out basic algorithms written in pseudocodes including searching, sorting and  greedy algorithms.
+LO3.2	Find big-O, big-Omega and big-Theta estimates of a function; describe complexity of an algorithm.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Discuss applications of modular arithmetic and analyze algorithms on integers	
+LO4.1	Perform integer division and modular arithmetic; apply congruence in generating pseudorandom numbers and in cryptology. 
+LO4.2	Find the base b expansion of an integer; perform binary operations and modular exponentiation on integers. 
+LO4.3	Check if a number is prime and find prime factorization of an integer; find greatest common divisor and least common multiple.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>Use induction and recursive definition to prove a statement or to describe an object, and write recursive algorithms	
+LO5.1	Prove mathematical statements by induction. 
+LO5.2	Manipulate sequences and sets defined by recursion. 
+LO5.3	Work out recursive algorithms, including the mergesort algorithm; distinguish between iterative and recursive algorithms.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>Solve counting problems	
+LO6.1	Use basic rules for counting
+LO6.2	Use recurrence relations for counting, including divide-and-conquer recurrence relations.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Analyze the structure of a graph and find shortest paths in a weighted graph	
+LO7.1	Classify and describe a graph; use hand-shaking theorem to analyze a graph; identify special graphs including bipartite graphs.
+LO7.2	Represent a graph using incidence and adjacency matrices; determine if two graphs are isomorphic.
+LO7.3	Check connectivity of a graph and identify its connected components; count paths in a graph.
+LO7.4	Determine if a graph has Euler/Hamilton paths/circuits; find Euler and Hamilton paths/circuits in a graph. 
+LO7.5	Run Dijsktra&#39;s algorithm to determine the shortest paths and the shortest distance in a weighted graph.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>Analyze the structure of a tree and describe algorithms using trees	
+LO8.1	Check if a graph is a tree, and identify basic terminologies of a tree; use properties of m-ary trees to solve problems.
+LO8.2	Build binary search trees and decision trees; analyze complexities of algorithms described using binary search trees and decision trees.
+LO8.3	Recognize and construct prefix codes; build optimal trees using Huffman coding.
+LO8.4	Traverse a tree and use tree traversal to generate notations; evaluate prefix and postfix expressions.
+LO8.5	Run Depth-first search and Breadth-first search algorithms to find spanning trees 
+LO8.6	Find minimum spanning trees using Prim, Kruskal,... algorithms</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=13144" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>0   Introduction<br/>1.1 Propositional Logic  (1.1 and 1.2, skip the topic on Logic Circuits)</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+                                        <a href="/download/13144/S/1_MAD101_Part1.zip" class="ContainSLink" >MAD101_Part1</a>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1.2 Propositional Equivalences   (1.3, skip the topic on Satisfiability)</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+                                        <a href="/download/13144/S/2_MAD101_Part2.zip" class="ContainSLink" >MAD101_Part2</a>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1.3 Predicates (1.4)</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>1.3 Quantifiers</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>1.4 Nested Quantifiers (1.5)</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>1.4 Nested Quantifiers (1.5) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>1.5 Rules of Inference (1.6)</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>1.5 Rules of Inference (1.6) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 1</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>2.1 Introduction to sets</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2.2 Set operations</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>2.3 Functions (2.3, skip the topic on Partial Functions)</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>2.3 Functions (2.3, skip the topic on Partial Functions) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>2.4  Sequences and Summations (2.4, skip the topic on Recurrence relations)</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>2.4 Sequences and Summations (2.4, skip the topic on Recurrence relations) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 2</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>5.1 Basic Counting Principles (6.1)</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>5.1 Basic Counting Principles (6.1) (continued)</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO6</td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Progress Test 1</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO6</td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>3.1  Algorithms</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>3.2 The Growth of Functions</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>3.3 Complexity of Algorithms (3.3, skip the topics on Matrix multiplication, Algorithmic Paradigms)</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>3.4 The Integers and Division (4.1, 4.5, and the topic on Classical Cryptography 4.6)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>3.4 The Integers and Division (4.1, 4.5, and the topic on Classical Cryptography 4.6) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>3.5 Primes and Greatest Common Divisors (4.3)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>3.5 Primes and Greatest Common Divisors (4.3) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>3.6 Intergers and Algorithms (4.2)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>3.6 Intergers and Algorithms (4.2) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>3.6 Intergers and Algorithms (4.2) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>4.1 Mathematical Induction (5.1)</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>4.2 Strong Induction   (5.2)</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>4.3 Recursive Definitions and Structural Induction  (5.3)</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>4.3 Recursive Definitions and Structural Induction  (5.3) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>4.4 Recursive Algorithms (5.4)</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>4.4 Recursive Algorithms (5.4) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 4</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>7.1 Recurrence Relations (8.1, skip the topic on Dynamic programming)</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 7</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 7</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>7.3 Divide-and-Conquer Algorithms and Recurrence Relations  (8.3)</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 7</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 7</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td></td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Progress Test 2</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>9.1  Graphs and Graph Models (10.1)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>I</td>
+                            <td class="product">Textbook  Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>9.2  Graph Terminology and Special Types of Graphs</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>9.3  Representing Graphs and Graph Isomorphism (10.3)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>9.3  Representing Graphs and Graph Isomorphism (10.3) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>9.4  Connectivity  (10.4)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>9.4  Connectivity  (10.4) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>9.5 Euler and Hamilton Paths  (10.5)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>9.5 Euler and Hamilton Paths  (10.5) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>9.6 Shortest-Path Problems  (10.6)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>9.6 Shortest-Path Problems  (10.6) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 9</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 9</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>10.1 Introduction to Trees  (11.1)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>10.1 Introduction to Trees  (11.1) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>IT</td>
+                            <td class="product">Textbook Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>10.2 Applications of Trees  (11.2)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>10.2 Applications of Trees  (11.2) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>10.3 Tree Traversal (11.3)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>10.3 Tree Traversal (11.3) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>10.4 Spanning Trees (11.4)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>10.4 Spanning Trees (11.4) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>10.5 Minimum Spanning Trees (11.5)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>10.5 Minimum Spanning Trees (11.5) (cont.)</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 10</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 10</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>Progress Test 3</td>
+                            <td>Offline</td>
+                            <td>LO7, LO8</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">166 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CT_CQ1</td>
+                            <td>What are the types of propositional logic?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CQ1_HCM</td>
+                            <td>List as many logical operators as possible. Give examples that use operators you listed.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CT_CQ1</td>
+                            <td>What does it mean for two propositions to be logically equivalent?
+Describe the different ways to show that two compound propositions are logically equivalent.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1_HCM</td>
+                            <td>How do we define the concept &#39;logical equivalence&#39; in propositional logic? Let&#39;s give examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give two examples using De Morgan laws.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CT_CQ1</td>
+                            <td>How to understand the universal and existential quantifications of a predicate P(x)? What are their negations?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the main different between a predicate and a proposition? Illustrate your statement by examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ1_DN</td>
+                            <td>What are two most important quantifiers? How is Demorgan&#39;s law in predicate logic understood?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CT_CQ1</td>
+                            <td>What is the precedence of quantifiers?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ1_HCM</td>
+                            <td>In what case is the value of the proposition ∀xP(x) false? Give counterexamples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ1_DN</td>
+                            <td>What are two most important quantifiers? How is Demorgan&#39;s law in predicate logic understood?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CT_CQ1</td>
+                            <td>What is the difference between the quantification ∃x∀yP(x, y) and ∀y∃xP(x, y), where P(x, y) is a predicate? Give an example of a predicate P(x, y) such that they have different truth values?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ1_HCM</td>
+                            <td>Let P(x, y) be a predicate. Give an instance that makes the truth value of the propositions ∃x∀yP(x, y) and ∀y∃xP(x, y) true/false.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ1_DN</td>
+                            <td>What are two most important quantifiers? How is Demorgan&#39;s law in predicate logic understood?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CT_CQ1</td>
+                            <td>How to negate a statement involving nested quantifiers? Give examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the negation of ∃x∀y(P(x, y) --&gt; Q(x,y))? Give examples in English statements.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give examples of translation between English statements and logical expressions.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe what is meant by a valid argument in propositional logic and show that the argument “If the earth is flat, then you can sail off the edge of the earth,” “You cannot sail off the edge of the earth,” therefore, “The earth is not flat” is a valid argument</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ1_HCM</td>
+                            <td>List some rules of inference. Use them to give your own valid arguments.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CT_CQ1</td>
+                            <td>Use rules of inference to show that if the premises “All zebras have stripes” and “Mark is a zebra” are true, then the conclusion “Mark has stripes” is true.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ1_HCM</td>
+                            <td>For each of these arguments, determine whether it is correct or incorrect, and explain why. Give your correction to obtain a valid one.
+a) Every computer science major takes discrete mathematics. Natasha is taking discrete mathematics.
+Therefore, Natasha is a computer science major.
+b) Everyone who eats granola every day is healthy. Linda is not healthy. Therefore, Linda does not eat granola every day.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CT_CQ1</td>
+                            <td>Explain what it means for one set to be a subset of another set. How do you prove that one set is a subset of another set?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ1_HCM</td>
+                            <td>Explain the concepts: sets, infinite sets, subsets of a set, power set of a set. Give examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ2_HCM</td>
+                            <td>List some set operators with examples. What do we mean by &#39;symmetric difference&#39; in set theory?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ1_DN</td>
+                            <td>How are two or more sets combined? What are the important properties of functions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CT_CQ1</td>
+                            <td>What are the union, intersection, difference, and symmetric difference of the set of positive integers and the set of odd integers?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ1_HCM</td>
+                            <td>Is it possible that A is an element of A, where A is a set? Give examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ2_HCM</td>
+                            <td>How do we represent sets in computers? Give examples for illustration.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ1_DN</td>
+                            <td>How are two or more sets combined? What are the important properties of functions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CT_CQ1</td>
+                            <td>Give some examples of functions from the set of positive integers to the set of positive integers being:
+  1) both one-to-one and onto
+  2) one-to-one but not onto
+ 3) onto but not not one-to-one
+ 4) neither one-to-one nor onto</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are functions? one-to-one functions? How many one-to-one functions are from a set of three elements to itself?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ1_DN</td>
+                            <td>How are two or more sets combined? What are the important properties of functions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CT_CQ1</td>
+                            <td>When does a function have an inverse?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ1_HCM</td>
+                            <td>When is a function called bijection and what is its inverse?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CT_CQ1</td>
+                            <td>For each of the following lists of integers, provide a simple formula or rule that generates the terms of an integer sequence that begins with the given list. Assuming that your formula or rule is correct, determine the next three terms of the sequence.
+ (a) 3, 6, 11, 18, 27, 38, 51, 66, 83, 102, ...
+ (b) 15, 8, 1, −6, −13, −20, −27, ...
+ (c) 1, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010, 1011, ...
+ (d) 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, ...</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give your analysis to know what the 50th term is.
+1, 2, 3, 3, 4, 5, 5, 5, 6, 7, 7, 7, 7, …</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ2_HCM</td>
+                            <td>What is a geometric progression? Give an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CT_CQ1</td>
+                            <td>How to evaluate the double sum?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">39</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the sum of the first 50 terms of the following sequence
+1, 2, 3, 3, 4, 5, 5, 5, 6, 7, 7, 7, 7, …?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">40</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ2_HCM</td>
+                            <td>Can infinite sets be countable? Why or why not?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">41</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CT_CQ1</td>
+                            <td>Calculate the number of one-to-one functions from a set S to a set T, where S and T are finite sets of various sizes. Can you determine a formula for the number of such functions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">42</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ1_DN</td>
+                            <td>How to locate an element in an ordered list? What is commonly used to describe the growth of a function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">43</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ1_DN</td>
+                            <td>How to locate an element in an ordered list? What is commonly used to describe the growth of a function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">44</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CT_CQ1</td>
+                            <td>What is the difference between an algorithm and a computer program?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">45</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give at least 3 different algorithms to compute 1+2+3+…+n for positive integer n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give an algorithm that the number of basic comparisons does not depend on the size of input.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">47</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ1_DN</td>
+                            <td>How to locate an element in an ordered list? What is commonly used to describe the growth of a function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">48</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CT_CQ1</td>
+                            <td>What is big-O notation used for?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">49</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give at least 3 different algorithms to compute 1+2+3+…+n for positive integer n. Compute the number of additions used in each algorithm.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">50</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CT_CQ1</td>
+                            <td>How can the efficiency of an algorithm be analyzed?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">51</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ2_HCM</td>
+                            <td>Show that log(n!) is O(nlogn).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">52</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CT_CQ1</td>
+                            <td>Let n and d be positive integers. How many positive integers not exceeding n are divisible by d?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">53</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ1_HCM</td>
+                            <td>Is it possible to use only paper and pencil to calculate 3^2023 mod 78? Give your solution if any.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">54</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CT_CQ1</td>
+                            <td>Define what it means for a and b to be congruent modulo m?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">55</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ1_HCM</td>
+                            <td>Explain how to encrypt the message &#39;HAPPY&#39; using modular arithmetic with the encryption function f(p) = (p + 7) mod 26.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">56</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ2_HCM</td>
+                            <td>Is the function f(p) = (13p + 7) mod 26 good for encoding? Why or why not?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">57</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ1_DN</td>
+                            <td>How many ways are there to find the greatest common divisor of two numbers? What are the algorithms for adding and mutiplying integers using their base b expansions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">58</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe a procedure for finding the prime factorization of an integer</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">59</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ1_HCM</td>
+                            <td>Why are primes important in cryptography?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">60</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ1_DN</td>
+                            <td>How many ways are there to find the greatest common divisor of two numbers? What are the algorithms for adding and mutiplying integers using their base b expansions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">61</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe some ways to find the greatest common divisor of two integers. When does each method work best?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">62</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give examples to illustrate that if r = a mod b then gcd(a, b) = gcd(b, r).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">63</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ2_HCM</td>
+                            <td>Explain the Euclidean algorithm via examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">64</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ1_DN</td>
+                            <td>How many ways are there to find the greatest common divisor of two numbers? What are the algorithms for adding and mutiplying integers using their base b expansions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">65</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe a procedure for converting decimal (base 10) expansions of integers into a base n (n&gt;1) expansions and vice versa.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">66</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give an example to explain how to find a binary format of a positive integer.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">67</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ2_HCM</td>
+                            <td>Can an integer have base 3 expansion? Give an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">68</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe an algorithm for finding the difference of two binary expansions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">69</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ1_HCM</td>
+                            <td>Explain ALGORITHM 3 Multiplication of Integers. (page 266, K. Rosen 7th Ed.)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">70</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CT_CQ1</td>
+                            <td>How can we find 3^2022 mod 99 using only paper and pencil?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">71</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ1_HCM</td>
+                            <td>How can we compute 7^333 mod 555 using Fast Modular Exponentiation algorithm? How fast is this algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">72</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CT_CQ1</td>
+                            <td>Can you use the principle of mathematical induction to find a formula for the sum of the first n terms of a sequence?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">73</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give an example of a recursive algorithm.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">74</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ2_HCM</td>
+                            <td>Use mathematical induction to prove the correctness of  a recursive algorithm of computing n!</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">75</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CT_CQ1</td>
+                            <td>Which amounts of money can be formed using just two dollar bills and five-dollar bills?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">76</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ1_HCM</td>
+                            <td>Use strong induction to prove that every amount of postage of 12 cents or more can be formed using just 4-cent and 5-cent stamps.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">77</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CT_CQ1</td>
+                            <td>Give a recursive definition of a^n, where a is a nonzero real number and n is a nonnegative integer?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">78</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give at least two recursive definitions for the sequence {a_n} with n&gt;0: 0, 5, 0, 5, 0, 5, …</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">79</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CT_CQ1</td>
+                            <td>Give a recursive definition of the set of positive integers that are multiples of 5.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">80</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CQ1_HCM</td>
+                            <td>List five elements of the set of all strings generated from {a, b}.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">81</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CQ2_HCM</td>
+                            <td>Use a recursive definition to define the set of all strings generated from {a, b}.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">82</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CQ1_DN</td>
+                            <td>Can we solve a problem by reducing it to an instance of the same problem with smaller input? What are the basic rules of counting?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">83</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe a recursive algorithm for
+ 1) computing n!
+ 2) computing a^n
+ 3) computing the greatest common divisor of two positive integers.
+ 4) linear searching the value x in a subsequence of the sequence {a_n}.
+ 5) binary searching the value x in an increasingly ordered subsequence of the sequence {a_n}.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">84</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CQ1_HCM</td>
+                            <td>Write recursive versions of linear search algorithm.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">85</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CQ2_HCM</td>
+                            <td>Write recursive versions of binary search algorithm.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">86</td>
+                            <td style="text-align: center;">32</td>
+                            <td>CQ1_DN</td>
+                            <td>Can we solve a problem by reducing it to an instance of the same problem with smaller input? What are the basic rules of counting?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">87</td>
+                            <td style="text-align: center;">32</td>
+                            <td>CT_CQ1</td>
+                            <td>Estimate the number of comparisons used to merge two ordered lists in the analysis of the merge sort.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">88</td>
+                            <td style="text-align: center;">32</td>
+                            <td>CQ1_HCM</td>
+                            <td>Write an interactive algorithm and a recursive algorithm to find the Fibonacci numbers. Which algorithm uses fewer comparisons?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">89</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CQ1_DN</td>
+                            <td>Can we solve a problem by reducing it to an instance of the same problem with smaller input? What are the basic rules of counting?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">90</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CT_CQ1</td>
+                            <td>What is the difference between: a) The sum rule and product rule? b) The permutation and combination?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">91</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CQ1_HCM</td>
+                            <td>State the principle of inclusion-exclusion. Give an example where this principle applies.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">92</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CQ2_HCM</td>
+                            <td>State the principle of inclusion-exclusion for three sets.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">93</td>
+                            <td style="text-align: center;">34</td>
+                            <td>CQ1_DN</td>
+                            <td>How recurrence relations can be used to solve counting problems? How to use these divide-and-conquer recurrence relations to estimate the complexity of these algorithms?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">94</td>
+                            <td style="text-align: center;">34</td>
+                            <td>CT_CQ1</td>
+                            <td>Explain how the principle of inclusion–exclusion can be used to count the number of onto functions from a set with m elements to a set with n elements.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">95</td>
+                            <td style="text-align: center;">34</td>
+                            <td>CQ1_HCM</td>
+                            <td>How many bit strings of length six do not have two consecutive 1s or three consecutive 0s?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">96</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ1_DN</td>
+                            <td>How recurrence relations can be used to solve counting problems? How to use these divide-and-conquer recurrence relations to estimate the complexity of these algorithms?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">97</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CT_CQ1</td>
+                            <td>Explain how the Fibonacci numbers are used to find a recurrence relation for the number of bit strings of length n not containing two consecutive 1s.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">98</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ1_HCM</td>
+                            <td>State the product rule for counting. Give 3 examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">99</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give examples of counting problems which can be solved by using tree diagrams.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">100</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CQ1_DN</td>
+                            <td>How recurrence relations can be used to solve counting problems? How to use these divide-and-conquer recurrence relations to estimate the complexity of these algorithms?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">101</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CT_CQ1</td>
+                            <td>Explain how to find f(b^k) (where k is a positive integer) if f(n) satisfies the divide-and-conquer recurrence relation f(n) = af (n/b) + g(n) whenever b divides the positive  integer n</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">102</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CQ1_HCM</td>
+                            <td>Given f(n) = 2f(n/2) + n when n is an integer divisible by 2 and f(1) = 1. Can we compute the exact value of f(1024)? Why or why not? How do we estimate the growth of f(n)?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">103</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CT_CQ1</td>
+                            <td>Derive divide-and-conquer recurrence relations for the number of comparisons used in: binary search; locating the maximum element in a sequence. Give big-O estimates for the number of comparisons needed by these algorithm.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">104</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CT_CQ1</td>
+                            <td>Explain how to model different aspects of a computer network or airline routes.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">105</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CQ1_HCM</td>
+                            <td>List some models of graphs in the real world.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">106</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CQ2_HCM</td>
+                            <td>Explain the concepts: degree, in/out-degree, adjacency and incident.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">107</td>
+                            <td style="text-align: center;">40</td>
+                            <td>CQ1_DN</td>
+                            <td>What are the number of vertices and edges of several classes of simple graphs often used in many applications? How to represent graphs?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">108</td>
+                            <td style="text-align: center;">40</td>
+                            <td>CT_CQ1</td>
+                            <td>What is the relationship between the sum of the degrees of the vertices in an undirected graph and the number of edges in this graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">109</td>
+                            <td style="text-align: center;">40</td>
+                            <td>CQ1_HCM</td>
+                            <td>Describe some special simple graphs Kn, Cn, Wn</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">110</td>
+                            <td style="text-align: center;">40</td>
+                            <td>CQ2_HCM</td>
+                            <td>Describe some special simple graphs Qn, Km;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">111</td>
+                            <td style="text-align: center;">41</td>
+                            <td>CQ1_DN</td>
+                            <td>What are the number of vertices and edges of several classes of simple graphs often used in many applications? How to represent graphs?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">112</td>
+                            <td style="text-align: center;">41</td>
+                            <td>CT_CQ1</td>
+                            <td>How to represent graphs in several different ways?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">113</td>
+                            <td style="text-align: center;">41</td>
+                            <td>CQ1_HCM</td>
+                            <td>How to generate the adjacency matrix and incidence matrix from a given graph, and vice versa?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">114</td>
+                            <td style="text-align: center;">41</td>
+                            <td>CQ2_HCM</td>
+                            <td>Highlights the difference between adjacency matrix and incidence matrix.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">115</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CQ1_DN</td>
+                            <td>What are the number of vertices and edges of several classes of simple graphs often used in many applications? How to represent graphs?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">116</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CT_CQ1</td>
+                            <td>How to determine whether two graphs are isomorphic?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">117</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give an example of two non-isomorphic graphs that have the same number of nodes, edges and degree sequences.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">118</td>
+                            <td style="text-align: center;">43</td>
+                            <td>CT_CQ1</td>
+                            <td>When is there always a path between two vertices in the graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">119</td>
+                            <td style="text-align: center;">43</td>
+                            <td>CQ1_HCM</td>
+                            <td>What is the length of the longest simple circuit in Kn, Wn?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">120</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CT_CQ1</td>
+                            <td>How can paths and circuits help to determine whether two graphs are isomorphic?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">121</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are cut vertices and cut edges?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">122</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CQ2_HCM</td>
+                            <td>Explain the difference between strongly connected and weakly connected. Illustrate them by graphs.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">123</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe the famous Konigsberg bridge problem and explain how to rephrase it in terms of an Euler circuit.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">124</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are Euler Circuits/Paths? What is the indication that a given graph has an Euler Circuit/Path?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">125</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CQ2_HCM</td>
+                            <td>Can L. Euler solve the Seven Bridges of K&#246;nigsberg Problem?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">126</td>
+                            <td style="text-align: center;">46</td>
+                            <td>CQ1_DN</td>
+                            <td>How to find a shortest path between two vertices in a weighted graph using a greedy approach? Can we solve the traveling salesman problem with a backtracking technique?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">127</td>
+                            <td style="text-align: center;">46</td>
+                            <td>CT_CQ1</td>
+                            <td>Give some properties of a simple graph that imply that it has a Hamilton circuit.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">128</td>
+                            <td style="text-align: center;">46</td>
+                            <td>CQ1_HCM</td>
+                            <td>In a weighted graph, assume that the weights of the edges are different. Is the shortest path between two vertices unique? Show your claim by using examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">129</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CQ1_DN</td>
+                            <td>How to find a shortest path between two vertices in a weighted graph using a greedy approach? Can we solve the traveling salesman problem with a backtracking technique?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">130</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe Dijkstra’s algorithm for finding the shortest path in a weighted graph between two vertices.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">131</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CQ1_HCM</td>
+                            <td>Use Djikstra&#39;s algorithm to find the shortest path and also its length from a source vertex to a sink vertex in a weighted graph. Describe each iteration of the algorithm in detail.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">132</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CQ2_HCM</td>
+                            <td>Does Google Map use Djikstra&#39;s algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">133</td>
+                            <td style="text-align: center;">48</td>
+                            <td>CQ1_DN</td>
+                            <td>How to find a shortest path between two vertices in a weighted graph using a greedy approach? Can we solve the traveling salesman problem with a backtracking technique?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">134</td>
+                            <td style="text-align: center;">48</td>
+                            <td>CT_CQ1</td>
+                            <td>Draw a weighted graph with at least 8 vertices and 12 edges. Use Dijkstra’s algorithm to find the shortest
+ path between two vertices of your choice in the graph.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">135</td>
+                            <td style="text-align: center;">48</td>
+                            <td>CQ1_HCM</td>
+                            <td>Explain why the exhausted technique cannot be used to solve the TSP (Traveling Salesman Problem) when the number of nodes is large.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">136</td>
+                            <td style="text-align: center;">49</td>
+                            <td>CT_CQ1</td>
+                            <td>Draw a rooted tree with at least 10 vertices, where the degree of each vertex does not exceed 3. Identify the root, the parent of each vertex, the children of each vertex, the internal vertices, the leaves, the level of each vetex, and the height of tree.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">137</td>
+                            <td style="text-align: center;">49</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give some tree models that are commonly used in the real world.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">138</td>
+                            <td style="text-align: center;">49</td>
+                            <td>CQ2_HCM</td>
+                            <td>Explain the concepts parent, child, leaf, internal nodes, descendants, and ancestors used in graph theory.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">139</td>
+                            <td style="text-align: center;">50</td>
+                            <td>CT_CQ1</td>
+                            <td>How many edges does a tree with n vertices have? How many vertices and leaves does a full m-ary tree have if it has i internal vertices? How many leaves can an m-ary tree of height h have?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">140</td>
+                            <td style="text-align: center;">50</td>
+                            <td>CQ1_HCM</td>
+                            <td>A full binary tree has L leaves. How high can this tree be? If the number of nodes is given by n, then what are the maximum and minimum heights of a binary tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">141</td>
+                            <td style="text-align: center;">51</td>
+                            <td>CT_CQ1</td>
+                            <td>What is a binary search tree? Describe an algorithm for constructing a binary search tree, and form a binary search tree for the words: vireo, warbler, egret, grosbeak, nuthatch, and kingfisher.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">142</td>
+                            <td style="text-align: center;">51</td>
+                            <td>CQ1_HCM</td>
+                            <td>Build a binary search tree for the words enology, phrenology, campanology, ornithology, ichthyology, limnology, alchemy, and astrology using alphabetical order. How many comparisons are needed to locate/find or insert/add the word “limnology” in the search tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">143</td>
+                            <td style="text-align: center;">52</td>
+                            <td>CQ1_DN</td>
+                            <td>How to code a text using a prefix tree? What is the algorithm to convert from an expression from infix form to postfix one?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">144</td>
+                            <td style="text-align: center;">52</td>
+                            <td>CT_CQ1</td>
+                            <td>What is a prefix code? How can a prefix code be represented by a binary tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">145</td>
+                            <td style="text-align: center;">52</td>
+                            <td>CQ1_HCM</td>
+                            <td>Use the Huffman coding algorithm to encode a letter given the frequencies A: 0.1 B: 0.13 C: 0.22 D: 0.25 E: 0.30.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">146</td>
+                            <td style="text-align: center;">52</td>
+                            <td>CQ2_HCM</td>
+                            <td>What is the main benefit of Huffman coding algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">147</td>
+                            <td style="text-align: center;">53</td>
+                            <td>CQ1_DN</td>
+                            <td>How to code a text using a prefix tree? What is the algorithm to convert from an expression from infix form to postfix one?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">148</td>
+                            <td style="text-align: center;">53</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe preorder, inorder, and postorder tree traversal. Give some examples of preorder, postorder, and inorder
+ traversal of some binary trees of your choice with at least 10 vertices.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">149</td>
+                            <td style="text-align: center;">53</td>
+                            <td>CQ1_HCM</td>
+                            <td>Build a binary search tree for the words enology, phrenology, campanology, ornithology, ichthyology, limnology, alchemy, and astrology using alphabetical order. Using pre-order traversal to give the order of the words afterward.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">150</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CQ1_DN</td>
+                            <td>How to code a text using a prefix tree? What is the algorithm to convert from an expression from infix form to postfix one?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">151</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CT_CQ1</td>
+                            <td>Give as many examples as possible for representing some expressions of your choice in prefix and postfix notations.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">152</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CQ1_HCM</td>
+                            <td>Give two different infix expressions that have the same calculating result after applying in-order traversal to the binary expression trees.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">153</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CQ2_HCM</td>
+                            <td>What are main benefits of prefix and postfix forms?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">154</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CQ1_DN</td>
+                            <td>How many ways to build a spanning tree for a connected simple graph? Can we use greedy approachs to design algorithms for finding minimum spanning trees?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">155</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CT_CQ1</td>
+                            <td>What is a spanning tree of a simple graph? Which simple graphs have spanning trees? Describe at least two different applications that require that a spanning tree of a simple graph be found.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">156</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are spanning trees?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">157</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CQ2_HCM</td>
+                            <td>How many edges must be removed from a connected graph with n vertices and m edges to produce a spanning tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">158</td>
+                            <td style="text-align: center;">56</td>
+                            <td>CQ1_DN</td>
+                            <td>How many ways to build a spanning tree for a connected simple graph? Can we use greedy approachs to design algorithms for finding minimum spanning trees?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">159</td>
+                            <td style="text-align: center;">56</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe depth-first search and breadth-first search algorithms for finding a spanning tree in a simple graph, and illustrate how they work for some graphs of your choice with at least eight vertices and 15 edges.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">160</td>
+                            <td style="text-align: center;">56</td>
+                            <td>CQ1_HCM</td>
+                            <td>Consider the DFS (Depth First Search) and BFS (Breadth First Search) algorithms to construct a spanning tree with the same root for a connected graph. Which algorithm will produce a higher tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">161</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CQ1_DN</td>
+                            <td>How many ways to build a spanning tree for a connected simple graph? Can we use greedy approachs to design algorithms for finding minimum spanning trees?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">162</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CT_CQ1</td>
+                            <td>What is a minimum spanning tree of a connected weighted graph? Describe at least two different applications that require that a minimum spanning tree of a connected
+ weighted graph be found.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">163</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CQ1_HCM</td>
+                            <td>What are minimum spanning trees?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">164</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CQ2_HCM</td>
+                            <td>Give real-life examples of the problem of finding the minimum spanning tree.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">165</td>
+                            <td style="text-align: center;">58</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe Kruskal’s algorithm and Prim’s algorithm for finding minimum spanning trees and illustrate how Kruskal’s algorithm and Prim’s algorithm are used to find a minimum spanning tree, using a weighted graph with at least eight vertices and 15 edges.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">166</td>
+                            <td style="text-align: center;">58</td>
+                            <td>CQ1_HCM</td>
+                            <td>Illustrate step by step how Kruskal’s algorithm and Prim’s algorithm are used to find a minimum spanning tree, using a weighted graph with at least 6 vertices and 9 edges.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">4 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Progress Test</td>
+                            <td>
+
+                                quiz
+                            </td>
+                            <td>3</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>30 minutes</td>
+                            <td>PT 1: LO1, LO2, LO6<br/>PT 2: LO3, LO4, LO5, LO6<br/>PT 3: LO7, LO8</td>
+                            <td>OP1: MC or a suitable format // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>15 questions within 30 minutes</td>
+                            <td>PT 1: Chapter 1, Chapter 2, Chapter 5<br/>PT 2: Chapter 3, Chapter 4, Chapter 7<br/>PT 3: Chapter 9, Chapter 10</td>
+                            <td>OP1: by instructor, and by suitable means (computer, paper, oral...)<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>OP1: Instruction and schedules for Progress tests must be presented in the  Course Implementation Plan approved by the director of the campus. <br/>Progress test must be taken right after the last lectures of the required material. <br/>Instructor has responsibility to review the test for students after graded.<br/><br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Assignments/Exercises</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>at home/in class</td>
+                            <td>Assignment 1: LO1, LO2, LO6<br/>Assignment 2: LO3, LO4, LO5, LO6</td>
+                            <td>OP1: Open // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>At least 5/ chapter</td>
+                            <td>Assignment 1: Chapter 1, Chapter 2, Chapter 5<br/>Assignment 2: Chapter 3, Chapter 4, Chapter 7</td>
+                            <td>OP1: Each assignment is divided into two parts: the take-home component counts for no more than 50% of the total grade, and the in-class component counts for at least 50% (this may take the form of a presentation, essay, problem-solving, etc.).<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Students use <br/>notebooks for <br/>exercises</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Programming Assignment</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>at home/in class</td>
+                            <td>LO3, LO4, LO7, LO8</td>
+                            <td>OP1: Open // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>At least 1/ chapter</td>
+                            <td>Chapter 3, Chapter 4, Chapter 9, Chapter 10</td>
+                            <td>Students are expected to write codes to implement algorithms including, but not restricted to, those covered in the scope. <br/>Instructor may combine with other in-class assessment methods to grade the computer assignment, in which the work (source files,...) should accounts for up to 50% of the total grade.</td>
+                            <td>Students use notebooks and coding tools for exercises</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Final Exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>60'</td>
+                            <td></td>
+                            <td>Computer gradable</td>
+                            <td>50</td>
+                            <td>All studied chapters. At least 6 questions/chapter</td>
+                            <td>by Exam Board</td>
+                            <td>~10% of <br/>questions is a2 objective oriented</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

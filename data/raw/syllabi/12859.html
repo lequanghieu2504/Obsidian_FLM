@@ -1,0 +1,3677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>12859</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>H&#224;n ngữ trung cấp 3</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b>Intermediate Korean Language 3</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>KOR411</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>lecture, discussion, groupwork, active learning,</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Study hour (300h) <br/>= 90h (120 sessions) contact hours + 1.5h final exam + 103.5h self-study</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>KOR321</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>- Học phần nhằm mục tiêu cung cấp kiến thức và phát triển các kỹ năng thực hành tiếng cơ bản như: Nghe, Nói, Đọc, Viết ở trình độ trung cấp 3, tương đương trình độ nửa đầu bậc 4 theo khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam. <br/>- 	Học phần gồm các bài học có chủ đề như thời trang, công việc nhà, cảm xúc, thông tin sinh hoạt, xin việc, lễ tết, du lịch,... <br/>- Người học được giới thiệu về đề thi TOPIK II bao gồm kỹ năng Nghe, Đọc, Viết. <br/>- Người học được rèn luyện khả năng phát âm chuẩn, tự nhiên, đúng ngữ điệu, luyện đọc lướt, đọc kỹ và hiểu các hạng mục văn bản. Được rèn luyện kỹ năng viết  xoay quanh các chủ đề khác nhau trong giáo trình Tiếng Hàn tổng hợp 4. <br/>-	 Sau khi hoàn thành học phần, người học có thể giao tiếp về các nội dung như kiểu/ phong cách thời trang phù hợp, phương pháp làm việc nhà, những trải nghiệm cuộc sống, thông tin thị trường, … <br/>-  Người học có thể nghe hiểu và giải thích được một số nội dung cơ bản thuộc các chủ đề thông tin xin việc, chú ý về cách sử dụng đồ vật, câu chuyện về các dịp lễ lớn v.vv... <br/>- Người học cũng có thể viết về các hoạt động giải trí, viết về cách thức giải trí riêng của bản thân, viết về những thay đổi của lễ Tết, kinh nghiệm sửa chữa đồ vật, viết bài giới thiệu bản thân, v..vv...<br/>- Người học có đủ kiến thức để có thể tham gia kỳ thi năng lực tiếng Hàn và đạt được cấp độ 3.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>- Người học phải tham dự ít nhất 80% các giờ học mới đủ điều kiện được thi kết thúc học phần.<br/>- Tương tác tích cực với giảng viên, nghe giảng viên giảng về nội dung bài học và ghi chép.<br/>- Người học có trách nhiệm làm tất cả các bài tập, yêu cầu do giảng viên đưa ra trên lớp hoặc ở nhà và nộp đúng hạn.<br/>- Người học làm việc theo cặp, vận dụng kiến thức và kĩ năng tiếng đã học để lắng nghe và trình bày ý kiến, bảo vệ và phản bác ý kiến. <br/>-  Vận dụng và nhớ những kiến thức đã học để hoàn thành bài luyện, thực hành những kĩ năng tiếng đã học thông qua bài ôn luyện.<br/>- Đọc thêm sách báo về nội dung liên quan chủ đề, tiến hành thảo luận nhóm để tăng cường kiến thức thông tin, luyện tập các kỹ năng tiếng và kỹ năng làm việc nhóm.<br/>- Chỉ sử dụng máy tính xách tay trong lớp cho mục đích học tập.<br/>-  Truy cập vào  https://flm.fpt.edu.vn/ để biết thông tin khóa học cập nhật</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>- Internet<br/>- Book, …</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>437/QĐ-ĐHFPT dated 04/25/2025</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td>Điều kiện hoàn thành môn học: thoả mãn đồng thời 2 điều kiện dưới đây<br/>a) Điểm đánh giá quá trình >0; Điểm thi cuối kỳ >=4; Tổng điểm chung cho toàn bộ môn học >=5/10;<br/>b) Thi cuối kỳ không có kỹ năng nào bị 0.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>4/25/2025</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">5 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>베트남인을 위한 종합한국어 4<br/>Giáo trình Tiếng Hàn tổng hợp dành cho người Việt Nam – trung cấp 4</td>
+                            <td>Cho Hang Rok/Lee Mi Hye/Lê Đăng Hoan/Lê Thị Thu Giang/Nguyễn Thị Hương Sen/Đỗ Ngọc Luyến</td>
+                            <td>Nh&#224; xuất bản Đại học Quốc gia H&#224; Nội</td>
+                            <td>2020</td>
+                            <td>1</td>
+                            <td>8935246929872                                                                                       </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>(Fsoft mua gi&#225;o tr&#236;nh)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>베트남인을 위한 종합한국어 4 (워크북)<br/>Giáo trình Tiếng Hàn tổng hợp dành cho người Việt Nam – trung cấp 4 (Sách bài tập)</td>
+                            <td>Cho Hang Rok/Lee Mi Hye/Lê Đăng Hoan/Lê Thị Thu Giang/Nguyễn Thị Hương Sen/Đỗ Ngọc Luyến</td>
+                            <td>Nh&#224; xuất bản Đại học Quốc gia H&#224; Nội</td>
+                            <td>2020</td>
+                            <td>1</td>
+                            <td>8935246929889                                                                                       </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>(Fsoft mua gi&#225;o tr&#236;nh)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Bài giảng PPT của giảng viên</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Đề thi TOPIK II</td>
+                            <td>https://www.topik.go.kr/TWSTDY/TWSTDY0080.do</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>세종학당 AI선생님</td>
+                            <td>세종학당재단 </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>App học tiếng H&#224;n giao tiếp với AI.  </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">7 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Nhận thức được được tầm quan trọng của học phần trung cấp 3; c&#243; &#253; thức tự học v&#224; thực h&#224;nh ở lớp v&#224; ở nh&#224;.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Ghi nhớ 295 từ vựng v&#224; 27 cấu tr&#250;c ngữ ph&#225;p n&#226;ng cao li&#234;n quan đến c&#225;c chủ đề được học.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>X&#225;c định được &#253; ch&#237;nh trong c&#225;c b&#224;i đọc, b&#224;i nghe về những chủ đề thời trang, c&#244;ng việc nh&#224;, cảm x&#250;c, th&#244;ng tin sinh hoạt, xin việc, lễ tết, du lịch,...</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Thuật lại c&#225;c nội dung nghe li&#234;n quan một c&#225;ch cơ bản li&#234;n quan đến c&#225;c chủ đề được học.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>&#193;p dụng c&#225;c từ vựng, kết hợp c&#225;c cấu tr&#250;c ngữ ph&#225;p ph&#249; hợp để diễn đạt, trao đổi th&#244;ng tin dưới h&#236;nh thức kể, hỏi, gợi mở, tr&#236;nh b&#224;y &#253; kiến về một chủ đề.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>Sắp xếp lại nội dung c&#225;c b&#224;i đọc theo c&#225;ch diễn đạt của người học, v&#224; người học hiểu s&#226;u được nội dung đ&#227; đọc.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Kết hợp c&#225;c kiến thức được học trong m&#244;n học để viết một đoạn văn ngắn về c&#225;c chủ đề li&#234;n quan trong m&#244;n học.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=12859" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ôn tập bài 1-5 sách tiếng Hàn tổng hợp 3<br/>- Từ vựng, ngữ pháp bài 1~5</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p 17~105); và tài liệu tham khảo như Syllabus; PPT Session 1</td>
+                            <td>
+                                        <a href="/download/6057/S/1_KOR411_S_download.zip" class="ContainSLink" >KOR411_S_download</a>
+
+                            </td>
+                            <td>- Ôn lại kiên thức TC 2 .<br/>-Trước giờ học, tự ôn tập các từ vựng, ngữ pháp trọng điểm bài 1-5 sách  베트남인을 위한 종합 한국어 3.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ôn tập bài 1-5 sách tiếng Hàn tổng hợp 3<br/>- Luyện viết, đọc và nói bài 1~5</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p 17~105); và tài liệu tham khảo như Syllabus; PPT Session 2</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn lại kiên thức TC 2 .<br/>-Trước giờ học, tự ôn tập các từ vựng, ngữ pháp trọng điểm bài 1-5 sách  베트남인을 위한 종합 한국어 3.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ôn tập bài 6-10 sách tiếng Hàn tổng hợp 3<br/>- Từ vựng, ngữ pháp bài 6~10</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p. 107~195); và tài liệu tham khảo như Syllabus; PPT Session 3</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn lại kiên thức TC2. <br/>-Trước giờ học, tự ôn tập các từ vựng, ngữ pháp trọng điểm bài 6-10 sách  베트남인을 위한 종합 한국어 3.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ôn tập bài 6-10 sách tiếng Hàn tổng hợp 3<br/>- Luyện viết, đọc và nói bài 6~10</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p. 107~195); và tài liệu tham khảo như Syllabus; PPT Session 4</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn lại kiên thức TC2. <br/>-Trước giờ học, tự ôn tập các từ vựng, ngữ pháp trọng điểm bài 6-10 sách  베트남인을 위한 종합 한국어 3.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Ôn tập bài 11-15 sách tiếng Hàn tổng hợp 3<br/>- Từ vựng, ngữ pháp bài 11~15</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p. 197~285); và tài liệu tham khảo như Syllabus; PPT Session 5</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn lại kiên thức TC2 <br/>-Trước giờ học, tự ôn tập các từ vựng, ngữ pháp trọng điểm bài 11-15 sách  베트남인을 위한 종합 한국어 3.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Ôn tập bài 11-15 sách tiếng Hàn tổng hợp 3<br/>- Ôn luyện viết, đọc và nói bài 11~15</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO5, CLO6, CLO7</td>
+                            <td></td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p. 197~285); và tài liệu tham khảo như Syllabus; PPT Session 6</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn lại kiên thức TC2 <br/>-Trước giờ học, tự ôn tập các từ vựng, ngữ pháp trọng điểm bài 11-15 sách  베트남인을 위한 종합 한국어 3.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Từ vựng: 유행</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 17~18); Syllabus; PPT Session 7</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng và tìm hiểu từ của bài 1 trong sách 베트남인을 위한 종합 한국어 4 .<br/>- Làm bài tập từ vựng trong sách 베트남인을 위한 종합 한국어 3 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Ngữ pháp: -나 보다/-(으)ㄴ가 보다, -다고요?, 에 따라</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 19~20); Syllabus; PPT Session 8</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước ngữ pháp trong bài 1 trong sách 베트남인을 위한 종합 한국어 4 .<br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 3 (워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học .</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện nói về giới thiệu kiểu / phong cách phù hợp. (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>TU</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 21~22); Syllabus; PPT Session 9</td>
+                            <td>
+
+                            </td>
+                            <td>- Cài app 세종학당 AI선생님. Dùng ngữ pháp và từ vựng đã học để thực hành giao tiếp chủ đề "개인 신상 ", chọn level 2 급 - 외모"  trong app 세종학당 AI선생님.<br/>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về giới thiệu kiểu / phong cách phù hợp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện nói về giới thiệu kiểu / phong cách phù hợp. (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 22~23); Syllabus; PPT Session 10</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về giới thiệu kiểu / phong cách phù hợp. <br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện nghe hội thoại về đồ trang sức đang thịnh hành (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 24~25); Syllabus; PPT Session 11</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 1 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện nghe hội thoại về đồ trang sức đang thịnh hành (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 25~26); Syllabus; PPT Session 12</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 1 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện đọc bài viết về những từ mới được sáng tạo ra (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 27~28); Syllabus; PPT Session 13</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện đọc bài viết về những từ mới được sáng tạo ra (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 28~29); Syllabus; PPT Session 14</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện viết về suy nghĩ của mình đối với việc chạy theo mốt (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 30~31); Syllabus; PPT Session 15</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn nggắn về chủ đề về suy nghĩ của mình đối với việc chạy theo mốt; sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện viết về suy nghĩ của mình đối với việc chạy theo mốt (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 31~32); Syllabus; PPT Session 16</td>
+                            <td>
+
+                            </td>
+                            <td>- Viết và chia sẻ với các bạn trong lớp/ nhóm về suy nghĩ của mình trong việc chạy theo mốt.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện tập tổng hợp 1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 7~16); Syllabus; PPT Session 17</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Bài 1: 유행 (Sự thịnh hành)<br/>- Luyện tập tổng hợp 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 7~16); Syllabus; PPT Session 18</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Từ vựng: 집안일</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 35~36); Syllabus; PPT Session 19</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng, ngữ pháp và tìm hiểu từ của bài 2 trong sách 베트남인을 위한 종합 한국어 4 <br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4(워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Ngữ pháp: -잖아요, -자마자, 사동사, -게 하다</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 37~38); Syllabus; PPT Session 20</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước ngữ pháp và tìm hiểu từ của bài 2 trong sách 베트남인을 위한 종합 한국어 4 <br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4(워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện nói về đưa ra lời khuyên về phương pháp làm công việc nhà (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>TU</td>
+                            <td class="product">베트남인을 위한 종합 한국어4 (p 39~40); Syllabus; PPT Session 21</td>
+                            <td>
+
+                            </td>
+                            <td>- Dùng ngữ pháp và từ vựng đã học để thực hành giao tiếp chủ đề "일상 생활", chọn level 3 급 - 집안일"  trong app 세종학당 AI선생님.<br/>- Sau buổi học, chuẩn bị nội dung nói với các bạn trong nhóm/ lớp về đưa ra lời khuyên về phương pháp làm công việc nhà.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện nói về đưa ra lời khuyên về phương pháp làm công việc nhà (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어4 (p 40~41); Syllabus; PPT Session 22</td>
+                            <td>
+
+                            </td>
+                            <td>- Chia sẻ với các bạn trong nhóm/ lớp về đưa ra lời khuyên về phương pháp làm công việc nhà. <br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện nghe hội thoại về việc mời họp mặt.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 42~43); Syllabus; PPT Session 23</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 2 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện nghe hội thoại về quan hệ xã hội</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 43~44); Syllabus; PPT Session 24</td>
+                            <td>
+
+                            </td>
+                            <td>-Luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện đọc và tóm tắt bản hướng dẫn thay đổi ngày họp mặt</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 45~46); Syllabus; PPT Session 25</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện đọc về cách từ chối</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 46~47); Syllabus; PPT Session 26</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện viết thư riêng.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 48~49); Syllabus; PPT Session 27</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn ngắn về viết thư riêng, viết sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện viết thư báo không thể tham gia họp mặt</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 49~50); Syllabus; PPT Session 28</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết thư nói lí do không thể đến buổi gặp mặt nào đó, sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện tập tổng hợp 1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 17~28); Syllabus; PPT Session 29</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Bài 2: 집안일 (Công việc nhà)<br/>- Luyện tập tổng hợp 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 17~28); Syllabus; PPT Session 30</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Từ vựng: 감정</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 53~54); Syllabus; PPT Session 31</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng và tìm hiểu từ của bài 3 trong sách 베트남인을 위한 종합 한국어 4<br/>- Làm bài tập từ vựng trong sách 베트남인을 위한 종합 한국어 4(워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Ngữ pháp: -잖아요, -자마자, 사동사, -게 하다</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 55~56); Syllabus; PPT Session 32</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước ngữ pháp của bài 3 trong sách 베트남인을 위한 종합 한국어 4<br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4(워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện nói về những trải nghiệm cuộc sống mãi lưu giữ trong ký ức (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>TU</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 57~58); Syllabus; PPT Session 33</td>
+                            <td>
+
+                            </td>
+                            <td>- Dùng ngữ pháp và từ vựng đã học để thực hành giao tiếp chủ đề "개인 신상", chọn level 3 급 - 연애"  trong app 세종학당 AI선생님.<br/>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về  về việc đưa ra lời khuyên về phương pháp làm công việc nhà.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện nói về những trải nghiệm cuộc sống mãi lưu giữ trong ký ức (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 58~59); Syllabus; PPT Session 34</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về  về việc đưa ra lời khuyên về phương pháp làm công việc nhà<br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện nghe phỏng vấn về các trải nghiệm và cảm nhận (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 60~61); Syllabus; PPT Session 35</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 3 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện nghe phỏng vấn về các trải nghiệm và cảm nhận (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 61~62); Syllabus; PPT Session 36</td>
+                            <td>
+
+                            </td>
+                            <td>-Lluyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện đọc về cách thức từ chối mà vẫn giữ được hòa khí (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 63~64); Syllabus; PPT Session 37</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện đọc về cách thức từ chối mà vẫn giữ được hòa khí (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 64~65); Syllabus; PPT Session 38</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện viết bài về truyền tải lại thông tin mà mình nắm được hoặc biết được cho người khác.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 66~67); Syllabus; PPT Session 39</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn ngắn về việc tổng vệ sinh nhà cửa, về việc phân công công việc trong gia đình chúng ta.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện viết bài về truyền tải lại thông tin mà mình nắm được hoặc biết được cho người khác.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 67~68); Syllabus; PPT Session 40</td>
+                            <td>
+
+                            </td>
+                            <td>- Chia sẻ với các bạn về việc tổng vệ sinh nhà cửa, về việc phân công công việc trong gia đình chúng ta.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện tập tổng hợp 1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 29~39); Syllabus; PPT Session 41</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>Bài 3: 감정 (Cảm xúc)<br/>- Luyện tập tổng hợp 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 29~39); Syllabus; PPT Session 42</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Từ vựng: 생활 정보</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 71~72); Syllabus; PPT Session 43</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng và tìm hiểu từ của bài 4 trong sách 베트남인을 위한 종합 한국어 34<br/>- Làm bài tập từ vựng trong sách 베트남인을 위한 종합 한국어 4(워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Ngữ pháp: -대요, - 요, -(으)래요, -재요</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 73~74); Syllabus; PPT Session 44</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước ngữ pháp của bài 4 trong sách 베트남인을 위한 종합 한국어 34<br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4(워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện nói truyền đạt thông tin mua bán đồ cũ</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO 5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 75~76); Syllabus; PPT Session 45</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về truyền đạt thông tin mua bán đồ cũ.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện nói về việc cho biết thông tin về thị trường Hàn Quốc</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO 5</td>
+                            <td>TU</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 76~77); Syllabus; PPT Session 46</td>
+                            <td>
+
+                            </td>
+                            <td>- Dùng ngữ pháp và từ vựng đã học để thực hành giao tiếp chủ đề "일상 생활", chọn level 3 급 - 생활 정보"  trong app 세종학당 AI선생님.<br/>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về cho biết thông tin về thị trường Hàn Quốc<br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện nghe hội thoại về trang internet có ích</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 78~79); Syllabus; PPT Session 47</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 4 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện nghe giải thích về dịch vụ thư tín</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 79~80); Syllabus; PPT Session 48</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 4 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện đọc email thăm hỏi về sinh hoạt ở Hàn Quốc</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 81~82); Syllabus; PPT  Session 49</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện đọc thư cho biết về sinh hoạt ở Hàn Quốc</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 82~83); Syllabus; PPT  Session 50</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện viết bài thuật nội dung của một bài báo hay một tin tức</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 84~85); Syllabus; PPT Session 51</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết email thăm hỏi.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện viết bài cho biết thông tin</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 85~86); Syllabus; PPT Session 52</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết email thăm hỏi về sinh hoạt ở Hàn Quốc; sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện tập tổng hợp 1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 40~51); Syllabus; PPT Session 53</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>Bài 4: 생활 정보(Thông tin sinh hoạt)<br/>- Luyện tập tổng hợp 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 40~51); Syllabus; PPT Session 54</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>Ôn tập 1 (Trung cấp 3) <br/>- Ôn tập Bài 1 - Bài 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4, Syllabus; PPT Session 55; 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn tập lại từ vựng, ngữ pháp, các cấu trúc câu từ bài 1-bài 2 trong sách 베트남인을 위한 종합 한국어 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>Ôn tập 2(Trung cấp 3) <br/>- Ôn tập Bài 3 - Bài 4</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4, Syllabus; PPT Session 56; 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn tập lại từ vựng, ngữ pháp, các cấu trúc câu từ bài 3-bài 4 trong sách 베트남인을 위한 종합 한국어 4</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>Kiểm tra giữa kỳ<br/>Nội dung từ bài 1-4</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Sau bài thi, sinh viên tự ôn tập lại những điểm ngữ pháp và từ vựng từ bài 1-4 mà bản thân còn chưa nắm vững.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>Kiểm tra giữa kỳ<br/>Nội dung từ bài 1-4</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO5, CLO6, CLO7</td>
+                            <td>u</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Sau bài thi, sinh viên tự ôn tập lại những điểm ngữ pháp và từ vựng từ bài 1-4 mà bản thân còn chưa nắm vững.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>Giới thiệu đề thi TOPIK II (1)<br/>- Kỹ năng Nghe</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 57</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link59-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>Giới thiệu đề thi TOPIK II (2)<br/>- Kỹ năng Viết 1</td>
+                            <td>Offline</td>
+                            <td>CLO1,  CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 58</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link60-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>61</td>
+                            <td>Giới thiệu đề thi TOPIK II (3)<br/>- Kỹ năng Viết 2</td>
+                            <td>Offline</td>
+                            <td>CLO1,  CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 59</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link61-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>62</td>
+                            <td>Giới thiệu đề thi TOPIK II (4)<br/>- Kỹ năng Đọc</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 60</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link62-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>63</td>
+                            <td>Luyện giải đề thi TOPIK (1)<br/>- Kỹ năng Viết</td>
+                            <td>Offline</td>
+                            <td>CLO1,  CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 61</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link63-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>64</td>
+                            <td>Luyện giải đề thi TOPIK (2)<br/>- Kỹ năng Đọc, Nghe</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 62</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link64-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Từ vựng: 취직</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 89~90); Syllabus; PPT Session 63</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng và tìm hiểu từ của bài 5 trong sách 베트남인을 위한 종합 한국어 4 <br/>- Làm bài tập từ vựng trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>66</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Ngữ pháp: -아/어야, -아/어 놓다, -(으)ㄴ지 알다/모르다</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 91~92); Syllabus; PPT Session 64</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước ngữ pháp của bài 5 trong sách 베트남인을 위한 종합 한국어 4 <br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>67</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện nói trò chuyện về việc chuẩn bị xin việc (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>TU</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 93~94); Syllabus; PPT Session 65</td>
+                            <td>
+
+                            </td>
+                            <td>- Dùng ngữ pháp và từ vựng đã học để thực hành giao tiếp chủ đề "일과 직업", chọn level 3 급 - 취업 준비"  trong app 세종학당 AI선생님.<br/>- Sau buổi học, chuẩn bị nội dung nói về việc chuẩn bị xin việc</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>68</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện nói trò chuyện về việc chuẩn bị xin việc (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 94~95); Syllabus; PPT Session 66</td>
+                            <td>
+
+                            </td>
+                            <td>-Luyện tập nói với các bạn trong nhóm/ lớp về việc chuẩn bị xin việc<br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>69</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện nghe thông tin xin việc (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 96~97); Syllabus; PPT Session 67</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 5 trong sách 베트남인을 위한 종합 한국어 4 (워크북).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>70</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện nghe thông tin xin việc (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 97~98); Syllabus; PPT Session 68</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>71</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện đọc bài viết về các cách chuẩn bị xin việc đa dạng ở Hàn Quốc (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p 99~100); Syllabus; PPT Session 69</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>72</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện đọc bài viết về các cách chuẩn bị xin việc đa dạng ở Hàn Quốc (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 3 (p 100~101); Syllabus; PPT Session 70</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>73</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện viết về bài viết về giới thiệu bản thân (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 102~103); Syllabus; PPT Session 71</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn ngắn về giới thiệu bản thân;</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>74</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện viết về bài viết về giới thiệu bản thân (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 103~104); Syllabus; PPT Session 72</td>
+                            <td>
+
+                            </td>
+                            <td>- Chia sẻ với các bạn trong lớp/ nhóm về vài viết bài giới thiệu bản thân</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>75</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện tập tổng hợp  1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 52~62); Syllabus; PPT Session 73</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>76</td>
+                            <td>Bài 5: 취직 (Tìm việc)<br/>- Luyện tập tổng hợp  2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 52~62); Syllabus; PPT Session 74</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>77</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Từ vựng: 고장</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 107~108); Syllabus; PPT Session 75</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng và tìm hiểu từ của bài 6 trong sách 베트남인을 위한 종합 한국어 4 <br/>- Làm bài tập từ vựng trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>78</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Ngữ pháp:  피동사, -아/어지다, -았/었을 때</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 109~110); Syllabus; PPT Session 76</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước  ngữ pháp của bài 6 trong sách 베트남인을 위한 종합 한국어 4 <br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>79</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện nói giải thích những vật dụng bị hư hỏng</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>TU</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 111~112); Syllabus; PPT Session 77</td>
+                            <td>
+
+                            </td>
+                            <td>- Dùng ngữ pháp và từ vựng đã học để thực hành giao tiếp chủ đề "일상 생활", chọn level 3 급 - 고장과 수리"  trong app 세종학당 AI선생님.<br/>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về  giải thích những vật dụng bị hư hỏng.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>80</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện nói giải thích về yêu cầu sửa chữa</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 112~113); Syllabus; PPT Session 78</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về  giải thích yêu cầu sửa chữa.<br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>81</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện nghe yêu cầu sửa chữa và cách giải quyết.  (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 114~115); Syllabus; PPT Session 79</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 6 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>82</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện nghe yêu cầu sửa chữa và cách giải quyết. (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 115~116); Syllabus; PPT Session 80</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 6 trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>83</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện đọc những điều chú ý về cách sử dụng đồ vật</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 117~118); Syllabus; PPT Session 81</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>84</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện đọc những hướng dẫn về sử dụng dịch vụ A/S.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 118~119); Syllabus; PPT Session 82</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>85</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện viết về kinh nghiệm sửa chữa</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 121~122); Syllabus; PPT Session 83</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn ngắn  về kinh nghiệm sửa chữa; sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>86</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện viết về phương pháp sử dụng tốt đồ vật</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 122~123); Syllabus; PPT Session 84</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn ngắn về phương pháp sử dụng tốt đồ vật; sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>87</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện tập tổng hợp 1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 63~74); Syllabus; PPT PPT Session 85</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>88</td>
+                            <td>Bài 6: 고장 (Bị hỏng)<br/>- Luyện tập tổng hợp 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 63~74); Syllabus; PPT PPT Session 86</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>89</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Từ vựng: 명절</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 126~127); Syllabus; PPT Session 87</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng và tìm hiểu từ của bài 7 trong sách 베트남인을 위한 종합 한국어 4 .<br/>- Làm bài tập từ vựng trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>90</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Ngữ pháp: 얼마나 -(으)ㄴ지, -곤 하다, 에다가</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 128~129); Syllabus; PPT Session 88</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước ngữ pháp của bài 7 trong sách 베트남인을 위한 종합 한국어 4 .<br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>91</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện nói về những việc ngày lễ Tết, lời chúc Tết (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>TU</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 130~131); Syllabus; PPT Session 89</td>
+                            <td>
+
+                            </td>
+                            <td>- Dùng ngữ pháp và từ vựng đã học để thực hành giao tiếp chủ đề "문화", chọn level 4 급 - 명절"  trong app 세종학당 AI선생님.<br/>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về những việc ngày lễ Tết, lời chúc Tết.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện nói về những việc ngày lễ Tết, lời chúc Tết (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 131~132); Syllabus; PPT Session 90</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về những việc ngày lễ Tết, lời chúc Tết.<br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>93</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện nghe câu chuyện về phong cảnh ngày lễ Tết</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 133);  Syllabus; PPT  Session 91</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 7 trong sách 베트남인을 위한 종합 한국어 4 (워크북).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>94</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện nghe nói về những bàì hát dân gian</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 134);  Syllabus; PPT  Session 92</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>95</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện đọc bài viết về 4 dịp lễ lớn nhất.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 135~136); Syllabus; PPT Session 93</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4(워크북).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>96</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện đọc về ngày rằm tháng Giêng</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4(p 136~137); Syllabus; PPT Session 94</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4(워크북).<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>97</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện viết những trò chơi dân gian.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 138~139); Syllabus; PPT Session 95</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn ngắn về những trò chơi dân gian sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>98</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện viết về những thay đổi của lễ Tết</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 138~139); Syllabus; PPT Session 96</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết về những thay đổi của lễ Tết; sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>99</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện tập tổng hợp 1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 75~86); Syllabus; PPT Session 97</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>Bài 7: 명절 (Lễ tết)<br/>- Luyện tập tổng hợp 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 75~86); Syllabus; PPT Session 98</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>101</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Từ vựng: 여가 생활</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 143~144); Syllabus; PPT Session 99</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước từ vựng của bài 8 trong sách 베트남인을 위한 종합 한국어 4. <br/>- Làm bài tập từ vựng trong sách 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Ngữ pháp: -더라고(요), -야말로, -(으)ㄹ 만하다</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 145~146); Syllabus; PPT Session 100</td>
+                            <td>
+
+                            </td>
+                            <td>- Đọc trước ngữ pháp của bài 8 trong sách 베트남인을 위한 종합 한국어 4. <br/>- Làm bài tập ngữ pháp trong sách 베트남인을 위한 종합 한국어 4 (워크북)<br/>- Sau buổi học, đặt câu với các từ vựng và ngữ pháp đã học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>103</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện nói về đề xuất về hoạt động giải trí (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 147~148); Syllabus; PPT Session 101</td>
+                            <td>
+
+                            </td>
+                            <td>- Ghi nhớ ngữ pháp trong bài 8 của sách 베트남인을 위한 종합 한국어 4<br/>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về đề xuất về hoạt động giải trí. <br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>104</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện nói về đề xuất về hoạt động giải trí (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO5</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 148~149); Syllabus; PPT Session 102</td>
+                            <td>
+
+                            </td>
+                            <td>- Sau buổi học, luyện tập nói với các bạn trong nhóm/ lớp về đề xuất về hoạt động giải trí. <br/>- Làm bài tập theo yêu cầu của giảng viên đứng lớp</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>105</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện nghe về hoạt động giải trí của sinh viên.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 국어 4(p 150~151); Syllabus; PPT Session 103</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 8 trong sách 베트남인을 위한 종합 한국어 4 (워크북).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>106</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện nghe về cách giải trí của người đi làm</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 국어 4(p 151~152); Syllabus; PPT Session 104</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập bài 8 trong sách 베트남인을 위한 종합 한국어 4 (워크북).<br/>- Sau buổi học, luyện nghe lại các bài đã nghe và luyện tập ghi chú ý chính ra giấy.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện đọc sự biến đổi của văn hoá giải trí.</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 153~154); Syllabus; PPT Session 105</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>108</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện đọc bài báo về `công nghệ giải trí</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 154~155); Syllabus; PPT Session 106</td>
+                            <td>
+
+                            </td>
+                            <td>- Làm bài tập luyện đọc trong sách 베트남인을 위한 종합 한국어 4 (워크북).<br/>- Sau buổi học, ghi nhớ thêm các từ vựng mới trong bài đọc, và ghi chú lại những câu đọc hay.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>109</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện viết bài về đề xuất hoạt động giải trí</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 156~157); Syllabus; PPT Session 107</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết đoạn văn đề xuất hoạt động giải trí, sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>110</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện viết về cách giải trí của riêng mình</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4 (p 157~158); Syllabus; PPT Session 108</td>
+                            <td>
+
+                            </td>
+                            <td>- Áp dụng các từ vựng, ngữ pháp đã học để viết về cách giải trí của riêng mình; sau đó chia sẻ với các bạn trong lớp/ nhóm.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>111</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện tập tổng hợp 1</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 87~98); Syllabus; PPT Session 109</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>112</td>
+                            <td>Bài 8: 여가 생활 (Hoạt động giải trí)<br/>- Luyện tập tổng hợp 2</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4  워크북(p 87~98); Syllabus; PPT Session 110</td>
+                            <td>
+
+                            </td>
+                            <td>- Luyện tập trước bài tập trong sách bài tập; tổng hợp lại các từ vựng mới, câu đọc hay, luyện viết nói theo yêu cầu của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>113</td>
+                            <td>Luyện giải đề TOPIK II  (3)<br/>- Kỹ năng Nghe</td>
+                            <td>Offline</td>
+                            <td>CLO1,  CLO3,</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 111</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link113-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>114</td>
+                            <td>Luyện giải đề TOPIK II  (4)<br/>- Kỹ năng Viết</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 112</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link114-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>115</td>
+                            <td>Luyện giải đề TOPIK II  (5)<br/>- Kỹ năng Đọc (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 113</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link115-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>116</td>
+                            <td>Luyện giải đề TOPIK II  (6)<br/>- Kỹ năng Đọc (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>T,U</td>
+                            <td class="product">Đề thi tiếng Hàn tổng hợp trên website chính thức của Viện giáo dục Quốc tế Quốc gia Hàn Quốc ; Syllabus; PPT Session 114</td>
+                            <td>
+                                        <a href="https://www.topik.go.kr/TWSTDY/TWSTDY0080.do" class="ContainSLink" target=_blank rel=noopener noreferrer>link116-1</a>
+
+                            </td>
+                            <td>Sinh viên truy cập vào đường link của kỳ thi TOPIK theo link đính kèm để xem trước cấu trúc đề thi và tải về trước 1 số đề để tham khảo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>117</td>
+                            <td>Ôn tập 3 (Trung cấp 1) <br/>- Luyện tập tổng hợp từ bài 1-4 (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4, Syllabus; PPT Session 115; 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn tập lại từ vựng, ngữ pháp, các cấu trúc câu từ bài 1-bài 4 trong sách 베트남인을 위한 종합 한국어 4.<br/>- Xem lại các bài tập từ bài 6-8 trong sách 베트남인을 위한 종합 한국어 4 (워크북).<br/>- Chuẩn bị các nội dung chưa rõ để trao đổi với các bạn và giảng viên. <br/>- Chuẩn bị các bài tập theo yêu cầu.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>118</td>
+                            <td>Ôn tập 4 (Trung cấp 1) <br/>- Luyện tập tổng hợp từ bài 1-4 (2)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4, Syllabus; PPT Session 116; 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn tập lại từ vựng, ngữ pháp, các cấu trúc câu từ bài 1-bài 4 trong sách 베트남인을 위한 종합 한국어 4.<br/>- Xem lại các bài tập từ bài 6-8 trong sách 베트남인을 위한 종합 한국어 4 (워크북).<br/>- Chuẩn bị các nội dung chưa rõ để trao đổi với các bạn và giảng viên. <br/>- Chuẩn bị các bài tập theo yêu cầu.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>119</td>
+                            <td>Ôn tập 5 (Trung cấp 1) <br/>- Luyện tập tổng hợp từ bài 5-8 (1)</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4, Syllabus; PPT Session 117; 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn tập lại từ vựng, ngữ pháp, các cấu trúc câu từ bài 5-bài 8 trong sách 베트남인을 위한 종합 한국어 4.<br/>- Xem lại các bài tập từ bài 6-8 trong sách 베트남인을 위한 종합 한국어 4 (워크북).<br/>- Chuẩn bị các nội dung chưa rõ để trao đổi với các bạn và giảng viên. <br/>- Chuẩn bị các bài tập theo yêu cầu.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>120</td>
+                            <td>Ôn tập 6 (Trung cấp 1) <br/>- Luyện tập tổng hợp từ bài 5-8 (2)<br/>- Chuẩn bị thi kiểm tra cuối kỳ</td>
+                            <td>Offline</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td>T,U</td>
+                            <td class="product">베트남인을 위한 종합 한국어 4, Syllabus; PPT Session 118; 베트남인을 위한 종합 한국어 4 (워크북)</td>
+                            <td>
+
+                            </td>
+                            <td>- Ôn tập lại từ vựng, ngữ pháp, các cấu trúc câu từ bài 5-bài 8 trong sách 베트남인을 위한 종합 한국어 4.<br/>- Xem lại các bài tập từ bài 6-8 trong sách 베트남인을 위한 종합 한국어 4 (워크북).<br/>- Chuẩn bị các nội dung chưa rõ để trao đổi với các bạn và giảng viên. <br/>- Chuẩn bị các bài tập theo yêu cầu.</td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">0 Constructive question(s)</label>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">12 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Participation</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>45 phút trên lớp</td>
+                            <td>CLO1</td>
+                            <td>Tiêu chí đánh giá:<br/>- Chuyên cần<br/>- Thái độ, ý thức trên lớp<br/>- Sự tích cực, hăng hái tham gia bài giảng</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Dựa vào các yếu tố: chuyên cần, nghiêm túc, tích cực</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Progress testNói</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>5'/ 1 sinh viên</td>
+                            <td>CLO1,CLO2,CLO5</td>
+                            <td>Có thể chọn 1 trong nhiều cách sau:1. Đóng kịch theo nhóm2. Vấn đáp đơn giản với giảng viên trong giờ học.3. Đọc đoạn văn và trả lời câu hỏi trong giờ học.4. Tóm tắt bài học.5. Làm video clip bài khóa.6. Trình bày và diễn đạt các thông tin mình nắm được ở các lĩnh vực khác nhau.7. Trình bày quan điểm của bản thân tán thành hay không tán thành về một vấn đề nào đó do giáo viên hướng dẫn đưa ra.</td>
+                            <td>2</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 8</td>
+                            <td>  - Bởi giảng viên<br/>- Kiểm tra trên lớp</td>
+                            <td>Giảng viên phụ trách tự chủ ra đề, chấm bài và tổng hợp điểm</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Progress testTừ vưng, ngữ pháp, đọc hiểu(2 quiz)</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>30'</td>
+                            <td>CLO1,CLO2,CLO5</td>
+                            <td>Có thể chọn 1 trong nhiều cách sau:1. Đóng kịch theo nhóm2. Vấn đáp đơn giản với giảng viên trong giờ học.3. Đọc đoạn văn và trả lời câu hỏi trong giờ học.4. Tóm tắt bài học.5. Làm video clip bài khóa.6. Trình bày và diễn đạt các thông tin mình nắm được ở các lĩnh vực khác nhau.7. Trình bày quan điểm của bản thân tán thành hay không tán thành về một vấn đề nào đó do giáo viên hướng dẫn đưa ra.</td>
+                            <td>20</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 8</td>
+                            <td>  - Bởi giảng viên<br/>- Kiểm tra trên lớp</td>
+                            <td>Giảng viên phụ trách tự chủ ra đề, chấm bài và tổng hợp điểm</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Final exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>4</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>90'</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7</td>
+                            <td></td>
+                            <td>37</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 8</td>
+                            <td>     - Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên máy và giấy (Writing)<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td>Điều kiện hoàn thành môn học: thoả mãn đồng thời 2 điều kiện dưới đây<br/>a) Điểm đánh giá quá trình >0; Điểm thi cuối kỳ >=4; Tổng điểm chung cho toàn bộ môn học >=5/10;<br/>b) Thi cuối kỳ không có kỹ năng nào bị 0.<br/><br/><br/></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Final exam  - Speaking</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>5'/ 1 sinh viên</td>
+                            <td>CLO1, CLO5,</td>
+                            <td>Thi theo đề nói chung</td>
+                            <td>1</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 8</td>
+                            <td>- Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề (sinh viên bốc thăm và trả lời 1 câu hỏi) <br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>Final exam - Listening</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>20'</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>Trắc nghiệm</td>
+                            <td>15</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 8</td>
+                            <td>  - Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên máy.<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>Final exam - Vocabulary Grammar Reading</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>35'</td>
+                            <td>CLO1, CLO2, CLO3, CLO6</td>
+                            <td>Trắc nghiệm</td>
+                            <td>20</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 8</td>
+                            <td>- Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên máy.<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>Final exam - Writing</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>30'</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>Tự luận</td>
+                            <td>1</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 8</td>
+                            <td>    - Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên giấy<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>Midterm exam</td>
+                            <td>
+
+                                midterm exam
+                            </td>
+                            <td>3</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>60'</td>
+                            <td>CLO1,CLO2, CLO3, CLO4,CLO6, CLO7</td>
+                            <td></td>
+                            <td>21</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 4</td>
+                            <td> - Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên máy và giấy (Writing)<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td>Bộ môn ra đề và check trước khi gửi khảo thí gen đề</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td>Midterm exam - Listening</td>
+                            <td>
+
+                                midterm exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>15'</td>
+                            <td>CLO1, CLO3, CLO4</td>
+                            <td>Trắc nghiệm</td>
+                            <td>10</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 4</td>
+                            <td> - Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên máy.<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td>Bộ môn ra đề và check trước khi gửi khảo thí gen đề</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td>Midterm exam - Vocabulary Grammar Reading</td>
+                            <td>
+
+                                midterm exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>15'</td>
+                            <td>CLO1, CLO3, CLO6</td>
+                            <td>Trắc nghiệm</td>
+                            <td>10</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 4</td>
+                            <td>    - Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên máy.<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td>Bộ môn ra đề và check trước khi gửi khảo thí gen đề</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td>Midterm exam - Writing</td>
+                            <td>
+
+                                midterm exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>30'</td>
+                            <td>CLO1, CLO2, CLO7</td>
+                            <td>Tự luận</td>
+                            <td>1</td>
+                            <td>Gồm nội dung các bài từ bài 1 đến bài 4</td>
+                            <td>      - Bởi Hội đồng thi.<br/>- Thi trong phòng thi<br/>- Thi chung đề <br/>- Thi trên giấy<br/>- Không được sử dụng tài liệu, từ điển, kim từ điển, máy vi tính, điện thoại, các thiết bị tra từ khác…</td>
+                            <td>Bộ môn ra đề và check trước khi gửi khảo thí gen đề</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

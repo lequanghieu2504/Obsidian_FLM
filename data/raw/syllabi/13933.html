@@ -1,0 +1,3551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>13933</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Intermediate Japanese 1-B1/B2_Ti&#234;́ng Nh&#226;̣t trung cấp 1-B1/B2</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b>Intermediate Japanese 1-B1/B2</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>JPD316</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture,Coaching,Presenting,Roleplay,Active learning,In-class lecture,Practice,Test</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Cử nh&#226;n (bachelor)</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Thời gian học tập: 300 giờ<br/>Trong đó: 90 giờ trên lớp (120 sessions) + 2 giờ thi+ 208 giờ tự học</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>Passed JPD226<br/>Đối với JS: Passed OJT202</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>I. Yêu cầu định hướng triển khai của môn học:<br/>-Sinh viên được tổng hợp các kiến thức, kĩ năng tiếng đã học ở các môn học trước từ JPD113~ JPD226, tiếp tục hoàn thiện kĩ năng thực hành tiếng, chuẩn bị cho đầu ra có các kỹ năng tương đương N3 sau khi hoàn thành xong JPD316<br/>-Môn học này gồm 5 bài, từ bài 1 đến bài 5. Mỗi bài đều hướng đến trau dồi cho sinh viên đạt được kỹ năng “ Trình bày vấn đề của bản thân, suy nghĩ của bản thân” và “ Năng lực tiếng Nhật ở mức độ có thể trao đổi và giao tiếp với người khác” thông qua các kỹ năng Nghe- Nói (Hanashite Miyou- Charenji-Yatte miyou-Dekiru), Ngữ pháp (Tsukatte Miyou), Đọc-Viết (Shitte Tanoshimu- Tsukatte Miyou).<br/>II. Mục tiêu của môn học:<br/>05 bài học hướng đến các mục tiêu chung như sau:<br/>1. Cung cấp khoảng 700 từ vựng, với khả năng đọc, hiểu  200 chữ Hán , 65 mẫu câu, điểm ngữ pháp liên quan đến các chủ đề xuất hiện trong môn học như: cách tạo ấn tượng khi giới thiệu bản thân (bài 1); tìm kiếm thông tin, diễn đạt được ý muốn của bản thân để có thể mua sắm và ăn uống một cách thoải mái (bài 2), suy nghĩ về cách chi tiêu có ý nghĩa cho bản thân và trao đổi thông tin với những người xung quan về cách thiết lập cuộc sống và cách sử dụng thời gian của mình (bài 3); nhận được thông tin cần thiết cho cuộc sống trong khu vực mình đang sống và có một cuộc sống thoải mái (bài 4); hiểu được tình huống và có hành động thích hợp khi có điều gì đó bất ngờ xảy ra, kể lại những gì đã trải qua trong một tình huống khẩn cấp (bài 5).<br/>2. Giúp SV vận dụng từ vựng,chữ Hán, cấu trúc ngữ pháp đã học vào thực hành nghe hiểu và diễn đạt trôi chảy trong các đoạn hội thoại;  thể hiện được quan điểm, thái độ, vai trò, vị thế của người phát ngôn và người tham gia hội thoại với nhiều tầng bậc cảm xúc khác nhau về các chủ đề như giáo dục, khoa học, môi trường, việc làm,v.v...<br/>3. Giúp SV dọc hiểu được ý chính, hàm ý của các văn bản dài với phạm vi rộng liên quan tới các vấn đề xã hội, học thuật và chuyên môn. <br/>4. Cung cấp cơ hội để SV Rèn luyện kỹ năng làm việc nhóm, phát triển bản thân thông qua các hoạt động trong lớp và ngoại khóa để có cái nhìn sâu hơn, rộng hơn về đất nước, con người Nhật Bản (phong tục, thói quen…).</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>Tham dự tối thiểu 80% số giờ học trên lớp mới đủ điều kiện tham gia thi kì thi cuối môn.<br/>- Trên lớp :<br/>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới<br/>4) Nắm được các nội dung của bài học<br/>5) Xác nhận những thông tin chưa rõ<br/>Sinh viên có thể sử dụng AI (chat GPT, Copilot,v.v...) để phục vụ cho việc học tập đạt hiệu quả hơn, cụ thể các nội dung có thể áp dụng AI như ở dưới đây: <br/>1.  Từ vựng: dùng  AI (chat GPT, Copilot, v.v...) để tra cứu nghĩa từ vựng bằng tiếng Nhật và cách sử dụng từ vựng đó trong các ngữ cảnh  trước buổi học<br/>2.  Chữ Hán: sử dụng AI để tra cứu cách đọc âm On/ Kun của các chữ Kanji xuất hiện trong bài và các từ được ghép bởi 2 chữ Kanji trở lên<br/>3.  Ngữ pháp: sử dụng AI để tra cứu nghĩa ngữ pháp của mẫu câu và cách sử dụng mẫu câu đó trong các ngữ cảnh cụ thể.<br/>4. Nghe, hội thoại: sử dụng AI để tra cứu thông tin, lập dàn ý bài hội thoại,  bài nói <br/>5. Đọc: sử dụng AI để tra cứu thông tin, thuật ngữ và các bài đọc liên quan đến chủ đề bài học. <br/>6. Viết Sakubun: sử dụng AI để tham khảo từ vựng, sửa cấu trúc ngữ pháp và cách dùng từ cho phù hợp với văn phong viết. <br/>7. Ôn tập: sử dụng AI để ôn tập những nội dung đã học ( từ vựng, chữ Hán, mẫu ngữ pháp)  theo hệ thống rõ ràng, khoa học.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td></td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>1402/QĐ-ĐHFPT dated 12/12/2025</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>12/12/2025</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">6 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>『新完全マスターＮ3』（聴解）</td>
+                            <td>中村かおり福島佐知友松悦子</td>
+                            <td>スリーエーネットワーク</td>
+                            <td>2014</td>
+                            <td></td>
+                            <td>978-4883196098                                                                                      </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>『新完全マスターＮ3』（読解）</td>
+                            <td>田代ひとみ  宮田聖子 荒巻朋子</td>
+                            <td>スリーエーネットワーク</td>
+                            <td>2014</td>
+                            <td></td>
+                            <td>978-4883197224                                                                                      </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>『新完全マスターＮ3』文法</td>
+                            <td>中村果生莉福島幸友松悦子</td>
+                            <td>スリーエーネットワーク</td>
+                            <td>2012</td>
+                            <td></td>
+                            <td>978-4883196104                                                                                      </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>できる日本語中級</td>
+                            <td>島田和子監修</td>
+                            <td>アルク</td>
+                            <td>2013</td>
+                            <td></td>
+                            <td>ISBN-10 ‏ : ‎ 4757422784 ISBN-13 ‏ : ‎ 978-4757422780                                               </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>S&#225;ch Dekiru quyển xanh</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>できる日本語中級-言葉・表現ワークブック</td>
+                            <td>島田和子監修</td>
+                            <td>アルク</td>
+                            <td>2018</td>
+                            <td></td>
+                            <td>978-4893589477                                                                                      </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>日本語文型辞典</td>
+                            <td>村上雄太郎</td>
+                            <td>くろしお出版</td>
+                            <td>2009</td>
+                            <td></td>
+                            <td>978-4874241547                                                                                      </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">5 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Ghi nhớ khoảng 700 từ vựng (tr&#234;n tổng từ vựng khoảng hơn 4.500 từ), 200 chữ H&#225;n (1.210 chữ H&#225;n), v&#224;  65  mẫu ngữ ph&#225;p li&#234;n quan đến chủ đề đ&#227; học (ở mức độ cơ bản).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Vận dụng được từ vựng,chữ H&#225;n, cấu tr&#250;c ngữ ph&#225;p đ&#227; học v&#224;o thực h&#224;nh nghe hiểu v&#224; diễn đạt tr&#244;i chảy trong c&#225;c đoạn hội thoại;  thể hiện được quan điểm, th&#225;i độ, vai tr&#242;, vị thế của người ph&#225;t ng&#244;n v&#224; người tham gia hội thoại với nhiều tầng bậc cảm x&#250;c kh&#225;c nhau về c&#225;c chủ đề như gi&#225;o dục, khoa học, m&#244;i trường, việc l&#224;m,v.v...</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Nhận biết v&#224; hiểu được &#253; ch&#237;nh, h&#224;m &#253; của c&#225;c văn bản d&#224;i với phạm vi rộng li&#234;n quan tới c&#225;c vấn đề x&#227; hội, học thuật v&#224; chuy&#234;n m&#244;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Viết được đoạn văn r&#245; r&#224;ng, chặt chẽ, chi tiết về c&#225;c chủ đề phức tạp; thể hiện được khả năng tổ chức văn bản, sử dụng tốt từ ngữ nối c&#226;u v&#224; c&#225;c c&#244;ng cụ li&#234;n kết, đạt tr&#236;nh độ bước đầu tương đương với N3 trong k&#236; thi JLPT.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>R&#232;n luyện kỹ năng l&#224;m việc nh&#243;m, ph&#225;t triển bản th&#226;n th&#244;ng qua c&#225;c hoạt động nh&#243;m trong lớp</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=13933" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1. Ôn tập tổng quan về các điểm NP đã học trong JPD216-226</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>ITU</td>
+                            <td class="product">1) Giáo trình chính<br/>2) Tàiliệu giáo viên chuẩn bị</td>
+                            <td>
+                                        <a href="/download/13865/S/1_JPD316.zip" class="ContainSLink" >JPD316</a>
+
+                            </td>
+                            <td>1) Ôn tập lại những kiến thức quan trọng đã học ở JPD216-226<br/>2) Xác nhận lại thông tin chưa nắm rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2. Giới thiệu về JPD316</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>ITU</td>
+                            <td class="product">1) Giáo trình chính<br/>2) Tài liệu GV chuẩn bị</td>
+                            <td>
+                                        <a href="/download/13865/S/2_JPD316.zip" class="ContainSLink" >JPD316</a>
+
+                            </td>
+                            <td>1) Nghe GV hướng dẫn nội dung tổng quan của môn JPD316<br/>2) Dùng AI (chat GPT) để tra cứu trước từ vựng của bài sau (nghĩa , cách sử dụng  trong các ngữ cảnh)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3. Bài 1　新たな出会い (L1-1)<br/>1.言葉確認 Giải thích từ mới <br/>2.話してみよう (Trang 15)<br/>3.見つけた（Trang16)</td>
+                            <td>offline</td>
+                            <td>LO1, 2</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra trang 15<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 16</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4. Bài 1  (L1-2)<br/>1. 使ってみよう１(Trang 18)<br/>2. 文法説明Giải thích ngữ pháp 1<br/>・～において/～における</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 18<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 18<br/>3) Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới "～において/～における"<br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng thường xuất hiện trong các bảng thông báo về sự kiện bằng tiếng Nhật và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5. Bài 1  (L1-3) <br/>1. 使ってみよう2,3(Trang 18)<br/>2. 文法説明Giải thích ngữ pháp 2,3<br/>・～上で<br/>・～てほしい/～てもらいたい<br/>3. Học từ vựng thường nhìn thấy trong các bảng thông báo về sự kiện</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 18<br/>3) Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới"～上で"và "～てほしい/～てもらいたい"</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>6. Bài 1 (L1-4)<br/>こんなときどうする？(Trang 17)<br/> Nghe CD A01</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 17<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 17</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>7. Bài 1  (L1-5)<br/>1. 使ってみよう2(Trang 19)<br/>2. 文法説明Giải thích ngữ pháp 1,2,3<br/>Học mẫu câu dùng để rủ bạn bè<br/>・～よね<br/>・～とか～とか<br/>・～だけ/～だけの</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>ITU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 19<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 19<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "～よね", "～とか～とか", "～だけ/～だけの"theo yêu cầu của GV</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>8. Bài 1  (L1-6)<br/>やってみよう(Trang 20)</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>ITU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe và phán đoán tình huống được đề cập tới ở trang 20</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>9. Chữ Hán KANJI Bài 1 (L1-7)<br/> - Học các chữ Hán có xuất hiện trong bài 1<br/> - Học cách đọc khi ghép với các chữ Hán khác</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>I,T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>Dùng AI (chat gpt, copilot, gamma v.v...) để tạo silde trình bày cách sử dụng các chữ Kanji xuất hiện trong bài theo yêu cầu của GV</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>10. Bài 1  (L1-8)<br/>耳でキャッチ<br/>- Nghe CD A02  (Trang 17)</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 17<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 17</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>11. Bài 1  (L1-9)<br/>1. 使ってみよう3(Trang 20)<br/>2. 文法説明Giải thích ngữ pháp 1,2,3<br/>・〜でしょう／〜だろう<br/>・〜から〜にかけて<br/>・〜と、Ａ／Ｖ</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 20<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 20<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới"〜でしょう／〜だろう", "〜から〜にかけて", "〜と、Ａ／Ｖ" trong bài theo yêu cầu của GV</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>12. Bài 1 (L1-10) <br/>伝えてみよう(Trang 17)<br/>- Nghe CD A03</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra CD03<br/>2) Nghe và phán đoán tình huống được đề cập tới ở CD03<br/>3) Nắm được các nội dung của bài học<br/>4) Xác nhận những thông tin chưa rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>13. Bài 1 (L1-11)<br/>1. 使ってみよう4(Trang 22)<br/>2. 文法説明Giải thích ngữ pháp 1,2,3<br/>・〜がきっかけで<br/>・〜っぽい<br/>・〜でも</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 22<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "〜がきっかけで", "〜っぽい", "〜でも" theo yêu cầu của GV <br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>14. Bài 1 (L1-12)<br/>1. 自己紹介で使える表現・生活を表す言葉 Học từ vựng và mẫu câu giới thiệu bản thân, tính cách (Trang 23)<br/>2. やってみよう (Trang 23)</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 23<br/>2) Phán đoán tình huống được đề cập tới ở trang 23<br/>3) Nắm được cách dùng của các từ vựng mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>15.  Bài 1 (L1-13)<br/>しって楽しむ（Trang 24,25）</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học trang 24,25<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc ở trang 24,25<br/>3) Đọc bài đọc ở trang 24.25<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin, thuật ngữ và các bài đọc có liên quan đến chủ đề bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>16. Bài 1 (L1-14)<br/>Tăng cường kỹ năng đọc bằng tài liệu giảng dạy khác (GV tự chuẩn bị)</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc<br/>3) Đọc bài đọc<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin từ vựng và các bài đọc có liên quan đến chủ đề</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>17. Bài 1 (L1-15)<br/>できる　（Trang 26）</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tạo dàn ý bài nói</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>18. Bài 1 (L1-16)<br/>+Hội thoại: Luyện tập kĩ năng nghe và nói liên quan đến chủ đề học trong bài.<br/>+Luyện chữ Hán JLPT.</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tạo dàn ý bài nói</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>19. Bài 1<br/>Ôn tập tổng hợp và chữa bài tập</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td></td>
+                            <td class="product">Tàiliệu giáo viên phát</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học<br/>2) Tham gia thảo luận về các vấn đề đặt ra<br/>3)  Dùng AI (chat gpt, copilot,v.v...) để ôn tập những nội dung đã học (từ vựng, chữ Hán, mẫu ngữ pháp theo hệ thống</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>20. Bài 2 新しい食事・上手な買い物 (L2-1)<br/>1.言葉確認 Giải thích từ mới <br/>2.話してみよう (Trang 27)<br/>3.耳でキャッチ（Trang 28)<br/>* Nghe CD A04</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3)Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>21.  Bài 2 (L2-2)<br/>1. 使ってみよう１(Trang 30)<br/>2. 文法説明 Giải thích ngữ pháp 1,2<br/>・〜ている<br/>・〜によって</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 30<br/>3) Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới "〜ている, 〜によって"</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>22.  Bài 2  (L2-3)<br/>1. 使ってみよう１(Trang 30)<br/>2. 文法説明 Giải thích ngữ pháp 3,4<br/>・〜うちに　<br/>・〜わりに</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 30<br/>2) Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới "〜うちに, 〜わりに"<br/>3) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng liên quan đến điểm đặc trưng của thực đơn và ngữ cảnh sử dụng các từ vựng đó.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>23. Bài 2 (L2-4)<br/>耳でキャッチ（Trang 28)<br/>*  Nghe CD A05<br/>* Học cách nói khi giới thiệu về các điểm đặc trưng của thực đơn (Trang 31)</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>24. Bài 2  (L2-5)<br/>こんなときどうする？（Trang 28）<br/>- Đọc và nghe CD A06</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu cách nói khi muốn đề xuất thông tin đáng tin cậy và tìm hiểu cách sử dụng cáccách nói đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>25. Bài 2  (L2-6)<br/>1. 使ってみよう2(Trang 31-32)<br/>2. 文法説明 Giải thích ngữ pháp 1,2<br/>・〜（が）いいんじゃない<br/>・〜ようになっている<br/>3. お得な情報を勧めるときに使える表現 Học cách nói khi muốn đề xuất một thông tin đáng tin cậy</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "〜（が）いいんじゃない<br/>〜ようになっている" theo yêu cầu của GV <br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu cách đọc chữ Kanji và nghĩa của nó xuất hiện trong bài học tiếp theo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>26. Chữ Hán KANJI Bài 2 (L2-7)<br/>  (*) KANJI: Học chữ Hán mới<br/>      - Học các chữ Hán có xuất hiện trong bài 2<br/>      - Học cách đọc khi ghép với các chữ Hán khác</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Ôn tập lại các chữ Hán đã học<br/>2) Học chữ Hán mới theo hướng dẫn của giáo viên<br/>3) Dùng AI (chat gpt, copilot, gamma v.v...) để tạo silde trình bày cách sử dụng các chữ Kanji xuất hiện trong bài</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>27. Bài 2 (L2-8)<br/>見つけた(Trang28)</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng xuất hiện trên bảng hiệu, tờ rơi khi có giảm giá và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>28. Bài 2 (L2-9)<br/>1. 使ってみよう3 (Trang 32)<br/>2. 文法説明 Giải thích ngữ pháp 1,2,3<br/>・〜に限り<br/>・〜こそ／〜からこそ<br/>・〜につき<br/>3.セールのチラシや看板でよく使われる言葉Học các từ vựng   thường xuất hiện trên bảng hiệu, tờ rơi khi có giảm giá</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3)Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "〜に限り, 〜こそ／〜からこそ, 〜につき" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>29. Bài 2 (L2-10)<br/>こんなときどうする？（Trang 29）<br/> Đọc và nghe CD A07</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu cách truyền đạt nguyện vọng của mình cho nhân viên nhà hàng một cách lịch sự và mềm mỏngvà tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>30. Bài 2 (L2-11)<br/>1.使ってみよう 4 (Trang 33-34)<br/>2. 文法説明 Giải thích ngữ pháp 1,2<br/>・＿＿＿＿ということだ<br/>・〜でしょうか<br/>3. 店の人にやわらかく希望を伝えるときに使える表現 Học cách nói khi muốn truyền đạt nguyện vọng của mình cho nhân viên nhà hàng một cách lịch sự và mềm mỏng</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 33-34<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 30<br/>3) Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới "＿＿＿＿ということだ<br/>・〜でしょうか"<br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng mới và ngữ cảnh sử dụng của các từ vựng đó</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>31.  Bài 2 (L2-12)<br/>伝えてみよう　(Trang 29)<br/>Nghe CD A08</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc bài nghe và các nội dung được triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>32. Bài 2 (L2-13)<br/>1. 使ってみよう 5 (Trang 35)<br/>2. 文法説明 Giải thích ngữ pháp 1,2<br/>・〜はずだ<br/>・〜向け<br/>3. 経験したときの気持ちを伝える表現 Học cách nói thể hiện cảm xúc khi nói về kinh nghiệm bản thân</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3)Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới " "＿〜はずだ, 〜向け" theo yêu cầu của GV<br/>4)  Dùng AI để tìm hiểu các từ vựng và các mẫu câu dùng để thể hiện cảm xúc khi nói về kinh nghiệm của bản thân</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>33. Bài 2 (L2-14)<br/>1.やってみよう (Trang 32)<br/>2.やってみよう (Trang 34 )</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Thực hiện đóng vai</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>34. Bài 2 (L2-15)<br/>やってみよう (Trang 35)</td>
+                            <td>offline</td>
+                            <td>LO1,4</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tham khảo từ vựng, sửa cấu trúc ngữ pháp và cách dùng từ cho phù hợp với văn phong viết</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>35. Bài 2 (L2-16)<br/>しって楽しむ（Trang 36）</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học trang 24<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc ở trang 36<br/>3) Đọc bài đọc ở trang 36<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin, thuật ngữ và các bài đọc có liên quan đến chủ đề bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>36. Bài 2 (L2-17)<br/>Tăng cường  kỹ năng đọc bằng tài liệu giảng dạy khác (GV tự chuẩn bị)</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc<br/>3) Đọc bài đọc<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin từ vựng và các bài đọc có liên quan đến chủ đề</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>37. Bài 2 (L2-18)<br/>できる（Trang 26）</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tạo dàn ý bài nói</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>38. Bài 2 (L2-19)<br/>+Hội thoại: Luyện tập kĩ năng nghe và nói liên quan đến chủ đề học trong bài.<br/>+Luyện tập chữ Hán JLPT.</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 2</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>39. Bài 2 <br/>Ôn tập tổng hợp và chữa bài tập</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">Tài liệu giáo viên phát</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học<br/>2) Tham gia thảo luận về các vấn đề đặt ra<br/>3) Dùng AI (chat gpt, copilot,v.v...) để ôn tập những nội dung đã học (từ vựng, chữ Hán, mẫu ngữ pháp theo hệ thống rõ ràng, khoa học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>40. Ôn tập cho test 1 (Bài 1,2) (1)</td>
+                            <td>Offline</td>
+                            <td>LO1<br/>~<br/>LO4</td>
+                            <td>U</td>
+                            <td class="product">Tài liệu do GV phát</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm bài tập theo tài liệu giáo viên yêu cầu (bản cứng, link luyện tập …)<br/>2) Dùng AI (chat GPT) để tra cứu từ vựng, thuật ngữ (nếu cần).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>41. Ôn tập cho test 1 (Bài 1,2) (2)</td>
+                            <td>Offline</td>
+                            <td>LO1<br/>~<br/>LO4</td>
+                            <td>U</td>
+                            <td class="product">Tài liệu do GV phát</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm bài tập theo tài liệu giáo viên yêu cầu (bản cứng, link luyện tập …)<br/>2) Dùng AI (chat GPT) để tra cứu từ vựng, thuật ngữ (nếu cần).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>42. Small test 1（1課、2課）:  口頭試験</td>
+                            <td>Offline</td>
+                            <td>LO1,LO2</td>
+                            <td>T,U</td>
+                            <td class="product">Tài liệu GV tự biên soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Thi theo hướng dẫn của GV</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>43. Small test 1（1課、2課）:  口頭試験</td>
+                            <td>Offline</td>
+                            <td>LO1,LO2</td>
+                            <td>T,U</td>
+                            <td class="product">Tài liệu GV tự biên soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Thi theo hướng dẫn của GV</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>44. Small test 1（1課、2課）:  口頭試験</td>
+                            <td>Offline</td>
+                            <td>LO1,LO2</td>
+                            <td>T,U</td>
+                            <td class="product">Tài liệu GV tự biên soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Thi theo hướng dẫn của GV</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>45. Bài 3　時間を生かす(L3-1)<br/>1.言葉確認 Giải thích từ mới<br/>2.話してみよう (Trang 39)<br/>3.見つけた（Trang 40)</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>46. Bài 3 (Tiếp theo)(L3-2)<br/>1. 使ってみよう１(Trang 42)<br/>2. 文法説明Giải thích ngữ pháp 1.2<br/>・〜はずがない<br/>・〜なんて</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 42<br/>2) Phán đoán tình huống được đề cập tới ở trang 42<br/>3) Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới "〜はずがない, 〜なんて"<br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng dùng khi sử dụng thời gian và thành ngữ liên quan đến thời gian.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>47. Bài 3 (L3-3)<br/>1. 使ってみよう１(Trang 42)<br/>2. 文法説明Giải thích ngữ pháp 3,4<br/>・〜ば～ほど<br/>・〜でも<br/>3. 時間の使い方に関係があることば・ことわざHọc từ vựng liên quan đến cách sử dụng thời gian và thành ngữ liên quan đến thời gian</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Dùng AI luyện tập đặt câu với mẫu ngữ pháp mới   "〜ば～ほど<br/>・〜でも" theo yêu cầu của GV<br/>2)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>48. Bài 3 (L3-4)<br/>耳でキャッチ（Trang 41)<br/>Nghe CD A09</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>49. Bài 3 (L3-5)<br/>1.使ってみよう2(Trang 43)<br/>2.文法説明Giải thích ngữ pháp1,2,3<br/>・こんな〜／そんな〜／あんな〜／どんな〜　<br/>・〜ふうに<br/>・〜ことで</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI ( chat gpt, copilot,gammav.v...) tạo slide trình bày mẫu ngữ pháp mới "＿こんな〜／そんな〜／あんな〜／どんな〜, 〜ふうに, 〜ことで" theo yêu cầu của GV.<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng về cách thiết kết cuộc sống hàng ngày  và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>50. Bài 3 (L3-6)<br/>1. 生活のリズムのためにしている工夫について話すときの表現Học cách nói về việc thiết kế cuộc sống hàng ngày (Trang 44) <br/>2. やってみよう (Trang 44)</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Thực hiện đóng vai</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>51. Bài 3 (L3-7)<br/>Luyện nói theo chủ đề trên</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói, hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>52. Chữ Hán Bài 3 (L3-8)<br/>      - Học các chữ Hán có xuất hiện trong bài 3<br/>      - Học cách đọc khi ghép với các chữ Hán khác</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Ôn tập lại các chữ Hán đã học<br/>2) Học chữ Hán mới theo hướng dẫn của giáo viên<br/>3) Dùng AI (chat gpt, copilot, gamma v.v...) để tạo silde trình bày cách sử dụng các chữ Kanji xuất hiện trong bài</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>53. Bài 3 (L3-9)<br/>伝えてみよう　(Trang 41) Nghe CD A10</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới<br/>4) Nắm được các nội dung của bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>54. Bài 3 (L3-10)<br/>1. 使ってみよう3 (Trang 44)<br/>2. 文法説明Giải thích ngữ pháp 1,2,3<br/>・＿＿＿＿なあ<br/>・〜ことがある／〜こともある<br/>・〜にとって</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI để tìm hiểu các mẫu ngữ pháp mới "＿＿＿＿＿なあ, 〜ことがある／〜こともある, 〜にとって" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>55. Bài 3 (L3-11)<br/>こんなときどうする？（Trang 41）<br/>Nghe CD A11</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra ở trang 41<br/>2) Nghe và phán đoán tình huống được đề cập tới ở trang 41</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>56. Bài 3 (L3-12)<br/>1. 使ってみよう3 (Trang 46)<br/>2. 文法説明Giải thích ngữ pháp 1,2,3<br/>・〜ことだし<br/>・〜てくれない？／〜てくれる？<br/>・〜じゃない？／〜んじゃない？</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày mẫu ngữ pháp mới "＿〜ことだし, 〜てくれない？／〜てくれる？, 〜じゃない？／〜んじゃない？" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng dùng để truyền đạt được sự chuẩn bị cho tương lai và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>57. Bài 3 (L3-13)<br/>1.Học cách truyền đạt được sự chuẩn bị cho tương lai (Trang 45)<br/>2.やってみよう (Trang 43)</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tham khảo từ vựng, sửa cấu trúc ngữ pháp và cách dùng từ cho phù hợp với văn phong viết</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>58. Bài 3 (L3-14)<br/>1.自分がしたいことについての情報うを友達にもらうときの表現 Học cách truyền đạt những gì mình muốn làm cho bạn bè biết (Trang 47)<br/>2. やってみよう (Trang 47)</td>
+                            <td>offline</td>
+                            <td>LO1,3,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói, hội thoại theo mẫu ngữ pháp được gợi ý</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>59. Bài 3 (L3-17)<br/>しって楽しむ（Trang 48)</td>
+                            <td>offline</td>
+                            <td>LO3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học trang 48<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc ở trang 48<br/>3) Đọc bài đọc ở trang 48<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin, thuật ngữ và các bài đọc có liên quan đến chủ đề bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>60. Bài 3 (L3-18)<br/>Tăng cường  kỹ năng đọc bằng tài liệu giảng dạy khác (GV tự chuẩn bị)</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc<br/>3) Đọc bài đọc<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin từ vựng và các bài đọc có liên quan đến chủ đề</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>61</td>
+                            <td>61. Bài 3  (L3-19)<br/>できる　（Trang 50）</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tạo dàn ý bài nói</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>62</td>
+                            <td>62. Bài 3  (L3-20)<br/>Hội thoại: Luyện tập kĩ năng nghe và nói liên quan đến chủ đề học trong bài.</td>
+                            <td>offline</td>
+                            <td>LO2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3)  Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói, hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>63</td>
+                            <td>63. Bài 3 <br/>Ôn tập tổng hợp và chữa bài tập</td>
+                            <td>offline</td>
+                            <td>LO1,2,3,4</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học 1,2,3 <br/>2) Ôn tập toàn bộ kiến thức bài tập giáo viên đã giao<br/>3 ) Dùng AI (chat gpt, copilot,v.v...) để ôn tập những nội dung đã học ( từ vựng, chữ Hán, mẫu ngữ pháp theo hệ thống rõ ràng, khoa học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>64</td>
+                            <td>64. Bài 3 (L3-21) (Chữa bài Sakubun)<br/>Sakubun1. Hãy viết đoạn văn khoảng hơn 150 ký tự (tương đương 5-6 dòng) giới thiệu về cách sử dụng thời gian hiệu quả của mình.<br/>作文1:自分の有効な時間使いについて、150文字以上（5～6行に相当）の作文を作ってください。<br/>Gợi ý: <br/>+Cách sử dụng thời gian hiệu quả của bạn là gì?<br/>+Bạn thực hiện việc đó như thế nào?<br/>+Hiệu quả thu được?...</td>
+                            <td>offline</td>
+                            <td>LO1,2,3,4</td>
+                            <td>T,U</td>
+                            <td class="product">Tài liệu GV Tự soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>65. Bài 3 <br/>Phát biểu Sakubun 1</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>I, T,U</td>
+                            <td class="product">Bài SV chuẩn bị</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra.<br/>2) Nắm được các nội dung của bài học.<br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>66</td>
+                            <td>66. Bài 3 <br/>Phát biểu Sakubun 1</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>I, T,U</td>
+                            <td class="product">Bài SV chuẩn bị</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra.<br/>2) Nắm được các nội dung của bài học.<br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>67</td>
+                            <td>67. Bài 4 地域を知って生活する (L4-1)<br/>1.言葉確認 Giải thích từ mới<br/>2.話してみよう (Trang 51)<br/>3.耳でキャッチ（Trang 52)<br/>Nghe CD A12</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới<br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể   .</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>68</td>
+                            <td>68. Bài 4 (L4-2)<br/>1. 使ってみよう１(Trang 54)<br/>2. 文法説明 Giải thích ngữ pháp 1.2.3<br/>・お・ご〜です／お・ご〜でしょう<br/>・～場合<br/>・〜ないことには〜ない</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "・お・ご〜です／お・ご〜でしょう, ～場合, 〜ないことには〜ない" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng dùng khi giải thích cách sử dụng cơ sở vật chất và  tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>69</td>
+                            <td>69. Bài 4 (L4-3)<br/>1. 耳でキャッチ（Trang 52)<br/> Nghe CD A13<br/>2. 施設の利用方法の説明で使われることば・表現Học cách nói và từ vựng dùng khi giải thích cách sử dụng cơ sở vật chất</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>70</td>
+                            <td>70. Bài 4 (L4-4)<br/>こんなときどうする？ (Trang 52)<br/>Nghe CD A14</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>71</td>
+                            <td>71. Bài 4 (L4-5)<br/>1.使ってみよう2(Trang 55)<br/>2. 文法説明Giải thích ngữ pháp 1.2.3.4<br/>・〜たいことがあるんですが<br/>・〜（よ）うとする<br/>・〜みたいなんですが／〜ようなんですが<br/>・〜ていただきたいんですが</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "〜たいことがあるんですが, 〜（よ）うとする, みたいなんですが／〜ようなんですが, 〜ていただきたいんですが" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu nghĩa của các chữ Hán sẽ học trong slot tiếp theo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>72</td>
+                            <td>72. Chữ Hán bài 4 (L4-6)<br/>      - Học các chữ Hán có xuất hiện trong bài 4<br/>      - Học cách đọc khi ghép với các chữ Hán khác</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Ôn tập lại các chữ Hán đã học<br/>2) Học chữ Hán mới theo hướng dẫn của giáo viên<br/>3) Dùng AI (chat gpt, copilot, gamma v.v...) để tạo silde trình bày cách sử dụng các chữ Kanji xuất hiện trong bài <br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>73</td>
+                            <td>73. Bài 4  (L4-7)<br/>見つけた (Trang 53)</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp mới.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>74</td>
+                            <td>74. Bài 4 (L4-8)<br/>1. 使ってみよう3 (Trang 56)<br/>2. 文法説明Giải thích ngữ pháp 1.2.3<br/>・〜には<br/>・〜にかかわらず／〜にかかわりなく<br/>・〜次第</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI  để tìm hiểu các mẫu ngữ pháp mới "〜には, 〜にかかわらず／〜にかかわりなく, 〜次第" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu  việc sử dụng các cơ sở vật chất và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>75</td>
+                            <td>75. Bài 4 (L4-9)<br/>1. やってみよう (Trang 56)<br/>2. やってみよう (Trang 57)<br/>3. Học từ vựng liên quan đến việc sử dụng các cơ sở vật chất</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói, hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>76</td>
+                            <td>76. Bài 4  (L4-11)<br/>伝えてみよう(Trang 53) <br/>Nghe CD A16</td>
+                            <td>offline</td>
+                            <td>LO1.2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu nghĩa và cách sử dụng mẫu ngữ pháp  trong các ngữ cảnh cụ thể.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>77</td>
+                            <td>77. Bài 4  (L4-12)<br/>1.使ってみよう 4 (Trang 57 )<br/>2. 文法説明Giải thích ngữ pháp 1.2<br/>・途中（で）/途中（に）<br/>・〜を〜として<br/>3. 施設のよさについて紹介するときの表現Cách giới thiệu về các điểm tốt của cơ sở vật chất</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "途中（で）/途中（に）, 〜を〜として" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>78</td>
+                            <td>78. Bài 4  (L4-13)<br/>耳でキャッチ（Trang 53)<br/>Nghe CD A17</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe <br/>5) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tự ôn tập từ vựng sử dụng khi chỉ đường</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>79</td>
+                            <td>79. Bài 4   (L4-14)<br/>1. 使ってみよう5 (Trang 58 )<br/>2. 文法説明Giải thích ngữ pháp 1.2<br/>・〜を背にして<br/>・〜に沿って/～に沿う/～に沿った<br/>3. 道を案内するときに使うことば Ôn tập từ vựng sử dụng khi chỉ đường</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "〜を背にして, 〜に沿って/～に沿う/～に沿った" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>80</td>
+                            <td>80. Bài 4   (L4-15)<br/>耳でキャッチ（Trang 53)<br/>Nghe CD A18</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>81</td>
+                            <td>81.  Bài 4  (L4-16)<br/>やってみよう (Trang 59)</td>
+                            <td>offline</td>
+                            <td>LO1,3,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>82</td>
+                            <td>82.  Bài 4  (L4-17)<br/>しって楽しむ（Trang 60 )</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học trang 60<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc ở trang 60<br/>3) Đọc bài đọc ở trang 60<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin, thuật ngữ và các bài đọc có liên quan đến chủ đề bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>83</td>
+                            <td>83. Bài 4  (L4-18)<br/>Tăng cường  kỹ năng đọc bằng tàiliệu giảng dạy khác (GV tự chuẩn bị)</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc<br/>3) Đọc bài đọc<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin từ vựng và các bài đọc có liên quan đến chủ đề</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>84</td>
+                            <td>84.  Bài 4  (L4-19)<br/>できる　（Trang 62 ）</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tạo dàn ý bài nói</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>85</td>
+                            <td>85. Bài 4 (Trang 57) <br/>Sakubun 2. Hãy viết đoạn văn khoảng hơn 150 ký tự (tương đương 5-6 dòng) giới thiệu về một cơ sở văn hóa địa phương.<br/>作文2:地域の施設について、150文字以上（5～6行に相当）の作文を作ってください。<br/>Gợi ý: <br/>+Ở gần nhà bạn có cơ sở văn hóa nào? Hoặc bạn biết 1 cơ sở văn hóa nào?<br/>+Nơi đó là nơi như thế nào? <br/>+Có thể làm gì được ở đó ? Hoặc ở đó có những tiện ích gì?<br/>+Cảm nghĩ của bạn về nơi đó....</td>
+                            <td>offline</td>
+                            <td>LO4</td>
+                            <td>T,U</td>
+                            <td class="product">Tài liệu GV tự soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Tài liệu GV Tự soạn</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>86</td>
+                            <td>86. Bài 4 <br/>Phát biểu Sakubun 2</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>I, T,U</td>
+                            <td class="product">Bài SV chuẩn bị</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra.<br/>2) Nắm được các nội dung của bài học.<br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>87</td>
+                            <td>87. Bài 4 <br/>Phát biểu Sakubun 2</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>I, T,U</td>
+                            <td class="product">Bài SV chuẩn bị</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra.<br/>2) Nắm được các nội dung của bài học.<br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>88</td>
+                            <td>88. Bài 4  (L4-21)<br/>Hội thoại: Luyện tập kĩ năng nghe và nói liên quan đến chủ đề học trong bài.</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 4</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói, hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>89</td>
+                            <td>89. Bài 4  <br/>Ôn tập tổng hợp và chữa bài tập</td>
+                            <td>offline</td>
+                            <td>LO1,2,3,4</td>
+                            <td></td>
+                            <td class="product">Tài liệu giáo viên phát</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học 4 <br/>2) Ôn tập toàn bộ kiến thức bài tập giáo viên đã giao.<br/>3 ) Dùng AI (chat gpt, copilot,v.v...) để ôn tập những nội dung đã học ( từ vựng, chữ Hán, mẫu ngữ pháp theo hệ thống rõ ràng, khoa học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>90</td>
+                            <td>90. Ôn tập bài 3,4 (Từ vựng, chữ Hán, ngữ pháp) (1)</td>
+                            <td>Offline</td>
+                            <td>LO1,2,3,4</td>
+                            <td>I, T, U</td>
+                            <td class="product">Giáo trình chính<br/>Tài liệu GV tự soạn</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI để tạo bài ôn tập.<br/>2) Ôn tập cho bài Test 2.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>91</td>
+                            <td>91. Ôn tập bài 3,4 (Từ vựng, chữ Hán, ngữ pháp) (2)</td>
+                            <td>Offline</td>
+                            <td>LO1,2,3,4</td>
+                            <td>I, T, U</td>
+                            <td class="product">Giáo trình chính<br/>Tài liệu GV tự soạn</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI để tạo bài ôn tập.<br/>2) Ôn tập cho bài Test 2.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td>92. Smalltest 2 小テスト2 (Bài 3,4) MC (Từ vựng, chữ Hán, ngữ pháp)</td>
+                            <td>Offline</td>
+                            <td>LO1,2,3</td>
+                            <td>T,U</td>
+                            <td class="product">Theo hướng dẫn của giảng viên</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm bài kiểm tra nghiêm túc, không gian lận.<br/>2) Hoạt động theo hướng dẫn của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>93</td>
+                            <td>93. Bài 5  緊急事態 (L5-1)<br/>1.言葉確認 Giải thích từ mới<br/>2.話してみよう (Trang 63)<br/>3.耳でキャッチ（Trang 64)<br/>* Nghe CD A19</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu nghĩa từ vựng bằng tiếng Nhật và cách sử dụng từ vựng đó trong các ngữ cảnh  trước buổi học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>94</td>
+                            <td>94. Bài 5 (L5-2)<br/>1.使ってみよう１(Trang 66)<br/>2. 文法説明Giải thích ngữ pháp 1.2.3<br/>・〜によって／〜により／〜による<br/>・〜おそれがある</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới " 〜によって／〜により／〜による, 〜おそれがある" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>95</td>
+                            <td>95. Bài 5 (L5-3)<br/>耳でキャッチ（Trang 64)<br/> Nghe CD A20</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe <br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng về động đất và mưa bão và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>96</td>
+                            <td>96. Bài 5 (L5-4)<br/>やってみよう (Trang 66) <br/>Học từ vựng thường xuất hiện trong các bản tin về động đất và mưa bão</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>97</td>
+                            <td>97. Bài 5 (L5-5)<br/>こんなときどうする？ (Trang 64)<br/>Nghe CD A21- A22</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>98</td>
+                            <td>98. Bài 5 (L5-6)<br/>1. 使ってみよう2(Trang 67)<br/>2. 文法説明Giải thích ngữ pháp 1.2<br/>・〜そうにないんですが<br/>・＿＿＿＿とか（で）</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI để tìm hiểu  các mẫu ngữ pháp mới " 〜そうにないんですが,  ＿＿＿＿とか（で）" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>99</td>
+                            <td>99. Bài 5 (L5-7)<br/>こんなときどうする？ (Trang 64)<br/> Nghe CD A23</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới.<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>100.  Bài 5 (L5-8)<br/>1. 使ってみよう3(Trang 68)<br/>2. 文法説明Giải thích ngữ pháp 1.2.3<br/>・〜てしまったようなんです<br/>・〜ところへ／〜ところに／〜ところを<br/>・〜につれて</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới " ・〜てしまったようなんです<br/>・〜ところへ／〜ところに／〜ところを<br/>・〜につれて" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu nghĩa và cách dùng của các chữ Kanji xuất hiện trong bài học tiếp theo.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>101</td>
+                            <td>101. Bài 5 (L5-9)<br/>Chữ Hán Bài 5<br/>      - Học các chữ Hán có xuất hiện trong bài 5<br/>      - Học cách đọc khi ghép với các chữ Hán khác <br/>    - Luyện chữ Hán JLPT</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Ôn tập lại các chữ Hán đã học<br/>2) Học chữ Hán mới theo hướng dẫn của giáo viên<br/>3) Dùng AI (chat gpt, copilot, gamma v.v...) để tạo silde trình bày cách sử dụng các chữ Kanji xuất hiện trong bài</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>102. Luyện chữ Hán JLPT (L5-10)</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Ôn tập lại các chữ Hán đã học<br/>2) Học chữ Hán mới theo hướng dẫn của giáo viên<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tra cứu cách đọc âm On/ Kun của các chữ Kanji xuất hiện trong bài tập JLPT N3<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng và mẫu câu dùng để giải thích tình huống phương tiện giao thông ngừng hoạt động và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>103</td>
+                            <td>103. Bài 5 (L5-11)<br/>やってみよう (Trang 68) <br/>Học cách giải thích tình huống phương tiện giao thông ngừng hoạt động</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Thực hiện đóng vai<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng và mẫu câu dùng để giải thích khi bị thương hay gặp tai nạn giao thông và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>104</td>
+                            <td>104. Bài 5 (L5-12)<br/>やってみよう (Trang 69) <br/> Học cách giải thích khi bị thương hay gặp tai nạn giao thông</td>
+                            <td>offline</td>
+                            <td>LO1,4</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Luyện tập đặt câu với mẫu ngữ pháp đã học<br/>3) Thực hiện đóng vai</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>105</td>
+                            <td>105. Bài 5 (L5-14)<br/>見つけた　(Trang 65)</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới<br/>4) Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>106</td>
+                            <td>106. Bài 5 (L5-15)<br/>1. 使ってみよう 4 (Trang 69-70 )<br/>2. 文法説明Giải thích ngữ pháp 1.2.3.4<br/>・〜ものだ／〜ものではない<br/>・〜とおり（に）／〜どおり（に）<br/>・ 〜際<br/>・〜こと</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,gamma v.v...) để tạo slide trình bày các mẫu ngữ pháp mới "〜ものだ／〜ものではない, 〜とおり（に）／〜どおり（に）, 〜際, 〜こと" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng bài hôm sau và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>107.  Bài 5  (L5-16)<br/>伝えてみよう(Trang 65)<br/>Nghe CD A24</td>
+                            <td>offline</td>
+                            <td>LO1,2</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Luyện tập đặt câu với mẫu ngữ pháp mới<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tìm hiểu cấu trúc của bài nghe và các nội dung triển khai trong bài nghe</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>108</td>
+                            <td>108.  Bài 5  (L5-16)<br/>1. 使ってみよう 5 (Trang 70 )<br/>2. 文法説明Giải thích ngữ pháp 1.2<br/>・〜まま　<br/>・〜だらけ</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI tìm hiểu các mẫu ngữ pháp mới "〜まま, 〜だらけ" theo yêu cầu của GV<br/>4)  Chuẩn bị cho buổi học tới: Sử dụng các công cụ AI (ChatGPT, Copilot, v.v.) để tra cứu từ vựng liên quan đến tình huống khẩn cấp và tìm hiểu cách sử dụng các từ vựng đó trong từng ngữ cảnh cụ thể</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>109</td>
+                            <td>109. Bài 5  (L5-17)<br/>やってみよう (Trang 71)   <br/>Học từ vựng và mẫu câu liên quan đến tình huống khẩn cấp</td>
+                            <td>offline</td>
+                            <td>LO1,3</td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Dùng AI (chat gpt, copilot,v.v...) để tra cứu nghĩa từ vựng bằng tiếng Nhật và cách sử dụng từ vựng đó trong các ngữ cảnh.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>110</td>
+                            <td>110. Bài 5  (L5-18)<br/>Ôn tập kỹ năng viết theo các chủ đề đã học từ bài 1 đến bài 5</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td></td>
+                            <td class="product">Tàiliệu giáo viên phát</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm bài tập giáo viên đã giao<br/>2) Dùng AI (chat gpt, copilot,v.v...) để tham khảo từ vựng, sửa cấu trúc ngữ pháp và cách dùng từ cho phù hợp với văn phong viết</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>111</td>
+                            <td>111. Bài 5  (L5-19)<br/>しって楽しむ（Trang 72)</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học trang 72<br/>2) Tham gia thảo luận về chủ đề liên quan đến bài đọc ở trang 72<br/>3) Đọc bài đọc ở trang 72<br/>4) Dùng AI (chat gpt, copilot,v.v...) để tra cứu thông tin, thuật ngữ và các bài đọc có liên quan đến chủ đề bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>112</td>
+                            <td>112. Bài 5  (L5-20)<br/>できる（Trang 73）</td>
+                            <td>offline</td>
+                            <td>LO1,2,5</td>
+                            <td>T,U</td>
+                            <td class="product">1) Giáo trình chính <br/>2) Các slide của Bài 5</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Nghe và phán đoán tình huống được đề cập tới<br/>3) Dùng AI (chat gpt, copilot,v.v...) để tạo dàn ý bài nói</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>113</td>
+                            <td>113.  Bài 5(L5-21)<br/>Sakubun 3: Hãy viết đoạn văn khoảng hơn 150 ký tự (tương đương 5-6 dòng) kể lại một sự cố bạn đã gặp phải.<br/>作文3:遭った事故について、150文字以上（5～6行に相当）の作文を作ってください。<br/>Gợi ý: <br/>+Sự cố đó là gì?<br/>+Sự cố đó xảy ra khi nào? <br/>+Kể chi tiết về sự cố đó<br/>+Hậu quả của sự cố đó là gì?....</td>
+                            <td>offline</td>
+                            <td>LO4</td>
+                            <td>T,U</td>
+                            <td class="product">Tài liệu GV Tự soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Dùng AI để luyện viết</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>114</td>
+                            <td>114. Bài 5 <br/>Phát biểu Sakubun 3</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>I, T,U</td>
+                            <td class="product">Bài SV chuẩn bị</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra.<br/>2) Nắm được các nội dung của bài học.<br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>115</td>
+                            <td>115. Bài 5 <br/>Phát biểu Sakubun 3</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>I, T,U</td>
+                            <td class="product">Bài SV chuẩn bị</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra.<br/>2) Nắm được các nội dung của bài học.<br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>116</td>
+                            <td>116. Bài 5<br/>Ôn tập tổng hợp và chữa bài tập</td>
+                            <td>offline</td>
+                            <td>LO1</td>
+                            <td></td>
+                            <td class="product">Tàiliệu giáo viên phát</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học 5.<br/>2) Ôn tập toàn bộ kiến thức bài tập giáo viên đã giao.<br/>3) Dùng AI (chat gpt, copilot,v.v...) để ôn tập những nội dung đã học ( từ vựng, chữ Hán, mẫu ngữ pháp theo hệ thống rõ ràng, khoa học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>117</td>
+                            <td>117. Hội thoại<br/>  - Luyện tập kĩ năng nghe và nói liên quan đến chủ đề học trong bài 1,2</td>
+                            <td>offline</td>
+                            <td>LO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">Giáo trình chính</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập thực hành nói theo hướng dẫn của giáo  viên.<br/>2) Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>118</td>
+                            <td>118. Hội thoại<br/>  - Luyện tập kĩ năng nghe và nói liên quan đến chủ đề học trong bài và thi từ L3,4,5</td>
+                            <td>offline</td>
+                            <td>LO2</td>
+                            <td>I,T,U</td>
+                            <td class="product">Giáo trình chính</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập thực hành nói theo hướng dẫn của giáo  viên.<br/>2) Dùng AI (chat gpt, copilot,v.v...) để lập dàn ý bài nói.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>119</td>
+                            <td>119. ÔN THI CUỐI KỲ (MC)</td>
+                            <td>offline</td>
+                            <td>LO1,2,3,4</td>
+                            <td></td>
+                            <td class="product">Tài liệu do GV tự biên soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Dùng AI (chat gpt, copilot,v.v...) để ôn tập những nội dung đã học (từ vựng, chữ Hán, mẫu ngữ pháp theo hệ thống rõ ràng, khoa học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>120</td>
+                            <td>120. ÔN THI CUỐI KỲ (Tổng hợp)</td>
+                            <td>offline</td>
+                            <td>LO1,2,3,4</td>
+                            <td></td>
+                            <td class="product">Tài liệu do GV tự biên soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Dùng AI (chat gpt, copilot,v.v...) để ôn tập những nội dung đã học (từ vựng, chữ Hán, mẫu ngữ pháp theo hệ thống rõ ràng, khoa học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">0 Constructive question(s)</label>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">6 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Kiểm tra nhỏ</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>3</td>
+                            <td>
+35.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>Nói: 4p/SVMC: 30'Viết: 5p/SV</td>
+                            <td>LO1~LO4</td>
+                            <td>Nói: Hội thoại tình huống+ Q&A, MC: Chọn đáp án đúng, Viết: Viết đoạn văn+ Phát biểu+ Vấn đáp</td>
+                            <td>Nói: 1 tình huống hội thoại+ 3 câu hỏi MC: 25~30 câuViết: 1 đoạn văn</td>
+                            <td>1) Nói: bài 1,2; Kĩ năng: nói (3 tiết)2) MC (Từ vựng, chữ Hán, ngữ pháp): bài 3,4; Kĩ năng: đọc3) Viết: bài 3,4,5; Kĩ năng: viết, nóiMỗi môn học có 3 đề tài. Trên lớp, giảng viên hướng dẫn sinh viên sử dụng AI để viết bài, sau đó yêu cầu sinh viên về nhà hoàn thiện phần viết. Buổi học tiếp theo, giảng viên gọi ngẫu nhiên sinh viên lên trình bày bài đã chuẩn bị. Tổng cộng có 6 buổi trình bày, mỗi buổi sẽ có khoảng 5 SV phát biểu (tùy theo sĩ số lớp).Giảng viên sẽ đặt 3 câu hỏi liên quan đến bài speech.・Điểm trình bày đoạn văn: 40 điểm・Điểm trả lời câu hỏi: 20 điểm/câuMỗi sinh viên nhận một đầu điểm cho phần Viết.</td>
+                            <td> Trực tiếp trên lớp</td>
+                            <td>1) Giảng viên phụ trách tự chủ ra đề, chấm bài và tổng hợp điểm.<br/>2) Tỷ trọng cụ thể 3 phần như sau:<br/>Nói: 15%, MC: 10%, Viết: 10%</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Tham gia giờ học tại giảng đường</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+15.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>135'</td>
+                            <td>LO5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>  Trực tiếp trên lớp</td>
+                            <td>Tiêu chí đánh giá:<br/>1) Chuyên cần (Đi học đầy đủ): 5%<br/>2) Thái độ, ý thức trên lớp+ Sự tích cực, hăng hái tham gia bài giảng: 10%</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Thi cuối kỳ</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>3</td>
+                            <td>
+50.0%                            </td>
+                            <td>
+4                            </td>
+                            <td></td>
+                            <td>LO1~LO3</td>
+                            <td>Chọn đáp án đúng, vấn đáp</td>
+                            <td>65~80 câu</td>
+                            <td>Kiến thức liên quan bài 1-5; Tổng hợp các kỹ năng: Nghe, nói, đọc</td>
+                            <td> Thi trên trường</td>
+                            <td>I. Thi đề chung<br/>In exam room, using computer<br/>II. Điều kiện hoành thành môn học: thỏa mãn đồng thời 2 điều kiện dưới đây:<br/>a) Điểm đánh giá quá trình >0; Điểm thi cuối kì >=4; Tổng điểm chung cho toàn bộ môn học >=5/10;<br/>b)Thi cuối kỳ không có kỹ năng nào bị 0.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Thi cuối kỳ: MC (Ngữ pháp- Từ vựng - Đọc hiểu)</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+15.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>45'</td>
+                            <td>LO1,LO3</td>
+                            <td>Chọn đáp án đúng</td>
+                            <td>40~45 câu</td>
+                            <td>Từ vựng, chữ Hán, ngữ pháp liên quan bài 1-5; Kỹ năng: Đọc hiểu</td>
+                            <td> Thi trên trường</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Thi cuối kỳ: Nghe</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>30'</td>
+                            <td>LO2</td>
+                            <td>Chọn đáp án đúng</td>
+                            <td>15~20 câu</td>
+                            <td>Kiến thức liên quan bài 1-5: Phần nghe trong giáo trình và ngoài giáo trình; Kỹ năng: nghe</td>
+                            <td> Thi trên trường</td>
+                            <td>SV tự chuẩn bị tai nghe</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>Thi cuối kỳ: Nói</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+25.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>8~10p/1 SV</td>
+                            <td>LO1,LO2</td>
+                            <td>Hội thoại tình huống+ Q&A</td>
+                            <td>1 tình huống hội thoại+ 3 câu hỏi</td>
+                            <td>Kiến thức liên quan bài 1-5; Tổng hợp các kỹ năng: Nghe, nói, đọc</td>
+                            <td> Thi trên trường</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

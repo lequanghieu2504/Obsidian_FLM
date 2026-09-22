@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>13584</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Information Technology Japanese_Tiếng Nhật c&#244;ng nghệ th&#244;ng tin</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b></b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>JIT401</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture,Coaching,Test</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Thời gian học tập (150h)<br/>Trong đó 45h trên lớp (60 sessions) + 1,5 giờ thi cuối kỳ + 104 giờ tự học</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>Từ K20A: Passed JST301<br/>K19: Passed JTS301<br/>K18 trở về trước: Passed JJB391<br/>JS: Passed JPD316</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Môn học giúp sinh viên chuyên ngành Nhật ngữ khi ra trường có thể làm việc tại các công ty Nhật Bản chuyên về  IT . Nội dung của môn học sẽ bao gồm  2 yếu tố chính sau: <br/>1. Cung cấp các kiến thức cơ bản liên quan đến Công nghệ thông tin bằng tiếng Nhật như những kiến thức cơ bản về máy tính, sử dụng internet, các thiết bị IT, công nghệ truyền dữ liệu, an toàn và bảo mật, cấu trúc máy tính, cơ sở dữ liệu, lập trình, cấu trúc dữ liệu và giải thuật.... . <br/>2. Bổ sung lượng từ vựng, các thuật ngữ  và các biểu đạt liên quan đến công nghệ thông tin, giúp sinh viên  luyện tập để có thể đọc, hiểu, và dịch tốt các nội dung, các văn bản  thuộc lĩnh vực này.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>- Học viên cần phải tham gia tối thiểu 80% số tiết để đủ điều kiện thi cuối khóa<br/>- Học viên cần phải học từ vựng trước khi tham gia lớp học<br/>- Học viên có thể sử dụng laptop trong lớp học cho mục đích học tập .</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>Giáo trình chính (情報技術日本語テキスト — ベトナム人学習者向け　— (2013年) ), Tài liệu do giảng viên cung cấp</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>1402/QĐ-ĐHFPT dated 12/12/2025</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>12/12/2025</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">1 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>情報技術日本語テキスト — ベトナム人学習者向け　— (2013年)</td>
+                            <td>Mikio Terasawa&Nguyen Thi Minh Huong</td>
+                            <td>Trường ĐH H&#224; Nội v&#224; trường ĐH Nihon, Nhật Bản</td>
+                            <td>2013</td>
+                            <td>1rd</td>
+                            <td>                                                                                                    </td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>SV c&#243; thể mượn s&#225;ch ở trường</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">9 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Hiểu được kiến thức cơ bản về c&#244;ng nghệ th&#244;ng tin như Hệ điều h&#224;nh,  CSDL, Cơ sở lập tr&#236;nh, m&#244; tả dữ liệu, truyền dữ liệu …</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Hiểu được t&#234;n gọi c&#225;c thiết bị m&#225;y t&#237;nh cũng như cấu tr&#250;c của m&#225;y vi t&#237;nh</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Nắm bắt được c&#225;c nguy&#234;n l&#253; cơ bản trong kỹ thuật c&#244;ng nghệ th&#244;ng tin về phần cứng v&#224; phần mềm</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Nắm bắt được c&#225;ch sử dụng Internet, Internet thương mại, c&#244;ng nghệ internet</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>Nắm được kiến thức mạng v&#224; quy tắc an to&#224;n bảo mật mạng…</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>Hiểu được c&#225;c giải thuật cơ bản trong c&#244;ng nghệ th&#244;ng tin</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Hiểu được c&#225;c xử l&#253; t&#237;nh to&#225;n cơ bản trong c&#244;ng nghệ th&#244;ng tin</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>C&#243; thể biết c&#225;ch l&#224;m việc cũng như t&#225;c phong l&#224;m việc  trong c&#244;ng ty C&#244;ng nghệ th&#244;ng tin Nhật Bản</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>CLO9</td>
+                            <td>Hiểu được c&#225;c thuật ngữ chuy&#234;n ng&#224;nh c&#244;ng nghệ th&#244;ng tin bằng tiếng Nhật v&#224; dịch được văn bản chuy&#234;n ng&#224;nh c&#244;ng nghệ th&#244;ng tin</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=13584" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>１．紹介<br/>　　コースの紹介<br/>　　テストやFinalの試験の紹介<br/>　　章の流れと学習者の任務<br/>2．1章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 1</td>
+                            <td>
+                                        <a href="/download/6291/S/1_JIT401.zip" class="ContainSLink" >JIT401</a>
+
+                            </td>
+                            <td>1. Ghi chú phần giới thiệu và bài tập về nhà để không quên <br/>2. Thực hiện theo quy trình của khóa học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3.1章のITの専門知識<br/>　　1章.コンピュータの基礎<br/>    1.1 デジタルとアナログ <br/>    1.2 コンピュータの歴史<br/>    1.3 身の回りのコンピュータ<br/>    1.4 コンピュータの機能 <br/>    1.5 ファイル <br/>    1.6 フォルダ <br/>    1.7 ドライブ <br/>4.　宿題<br/>　　2章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 1</td>
+                            <td>
+                                        <a href="/download/6291/S/2_JIT401.zip" class="ContainSLink" >JIT401</a>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>１．1章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２.　2章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO4<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 2</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>３．2章のITの専門知識<br/>　　２章 インターネット利用<br/>　　2.1 ホームページ検索 <br/>　　2.2 Web2.0 <br/>　　2.3 クラウドコンピューティング <br/>　　2.4 メール利用の注意 <br/>　　2.5 法律 <br/>４.　宿題<br/>　　3章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO4<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 2</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>１．２章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．３章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 3</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập <br/>2. Nghe, đọc và ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>３.　3章のITの専門知識<br/>　　3章　 IT機器の現状(Các thiết bị IT) <br/>　　3.1 第3.5世代携帯電話 <br/>　　3.2 通信 <br/>　　3.3 放送 <br/>　　3.4 ハードウェア <br/>　　3.5 ソフトウェア <br/>４．宿題<br/>　　４章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 3</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>１.　3章の練習問題<br/>　　　ミニテスト１<br/>　　　ミニテスト２<br/>２．４章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 3& 4</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>３．4章のITの専門知識<br/>　　4章　データ通信技術<br/>　　4.1 有線接続 <br/>　　4.2 無線通信手段<br/>４.宿題<br/>　　5章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 4</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>１．4章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．５章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO4<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 4& 5</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>３．5章のITの専門知識<br/>　　5章.ネットワーク(Network) <br/>　　5.1 コンピュータネットワーク <br/>　　5.2 インターネット <br/>　　5.3 ネットワークの形態<br/>　　5.4 ネットワークの構成 <br/>　　5.5 ネットワークセキュリティ <br/>４．宿題<br/>　　６章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO4<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 5</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>１．５章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．６章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 5 & 6</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>３．6章のITの専門知識<br/>　　6章.インターネット技術<br/>　　6.1 プロトコル <br/>　　6.2 IPアドレスとドメイン名 <br/>　　6.3 インターネット情報の流れ <br/>　　6.4 HTML <br/>　　6.5 XML <br/>４．宿題<br/>　　7章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 6</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>1．６章の練習問題<br/>ミニテスト１<br/>ミニテスト２</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO2<br/>- CLO3<br/>- CLO5<br/>- CLO9</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 6</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>１．１～６章までの総復習</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO2<br/>- CLO3<br/>- CLO5<br/>- CLO9</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 1 đến 6</td>
+                            <td>
+
+                            </td>
+                            <td>Ghi chép</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>小テスト１</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO2<br/>- CLO3<br/>- CLO5<br/>- CLO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>小テスト１</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO2<br/>- CLO3<br/>- CLO5<br/>- CLO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>１．テスト１問題解答<br/>２．７章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO4<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 7</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chép<br/>2. Ghi nhớ từ vựng</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>３．7章のITの専門知識<br/>　　7章.ビジネスにおけるインター<br/>　　　　　ネット利用<br/>　　7.1 電子商取引 <br/>　　7.2 電子商取引情報の標準化 <br/>　　7.3 電子マネー <br/>　　7.4 顧客管理 <br/>　　7.5 個人情報保護<br/>４．宿題<br/>　　8章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO4<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 7</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>１．７章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．８章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 7</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>３．ITの専門知識<br/>　　8 章.　暗号化(Mã hóa) <br/>　　8.1 古典的暗号 <br/>　　8.2 最近の暗号<br/>　　8.3 共通鍵と公開鍵<br/>　　8.3.1 公開鍵方式による秘密文書通信 <br/>　　8.3.2 公開鍵方式による認証 <br/>　　8.4 SSLによるウェブ認証 <br/>４．宿題<br/>　　９章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 8</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>１．８章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．９章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 8 & 9</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>３．9章のITの専門知識<br/>　　9章.セキュリティ <br/>　　9.1 事故 <br/>　　9.2 ウィルス <br/>　　9.3 サーバに対する攻撃 <br/>　　9.4 パスワード窃盗 <br/>　　9.5 利用上の注意点 <br/>　　9.6 システムの安全性評価 <br/>４．宿題<br/>　　10章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO5<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 9</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>１．９章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．10章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 9 & 10</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>３．10章のITの専門知識<br/>　　10章.コンピュータの構造<br/>　　10.1 コンピュータの構成要素 <br/>　　10.2 パソコンの内部構成 <br/>　　10.3 記憶装置の特徴 <br/>　　10.4 半導体メモリ <br/>　　10.5 ハードディスク <br/>　　10.6 CPU <br/>４．宿題<br/>　　11章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 10</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>１．10章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．11章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 10 &  11</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>３．ITの専門知識<br/>　　11章.CPUの動作原理<br/>　　11.1 CPUの動作 <br/>　　11.2 論理素子の歴史 <br/>　　11.3 論理素子の動作原理 <br/>　　11.4 論理回路 <br/>４．宿題<br/>　　12章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 11</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>1．11章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO4<br/>- CLO5<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 11</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi chép</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>１．７～11章までの総復習</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO4<br/>- CLO5<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 7 đến 11</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chép</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>小テスト２</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO4<br/>- CLO5<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>小テスト２</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO4<br/>- CLO5<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>１．テスト２問題解答<br/>２．12章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 12</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>３．12章のITの専門知識<br/>　　12章.演算処理<br/>　　12.1 基数 <br/>　　12.2 2進数と10進数の変換 <br/>　　12.3 桁数の多い足し算 <br/>　　12.4 負の表現 <br/>　　12.5 かけ算・割り算 <br/>　　12.6 数学関数 <br/>４．宿題<br/>　　13章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 12</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>１．12章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．13章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 12 & 13</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>３．13章のITの専門知識<br/>　　13章.情報量(Lượng thông tin)<br/>　　13.1　情報量<br/>　　13.2　情報量の単位<br/>　　13.3　文字の情報量<br/>　　13.4　日本語の情報量<br/>　　13.5　文字コード<br/>４．宿題<br/>　　14章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 13</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>１．13章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．14章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 13 & 14</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>３．14章のITの専門知識<br/>　　14章. マルチメディア表現<br/>　　14.1 MIDI楽曲情報 <br/>　　14.2 音声情報 <br/>　　14.3 静止画像 <br/>　　14.4 動画像 <br/>４．宿題<br/>　　15章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 14</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>１．14章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．15章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 14 & 15</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>３．15章のITの専門知識<br/>　　15 データ通信<br/>　　15.1 通信の情報量 <br/>　　15.2 文字情報圧縮 <br/>　　15.3 音声情報圧縮 <br/>　　15.4 画像情報圧縮 <br/>　　15.5 動画像情報圧縮 <br/>　　15.6 誤り検出・訂正 <br/>４．宿題<br/>　　16章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 15</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>１．15章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．16章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 15 & 16</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>３．16章のITの専門知識<br/>　　16章.オペレーティングシステム<br/>　　16.1 オペレーティングシステムとは 16.2 OSの機能 <br/>　　16.3 OSの種類 <br/>４．宿題<br/>　　17章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 16</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>１．16章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２</td>
+                            <td>Offline</td>
+                            <td>- CLO9</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 16</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>１．12～16章までの総復習</td>
+                            <td>Offline</td>
+                            <td>- CLO9</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 12 đến 16</td>
+                            <td>
+
+                            </td>
+                            <td>1.Ghi chú<br/>2. Ghi nhớ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>小テスト３</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>小テスト３</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>１．テスト３問題解答<br/>２．17章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 17</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>３．17章のITの専門知識<br/>　　17 章.データベース理論<br/>　　17.1 データベースとは <br/>　　17.2 データベースの表現法 <br/>　　17.3 関係的表現のデータ操作 <br/>４．宿題<br/>　　18章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 17 & 18</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>１．17章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．18章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 17 & 18</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>３．18章のITの専門知識<br/>　　18章.データベース記述<br/>　　18.1 SQLとは <br/>　　18.2 SQLの基本構文 <br/>　　18.3 条件検索 <br/>　　18.4 並べ替え <br/>　　18.5 結合<br/>４．宿題<br/>　　19章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 18</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>１．18章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．19章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 18 & 19</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>３．19章のITの専門知識<br/>　　19章. プログラミングの基礎<br/>　　19.1 プログラミング言語 <br/>　　19.2 プログラムの内部動作 <br/>　　19.3 高級言語の基本処理 <br/>　　19.4 オブジェクト指向 <br/>４，宿題<br/>　　20章の新しい言葉</td>
+                            <td>Offline</td>
+                            <td>- CLO7<br/>- CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 19</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.<br/>2. Làm trước bài tập</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>１．19章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．20章の新しい言葉の確認</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 20</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>３．ITの専門知識<br/>　　20章.アルゴリズム<br/>　　20.1 アルゴリズム <br/>　　20.2 フローチャート <br/>　　20.3 ソーティング <br/>　　20.4 ヒューマンインタフェース<br/>　　　　　の設計</td>
+                            <td>Offline</td>
+                            <td>0</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 20</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chú trong khi nghe nội dung chuyên môn về CNTT.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>１．２０章の練習問題<br/>　　ミニテスト１<br/>　　ミニテスト２<br/>２．20章の新しい言葉の復習</td>
+                            <td>Offline</td>
+                            <td>- CLO1~CL09</td>
+                            <td>ITU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 20</td>
+                            <td>
+
+                            </td>
+                            <td>1. Làm các bài tập luyện tập.<br/>2. Ghi nhớ các từ mới</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>1．17～20章までの総復習</td>
+                            <td>Offline</td>
+                            <td>- CLO2<br/>- CLO4<br/>- CLO5<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>IT</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 17 đến 20</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chép<br/>2. Ghi chú</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>小テスト４</td>
+                            <td>Offline</td>
+                            <td>- CLO1~CL09</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>小テスト４</td>
+                            <td>Offline</td>
+                            <td>- CLO1~CL09</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Làm kiểm tra</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>１．テスト４問題解答</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>TU</td>
+                            <td class="product">1. Công cụ cho ghi chép</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chép<br/>2. Ghi nhớ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>1．期末のため教科書1～6章の新しい言葉やITの専門知識</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>TU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 1 đến 6</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chép<br/>2. Ghi nhớ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>1．期末のため7～11章の新しい言葉やITの専門知識</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>TU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 7 đến 11</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chép<br/>2. Ghi nhớ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>1．期末のため12～20章の新しい言葉やITの専門知識</td>
+                            <td>Offline</td>
+                            <td>- CLO1<br/>- CLO6<br/>- CLO7<br/>- CLO9</td>
+                            <td>TU</td>
+                            <td class="product">1. Công cụ cho ghi chép<br/>2. SGK Chương 12 đến 20</td>
+                            <td>
+
+                            </td>
+                            <td>1. Ghi chép<br/>2. Ghi nhớ</td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">0 Constructive question(s)</label>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">3 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Smalltest</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>4</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>90'</td>
+                            <td>CLO1<br/>CLO2 CLO3<br/>CLO4<br/>CLO5<br/>CLO6<br/>CLO7<br/>CLO8<br/>CLO9</td>
+                            <td>Câu hỏi trắc nghiệm</td>
+                            <td>30</td>
+                            <td>- Test 1: chương 1-6<br/>- Test 2: chương 7-11<br/>- Test 3: chương 12-16<br/>- Test 4 : chương 17-20</td>
+                            <td>Xem lại các kiến thức, nội dung đã được học và luyện tập trên lớp</td>
+                            <td>Nội dung bài test phù hợp với nội dung bài giảng. Phải có 2 nội dung là từ vựng về IT và kiến thức chuyên ngành IT</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Tham gia giờ học trên lớp</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>90'</td>
+                            <td>CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>Các câu hỏi luyện tập trên lớp</td>
+                            <td>N/A</td>
+                            <td>Các kiến thức, nội dung đã được học</td>
+                            <td>1) Giảng viên điểm danh mỗi buổi.<br/>2) Giảng viên đặt câu hỏi và gọi tên SV làm các câu minitest, kiểm tra từ vựng thường xuyên và cho điểm để căn cứ cho điểm cuối khóa. <br/>3) Giảng viên quan sát sự tập trung, chuyên cần của sinh viên thông qua việc các câu hỏi luyện tập để đưa ra đánh giá công bằng, chính xác nhất.<br/>4) Sinh viên theo dõi bài giảng, học từ vựng trước khi lên lớp và làm các câu hỏi luyện tập theo từng bài.</td>
+                            <td>Kế hoạch học tập, các dạng thức thi và kiểm tra, đánh giá, giáo trình đều phải được giới thiệu cho sv ngay từ đầu môn học, ở những slides đầu tiên của slot đầu tiên của môn học.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Final exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>90'</td>
+                            <td>CLO1<br/>CLO2 CLO3<br/>CLO4<br/>CLO5<br/>CLO6<br/>CLO7<br/>CLO8<br/>CLO9</td>
+                            <td>Câu hỏi trắc nghiệm</td>
+                            <td>60</td>
+                            <td>Ôn từ chương 1- chương 20 kiến thức chuyên ngành IT và từ vựng IT</td>
+                            <td>Thi trên máy, phần mềm trường qui định</td>
+                            <td>Đề thi phải cập nhật hoặc khác ít nhất 70% so với đề thi trước. Bao gồm từ vựng về IT và kiến thức chuyên ngành IT</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

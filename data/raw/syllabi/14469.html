@@ -1,0 +1,2966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>14469</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Elementary Japanese 1- A1.1_Tiếng Nhật sơ cấp 1-A1.1</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b>Elementary Japanese 1- A1.1</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>JPD113</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Cử nh&#226;n (bachelor)</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Thời gian học tập: 150 giờ<br/>Trong đó: 45 giờ trên lớp (20 sessions, mỗi session=135p) + 1 giờ thi+ 104 giờ tự học</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>Không</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>I. Yêu cầu định hướng triển khai của môn học: Môn học cung cấp kiến thức, kỹ năng cơ bản của tiếng Nhật ở trình độ sơ cấp 1 (tương đương với trình độ A1) cho đối tượng sinh viên học tiếng Nhật là ngoại ngữ 2 tại trường Đại học.<br/>II. Mục tiêu của môn học:<br/>Sau khi hoàn thành môn học, sinh viên có thể đạt được các mục tiêu như sau:<br/>1) Có thể viết, đọc thành thạo bảng chữ cái tiếng Nhật (chữ mềm, chữ cứng)<br/>2) Có thể nắm được khoảng 200 từ vựng cơ bản, cách viết và đọc của khoảng hơn 30 chữ Hán, khoảng hơn 20 cấu trúc ngữ pháp cơ bản dùng trong hội thoại sơ cấp.<br/>3) Có thể hiểu, sử dụng các cách nói quen thuộc được sử dụng trong đời sống thường nhật để đáp ứng nhu cầu giao tiếp cụ thể như có thể tự giới thiệu bản thân (giới thiệu tên, quốc tịch, nghề nghiệp, sở thích v.v..); có thể hỏi địa điểm, có thể giao tiếp với nhân viên để hỏi giá tiền, gọi đồ v.v…; có thể kể về những hoạt động hằng ngày của bản thân, hỏi giờ làm việc của các cơ quan tổ chức.<br/>4) Rèn luyện được kỹ năng làm việc nhóm, phát triển bản thân thông qua các hoạt động nhóm trong lớp (role play..) và các hoạt động ngoại khóa.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>- Tham dự tối thiểu 80% số giờ học trên lớp mới đủ điều kiện tham gia thi kì thi cuối môn.<br/>- Học từ vựng và tìm hiểu trước bài học, làm các bài tập và nhiệm vụ do GV giao.<br/>- Ôn tập bài giảng, đối chiếu với giáo trình để nắm vững các kiến thức.<br/>- Trên lớp tích cực tham gia trao đổi, xây dựng bài.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>- Sử dụng giáo trình chính và giáo trình bổ trợ bằng tiếng Nhật.<br/>- Sử dụng slide môn học.<br/>- Tra cứu, tham khảo các nội dung có liên quan đến môn học trên mạng hoặc giáo trình tham khảo được giới thiệu trong môn học.<br/>- Sử dụng https://heyjapan.net/ để học bảng chữ cái và ôn thi cuối kỳ.<br/>- Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng, ứng dụng của ngữ pháp, và các từ ghép Hán tự ngoài các từ đã được học.</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>1028/QĐ-ĐHFPT dated 08/21/2026</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>8/21/2026</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">5 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Kana Nyuumon (Nhập môn Kana)</td>
+                            <td>Japan Foundation</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>できる日本語　初級　本冊</td>
+                            <td>嶋田和子</td>
+                            <td>アルク</td>
+                            <td>2011</td>
+                            <td></td>
+                            <td>ISBN-10 : 4757419775ISBN-13 : 978-4757419773                                                        </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>Gi&#225;o tr&#236;nh Dekiru quyển đỏ (Tiếng Nhật trong tầm tay)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>わたしのことばノート 初級 (できる日本語)</td>
+                            <td>できる日本語教材開発プロジェクト</td>
+                            <td>嶋田 和子</td>
+                            <td>凡人社</td>
+                            <td></td>
+                            <td>ISBN-10 : 4893588117ISBN-13 : 978-4893588111                                                        </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>わたしの文法ノート 初級 (できる日本語)</td>
+                            <td>嶋田和子</td>
+                            <td>凡人社</td>
+                            <td>2012</td>
+                            <td></td>
+                            <td>ISBN-10 : 489358801XISBN-13 : 978-4893588012                                                        </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>漢字たまご 初級</td>
+                            <td>有山優樹 (著), 落合知春 (著), 立原雅子 (著), 林英子 (著), 山口知才子 (著), 酒井弘美 (イラスト), 嶋田和子 (監修)</td>
+                            <td>凡人社</td>
+                            <td>2012</td>
+                            <td></td>
+                            <td>ISBN-10 : 4893588311ISBN-13 : 978-4893588319                                                        </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">5 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Nhận biết được c&#225;c k&#253; tự trong hệ thống chữ c&#225;i tiếng Nhật (chữ mềm, chữ cứng).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Ghi nhớ 200 từ vựng, 23 cấu tr&#250;c ngữ ph&#225;p, 35 chữ H&#225;n li&#234;n quan đến c&#225;c chủ đề được học.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Vận dụng từ vựng, mẫu c&#226;u, chữ H&#225;n đ&#227; được học để c&#243; thể tự giới thiệu bản th&#226;n (giới thiệu t&#234;n, tuổi, quốc tịch, nghề nghiệp, ng&#224;y sinh nhật, sở th&#237;ch); hội thoại đơn giản về chủ đề mua sắm, gọi đồ; c&#243; thể kể về những hoạt động hằng ng&#224;y của bản th&#226;n, hỏi giờ l&#224;m việc của c&#225;c cơ quan tổ chức.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Đọc được đoạn văn ngắn tr&#236;nh độ sơ cấp bằng tiếng Nhật.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>R&#232;n luyện kỹ năng l&#224;m việc nh&#243;m, ph&#225;t triển bản th&#226;n th&#244;ng qua c&#225;c hoạt động nh&#243;m trong lớp
+(role play..).</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=14469" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tiết 1:<br/>(*) Giới thiệu khái quát về chương trình<br/>(*) Giới thiệu về tiếng Nhật</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 1 (tiết 1)</td>
+                            <td>
+                                        <a href="/download/13883/S/1_JPD113.zip" class="ContainSLink" >JPD113</a>
+
+                            </td>
+                            <td>1) Nắm được khái quát về chương trình môn JPD113; nắm được những nét cơ bản về tiếng Nhật.<br/>2) Ôn tập các nội dung được nêu.<br/>3) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Tiết 2:<br/>(*) Học Hiragana: 20 chữ đầu tiên<br/>(*) Chào hỏi cơ bản 1</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 1 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tiến hành luyện viết, đọc 20 chữ hiragana đầu.<br/>2) Nắm được các mẫu câu chào hỏi cơ bản 1.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Tiết 3:<br/>(*) Luyện tập: Hiragana và Chào hỏi cơ bản 1<br/>(*) Học Hiragana: 26 chữ tiếp theo</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>ITU</td>
+                            <td class="product">Slide của slot 2 (tiết 1)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link3-1</a>
+
+                            </td>
+                            <td>1) Luyện tập các chữ đã học ở buổi trước. <br/>2) Tiến hành luyện đọc, luyện viết 26 chữ Hiragana tiếp.<br/>3) Xác nhận các thông tin chưa rõ.<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Tiết 1:<br/>(*) Học Hiragana: âm đục<br/>(*) Chào hỏi cơ bản 2</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 2 (tiết 2)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link4-1</a>
+
+                            </td>
+                            <td>1) Ôn tập các chữ cái đã học buổi trước<br/>2) Luyện đọc  và nhận biết các âm đục<br/>3) Học chào hỏi cơ bản 2 (tiếp)<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Tiết 2<br/>(*) Luyện tập: Hiragana và Chào hỏi cơ bản 2<br/>(*) Học Hiragana: Âm ghép, âm mũi</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 3 (tiết 1)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link5-1</a>
+
+                            </td>
+                            <td>1) Luyện tập các chữ cái đã học ở buổi trước<br/>2) Luyện đọc và nhận diện âm ghép, âm mũi<br/>3) Xác nhận các thông tin chưa rõ<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Tiết 3<br/>(*) Chào hỏi cơ bản 3<br/>(*) Câu dùng trong lớp học…</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>ITU</td>
+                            <td class="product">Slide của slot 3 (tiết 2)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link6-1</a>
+
+                            </td>
+                            <td>1) Học chào hỏi cơ bản 3<br/>2) Luyện tập các câu dùng trong lớp học<br/>3) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Tiết 1:<br/>(*) Luyện tập: Hiragana và Chào hỏi cơ bản 3<br/>(*) Học Hiragana: Âm dài</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 4 (tiết 1)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link7-1</a>
+
+                            </td>
+                            <td>1) Luyện tập bảng hiragana và chào hỏi cơ bản 3<br/>2) Luyện đọc và nhận diện âm dài<br/>3) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Tiết 2:<br/>(*) Học Hiragana: Âm ngắt.<br/>(*) Số đếm<br/>(*) Chào hỏi cơ bản 4</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>ITU</td>
+                            <td class="product">Slide của slot 4 (tiết 2)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link8-1</a>
+
+                            </td>
+                            <td>1) Nhận diện và luyện tập âm ngắt<br/>2) Nắm được cách nói số, cách ghép số trong tiếng Nhật<br/>3) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Tiết 3:<br/>(*) Luyện tập: Hiragana và Chào hỏi cơ bản 4</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 5 (tiết 1)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link9-1</a>
+
+                            </td>
+                            <td>1) Tham gia luyện tập toàn bộ bảng hiragana<br/>2) Luyện tập phần chào hỏi cơ bản 4<br/>3) Xác nhận các thông tin chưa rõ<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Tiết 1:<br/>(*) Chào hỏi cơ bản 5<br/>(*) Tổng ôn bảng chữ Hiragana</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>ITU</td>
+                            <td class="product">Slide của slot 5 (tiết 2)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link10-1</a>
+
+                            </td>
+                            <td>1) Luyện tập chào hỏi cơ bản (tiếp)<br/>2) Thử cài bộ gõ và tập gõ chữ Nhật trên máy tính</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Tiết 2:<br/>(*) Giới thiệu về bảng chữ cứng (katakana).<br/>(*) Học Katakana: 20 chữ đầu</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 6 (tiết 1)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link11-1</a>
+
+                            </td>
+                            <td>1) Nắm được đặc điểm, cách  dùng của bảng chữ cứng (katakana)<br/>2) Luyện viết, luyện đọc 20 chữ katakana đầu tiên<br/>3) Xác nhận các thông tin chưa rõ<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Tiết 3:<br/>(*) Học Katakana: 20 chữ đầu (tiếp); luyện tập</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 6 (tiết 2)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link12-1</a>
+
+                            </td>
+                            <td>1)Tiếp tục luyện viết, luyện đọc 20 chữ katakana đầu tiên<br/>2) Xác nhận các thông tin chưa rõ<br/>3) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Tiết 1:<br/>(*) Luyện tập:<br/>(*) Học Katakana: 26 chữ</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 7 (tiết 1)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link13-1</a>
+
+                            </td>
+                            <td>1) Luyện tập các chữ cứng đã học buổi trước<br/>2) Luyện viết, luyện đọc 26 chữ katakana tiếp theo<br/>3) Xác nhận các thông tin chưa rõ<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Tiết 2:<br/>(*) Học Katakana: 26 chữ (tiếp)</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 7 (tiết 2)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link14-1</a>
+
+                            </td>
+                            <td>1)  Luyện viết, luyện đọc 26 chữ katakana (tiếp)<br/>2) Xác nhận các thông tin chưa rõ<br/>3) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Tiết 3:<br/>(*) Luyện tập:<br/>(*) Học Katakana: Âm dài</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 8 (tiết 1)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link15-1</a>
+
+                            </td>
+                            <td>1) Nắm được các nội dung của bài học <br/>2) Tham gia luyện tập, thảo luận về các vấn đề đặt ra<br/>3) Xác nhận các thông tin chưa rõ<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Tiết 1:<br/>(*) Luyện tập:<br/>(*) Học Katakana: Âm ngắt + Âm ghép</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide của slot 8 (tiết 2)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link16-1</a>
+
+                            </td>
+                            <td>1) Luyện tập<br/>2) Nhận diện, luyện đọc, luyện viết âm ngắt và âm ghép<br/>3) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Tiết 2:<br/>(*) Ôn tập tổng hợp chữ mềm, cứng</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>ITU</td>
+                            <td class="product">Slide các bài học trước (slot 1 đến slot 8)</td>
+                            <td>
+                                        <a href="https://heyjapan.net/" class="ContainSLink" target=_blank rel=noopener noreferrer>link17-1</a>
+
+                            </td>
+                            <td>1) Ôn tập nội dung đã được học<br/>2) Xác nhận các thông tin chưa rõ<br/>3) Làm bài thi trung thực, nghiêm túc<br/>4) Dùng https://heyjapan.net/ để luyện tập bảng chữ đã học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Tiết 3:<br/>(*) Ôn tập tổng hợp chữ mềm, cứng (tiếp)<br/>(*) Giới thiệu về giáo trìnhできる日本初級, sách tham khảo như 文法ノート初級、言葉ノート初級</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nắm được thông tin về giáo trình.<br/>2) Chuẩn bị cho giờ học tiếp theo: Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 1 bài 1, tìm hiểu về đặc điểm ngữ pháp tiếng Nhật và các trợ từ trong tiếng Nhật.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Tiết 1:<br/>第1課 - ST1: <br/><br/>+ 話してみよう（P15）<br/>+ 聞いてみよう（P15 - CD A01）<br/>+ チャレンジ1,2（P16- CD A02,03）<br/>+ 語彙確認<br/>+  言ってみよう1,2（P18 ）<br/> - 文法説明<br/>私は［名前］です</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 10 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia luyện tập, thảo luận về các vấn đề đặt ra.<br/>2) Học từ vựng. <br/>3) Luyện tập đặt câu với mẫu câu về giới thiệu bản thân. <br/>4) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Tiết 2:<br/>第1課 - ST1 （続き）<br/>+ チャレンジ 3（P17- CD A04）<br/>+  言ってみよう3（P18 ）<br/> - 文法説明<br/>お国はどちらですか<br/> - 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 10 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập đặt câu với mẫu câu về giới thiệu đất nước<br/>2) Nghe hiểu thông tin liên quan tới bài học<br/>3) Luyện tập hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Tiết 3:<br/>第1課 - ST1（続き）<br/>+ チャレンジ4,5（P17 - CD A05-06）<br/>+ 言ってみよう4,5（P18 ）<br/> - 文法説明<br/>お仕事は<br/>［仕事］ですか<br/>はい、［仕事］です　いいえ、［仕事］じゃありません<br/> - 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 11 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI (ChatGPT, Copilot, v.v.) luyện tập đặt câu với mẫu câu giới thiệu nghề nghiệp, mẫu câu phủ định, câu nghi vấn của danh từ<br/>2) Nghe hiểu thông tin liên quan tới bài học<br/>3) Luyện tập hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Tiết 1:<br/>第1課 - ST1（続き）<br/>+ チャレンジ6（P17 - CD A07）<br/>+ 言ってみよう6（P19 ）<br/> - 文法説明<br/>NのN<br/> - 応用会話練習<br/>+ やってみよう（P19 - CD A08)</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 11 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập đặt câu với mẫu câu  giới thiệu tên cơ quan công ty nơi mình học tập công tác (NのN)<br/>2) Làm bài tập nghe p19<br/>3) Luyện tập hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Tiết 2:<br/>第1課- ST2: <br/>+ チャレンジ1,2,（P20,21 - CD A09-10）<br/>+ 語彙確認<br/>+ 言ってみよう1,2（P22 ）<br/> - 文法説明<br/>～歳です</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 12 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 2 bài 1.<br/>2) Luyện tập đặt câu với mẫu ngữ pháp nói tuổi.<br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Tiết 3:<br/>第1課- ST2 （続き） <br/> - 文法説明<br/>いつ　～月～日<br/> - 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 12 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập cách nói ngày tháng, mẫu câu hỏi và trả lời về ngày tháng năm sinh<br/>2) Luyện tập hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Tiết 1:<br/>第1課- ST2（続き）<br/>やってみよう（P23   CD A11-12) <br/>練習問題</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 13 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện bài nghe p23<br/>2) Làm sẵn các bài tập trong sách bài tập từ vựng và ngữ pháp<br/>3) Đặt câu hỏi cho những nội dung không hiểu</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Tiết 2:<br/>第1課- ST2（続き）<br/>練習問題（続き）</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 13 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm các bài tập theo yêu cầu của giảng viên.<br/>2) Đặt câu hỏi với những nội dung khó.<br/>3) Luyện tập thêm ở nhà.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Tiết 3:<br/>第1課 - ST3: <br/>+ チャレンジ1,2（P24  CD A13, 14 ）<br/>+ 語彙確認<br/>+ 言ってみよう1,2（P26 ）<br/>- 文法説明<br/>何ですか<br/>NとN</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 14 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 3 bài 1.<br/>2) Luyện tập ngữ pháp 何ですか,NとN. <br/>3) Nghe hiểu thông tin liên quan tới bài học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Tiết 1:<br/>第1課 - ST3: <br/>+ チャレンジ3（P25   CD A15 ）<br/>+ 言ってみよう3（P26 ）<br/>- 文法説明<br/>Nも<br/>-  応用会話練習<br/>+ やってみよう（P27       CD A16 ）</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 14 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập mẫu ngữ pháp Nも<br/>2) Nghe hiểu thông tin liên quan đến bài học<br/>3) Luyện hội thoại<br/>4) Làm bài tập nghe p27</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Tiết 2:<br/> 第一課 漢字</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Slide slot 15: chữ Hán Bài 1</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe giải thích phần chữ Hán, đặt câu hỏi cho nội dung chưa rõ<br/>2) Dùng AI tra cứu thêm các từ ghép của các chữ Hán đã học<br/>3) Luyện tập chữ Hán ở nhà</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Tiết 3:<br/>＋第一課復習<br/>　‐もう一度聞こう<br/>　‐宿題確認</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO4,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm các bài tập trong sách BT từ vựng và ngữ pháp.<br/>2) Luyện nghe trên lớp và ở nhà.<br/>3) Đặt câu hỏi với những nội dung chưa rõ.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Tiết 1:<br/>＋Bài kiểm tra 1 (bảng chữ+bài 1)</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO4</td>
+                            <td>I, T,U</td>
+                            <td class="product">Bài kiểm tra 1 do GV tự biên soạn</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm bài kiểm tra trung thực, nghiêm túc<br/>2) Chuẩn bị cho giờ học tiếp theo: Dùng AI tra cứu từ vựng bài 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Tiết 2:<br/>第2課 - ST1: <br/>+話してみよう（P31）<br/>+聞いてみよう（P31  CD A17）<br/>+ 語彙確認</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 17 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Nghe hiểu thông tin liên quan tới bài học trang 31</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Tiết 3:<br/>第2課 - ST1: <br/>+チャレンジ1（P32,33  CDA18）<br/>-- 文法説明<br/>何階ですか　階数の言い方<br/>言ってみよう1（P34 ）<br/>- 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 17 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI (ChatGPT, Copilot, v.v.) để luyện tập đặt câu với mẫu ngữ pháp hỏi tầng 何階ですか　階数の言い方.<br/>2) Luyện nghe hiểu thông tin liên quan đến bài học<br/>3) Đặt câu hỏi cho những nội dung chưa rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>Tiết 1:<br/>第2課 - ST1　（続き）<br/>+チャレンジ2.1（P33   CD A19）<br/>+言ってみよう2.1（P34 ）<br/>-- 文法説明<br/>～はどこですか<br/>ここ・そこ・あそこ　<br/> - 会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 18 (Tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập ngữ pháp～はどこですか<br/>ここ・そこ・あそこ　<br/>2) Nghe hiểu thông tin liên quan tới bài học.<br/>3) Đặt câu hỏi cho nội dung chưa rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Tiết 2:<br/>第2課 - ST1　（続き）<br/>+チャレンジ2.2（P33   CD A20）<br/>+言ってみよう2.2（P35 ）<br/>-- 文法説明<br/>～はどこですか<br/>こちら・そちら・あちら<br/>会話練習<br/>+ やってみよう（P35      CD A21 ）</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 18 (Tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe hiểu thông tin liên quan đến bài học<br/>2) Luyện tập ngữ pháp～はどこですか こちら・そちら・あちら<br/>3) Luyện tập hội thoại<br/>4) Làm bài tập nghe p35</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Tiết 3:<br/>第2課 - ST2: <br/>+チャレンジ1（P36   CD A22）<br/>+ 語彙確認<br/>+言ってみよう1（P38）<br/>-- 文法説明<br/>～はいくらですか　これ・それ・あれ</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 19 (Tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 2 bài 2<br/>2) Luyện tập cấu trúc ～はいくらですか　これ・それ・あれ<br/>3) Nghe hiểu thông tin liên quan tới bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Tiết 1:<br/>第2課 - ST2 （続き）<br/>+チャレンジ 2（P36   CD A23）<br/>+言ってみよう2（P38）<br/>- 文法説明<br/>このN・そのN・あのN<br/>- 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 19 (Tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập đặt câu với mẫu ngữ pháp このN・そのN・あのN<br/>2) Nghe hiểu thông tin liên quan tới bài học<br/>3) Luyện hội thoại<br/>4) Đặt câu hỏi cho những nội dung chưa rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Tiết 2:<br/>第2課 - ST2: （続き）<br/>+チャレンジ3（P37   CD A24）<br/>+言ってみよう3（P38,39 ）<br/>- 文法説明<br/>Nをください <br/>- 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 20 (Tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe hiểu thông tin liên quan tới bài họcチャレンジ3<br/>2) Luyện tập ngữ pháp Nをください <br/>3) Luyện tập nói trên lớp 言ってみよう3 và luyện hội thoại<br/>4) Đặt câu hỏi cho nội dung chưa rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Tiết 3:<br/>第2課 - ST2: （続き）<br/> + やってみよう（P39      CD A25 ）<br/> + 読解：値段の読み方</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO4,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 20 (Tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện nghe bài tập nghe P39<br/>2) Làm bài đọc  値段の読み方 trong slide</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Tiết 1:<br/>第2課 - ST3: <br/>+チャレンジ1（P40   CD A26）<br/>+ 語彙確認<br/>+言ってみよう1（P42 ）<br/>-- 文法説明<br/>何のN</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 21 (Tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 3 bài 2<br/>2) Nghe hiểu thông tin liên quan tới bài học チャレンジ1<br/>3) Luyện tập ngữ pháp 何のN</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Tiết 2:<br/>第2課 - ST3: <br/>+チャレンジ2,3,4（P40   CD A27-29）<br/>+言ってみよう2,3,4（P43 ）<br/>- 文法説明<br/>［言語］で<br/>どこのN<br/>Nを（～つ）ください<br/>- 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 21 (Tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe hiểu thông tin liên quan tới bài học チャレンジ2,3,4<br/>2) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng và đặt câu với mẫu ngữ pháp mới<br/>［言語］で<br/>どこのN<br/>Nを（～つ）ください<br/>3) Luyện tập nói theo phần 言ってみよう2,3,4<br/>4) Luyện tập hội thoại</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>Tiết 3:<br/>第2課 - ST3: （続き） <br/> + チャレンジ5（P41   CD A30）<br/> +言ってみよう5（P43 ）<br/>-- 文法説明<br/>だれのN</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 22 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia thảo luận về các vấn đề đặt ra<br/>2) Học từ vựng <br/>3) Nắm được các nội dung của bài học</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>Tiết 1:<br/>第2課 - ST3: （続き） <br/> + やってみよう（P43      CD A31 ）<br/> +漢字：第2課</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide chữ Hánslot 22</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm bài tập nghe P43<br/>2) Nghe giải thích phần chữ Hán, đặt câu hỏi cho nội dung chưa rõ<br/>3) Dùng AI tra cứu thêm các từ ghép của các chữ Hán đã học<br/>4) Luyện tập chữ Hán ở nhà</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>Tiết 2:<br/>＋第2課復習<br/>　‐もう一度聞こう<br/>　‐宿題確認</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính</td>
+                            <td>
+
+                            </td>
+                            <td>1) Ôn tập nội dung đã được học.<br/>2) Xác nhận các thông tin chưa rõ.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>Tiết 3:<br/>第3課 - ST1: <br/>+話してみよう（P47）<br/>+聞いてみよう（P47  CD A32）<br/>+チャレンジ1（P48  CDA33）<br/>+ 語彙確認<br/>言ってみよう1（P50 ）<br/>-- 文法説明<br/>今、何時ですか　　時間の言い方</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 24 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Tham gia luyện tập, thảo luận về các vấn đề đặt ra ở 話してみよう（P47）<br/>2) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 1 bài 3 <br/>3) Nghe hiểu thông tin liên quan tới bài học チャレンジ1, 聞いてみよう.<br/>4) Luyện tập ngữ pháp 今、何時ですか　　時間の言い方</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>Tiết 1:<br/>第3課 - ST1 (続き） <br/>+チャレンジ2,3（49  CDA34, 35）<br/>言ってみよう2,3（P50 ）<br/>-- 文法説明<br/>［時間］から［時間］までです<br/>何曜日ですか　曜日の言い方 <br/> - 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 24 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe hiểu thông tin liên quan tới bài học チャレンジ2,3.<br/>2)  Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng và đặt câu với mẫu ngữ pháp mới<br/>［時間］から［時間］までです<br/>何曜日ですか　曜日の言い方. <br/>3) Luyện tập đặt câu, luyện hội thoại.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>Tiết 2:<br/>第3課 - ST1　（続き）<br/>+ やってみよう（P51      CD A36 ）</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện nghe trên lớp p51 và ở nhà.<br/>2) Ôn tập nội dung đã được học.<br/>3) Xác nhận các thông tin chưa rõ.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>Tiết 3:<br/>第3課 - ST1　（続き）<br/>　‐漢字：第3課</td>
+                            <td>Offline</td>
+                            <td>CLO2, CLO5</td>
+                            <td></td>
+                            <td class="product">Slide slot 25: chữ Hán bài 3</td>
+                            <td>
+
+                            </td>
+                            <td>1) Theo dõi bài giảng về chữ Hán.  <br/>2) Dùng AI tra cứu thêm các từ ghép của các chữ Hán đã học.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>Tiết 1:<br/>第3課 - ST2: <br/>+チャレンジ1（P52   CD A37）<br/>+ 語彙確認<br/>+言ってみよう1（P54 ）<br/>-- 文法説明<br/>Vます（予定）　～をVます</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 26 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Học trước từ vựng phần 2 bài 3.<br/>2)  Nghe hiểu thông tin liên quan tới bài học チャレンジ1.<br/>3) Luyện tập đặt câu với mẫu ngữ pháp Vます（予定）　～をVます.<br/>4) Luyện tập hội thoại.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Tiết 2:<br/>第3課 - ST2: <br/>+チャレンジ2（P52   CD A38）<br/>+言ってみよう2（P54 ）<br/>-- 文法説明<br/>［場所］へ<br/>- 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 26 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1)  Nghe hiểu thông tin liên quan tới bài học チャレンジ2<br/>2) Luyện tập ngữ pháp ［場所］へ<br/>3) Luyện tập hội thoại<br/>4) Đặt câu hỏi với nội dung chưa rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>Tiết 3:<br/>第3課 - ST2: （続き）<br/>+チャレンジ3（P53   CD A39）<br/>+ 語彙確認<br/>+言ってみよう3（P55 ）<br/>-- 文法説明<br/>Vません<br/>- 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 27( tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 2 bài 3<br/>2)  Nghe hiểu thông tin liên quan tới bài học チャレンジ3<br/>3) Luyện tập mẫu ngữ pháp Vません.<br/>4) Luyện tập đặt câu, luyện tập hội thoại 言ってみよう3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>Tiết 1:<br/>第3課 - ST2: （続き）<br/>+チャレンジ4（P53   CD A40）<br/>+言ってみよう4（P55 ）<br/>- 文法説明<br/>［場所］で<br/>- 応用会話練習<br/> + やってみよう（P56      CD A41 ）</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 27( tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1)  Nghe hiểu thông tin liên quan tới bài học チャレンジ4<br/>2) Luyện tập mẫu ngữ pháp ［場所］で<br/>3) Luyện tập đặt câu, luyện tập hội thoại 言ってみよう4<br/>4) Luyện bài tập nghe P56</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>Tiết 2:<br/>第3課 - ST3: <br/>+チャレンジ1（P58   CD A42）<br/>+ 語彙確認<br/>+言ってみよう1（P60 ）<br/>-- 文法説明<br/>Vます（習慣）</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 28 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe hiểu thông tin liên quan tới bài học チャレンジ<br/>2) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng từ vựng phần 3 bài 3<br/>3) Luyện tập ngữ pháp Vます（習慣）<br/>4) Luyện tập đặt câu, luyện nói 言ってみよう1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>Tiết 3:<br/>第3課 - ST3: <br/>+チャレンジ2,3,4（P58   CD A43-45）<br/>+言ってみよう2,3,4（P61 ）<br/>-- 文法説明<br/>NやNなど<br/>何もVません<br/>［時間］に<br/>- 応用会話練習</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 28 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe hiểu thông tin liên quan tới bài học チャレンジ2,3,4<br/>2) Luyện tập đặt câu với mẫu ngữ pháp NやNなど<br/>何もVません<br/>［時間］に<br/>3) Luyện tập nói, luyện đặt câu</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>Tiết 1:<br/>第3課 - ST3: （続き） <br/> + チャレンジ5,6（P59   CD A46,47）<br/> +言ってみよう5,6（P62 ）<br/>-- 文法説明<br/>［時間］から［時間］までVます<br/>どこへも行きません</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>ITU</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 29 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Nghe hiểu thông tin liên quan tới bài học チャレンジ5,6<br/>2) Sử dụng AI (ChatGPT, Copilot, v.v.) để tra cứu cách dùng và đặt câu với mẫu ngữ pháp mới<br/>［時間］から［時間］までVます<br/>どこへも行きません<br/>3) Luyện tập nói, luyện đặt câu</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>Tiết 2:<br/>第3課 - ST3: （続き） <br/>-  応用会話練習<br/> + やってみよう（P63      CD A48 ）<br/>　‐もう一度聞こう</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 29 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Luyện tập hội thoại<br/>2) Luyện nghe trên lớp P63; luyện nghe bài cuối sách<br/>3) Đặt câu hỏi cho nội dung chưa rõ</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>Tiết 3:<br/>＋第3課<br/>　‐宿題確認</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO3,CLO4,CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 30 (tiết 1)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Ôn tập lại từ vựng bài 3<br/>2) Ôn tập kiến thức bài 3</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>Tiết 1:<br/>＋Bài kiểm tra 2 (bài 2, bài 3)</td>
+                            <td>Offline</td>
+                            <td>CLO2,CLO4</td>
+                            <td>ITU</td>
+                            <td class="product">Bài kiểm tra 2 do GV tự biên soạn</td>
+                            <td>
+
+                            </td>
+                            <td>Nghiêm túc làm bài</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>Tiết 2:<br/>＋期末試験の復習</td>
+                            <td>Offline</td>
+                            <td>CLO1~CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 30 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm các bài tập trong sách Bài tập từ vựng, BT ngữ pháp<br/>2) Ôn tập từ bài 1 đến 3<br/>3) Đặt câu hỏi cho nội dung chưa rõ<br/>4) Dùng https://heyjapan.net/ để ôn tập về danh từ địa điểm, món ăn, số đếm, thời gian…</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>Tiết 3:<br/>＋期末試験の復習</td>
+                            <td>Offline</td>
+                            <td>CLO1~CLO5</td>
+                            <td>I, T,U</td>
+                            <td class="product">Giáo trình chính<br/>Slide của slot 30 (tiết 2)</td>
+                            <td>
+
+                            </td>
+                            <td>1) Làm các bài tập trong sách Bài tập từ vựng, BT ngữ pháp<br/>2) Ôn tập từ bài 1 đến 3<br/>3) Đặt câu hỏi cho nội dung chưa rõ<br/>4) Dùng https://heyjapan.net/ để ôn tập về danh từ địa điểm, món ăn, số đếm, thời gian…</td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">38 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CQ1.1</td>
+                            <td>Tiếng Nhật c&#243; bao nhi&#234;u kiểu chữ viết, chức năng của mỗi kiểu chữ ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1.2</td>
+                            <td>C&#225;c chữ Hiragana sau：
+H&#224;ng A:  あ、い、う、え、お
+H&#224;ng K: か、き、く、け、こ
+được tạo th&#224;nh từ c&#225;c h&#236;nh ảnh n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.3</td>
+                            <td>36 chữ Hiragana c&#242;n lại được tạo th&#224;nh từ c&#225;c h&#236;nh ảnh n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.1</td>
+                            <td>&#194;m đục/ b&#225;n &#226;m đục l&#224; những &#226;m như thế n&#224;o? Cho v&#237; dụ minh họa</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.2</td>
+                            <td>&#194;m gh&#233;p l&#224; những &#226;m như thế n&#224;o? Cho v&#237; dụ minh họa</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ2.3</td>
+                            <td>Giới thiệu một số c&#226;u ch&#224;o hỏi cơ bản theo từng buổi trong tiếng Nhật?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.1</td>
+                            <td>&#194;m d&#224;i l&#224; những &#226;m như thế n&#224;o? Cho v&#237; dụ minh họa</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ3.2</td>
+                            <td>&#194;m ngắt l&#224; những &#226;m như thế n&#224;o? Cho v&#237; dụ minh họa</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ3.3</td>
+                            <td>C&#225;c c&#225;ch thể hiện sự xin lỗi, cảm ơn trong tiếng Nhật ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ7.1</td>
+                            <td>Nội dung c&#226;u CQ7.1
+Khi gặp mặt một ai đ&#243; lần đầu ti&#234;n, ch&#250;ng ta sẽ ch&#224;o hỏi như thế n&#224;o? V&#224; ch&#250;ng ta sẽ giới thiệu những th&#244;ng tin g&#236; về bản th&#226;n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ7.2</td>
+                            <td>Nội dung c&#226;u CQ7.2
+H&#227;y n&#234;u những c&#225;ch hỏi về t&#234;n, quốc tịch, nghề nghiệp bằng tiếng Nhật.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ7.3</td>
+                            <td>Nội dung c&#226;u CQ7.3
+So s&#225;nh mẫu c&#226;u khẳng định, phủ định, c&#226;u hỏi để n&#243;i những th&#244;ng tin (t&#234;n, quốc tịch, nghề nghiệp) trong tiếng Nhật v&#224; tiếng Việt?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ7.4</td>
+                            <td>Nội dung c&#226;u CQ7.4
+Trong hội thoại, khi người trả lời đồng &#253; hoặc kh&#244;ng đồng &#253; với người n&#243;i sẽ c&#243; những c&#225;ch diễn đạt kh&#225;c nhau. H&#227;y chỉ ra c&#225;ch diễn đạt đ&#243; như thế n&#224;o.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ8.1</td>
+                            <td>Nội dung c&#226;u CQ8.1
+C&#225;ch n&#243;i sinh nhật trong tiếng Nhật như thế n&#224;o? N&#234;u cụ thể c&#225;ch n&#243;i sinh nhật m&#236;nh, c&#225;ch hỏi sinh nhật người kh&#225;c v&#224; cho v&#237; dụ.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ8.2</td>
+                            <td>Nội dung c&#226;u CQ8.2
+C&#225;ch n&#243;i tuổi trong tiếng Nhật như thế n&#224;o?　C&#243; những lưu &#253; g&#236; khi đếm tuổi?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ8.3</td>
+                            <td>Nội dung c&#226;u CQ8.3
+C&#225;ch n&#243;i ng&#224;y, th&#225;ng trong tiếng Nhật như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ8.4</td>
+                            <td>Nội dung c&#226;u CQ8.4
+Những lưu &#253; khi n&#243;i ng&#224;y th&#225;ng trong tiếng Nhật l&#224; g&#236;? C&#243; những quy tắc g&#236; đặc biệt khi n&#243;i ng&#224;y th&#225;ng kh&#244;ng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ9.1</td>
+                            <td>Nội dung c&#226;u CQ9.1
+Khi muốn n&#243;i từ 2 sở th&#237;ch trở l&#234;n, v&#224; muốn n&#243;i: &quot;T&#244;i cũng c&#243; sở th&#237;ch như vậy&quot; th&#236; ch&#250;ng ta sẽ n&#243;i như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ9.2</td>
+                            <td>Nội dung c&#226;u CQ9.2
+Khi n&#243;i về sở th&#237;ch, ch&#250;ng ta thường d&#249;ng những từ như thế n&#224;o? Tạo flash card hay d&#249;ng ảnh minh họa</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ9.3</td>
+                            <td>Nội dung c&#226;u CQ9.3
+C&#225;ch n&#243;i sở th&#237;ch của m&#236;nh v&#224; hỏi sở th&#237;ch của người kh&#225;c như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ9.4</td>
+                            <td>Nội dung c&#226;u CQ9.4
+Khi giới thiệu với một người lần đầu ti&#234;n gặp mặt về bản th&#226;n m&#236;nh, bạn sẽ giới thiệu c&#225;c th&#244;ng tin g&#236;? N&#234;u b&#224;i giới thiệu bằng tiếng Nhật.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">34</td>
+                            <td>CQ12.1</td>
+                            <td>Nội dung c&#226;u CQ12.1
+Khi v&#224;o trung t&#226;m mua sắm, thường sử dụng những từ vựng g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ12.2</td>
+                            <td>Nội dung c&#226;u CQ12.2
+Khi muốn n&#243;i tầng trong tiếng Nhật th&#236; n&#243;i như thế n&#224;o?( những tầng n&#224;o c&#243; c&#225;ch đọc đặc biệt?)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ12.3</td>
+                            <td>Nội dung c&#226;u CQ12.3
+C&#225;ch hỏi tầng trong tiếng Nhật như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CQ12.4</td>
+                            <td>Nội dung c&#226;u CQ12.4
+Khi muốn hỏi vị tr&#237; của nơi muốn mua đồ/ vị tr&#237; của vật... th&#236; hỏi như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CQ13.1</td>
+                            <td>Nội dung c&#226;u CQ13.1
+Khi muốn trả lời vị tr&#237; của nơi / vị tr&#237; của vật một c&#225;ch lịch sự... th&#236; trả lời như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CQ13.2</td>
+                            <td>Nội dung c&#226;u CQ13.2
+Khi muốn hỏi t&#234;n của c&#244;ng ty của đối phương th&#236; hỏi như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">38</td>
+                            <td>CQ13.3</td>
+                            <td>Nội dung c&#226;u CQ13.3
+Khi muốn hỏi gi&#225; sản phẩm th&#236; hỏi như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CQ13.4</td>
+                            <td>Nội dung c&#226;u CQ13.4
+C&#225;ch n&#243;i số h&#224;ng trăm, h&#224;ng ngh&#236;n, h&#224;ng vạn trong tiếng Nhật như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CQ13.5</td>
+                            <td>Nội dung c&#226;u CQ13.5
+Sự kh&#225;c nhau giữa これ・それ・あれ v&#224; 
+この・その・あの l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">40</td>
+                            <td>CQ14.1</td>
+                            <td>Nội dung c&#226;u CQ14.1
+Sau khi hỏi gi&#225; sản phẩm, khi quyết định mua sắm sẽ n&#243;i như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">41</td>
+                            <td>CQ14.2</td>
+                            <td>Nội dung c&#226;u CQ14.2
+Những từ vựng sử dụng trong nh&#224; h&#224;ng li&#234;n quan đến ăn uống l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CQ14.3</td>
+                            <td>Nội dung c&#226;u CQ14.3
+C&#225;ch hỏi v&#224; trả lời m&#243;n ăn (đồ uống) được l&#224;m từ g&#236; như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">43</td>
+                            <td>CQ15.1</td>
+                            <td>Nội dung c&#226;u CQ15.1
+C&#225;ch hỏi 1 từ vựng n&#224;o đ&#243; sang ng&#244;n ngữ kh&#225;c l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">43</td>
+                            <td>CQ15.2</td>
+                            <td>Nội dung c&#226;u CQ15.2
+C&#225;ch hỏi xuất xứ của một m&#243;n đồ l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CQ15.3</td>
+                            <td>Nội dung c&#226;u CQ15.3
+Muốn hỏi đồ vật n&#224;y l&#224; của ai th&#236; hỏi như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CQ15.4</td>
+                            <td>Nội dung c&#226;u CQ15.4
+Số đếm trong H&#225;n tự được viết như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CQ15.5</td>
+                            <td>Nội dung c&#226;u CQ15.5
+C&#225;ch đọc &#226;m ON, &#226;m KUN v&#224; &#253; nghĩa c&#225;c chữ H&#225;n trong b&#224;i 2 l&#224; g&#236;?</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">5 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Kiểm tra nhỏ (small test)</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>35'</td>
+                            <td>CLO1,2</td>
+                            <td>Small test 1: Trắc nghiệm  Small test 2: Trắc nghiệm</td>
+                            <td>30~35 câu</td>
+                            <td>1) Small test 1: bảng chữ+ bài 1 (từ vựng, ngữ pháp, chữ Hán)    Small test 2: bài 2, bài 3 (từ vựng, ngữ pháp, chữ Hán)     2) Kỹ năng: đọc</td>
+                            <td>   Trực tiếp trên lớp</td>
+                            <td>1) Giảng viên phụ trách tự chủ ra đề, chấm bài và tổng hợp điểm.<br/>2) Tỷ trọng cụ thể 2 phần như sau:<br/>Small test 1: 20%, Small test 2: 20%</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Tham gia giờ học tại giảng đường</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+15.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>135'</td>
+                            <td>CLO5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Trực tiếp trên lớp</td>
+                            <td>Tiêu chí đánh giá:<br/>1) Chuyên cần (Đi học đầy đủ): 5%<br/>2) Thái độ, ý thức trên lớp+ Sự tích cực, hăng hái tham gia bài giảng: 10%</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Thi cuối kỳ</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>2</td>
+                            <td>
+45.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>40'</td>
+                            <td>CLO1~CLO4</td>
+                            <td>Trắc nghiệm+ Speaking</td>
+                            <td>Phần MC (từ vựng, ngữ pháp, chữ Hán): 30 câu; Speaking: 1 đoạn văn+ 3~5 câu hỏi đáp</td>
+                            <td>1) Từ vựng, ngữ pháp, chữ Hán bài 1~bài 3                     2) Kỹ năng: nghe, nói, đọc</td>
+                            <td>Thi trên trường</td>
+                            <td>1.Thi đề chung<br/>2. Điều kiện hoàn thành môn học: thỏa mãn đồng thời 2 điều kiện dưới đây:<br/>a) Điểm đánh giá quá trình >0; Điểm thi cuối kì >=4/10; Tổng điểm chung cho toàn bộ môn học >=5/10;<br/>b) Thi cuối kỳ không có kỹ năng nào bị 0.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Thi cuối kỳ: Từ vựng, ngữ pháp, chữ Hán</td>
+                            <td>
+
+                                Final exam phần từ vựng, ngữ pháp, chữ Hán
+                            </td>
+                            <td>1</td>
+                            <td>
+15.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>30'</td>
+                            <td>CLO1,2,4</td>
+                            <td>Trắc nghiệm: từ vựng, ngữ pháp, chữ Hán bài 1~bài 3</td>
+                            <td>30 câu</td>
+                            <td>1) Từ vựng, ngữ pháp, chữ Hán bài 1~bài 3                 2) Kỹ năng: đọc</td>
+                            <td>Thi trên trường</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Thi cuối kỳ: Nói</td>
+                            <td>
+
+                                Final exam phần nói
+                            </td>
+                            <td>1</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>10'/SV</td>
+                            <td>CLO1~CLO4</td>
+                            <td>Speaking: Đọc đoạn văn+ trả lời câu hỏi</td>
+                            <td>1 đoạn văn+ 3~5 câu hỏi</td>
+                            <td>1) Từ vựng, ngữ pháp, chữ Hán bài 1~bài 3                      2) Kỹ năng: nghe, nói, đọc</td>
+                            <td>  Thi trên trường</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

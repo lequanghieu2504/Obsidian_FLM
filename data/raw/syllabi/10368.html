@@ -1,0 +1,3392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>10368</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Data Structures and Algorithm_Cấu tr&#250;c dữ liệu v&#224; giải thuật</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b>Data Structures and Algorithm</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>CSD201</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Social Constructivism,In-class lecture,Inquiry-based Teaching</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Study hour (150h) = 45h contact hours + 1h TE + 85' PE + 102.6h self-study</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>PRO192</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Upon finishing the course, students can:<br/>1) Knowledge: Understand (ABET e)<br/>- the connection between data structures and their algorithms, including an analysis of algorithms' complexity;<br/>- data structurre in the context of object-oriented program design;<br/>- how data structure are implemented in an OO programming language such as Java<br/>2) Able to (ABET e)<br/>- organize and manipulate basic structures: array, linked list,  tree, heap, hash<br/>- use algorithms for traversing, sorting, searching on studying structures<br/>- select a suitable algorithm to solve a practical problem<br/>3) Able to (ABET k)<br/>- use JAVA programming language for solving some problems<br/>- use Eclipse tool for developing programs in JAVA<br/>- Implement some programs in JAVA to solve practical problems based on the studying algorithms<br/>4) Others: (ABET i)<br/>- Improve study skills (academic reading, information searching, ...)</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>- Students must attend at least 80% of contact sessions in order to be accepted to the final examination.<br/>- Student is responsible to do all exercises given by instructor in class or at home and submit on time<br/>- Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td></td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>358/QĐ-ĐHFPT dated 04/03/2024</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>4/3/2024</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">4 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Michaelt T. Goodrich, Roberto Tamassia, Michael H. Goldwasser: Data Structures and Algorithms in Java, 6th Edition, 2014</td>
+                            <td>Michaelt T. Goodrich, Roberto Tamassia, Michael H. Goldwasser</td>
+                            <td>Wiley</td>
+                            <td>2014</td>
+                            <td>6th</td>
+                            <td>978-1-118-77133-4                                                                                   </td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>S&#225;ch online (Wiley platform)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>FU slides (ppt)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>FU exercises (pdf)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Code files for students (java files)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">8 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Describe the list data structure and its’ different way of implementations. Implement the singly linked list. LO1.1 Demonstrate the list data structure with basic operations: insert, remove, edit, search, sort,... LO1.2 Explain two ways of implementing a list: using arrays and using linked lists. LO1.3 Write programs to implement the singly linked list with basic operations: add (last, first, before, after, at position), search, edit, remove, reverse, sort... ) LO1.4 Understand the doubly linked-list data structure with basic operations. LO1.5 Write code snippets which manipulate operations on doubly linked list, and use diagrams to illustrate the effect. LO1.6 Describe the circularly linked-list data structure with some basic operations like add, remove. LO1.7 Expain why the Java code library provides the ArrayList and LinkedList classes</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Define stack and queue. Describe basic operations and the use of these structures. LO2.1 Define stack and queue. LO2.2 List and demonstrate the operations common to stacks and queues. LO2.3 Describe specific tasks to which stacks and queues are suited. LO2.4 Apply stacks to a specific application. LO2.5 Apply queues to a specific application. LO2.6 Write programs to implement stack and queue in Java programming language. LO2.7 Define and explain the need of priority queue.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Describe about recursive definitions, algorithms, functions and their implementation and use. LO3.1 Describe the basic ideas of recursion and how to set up recursive systems that represent certain real-world phenomena. LO3.2 Know how to develop recursive algorithms and programs LO3.3 Write programs in Java using recursion to solve some problems, like creating the Fibonacci sequence. LO3.4 Analyse a recursive function to find out its’ ouput without running. LO3.5 Explain type of recursive functions, give examples and comparing them. LO3.6 Compare recursion with iteration, analyzes their pros and cons</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Explain about general tree, Binary Tree and Binary Search Tree (BST). Implement BST with basic operations. LO4.1 Define general tree, Binary Tree and Binary Search Tree (BST). LO4.2 Given a BST and a sequence of insert and delete operations on it, draw the resulted tree. LO4.3 Find the smallest and largest elements, number of nodes in a tree and its’ height. LO4.4 Write code to implement features of a binary search tree, such as insertion, deletion, searching, traversals, nodes and height calculation, rotation ... LO4.5 Derive the time complexities for the above operations on a binary search tree. LO4.6 Compare a binary search tree over other data structures that we have discussed in class. LO4.7 Identify applications where a binary search tree will be useful. LO4.8 Define balanced BST and explane simple balancing algorithm. LO4.9 Define AVL Tree and explain by examples the insertion and deletion operations in it. LO5.10 Define heap and explain its’ application.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>D&#237;scuss about graphs and their application. Implement a graph with some basic operations. LO5.1 Demonstrate graphs and their applications. Define an undirected graph and directed graph. LO5.2 Explain basic notions about a graph: vertex, edge, adjacent vertices, incident edge,... LO5.3 Know how to represent a graph using matrix and list LO5.4 Able to apply BFS and DFS to traverse a graph LO5.5 Write prorams to implement Graph with BFS and DFS traversals using Java LO5.6 Explain the shortest path problem and Dijkstra’ algorithm. LO5.7 Write program in Java to implement Dijkstra’s shortest path algorithm. LO5.8 Define the minimum spanning tree and using the Kruskal’s algorithm to find it. LO5.9 Define Euler cycle/path and the necessary and sufficient conditions for their existance. LO5.10 Explain the algorithm to find Euler path / circuit using Stack and implement it in Java lannguage. LO5.11 Define Halmilton cycle/path and able to determine them using backtracking algorithm. LO5.12 Demonstrate the graph coloring and can apply Sequential coloring algorithm to color a graph.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>	Explain the operation and performance of some basic and advanced sorting alggorithms LO6.1 Explain the operation and performance of selection sort applying to arrays. LO6.2 Explain the operation and performance of insertion sort applying to arrays. LO6.3 Explain the operation and performance of bubble sort applying to arrays. LO6.4 Explain the operation and performance of quick sort applying to arrays. LO6.5 Explain the operation and performance of merge sort applying to arrays. LO6.6 Explain the operation and performance of heap sort applying to arrays. LO6.7 Demonstrate the operation and performance of radix sort.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Explain about hashing and application LO7.1 Explain the concept of &quot;hash&quot;. Define concepts hash function and hash table and their application. LO7.2 Demonstrate the types of hash functions: Division, Folding,... LO7.2 Explain the collision and collision-handling. LO7.3 Explain the open addressing method for collision-resolution: lear and quadratic probing. LO7.4 Explain the chaining method for collision-resolution: separate chaining and Coalesced chaining. LO7.5 Define perfect hash function and extendible hashing.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>Describe the Text Processing problem and its’ application. Explain the Huffman, LZW and Run-length encoding Algorithms. LO8.1 Describe the Text Processing problem and its’ application. LO8.2 Explain the Brute Force Text Pattern-Matching algorithm LO8.3 Describe the main idea of The Knuth-Morris-Pratt Algorithm LO8.4 Explain The Huffman Coding Algorithm. LO8.5 Explain steps needed to use The Huffman Coding Algorithm for compressing a text file. LO8.6 Explain the LZW encoding algorithm. LO8.7 Explain the Run-length encoding algorithm.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=10368" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Course Introduction<br/><br/>1.1. Using Arrays<br/>1.2. Singly Linked Lists</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+                                        <a href="/download/863/S/1_CSD201.zip" class="ContainSLink" >CSD201</a>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1.3. Circularly Linked Lists<br/>1.4. Doubly Linked Lists</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+                                        <a href="/download/863/S/2_CSD201.zip" class="ContainSLink" >CSD201</a>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO1</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2.1 Stacks</td>
+                            <td>Offline</td>
+                            <td>CLO2</td>
+                            <td>ITU</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO2</td>
+                            <td>ITU</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>2.2 Queues<br/>2.3 Double-Ended Queues (Deque)</td>
+                            <td>Offline</td>
+                            <td>CLO2</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>2.4 The Priority Queue</td>
+                            <td>Offline</td>
+                            <td>CLO2</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO2</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO2</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>3.1 Illustrative Examples<br/>3.1.1 The Factorial Function<br/>3.1.2 Binary Search<br/>3.1.3 File Systems</td>
+                            <td>Offline</td>
+                            <td>CLO3</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>3.2 Analyzing Recursive Algorithms<br/>3.3 Further Examples of Recursion<br/>3.3.1 Linear Recursion<br/>3.3.2 Binary Recursion<br/>3.3.3 Multiple Recursion<br/>3.4 Designing Recursive Algorithms<br/>3.5 Eliminating Tail Recursion</td>
+                            <td>Offline</td>
+                            <td>CLO3</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO3</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO3</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>4.1 General Trees<br/>4.1.1 Tree Definitions and Properties<br/>4.1.2 The Tree Abstract Data Type</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>4.2 Binary Trees  <br/>4.2.1 The Binary Tree Abstract Data Type<br/>4.2.2 Properties of Binary Trees<br/>4.3 Implementing Trees<br/>4.4 Tree Traversal Algorithms</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Progress test and/or<br/>Review Exercises<br/>Assignment evaluation</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>4.5 Binary Search Trees<br/>4.5.1 Searching Within a Binary Search Tree</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>4.5.2 Insertions and Deletions</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>4.6 Balanced Search Trees<br/>4.7 AVL Trees</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>4.8 Heaps</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 1</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Progress test 1 and review</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td>CLO4</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>5.1 Graphs<br/>5.2 Data Structures for Graphs<br/>5.2.1 Edge List Structure<br/>5.2.2 Adjacency List Structure<br/>5.2.3 Adjacency Matrix Structure</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>5.3 Graph Traversals<br/>5.3.1 Depth-First Search<br/>5.3.3 Breadth-First Search</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>5.4 Shortest Paths<br/>5.4.1 Weighted Graphs</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>5.4.2 Dijkstra’s Algorithm</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>5.5 Minimum Spanning Trees<br/>5.5.1 Prim-Jarn´ık Algorithm</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>5.5.2 Kruskal’s Algorithm<br/>5.6. Euler's tour and Euler's cycle</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO5</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>6.1 Selection-Sort<br/>6.2 Insertion-Sort</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>6.3 Bubble-sort<br/>6.4 Quick-Sort</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>6.5 Merge-Sort<br/>6.6 Heap-Sort</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>6.7 Linear-Time Sorting: Bucket-Sort and Radix-Sort<br/>6.8 Comparing Sorting Algorithms</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>T</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO6</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>7.1 Hash Tables<br/>7.2 Hash Functions<br/>7.3 Collision-Handling</td>
+                            <td>Offline</td>
+                            <td>CLO7</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>7.4 Load Factors, Rehashing, and Efficiency<br/>7.5 Java Hash Table Implementation</td>
+                            <td>Offline</td>
+                            <td>CLO7</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO7</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>Guiding Exercises/Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO7</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>8.1 Abundance of Digitized Text<br/>8.2 Pattern-Matching Algorithms<br/>8.2.1 Brute Force<br/>8.2.2 The Knuth-Morris-Pratt Algorithm</td>
+                            <td>Offline</td>
+                            <td>CLO8</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>8.3 Text Compression<br/>8.3.1 The Huffman Coding Algorithm<br/>8.3.2 The LZW Algorithm<br/>8.3.3 The Run-length Encoding Algorithm</td>
+                            <td>Offline</td>
+                            <td>CLO8</td>
+                            <td>IT</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO8</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>Progress test and/or<br/>Review Exercises</td>
+                            <td>Offline</td>
+                            <td>CLO8</td>
+                            <td>U</td>
+                            <td class="product">Text book, slides, exercises and sample practical examples</td>
+                            <td>
+
+                            </td>
+                            <td>Study just learned materials, do writing exercises and redo practical examples and do assignment 2</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>Assignment evaluation</td>
+                            <td>Offline</td>
+                            <td></td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>Assignment evaluation</td>
+                            <td>Offline</td>
+                            <td></td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>Progress test 2 and review</td>
+                            <td>Offline</td>
+                            <td></td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td></td>
+                            <td></td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">120 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CQ1.1</td>
+                            <td>Please list the advantages of Linked List over Array?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">1</td>
+                            <td>HCM_CQ1.1</td>
+                            <td>How do you insert an element into an array?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1.2</td>
+                            <td>What are the disadvantages of linked lists?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">2</td>
+                            <td>HCM_CQ1.2</td>
+                            <td>What are the disadvantages of using an array? List some cases that you think using an array is not optimal.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.3</td>
+                            <td>What are difference between Single, Circularly and Doubly Linked List?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">3</td>
+                            <td>HCM_CQ1.3</td>
+                            <td>How does a linked list solve the problems of an array? (for inserting, deleting an element)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ2.1</td>
+                            <td>What is a stack?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">4</td>
+                            <td>HCM_CQ2.1</td>
+                            <td>What is a stack? In your daily lives, describe 3 situations in which the stack principle is used.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.2</td>
+                            <td>What are the applications of the stack?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">5</td>
+                            <td>HCM_CQ2.2</td>
+                            <td>What are the applications of the stack in computer science/information technology?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.3</td>
+                            <td>What are the 3 primary methods for a stack?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">6</td>
+                            <td>HCM_CQ2.3</td>
+                            <td>What are the 3 primary methods for a stack?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ3.1</td>
+                            <td>What is a queue?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">7</td>
+                            <td>HCM_CQ3.1</td>
+                            <td>What is a queue? What would happen if there is no queue in a coffee shop?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.2</td>
+                            <td>What are difference between stack and queue?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">8</td>
+                            <td>HCM_CQ3.2</td>
+                            <td>What are difference between stack and queue?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ3.3</td>
+                            <td>What is a priority queue?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">9</td>
+                            <td>HCM_CQ3.3</td>
+                            <td>What is a priority queue? (hint: what happens if an ambulance uses a shared gate with other cars/vihicles in a hospital?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ4.1</td>
+                            <td>What is recursive?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">10</td>
+                            <td>HCM_CQ4.1</td>
+                            <td>What is recursive? What is/are recursive step(s) in Fibonacci number definition?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ4.2</td>
+                            <td>How many main parts does a recursive algorithm have?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">11</td>
+                            <td>HCM_CQ4.2</td>
+                            <td>How many main parts does a recursive algorithm have?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ4.3</td>
+                            <td>What are pro and cons of recursion?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">12</td>
+                            <td>HCM_CQ4.3</td>
+                            <td>What are pro and cons of recursion?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ5.1</td>
+                            <td>What are difference between Binary Tree and Binary Search Tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">13</td>
+                            <td>HCM_CQ5.1</td>
+                            <td>What are differences between a Binary Tree and a Binary Search Tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ5.2</td>
+                            <td>Which operation of tree is more efficient than array and linked list?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">14</td>
+                            <td>HCM_CQ5.2</td>
+                            <td>Which operation of tree is more efficient than array and linked list?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ5.3</td>
+                            <td>List the application of BT to specific problems?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">15</td>
+                            <td>HCM_CQ5.3</td>
+                            <td>List some applications/softwares/functions/systems using BST as the key element?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ6.1</td>
+                            <td>What is an AVL tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">16</td>
+                            <td>HCM_CQ6.1</td>
+                            <td>What will happen if you insert an ordered array into a BST?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ6.2</td>
+                            <td>What are difference between and Binary Search Tree and AVL Tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">17</td>
+                            <td>HCM_CQ6.2</td>
+                            <td>What are different between and Binary Search Tree and AVL Tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ6.3</td>
+                            <td>What is the complexity of a AVL tree search?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">18</td>
+                            <td>HCM_CQ6.3</td>
+                            <td>What is the complexity of a AVL tree for searching? Is an AVL different from a BST when searching an element?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ7.1</td>
+                            <td>What is heap?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">19</td>
+                            <td>HCM_CQ7.1</td>
+                            <td>What is a heap? What is the main difference between a min heap and a max heap?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">39</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.2</td>
+                            <td>What is the similarity and difference between binary tree, AVL tree and heap?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">40</td>
+                            <td style="text-align: center;">20</td>
+                            <td>HCM_CQ7.2</td>
+                            <td>What are the similarities and differences between binary tree, AVL tree and heap?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">41</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ7.3</td>
+                            <td>How to calculate balance factor in AVL tree ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">42</td>
+                            <td style="text-align: center;">21</td>
+                            <td>HCM_CQ7.3</td>
+                            <td>How to calculate balance factor in AVL tree? Show the formula?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">43</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ8.1</td>
+                            <td>What is the relationship between the number of edges and the sum of degrees of all vertices in the graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">44</td>
+                            <td style="text-align: center;">22</td>
+                            <td>HCM_CQ8.1</td>
+                            <td>What is the relationship between the number of edges and the sum of degrees of all vertices in the graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">45</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ8.2</td>
+                            <td>What is breadth-first search algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">23</td>
+                            <td>HCM_CQ8.2</td>
+                            <td>What is breadth-first search algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">47</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ8.3</td>
+                            <td>What is depth-first search algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">48</td>
+                            <td style="text-align: center;">24</td>
+                            <td>HCM_CQ8.3</td>
+                            <td>What is depth-first search algorithm? Compare InOrder, PreOrder, PostOrder traversal methods?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">49</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ9.1</td>
+                            <td>What is pseudo-graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">50</td>
+                            <td style="text-align: center;">25</td>
+                            <td>HCM_CQ9.1</td>
+                            <td>What is a connected-graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">51</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ9.2</td>
+                            <td>What is a complete graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">52</td>
+                            <td style="text-align: center;">26</td>
+                            <td>HCM_CQ9.2</td>
+                            <td>What is a complete graph?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">53</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ9.3</td>
+                            <td>What is the formula for calculating the number of edges of a complete graph with n vertices?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">54</td>
+                            <td style="text-align: center;">27</td>
+                            <td>HCM_CQ9.3</td>
+                            <td>What is the formula for calculating the number of edges of a complete graph with n vertices?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">55</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ10.1</td>
+                            <td>What is the difference between Dijkstra and Floy algorithms?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">56</td>
+                            <td style="text-align: center;">28</td>
+                            <td>HCM_CQ10.1</td>
+                            <td>What is the difference between Dijkstra and Floy algorithms? (about the input/output and complexities)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">57</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ10.2</td>
+                            <td>How to descript the graph on Java?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">58</td>
+                            <td style="text-align: center;">29</td>
+                            <td>HCM_CQ10.2</td>
+                            <td>How to use the graph structure on Java?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">59</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CQ10.3</td>
+                            <td>What are difference between BFS and DFS?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">60</td>
+                            <td style="text-align: center;">30</td>
+                            <td>HCM_CQ10.3</td>
+                            <td>In a real application, such as GG maps,  what happens when a user finds the way from A to B?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">61</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CQ11.1</td>
+                            <td>How to color the graph with the least number of colors?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">62</td>
+                            <td style="text-align: center;">31</td>
+                            <td>HCM_CQ11.1</td>
+                            <td>How to color the graph with the least number of colors?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">63</td>
+                            <td style="text-align: center;">32</td>
+                            <td>CQ11.2</td>
+                            <td>How to find the shortest path between any two vertices?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">64</td>
+                            <td style="text-align: center;">32</td>
+                            <td>HCM_CQ11.2</td>
+                            <td>In a city map, What is the maximum degree of vertices?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">65</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CQ11.3</td>
+                            <td>What is Dijkstra&#39;s algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">66</td>
+                            <td style="text-align: center;">33</td>
+                            <td>HCM_CQ11.3</td>
+                            <td>What is the key idea behind Dijkstra&#39;s algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">67</td>
+                            <td style="text-align: center;">34</td>
+                            <td>CQ12.1</td>
+                            <td>What is the difference between Dijkstra and Floyd algorithms?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">68</td>
+                            <td style="text-align: center;">34</td>
+                            <td>HCM_CQ12.1</td>
+                            <td>Is Floyd algorithm is the combination of n-time Dijkstra&#39;s algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">69</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CQ12.2</td>
+                            <td>How to know if graph has Euler cycle or not?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">70</td>
+                            <td style="text-align: center;">35</td>
+                            <td>HCM_CQ12.2</td>
+                            <td>How to know if a graph has Euler cycle or not?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">71</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CQ12.3</td>
+                            <td>What is a minimum spanning tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">72</td>
+                            <td style="text-align: center;">36</td>
+                            <td>HCM_CQ12.3</td>
+                            <td>What is a minimum spanning tree?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">73</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CQ13.1</td>
+                            <td>What are the similarities and differences of Kruskal and Prim Algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">74</td>
+                            <td style="text-align: center;">37</td>
+                            <td>HCM_CQ13.1</td>
+                            <td>What are the similarities and differences of Kruskal and Prim Algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">75</td>
+                            <td style="text-align: center;">38</td>
+                            <td>CQ13.2</td>
+                            <td>What is an Euler cycle?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">76</td>
+                            <td style="text-align: center;">38</td>
+                            <td>HCM_CQ13.2</td>
+                            <td>What is different from Euler cycle to Hamilton cycle?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">77</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CQ13.3</td>
+                            <td>What is Hamilton cycle?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">78</td>
+                            <td style="text-align: center;">39</td>
+                            <td>HCM_CQ13.3</td>
+                            <td>Are there any methods/algorithms to determine if a graph has Hamilton?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">79</td>
+                            <td style="text-align: center;">40</td>
+                            <td>CQ14.1</td>
+                            <td>What is the complexity of the select, insert and bubble algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">80</td>
+                            <td style="text-align: center;">40</td>
+                            <td>HCM_CQ14.1</td>
+                            <td>What is the complexity of the selection, insertion and bubble sort algorithms? How do you find your answer?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">81</td>
+                            <td style="text-align: center;">41</td>
+                            <td>CQ14.2</td>
+                            <td>Which of the 3 algorithms for selection, insertion and bubble is faster? Why?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">82</td>
+                            <td style="text-align: center;">41</td>
+                            <td>HCM_CQ14.2</td>
+                            <td>Which of the 3 algorithms for selection, insertion and bubble is faster? Why?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">83</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CQ14.3</td>
+                            <td>Which sorting algorithms do you know of, which can handle multithreading?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">84</td>
+                            <td style="text-align: center;">42</td>
+                            <td>HCM_CQ14.3</td>
+                            <td>Among the sorting algorithms you know, which can handle multithread programming?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">85</td>
+                            <td style="text-align: center;">43</td>
+                            <td>CQ15.1</td>
+                            <td>What is Quick sort?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">86</td>
+                            <td style="text-align: center;">43</td>
+                            <td>HCM_CQ15.1</td>
+                            <td>What is Quick sort? What is the key idea behind this algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">87</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CQ15.2</td>
+                            <td>Can you list the names of the sorting algorithms that belong to the divide-and-conquer algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">88</td>
+                            <td style="text-align: center;">44</td>
+                            <td>HCM_CQ15.2</td>
+                            <td>Can you list the names of the sorting algorithms that belong to the divide-and-conquer algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">89</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CQ15.3</td>
+                            <td>Which sorting algorithm needs more space to complete the classification?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">90</td>
+                            <td style="text-align: center;">45</td>
+                            <td>HCM_CQ15.3</td>
+                            <td>Which sorting algorithm needs more space to complete the classification?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">91</td>
+                            <td style="text-align: center;">46</td>
+                            <td>CQ16.1</td>
+                            <td>What is Merge sort?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">92</td>
+                            <td style="text-align: center;">46</td>
+                            <td>HCM_CQ16.1</td>
+                            <td>What is Merge sort? How is this algorithm different from Quick sort?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">93</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CQ16.2</td>
+                            <td>Which algorithm for sorting is the fastest? Why? (Selection, Insertion, Bubble, Quick, Merge, Heap, Radix sort)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">94</td>
+                            <td style="text-align: center;">47</td>
+                            <td>HCM_CQ16.2</td>
+                            <td>What are the main weaknesses of radix sort?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">95</td>
+                            <td style="text-align: center;">48</td>
+                            <td>CQ16.3</td>
+                            <td>Which sorting algorithm is best for memory? Why? (Selection, Insertion, Bubble, Quick, Merge, Heap, Radix sort)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">96</td>
+                            <td style="text-align: center;">48</td>
+                            <td>HCM_CQ16.3</td>
+                            <td>Which sorting algorithm is best for memory?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">97</td>
+                            <td style="text-align: center;">49</td>
+                            <td>CQ17.1</td>
+                            <td>What are the advantages and disadvantages of hashing?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">98</td>
+                            <td style="text-align: center;">49</td>
+                            <td>HCM_CQ17.1</td>
+                            <td>What are the advantages and disadvantages of hashing?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">99</td>
+                            <td style="text-align: center;">50</td>
+                            <td>CQ17.2</td>
+                            <td>How to select hash functions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">100</td>
+                            <td style="text-align: center;">50</td>
+                            <td>HCM_CQ17.2</td>
+                            <td>How to select hash functions? List some principles to select/design a good hash function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">101</td>
+                            <td style="text-align: center;">51</td>
+                            <td>CQ17.3</td>
+                            <td>What is a perfect hash function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">102</td>
+                            <td style="text-align: center;">51</td>
+                            <td>HCM_CQ17.3</td>
+                            <td>What is a perfect hash function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">103</td>
+                            <td style="text-align: center;">52</td>
+                            <td>CQ18.1</td>
+                            <td>How many ways to resolve collisions in hashing?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">104</td>
+                            <td style="text-align: center;">52</td>
+                            <td>HCM_CQ18.1</td>
+                            <td>How many ways to resolve collisions in hashing? Compare them in term of time and memory complexities?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">105</td>
+                            <td style="text-align: center;">53</td>
+                            <td>CQ18.2</td>
+                            <td>What is the complexity of Brute-Force algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">106</td>
+                            <td style="text-align: center;">53</td>
+                            <td>HCM_CQ18.2</td>
+                            <td>What is the complexity of Brute-Force algorithm in text pattern matching?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">107</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CQ18.3</td>
+                            <td>What is the complexity of Knuth-Morris-Pratt algorithm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">108</td>
+                            <td style="text-align: center;">54</td>
+                            <td>HCM_CQ18.3</td>
+                            <td>What is the complexity of Knuth-Morris-Pratt algorithm? What is the role of T[i] array?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">109</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CQ19.1</td>
+                            <td>What Is the difference in lossy vs lossless compression?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">110</td>
+                            <td style="text-align: center;">55</td>
+                            <td>HCM_CQ19.1</td>
+                            <td>What Is the difference between lossy and lossless compression?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">111</td>
+                            <td style="text-align: center;">56</td>
+                            <td>CQ19.2</td>
+                            <td>How to compare the efficiency of different data compression methods?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">112</td>
+                            <td style="text-align: center;">56</td>
+                            <td>HCM_CQ19.2</td>
+                            <td>How to compare the efficiency of different data compression methods?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">113</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CQ19.3</td>
+                            <td>What is Huffman encoding?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">114</td>
+                            <td style="text-align: center;">57</td>
+                            <td>HCM_CQ19.3</td>
+                            <td>What is Huffman encoding? What is the key idea of this method?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">115</td>
+                            <td style="text-align: center;">58</td>
+                            <td>CQ20.1</td>
+                            <td>What is LZW encoding ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">116</td>
+                            <td style="text-align: center;">58</td>
+                            <td>HCM_CQ20.1</td>
+                            <td>What is LZW encoding ? How does this method differ from Huffman method?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">117</td>
+                            <td style="text-align: center;">59</td>
+                            <td>CQ20.2</td>
+                            <td>What is Run-Length encoding ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">118</td>
+                            <td style="text-align: center;">59</td>
+                            <td>HCM_CQ20.2</td>
+                            <td>What is Run-Length encoding ? Do you think this algorithm is used to compress the cartoon movies?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">119</td>
+                            <td style="text-align: center;">60</td>
+                            <td>CQ20.3</td>
+                            <td>What is the difference between Huffman and LZW coding techniques?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">120</td>
+                            <td style="text-align: center;">60</td>
+                            <td>HCM_CQ20.3</td>
+                            <td>List some lossy compression methods? Explain why they are used even they cause information loss?</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">4 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Progress test (PT)</td>
+                            <td>
+
+                                quiz
+                            </td>
+                            <td>2</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>Option 1:  20'-40' Option 2 (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td></td>
+                            <td>Option 1: essay or multiple choice Option 2 (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Option 1: 15-30 if multiple choice Option 2 (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>PT 1<br/>LO1 - LO4<br/>PT 2<br/>LO5 - LO8<br/>Number of questions:<br/>3-8 for each LOx</td>
+                            <td>on paper or <br/>using computer</td>
+                            <td><br/>Progress test must be taken right after the last lectures of required material. <br/><br/>Instructor has resposibility to review the test for students after graded.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Assignment (AS)</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>Option 1: at home Option 2 (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td></td>
+                            <td>Option 1: a problem similar to  real one Option 2 (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Option 1: 1 Option 2 (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>AS1: LO1 - LO3<br/>AS2: LO4-LO6</td>
+                            <td>Individual or team work, guided by instructor, submission by a given deadline</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Practical  Exam</td>
+                            <td>
+
+                                practical exam
+                            </td>
+                            <td>1</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>85'</td>
+                            <td></td>
+                            <td>Preferable to be marked by scripts</td>
+                            <td>1-2 small problems</td>
+                            <td>problem(s) to solve by programming (LO1, LO2, LO4, LO6)</td>
+                            <td>supervised by proctor(s) sent by exam board</td>
+                            <td>Automatic or manual evaluating </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Final exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>60'</td>
+                            <td></td>
+                            <td>multiple choice</td>
+                            <td>50</td>
+                            <td>questions distribution:<br/>LO1.x: 5 - 8 <br/>LO2.x: 5 - 8 <br/>LO3.x: 3 - 7 <br/>LO4.x: 5 - 10 <br/>LO5.x: 5 - 8 <br/>LO6.x: 3 - 5 <br/>LO7.x: 3 - 5 <br/>LO8.x: 3 - 5 <br/><br/>more than 70% new questions (for the current semester);<br/></td>
+                            <td>supervised by proctor(s) sent by exam board</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

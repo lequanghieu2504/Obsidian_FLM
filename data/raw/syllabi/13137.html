@@ -1,0 +1,3809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>13137</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Mathematics for Engineering_To&#225;n cho ng&#224;nh kỹ thuật</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b></b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>MAE101</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture,Practice</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Study hour (150h) = 45 contact hours (60 sessions) + 1 hour final exam + 104 hours self-study</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Upon finishing the course, students must acquire: <br/>1. the following knowledge: (ABET a1)<br/>• The basic concepts of single variable calculus: limit, derivative, integral. <br/>• Concepts of linear system of equations, matrix and their applications<br/>• The concepts of vector spaces, basis and dimension, linear transformations and their applications.<br/>• The range of application of calculus and algebra in science, technology, economics & finance...<br/>2. the following skills: (ABET a2)<br/>• Find limit, derivative and integral of functions of single variables; <br/>• Find solutions to linear systems by using row-reduced echelon form, Cramer's Rule, inverse matrix<br/>• Find determinants and inverse of a matrix <br/>• Find linear transformations in R^2 and R^3.<br/>• Find dimensions and bases of vector spaces  . <br/>• Apply the concepts of calculus and algebra in solving problems in science, technology, economics & finance, ...</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>Students must attend at least 80% of contact hours in order to be accepted to the final examination.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td></td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>932/QĐ-ĐHFPT dated 08/22/2025</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>8/22/2025</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">12 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Calculus 1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://openstax.org/details/books/calculus-volume-1</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Calculus 2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://openstax.org/details/books/calculus-volume-2</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>powerpoint in CD + Powerpoint prepared by previous lecturers (PP).</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Student Video Skillbuilder in CD (Video).</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Animation in CD (Animation).</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>Computerized tools (for example Maxima http://maxima.sourceforge.net/) (CT)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>Essential Calculus</td>
+                            <td>James Stewart</td>
+                            <td>Thomson Brooks/Cole</td>
+                            <td></td>
+                            <td></td>
+                            <td>978-0-495-10860-3                                                                                   </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>Calculus for engineers</td>
+                            <td>Donald Trim</td>
+                            <td>Prentice Hall,</td>
+                            <td></td>
+                            <td></td>
+                            <td>0-13-085603-7                                                                                       </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>Calculus</td>
+                            <td>Stanley I. Grossman</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>0-03-096420-2                                                                                       </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td>Linear Algebra with applications</td>
+                            <td>W.Keith Nicholson,</td>
+                            <td>Mc Graw Hill Education</td>
+                            <td></td>
+                            <td></td>
+                            <td>987-1-259-07299-4.                                                                                  </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td>Linear Algebra with Applications</td>
+                            <td>W. Keith Nicholson</td>
+                            <td>Lyryx Online Resources</td>
+                            <td>2021</td>
+                            <td>2021-A</td>
+                            <td>                                                                                                    </td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://lyryx.com/linear-algebra-applications/</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td>Coursera - FPT University Private Authored Courses: Linear transformation with python (Guided Project) </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>Optional practice</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">9 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Describe basic properties and find the limit of a function
+LO1.1	Find the domain, range, zeros and analyze the symmetry of the graph; create new functions from old functions.
+LO1.2	Find the slope and write an equation of a line; describe how a function changes under graph translations.
+LO1.3	Compute the limit of a function using graphs and limit laws, including the Squeeze&#39;s Theorem.
+LO1.4	Find limits at infinity and infinity limits, and apply in finding asymptotes of a function.
+LO1.5	Identify where a function is continuous; use the Intermedia Value Theorem to show that an equation has a solution.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Calculate derivatives of a function
+LO2.1	Find the average rate of change; identify derivative as the limit of a difference quotient. 
+LO2.2	Recognize derivative as the instantaneous velocity and the slope of tangent lines.
+LO2.3	Find derivatives using basic formulas and the sum, difference, product, quotient, chain rules. </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Use derivatives to analyze a function and to solve applications
+LO3.1	Use implicit differentiation to find derivatives and to solve related rates problems.
+LO3.2	Find linear approximation of a function; calculate differentials and apply in calculating errors of approximation.
+LO3.3	Apply Rolle&#39;s Theorem and Mean Value Theorem to a function; find critical numbers and absolute extrema of a function. 
+LO3.4	Identify local extrema, and describe the monotonicity of a function; solve optimization problems.
+LO3.5	Recognize acceleration as second derivative; determine inflection points and describe the concavity of a function.
+LO3.6	Use Newton method to approximate solutions of an equation.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Calculate integrals and find area under the graph of a function
+LO4.1	Use Riemann sums to approximate area; recognize area as a definite integral which is the limit of Riemann sums.
+LO4.2	Apply the Fundamental Theorems of Calculus to find derivatives of integrals, and to evaluate definite integrals. 
+LO4.3	Recognize indefinite integrals as anti-derivatives; find integrals using basic formulas and the techniques of substitution and integration by parts.
+LO4.4	Use integration to solve applications and to compute the average value of a function. 
+LO4.5	Approximate definite integrals using Midpoint, Trapezoidal and Simpson rules. 
+LO4.6	Determine if an improper integral converges. </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>Solve a system of linear equations using Gaussian elimination
+LO5.1	Identify if a matrix is in echelon forms; carry a matrix into an echelon using row operations; calculate the rank of a matrix. 
+LO5.2	Use echelon matrices to solve/describe the solution set of a linear system.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>Perform basic operations on matrices and manipulate matrix transformations
+LO6.1	Perform addition, scalar multiplication and transpose of matrices; verify if a matrix is symmetric.
+LO6.2	Multiply two matrices of appropriate sizes; transform between a linear system and a matrix equation.
+LO6.3	Determine the matrix of a linear transformation; use properties of linear transformations in solving problems.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Find the determinant, inverse and diagonalization of a matrix
+LO7.1	Compute the cofactors and the determinant of a matrix; analyze determinants in relation with row/column operations.
+LO7.2	Check if a matrix is invertible; find the adjugate and the inverse of a matrix; use properties of inverses and determinants in solving problems.
+LO7.3	Solve a system of linear equations using inverse matrices or Cramer&#39;s rule.
+LO7.4	Find the characteristic polynomial, eigenvalues and eigenvectors to diagonalize a matrix; check if a matrix is diagonalizable.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>Manipulate vector operations and linear transformations in R^3.
+LO8.1	Manipulate vector operations; find equations of lines. 
+LO8.2	Compute the dot product and the angle between two vectors; find the projection of a vector on another vector and manipulate equations of planes.
+LO8.3	Compute the cross product; analyze areas and volumns in relation with dot and cross products.
+LO8.4	Determine linear transformations in R^3 and discuss applications in computer graphic.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>CLO9</td>
+                            <td>Find the dimension and bases of a subspace
+LO9.1	Determine if a subset of vectors is a subspace; describe the subspace spanned by a set of vectors.
+LO9.2	Check if a set of vectors are independent; determine if a set of vectors form a basis.
+LO9.3	Find a basis and the dimension of a subspace; analyze the rank in relation with the dimension of the column, row and the null space of a matrix.
+LO9.4	Compute dot product and length of vectors; check if a set of vectors are orthogonal or orthonormal; write a vector as a linear combination of an orthogonal basis.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=13137" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>0 Introduction.    <br/>1.1  Review of Functions.    <br/>1.2 Basic Classes of Functions</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>ITU</td>
+                            <td class="product">Textbook Chapter 1<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2.1 A Preview of Calculus. <br/>2.2 The Limit of a Functions</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2.3 The Limit Laws <br/>2.4 Continuity</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>3.1  Defining the Derivative    <br/>3.2 The Derivative as a Function</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>3.3 Differentiation Rule. <br/>3.4 Derivatives as Rates of Change                          <br/>3.5 Derivatives of Trigonometric Functions</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>3.6 The Chain Rule.                3.8 Implicit Differentiation</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>3.9 Derivatives of Exponential and Logarithmic Functions</td>
+                            <td>Offline</td>
+                            <td>LO2</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>4.1 Related Rates</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>4.2 Linear Approximations and Differentials</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>4.3 Maxima and Minima     <br/>4.4 The Mean Value Theorem</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>4.5 Derivatives and the Shape of a Graph       <br/>4.6 Limits at Infinity and Asymptotes</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>4.7 Applied Optimization Problems</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>4.9 Newton's Method</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>4.10 Antiderivatives</td>
+                            <td>Offline</td>
+                            <td>LO3</td>
+                            <td>TU</td>
+                            <td class="product">Textbook Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 4<br/>(Calculus Vol. 1)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>1.1 Approximating Areas</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>1.2 The Definite Integral <br/>1.3 The Fundamental Theorem of Calculus</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>1.4 Integration Formulas and the Net Change Theorem</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>1.5 Substitution</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 <br/>(Calculus Vol. 2)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>3.1 Integration by Parts                 3.6 Numerical Integration</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 <br/>(Calculus Vol. 2)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Calculus Vol. 2)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>3.7 Improper integrals</td>
+                            <td>Offline</td>
+                            <td>LO4</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 <br/>(Calculus Vol. 2)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Calculus Vol. 2)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO3, LO4</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Progress Test 1</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO3, LO4</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>1.1 Solutions of Systems of Linear Equations</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>IT</td>
+                            <td class="product">Textbook  Chapter 1 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>1.1 Elementary Operations</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>1.2 Gaussian Elimination</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>1.3 Homogeneous Equations</td>
+                            <td>Offline</td>
+                            <td>LO5</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 1 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 1 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>2.1 Matrix Addition, Scalar Multiplication, and Transposition</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>2.2 Matrix-Vector Multiplication</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>2.2 Matrix Transformations</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>2.3 Matrix multiplication</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>2.4 Matrix Inverses</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>2.4 Properties of Inverses</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>2.6 Linear Transformations</td>
+                            <td>Offline</td>
+                            <td>LO6</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 2 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 2 (Linear Algebra)<br/><br/>Optional Practice:<br/>Coursera - FPT University Private Authored Courses: Linear transformation with Python (Guided Project)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>3.1 The Cofactor Expansion</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>3.1 Properties of Determinants</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>3.2 Determinants and Matrix Inverses</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>3.2 Cramer's Rule</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>3.3 Eigenvalues and Eigenvectors</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>3.3 Diagonalization</td>
+                            <td>Offline</td>
+                            <td>LO7</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 3 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 3 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td>LO5, LO6, LO7</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Progress Test 2</td>
+                            <td>Offline</td>
+                            <td>LO5, LO6, LO7</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>4.1 Vectors</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>4.1 Lines in Space</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>4.2 Projections</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>4.2 Planes</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>4.2 Cross Product</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>4.3 More on the Cross Product</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>4.4 Linear Operations on R^3</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>4.4 Transformations of Areas and Volumes</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>TU</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>4.5 An application in Computer Graphics</td>
+                            <td>Offline</td>
+                            <td>LO8</td>
+                            <td>IT</td>
+                            <td class="product">Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Textbook<br/>Chapter 4<br/>(Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>5.1 Subspaces of R^n</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>5.1 Spanning Sets</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>5.2 Linear Independence</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>5.2 Dimension</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>5.3 Dot Product, Length, and Distance</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>5.3 Orthogonal Sets and the Expansion Theorem</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>5.4 Rank of a Matrix</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>5.4 Rank, Nullity, and Linear Systems</td>
+                            <td>Offline</td>
+                            <td>LO9</td>
+                            <td>TU</td>
+                            <td class="product">Textbook  Chapter 5 (Linear Algebra)</td>
+                            <td>
+
+                            </td>
+                            <td>Exercises Chapter 5 (Linear Algebra)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>Review</td>
+                            <td>Offline</td>
+                            <td>LO8, LO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>Progress Test 3</td>
+                            <td>Offline</td>
+                            <td>LO8, LO9</td>
+                            <td>U</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">168 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CQ1_DN</td>
+                            <td>Discuss four ways of representing a function. Illustrate your discussion with examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">1</td>
+                            <td>CT_CQ1</td>
+                            <td>Basis functions and the transformations of functions</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">1</td>
+                            <td>HCM_CQ1</td>
+                            <td>What is a function? Let&#39;s give an example. Then, find its domain and range.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1_DN</td>
+                            <td>Describe several ways in which a limit can fail to exist. Illustrate with sketches.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CT_CQ1</td>
+                            <td>Explain the relationship between one-sided and two-sided limits.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">2</td>
+                            <td>HCM_CQ2</td>
+                            <td>Suppose that the graph of f is given. Describe how the graph of the function y=f(x+a) + b can be obtained from the graph of f(x). (where a, b&gt;0)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1_DN</td>
+                            <td>What does it mean for f to be continuous at a, continuous on an interval? What can you say about the graph of such a function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe three kinds of discontinuities.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">3</td>
+                            <td>HCM_CQ3</td>
+                            <td>What does it mean to say that a line is the vertical asymptote of the curve? Draw curves to illustrate the various possibilities.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">3</td>
+                            <td>HCM_CQ4</td>
+                            <td>What is the graph of a function? How can you tell whether a given curve is the graph of a function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ1_DN</td>
+                            <td>Define the derivative f&#39;(a) . Discuss two ways of interpreting this number.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe three conditions for when a function does not have a derivative. Explain the meaning of a higher-order derivative.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">4</td>
+                            <td>HCM_CQ5</td>
+                            <td>Describe some cases where a function is not differentiable. Illustrate with sketches.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ1_DN</td>
+                            <td>Give several examples of how the derivative can be interpreted as a rate of change in physics, chemistry, biology, economics, or other sciences.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CT_CQ1</td>
+                            <td>Predict the future population from the present value and the population growth rate.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">5</td>
+                            <td>HCM_CQ6</td>
+                            <td>If y=f(x) and x varies from a to b, write expressions for the average rate of change of y with respect to x over the interval [a,b].</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ1_DN</td>
+                            <td>Find the equation of the tangent line to the folium of Descartes with equation 2x^3 + 2y^3 − 9xy = 0 at the point (2, 1).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CT_CQ1</td>
+                            <td>Recognize the chain rule for a composition of three or more functions.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">6</td>
+                            <td>HCM_CQ7</td>
+                            <td>What is an implicit function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">6</td>
+                            <td>HCM_CQ8</td>
+                            <td>Explain with examples how implicit differentiation works.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CT_CQ1</td>
+                            <td>Use logarithmic differentiation to determine the derivative of a function.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">7</td>
+                            <td>HCM_CQ9</td>
+                            <td>How are derivatives of exponential and logarithmic functions used in real life?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ1_DN</td>
+                            <td>How to solve a related rates problem? Illustrate with examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CT_CQ1</td>
+                            <td>Use the chain rule to find the rate of change of one quantity that depends on the rate of change of other quantities.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">8</td>
+                            <td>HCM_CQ10</td>
+                            <td>What is an example of a related rate in reality?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ1_DN</td>
+                            <td>How to use differentials to approximate the change in the value of the function that results from a small change in the value of the input?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe the linear approximation to a function at a point</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">9</td>
+                            <td>HCM_CQ11</td>
+                            <td>What is the linearization of an everywhere differential function f?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">9</td>
+                            <td>HCM_CQ12</td>
+                            <td>Suppose that f&quot;(x) &lt; 0 for x near a point. Is the linearization of f at the point an over-approximation or an under-approximation? Why?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ1_DN1</td>
+                            <td>Explain the difference between an absolute maximum and a local maximum. Illustrate with a sketch.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ2_DN1</td>
+                            <td>State the Mean Value Theorem and give a geometric interpretation.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CT_CQ1</td>
+                            <td>Define absolute extrema. Explain how to find the critical points of a function over a closed interval. Provide examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">10</td>
+                            <td>HCM_CQ13</td>
+                            <td>If f(x) is continuous on a closed interval, then it is enough to look at the points where f&#39;(x) = 0 in order to find its absolute maxima and minima. Be prepared to justify your answer.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CT_CQ1</td>
+                            <td>Use concavity and inflection points to explain how the sign of the second derivative affects the shape of a function’s graph.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">11</td>
+                            <td>HCM_CQ14</td>
+                            <td>What is the vertical/horizontal asymptote of a curve? Illustrate the possibilities by drawing.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">11</td>
+                            <td>HCM_CQ15</td>
+                            <td>How many horizontal asymptotes can a function have in maximum?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CT_CQ1</td>
+                            <td>Set up and solve optimization problems in several applied fields</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">12</td>
+                            <td>HCM_CQ16</td>
+                            <td>How do you solve applied optimization problems? Let&#39;s give an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">39</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ1_DN</td>
+                            <td>(a) Given an initial approximation x_1 to a root of the equation f(x)=0, explain geometrically, with a diagram, how the second approximation x_2 in Newton’s method is obtained.
+(b) Write an expression for x_2, x_n</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">40</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CT_CQ1</td>
+                            <td>Describe the steps of Newton’s method. Recognize when Newton’s method does not work. Provide examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">41</td>
+                            <td style="text-align: center;">13</td>
+                            <td>HCM_CQ17</td>
+                            <td>What is Newton&#39;s method? Give examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">42</td>
+                            <td style="text-align: center;">13</td>
+                            <td>HCM_CQ18</td>
+                            <td>Does Newton&#39;s method always work?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">43</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ1_DN</td>
+                            <td>A metal storage tank with volume V is to be constructed in the shape of a right circular cylinder surmounted by a hemisphere. What dimensions will require the least amount of
+metal?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">44</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CT_CQ1</td>
+                            <td>Use antidifferentiation to solve simple initial-value problems</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">45</td>
+                            <td style="text-align: center;">14</td>
+                            <td>HCM_CQ19</td>
+                            <td>What is the antiderivative? Why do we need to find the antiderivative of an integrable function?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ1_DN</td>
+                            <td>Use six rectangles to find estimates of each type for the
+area under the graph of f(x)= e^(x^2) from x=0 to x=1 .
+(a) L_6(sample points are left endpoints)
+(b) R_6(sample points are right endpoints)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">47</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CT_CQ1</td>
+                            <td>Compute the left and right Riemann sums—L6 and R6. Provide examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">48</td>
+                            <td style="text-align: center;">15</td>
+                            <td>HCM_CQ20</td>
+                            <td>How do you approximate the area under a curve? Let&#39;s take an example of the function f(x) = x^2 in the interval [1,2].</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">49</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ1_DN</td>
+                            <td>Write the definition of the definite integral of a continuous function from x=a to x=b .</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">50</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CT_CQ1</td>
+                            <td>Use Riemann sums to the approximate area.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">51</td>
+                            <td style="text-align: center;">16</td>
+                            <td>HCM_CQ21</td>
+                            <td>What are definite integrals? Give examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">52</td>
+                            <td style="text-align: center;">16</td>
+                            <td>HCM_CQ22</td>
+                            <td>What is the relationship between integrals and anti-derivatives?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">53</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ1_DN</td>
+                            <td>Use the Net Change Theorem to evaluate the net change in function . Illustrate with examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">54</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CT_CQ1</td>
+                            <td>Explain the significance of the net change theorem.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">55</td>
+                            <td style="text-align: center;">17</td>
+                            <td>HCM_CQ23</td>
+                            <td>How can we use definite integrals to determine the net change of a quantity?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">56</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ1_DN</td>
+                            <td>How do you use the Substitution Rule?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">57</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CT_CQ1</td>
+                            <td>When we use the substitution rule and how it is used.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">58</td>
+                            <td style="text-align: center;">18</td>
+                            <td>HCM_CQ24</td>
+                            <td>What is the substitution method for calculating integrals?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">59</td>
+                            <td style="text-align: center;">18</td>
+                            <td>HCM_CQ25</td>
+                            <td>Give an example of computing integrals by using substitution rule.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">60</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ1_DN</td>
+                            <td>Use Midpoint Rule and Trapezoidal Rule to approximate the value of an definite integral.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">61</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ2_DN1</td>
+                            <td>Approximate the value of an definite integral by using the Simpson’s Rule.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">62</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CT_CQ1</td>
+                            <td>When we use the integrate by parts rule and how it is used.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">63</td>
+                            <td style="text-align: center;">19</td>
+                            <td>HCM_CQ26</td>
+                            <td>How to prove the integral by parts formula?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">64</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CT_CQ1</td>
+                            <td>Evaluate an integral over an infinite interval.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">65</td>
+                            <td style="text-align: center;">20</td>
+                            <td>HCM_CQ27</td>
+                            <td>What are improper integrals?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">66</td>
+                            <td style="text-align: center;">20</td>
+                            <td>HCM_CQ28</td>
+                            <td>What are the real-life applications of improper integrals?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">67</td>
+                            <td style="text-align: center;">21</td>
+                            <td>HCM_CQ29</td>
+                            <td>What are the types of improper integrals?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">68</td>
+                            <td style="text-align: center;">22</td>
+                            <td>HCM_CQ30</td>
+                            <td>What is numerical integration with an example? Why do we implement numerical integration?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">69</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ1_DN</td>
+                            <td>How many solutions can a system of linear equations have?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">70</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CT_CQ1</td>
+                            <td>Show that a system consisting of exactly one linear equation can have no solution, one solution, or infinitely many solutions. Give examples</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">71</td>
+                            <td style="text-align: center;">23</td>
+                            <td>HCM_CQ31</td>
+                            <td>Give example of solving a system of linear equations in real life.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">72</td>
+                            <td style="text-align: center;">23</td>
+                            <td>HCM_CQ32</td>
+                            <td>How many solutions can a system of linear equations have?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">73</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ1_DN</td>
+                            <td>What are elementary row operations? Illustrate with examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">74</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CT_CQ1</td>
+                            <td>By examining the possible positions of lines in the plane, show that two equations in two variables can have zero, one, or infinitely many solutions.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">75</td>
+                            <td style="text-align: center;">24</td>
+                            <td>HCM_CQ33</td>
+                            <td>What are elementary operations in linear algebra? Let&#39;s give an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">76</td>
+                            <td style="text-align: center;">24</td>
+                            <td>HCM_CQ34</td>
+                            <td>What are reduced row echelon matrices?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">77</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ1_DN</td>
+                            <td>How do you solve a linear equation using the Gaussian elimination method?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">78</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CT_CQ1</td>
+                            <td>Using a series of elementary row operations to carry a matrix to row–echelon form, find the rank of a matrix.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">79</td>
+                            <td style="text-align: center;">25</td>
+                            <td>HCM_CQ35</td>
+                            <td>How does Gaussian elimination work?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">80</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CT_CQ1</td>
+                            <td>Condition for a homogeneous system to have a nontrivial solution</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">81</td>
+                            <td style="text-align: center;">26</td>
+                            <td>HCM_CQ36</td>
+                            <td>What are homogeneous systems?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">82</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ1_DN</td>
+                            <td>How to find the result of Matrix Addition, Scalar Multiplication, Transposition.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">83</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CT_CQ1</td>
+                            <td>Practicing some matrix operations</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">84</td>
+                            <td style="text-align: center;">27</td>
+                            <td>HCM_CQ37</td>
+                            <td>How do we define addition, scalar multiplication, and transpose operations of matrices?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">85</td>
+                            <td style="text-align: center;">27</td>
+                            <td>HCM_CQ38</td>
+                            <td>State at least 2 properties of matrix addition.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">86</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CT_CQ1</td>
+                            <td>What is the condition to multiply the matrix by the vector?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">87</td>
+                            <td style="text-align: center;">28</td>
+                            <td>HCM_CQ39</td>
+                            <td>Can we do the multiplication of any two matrices together?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">88</td>
+                            <td style="text-align: center;">28</td>
+                            <td>HCM_CQ40</td>
+                            <td>State at least 2 properties of matrix multiplication.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">89</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ1_DN</td>
+                            <td>How to use matrix -vector multiplication as Matrix Transformation in R^2.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">90</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CT_CQ1</td>
+                            <td>What is matrix transformation? For example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">91</td>
+                            <td style="text-align: center;">29</td>
+                            <td>HCM_CQ41</td>
+                            <td>What is the &#39;matrix transformation&#39;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">92</td>
+                            <td style="text-align: center;">29</td>
+                            <td>HCM_CQ42</td>
+                            <td>What is the matrix of reflection on the axis Ox in the Oxy-plane?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">93</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CQ1_DN</td>
+                            <td>How to multiply two matrices? Illustrate with examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">94</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CT_CQ1</td>
+                            <td>How to multiply two matrices? For example. Is it possible to multiply any two matrices together?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">95</td>
+                            <td style="text-align: center;">31</td>
+                            <td>CT_CQ1</td>
+                            <td>Find matrix inverse. Using matrix transformations to reveal the geometrical meaning of matrix multiplication and inverse.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">96</td>
+                            <td style="text-align: center;">31</td>
+                            <td>HCM_CQ43</td>
+                            <td>When is a square matrix invertible?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">97</td>
+                            <td style="text-align: center;">31</td>
+                            <td>HCM_CQ44</td>
+                            <td>Suppose A is an invertible matrix, how to find the inverse of A?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">98</td>
+                            <td style="text-align: center;">32</td>
+                            <td>CT_CQ1</td>
+                            <td>State the properties of inverse matrices, providing examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">99</td>
+                            <td style="text-align: center;">32</td>
+                            <td>HCM_CQ45</td>
+                            <td>What are the properties for the inverse existence of a matrix?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">100</td>
+                            <td style="text-align: center;">33</td>
+                            <td>CT_CQ1</td>
+                            <td>what are linear transformations? State the properties of linear transformations, with examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">101</td>
+                            <td style="text-align: center;">34</td>
+                            <td>CT_CQ1</td>
+                            <td>How to find The Cofactor Expansion</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">102</td>
+                            <td style="text-align: center;">34</td>
+                            <td>HCM_CQ46</td>
+                            <td>How to find the (i,j) -cofactor of a matrix?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">103</td>
+                            <td style="text-align: center;">34</td>
+                            <td>HCM_CQ47</td>
+                            <td>What are (i,j)-cofactors used for?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">104</td>
+                            <td style="text-align: center;">35</td>
+                            <td>CT_CQ1</td>
+                            <td>How to calculate the determinant and its properties.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">105</td>
+                            <td style="text-align: center;">35</td>
+                            <td>HCM_CQ48</td>
+                            <td>What is the determinant of a square matrix?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">106</td>
+                            <td style="text-align: center;">36</td>
+                            <td>CT_CQ1</td>
+                            <td>State the relationship formulas between the determinant of a matrix and the inverse matrix.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">107</td>
+                            <td style="text-align: center;">36</td>
+                            <td>HCM_CQ49</td>
+                            <td>Can you find determinant of non square matrices?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">108</td>
+                            <td style="text-align: center;">36</td>
+                            <td>HCM_CQ50</td>
+                            <td>Give an example of computing the determinant of a matrix by using elementary operations.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">109</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CQ1_DN</td>
+                            <td>How to solve a linear system using Cramer&#39;s rule.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">110</td>
+                            <td style="text-align: center;">37</td>
+                            <td>CT_CQ1</td>
+                            <td>How can you use Cramer’s Rule to tell if a system of linear equations has one, zero, or infinitely many solutions?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">111</td>
+                            <td style="text-align: center;">37</td>
+                            <td>HCM_CQ51</td>
+                            <td>State the Cramer&#39;s Rule.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">112</td>
+                            <td style="text-align: center;">38</td>
+                            <td>CQ1_DN</td>
+                            <td>How to find the characteristic equation, the eigenvalues, and bases for the eigenspaces of the matrix.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">113</td>
+                            <td style="text-align: center;">38</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the characteristic polynomial, eigenvalues and eigenvectors of matrix A. Provide examples.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">114</td>
+                            <td style="text-align: center;">38</td>
+                            <td>HCM_CQ52</td>
+                            <td>What is the characteristic polynomial of a matrix?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">115</td>
+                            <td style="text-align: center;">38</td>
+                            <td>HCM_CQ53</td>
+                            <td>What do we call the root of the characteristic polynomial of a matrix?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">116</td>
+                            <td style="text-align: center;">39</td>
+                            <td>CT_CQ1</td>
+                            <td>When is a matrix diagonalizable, give an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">117</td>
+                            <td style="text-align: center;">40</td>
+                            <td>HCM_CQ54</td>
+                            <td>How to find eigenvalues of a 2x2 matrix? When is it diagonalizable for sure?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">118</td>
+                            <td style="text-align: center;">40</td>
+                            <td>HCM_CQ55</td>
+                            <td>When do we guarantee a matrix is diagonalizable?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">119</td>
+                            <td style="text-align: center;">41</td>
+                            <td>HCM_CQ56</td>
+                            <td>What are the applications of diagonalization of a matrix?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">120</td>
+                            <td style="text-align: center;">42</td>
+                            <td>CT_CQ1</td>
+                            <td>What is the vector space R^n? for example</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">121</td>
+                            <td style="text-align: center;">42</td>
+                            <td>HCM_CQ57</td>
+                            <td>What is the vector space R^n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">122</td>
+                            <td style="text-align: center;">43</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the equations of the line. For example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">123</td>
+                            <td style="text-align: center;">43</td>
+                            <td>HCM_CQ58</td>
+                            <td>How to determine the equation of a line in R^3?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">124</td>
+                            <td style="text-align: center;">43</td>
+                            <td>HCM_CQ59</td>
+                            <td>Give the vector version of the equation of a line in R^3.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">125</td>
+                            <td style="text-align: center;">44</td>
+                            <td>CT_CQ1</td>
+                            <td>Calculate the distance from the point P to the line in each case and find the point Q on the line closest to P. P(3, 2, -1) line: x = 2 +t, y = 1-t, z = 3 - 2t.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">126</td>
+                            <td style="text-align: center;">44</td>
+                            <td>HCM_CQ60</td>
+                            <td>Let U and V be vectors in R^n and V ≠ 0. What is the projection of U onto V?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">127</td>
+                            <td style="text-align: center;">45</td>
+                            <td>CT_CQ1</td>
+                            <td>Find equation planes.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">128</td>
+                            <td style="text-align: center;">45</td>
+                            <td>HCM_CQ61</td>
+                            <td>How to define a plane in R^3?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">129</td>
+                            <td style="text-align: center;">45</td>
+                            <td>HCM_CQ62</td>
+                            <td>Give the vector version of the equation of a plane in R^3.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">130</td>
+                            <td style="text-align: center;">46</td>
+                            <td>CT_CQ1</td>
+                            <td>Show that if the diagonals of a parallelogram are perpendicular, it is necessarily a rhombus.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">131</td>
+                            <td style="text-align: center;">46</td>
+                            <td>HCM_CQ63</td>
+                            <td>What is the major difference between cross product and dot product?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">132</td>
+                            <td style="text-align: center;">47</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the area of the triangle.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">133</td>
+                            <td style="text-align: center;">47</td>
+                            <td>HCM_CQ64</td>
+                            <td>Why do we use cross products?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">134</td>
+                            <td style="text-align: center;">48</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the matrix of the operator (reflection, projection, rotation) in R^2/ R^3.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">135</td>
+                            <td style="text-align: center;">48</td>
+                            <td>HCM_CQ65</td>
+                            <td>Give an example of a linear transformation from R^3 to R^2.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">136</td>
+                            <td style="text-align: center;">48</td>
+                            <td>HCM_CQ66</td>
+                            <td>Give an example of a linear transformation from R^3 to R^2 and indicate the matrix of this transformation.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">137</td>
+                            <td style="text-align: center;">49</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the matrix of the rotation in R^3 about the x axis through the angle θ (from the positive y axis to the positive z axis).</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">138</td>
+                            <td style="text-align: center;">49</td>
+                            <td>HCM_CQ67</td>
+                            <td>How is the determinant related to volume?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">139</td>
+                            <td style="text-align: center;">50</td>
+                            <td>CT_CQ1</td>
+                            <td>What are the applications of transformation in computer graphics? For example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">140</td>
+                            <td style="text-align: center;">50</td>
+                            <td>HCM_CQ68</td>
+                            <td>What are the applications of transformation in computer graphics?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">141</td>
+                            <td style="text-align: center;">50</td>
+                            <td>HCM_CQ69</td>
+                            <td>What is the projection matrix of an orthogonal projection along a line?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">142</td>
+                            <td style="text-align: center;">51</td>
+                            <td>CT_CQ1</td>
+                            <td>When is U a subspace in R^3. For example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">143</td>
+                            <td style="text-align: center;">51</td>
+                            <td>HCM_CQ70</td>
+                            <td>How to determine whether a subset is a subspace of R^n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">144</td>
+                            <td style="text-align: center;">51</td>
+                            <td>HCM_CQ71</td>
+                            <td>Is R^n a subspace of itself?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">145</td>
+                            <td style="text-align: center;">52</td>
+                            <td>CT_CQ1</td>
+                            <td>How to find a spanning set of a subspace?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">146</td>
+                            <td style="text-align: center;">52</td>
+                            <td>HCM_CQ72</td>
+                            <td>How to find a finite spanning set of a subspace?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">147</td>
+                            <td style="text-align: center;">53</td>
+                            <td>CQ1_DN</td>
+                            <td>How do you tell if a vector is linearly independent or dependent?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">148</td>
+                            <td style="text-align: center;">53</td>
+                            <td>CT_CQ1</td>
+                            <td>How to find a basis of R^4.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">149</td>
+                            <td style="text-align: center;">53</td>
+                            <td>HCM_CQ73</td>
+                            <td>What is linear dependence/ linear independence of a set of vectors?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">150</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CQ1_DN</td>
+                            <td>How do you find the basis and dimension of a subspace?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">151</td>
+                            <td style="text-align: center;">54</td>
+                            <td>CT_CQ1</td>
+                            <td>Calculate the dimension of R^4.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">152</td>
+                            <td style="text-align: center;">54</td>
+                            <td>HCM_CQ74</td>
+                            <td>What is the dimension of R^n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">153</td>
+                            <td style="text-align: center;">54</td>
+                            <td>HCM_CQ75</td>
+                            <td>How to define the dimension of a subspace of R^n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">154</td>
+                            <td style="text-align: center;">55</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the length of the vector, provide example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">155</td>
+                            <td style="text-align: center;">55</td>
+                            <td>HCM_CQ76</td>
+                            <td>How is the distance between two vectors related to dot product?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">156</td>
+                            <td style="text-align: center;">56</td>
+                            <td>CQ1_DN</td>
+                            <td>What are orthogonal and orthonormal sets?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">157</td>
+                            <td style="text-align: center;">56</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the condition for the sets is orthogonal</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">158</td>
+                            <td style="text-align: center;">56</td>
+                            <td>HCM_CQ77</td>
+                            <td>What are orthogonal and orthonormal sets?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">159</td>
+                            <td style="text-align: center;">56</td>
+                            <td>HCM_CQ78</td>
+                            <td>What is the main benefit of working with orthonormal sets?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">160</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CQ1_DN</td>
+                            <td>how to find the rank of a matrix?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">161</td>
+                            <td style="text-align: center;">57</td>
+                            <td>CT_CQ1</td>
+                            <td>Show that the rank does not change when an elementary row or column operation is performed on a matrix.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">162</td>
+                            <td style="text-align: center;">57</td>
+                            <td>HCM_CQ79</td>
+                            <td>How to determine the rank of a matrix in the determinant method?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">163</td>
+                            <td style="text-align: center;">58</td>
+                            <td>CT_CQ1</td>
+                            <td>Find the relationship between rank of matrix and nullity</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">164</td>
+                            <td style="text-align: center;">58</td>
+                            <td>HCM_CQ80</td>
+                            <td>What is the rank and nullity of a linear transformation?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">165</td>
+                            <td style="text-align: center;">58</td>
+                            <td>HCM_CQ81</td>
+                            <td>State some relationship between the rank and the nullity of a linear transformation.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">166</td>
+                            <td style="text-align: center;">59</td>
+                            <td>HCM_CQ82</td>
+                            <td>What are positive definite matrices? Give an example.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">167</td>
+                            <td style="text-align: center;">59</td>
+                            <td>HCM_CQ83</td>
+                            <td>If A, B are positive definite matrices, is so A + B?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">168</td>
+                            <td style="text-align: center;">60</td>
+                            <td>HCM_CQ84</td>
+                            <td>List some applications of calculus and linear algebra in real life.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">3 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Assignments/Exercises</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>3</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>3 hours </td>
+                            <td>LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>OP1: Open // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>OP1: At least 3/chapter // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Assignment 1 covers Chapters 1, 2, 3, 4 (Vol.1), 1, 3 (Vol.2) - Calculus ; Assignment 2 covers Chapters 1, 2, 3 (Linear algebra) ; Assignment 3 covers Chapters 4, 5 (Linear algebra)</td>
+                            <td>   OP1: Each assignment is divided into two parts: the take-home component counts for no more than 50% of the total grade, and the in-class component counts for at least 50% (this may take the form of a presentation, essay, problem-solving, etc.).<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Students use notebooks for exercises<br/>Assignment 1: LO1, LO2, LO3, LO4<br/>Assignment 2: LO5, LO6, LO7<br/>Assignment 3: LO8, LO9</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Progress Test</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>3</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>OP1: Test 1:  40'; Test 2&3: 30' // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>OP1: MC or a suitable format // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>OP1: Test 1: 20    Test 2&3: 15+  At least 5*n questions where n is the number of Chapters covered in the test.+ Structure:• level 1 (knowledge & comprehension): 20%; • level 2 (application & analysis): 60%; • level 3 (synthesis & evaluation): 20% // OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Test 1 covers Chapters 1, 2, 3, 4 (Vol.1), 1, 3 (Vol.2) - Calculus ; Test 2 covers Chapters 1, 2, 3 (Linear algebra) ; Test 3 covers Chapters 4, 5 (Linear algebra)</td>
+                            <td> OP1: by instructor, and by computer<br/>OP2: (For Constructivism Approach only): Follow lecturer's proposal</td>
+                            <td>Instruction and shedules for Progress tests must be presented in the  Course Implementation Plan approved by director of the campus. <br/><br/>Progress test must be taken right after the last lectures of required material. <br/><br/>Instructor has resposibility to review the test for students after graded.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Final Exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>60'</td>
+                            <td></td>
+                            <td>Computer gradable</td>
+                            <td>50<br/>Structure:<br/>• level 1: 10% <br/>• level 2: 80% <br/>• level 3: 10%</td>
+                            <td>All studied chapters.  Each studied Chapter contributes 2-8 questions, depending on the number of topics in the Chapter.</td>
+                            <td>by Exam Board</td>
+                            <td>~10% of <br/>questions is a2 objective oriented</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

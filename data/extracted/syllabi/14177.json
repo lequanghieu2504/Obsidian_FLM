@@ -1,0 +1,4660 @@
+{
+  "id": "14177",
+  "metadata": {
+    "Syllabus ID": "14177",
+    "Syllabus Name": "Software development project_Dự án phát triển phần mềm",
+    "Course Name English": "Software Development Project",
+    "Subject Code": "SWP391",
+    "Learning-Teaching Method": "Lecture, Lab, Group Discussion, Presentation, Peer Review.AI-integrated tasks across all Software Development Life Cycle phases",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 1h Project Presentation + 104h self-study",
+    "Pre-Requisite": "PRJ301, SWE201c or SWE202c, pass LAB211",
+    "Description": "This course guides students through the full Software Development Life Cycle (SDLC) by working on a real-world team project, with an emphasis on applying AI responsibly in requirement analysis, design, implementation, and testing. Students will practice user story writing, system design, coding using MVC and OOP, workflow development, testing, and reporting. AI tools are integrated into each phase to enhance productivity and quality.",
+    "StudentTasks": "- Join the team as arranged by the teacher - Select the project topic & technology stack and get approval from teacher before implementing - Attend at least 80% of contact slots in order to be accepted to the final presentation. - Analyze requirements, write user requirements, and create system diagrams with AI-assisted tools. - Design system architecture, database schema, and UI/UX wireframes using MVC, OOP, and AI suggestions. - Implement core features with AI-supported coding, apply coding standards, and manage source code in Git. - Develop and run unit/integration tests, using AI to suggest and refine test cases. - Deploy the application to staging, verify functionality, and prepare for final delivery. - Manage project progress, present milestones, and prepare high-quality reports with AI support.",
+    "Tools": "- Requirement & Design: Miro, Lucidchart, Figma, Draw.io, ChatGPT, Gemini - Coding & Debugging: IntelliJ IDEA / VS Code / Visual Studio, GitHub Copilot, Tabnine - Database: MySQL Workbench, SQL Server Management Studio, pgAdmin -Testing: JUnit, NUnit, Postman, Selenium, AI-powered test case generators - Project Management: Jira, Trello, Notion, Git/GitHub - Deployment: Docker, Heroku, AWS / Azure / GCP, Vercel",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "377/QĐ-ĐHFPT dated 04/09/2026",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/9/2026"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "14177"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "14177"
+        ],
+        [
+          "Syllabus Name:",
+          "Software development project_Dự án phát triển phần mềm"
+        ],
+        [
+          "Course Name English:",
+          "Software Development Project"
+        ],
+        [
+          "Subject Code:",
+          "SWP391"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Lecture, Lab, Group Discussion, Presentation, Peer Review.AI-integrated tasks across all Software Development Life Cycle phases"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 1h Project Presentation + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PRJ301, SWE201c or SWE202c, pass LAB211"
+        ],
+        [
+          "Description:",
+          "This course guides students through the full Software Development Life Cycle (SDLC) by working on a real-world team project, with an emphasis on applying AI responsibly in requirement analysis, design, implementation, and testing. Students will practice user story writing, system design, coding using MVC and OOP, workflow development, testing, and reporting. AI tools are integrated into each phase to enhance productivity and quality."
+        ],
+        [
+          "StudentTasks:",
+          "- Join the team as arranged by the teacher - Select the project topic & technology stack and get approval from teacher before implementing - Attend at least 80% of contact slots in order to be accepted to the final presentation. - Analyze requirements, write user requirements, and create system diagrams with AI-assisted tools. - Design system architecture, database schema, and UI/UX wireframes using MVC, OOP, and AI suggestions. - Implement core features with AI-supported coding, apply coding standards, and manage source code in Git. - Develop and run unit/integration tests, using AI to suggest and refine test cases. - Deploy the application to staging, verify functionality, and prepare for final delivery. - Manage project progress, present milestones, and prepare high-quality reports with AI support."
+        ],
+        [
+          "Tools:",
+          "- Requirement & Design: Miro, Lucidchart, Figma, Draw.io, ChatGPT, Gemini - Coding & Debugging: IntelliJ IDEA / VS Code / Visual Studio, GitHub Copilot, Tabnine - Database: MySQL Workbench, SQL Server Management Studio, pgAdmin -Testing: JUnit, NUnit, Postman, Selenium, AI-powered test case generators - Project Management: Jira, Trello, Notion, Git/GitHub - Deployment: Docker, Heroku, AWS / Azure / GCP, Vercel"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "377/QĐ-ĐHFPT dated 04/09/2026"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/9/2026"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14177",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software development project_Dự án phát triển phần mềm",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Development Project",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWP391",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab, Group Discussion, Presentation, Peer Review.AI-integrated tasks across all Software Development Life Cycle phases",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 1h Project Presentation + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRJ301, SWE201c or SWE202c, pass LAB211",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This course guides students through the full Software Development Life Cycle (SDLC) by working on a real-world team project, with an emphasis on applying AI responsibly in requirement analysis, design, implementation, and testing. Students will practice user story writing, system design, coding using MVC and OOP, workflow development, testing, and reporting. AI tools are integrated into each phase to enhance productivity and quality.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Join the team as arranged by the teacher - Select the project topic & technology stack and get approval from teacher before implementing - Attend at least 80% of contact slots in order to be accepted to the final presentation. - Analyze requirements, write user requirements, and create system diagrams with AI-assisted tools. - Design system architecture, database schema, and UI/UX wireframes using MVC, OOP, and AI suggestions. - Implement core features with AI-supported coding, apply coding standards, and manage source code in Git. - Develop and run unit/integration tests, using AI to suggest and refine test cases. - Deploy the application to staging, verify functionality, and prepare for final delivery. - Manage project progress, present milestones, and prepare high-quality reports with AI support.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Requirement & Design: Miro, Lucidchart, Figma, Draw.io, ChatGPT, Gemini - Coding & Debugging: IntelliJ IDEA / VS Code / Visual Studio, GitHub Copilot, Tabnine - Database: MySQL Workbench, SQL Server Management Studio, pgAdmin -Testing: JUnit, NUnit, Postman, Selenium, AI-powered test case generators - Project Management: Jira, Trello, Notion, Git/GitHub - Deployment: Docker, Heroku, AWS / Azure / GCP, Vercel",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "377/QĐ-ĐHFPT dated 04/09/2026",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/9/2026",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Prompt Engineering for Developers (OpenAI & DeepLearning.AI)",
+          "Deep Learning AI",
+          "Coursera",
+          "N/A",
+          "N/A",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.deeplearning.ai/short-courses/prompt-engineering/"
+        ],
+        [
+          "2",
+          "Software Engineering",
+          "Ian Sommerville",
+          "Pearson",
+          "2015",
+          "10th",
+          "978-0133943030",
+          "False",
+          "True",
+          "False",
+          "https://www.amazon.com/dp/0133943038"
+        ],
+        [
+          "3",
+          "Spring MVC With Spring Boot (All Modules) and Project",
+          "Packt - Course Instructors",
+          "Coursera",
+          "N/A",
+          "N/A",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/packt-spring-mvc-with-spring-boot-all-modules-and-project-xlnjc"
+        ],
+        [
+          "4",
+          "ASP.NET Core MVC Fundamentals & CRUD Operations",
+          "Packt - Course Instructors",
+          "Coursera",
+          "N/A",
+          "N/A",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/packt-asp-net-core-mvc-fundamentals-crud-asd1a?specialization=packt-asp-net-core-mvc-net-8-the-complete-guide"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Prompt Engineering for Developers (OpenAI & DeepLearning.AI)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deep Learning AI",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.deeplearning.ai/short-courses/prompt-engineering/",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Engineering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Ian Sommerville",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Pearson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2015",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10th",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-0133943030",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.amazon.com/dp/0133943038",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring MVC With Spring Boot (All Modules) and Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Packt - Course Instructors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/packt-spring-mvc-with-spring-boot-all-modules-and-project-xlnjc",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ASP.NET Core MVC Fundamentals & CRUD Operations",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Packt - Course Instructors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/packt-asp-net-core-mvc-fundamentals-crud-asd1a?specialization=packt-asp-net-core-mvc-net-8-the-complete-guide",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Analyze and clarify project requirements with AI-assisted elicitation and documentation"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Design system modules and databases using MVC, OOP, and AI-supported modelling tools"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Create ERD models and implement relational databases with SQL, applying AI tools for design validation and query optimization."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Develop web applications in Java/.NET/Node.js with AI-enhanced coding, debugging, and workflow implementation."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Demonstrate teamwork, professional ethics, and responsible AI use in software development."
+        ],
+        [
+          "6",
+          "CLO6",
+          "Deliver effective presentations and reports with AI-aided content and visualization."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analyze and clarify project requirements with AI-assisted elicitation and documentation",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design system modules and databases using MVC, OOP, and AI-supported modelling tools",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Create ERD models and implement relational databases with SQL, applying AI tools for design validation and query optimization.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop web applications in Java/.NET/Node.js with AI-enhanced coding, debugging, and workflow implementation.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate teamwork, professional ethics, and responsible AI use in software development.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deliver effective presentations and reports with AI-aided content and visualization.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction & Topic Allocation",
+          "Lecture, Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Collaboration",
+          "Course outline, IDE",
+          "SWP391",
+          "Listen to course overview, join teams",
+          ""
+        ],
+        [
+          "2",
+          "Course Introduction & Topic Allocation",
+          "Lecture, Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Collaboration",
+          "Course outline, IDE",
+          "SWP391",
+          "Listen to course overview, join teams",
+          ""
+        ],
+        [
+          "3",
+          "Introduction to AI-Augmented SDLC",
+          "Lecture, Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Collaboration",
+          "Reading file, IDE",
+          "",
+          "Learn SDLC concept, note AI examples",
+          ""
+        ],
+        [
+          "4",
+          "User Requirements Development with Domain Experts (invited guest, lecturer role-play or AI Agents).",
+          "Lecture, Lab,Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Problem solving",
+          "Requirement doc, IDE",
+          "",
+          "Practice requirement elicitation, draft simple requirement document",
+          ""
+        ],
+        [
+          "5",
+          "User Requirements Development with Domain Experts (invited guest, lecturer role-play or AI Agents).",
+          "Lecture, Lab,Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Problem solving",
+          "Requirement doc, IDE",
+          "",
+          "Practice requirement elicitation, draft simple requirement document",
+          ""
+        ],
+        [
+          "6",
+          "User Requirements Development with Domain Experts (invited guest, lecturer role-play or AI Agents).",
+          "Lecture, Lab,Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Problem solving",
+          "Requirement doc, IDE",
+          "",
+          "Practice requirement elicitation, draft simple requirement document",
+          ""
+        ],
+        [
+          "7",
+          "Data Modeling- ERD Conceptual & Logical",
+          "Lecture, Lab,Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Problem solving",
+          "ERD tool, diagrams",
+          "",
+          "Sketch ER diagram, refine with relationships, validate with data",
+          ""
+        ],
+        [
+          "8",
+          "Data Modeling- ERD Conceptual & Logical",
+          "Lecture, Lab,Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Problem solving",
+          "ERD tool, diagrams",
+          "",
+          "Sketch ER diagram, refine with relationships, validate with data",
+          ""
+        ],
+        [
+          "9",
+          "Data Modeling- ERD Conceptual & Logical",
+          "Lecture, Lab,Discussion",
+          "CLO1, CLO4",
+          "AI literacy, Problem solving",
+          "ERD tool, diagrams",
+          "",
+          "Sketch ER diagram, refine with relationships, validate with data",
+          ""
+        ],
+        [
+          "10",
+          "Database design- Tables and Constraints",
+          "Lecture, Discussion",
+          "CLO1, CLO2",
+          "Critical thinking, AI literacy",
+          "SQL scripts, IDE",
+          "",
+          "Map ERD to tables, add keys/constraints, run sample DDL",
+          ""
+        ],
+        [
+          "11",
+          "Database design- Tables and Constraints",
+          "Lecture, Discussion",
+          "CLO1, CLO2",
+          "Critical thinking, AI literacy",
+          "SQL scripts, IDE",
+          "",
+          "Map ERD to tables, add keys/constraints, run sample DDL",
+          ""
+        ],
+        [
+          "12",
+          "Database design- Tables and Constraints",
+          "Lecture, Discussion",
+          "CLO1, CLO2",
+          "Critical thinking, AI literacy",
+          "SQL scripts, IDE",
+          "",
+          "Map ERD to tables, add keys/constraints, run sample DDL",
+          ""
+        ],
+        [
+          "13",
+          "Software design with MVC Pattern",
+          "Lecture, Lab",
+          "CLO2",
+          "Creativity, AI literacy",
+          "MVC design doc, IDE",
+          "",
+          "Sketch MVC design, define controllers/views, present diagram",
+          ""
+        ],
+        [
+          "14",
+          "Software design with MVC Pattern",
+          "Lecture, Lab",
+          "CLO2",
+          "Creativity, AI literacy",
+          "MVC design doc, IDE",
+          "",
+          "Sketch MVC design, define controllers/views, present diagram",
+          ""
+        ],
+        [
+          "15",
+          "Software design with MVC Pattern",
+          "Lecture, Lab",
+          "CLO2",
+          "Creativity, AI literacy",
+          "MVC design doc, IDE",
+          "",
+          "Sketch MVC design, define controllers/views, present diagram",
+          ""
+        ],
+        [
+          "16",
+          "UI & Workflow Prototyping",
+          "Lecture, Lab",
+          "CLO2",
+          "Creativity, AI literacy",
+          "Prototyping tool, UI mockups",
+          "",
+          "Draw wireframes, build prototype, present to peers",
+          ""
+        ],
+        [
+          "17",
+          "UI & Workflow Prototyping",
+          "Lecture, Lab",
+          "CLO2",
+          "Creativity, AI literacy",
+          "Prototyping tool, UI mockups",
+          "",
+          "Draw wireframes, build prototype, present to peers",
+          ""
+        ],
+        [
+          "18",
+          "UI & Workflow Prototyping",
+          "Lecture, Lab",
+          "CLO2",
+          "Creativity, AI literacy",
+          "Prototyping tool, UI mockups",
+          "",
+          "Draw wireframes, build prototype, present to peers",
+          ""
+        ],
+        [
+          "19",
+          "Milestone 1 Review & Evaluation",
+          "Presentation, Q&A",
+          "CLO1, CLO2",
+          "Communication, Critical thinking",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "20",
+          "Milestone 1 Review & Evaluation",
+          "Presentation, Q&A",
+          "CLO1, CLO2",
+          "Communication, Critical thinking",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "21",
+          "Milestone 1 Review & Evaluation",
+          "Presentation, Q&A",
+          "CLO1, CLO2",
+          "Communication, Critical thinking",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "22",
+          "Development Phase Planning (Phase 2)",
+          "Lecture, Lab",
+          "CLO2, CLO2",
+          "AI literacy, Problem solving",
+          "Planning doc, chart",
+          "",
+          "Make phase plan, assign tasks, confirm timeline",
+          ""
+        ],
+        [
+          "23",
+          "Environment Setup and Version Control",
+          "Lecture, Lab",
+          "CLO2, CLO3",
+          "AI literacy, Problem solving",
+          "Git client, IDE",
+          "",
+          "Install IDE & Git, configure environment, practice commit/push",
+          ""
+        ],
+        [
+          "24",
+          "Environment Setup and Version Control",
+          "Lecture, Lab",
+          "CLO2, CLO3",
+          "AI literacy, Problem solving",
+          "Git client, IDE",
+          "",
+          "Install IDE & Git, configure environment, practice commit/push",
+          ""
+        ],
+        [
+          "25",
+          "Build Model in MVC- Develop Repository & Service Layers",
+          "Lecture, Lab",
+          "CLO6",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Write sample repository/service code, commit and test",
+          ""
+        ],
+        [
+          "26",
+          "Build Model in MVC- Develop Repository & Service Layers",
+          "Lecture, Lab",
+          "CLO5",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Write sample repository/service code, commit and test",
+          ""
+        ],
+        [
+          "27",
+          "Build Model in MVC- Develop Repository & Service Layers",
+          "Lecture, Lab",
+          "CLO4",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Write sample repository/service code, commit and test",
+          ""
+        ],
+        [
+          "28",
+          "Workflow 0: Basic Web Security- Register/Login/Logout/Forgot Password",
+          "Lecture, Lab",
+          "CLO0",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Implement login form, add validation, connect DB",
+          ""
+        ],
+        [
+          "29",
+          "Workflow 0: Basic Web Security- Register/Login/Logout/Forgot Password",
+          "Lecture, Lab",
+          "CLO1",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Implement login form, add validation, connect DB",
+          ""
+        ],
+        [
+          "30",
+          "Workflow 0: Basic Web Security- Register/Login/Logout/Forgot Password",
+          "Lecture, Lab",
+          "CLO2",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Implement login form, add validation, connect DB",
+          ""
+        ],
+        [
+          "31",
+          "Workflow 1: Basic CRUD in DB Tables- Master Data Setup",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Create CRUD forms, insert/update/test records",
+          ""
+        ],
+        [
+          "32",
+          "Workflow 1: Basic CRUD in DB Tables- Master Data Setup",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Create CRUD forms, insert/update/test records",
+          ""
+        ],
+        [
+          "33",
+          "Workflow 1: Basic CRUD in DB Tables- Master Data Setup",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Create CRUD forms, insert/update/test records",
+          ""
+        ],
+        [
+          "34",
+          "Workflow 2: Core Transaction Flow (Success Path)",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Draw transaction flow, code success path, run tests",
+          ""
+        ],
+        [
+          "35",
+          "Workflow 2: Core Transaction Flow (Success Path)",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Draw transaction flow, code success path, run tests",
+          ""
+        ],
+        [
+          "36",
+          "Workflow 2: Core Transaction Flow (Success Path)",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Draw transaction flow, code success path, run tests",
+          ""
+        ],
+        [
+          "37",
+          "Workflow 2: Core Transaction Flow (Exception Path)",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Draw transaction flow, code exception path, run tests",
+          ""
+        ],
+        [
+          "38",
+          "Workflow 2: Core Transaction Flow (Exception Path)",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Draw transaction flow, code exception path, run tests",
+          ""
+        ],
+        [
+          "39",
+          "Workflow 2: Core Transaction Flow (Exception Path)",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Git client, IDE",
+          "",
+          "Draw transaction flow, code exception path, run tests",
+          ""
+        ],
+        [
+          "40",
+          "AI-support for Automation Testing",
+          "Presentation, Q&A",
+          "CLO2, CLO3",
+          "Communication, Critical thinking",
+          "Test cases, AI tool",
+          "",
+          "Try AI tool for test cases, run scripts, adjust test scripts",
+          ""
+        ],
+        [
+          "41",
+          "AI-support for Automation Testing",
+          "Presentation, Q&A",
+          "CLO2, CLO3",
+          "Communication, Critical thinking",
+          "Test cases, AI tool",
+          "",
+          "Try AI tool for test cases, run scripts, adjust test scripts",
+          ""
+        ],
+        [
+          "42",
+          "AI-support for Automation Testing",
+          "Presentation, Q&A",
+          "CLO2, CLO3",
+          "Communication, Critical thinking",
+          "Test cases, AI tool",
+          "",
+          "Try AI tool for test cases, run scripts, adjust test scripts",
+          ""
+        ],
+        [
+          "43",
+          "Milestone 2 Review & Evaluation",
+          "Presentation, Q&A",
+          "CLO2, CLO3",
+          "Communication, Critical thinking",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "44",
+          "Milestone 2 Review & Evaluation",
+          "Presentation, Q&A",
+          "CLO2, CLO3",
+          "Communication, Critical thinking",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "45",
+          "Milestone 2 Review & Evaluation",
+          "Presentation, Q&A",
+          "CLO2, CLO3",
+          "Communication, Critical thinking",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "46",
+          "Workflow 3: Dashboard & Reporting",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Dashboard mockup, KPI sheet",
+          "",
+          "Identify KPIs, build charts, present dashboard",
+          ""
+        ],
+        [
+          "47",
+          "Workflow 3: Dashboard & Reporting",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Dashboard mockup, KPI sheet",
+          "",
+          "Identify KPIs, build charts, present dashboard",
+          ""
+        ],
+        [
+          "48",
+          "Workflow 3: Dashboard & Reporting",
+          "Lecture, Lab",
+          "CLO3",
+          "Problem solving, AI literacy",
+          "Dashboard mockup, KPI sheet",
+          "",
+          "Identify KPIs, build charts, present dashboard",
+          ""
+        ],
+        [
+          "49",
+          "Software Deployment and Data Preparation",
+          "Lecture, Discussion",
+          "CLO4, CLO5",
+          "AI literacy, Communication",
+          "Deployment script",
+          "",
+          "Practice deployment steps, seed sample data, run demo",
+          ""
+        ],
+        [
+          "50",
+          "Software Deployment and Data Preparation",
+          "Lecture, Discussion",
+          "CLO4, CLO5",
+          "AI literacy, Communication",
+          "Deployment script",
+          "",
+          "Practice deployment steps, seed sample data, run demo",
+          ""
+        ],
+        [
+          "51",
+          "Software Deployment and Data Preparation",
+          "Lecture, Discussion",
+          "CLO4, CLO5",
+          "AI literacy, Communication",
+          "Deployment script",
+          "",
+          "Practice deployment steps, seed sample data, run demo",
+          ""
+        ],
+        [
+          "52",
+          "User Acceptance Tesing and Quality Improvement",
+          "Presentation, Q&A",
+          "CLO5",
+          "Communication, Collaboration",
+          "UAT report, defect log",
+          "",
+          "Join UAT, fix small defects, re-test improvements",
+          ""
+        ],
+        [
+          "53",
+          "User Acceptance Tesing and Quality Improvement",
+          "Presentation, Q&A",
+          "CLO5",
+          "Communication, Collaboration",
+          "UAT report, defect log",
+          "",
+          "Join UAT, fix small defects, re-test improvements",
+          ""
+        ],
+        [
+          "54",
+          "User Acceptance Tesing and Quality Improvement",
+          "Presentation, Q&A",
+          "CLO5",
+          "Communication, Collaboration",
+          "UAT report, defect log",
+          "",
+          "Join UAT, fix small defects, re-test improvements",
+          ""
+        ],
+        [
+          "55",
+          "Milestone 3- Final Presentation",
+          "Presentation, Q&A",
+          "CLO5",
+          "Communication, Collaboration",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "56",
+          "Milestone 3- Final Presentation",
+          "Presentation, Q&A",
+          "CLO5",
+          "Communication, Collaboration",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "57",
+          "Milestone 3- Final Presentation",
+          "Presentation, Q&A",
+          "CLO5",
+          "Communication, Collaboration",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "58",
+          "Project Closing and Retrospective",
+          "Presentation, Q&A",
+          "CLO3, CLO4, CLO5",
+          "Communication, Critical thinking",
+          "Retrospective notes, repo archive",
+          "",
+          "Join retrospective, clean up repo, share lessons learned",
+          ""
+        ],
+        [
+          "59",
+          "Project Closing and Retrospective",
+          "Presentation, Q&A",
+          "CLO3, CLO4, CLO5",
+          "Communication, Critical thinking",
+          "Retrospective notes, repo archive",
+          "",
+          "Join retrospective, clean up repo, share lessons learned",
+          ""
+        ],
+        [
+          "60",
+          "Project Closing and Retrospective",
+          "Presentation, Q&A",
+          "CLO3, CLO4, CLO5",
+          "Communication, Critical thinking",
+          "Retrospective notes, repo archive",
+          "",
+          "Join retrospective, clean up repo, share lessons learned",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction & Topic Allocation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course outline, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWP391",
+            "links": [
+              {
+                "text": "SWP391",
+                "href": "https://flm.fpt.edu.vn/download/13273/S/1_SWP391.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Listen to course overview, join teams",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction & Topic Allocation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course outline, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWP391",
+            "links": [
+              {
+                "text": "SWP391",
+                "href": "https://flm.fpt.edu.vn/download/13273/S/2_SWP391.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Listen to course overview, join teams",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to AI-Augmented SDLC",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Reading file, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn SDLC concept, note AI examples",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "User Requirements Development with Domain Experts (invited guest, lecturer role-play or AI Agents).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab,Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirement doc, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice requirement elicitation, draft simple requirement document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "User Requirements Development with Domain Experts (invited guest, lecturer role-play or AI Agents).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab,Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirement doc, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice requirement elicitation, draft simple requirement document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "User Requirements Development with Domain Experts (invited guest, lecturer role-play or AI Agents).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab,Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirement doc, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice requirement elicitation, draft simple requirement document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Modeling- ERD Conceptual & Logical",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab,Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ERD tool, diagrams",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sketch ER diagram, refine with relationships, validate with data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Modeling- ERD Conceptual & Logical",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab,Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ERD tool, diagrams",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sketch ER diagram, refine with relationships, validate with data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Modeling- ERD Conceptual & Logical",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab,Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ERD tool, diagrams",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sketch ER diagram, refine with relationships, validate with data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Database design- Tables and Constraints",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Critical thinking, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SQL scripts, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Map ERD to tables, add keys/constraints, run sample DDL",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Database design- Tables and Constraints",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Critical thinking, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SQL scripts, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Map ERD to tables, add keys/constraints, run sample DDL",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Database design- Tables and Constraints",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Critical thinking, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SQL scripts, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Map ERD to tables, add keys/constraints, run sample DDL",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software design with MVC Pattern",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creativity, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MVC design doc, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sketch MVC design, define controllers/views, present diagram",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software design with MVC Pattern",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creativity, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MVC design doc, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sketch MVC design, define controllers/views, present diagram",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software design with MVC Pattern",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creativity, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MVC design doc, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sketch MVC design, define controllers/views, present diagram",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UI & Workflow Prototyping",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creativity, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Prototyping tool, UI mockups",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw wireframes, build prototype, present to peers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UI & Workflow Prototyping",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creativity, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Prototyping tool, UI mockups",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw wireframes, build prototype, present to peers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UI & Workflow Prototyping",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creativity, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Prototyping tool, UI mockups",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw wireframes, build prototype, present to peers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 1 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 1 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 1 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Development Phase Planning (Phase 2)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Planning doc, chart",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Make phase plan, assign tasks, confirm timeline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Environment Setup and Version Control",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install IDE & Git, configure environment, practice commit/push",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Environment Setup and Version Control",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Problem solving",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install IDE & Git, configure environment, practice commit/push",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build Model in MVC- Develop Repository & Service Layers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write sample repository/service code, commit and test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build Model in MVC- Develop Repository & Service Layers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write sample repository/service code, commit and test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build Model in MVC- Develop Repository & Service Layers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write sample repository/service code, commit and test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 0: Basic Web Security- Register/Login/Logout/Forgot Password",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement login form, add validation, connect DB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 0: Basic Web Security- Register/Login/Logout/Forgot Password",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement login form, add validation, connect DB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 0: Basic Web Security- Register/Login/Logout/Forgot Password",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement login form, add validation, connect DB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 1: Basic CRUD in DB Tables- Master Data Setup",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Create CRUD forms, insert/update/test records",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 1: Basic CRUD in DB Tables- Master Data Setup",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Create CRUD forms, insert/update/test records",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 1: Basic CRUD in DB Tables- Master Data Setup",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Create CRUD forms, insert/update/test records",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 2: Core Transaction Flow (Success Path)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw transaction flow, code success path, run tests",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 2: Core Transaction Flow (Success Path)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw transaction flow, code success path, run tests",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 2: Core Transaction Flow (Success Path)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw transaction flow, code success path, run tests",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 2: Core Transaction Flow (Exception Path)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw transaction flow, code exception path, run tests",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 2: Core Transaction Flow (Exception Path)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw transaction flow, code exception path, run tests",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 2: Core Transaction Flow (Exception Path)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Git client, IDE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draw transaction flow, code exception path, run tests",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI-support for Automation Testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test cases, AI tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Try AI tool for test cases, run scripts, adjust test scripts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI-support for Automation Testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test cases, AI tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Try AI tool for test cases, run scripts, adjust test scripts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI-support for Automation Testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test cases, AI tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Try AI tool for test cases, run scripts, adjust test scripts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 2 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 2 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 2 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 3: Dashboard & Reporting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dashboard mockup, KPI sheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Identify KPIs, build charts, present dashboard",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 3: Dashboard & Reporting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dashboard mockup, KPI sheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Identify KPIs, build charts, present dashboard",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Workflow 3: Dashboard & Reporting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem solving, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dashboard mockup, KPI sheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Identify KPIs, build charts, present dashboard",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Deployment and Data Preparation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Communication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deployment script",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice deployment steps, seed sample data, run demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Deployment and Data Preparation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Communication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deployment script",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice deployment steps, seed sample data, run demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Deployment and Data Preparation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture, Discussion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI literacy, Communication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deployment script",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice deployment steps, seed sample data, run demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "User Acceptance Tesing and Quality Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UAT report, defect log",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Join UAT, fix small defects, re-test improvements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "User Acceptance Tesing and Quality Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UAT report, defect log",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Join UAT, fix small defects, re-test improvements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "User Acceptance Tesing and Quality Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UAT report, defect log",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Join UAT, fix small defects, re-test improvements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 3- Final Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 3- Final Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Milestone 3- Final Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Collaboration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Closing and Retrospective",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Retrospective notes, repo archive",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Join retrospective, clean up repo, share lessons learned",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Closing and Retrospective",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Retrospective notes, repo archive",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Join retrospective, clean up repo, share lessons learned",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Closing and Retrospective",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation, Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Communication, Critical thinking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Retrospective notes, repo archive",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Join retrospective, clean up repo, share lessons learned",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assessment 1 (Week3)Milestone 1: Requirement Analysis & Design",
+          "on-going",
+          "1",
+          "15.0%",
+          ">0",
+          "20'/group",
+          "CLO1, CLO2, CLO4",
+          "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+          "",
+          "Requirement analysing, AI-assisted documentation, system architecture, initial UI, ERD",
+          "Evaluation Items: - SRS Document (30%): ≥15 pages, ≥12 user stories, complete and validated with AI + expert. - Design Artifacts (50%): ERD with ≥8 entities, valid state diagram, clear architecture, consistent UI. - Process (20%): ≥6 AI logs and 4 weekly reports with evidence.",
+          "View Rubrics Document for more details"
+        ],
+        [
+          "2",
+          "Assessment 2 (Week 8)Milestone 2 : Workflow 1 & 2 Implementation",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "20'/group",
+          "CLO2, CLO3, CLO4",
+          "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+          "",
+          "Coding modules, database integration, AI-assisted debugging, functional testing",
+          "Evaluation Items: - Workflow Implementation (50%): Workflow 0 + Workflow 1 + Workflow 2 (main flow + ≥2 exception paths) fully functional. - Codebase & Database (30%) : Multi-layer design (e.g., MVC), complete CRUD classes, DB ≥10 tables, normalized with full PK/FK. - Process (20%) : ≥8 commits/member + ≥6 AI debugging logs.",
+          "View Rubrics Document for more details"
+        ],
+        [
+          "3",
+          "Assessment 3Milestone 3 (Week 10): Full System Completion & Testing",
+          "on-going",
+          "1",
+          "25.0%",
+          ">0",
+          "20'/group",
+          "CLO3, CLO4, CLO5",
+          "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+          "",
+          "End-to-end workflow completion, AI-assisted test case generation, UI/UX finalization",
+          "Evaluation Items: - Product (50%): Excellent if all 3 workflows (data setup, main with ≥2 exceptions, dashboard) are integrated and demo runs smoothly; fewer workflows or weak integration lowers the score. - Testing & QA (30%): Excellent with ≥25 test cases (AI + manual), ≥80% passed, full coverage; fewer cases, lower pass rates, or no AI evidence reduce the grade. - Process (20%): Excellent if 3 milestone reports, slides, full10 AI logs, and all members present; missing reports, fewer logs, or weak presentation lead to lower marks. AI Integration: Strong AI usage is required for higher levels across all criteria.",
+          "View Rubrics Document for more details"
+        ],
+        [
+          "4",
+          "Final Project Presentation",
+          "Final exam",
+          "1",
+          "40.0%",
+          "4",
+          "60'/group",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+          "",
+          "Requirement analysing, designing, coding, testing, integrating, AI usage",
+          "Final Evaluation The final exam is organized by the Exam Board, with at least two lecturers grading independently. Each team has 60 minutes for presentation and Q&A. Scores from both lecturers will be averaged. Evaluation focuses on: - Requirement Analysis (20%) – Quality of SRS, with AI-assisted requirement elicitation and validation. - System Design (20%) – ERD, state diagrams, architecture, and UI workflows, supported by AI in modeling and refinement. - Software Implementation (40%) – Completeness of workflows, structured codebase, and database design, with AI support in coding and debugging. - AI Usage and Professionalism (20%) – Transparency and responsibility in AI usage (logs, reports, validation of AI outputs), teamwork, and presentation quality.",
+          "1. Average on-going ≥ 5/10 to qualify for final 2. Finish 2 main workflows: Data Initiation and core functions 3. Fail if cheating detected (no resit) 4. Responsible use of AI tools 5. Member with active contribution score ≥ 80% — based on peer review, task tracking, and code contribution records."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 1 (Week3)Milestone 1: Requirement Analysis & Design",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20'/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirement analysing, AI-assisted documentation, system architecture, initial UI, ERD",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluation Items: - SRS Document (30%): ≥15 pages, ≥12 user stories, complete and validated with AI + expert. - Design Artifacts (50%): ERD with ≥8 entities, valid state diagram, clear architecture, consistent UI. - Process (20%): ≥6 AI logs and 4 weekly reports with evidence.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "View Rubrics Document for more details",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 2 (Week 8)Milestone 2 : Workflow 1 & 2 Implementation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20'/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coding modules, database integration, AI-assisted debugging, functional testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluation Items: - Workflow Implementation (50%): Workflow 0 + Workflow 1 + Workflow 2 (main flow + ≥2 exception paths) fully functional. - Codebase & Database (30%) : Multi-layer design (e.g., MVC), complete CRUD classes, DB ≥10 tables, normalized with full PK/FK. - Process (20%) : ≥8 commits/member + ≥6 AI debugging logs.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "View Rubrics Document for more details",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 3Milestone 3 (Week 10): Full System Completion & Testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20'/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-to-end workflow completion, AI-assisted test case generation, UI/UX finalization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluation Items: - Product (50%): Excellent if all 3 workflows (data setup, main with ≥2 exceptions, dashboard) are integrated and demo runs smoothly; fewer workflows or weak integration lowers the score. - Testing & QA (30%): Excellent with ≥25 test cases (AI + manual), ≥80% passed, full coverage; fewer cases, lower pass rates, or no AI evidence reduce the grade. - Process (20%): Excellent if 3 milestone reports, slides, full10 AI logs, and all members present; missing reports, fewer logs, or weak presentation lead to lower marks. AI Integration: Strong AI usage is required for higher levels across all criteria.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "View Rubrics Document for more details",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirement analysing, designing, coding, testing, integrating, AI usage",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Evaluation The final exam is organized by the Exam Board, with at least two lecturers grading independently. Each team has 60 minutes for presentation and Q&A. Scores from both lecturers will be averaged. Evaluation focuses on: - Requirement Analysis (20%) – Quality of SRS, with AI-assisted requirement elicitation and validation. - System Design (20%) – ERD, state diagrams, architecture, and UI workflows, supported by AI in modeling and refinement. - Software Implementation (40%) – Completeness of workflows, structured codebase, and database design, with AI support in coding and debugging. - AI Usage and Professionalism (20%) – Transparency and responsibility in AI usage (logs, reports, validation of AI outputs), teamwork, and presentation quality.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Average on-going ≥ 5/10 to qualify for final 2. Finish 2 main workflows: Data Initiation and core functions 3. Fail if cheating detected (no resit) 4. Responsible use of AI tools 5. Member with active contribution score ≥ 80% — based on peer review, task tracking, and code contribution records.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>14467</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>Ho Chi Minh Ideology - Tư tưởng Hồ Ch&#237; Minh</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b></b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>HCM202</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture, Presentation and implementation guidelines for a creative product</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Thời gian học (103h) = 22.5 giờ học trên lớp (30 tiết) + 1 giờ thi cuối kỳ + 76.5 giờ tự học + 3 giờ học trên Coursera<br/>Study hour (103h) = 22.5 contact hours (30 sessions) + 1 hour final exam + 76.5 hours self-study + 3 hours on Coursera</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>MLN111, MLN122</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Giới thiệu/Mô tả môn học: Tư tưởng Hồ Chí Minh là kết tinh của truyền thống hàng nghìn năm dựng nước và giữ nước của dân tộc Việt Nam. Trên nền tảng đó, tư tưởng Hồ Chí Minh đã gạn lọc các hạt giống trí tuệ của phương Đông, phương Tây, vận dụng sáng tạo và phát triển chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta. Khái quát lại bản chất khoa học này, Đảng ta khẳng định: Tư tưởng Hồ Chí Minh là một hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam, kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta, kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hoá nhân loại. Mục tiêu của tư tưởng Hồ Chí Minh là hướng tới giải phóng dân tộc - giải phóng xã hội - giải phóng giai cấp - giải phóng con người. Do đó, tư tưởng Hồ Chí Minh là tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc ta, mãi mãi soi đường cho sự nghiệp cách mạng của nhân dân ta giành thắng lợi.<br/><br/><br/>Course Introduction / Description: Ho Chi Minh Ideology is the crystallization of the thousand-year-old traditions of national construction and defense of the Vietnamese people. On that basis, Ho Chi Minh Ideology has selectively absorbed the intellectual quintessence of the East and the West, and creatively applied and developed Marxism-Leninism to the specific conditions of Vietnam. Summarizing this scientific nature, our Party affirms: Ho Chi Minh Ideology is a comprehensive and profound system of views on fundamental issues of the Vietnamese revolution, the result of the creative application and development of Marxism-Leninism to the specific conditions of our country, inheriting and developing the fine traditional values of the nation, and absorbing the cultural quintessence of humanity. Its goal aims at national liberation, social liberation, class liberation, and human liberation. Therefore, Ho Chi Minh Ideology is an immensely large and precious spiritual asset of our Party and nation, forever illuminating the path for our people's revolutionary cause to achieve victory.<br/><br/><br/>Mục tiêu môn học:<br/>- Về kiến thức: Sinh viên hiểu được những kiến thức cơ bản về khái niệm, nguồn gốc, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh; những nội dung cơ bản về tư tưởng Hồ Chí Minh; sự vận dụng của Đảng Cộng sản Việt Nam trong cách mạng dân tộc dân chủ nhân dân và trong cách mạng xã hội chủ nghĩa.<br/>- Về kỹ năng: Hình thành cho sinh viên khả năng tư duy độc lập, phân tích, đánh giá, vận dụng sáng tạo tư tưởng Hồ Chí Minh vào giải quyết các vấn đề trong thực tiễn đời sống, học tập và công tác.<br/>- Về thái độ: Sinh viên được nâng cao bản lĩnh chính trị, yêu nước, trung thành với mục tiêu, lý tưởng độc lập dân tộc gắn liền chủ nghĩa xã hội; nhận thức được vai trò, giá trị của tư tưởng Hồ Chí Minh đối với Đảng và dân tộc Việt Nam; thấy được trách nhiệm của bản thân trong việc học tập, rèn luyện để góp phần vào xây dựng và bảo vệ Tổ quốc.<br/><br/>Course Objectives:<br/>- Knowledge: Students understand the basic concepts, origins, formation, and development of Ho Chi Minh Ideology; the core contents of Ho Chi Minh Ideology; and its application by the Communist Party of Vietnam in the people’s democratic revolution and in the socialist revolution.<br/>- Skills: Students develop the ability to think independently, analyze, evaluate, and creatively apply Ho Chi Minh Ideology to solve practical problems in daily life, academic work, and professional activities.<br/>- Attitudes: Students strengthen political courage and patriotism, remain loyal to the goal and ideal of national independence associated with socialism; recognize the role and value of Ho Chi Minh Ideology for the Party and the Vietnamese nation; and understand their personal responsibility in learning and self-improvement to contribute to national construction and defense.<br/><br/><br/>Nội dung môn học: Học phần bao gồm 6 chương, cung cấp cho sinh viên kiến thức cơ bản về Khái niệm, đối tượng, phương pháp nghiên cứu và ý nghĩa học tập môn tư tưởng Hồ Chí Minh; Về cơ sở, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh; Tư tưởng Hồ Chí Minh về: Độc lập dân tộc và chủ nghĩa xã hội; Đảng Cộng sản Việt Nam và Nhà nước của nhân dân, do nhân dân, vì nhân dân; Đại đoàn kết dân tộc và đoàn kết quốc tế; Văn hóa, đạo đức, con người.<br/>Content of the course: The course consists of 6 chapters, providing students with basic knowledge on Concept, object of study, research methodology, and significance of studying Ho Chi Minh Ideology; Basis, formation, and development process of Ho Chi Minh Ideology; Ho Chi Minh Ideology on: National independence and socialism; the Communist Party of Vietnam and the State of the people, by the people, for the people; Great national unity and international solidarity; Culture, ethics, and human beings.<br/><br/>Phương pháp dạy học: Thuyết giảng và kết hợp trình chiếu các slide bài giảng. Hướng dẫn, giao bài tập đề tài theo nhóm. Tổ chức và hướng dẫn sinh viên thảo luận nhóm, thuyết trình và thực hiện sản phẩm sáng tạo (tham khảo và ứng dụng phần mềm AI một cách có trách nhiệm).<br/>Teaching methods: Giving lectures and slide presentations. Guiding and assigning group projects. Organizing and guiding students in group discussions, presentations, and the development of creative products (with the responsible and ethical use of AI tools).</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>Nhiệm vụ của sinh viên:<br/> - Tham gia tối thiểu 80% thời lượng môn học và tham dự đủ các buổi lên lớp, thảo luận theo quy định. <br/> - Phải có Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị) do Bộ Giáo dục và Đào tạo ban hành.<br/> - Phải nghiên cứu giáo trình trước, chuẩn bị các ý kiến để đề xuất khi nghe giảng. Chuẩn bị thảo luận và đọc, sưu tầm các tư liệu có liên quan đến nội dung môn học.<br/> - Thực hiện đầy đủ các yêu cầu của giảng viên khi học trên lớp cũng như các chủ đề sinh viên tự chuẩn bị trước khi đến lớp.<br/> - Chỉ sử dụng máy tính xách tay trong lớp cho mục đích học tập.<br/> - Ứng dụng AI một cách có trách nhiệm, đạo đức trong quá trình học tập và thực tiễn.<br/> <br/> Student's Tasks:<br/> - Attend at least 80% of class hours and participate in discussions as required. <br/> - Own the Ho Chi Minh's thought (Sửa lại từ sai lệch chính trị "Ho Chi Minh Ideology") textbook (for non-majors in political theory - Nâng cấp học thuật từ cụm "non-politics majored students") issued by the Ministry of Education and Training.<br/> - Study the textbook in advance, prepare ideas to propose during lectures. Prepare for discussions and read, collect materials related to the course content.<br/> - Fulfill tasks given by the instructor in class as well as topics required to be prepared (Sửa lại ngữ pháp cho chuẩn mực từ cụm "needed to prepare") in advance.<br/> - Use laptops in class only for learning purposes.<br/> - Apply AI responsibly and ethically in both learning and practice.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>Internet, pdf reader and AI-based learning tools (for responsible use, recommended as supplementary support)</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>1028/QĐ-ĐHFPT dated 08/21/2026</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td>1) Progress test + Assignment: 70%<br/>- Participation: 10% <br/>- 1 Progress test: 20%<br/>- Assignment: 40% <br/>2) Final Exam: 30% <br/>3) Final result: 100%<br/>4) Completion Criteria:  <br/>    Every on-going assessment component > 0, Final Result  >=5  & Final Exam Score >=4<br/>Students must obtain a Course Completion Certificate from Coursera to be eligible for the final exam</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>8/21/2026</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">8 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh, dùng cho sinh viên bậc đại học hệ chuyên ngành lý luận chính trị<br/>Ho Chi Minh ideology textbook for politics majored students</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2021</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh, dùng cho sinh viên bậc đại học hệ không chuyên ngành lý luận chính trị - Bản dự thảo<br/>Ho Chi Minh ideology textbook for non-politics majored students - Draft</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2019</td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://moet.gov.vn/van-ban/vbdh/Pages/chi-tiet-van-ban.aspx?ItemID=2729#divShowDialogDownload</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh, dùng cho sinh viên bậc đại học hệ không chuyên ngành lý luận chính trị<br/>Ho Chi Minh ideology textbook for non-politics majored students</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2021</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Hồ Chí Minh toàn tập<br/>The Selected Works of Ho Chi Minh</td>
+                            <td>Hồ Chí Minh<br/>Ho Chi Minh</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2011</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, tiêu cực, góp phần xây dựng Đảng và Nhà nước ta ngày càng trong sạch, vững mạnh</td>
+                            <td>Tổng Bí thư Nguyễn Phú Trọng</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia Sự thật</td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/sach-chinh-tri/kien-quyet-kien-tri-dau-tranh-phong-chong-tham-nhung-tieu-cuc-gop-phan-xay-dung-dang-va-nha-nuoc-ta-ngay-cang-trong-sach-436</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>Tài liệu giảng dạy về phòng, chống tham nhũng dùng cho các trường đại học, cao đẳng không chuyên về luật<br/>(Phê duyệt kèm theo Quyết định số 3468/QĐ-BGDĐT ngày 06 tháng 9 năm 2014 của Bộ trưởng Bộ Giáo dục và Đào tạo)</td>
+                            <td>Chủ biên et al.</td>
+                            <td>BỘ GI&#193;O DỤC V&#192; Đ&#192;O TẠO</td>
+                            <td>2014</td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://drive.google.com/file/d/1Tf3Fyybs8puDEnp5JGw3zqezIfreh6H2/view?usp=sharing</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>Hồ Chí Minh - Biên niên tiểu sử<br/>Ho Chi Minh - A Chronological Biography</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>Khóa học Coursera: Tư tưởng Hồ Chí minh</td>
+                            <td>Trường Đại Học FPT  - FPT University</td>
+                            <td>Coursera</td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">10 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Hiểu được những kiến thức cơ bản về kh&#225;i niệm, đối tượng, nguồn gốc, phương ph&#225;p nghi&#234;n cứu v&#224; &#253; nghĩa của m&#244;n học tư tưởng Hồ Ch&#237; Minh 
+Understand the basic knowledge of the concepts, objectives, origins, research methods, and significance of the Ho Chi Minh Thought course</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Ph&#226;n t&#237;ch được bối cảnh lịch sử Việt Nam từ cuối thế kỷ XIX đến thế kỷ XXI, nguồn gốc, cơ sở, qu&#225; tr&#236;nh h&#236;nh th&#224;nh v&#224; ph&#225;t triển tư tưởng Hồ Ch&#237; Minh. Hiểu được sự vận dụng của Đảng Cộng sản Việt Nam trong c&#225;ch mạng d&#226;n tộc d&#226;n chủ nh&#226;n d&#226;n v&#224; trong c&#225;ch mạng x&#227; hội chủ nghĩa
+Analyze the historical context of Vietnam from the late 19th century to the 21st century, as well as the origins, basis, formation, and development of Ho Chi Minh Thought. Understand the Communist Party of Vietnam’s application of Ho Chi Minh Thought in the people’s democratic revolution and the socialist revolution</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Nắm được về hệ thống quan điểm tư tưởng Hồ Ch&#237; Minh về c&#225;c vấn đề độc lập d&#226;n tộc v&#224; chủ nghĩa x&#227; hội, đại đo&#224;n kết d&#226;n tộc v&#224; đo&#224;n kết quốc tế, x&#226;y dựng Đảng v&#224; Nh&#224; nước, đạo đức, văn h&#243;a, con người 
+Understanding Ho Chi Minh&#39;s system of ideological views on national independence and socialism, the great unity bloc and international solidarity, the construction of the Party and State, ethics, culture, people</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Hiểu được vai tr&#242; nền tảng l&#253; luận của Chủ nghĩa M&#225;c-L&#234;nin, tư tưởng Hồ Ch&#237; Minh đối với đường lối của Đảng, Nh&#224; nước.
+Understand the role of Marxism-Leninism and Ho Chi Minh&#39;s ideology as the ideological foundation for Vietnamese Communist Party and State&#39;s guidelines</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>Ph&#226;n t&#237;ch được sự kế thừa, ph&#225;t triển c&#225;c quan điểm của chủ nghĩa M&#225;c-L&#234;nin trong tư tưởng Hồ Ch&#237; Minh 
+Analyze the inheritance and development of Marxist-Leninism Ho Chi Minh&#39;s ideology</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>H&#236;nh th&#224;nh khả năng l&#224;m việc nh&#243;m, tư duy độc lập, ph&#226;n t&#237;ch đ&#225;nh gi&#225;; t&#236;m kiếm t&#224;i liệu li&#234;n quan đến m&#244;n học v&#224; tr&#236;nh b&#224;y được nội dung của c&#225;c t&#224;i liệu n&#224;y, đồng thời biết ứng dụng c&#225;c c&#244;ng cụ AI một c&#225;ch c&#243; đạo đức để hỗ trợ qu&#225; tr&#236;nh t&#236;m kiếm, ph&#226;n t&#237;ch v&#224; tr&#236;nh b&#224;y
+Develop students’ ability to work in teams, think independently, and analyze and evaluate; search for course-related materials and present their content; and ethically apply AI tools to support searching, analysis, and presentation</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>Củng cố tinh thần y&#234;u nước, c&#243; &#253; thức tr&#225;ch nhiệm c&#244;ng d&#226;n, &#253; thức kỷ luật, th&#225;i độ nghề nghiệp đ&#250;ng đắn, ham t&#236;m hiểu, học tập suốt đời v&#224; th&#237;ch ứng với những thay đổi li&#234;n tục của c&#244;ng nghệ v&#224; x&#227; hội. N&#226;ng cao bản lĩnh ch&#237;nh trị, trung th&#224;nh với mục ti&#234;u, l&#253; tưởng độc lập d&#226;n tộc gắn liền chủ nghĩa x&#227; hội
+Strengthen patriotism, cultivate a sense of civic responsibility, discipline, and proper professional attitude; foster curiosity, lifelong learning, and adaptability to continuous technological and social changes. Enhance political resilience and loyalty to the goals and ideals of national independence combined with socialism.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>H&#236;nh th&#224;nh th&#225;i độ, t&#225;c phong l&#224;m việc chuy&#234;n nghiệp, phương ph&#225;p khoa học, c&#243; khả năng cập nhật kiến thức mới một c&#225;ch chủ động 
+Develop professional attitude and working style, have scientific methods, be able to proactively update new knowledge</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>CLO9</td>
+                            <td>X&#226;y dựng khả năng vận dụng những kiến thức đ&#227; học để giải quyết những vấn đề kinh tế, ch&#237;nh trị, văn h&#243;a x&#227; hội theo quan điểm của Đảng v&#224; nh&#224; nước Build the ability to apply learned knowledge to solve economic, political, socio-cultural issues from the perspective of the Party and the State.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td>CLO10</td>
+                            <td>Vận dụng v&#224; học tập, l&#224;m theo tư tưởng đạo đức phong c&#225;ch Hồ Ch&#237; Minh, c&#243; &#253; thức phấn đấu trong thực tiễn đời sống, học tập v&#224; c&#244;ng t&#225;c 
+Apply, study, and follow Ho Chi Minh’s thought, ethics, and style; and demonstrate a proactive attitude in practical life, learning, and work.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=14467" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Giới thiệu môn học và tổ chức lớp<br/>Định hướng sử dụng AI trong học tập</td>
+                            <td>Offline</td>
+                            <td>LO6, LO8</td>
+                            <td>TU</td>
+                            <td class="product"></td>
+                            <td>
+                                        <a href="https://drive.google.com/drive/folders/1CXun-a8RbmtyG688cPd3cweXGzsBJKjG?usp=drive_link" class="ContainSLink" target=_blank rel=noopener noreferrer>link1-1</a>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Chương I: Khái niệm, đối tượng, phương pháp nghiên cứu và ý nghĩa học tập môn Tư tưởng Hồ Chí Minh<br/>I. Khái niệm tư tưởng Hồ Chí Minh <br/>II. Đối tượng nghiên cứu</td>
+                            <td>Offline</td>
+                            <td>LO1, LO4, LO5, LO8, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Tư tưởng Hồ Chí Minh từ trang 7 đến trang 20</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Chương I: Khái niệm, đối tượng, phương pháp nghiên cứu và ý nghĩa học tập môn Tư tưởng Hồ Chí Minh<br/>III. Phương pháp nghiên cứu <br/>IV. Ý nghĩa của việc học tập môn học tư tưởng Hồ Chí Minh</td>
+                            <td>Offline</td>
+                            <td>LO1, LO4, LO5, LO8, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 20 đến trang 31</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Chương II: Cơ sở, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh<br/>I. Cơ sở hình thành tư tưởng Hồ Chí Minh</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 32 đến trang 49</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Chương II: Cơ sở, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh<br/>II. Quá trình hình thành và phát triển tư tưởng Hồ Chí Minh <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 50 đến trang 64</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Chương II: Cơ sở, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh<br/>III. Giá trị tư tưởng Hồ Chí Minh<br/>1. Đối với cách mạng Việt Nam<br/>2. Đối với sự phát triển tiến bộ của nhân loại <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 65 đến trang 72</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội<br/>I. Tư tưởng Hồ Chí Minh về độc lập dân tộc<br/>1. Vấn đề độc lập dân tộc <br/>Assignment<br/><br/>Chapter III: Ho Chi Minh ideology on national independence and socialism<br/>I. Ho Chi Minh ideology on national independence<br/>1. The issue of national independence<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 73 đến trang 80<br/><br/>Read Ho Chi Minh ideology textbook from page 73 to 80 in advance	link</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội<br/>I. Tư tưởng Hồ Chí Minh về độc lập dân tộc<br/>2. Về cách mạng giải phóng dân tộc <br/>Assignment<br/><br/>Chapter III: Ho Chi Minh ideology on national independence and socialism<br/>I. Ho Chi Minh ideology on national independence<br/>2. About the national liberation revolution<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 80 đến trang 92<br/><br/>Read Ho Chi Minh ideology textbook from page 80 to 92 in advance	link</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội<br/>II. Tư tưởng Hồ Chí Minh về chủ nghĩa xã hội và xây dựng chủ nghĩa xã hội ở Việt Nam<br/>1. Tư tưởng Hồ Chí Minh về chủ nghĩa xã hội <br/>2. Tư Tưởng Hồ Chí Minh về xây dựng chủ nghĩa xã hội ở Việt Nam <br/>Assignment<br/><br/>Chapter III: Ho Chi Minh ideology on national independence and socialism<br/>II. Ho Chi Minh ideology on socialism and the road of transition to socialism in Vietnam<br/>1. Ho Chi Minh ideology on Socialism<br/>2. Ho Chi Minh ideology on building socialism in Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 92 đến trang 108<br/>Read Ho Chi Minh ideology textbook from page 92 to 108 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội<br/>II. Tư tưởng Hồ Chí Minh về chủ nghĩa xã hội và xây dựng chủ nghĩa xã hội ở Việt Nam<br/>3. Tư tưởng Hồ Chí Minh về thời kì quá độ lên chủ nghĩa xã hội ở Việt Nam <br/>Assignment<br/><br/>Chapter III: Ho Chi Minh ideology on national independence and socialism<br/>II. Ho Chi Minh ideology on socialism and the road of transition to socialism in Vietnam<br/>3. Ho Chi Minh ideology on the transition to socialism in Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 108 đến trang 114<br/><br/>Read Ho Chi Minh ideology textbook from page 108 to 114 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội<br/>III. Tư tưởng Hồ Chí Minh về mối quan hệ giữa độc lập dân tộc và chủ nghĩa xã hội <br/>Assignment<br/><br/>Chapter III: Ho Chi Minh ideology on national independence and socialism<br/>III. Apply Ho Chi Minh ideology on the relationship between national independence and socialism<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 114 đến trang 118<br/><br/>Read Ho Chi Minh ideology textbook from page 114 to 118 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Chương III: Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội<br/>IV. Vận dụng tư tưởng Hồ Chí Minh về độc lập dân tộc gắn liền với chủ nghĩa xã hội trong sự nghiệp cách mạng Việt Nam giai đoạn hiện nay<br/>Assignment<br/><br/>Chapter III: Ho Chi Minh ideology on national independence and socialism<br/>IV. Apply Ho Chi Minh ideology on national independence associated with socialism in the current revolutionary practices of Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 118 đến trang 122<br/><br/>Read Ho Chi Minh ideology textbook from page 118 to 122 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Thực hành tự học trên nền tảng Coursera: Module 2 - Bài 1<br/>1. Xem Video: Hướng dẫn module và định hướng ôn tập<br/>2. Tài liệu đọc bắt buộc: Tóm tắt trọng tâm Chương 1, Chương 2 và Chương 3 của môn học (Tài liệu đọc PDF)<br/><br/>Coursera Self-Directed Study: Module 2 - Lesson 1<br/>1. Watch Video: Module Introduction and Review Orientation<br/>2. Required Reading: Core Summary of Chapters 1, 2, and 3 of the Course (PDF)</td>
+                            <td>Online</td>
+                            <td>LO1,<br/>LO2, LO3, LO4,  LO6, LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu học tập Học phần HCM202 tại Module 2 - Bài 1 trên Coursera<br/><br/>HCM202 Course Materials for Module 2 - Lesson 1 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>Ho Chi Minh Ideology Textbook (for non-political theory major university students), National Political Publishing House for Truth, 2021. <br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>(Tiếp) <br/>Thực hành tự học trên nền tảng Coursera: Module 2 - Bài 1<br/>1. Xem Video: Hướng dẫn module và định hướng ôn tập<br/>2. Tài liệu đọc bắt buộc: Tóm tắt trọng tâm Chương 1, Chương 2 và Chương 3 của môn học (Tài liệu đọc PDF)<br/><br/>Coursera Self-Directed Study: Module 2 - Lesson 1<br/>1. Watch Video: Module Introduction and Review Orientation<br/>2. Required Reading: Core Summary of Chapters 1, 2, and 3 of the Course (PDF)</td>
+                            <td>Online</td>
+                            <td>LO1,<br/>LO2, LO3, LO4,  LO6, LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu học tập Học phần HCM202 tại Module 2 - Bài 1 trên Coursera<br/><br/>HCM202 Course Materials for Module 2 - Lesson 1 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>Ho Chi Minh Ideology Textbook (for non-political theory major university students), National Political Publishing House for Truth, 2021. <br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của nhân dân, do nhân dân, vì nhân dân<br/>I. Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam<br/>1. Tính tất yếu và vai trò lãnh đạo của Đảng Cộng sản Việt Nam <br/>Assignment<br/><br/>Chapter IV: Ho Chi Minh ideology on the Communist Party of Vietnam and the State of the people, by the people, for the people<br/>I. Ho Chi Minh ideology on the Communist Party of Vietnam<br/>1. The inevitability and leadership role of the Communist Party of Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 126 đến trang 141<br/><br/>Read Ho Chi Minh ideology textbook from page 126 to 141 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của dân, do dân và vì dân<br/>I. Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam<br/>2. Đảng phải trong sạch, vững mạnh<br/>Assignment<br/><br/>Chapter IV: Ho Chi Minh ideology on the Communist Party of Vietnam and the State of the people, by the people, for the people<br/>I. Ho Chi Minh ideology on the Communist Party of Vietnam<br/>2. Party must be clean and strong <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 126 đến trang 141<br/><br/>Read Ho Chi Minh ideology textbook from page 126 to 141 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của dân, do dân và vì dân<br/>II. Tư tưởng Hồ Chí Minh về Nhà nước của dân, do dân, vì dân<br/>1. Nhà nước dân chủ <br/>2. Nhà nước pháp quyền <br/>Assignment<br/><br/>Chapter IV: Ho Chi Minh ideology on the Communist Party of Vietnam and the State of the people, by the people, for the people<br/>II. Ho Chi Minh ideology on the State of the people, by the people, for the people<br/>1. Democratic State<br/>2. The rule of law<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 142 đến trang 157<br/><br/>Read Ho Chi Minh ideology textbook from page 142 to 157 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của dân, do dân và vì dân<br/>II. Tư tưởng Hồ Chí Minh về Nhà nước của dân, do dân, vì dân<br/>3. Nhà nước trong sạch, vững mạnh <br/>Assignment<br/><br/>Chapter 4: Ho Chi Minh ideology on the Communist Party of Vietnam and the State of the people, by the people, for the people<br/>II. Ho Chi Minh ideology on the State of the people, by the people, for the people<br/>3. The state is clean and strong<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 157 đến trang 164<br/><br/>Read Ho Chi Minh ideology textbook from page 157 to 164 in advance	link</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của dân, do dân và vì dân<br/>III. Vận dụng tư tưởng Hồ Chí Minh vào công tác xây dựng Đảng và xây dựng nhà nước<br/>1. Xây dựng Đảng thật sự trong sạch, vững mạnh <br/>2. Xây dựng nhà nước <br/>Assignment<br/>Chapter IV: Ho Chi Minh ideology on the Communist Party of Vietnam and the State of the people, by the people, for the people<br/>III. Apply Ho Chi Minh ideology in building the Communist Party and the State<br/>1. Building a really clean and strong Party<br/>2. State construction<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 164 đến trang 168<br/><br/>Read Ho Chi Minh ideology textbook from page 164 to 166 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Thực hành tự học trên nền tảng Coursera: Module 1 - Bài 1<br/>Tài liệu đọc bắt buộc: Tư tưởng Hồ Chí Minh về tham nhũng: Khái niệm, đặc điểm, nguồn gốc và tác hại của tham nhũng (Tài liệu đọc PDF)<br/><br/>Coursera Self-Directed Study: Module 1 - Lesson 1<br/>Required Reading: Ho Chi Minh Ideology on Corruption: Concept, Characteristics, Origins, and Harmful Effects of Corruption (Reading PDF)</td>
+                            <td>Online</td>
+                            <td>LO3, LO6,  LO7, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu học tập Học phần HCM202 tại Module 1 - Bài 1 trên Coursera<br/><br/>HCM202 Course Materials for Module 1 - Lesson 1 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>(Tiếp) <br/>Thực hành tự học trên nền tảng Coursera: Module 1 - Bài 1<br/>Tài liệu đọc bắt buộc: Tư tưởng Hồ Chí Minh về tham nhũng: Khái niệm, đặc điểm, nguồn gốc và tác hại của tham nhũng (Tài liệu đọc PDF)<br/><br/>Coursera Self-Directed Study: Module 1 - Lesson 1<br/>Required Reading: Ho Chi Minh Ideology on Corruption: Concept, Characteristics, Origins, and Harmful Effects of Corruption (Reading PDF)</td>
+                            <td>Online</td>
+                            <td>LO3, LO6,  LO7, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu học tập Học phần HCM202 tại Module 1 - Bài 1 trên Coursera<br/><br/>HCM202 Course Materials for Module 1 - Lesson 1 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của dân, do dân và vì dân<br/>III. Vận dụng tư tưởng Hồ Chí Minh vào công tác xây dựng Đảng và xây dựng nhà nước<br/>3. Phòng, chống tham nhũng góp phần củng cố niềm tin của nhân dân vào chế độ và pháp luật<br/><br/><br/>Chapter IV: Ho Chi Minh Ideology on the Communist Party of Vietnam and the State of the people, by the people and for the people<br/>III. Applying Ho Chi Minh Ideology to the construction of the Party and the state<br/>3. Anti-corruption contributes to strengthening people's confidence in the regime and the law.</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Tài liệu giảng dạy về phòng, chống tham nhũng dùng cho các trường đại học, cao đẳng không chuyên về luật từ trang 51 - trang 52<br/><br/><br/>Read in advance the textbook of anti-corruption teaching materials for non-law universities and colleges from page 51 to page 52</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/>Tài liệu giảng dạy về phòng, chống tham nhũng dùng cho các trường đại học, cao đẳng không chuyên về luật<br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.<br/>Teaching materials on anti-corruption for non-law universities and colleges</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Thực hành tự học trên nền tảng Coursera: Module 1 - Bài 2, 3<br/>1. Xem Video (Module 1 - Bài 2): Tư tưởng Hồ Chí Minh về phòng, chống tham nhũng - Thực tiễn và Trách nhiệm của thế hệ trẻ<br/>2. Hoàn thành Module 1 - Bài 3: Bài trắc nghiệm ngắn (Mini Quiz) kết thúc Module<br/><br/>Coursera Self-Directed Study: Module 1 - Lessons 2, 3<br/>1. Watch Video (Module 1 - Lesson 2): Ho Chi Minh Ideology on the Prevention and Combat of Corruption - Practical Realities and the Responsibility of the Younger Generation<br/>2. Complete Module 1 - Lesson 3: End-of-Module Mini Quiz</td>
+                            <td>Online</td>
+                            <td>LO3, LO6,  LO7, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu học tập Học phần HCM202 tại Module 1 - Bài 2,3 trên Coursera<br/><br/>HCM202 Course Materials for Module 1 - Lesson 2,3 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>(Tiếp) <br/>Thực hành tự học trên nền tảng Coursera: Module 1 - Bài 2, 3<br/>1. Xem Video (Module 1 - Bài 2): Tư tưởng Hồ Chí Minh về phòng, chống tham nhũng - Thực tiễn và Trách nhiệm của thế hệ trẻ<br/>2. Hoàn thành Module 1 - Bài 3: Bài trắc nghiệm ngắn (Mini Quiz) kết thúc Module<br/><br/>Coursera Self-Directed Study: Module 1 - Lessons 2, 3<br/>1. Watch Video (Module 1 - Lesson 2): Ho Chi Minh Ideology on the Prevention and Combat of Corruption - Practical Realities and the Responsibility of the Younger Generation<br/>2. Complete Module 1 - Lesson 3: End-of-Module Mini Quiz</td>
+                            <td></td>
+                            <td>LO3, LO6,  LO7, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu học tập Học phần HCM202 tại Module 1 - Bài 2,3 trên Coursera<br/><br/>HCM202 Course Materials for Module 1 - Lesson 2,3 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>(Tiếp) <br/>Thực hành tự học trên nền tảng Coursera: Module 1 - Bài 2, 3<br/>1. Xem Video (Module 1 - Bài 2): Tư tưởng Hồ Chí Minh về phòng, chống tham nhũng - Thực tiễn và Trách nhiệm của thế hệ trẻ<br/>2. Hoàn thành Module 1 - Bài 3: Bài trắc nghiệm ngắn (Mini Quiz) kết thúc Module<br/><br/>Coursera Self-Directed Study: Module 1 - Lessons 2, 3<br/>1. Watch Video (Module 1 - Lesson 2): Ho Chi Minh Ideology on the Prevention and Combat of Corruption - Practical Realities and the Responsibility of the Younger Generation<br/>2. Complete Module 1 - Lesson 3: End-of-Module Mini Quiz</td>
+                            <td></td>
+                            <td>LO3, LO6,  LO7, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu học tập Học phần HCM202 tại Module 1 - Bài 2,3 trên Coursera<br/><br/>HCM202 Course Materials for Module 1 - Lesson 2,3 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Chương V: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế<br/>I. Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc <br/>1. Vai trò của đại đoàn kết toàn dân tộc<br/>2. Lực lượng của khối đại đoàn kết toàn dân tộc <br/>Assignment<br/><br/>Chapter V: Ho Chi Minh ideology on the great unity bloc and international solidarity<br/>I. Ho Chi Minh ideology on the great unity bloc<br/>1. The role of great national unity<br/>2. The force of the great national unity bloc<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 169 đến trang 174<br/><br/>Read Ho Chi Minh ideology textbook from page 169 to 174 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Chương V: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế<br/>I. Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc<br/>3. Điều kiện để xây dựng khối đại đoàn kết toàn dân tộc<br/>4. Hình thức, nguyên tắc tổ chức của khối đại đoàn kết toàn dân tộc - Mặt trận dân tộc thống nhất<br/>5. Phương thức xây dựng khối đại đoàn kết dân tộc <br/>Assignment<br/><br/>Chapter V: Ho Chi Minh ideology on the great unity bloc and international solidarity<br/>I. Ho Chi Minh ideology on the great unity bloc<br/>3. Conditions for building a great national unity block<br/>4. Form and organizational principles of the great national unity bloc - United National Front<br/>5. How to build a great national unity block<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 174 đến trang 184<br/><br/>Read Ho Chi Minh ideology textbook from page 174 to 184 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Chương V: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế<br/>II. Tư tưởng Hồ Chí Minh về đại đoàn kết quốc tế<br/>1. Sự cần thiết phải đoàn kết quốc tế<br/>Assignment<br/><br/>Chapter V: Ho Chi Minh ideology on the great unity bloc and international solidarity<br/>II. Ho Chi Minh ideology on international solidarity<br/>1. The need for international solidarity<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 184 đến trang 188<br/><br/>Read Ho Chi Minh ideology textbook from page 184 to 188 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Chương V: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế<br/>II. Tư tưởng Hồ Chí Minh về đại đoàn kết quốc tế<br/>2. Lực lượng đoàn kết quốc tế và hình thức tổ chức <br/>3. Nguyên tắc đoàn kết quốc tế <br/>Assignment<br/><br/>Chapter V: Ho Chi Minh ideology on the great unity bloc and international solidarity<br/>II. Ho Chi Minh ideology on international solidarity<br/>2. International Solidarity Forces and Organizational Forms<br/>3. Principle of international solidarity<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 188 đến trang 197<br/><br/>Read Ho Chi Minh ideology textbook from page 188 to 197 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Chương V: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế<br/>III. Vận dụng tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế trong giai đoạn hiện nay<br/>1. Quán triệt tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế trong hoạch định chủ trương, đường lối của Đảng <br/>2. Xây dựng khối đại đoàn kết toàn dân tộc trên nền tảng liên minh công - nông - trí dưới sự lãnh đạo của Đảng <br/>Assignment<br/><br/>Chapter V: Ho Chi Minh ideology on the great unity bloc and international solidarity<br/>III. Apply Ho Chi Minh ideology on the great unity bloc and international solidarity in the current practices<br/>1. Thoroughly grasping Ho Chi Minh's ideology on great national unity and international solidarity in planning the Party's guidelines and lines<br/>2. Building the great national unity block on the basis of the alliance of workers - farmers - wisdom under the leadership of the Party<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 198  đến trang 202<br/><br/>Read Ho Chi Minh ideology textbook from page 198 to 202 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Chương V: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế<br/>III. Vận dụng tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế trong giai đoạn hiện nay<br/>3. Đại đoàn kết toàn dân tộc phải kết hợp với đoàn kết quốc tế <br/>Assignment<br/>Progress Test <br/><br/>Chapter V: Ho Chi Minh ideology on the great unity bloc and international solidarity<br/>III. Apply Ho Chi Minh ideology on the great unity bloc and international solidarity in the current practices<br/>3. Great national unity must be combined with international solidarity<br/>Assignment<br/>Progress Test</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 202 đến trang 204<br/><br/>Read Ho Chi Minh ideology textbook from page 202 to 204 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Chương VI: Tư tưởng Hồ Chí Minh về văn hóa, đạo đức, con người<br/>I. Tư tưởng Hồ Chí Minh về văn hóa<br/>Assignment<br/><br/>Chapter VI: Ho Chi Minh ideology on culture, human<br/>I. Ho Chi Minh ideology on culture<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 205 đến trang 218<br/><br/>Read Ho Chi Minh ideology textbook from page 205 to 218 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Chương VI: Tư tưởng Hồ Chí Minh về văn hóa, đạo đức, con người<br/>II. Tư tưởng Hồ Chí Minh về đạo đức<br/>Assignment<br/><br/>Chapter VI: Ho Chi Minh ideology on culture, human<br/>II. Ho Chi Minh ideology on human<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 218 đến trang 240<br/><br/>Read Ho Chi Minh ideology textbook from page 218 to 240 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>Chương VI: Tư tưởng Hồ Chí Minh về văn hóa, đạo đức, con người<br/>III. Tư tưởng Hồ Chí Minh về con người <br/>Assignment<br/><br/>Chapter VI: Ho Chi Minh ideology on culture, human<br/>III. Build Vietnamese culture and human according to Ho Chi Minh ideology<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 241 đến trang 248<br/><br/>Read Ho Chi Minh ideology textbook from page 241 to 248 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Chương VI: Tư tưởng Hồ Chí Minh về văn hóa, đạo đức, con người<br/>IV. Xây dựng văn hóa, đạo đức, con người Việt Nam hiện nay theo tư tưởng Hồ Chí Minh <br/>1. Xây dựng và phát triển văn hoá, con người <br/>Assignment<br/><br/>Chapter VI: Ho Chi Minh ideology on culture, human<br/>IV. Building the current Vietnamese culture, morality and people according to Ho Chi Minh ideology<br/>1. Building and developing culture and people<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 248 đến trang 255<br/><br/>Read Ho Chi Minh ideology textbook from page 248 to 255 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Chương VI: Tư tưởng Hồ Chí Minh về văn hóa, đạo đức, con người<br/>IV. Xây dựng văn hóa, đạo đức, con người Việt Nam hiện nay theo tư tưởng Hồ Chí Minh <br/>2. Xây dựng đạo đức cách mạng <br/>Assignment<br/><br/>Chapter VI: Ho Chi Minh ideology on culture, human<br/>IV. Building the current Vietnamese culture, morality and people according to Ho Chi Minh ideology<br/>2. Building revolutionary morality<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO3, LO4, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình tư tưởng Hồ Chí Minh từ trang 255 đến trang 265<br/><br/>Read Ho Chi Minh ideology textbook from page 255 to 265 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Tổng kết chương  I, II, III, IV, V, VI<br/><br/>Summary of chapters I, II, III, IV, V, VI</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9, LO10</td>
+                            <td>TU</td>
+                            <td class="product">Tổng kết những kiến thức quan trọng của toàn bộ môn học<br/><br/>Summarize the important knowledge of the entire subject</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Đề cương bài giảng của giảng viên.<br/><br/>Ho Chi Minh ideology 2021 textbook,<br/>Lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Thực hành tự học trên nền tảng Coursera: Module 2 - Bài 2, 3<br/>Hoàn thành Module 2 - Bài 2 và làm bài Kiểm tra tổng kết ở Bài 3<br/><br/>Coursera Self-Directed Study: Module 2 - Lessons 2, 3<br/>Complete Module 2 - Lesson 2 and take the Final Quiz in Lesson 3</td>
+                            <td>Online</td>
+                            <td>LO1,<br/>LO2, LO3, LO4,  LO6, LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu khóa học HCM202 tại Module 2 - Bài 2, 3  trên Coursera.<br/><br/>HCM202 course materials at Module 2 - Lesson 2, 3 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>Ho Chi Minh Ideology Textbook (for non-political theory major university students), National Political Publishing House for Truth, 2021. <br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>(Tiếp) <br/>Thực hành tự học trên nền tảng Coursera: Module 2 - Bài 2, 3<br/>Hoàn thành Module 2 - Bài 2 và làm bài Kiểm tra tổng kết ở Bài 3<br/><br/>Coursera Self-Directed Study: Module 2 - Lessons 2, 3<br/>Complete Module 2 - Lesson 2 and take the Final Quiz in Lesson 3</td>
+                            <td>Online</td>
+                            <td>LO1,<br/>LO2, LO3, LO4,  LO6, LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu khóa học HCM202 tại Module 2 - Bài 2, 3  trên Coursera.<br/><br/>HCM202 course materials at Module 2 - Lesson 2, 3 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>Ho Chi Minh Ideology Textbook (for non-political theory major university students), National Political Publishing House for Truth, 2021. <br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>(Tiếp) <br/>Thực hành tự học trên nền tảng Coursera: Module 2 - Bài 2, 3<br/>Hoàn thành Module 2 - Bài 2 và làm bài Kiểm tra tổng kết ở Bài 3<br/><br/>Coursera Self-Directed Study: Module 2 - Lessons 2, 3<br/>Complete Module 2 - Lesson 2 and take the Final Quiz in Lesson 3</td>
+                            <td>Online</td>
+                            <td>LO1,<br/>LO2, LO3, LO4,  LO6, LO7, LO8, LO9, LO10</td>
+                            <td>ITU</td>
+                            <td class="product">Tài liệu khóa học HCM202 tại Module 2 - Bài 2, 3  trên Coursera.<br/><br/>HCM202 course materials at Module 2 - Lesson 2, 3 on Coursera</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Tư tưởng Hồ Chí Minh (dành cho bậc đại học hệ không chuyên lý luận chính trị), NXB Chính trị quốc gia Sự thật), năm 2021.<br/>Tài liệu khóa học HCM202 trên Coursera.<br/><br/>Ho Chi Minh Ideology Textbook (for non-political theory major university students), National Political Publishing House for Truth, 2021. <br/>HCM202 course materials on Coursera.</td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">47 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1.1</td>
+                            <td>V&#236; sao n&#243;i: “Tư tưởng Hồ Ch&#237; Minh l&#224; t&#224;i sản tinh thần v&#244; c&#249;ng to lớn v&#224; qu&#253; gi&#225; của Đảng v&#224; d&#226;n tộc ta m&#227;i m&#227;i soi đường cho sự nghiệp c&#225;ch mạng của nh&#226;n d&#226;n ta gi&#224;nh thắng lợi”?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.2</td>
+                            <td>Bằng c&#225;ch n&#224;o để sinh vi&#234;n c&#243; thể thực h&#224;nh đạo đức c&#225;ch mạng, chống chủ nghĩa c&#225; nh&#226;n, chống “giặc nội x&#226;m” để lập th&#226;n, lập nghiệp, sống c&#243; &#237;ch cho x&#227; hội, y&#234;u v&#224; l&#224;m những điều thiện, gh&#233;t v&#224; tr&#225;nh c&#225;i xấu, c&#225;i &#225;c; n&#226;ng cao l&#242;ng tự h&#224;o về đất nước Việt Nam, về chế độ ch&#237;nh trị x&#227; hội chủ nghĩa, về Hồ Ch&#237; Minh, về Đảng Cộng sảnViệt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.3</td>
+                            <td>H&#227;y chứng minh tư tưởng Hồ Ch&#237; Minh mang tầm v&#243;c thời đại?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ2.1</td>
+                            <td>Những nguy&#234;n nh&#226;n chủ quan v&#224; kh&#225;ch quan n&#224;o dẫn tới việc nh&#224; Nguyễn để nước ta trở th&#224;nh thuộc địa của Ph&#225;p?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ2.2</td>
+                            <td>“Năm 1923, nh&#224; thơ, nh&#224; b&#225;o nổi tiếng người X&#244; Viết O.Mandenxtam gặp Nguyễn &#193;i Quốc l&#250;c n&#224;y 33 tuổi ở Moskva, O.Mandenxtam đ&#227; đ&#225;nh gi&#225; Nguyễn &#193;i Quốc l&#224; một người phương Đ&#244;ng lịch sự, l&#224; biểu hiện cho một nền văn h&#243;a của tương lai: “Từ Nguyễn &#193;i Quốc tỏa ra một thứ văn h&#243;a, kh&#244;ng phải văn h&#243;a ch&#226;u &#194;u, m&#224; c&#243; lẽ l&#224; một nền văn h&#243;a của tương lai. Từ trong giọng n&#243;i đầm ấm, thanh cao của Người, ch&#250;ng ta như nghe thấy ng&#224;y mai, như thấy viễn cảnh trời y&#234;n biển lặng của t&#236;nh hữu &#225;i bao la to&#224;n thế giới m&#234;nh mang như nước đại dương”. Theo bạn, v&#236; sao nh&#224; b&#225;o người X&#244; Viết lại c&#243; nhận x&#233;t như vậy về Nguyễn &#193;i Quốc?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.3</td>
+                            <td>Sự s&#225;ng tạo của Nguyễn &#193;i Quốc trong h&#224;nh tr&#236;nh t&#236;m đường cứu nước đầu thế kỷ XX so với những bậc tiền bối đi trước như Phan Bội Ch&#226;u, Phan Chu Trinh l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.4</td>
+                            <td>Anh h&#249;ng tạo thời thế hay thời thế tạo anh h&#249;ng đ&#250;ng với cuộc đời v&#224; sự nghiệp của Hồ Ch&#237; Minh?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.5</td>
+                            <td>Anh chị h&#227;y phản b&#225;c luận điệu của c&#225;c c&#225;c thế lực th&#249; địch cho rằng tư tưởng Hồ Ch&#237; Minh đ&#227; lỗi thời, lạc hậu v&#224; kh&#244;ng c&#242;n ph&#249; hợp với sự ph&#225;t triển của Việt Nam v&#224; thời đại mới?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ3.1</td>
+                            <td>Theo Anh/Chị quan điểm n&#224;o trong tư tưởng Hồ Ch&#237; Minh về độc lập d&#226;n tộc l&#224;:“lẽ sống, l&#224; học thuyết của Hồ Ch&#237; Minh, l&#224; nguồn sức mạnh l&#224;m n&#234;n chiến thắng của nh&#226;n d&#226;n Việt Nam, đồng thời cũng l&#224; nguồn động vi&#234;n đối với c&#225;c d&#226;n tộc bị &#225;p bức tr&#234;n thế giới ”? H&#227;y minh chứng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.2</td>
+                            <td>H&#227;y chứng minh t&#237;nh s&#225;ng tạo trong tư tưởng Hồ Ch&#237; Minh về c&#225;ch mạng giải ph&#243;ng d&#226;n tộc?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.3</td>
+                            <td>Tại sao trong qu&#225; tr&#236;nh ra đi t&#236;m đường cứu nước Hồ Ch&#237; Minh đ&#227; từ chối con đường c&#225;ch mạng tư sản để đi theo con đường c&#225;ch mạng v&#244; sản? &#221; nghĩa của sự lựa chọn n&#224;y đối với c&#225;ch mạng Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.4</td>
+                            <td>Hồ Ch&#237; Minh quan niệm:‘c&#243; d&#226;n l&#224; c&#243; tất cả, tr&#234;n đời n&#224;y kh&#244;ng g&#236; qu&#253; bằng d&#226;n, được l&#242;ng d&#226;n th&#236; được tất cả, mất l&#242;ng d&#226;n th&#236; mất tất cả”. Anh/Chị hiểu như thế n&#224;o về luận điểm tr&#234;n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ3.5</td>
+                            <td>Hồ Ch&#237; Minh khẳng định: “Muốn x&#226;y dựng chủ nghĩa x&#227; hội, trước hết cần c&#243; những con người x&#227; hội chủ nghĩa”. Anh/Chị vận dụng quan điểm tr&#234;n như thế n&#224;o để trở th&#224;nh con người x&#227; hội chủ nghĩa?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ4.1</td>
+                            <td>Sức hấp dẫn của chủ nghĩa x&#227; hội l&#224; g&#236;? H&#227;y minh chứng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ4.2</td>
+                            <td>Theo chủ tịch Hồ Ch&#237; Minh, thời kỳ qu&#225; độ l&#234;n chủ nghĩa x&#227; hội ở Việt Nam sẽ bỏ qua chủ nghĩa Tư bản. Như vậy c&#243; đốt ch&#225;y giai đoạn hay kh&#244;ng? V&#236; sao?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ4.3</td>
+                            <td>Theo Hồ Ch&#237; Minh th&#236; “Độc lập d&#226;n tộc gắn liền với chủ nghĩa x&#227; hội”. V&#236; sao?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ4.4</td>
+                            <td>Theo chủ tịch Hồ Ch&#237; Minh, Chủ nghĩa x&#227; hội l&#224; xu thế tất yếu của thời đại v&#224; ph&#249; hợp với lợi &#237;ch của nh&#226;n d&#226;n Việt Nam. Tuy nhi&#234;n, hiện nay c&#243; rất &#237;t nước định hướng đi theo Chủ nghĩa x&#227; hội. Quan điểm của anh/Chị quan điểm tr&#234;n như thế n&#224;o về vấn đề tr&#234;n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">12</td>
+                            <td>CQ4.5</td>
+                            <td>Độc lập d&#226;n tộc gắn liền với Chủ nghĩa x&#227; hội – Sự lựa chọn ph&#249; hợp xu thế ph&#225;t triển của thời đại, kh&#225;t vọng thi&#234;ng li&#234;ng của d&#226;n tộc Việt Nam? Anh/chị hiểu như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ5.1</td>
+                            <td>V&#236; sao Hồ Ch&#237; Minh coi trọng yếu tố &quot;Phong tr&#224;o y&#234;u nước&quot; cho sự ra đời của Đảng Cộng Sản Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ5.2</td>
+                            <td>Bằng những sự kiện lịch sử h&#227;y chứng minh: Sự l&#227;nh đạo của Đảng l&#224; yếu tố h&#224;ng đầu đưa c&#225;ch mạng Việt Nam đi từ thắng lợi n&#224;y đến thắng lợi kh&#225;c?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ5.3</td>
+                            <td>Hồ Ch&#237; Minh khẳng định: Đảng sẵn s&#224;ng vui vẻ l&#224;m tr&#226;u ngựa, l&#224;m t&#244;i tớ trung th&#224;nh của Nh&#226;n d&#226;n [Hồ Ch&#237; Minh to&#224;n tập, tập 10, trang 184,185]. Anh/chị nhận định như thế n&#224;o khi một số c&#225;n bộ đảng vi&#234;n tho&#225;i h&#243;a, biến chất hiện nay?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ5.4</td>
+                            <td>H&#227;y n&#234;u những c&#225;ch để r&#232;n luyện được đức t&#237;nh giản dị, khi&#234;m tốn trong cuộc sống? Li&#234;n hệ bản th&#226;n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ5.5</td>
+                            <td>&quot;Bảy xin hiến ph&#225;p ban h&#224;nh; Trăm điều phải c&#243; thần linh ph&#225;p quyền&quot;. Anh/chị hiểu thế n&#224;o về nhận định n&#224;y của Hồ Ch&#237; Minh?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ6.1</td>
+                            <td>Theo Hồ Ch&#237; Minh để x&#226;y dựng nh&#224; nước trong sạch vững mạnh th&#236; đội ngũ c&#225;n bộ đảng vi&#234;n cần phải c&#243; những y&#234;u cầu g&#236;? Cho v&#237; dụ?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ6.2</td>
+                            <td>Chủ tịch Hồ Ch&#237; Minh đặc biệt coi trọng bệnh đặc quyền, đặc lợi, tham &#244;, l&#227;ng ph&#237;, quan li&#234;u ti&#234;u cực trong bộ m&#225;y Nh&#224; nước như thế n&#224;o? Lấy dẫn chứng thực tế để l&#224;m r&#245;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ6.3</td>
+                            <td>Trong bối cảnh hiện nay, những vấn đề g&#236; trong c&#244;ng t&#225;c x&#226;y dựng Đảng đ&#242;i hỏi ch&#250;ng ta cần đặc biệt quan t&#226;m?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ6.4</td>
+                            <td>Tiếp thu tư tưởng Hồ Ch&#237; Minh về Nh&#224; nước. Hiện nay việc x&#226;y dựng Nh&#224; nước ngang tầm nhiệm vụ trong giai đoạn c&#225;ch mạng mới cần bảo đảm những nội dung n&#224;o? Cho v&#237; dụ l&#224;m r&#245;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ6.5</td>
+                            <td>Anh/chị n&#234;u sự kế thừa v&#224; ph&#225;t triển tư tưởng Hồ Ch&#237; Minh về x&#226;y dựng Nh&#224; nước v&#236; d&#226;n trong Văn kiện Đại hội Đảng to&#224;n quốc lần thứ XIII của Đảng thể hiện như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ7.1</td>
+                            <td>Theo c&#225;c bạn, v&#236; sao Hồ Ch&#237; Minh lu&#244;n coi &quot;đo&#224;n kết l&#224; sức mạnh, l&#224; then chốt của th&#224;nh c&#244;ng&quot; trong sự nghiệp c&#225;ch mạng giải ph&#243;ng d&#226;n tộc v&#224; x&#226;y dựng đất nước?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ7.2</td>
+                            <td>Theo c&#225;c bạn, khi x&#225;c định chủ thể của khối đại đo&#224;n kết d&#226;n tộc, v&#236; sao Hồ Ch&#237; Minh kh&#244;ng lựa chọn chỉ đo&#224;n kết trong giai cấp c&#244;ng nh&#226;n m&#224; x&#225;c định l&#224; to&#224;n thể nh&#226;n d&#226;n Việt Nam? Điều n&#224;y c&#243; đi ngược lại với l&#253; luận quan điểm &quot;V&#244; sản to&#224;n thế giới, đo&#224;n kết lại&quot; của M&#225;c - Ăngghen kh&#244;ng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.3</td>
+                            <td>V&#236; sao Hồ Ch&#237; Minh lại lu&#244;n lu&#244;n quan t&#226;m, x&#226;y dựng mặt trận d&#226;n tộc thống nhất? &#253; nghĩa của việc n&#224;y l&#224; g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.4</td>
+                            <td>Mối quan hệ giữa đo&#224;n kết v&#224; d&#226;n chủ trong tư tưởng Hồ Ch&#237; Minh l&#224; g&#236;? C&#225;c bạn c&#243; thể vận dụng về mối quan hệ n&#224;y để thực hiện c&#225;c hoạt động teamwork của m&#236;nh như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.5</td>
+                            <td>Hồ Ch&#237; Minh c&#243; chỉ ra “D&#226;n vận kh&#233;o th&#236; việc g&#236; cũng th&#224;nh c&#244;ng”, theo c&#225;c bạn v&#236; sao ch&#250;ng ta phải thực hiện tốt c&#244;ng t&#225;c d&#226;n vận? Điều n&#224;y đ&#227; được thể hiện ở đ&#226;u, như thế n&#224;o trong tư tưởng Hồ Ch&#237; Minh</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ8.1</td>
+                            <td>Ph&#226;n t&#237;ch những quan điểm cơ bản của Hồ Ch&#237; Minh về sự cần thiết phải x&#226;y dựng đo&#224;n kết quốc tế. &#221; nghĩa của việc kết hợp sức mạnh d&#226;n tộc với sức mạnh thời đại trong thực tiễn c&#225;ch mạng Việt Nam hiện nay?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ8.2</td>
+                            <td>L&#224;m r&#245; c&#225;c nguy&#234;n tắc đo&#224;n kết quốc tế trong tư tưởng Hồ Ch&#237; Minh. Bằng những dẫn chứng từ thực tiễn chống đại dịch Covid-19 h&#227;y l&#224;m s&#225;ng tỏ sức mạnh của đo&#224;n kết quốc tế.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ8.3</td>
+                            <td>Vận dụng tư tưởng Hồ Ch&#237; Minh về đại đo&#224;n kết to&#224;n d&#226;n tộc v&#224; đo&#224;n kết quốc tế trong giai đoạn hiện nay cần qu&#225;n triệt những nội trọng t&#226;m n&#224;o? V&#236; sao đại đo&#224;n kết to&#224;n d&#226;n tộc phải kết hợp với đo&#224;n kết quốc tế?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ8.4</td>
+                            <td>Trong thư gửi c&#225;c đơn vị bộ đội c&#243; nhiệm vụ t&#225;c chiến ở Thượng L&#224;o ng&#224;y 3-4-1953: “Lần n&#224;y l&#224; lần đầu ti&#234;n, c&#225;c ch&#250; nhận một nhiệm vụ quan trọng v&#224; vẻ vang như nhiệm vụ n&#224;y, tức l&#224; gi&#250;p nh&#226;n d&#226;n nước bạn. M&#224; gi&#250;p nh&#226;n d&#226;n nước bạn tức l&#224; m&#236;nh tự gi&#250;p m&#236;nh”.
+H&#227;y sưu tầm những luận cứ (c&#226;u chuyện, điển h&#236;nh, thước phim) từ thực tế chống đại dịch Covid-19 để l&#224;m s&#225;ng tỏ phương ch&#226;m “gi&#250;p  nh&#226;n d&#226;n nước bạn tức l&#224; m&#236;nh tự gi&#250;p m&#236;nh” trong tư tưởng đo&#224;n kết của Hồ Ch&#237; Minh.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ8.5</td>
+                            <td>Đọc sự tổng kết sau: 
+Ng&#224;y 22-10-1963, trong cuộc họp của Bộ Ch&#237;nh trị b&#224;n về vấn đề quan hệ quốc tế của Đảng, Chủ tịch Hồ Ch&#237; Minh đề nghị: “Chủ trương của Đảng ta l&#224; đo&#224;n kết v&#224; l&#224;m cầu nối trong việc đo&#224;n kết quốc tế”. Nhận thức r&#245; tầm quan trọng của đo&#224;n kết quốc tế trong tư tưởng Hồ Ch&#237; Minh, ở thời kỳ đổi mới, bằng việc x&#225;c định đ&#250;ng c&#225;c d&#242;ng chảy của thế giới trong xu thế to&#224;n cầu h&#243;a v&#224; hội nhập quốc tế, Đảng v&#224; Nh&#224; nước ta đ&#227; chủ trương thực hiện ch&#237;nh s&#225;ch đối ngoại rộng mở, đa phương h&#243;a, đa dạng h&#243;a, chủ động, t&#237;ch cực hội nhập quốc tế v&#224; cụ thể h&#243;a v&#224;o trong chủ trương, đường lối qua c&#225;c kỳ đại hội: Việt Nam “muốn l&#224; bạn với tất cả c&#225;c nước trong cộng đồng thế giới” của Đại hội VII (năm 1991), “sẵn s&#224;ng l&#224; bạn, l&#224; đối t&#225;c tin cậy của c&#225;c nước trong cộng đồng quốc tế”  của Đại hội IX (năm 2001), “l&#224; bạn, đối t&#225;c tin cậy v&#224; l&#224; th&#224;nh vi&#234;n c&#243; tr&#225;ch nhiệm trong cộng đồng quốc tế” của Đại hội XI (năm 2011).
+Y&#234;u cầu:
+- Giới thiệu kh&#225;i qu&#225;t c&#225;c th&#224;nh tựu hội nhập quốc tế để l&#224;m s&#225;ng tỏ kh&#225;t vọng của Chủ tịch Hồ Ch&#237; Minh v&#224; mong muốn của d&#226;n tộc Việt Nam trong đo&#224;n kết quốc tế l&#224; “l&#224;m bạn với tất cả mọi nước d&#226;n chủ v&#224; kh&#244;ng g&#226;y th&#249; o&#225;n với một ai”.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">39</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ9.1</td>
+                            <td>H&#227;y l&#224;m r&#245; những gi&#225; trị của kh&#225;i niệm văn h&#243;a trong tư tưởng Hồ Ch&#237; Minh.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">40</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ9.2</td>
+                            <td>Tại Đại hội Văn h&#243;a to&#224;n quốc lần thứ nhất, ng&#224;y 24/11/1946, Chủ tịch Hồ Ch&#237; Minh n&#234;u một luận điểm quan trọng: “Văn h&#243;a soi đường cho quốc d&#226;n đi”, nhằm nhấn mạnh vai tr&#242; định hướng, dẫn dắt của văn h&#243;a đối với sự ph&#225;t triển của c&#225;ch mạng v&#224; của cả d&#226;n tộc. Từ quan điểm đ&#243; của Người y&#234;u cầu:
+- Kh&#225;i qu&#225;t những nội dung căn bản nhất để l&#224;m r&#245; nội dung văn h&#243;a soi đường cho quốc d&#226;n đi.
+- Li&#234;n hệ thực tiễn để chỉ ra những biểu hiện ti&#234;u cực trong trong văn h&#243;a đời sống hiện nay.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">41</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ9.3</td>
+                            <td>Tiến sĩ M. Admad, Gi&#225;m đốc UNESCO khu vực Ch&#226;u &#193; Th&#225;i B&#236;nh Duơng: “Hồ Ch&#237; Minh đ&#227; th&#224;nh c&#244;ng trong việc li&#234;n kết nhiều sắc th&#225;i văn ho&#225; v&#224;o một nền văn h&#243;a Việt Nam duy nhất. Người l&#224;m được việc n&#224;y nhờ sự hiểu biết s&#226;u sắc v&#224; t&#244;n trọng những đặc điểm văn h&#243;a kh&#225;c nhau”.
+Bằng c&#225;c dẫn chứng cụ thể về sự kế thừa những gi&#225; trị văn h&#243;a trong tư tưởng Hồ Ch&#237; Minh để l&#224;m r&#245; cho quan điểm n&#234;u tr&#234;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">42</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ9.4</td>
+                            <td>Khi luận b&#224;n chữ Kiệm, Hồ Ch&#237; Minh viết: “Nước ta c&#243; 20 triệu người, Nhiều b&#249; &#237;t, mỗi người mỗi ng&#224;y ăn 700 gam gạo, mỗi th&#225;ng l&#224; 21 kil&#244; gam. Nếu một ng&#224;y mỗi người chỉ tiết kiệm nữa b&#225;t cơm (việc đ&#243; rất dễ, ai cũng l&#224;m được), th&#236; mối th&#225;ng cả nước sẽ tiết kiệm được 20 triệu kil&#244; gạo, nghĩa l&#224; đủ nu&#244;i một triệu chiến sĩ trong một th&#225;ng… Kết quả của Cần cộng với kết quả của Kiệm l&#224;: bộ đội sẽ đầy đủ, nh&#226;n d&#226;n sẽ ấm no, kh&#225;ng chiến sẽ mau thắng lợi, kiến quốc sẽ mau th&#224;nh c&#244;ng, nước ta sẽ mau gi&#224;u mạnh ngang h&#224;ng với c&#225;c nước ti&#234;n tiến tr&#234;n thế giới”.
+- Kết hợp với luận về chữ “Cần”, chữ “Kiệm” của Người. Anh (Chị) h&#227;y đề ra c&#225;c giải ph&#225;p thực h&#224;nh chữ “Cần”, chữ “Kiệm” trong thực tiễn học tập của sinh vi&#234;n hiện nay. Luận giải v&#236; sao, B&#225;c lu&#244;n đặt cần đi đ&#244;i với kiệm?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">43</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ9.5</td>
+                            <td>Triết l&#253; con người v&#224; đạo đức, xoay quanh một c&#226;u hỏi lớn - Ở đời v&#224; l&#224;m người phải như thế n&#224;o? Với B&#225;c, “Muốn hướng dẫn nh&#226;n d&#226;n, m&#236;nh phải l&#224;m mực thước cho người ta bắt chước”, “Một tấm gương sống c&#242;n c&#243; gi&#225; trị hơn một trăm b&#224;i diễn văn tuy&#234;n truyền”. Từ quan điểm của B&#225;c v&#224; li&#234;n hệ với thực tiễn để tr&#236;nh b&#224;y quan điểm của anh, chị về vấn đề n&#224;y.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">44</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ10.1</td>
+                            <td>Nhằm x&#226;y dựng v&#224; ph&#225;t triển văn h&#243;a, con người Việt Nam đ&#225;p ứng y&#234;u cầu ph&#225;t triển bền vững đất nước Đại hội XII của Đảng đ&#227; kh&#225;i qu&#225;t c&#225;c nhiệm vụ cụ thể n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">45</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ10.2</td>
+                            <td>Tại Hội nghị nghi&#234;n cứu lịch sử Đảng của Ban Tuy&#234;n gi&#225;o Trung ương, B&#225;c Hồ đ&#227; n&#243;i “Nếu kh&#244;ng chịu kh&#243; học th&#236; kh&#244;ng tiến bộ được... X&#227; hội c&#224;ng đi tới, c&#244;ng việc c&#224;ng nhiều, m&#225;y m&#243;c c&#224;ng tinh xảo. M&#236;nh m&#224; kh&#244;ng chịu học th&#236; lạc hậu, m&#224; lạc hậu l&#224; bị đ&#224;o thải, tự m&#236;nh đ&#224;o thải m&#236;nh”. 
+Kết hợp với quan điểm của Người, bằng h&#224;nh văn r&#245; r&#224;ng, trong s&#225;ng Anh (Chị) h&#227;y tr&#236;nh b&#224;y quan điểm của m&#236;nh về tầm quan trọng của việc học tập, r&#232;n luyện trong m&#244;i trường học tập gi&#225;o dục Đại học v&#224; đề ra c&#225;c giải ph&#225;p cho việc học tập hiệu quả trong thực tế sinh vi&#234;n hiện nay.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ10.3</td>
+                            <td>Trong Thư gửi đồng b&#224;o v&#224; c&#225;n bộ x&#227; Nam Li&#234;n (nay l&#224; x&#227; Kim Li&#234;n, huyện Nam Đ&#224;n, tỉnh Nghệ An) Hồ Ch&#237; Minh n&#243;i: “Tư tưởng bảo thủ l&#224; như những sợi d&#226;y cột ch&#226;n cột tay người ta, phải vất n&#243; đi. Muốn tiến bộ th&#236; phải c&#243; tinh thần mạnh dạn, d&#225;m nghĩ d&#225;m l&#224;m”. Kết hợp với quan điểm của Người, bằng h&#224;nh văn r&#245; r&#224;ng, trong s&#225;ng h&#227;y viết b&#224;i luận ngắn tr&#236;nh b&#224;y:
+- Những quan điểm bảo thủ đang cố hữu trong bạn v&#224; c&#225;ch m&#224; bạn &quot;vất n&#243; đi&quot;. 
+- Thực trạng v&#224; giải ph&#225;p n&#224;o cho vấn đề “tinh thần mạnh dạn, d&#225;m nghĩ d&#225;m l&#224;m” trong giới trẻ hiện nay.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">47</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ10.4</td>
+                            <td>Ph&#226;n t&#237;ch những quan điểm chủ yếu trong tư tưởng Hồ Ch&#237; Minh về x&#226;y dựng con người mới. Sinh vi&#234;n cần phải l&#224;m g&#236; để ph&#225;t huy t&#237;nh t&#237;ch cực, chủ động trong việc r&#232;n luyện, ph&#225;t triển năng lực tư duy?</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">4 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Assignment</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>Phụ thuộc theo hình thức kiểm tra đánh giá của giảng viên<br/>Depending on the instructor’s chosen form of assessment</td>
+                            <td>LO1-L10</td>
+                            <td>Bài thuyết trình và sản phẩm sáng tạo, bài thuyết trình, bài kiểm tra…<br/>Presentation with creative product, presentation, quiz…</td>
+                            <td>Phụ thuộc theo hình thức kiểm tra đánh giá của giảng viên<br/>Depending on the instructor’s chosen form of assessment</td>
+                            <td>Kiến thức và kỹ năng trong phạm vi chương 2,3, 4, 5, 6 Cover chapter 2,3, 4, 5, 6</td>
+                            <td>Bài thuyết trình và sản phẩm sáng tạo, bài thuyết trình, bài kiểm tra… (Giảng linh hoạt lựa chọn hình thức kiểm tra đánh giá phù hợp)<br/>Presentation with a creative product, presentation, quiz, etc. (the instructor may flexibly choose the appropriate form of assessment)</td>
+                            <td>Sinh viên làm thuyết trình và sản phẩm sáng tạo, thuyết trình, hoặc quiz tuỳ theo sĩ số lớp và điều kiện cơ sở<br/>Depending on class size and institutional conditions, students may be assessed through a presentation with a creative product, a presentation, or a quiz</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Participation</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td></td>
+                            <td>LO1-L10</td>
+                            <td>Đề xuất của giảng viên<br/>Teachers' proposal</td>
+                            <td></td>
+                            <td></td>
+                            <td>Trong lớp học<br/>in class</td>
+                            <td>Sinh viên vắng không quá 20%<br/>Absent no more than 20% of class hours</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Progress test</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>20'</td>
+                            <td>LO1, LO2, LO3, LO4, LO5, LO7, LO8, LO9, LO10</td>
+                            <td>Câu hỏi trắc nghiệm dạng đúng sai, câu hỏi trắc nghiệm dạng nhiều lựa chọn.<br/>Yes-no questions, Multiple choice questions</td>
+                            <td>20- 25</td>
+                            <td>Progress test: Kiến thức trong phạm vi chương 1, 2, 3, 4, 5 (LO1, LO2, LO3, LO4, LO5, LO7, LO8, LO9, LO10)<br/>Progress tests: cover chapter 1, 2, 3, 4, 5 (LO1, LO2, LO3, LO4, LO5, LO7, LO8, LO9, LO10)</td>
+                            <td>Trong lớp học<br/>in class</td>
+                            <td>Sinh viên không được sử dụng tài liệu.<br/> Students are not allowed to use materials.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Final exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>60'</td>
+                            <td>LO1-L10</td>
+                            <td>Câu hỏi trắc nghiệm dạng đúng sai, câu hỏi trắc nghiệm dạng nhiều lựa chọn.<br/>Yes-no questions, Multiple choice questions</td>
+                            <td>60</td>
+                            <td>Tất cả 6 chương (Chương 1: 5 câu, chương 2:10 câu, chương 3: 10 câu, chương 4: 10 câu, chương 5: 10 câu, chương 6: 15 câu) <br/>All 6 chapters included (Chapter 1: 5 questions, chapter 2: 10 questions, chapter 3: 10 questions, chapter 4: 10 questions, chapter 5: 10 questions, chapter 6: 15 questions)</td>
+                            <td>Phòng Khảo thí tổ chức<br/>by Office of Assessment</td>
+                            <td>Sinh viên không được sử dụng tài liệu.<br/> Students are not allowed to use materials.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style3 {
+        height: 24px;
+        width: 155px;
+    }
+    .auto-style6 {
+        width: 155px;
+    }
+    .font-bold {
+        font-weight: bold;
+    }
+    #gvSubs, #gvPLO, #table-detail {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+    #gvSubs th, #gvPLO th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<h1 class="mb-4">Curriculum Details</h1>
+
+    <table id="table-detail" class="table-detail" cellspacing="0" rules="all" border="1" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th scope="col" style="width: 155px;">Field</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tr>
+            <td class="auto-style3 text-right">CurriculumCode:</td>
+            <td>BIT_SE_K18D_19A</td>
+        </tr>
+        <tr>
+            <td class="auto-style3 text-right">Name:</td>
+            <td>The Bachelor Program of Information Technology, Software Engineering Major (Chương tr&#236;nh cử nh&#226;n ng&#224;nh CNTT, chuy&#234;n ng&#224;nh Kỹ thuật phần mềm)</td>
+        </tr>
+        <tr>
+            <td class="auto-style3 text-right">English Name:</td>
+            <td>The Bachelor Program of Information Technology, Software Engineering Major</td>
+        </tr>
+        <tr>
+            <td class="auto-style6 text-right">Description:</td>
+            <td>1. Mục tiêu đào tạo<br/>1.1 Mục tiêu chung:<br/>Đào tạo cử nhân ngành Công nghệ thông tin (CNTT) chuyên ngành Kỹ thuật phần mềm (KTPM) có nhân cách và năng lực đáp ứng nhu cầu thực tế của xã hội; nắm vững kiến thức chuyên môn và thực hành, có khả năng tổ chức, thực hiện và phát huy sáng tạo trong các công việc liên quan đến các chuyên ngành KTPM được đào tạo; có khả năng theo đuổi việc học tập, nghiên cứu ở bậc học cao hơn. Chương trình đào tạo chuyên ngành KTPM có định hướng ứng dụng.<br/>Chương trình đào tạo nhằm:<br/>a)	Trang bị cho sinh viên kiến thức cơ bản của ngành CNTT cùng các phương pháp luận, công nghệ nền tảng và chuyên sâu của chuyên ngành; <br/>b)	Rèn luyện cho sinh viên những đức tính, kỹ năng cần thiết qua môi trường làm việc chuyên nghiệp, biết vận dụng các kiến thức ngành CNTT và các kiến thức chuyên ngành vào công việc thực tế;<br/>c)	Cung cấp cho sinh viên một nền tảng vững chắc về ngoại ngữ, khoa học, văn hóa, xã hội, phát huy tính chủ động, sáng tạo trong học tập, công việc và cuộc sống.<br/>1.2 Mục tiêu cụ thể: <br/>1.3 Vị trí việc làm sau khi tốt nghiệp:<br/>Sinh viên tốt nghiệp chuyên ngành Kỹ thuật phần mềm có thể lựa chọn cho mình những công việc như:<br/>+ Lập trình viên phát triển ứng dụng; <br/>+ Chuyên viên phân tích nghiệp vụ;<br/>+ Kỹ sư đảm bảo chất lượng phần mềm; <br/>+ Kỹ sư quy trình sản xuất phần mềm;<br/>+ Quản trị viên dự án phần mềm.<br/>2. Chuẩn đầu ra chuyên ngành Kỹ thuật phần mềm<br/>3. Khối lượng kiến thức toàn khóa:  145 tín chỉ, chưa kể Tiếng Anh chuẩn bị, Giáo dục Quốc phòng, các hoạt động rèn luyện bắt buộc và tự chọn. <br/>4. Đối tượng tuyển sinh<br/>- Theo quy chế tuyển sinh đại học, cao đẳng hệ chính quy của Bộ Giáo dục và Đào tạo.<br/>- Theo quy chế tuyển sinh của trường Đại học FPT.<br/>5. Quy trình đào tạo, điều kiện tốt nghiệp<br/>Quy trình đào tạo và điều kiện tốt nghiệp được quy định theo “Quy chế đào tạo hệ đại học chính quy theo hệ thống tín chỉ” hiện hành của Đại học FPT.<br/>6. Cách thức đánh giá<br/>Cách thức đánh giá được quy định theo “Quy chế đào tạo hệ đại học chính quy theo hệ thống tín chỉ” hiện hành của Đại học FPT.<br/>------------------<br/>1. Training objectives<br/>1.1 General objectives:<br/>To train bachelors in Information Technology, specializing in Software Engineering, with personality and capacity to meet the practical needs of society; to master professional and practical knowledge, to be able to organize, implement and promote creativity in jobs related to the specializations of Software Engineering being trained; to be able to pursue studies and research at higher levels. The training program in Software Engineering is application-oriented.<br/>The training program aims to:<br/>a) Equip students with basic knowledge of the information technology industry and the methodologies, fundamental and specialized technologies of the specialization;<br/>b) Train students with necessary qualities and skills through a professional working environment, knowing how to apply knowledge of the information technology industry and specialized knowledge to practical work;<br/>c) Provide students with a solid foundation in foreign languages, science, culture, society, promoting initiative and creativity in study, work and life.<br/>1.2 Specific objectives:<br/>1.3 Job positions after graduation:<br/>Students who graduate from the Software Engineering specialization can choose jobs such as:<br/>+ Application development programmer;<br/>+ Business analyst;<br/>+ Software quality assurance engineer;<br/>+ Software production process engineer;<br/>+ Software project administrator.<br/>2. Learning Outcomes for the Software Engineering specialization<br/>3. Total knowledge volume of the entire course: 145 credits, not including preparatory English, National Defense Education, compulsory and elective training activities.<br/>4. Admission subjects<br/>- According to the admission regulations for regular universities and colleges of the Ministry of Education and Training.<br/>- According to the admission regulations of FPT University.<br/>5. Training process, graduation conditions<br/>The training process and graduation conditions are regulated according to the current " Ungraduate Accademic Regulations" of FPT University.<br/>6. Assessment method<br/>The assessment method is regulated according to the current "Ungraduate Accademic Regulations" of FPT University.</td>
+        </tr>
+        <tr>
+            <td class="auto-style6 text-right">DecisionNo MM/dd/yyyy:</td>
+            <td>
+1140/QĐ-ĐHFPT dated 09/11/2026            </td>
+        </tr>
+        
+        
+        <tr>
+            <td class="auto-style6"></td>
+            <td>
+                <a class="btn btn-warning btn-normal mr-2 fs-inherit" style="font-size: medium" href="/PO/Index?id=3335">View PO</a>
+                <a class="btn btn-warning btn-normal mr-2 fs-inherit" style="font-size: medium" href="/Compo/ViewComBo?cur_id=3335">View Combo</a>
+                <a class="btn btn-warning btn-normal mr-2 fs-inherit" style="font-size: medium" href="/Elective/ViewElective?cur_id=3335">View Elective</a>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <!-- PLO Section -->
+    <div style="color: #23ac68;">13 PLO(s) found</div>
+        <table id="gvPLO" class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 5%; text-align: center;">#</th>
+                    <th style="width: 20%;">PLO Name</th>
+                    <th style="width: 70%;">PLO Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td style="text-align: center;">1</td>
+                        <td>PLO1</td>
+                        <td>Understand basic knowledge of social sciences, political law, national security and defense, contributing to the formation of a scientific worldview and methodology.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">2</td>
+                        <td>PLO2</td>
+                        <td>Apply solid scientific foundation knowledge in the field of information technology in general and software engineering in particular to understand the professional context and acquire in-depth specialized knowledge of software engineering.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">3</td>
+                        <td>PLO3</td>
+                        <td>Apply in-depth specialized knowledge, new technologies in the field of software engineering, or expanded knowledge (in fields close to software engineering) to work and propose solutions to meet diverse needs from reality.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">4</td>
+                        <td>PLO4</td>
+                        <td>Have basic knowledge of planning and operating, implementing, and supervising the implementation of plans for specialized work in the field of software engineering.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">5</td>
+                        <td>PLO5</td>
+                        <td>Have a mindset about startups and apply startup knowledge and skills to implement a startup project; have creative thinking, research skills, critical thinking and problem solving.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">6</td>
+                        <td>PLO6</td>
+                        <td>Have intermediate English proficiency equivalent to level 4 according to the 6-level foreign language competency framework for Vietnam, and be able to communicate simply in Japanese.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">7</td>
+                        <td>PLO7</td>
+                        <td>Have the ability to communicate and present to clearly state the problem to be solved and convey knowledge and skills when performing specific/complex professional tasks related to software engineering.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">8</td>
+                        <td>PLO8</td>
+                        <td>Have the ability to program and use analysis, design, construction/implementation, and testing tools in the field of software engineering.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">9</td>
+                        <td>PLO9</td>
+                        <td>Have the ability to update and exploit advanced tools and techniques in the field of software engineering in particular and information technology in general.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">10</td>
+                        <td>PLO10</td>
+                        <td>Develop the ability to work independently as well as work effectively in a team in an academic and practical environment; take personal responsibility and responsibility for the team when performing a professional job. Have the spirit of self-study, lifelong learning, adapt to the continuous changes of technology and society.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">11</td>
+                        <td>PLO11</td>
+                        <td>Behave professionally, ethically, socially responsible and have a spirit of serving the community; have professional responsibility and integrity in work.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">12</td>
+                        <td>PLO12</td>
+                        <td>Be mentally and physically strong, demonstrate national identity, and be confident in international integration.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">13</td>
+                        <td>PLO13</td>
+                        <td>Be able to plan, coordinate, and manage resources related to software engineering projects; guide and supervise the implementation of project tasks and at the same time, be able to evaluate the effectiveness of the project and propose feasible and effective solutions for improvement.</td>
+                    </tr>
+            </tbody>
+        </table>
+    <br />
+    <!-- Subjects Section -->
+    <div style="color: #23ac68;">48 subjects, 145 credits</div>
+        <table id="gvSubs" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+                    <th>Semester</th>
+                    <th>NoCredit</th>
+                    <th>PreRequisite</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>OTP101</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=OTP101&amp;curriculumID=3335">Orientation and General Training Program_Định hướng v&#224; R&#232;n luyện tập trung</a>
+                        </td>
+                        <td>
+0                        </td>
+                        <td>0</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>PEN</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PEN&amp;curriculumID=3335">Preparation English_Tiếng Anh chuẩn bị</a>
+                        </td>
+                        <td>
+0                        </td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PHE_COM*1</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PHE_COM%2A1&amp;curriculumID=3335">Physical Education 1_Gi&#225;o dục thể chất 1</a>
+                        </td>
+                        <td>
+0                        </td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>TMI_ELE</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=TMI_ELE&amp;curriculumID=3335">Traditional musical instrument_Nhạc cụ truyền thống</a>
+                        </td>
+                        <td>
+0                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CEA201</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=CEA201&amp;curriculumID=3335">Computer Organization and Architecture_Tổ chức v&#224; Kiến tr&#250;c m&#225;y t&#237;nh</a>
+                        </td>
+                        <td>
+1                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CSI106</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=CSI106&amp;curriculumID=3335">Introduction to Computer Science_Nhập m&#244;n khoa học m&#225;y t&#237;nh</a>
+                        </td>
+                        <td>
+1                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MAE101</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=MAE101&amp;curriculumID=3335">Mathematics for Engineering_To&#225;n cho ng&#224;nh kỹ thuật</a>
+                        </td>
+                        <td>
+1                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>PHE_COM*2</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PHE_COM%2A2&amp;curriculumID=3335">Physical Education 2_Gi&#225;o dục thể chất 2</a>
+                        </td>
+                        <td>
+1                        </td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PRF192</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PRF192&amp;curriculumID=3335">Programming Fundamentals_Cơ sở lập tr&#236;nh</a>
+                        </td>
+                        <td>
+1                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>SSL101c</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SSL101c&amp;curriculumID=3335">Academic Skills for University Success_Kỹ năng học tập đại học</a>
+                        </td>
+                        <td>
+1                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>MAD101</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=MAD101&amp;curriculumID=3335">Discrete mathematics_To&#225;n rời rạc</a>
+                        </td>
+                        <td>
+2                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>NWC204</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=NWC204&amp;curriculumID=3335">Computer Networking_Mạng m&#225;y t&#237;nh</a>
+                        </td>
+                        <td>
+2                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OSG202</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=OSG202&amp;curriculumID=3335">Operating Systems_Hệ điều h&#224;nh</a>
+                        </td>
+                        <td>
+2                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PHE_COM*3</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PHE_COM%2A3&amp;curriculumID=3335">Physical Education 3_Gi&#225;o dục thể chất 3</a>
+                        </td>
+                        <td>
+2                        </td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PRO192</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PRO192&amp;curriculumID=3335">Object-Oriented Programming_Lập tr&#236;nh hướng đối tượng</a>
+                        </td>
+                        <td>
+2                        </td>
+                        <td>3</td>
+                        <td>Pass PRF192</td>
+                    </tr>
+                    <tr>
+                        <td>SSG104</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SSG104&amp;curriculumID=3335">Communication and In-Group Working Skills_Kỹ năng giao tiếp v&#224; cộng t&#225;c </a>
+                        </td>
+                        <td>
+2                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>CSD201</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=CSD201&amp;curriculumID=3335">Data Structures and Algorithms_Cấu tr&#250;c dữ liệu v&#224; giải thuật</a>
+                        </td>
+                        <td>
+3                        </td>
+                        <td>3</td>
+                        <td>PRO192</td>
+                    </tr>
+                    <tr>
+                        <td>DBI202</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=DBI202&amp;curriculumID=3335">Introduction to Databases_C&#225;c hệ cơ sở dữ liệu</a>
+                        </td>
+                        <td>
+3                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>JPD113</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=JPD113&amp;curriculumID=3335">Elementary Japanese 1- A1.1_Tiếng Nhật sơ cấp 1-A1.1 </a>
+                        </td>
+                        <td>
+3                        </td>
+                        <td>3</td>
+                        <td>Kh&#244;ng</td>
+                    </tr>
+                    <tr>
+                        <td>LAB211</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=LAB211&amp;curriculumID=3335">OOP with Java Lab_Thực h&#224;nh OOP với Java</a>
+                        </td>
+                        <td>
+3                        </td>
+                        <td>3</td>
+                        <td>PRO192</td>
+                    </tr>
+                    <tr>
+                        <td>WED201c</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=WED201c&amp;curriculumID=3335">Web Design_Thiết kế web</a>
+                        </td>
+                        <td>
+3                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>IOT102</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=IOT102&amp;curriculumID=3335">Internet of Things_Internet vạn vật</a>
+                        </td>
+                        <td>
+4                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>JPD123</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=JPD123&amp;curriculumID=3335">Elementary Japanese 1-A1.2_Tiếng Nhật sơ cấp 1-A1.2 </a>
+                        </td>
+                        <td>
+4                        </td>
+                        <td>3</td>
+                        <td>JPD113</td>
+                    </tr>
+                    <tr>
+                        <td>MAS291</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=MAS291&amp;curriculumID=3335">Statistics &amp; Probability_X&#225;c suất thống k&#234; </a>
+                        </td>
+                        <td>
+4                        </td>
+                        <td>3</td>
+                        <td>MAE101 or MAC101</td>
+                    </tr>
+                    <tr>
+                        <td>PRJ301</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PRJ301&amp;curriculumID=3335">Java Web Application Development_Ph&#225;t triển ứng dụng Java web</a>
+                        </td>
+                        <td>
+4                        </td>
+                        <td>3</td>
+                        <td>DBI202, PRO192</td>
+                    </tr>
+                    <tr>
+                        <td>SWE201c</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SWE201c&amp;curriculumID=3335">Introduction to Software Engineering_Nhập m&#244;n kĩ thuật phần mềm</a>
+                        </td>
+                        <td>
+4                        </td>
+                        <td>3</td>
+                        <td>PRO192 (not applied to the BIT_AI ; BIT_IC; BIT_AS; BIT_DX and BA programs)</td>
+                    </tr>
+                    <tr>
+                        <td>SE_COM*1</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SE_COM%2A1&amp;curriculumID=3335">Subject 1 of Combo*_Học phần 1 của combo*</a>
+                        </td>
+                        <td>
+5                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SWP391</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SWP391&amp;curriculumID=3335">Software development project_Dự &#225;n ph&#225;t triển phần mềm</a>
+                        </td>
+                        <td>
+5                        </td>
+                        <td>3</td>
+                        <td>PRJ301, SWE201c or SWE202c, pass LAB211</td>
+                    </tr>
+                    <tr>
+                        <td>SWR302</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SWR302&amp;curriculumID=3335">Software Requirement_Y&#234;u cầu phần mềm</a>
+                        </td>
+                        <td>
+5                        </td>
+                        <td>3</td>
+                        <td>SWE102 or SWE201c or SWE202c</td>
+                    </tr>
+                    <tr>
+                        <td>SWT301</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SWT301&amp;curriculumID=3335">Software Testing_Kiểm thử phần mềm</a>
+                        </td>
+                        <td>
+5                        </td>
+                        <td>3</td>
+                        <td>SWE102 or SWE201c or SWE202c</td>
+                    </tr>
+                    <tr>
+                        <td>WDU203c</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=WDU203c&amp;curriculumID=3335">UI/UX Design_Thiết kế trải nghiệm người d&#249;ng</a>
+                        </td>
+                        <td>
+5                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ENW493c</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=ENW493c&amp;curriculumID=3335">Research Methods &amp; Academic Writing Skills_Phương ph&#225;p nghi&#234;n cứu &amp; Kỹ năng viết học thuật</a>
+                        </td>
+                        <td>
+6                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>OJT202</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=OJT202&amp;curriculumID=3335">On-The-Job Training_Đ&#224;o tạo trong m&#244;i trường thực tế</a>
+                        </td>
+                        <td>
+6                        </td>
+                        <td>10</td>
+                        <td>Students attained 90% of the total credits prior to the OJT term (excluding Physical Education and OTP Programs)
+Students choosing JS combo (Japanese Bridge Engineer) have to pass JPD133</td>
+                    </tr>
+                    <tr>
+                        <td>EXE101</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=EXE101&amp;curriculumID=3335">Experiential Entrepreneurship 1_Trải nghiệm khởi nghiệp 1</a>
+                        </td>
+                        <td>
+7                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>PMG201c</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PMG201c&amp;curriculumID=3335">Project Management</a>
+                        </td>
+                        <td>
+7                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>SE_COM*2</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SE_COM%2A2&amp;curriculumID=3335">Subject 2 of Combo*_Học phần 2 của combo*</a>
+                        </td>
+                        <td>
+7                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SE_COM*3</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SE_COM%2A3&amp;curriculumID=3335">Subject 3 of Combo*_Học phần 3 của combo*</a>
+                        </td>
+                        <td>
+7                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SWD392</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SWD392&amp;curriculumID=3335">Software Architecture and Design_Kiến tr&#250;c v&#224; thiết kế phần mềm</a>
+                        </td>
+                        <td>
+7                        </td>
+                        <td>3</td>
+                        <td>SWE201c or SWE202c, PRO192</td>
+                    </tr>
+                    <tr>
+                        <td>EXE201</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=EXE201&amp;curriculumID=3335">Experiential Entrepreneurship 2_Trải nghiệm khởi nghiệp 2</a>
+                        </td>
+                        <td>
+8                        </td>
+                        <td>3</td>
+                        <td>EXE101</td>
+                    </tr>
+                    <tr>
+                        <td>ITE302c</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=ITE302c&amp;curriculumID=3335">Ethics in IT_Đạo đức trong CNTT</a>
+                        </td>
+                        <td>
+8                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>MLN111</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=MLN111&amp;curriculumID=3335">Philosophy of Marxism – Leninism_Tri&#234;́t học Mác - Lê-nin </a>
+                        </td>
+                        <td>
+8                        </td>
+                        <td>3</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>MLN122</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=MLN122&amp;curriculumID=3335">Political economics of Marxism – Leninism_Kinh t&#234;́ chính trị Mác - Lê-nin</a>
+                        </td>
+                        <td>
+8                        </td>
+                        <td>2</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>PRM393</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=PRM393&amp;curriculumID=3335">Mobile Programming_Lập tr&#236;nh di động</a>
+                        </td>
+                        <td>
+8                        </td>
+                        <td>3</td>
+                        <td>PRO192</td>
+                    </tr>
+                    <tr>
+                        <td>SE_COM*4_ELE</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SE_COM%2A4_ELE&amp;curriculumID=3335">Học phần 4 của combo SE</a>
+                        </td>
+                        <td>
+8                        </td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HCM202</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=HCM202&amp;curriculumID=3335">Ho Chi Minh Ideology_Tư tưởng Hồ Ch&#237; Minh</a>
+                        </td>
+                        <td>
+9                        </td>
+                        <td>2</td>
+                        <td>MLN111, MLN122</td>
+                    </tr>
+                    <tr>
+                        <td>MLN131</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=MLN131&amp;curriculumID=3335">Scientific socialism_Chủ nghĩa x&#227; hội khoa học </a>
+                        </td>
+                        <td>
+9                        </td>
+                        <td>2</td>
+                        <td>MLN111, MLN122</td>
+                    </tr>
+                    <tr>
+                        <td>SE_GRA_ELE</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=SE_GRA_ELE&amp;curriculumID=3335">Graduation Elective - Software Engineering_Học phần lựa chọn Đồ &#225;n tốt nghiệp chuy&#234;n ng&#224;nh Kỹ thuật phần mềm</a>
+                        </td>
+                        <td>
+9                        </td>
+                        <td>10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>VNR202</td>
+                        <td>
+                            <a href="/gui/role/student/Syllabuses?subCode=VNR202&amp;curriculumID=3335">History of Communist Party of Vietnam_Lịch sử Đảng Cộng sản Việt Nam</a>
+                        </td>
+                        <td>
+9                        </td>
+                        <td>2</td>
+                        <td>MLN111, MLN122</td>
+                    </tr>
+            </tbody>
+        </table>
+    <div style="padding: 24px;">
+        <a href="/PLOMapping/View?curriculumID=3335" target="_blank">
+            View mapping subjects of the Curriculum BIT_SE_K18D_19A to program learning outcomes
+        </a>
+    </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

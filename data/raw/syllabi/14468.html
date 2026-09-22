@@ -1,0 +1,2833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" />
+    <link href="/Content/common.css" rel="stylesheet" />
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/toastr.min.css" rel="stylesheet">
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/Bootstrap-select-v1.13.14.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <link href="/Content/jquery-ui.css" rel="stylesheet">
+    <script>
+        var a = 'Student';
+        if (!a) {
+            window.location.replace('/Login');
+        }
+    </script>
+    <title id="pageTitle">FPT University Learning Materials</title>
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        /*.btn{
+            color:white;
+            font-weight:bold;
+        }*/
+
+
+        * {
+            font-family: 'Inter', 'Source Sans Pro', 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: -75px;
+            width: 100%;
+        }
+
+        /* Mobile wrapper fix */
+        @media (max-width: 768px) {
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .btn-default {
+            background-color: #F2994A;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-default:hover {
+            background-color: #fd7e14;
+        }
+
+        input,
+        select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+
+        .tbl-data {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-data th {
+            font-weight: bold;
+            background-color: #F2994A !important;
+            color: white;
+        }
+
+        .tbl-data input[type=checkbox] {
+            width: 20px;
+        }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 85px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1200px) {
+            #sidebar {
+                min-width: 260px;
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 8px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            #btn-home {
+                height: 36px;
+                min-width: 70px;
+                max-width: 100px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+
+            #btn-home span {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            #language {
+                width: 110px !important;
+                height: 32px !important;
+            }
+
+            #ProfileImage {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 97px;
+                left: 0;
+                height: calc(100vh - 97px);
+                z-index: 1030;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            #content {
+                height: auto;
+                margin-top: 97px;
+                padding: 10px;
+            }
+
+            .wrapper {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .page-title {
+                position: static !important;
+                width: 100%;
+                text-align: center;
+                margin: 6px 0 0 0;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 12px !important;
+            }
+
+            #ProfileImage {
+                width: 35px !important;
+                height: 35px !important;
+            }
+
+            .dropdown-arrow {
+                right: -12px !important;
+                font-size: 10px !important;
+            }
+
+            #btn-home {
+                height: 34px;
+                min-width: 60px;
+                max-width: 90px;
+                padding: 5px 8px;
+                gap: 4px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            /* Make long tables scrollable on small screens */
+            #content table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+            }
+
+            #sidebar {
+                display: none !important;
+            }
+
+            #btn-home {
+                height: 35px;
+                width: 70px;
+                padding: 5px;
+            }
+
+            #btn-home span {
+                font-size: 12px;
+            }
+
+            #btn-home i {
+                font-size: 14px;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.1em;
+            }
+
+            .page-title {
+                font-size: 1.1em !important;
+                margin: 4px 0 0 0;
+            }
+
+            .navbar .container-fluid {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+
+            #language {
+                width: 90px !important;
+                height: 28px !important;
+                font-size: 11px !important;
+            }
+
+            #ProfileImage {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .dropdown-arrow {
+                right: -10px !important;
+                font-size: 9px !important;
+            }
+
+            #btn-home {
+                height: 30px;
+                min-width: 50px;
+                max-width: 80px;
+                padding: 4px 6px;
+                gap: 3px;
+            }
+
+            #btn-home span {
+                font-size: 11px;
+                line-height: 1;
+            }
+
+            #btn-home i {
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .navbar {
+                padding: 0.25rem 0.5rem;
+                height: 85px !important;
+            }
+
+            /* Ensure navbar elements are always visible */
+            .navbar .container-fluid {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .navbar .d-flex {
+                flex-shrink: 0;
+            }
+
+            #content {
+                padding: 5px;
+                margin-top: 85px !important;
+            }
+
+            #sidebar {
+                top: 85px !important;
+                height: calc(100vh - 85px) !important;
+            }
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 0;
+        }
+
+        #sidebar p {
+            padding: 15px;
+            background: #F2994A;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1em;
+            display: block;
+            background-color: #f4a158;
+        }
+
+        #sidebar ul li a:hover {
+            background: #d06e17;
+        }
+
+        #sidebar ul li.sb-active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        /* Custom dropdown arrow */
+        .dropdown-toggle .dropdown-arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 12px;
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+            margin-top: 90px;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .mat-2 {
+            position: relative;
+            left: -30px;
+        }
+
+        table {
+            /* Set "my-sec-counter" to 0 */
+            counter-reset: my-sec-counter;
+        }
+
+        .counter::before {
+            /* Increment "my-sec-counter" by 1 */
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .required-field:after {
+            content: "    *";
+            color: red;
+            font-size: 20px;
+        }
+
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #F2994A;
+            border-color: #fff;
+        }
+
+        .dropdown-toggle::after {
+            right: 20px;
+        }
+
+        #btn-home {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            min-width: 80px;
+            max-width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            gap: 6px;
+        }
+
+        #btn-home:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        #btn-home span {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        #btn-home i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        label[class=error] {
+            color: red
+        }
+
+        #lbtnSignOut {
+            color: #08c
+        }
+
+        #lbtnSignOut:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Navbar responsive improvements */
+        .navbar .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar .d-flex {
+            flex-shrink: 0;
+        }
+
+        /* Mobile navbar improvements */
+        @media (max-width: 768px) {
+            .navbar .container-fluid {
+                padding: 0.5rem;
+            }
+
+            .navbar .d-flex:first-child {
+                flex: 0 0 auto;
+            }
+
+            .navbar .d-flex:last-child {
+                flex: 0 0 auto;
+            }
+
+            /* Dropdown menu mobile positioning */
+            .dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+                max-width: 90vw !important;
+                min-width: 200px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg px-0 pb-2 m-0 nav-fix"
+        style="background-color: #F2994A ; color: white; height:97px;" aria-label="Main navigation">
+        <div class="container-fluid p-0">
+            <!-- Left side: Menu button and Home button -->
+            <div class="d-flex align-items-center">
+                <button type="button" id="sidebarCollapse" class="menu-btn btn " style="background-color: #F2994A;">
+                    <img class="img-home" src="/Images/menu1.png" alt="Alternate Text" style="width:35px" />
+                </button>
+
+                <a ID="btn-home" class="btn btn-success btn-lg ml-2" href="/Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="font-weight:bold;">Home</span>
+                </a>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="text-center page-title mx-auto"
+                style="position: absolute; left: 50%; transform: translateX(-50%);" aria-label="Page title">
+                FPT University Learning Materials</h1>
+
+            <!-- Right side: Language and Profile -->
+            <div class="d-flex align-items-center">
+                <!-- Language Selector -->
+                <div class="mr-3">
+                    <select id="language" style="z-index: 1; width: 130px;height:34.5px" class="form-control"
+                        aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                </div>
+
+                <!-- User Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle p-0 position-relative" id="navbarDropdown"
+                        type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="User profile menu">
+                        <img ID="ProfileImage" class="rounded-circle" Width="50" Height="50" alt="User profile" />
+                        <i class="fa fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                        style="right: 0; left: auto; max-width: 90vw;">
+                        <div ID="pnlProfile">
+                            <span class="dropdown-item">
+                                Name:
+                                <span ID="lblName" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                <span ID="pnlEmail">
+                                    Email:
+                                    <span ID="lblEmail" style="font-weight: bold"></span>
+                                </span>
+                            </span>
+                            <span class="dropdown-item">
+                                User's role:
+                                <span ID="lblRole" style="font-weight: bold"></span>
+                            </span>
+                            <span class="dropdown-item">
+                                Education level:
+                                <span ID="lblEduLevel" style="font-weight: bold"></span>
+                            </span>
+                            <div class="dropdown-item ">
+                                <button ID="lbtnSignOut" class="btn btn-link p-0 text-left"
+                                    style="color: #08c; text-decoration: none;" OnClick="lbtnSignOut_Click">
+                                    Sign out
+                                    FLM
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <nav id="sidebar" class="sb-active" style="padding-bottom: 60px;" aria-label="Main navigation">
+            <ul class="lisst-unstyled components p-0" id="panelHeadFeatures">
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                            
+                            
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpImportSyl" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink2" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddAst" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddSub" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkImportSub" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        User
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                        <li>
+                            <a href="/gui/user/UserManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddUser" href="/gui/user/AddUser.aspx">+ Add New User</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                        <li>
+                            <a ID="HyperLink3" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink4" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpExportTextBookToOrder" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export
+                                Textbook to Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink6" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink7" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpSyllabusReporting" href="/gui/tool/SyllabusReporting.aspx">
+                                + Syllabus
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpCurriculumReporting" href="/gui/tool/CurriculumReporting.aspx">
+                                + Curriculum
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpMaterialReporting" href="/gui/tool/MaterialReporting.aspx">
+                                + Material
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpLOReporting" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="hpScheduleReporting" href="/gui/tool/ScheduleReporting.aspx">
+                                + Schedule
+                                Reporting
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="hpFinalCheck" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Campus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                        <li>
+                            <a href="/gui/campus/CampusManagement.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="hpLinkAddCampus" CssClass="auto-style-1" href="/gui/campus/AddCampus.aspx">
+                                + Add New
+                                Campus
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu13">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/syllabusPlan">- Syllabus Plans Management</a>
+                </li>
+                <li>
+                    <a href="/CurriculumPlan">- Curriculum Plans Management</a>
+                </li>
+
+
+            </ul>
+            <ul class="lisst-unstyled components p-0" ID="panelStaffFeatures">
+                <li>
+                    <a href="#pageSubmenu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu14">
+                        <li>
+                            <a href="/gui/curriculum/CurHomepage.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add New Curriculum</a>
+                        </li>
+                        <li>
+                            <a href="/gui/PLO/AddPLO.aspx">+ Add New PLO</a>
+                        </li>
+                        
+                        <li Visible="False" runat="server">
+                            <a href="/gui/assignedCurriculum/MyCurriculums.aspx">+ My Curriculums</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Curriculum Subjects Management</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedCurriculum/AssignCurriculumManagement.aspx">
+                                + Assign Curriculum
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu15" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Curriculum Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu15">
+                        <li>
+                            <a href="/gui/curriculum/CurSubHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/gui/curriculum/AddCurri.aspx">+ Add Curriculum</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu16" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Syllabus
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu16">
+                        <li>
+                            <a href="/gui/syllabus/SyllabusManagement.aspx">+ Search</a>
+                        </li>
+                        <li>
+                            <a href="/gui/assignedSyllabus/AssignedSyllabusManagement">
+                                + Assigned Syllabus
+                                Management
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink1" href="/gui/syllabus/ImportSyllabus.aspx">
+                                + Import syllabus from Excel
+                                file
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu17" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Required Knowledge and Skills
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu17">
+                        <li>
+                            <a href="/gui/subjectGroup/SubCurGroupManagement.aspx">+ Curriculum Subject Grouping</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink5" href="/gui/subjectGroup/SubjectGroupManagent.aspx">
+                                + Subject Group
+                                Management
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu18" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Assessment Type
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu18">
+                        <li>
+                            <a href="/gui/assessmentType/AssessmentTypeHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink8" href="/gui/assessmentType/AddAst.aspx">+ Add New Assessment Type</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu19" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Subject
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu19">
+                        <li>
+                            <a href="/gui/subject/SubjectHomepage.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink9" href="/gui/subject/AddSub.aspx">+ Add New Subject</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink10" href="/gui/subject/ImportSubject.aspx">+ Import Subjects</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu20" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Tools
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu20">
+                        <li>
+                            <a href="/gui/tool/AllTools.aspx">+ Manage</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink12" href="/gui/tool/UpdateCurWithNewSyl.aspx">
+                                + Update curriculums with new
+                                syllabus version
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink13" href="/gui/tool/SubjectReporting.aspx">+ Subject Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink14" href="/gui/tool/ExportTextbookToOrder.aspx">
+                                + Export Textbook to
+                                Order
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink15" href="/gui/tool/ExportGradingStructure.aspx">
+                                + Export Grading
+                                Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink16" href="/gui/tool/ExportMaterialsOfCur.aspx">
+                                + Export Materials of
+                                Curriculum
+                            </a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink17" href="/gui/tool/SyllabusReporting.aspx">+ Syllabus Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink18" href="/gui/tool/CurriculumReporting.aspx">+ Curriculum Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink19" href="/gui/tool/MaterialReporting.aspx">+ Material Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink20" href="/gui/tool/LOReporting.aspx">+ CLO Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink21" href="/gui/tool/ScheduleReporting.aspx">+ Schedule Reporting</a>
+                        </li>
+                        <li>
+                            <a ID="HyperLink22" href="/gui/tool/FinalCheck.aspx">+ Final Check</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/gui/reportSemester/DownloadReportFile.aspx">- Download report file</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/CurriculumOfSubject.aspx">- Show Curriculum of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllPrequisiteSubject.aspx">- Show Learning Path of a Subject</a>
+                </li>
+                <li>
+                    <a href="/gui/tool/AllCorollarySubject.aspx">- A subject is the pre-requisite of</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu21" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Decision
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu21">
+                        <li>
+                            <a href="/decision">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/decision/Create">+ Add New Campus</a>
+                        </li>
+                        <li>
+                            <a href="/decision/ImportDecision">+ Import Decision from Excel file</a>
+
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu22" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        Learning & Teaching method
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu22">
+                        <li>
+                            <a href="/LTMethod">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/LTMethod/Create">+ Add New Learnig & Teaching Method</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu23" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        -
+                        SemesterPlan
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu23">
+                        <li>
+                            <a href="/SemesterPlans">+ Manage</a>
+                        </li>
+                        <li>
+                            <a href="/SemesterPlans/Create">+ Add new SemesterPlans</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Template/Guideline_Using_FLM_ver2.0.pdf" Target="_blank">- View FLM guideline</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="p-2">
+
+            <div class="mx-3">
+                
+
+<style type="text/css">
+    .auto-style2 {
+        width: 155px;
+    }
+
+    .auto-style3 {
+        width: 155px;
+        height: 24px;
+    }
+
+    #gvSubs,
+    #table-detail,
+    #gvMaterial,
+    #gvLO,
+    #gvSchedule,
+    #gvAssessment,
+    #gvCQ {
+        border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    #gvSubs th,
+    #gvMaterial th,
+    #gvLO th,
+    #gvSchedule th,
+    #gvAssessment th,
+    #gvCQ th {
+        font-weight: bold;
+        background-color: #F2994A;
+        color: white;
+    }
+
+    .table-detail tr td {
+        padding: 6px 10px 6px 10px;
+    }
+</style>
+
+<div>
+    <h1 class="mb-4">Syllabus Details</h1>
+
+
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1"
+            style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Syllabus ID:</td>
+                <td>14468</td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">Syllabus Name:</td>
+                <td><b>History of the Communist Party of Viet Nam - Lịch sử Đảng Cộng sản Việt Nam</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style3 text-right">Course Name English:</td>
+                <td><b></b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Subject Code:</td>
+                <td><b>VNR202</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Learning-Teaching Method:</td>
+                <td>Lecture,Presentation and implementation guidelines for a creative product</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">NoCredit:</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Degree Level:</td>
+                <td>Bachelor</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Time Allocation:</td>
+                <td>Thời gian học (103h) = 22.5 giờ học trên lớp (30 tiết) + 1 giờ thi cuối kỳ + 76.5 giờ tự học + 3 giờ học trên Coursera<br/>Study hour (103h) = 22.5 contact hours (30 sessions) + 1 hour final exam + 76.5 hours self-study + 3 hours on Coursera</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Pre-Requisite:</td>
+                <td>MLN111, MLN122</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Description:</td>
+                <td>Giới thiệu môn học: Lịch sử Đảng Cộng sản Việt Nam là một chuyên ngành, một bộ phận của khoa học lịch sử. Chủ tịch Hồ Chí Minh đã khẳng định Lịch sử Đảng Cộng sản Việt Nam là cả một pho lịch sử bằng vàng. Đó chính là tính khoa học, cách mạng, giá trị thực tiễn sâu sắc trong Cương lĩnh, đường lối của Đảng; là sự lãnh đạo đúng đắn, đáp ứng kịp thời những yêu cầu, nhiệm vụ do lịch sử đặt ra; những kinh nghiệm, bài học có tính quy luật, lý luận của cách mạng Việt Nam và những truyền thống vẻ vang của Đảng.<br/>Nghiên cứu, học tập lịch sử Đảng không chỉ nắm vững những sự kiện, cột mốc lịch sử mà cần thấu hiểu những vấn đề phong phú đó trong quá trình lãnh đạo và đấu tranh, để vận dụng, phát triển trong thời kỳ đổi mới toàn diện, đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước và hội nhập quốc tế hiện nay.<br/>Course introduction: History of CPV is a major and a division of historical science. President Ho Chi Minh affirmed that the history of the Communist Party of Vietnam is golden pages. That is scientific, revolutionary and profound practical value in the Party's platforms and guidelines, is proper leadership and timely response to requirements and missions set by the history; is the normative and theoretical experiences and lessons of Vietnamese revolution and the glorious traditions of the Party. <br/>Researching and studying history of CPV not only requires mastering historical events and milestones but also understanding those issues in the process of leading and struggling; thereby applying and developing in the current period of comprehensive renovation and accelerating industrialization and modernization and international integration.<br/><br/>Mục tiêu môn học:<br/>- Về nội dung: Cung cấp những tri thức có tính hệ thống, cơ bản về sự ra đời của Đảng Cộng sản Việt Nam (1920- 1930), sự lãnh đạo của Đảng đối với cách mạng Việt Nam trong thời kỳ đấu tranh giành chính quyền (1930- 1945), trong hai cuộc kháng chiến chống thực dân Pháp và đế quốc Mỹ xâm lược (1945- 1975), trong sự nghiệp xây dựng, bảo vệ Tổ quốc thời kỳ cả nước quá độ lên chủ nghĩa xã hội, tiến hành công cuộc đổi mới (1975- 2018).<br/>- Về tư tưởng: Thông qua các sự kiện lịch sử và các kinh nghiệm về sự lãnh đạo của Đảng để xây dựng ý thức tôn trọng sự thật khách quan, nâng cao lòng tự hào, niềm tin của sinh viên vào sự lãnh đạo của Đảng trong quá khứ và hiện tại.<br/>- Về kỹ năng: Trang bị phương pháp tư duy khoa học về lịch sử, kỹ năng lựa chọn tài liệu nghiên cứu, học tập môn học và khả năng vận dụng nhận thức lịch sử vào công tác thực tiễn, phê phán quan niệm sai trái về lịch sử của Đảng.<br/><br/>Course Objectives:<br/>- Knowledge: Students will understand basic and systematic knowledge of the establishment of the Communist Party of Vietnam (1920–1930); the Party’s leadership in the struggle for power (1930–1945); the Party’s leadership in the two wars against French colonialism and U.S. imperialism (1945–1975); and the Party’s leadership in the national transition to socialism and the Doi Moi reforms (1975–2018).<br/>- Attitudes: Through historical events and experiences of the Party’s leadership, students will develop respect for objective truth, and deepen pride and confidence in the Party’s leadership in the past and present.<br/>- Skills: Students will develop scientific thinking about history, skills in selecting research and study materials, and the ability to apply historical knowledge in practice, critically evaluate misconceptions about the Party’s history.<br/><br/>Nội dung môn học:<br/>Môn học trang bị cho sinh viên những hiểu biết cơ bản về đối tượng, mục đích, nhiệm vụ, phương pháp nghiên cứu, học tập môn học Lịch sử Đảng Cộng sản Việt Nam; những kiến thức cơ bản, cốt lõi, có hệ thống về sự ra đời của Đảng (1920 - 1930), về quá trình Đảng lãnh đạo cách mạng Việt Nam từ năm 1930 cho đến nay, từ đó, khẳng định các thành công, nêu lên các hạn chế, tổng kết những kinh nghiệm về sự lãnh đạo trong thực tiễn cách mạng.<br/>Ngoài Chương nhập môn, nội dung môn học được bố cục gồm 3 chương:<br/>- Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945);<br/>- Chương II: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975);<br/>- Chương III: Đảng lãnh đạo cả nước quá độ lên Chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018). <br/>Qua đó khẳng định các thành công, nêu lên các hạn chế, tổng kết những kinh nghiệm về sự lãnh đạo cách mạng của Đảng để giúp người học nâng cao nhận thức, niềm tin đổi với Đảng và khả năng vận dụng kiến thức đã học vào thực tiễn công tác, góp phần xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa.<br/><br/>This course provides students with basic knowledge of objects, purposes, tasks, research and study methods of the History of CPV; the basic, core, systematic knowledge of the Party establishment (1920 - 1930), the process of the Party's leading the Vietnamese revolution from 1930 to the present, thereby, by affirming the successes, listing the limitations and summarizing experience of the Party’s leadership in revolutionary practices. <br/>In addition to the introductory chapter, the course content includes three chapters: <br/>- Chapter 1: The Communist Party of Vietnam was founded and led the rise to power (1930-1945);<br/>- Chapter II: The Party led two resistance wars against foreign invasion, completing national liberation and reunion (1945 - 1975);<br/>- Chapter III: The Party led the national transition to socialism and carrying out the Doi moi (1975-2018).<br/>Through this, students will recognize the achievements and identify the limitations of the Party’s revolutionary leadership, summarize the experiences gained, enhance their awareness and confidence in the Party, and develop the ability to apply the knowledge learned to practical work, contributing to the construction and defense of a socialist Vietnam.<br/><br/>Phương pháp dạy học: Thuyết giảng và kết hợp trình chiếu các slide bài giảng. Hướng dẫn, giao bài tập đề tài theo nhóm. Tổ chức và hướng dẫn sinh viên thảo luận nhóm, thuyết trình và thực hiện sản phẩm sáng tạo (tham khảo và ứng dụng phần mềm AI một cách có trách nhiệm).<br/>Teaching method: Giving lectures and slide presentations. Guiding and assigning groupwork assignments. Organizing and guiding students in group discussions, presentations, and the development of creative products (with the responsible and ethical use of AI tools)</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">StudentTasks:</td>
+                <td>- Nắm vững mục tiêu, nhiệm vụ, đổi tượng, nội dung cơ bản của môn học Lịch sử Đảng, rèn luyện kỹ năng tư duy, phương pháp học tập, nâng cao nhận thức tư tưởng, niềm tin đối với sự lãnh đạo của Đảng, góp phần phát huy truyền thống tốt đẹp của Đảng, vận dụng kinh nghiệm lịch sử vào công tác thực tiễn.<br/> Sinh viên phải tham gia tối thiểu 80% thời gian môn học. <br/>- Phải có giáo trình lịch sử Đảng Cộng sản Việt Nam, dành cho sinh viên bậc đại học hệ không chuyên lý luận chính trị của Bộ Giáo dục và Đào tạo. Chỉ sử dụng máy tính xách tay trong lớp cho mục đích học tập.Thực hiện đầy đủ các yêu cầu của giảng viên khi học trên lớp cũng như các chủ đề sinh viên tự chuẩn bị trước khi đến lớp. Ứng dụng AI một cách có trách nhiệm, đạo đức trong quá trình học tập và thực tiễn<br/><br/>- Master the objectives, tasks, target audience, and core contents of the course History of the Party; develop thinking skills and study methods; enhance awareness and confidence in the Party’s leadership; contribute to promoting the Party’s fine traditions; and apply historical experiences to practical work.<br/>- Attend at least 80% of class hours. <br/>- Own History of CPV textbook for non-politics majored students as promulgated by the Ministry of Education and Training. Use their own laptop in class only for learning purpose. Fulfill tasks given by the instructor in class as well as topics needed to prepare in advance. AI must be applied responsibly and ethically in both learning and practice.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Tools:</td>
+                <td>Internet, pdf reader and AI-based learning tools (for responsible use, recommended as supplementary support)</td>
+            </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right;">Scoring Scale:</td>
+                    <td>10</td>
+        </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">DecisionNo MM/dd/yyyy:</td>
+                <td>1028/QĐ-ĐHFPT dated 08/21/2026</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">IsApproved:</td>
+                <td><b>True</b></td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Note:</td>
+                <td>1) Progress test + Assignment: 70%<br/>- Participation: 10% <br/>- 1 Progress test: 20%<br/>- Assignment: 40%   <br/>2) Final Exam: 30% <br/>3) Final result: 100%<br/>4) Completion Criteria:  <br/>    Every on-going assessment component > 0, Final Result  >=5  & Final Exam Score >=4<br/>5) Sinh viên cần hoàn thành và có chứng chỉ khóa học online trên Coursera để đủ điều kiện dự thi cuối kỳ.<br/>5) Students must complete the online Coursera course and obtain the course completion certificate to be eligible to sit the final exam.</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">Is Scored:</td>
+                <td><b>True</b></td>
+            </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right;">MinAvgMarkToPass:
+                    </td>
+                    <td>
+                        5
+            </td>
+        </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right;">IsActive:</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right;">ApprovedDate:</td>
+                <td>8/21/2026</td>
+            </tr>
+        </table>
+        <br />
+        <!-- Materials Section -->
+        <label style="color: #23ac68;">15 material(s)</label>
+        <br />
+            <table id="gvMaterial" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Material Description</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Published Date</th>
+                        <th>Edition</th>
+                        <th>ISBN</th>
+                        <th>Is Main Material</th>
+                        <th>Is Hard Copy</th>
+                        <th>Is Online</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Báo cáo tổng kết một số vấn đề lý luận thực tiễn qua 30 năm đổi mới<br/>The final report on the summary of some theoretical-practical issues over the past 30 years of innovation</td>
+                            <td>Đảng Cộng sản Việt Nam, Ban chấp hành Trung ương, Ban chỉ đạo tổng kết<br/>Communist Party of Vietnam, Central Committee of the Communist Party of Vietnam, <br/>National Steering Committee</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2015</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Chiến tranh cách mạng Việt Nam 1945-1975, thắng lợi và bài học<br/>Vietnamese Revolutionary War, 1945–1975: Victory and Lessons</td>
+                            <td>Ban chỉ đạo tổng kết chiến tranh trực thuộc Bộ chính trị</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2008</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam (Dành cho sinh viên đại học, cao đẳng chuyên ngành Mác – Lênin, tư tưởng Hồ Chí Minh)<br/>History of CPV textbook for students whose major is Marxism-Leninism and Ho Chi Minh ideology</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2021</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam (Dành cho sinh viên đại học, cao đẳng khối không chuyên ngành Mác – Lênin, tư tưởng Hồ Chí Minh) - Bản dự thảo<br/>History of CPV textbook for students whose major is not Marxism-Leninism and Ho Chi Minh ideology - Draft</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2019</td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://moet.gov.vn/van-ban/vbdh/Pages/chi-tiet-van-ban.aspx?ItemID=2729#divShowDialogDownload.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam (Dành cho sinh viên đại học, cao đẳng khối không chuyên ngành Mác – Lênin, tư tưởng Hồ Chí Minh)<br/>History of CPV textbook for students whose major is not Marxism-Leninism and Ho Chi Minh ideology</td>
+                            <td>Bộ Giáo dục và Đào tạoMinistry of Education and Training</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia sự thậtTruth National Political Publishing House</td>
+                            <td>2021</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>Hồ Chí Minh toàn tập, tập 1 đến tập 15<br/>The Selected Works of Ho Chi Minh, Vol. 1 to 5</td>
+                            <td>Hồ Chí Minh</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2011</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>Kiên quyết, kiên trì đấu tranh phòng, chống tham nhũng, tiêu cực, góp phần xây dựng Đảng và Nhà nước ta ngày càng trong sạch, vững mạnh</td>
+                            <td>Tổng Bí thư Nguyễn Phú Trọng</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia Sự thật</td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/sach-chinh-tri/kien-quyet-kien-tri-dau-tranh-phong-chong-tham-nhung-tieu-cuc-gop-phan-xay-dung-dang-va-nha-nuoc-ta-ngay-cang-trong-sach-436</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>Lịch sử Đảng Cộng sản Việt Nam, tập 1<br/>History of the Communist Party of Vietnam, Vol. 1</td>
+                            <td>Institute of History</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2018</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>Nghị quyết số 57-NQ/TW, ngày 22/12/2024 của Bộ Chính trị về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia</td>
+                            <td>Bộ Chính trị - Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam<br/>The Politburo – The Central Committee of the Communist Party of Vietnam</td>
+                            <td>Bộ Ch&#237;nh trị - Ban Chấp h&#224;nh Trung ương Đảng Cộng sản Việt Nam
+The Politburo – The Central Committee of the Communist Party of Vietnam</td>
+                            <td>2024</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://tulieuvankien.dangcongsan.vn/Uploads/2025/1/7/2/NQ-57-TW-BCT.pdf</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td>Nghị quyết số 68-NQ/TW ngày 4/5/2025 của Bộ Chính trị về phát triển kinh tế tư nhân</td>
+                            <td>Bộ Chính trị - Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam<br/>The Politburo – The Central Committee of the Communist Party of Vietnam</td>
+                            <td>Bộ Ch&#237;nh trị - Ban Chấp h&#224;nh Trung ương Đảng Cộng sản Việt Nam
+The Politburo – The Central Committee of the Communist Party of Vietnam</td>
+                            <td>2025</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://tulieuvankien.dangcongsan.vn/Uploads/2025/5/7/5/NQ-68-TW.pdf</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td>Tài liệu giảng dạy về phòng, chống tham nhũng dùng cho các trường đại học, cao đẳng không chuyên về luật<br/>(Phê duyệt kèm theo Quyết định số 3468/QĐ-BGDĐT ngày 06 tháng 9 năm 2014 của Bộ trưởng Bộ Giáo dục và Đào tạo)</td>
+                            <td>Chủ biên et al.</td>
+                            <td>BỘ GI&#193;O DỤC V&#192; Đ&#192;O TẠO</td>
+                            <td>2014</td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>https://drive.google.com/file/d/1Tf3Fyybs8puDEnp5JGw3zqezIfreh6H2/view?usp=sharing</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td>Văn kiện Đại hội đại biểu toàn quốc lần thứ XII<br/>Political report of the 12th Party Congress</td>
+                            <td>Đảng Cộng sản Việt Nam<br/>Communist Party of Vietnam</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2016</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII<br/>Political report of the 13th Party Congress</td>
+                            <td>Đảng Cộng sản Việt Nam<br/>Communist Party of Vietnam</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2021</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIV<br/>Political report of the 14th Party Congress</td>
+                            <td>Đảng Cộng sản Việt Nam<br/>Communist Party of Vietnam</td>
+                            <td>Nh&#224; xuất bản Ch&#237;nh trị quốc gia
+National Political Publishing House</td>
+                            <td>2026</td>
+                            <td>1</td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td>Khóa học ôn tập trực tuyến môn Lịch sử Đảng Cộng sản Việt Nam trên nền tảng Coursera <br/>Online review course on the History of the Communist Party of Vietnam on Coursera</td>
+                            <td></td>
+                            <td>Coursera</td>
+                            <td></td>
+                            <td></td>
+                            <td>                                                                                                    </td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>Sinh vi&#234;n cần ho&#224;n th&#224;nh kh&#243;a học n&#224;y v&#224; c&#243; chứng chỉ để đủ điều kiện dự thi cuối kỳ.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- LOs Section -->
+        <label style="color: #23ac68;">9 LO(s)</label>
+            <table id="gvLO" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 5%;">CLO Name</th>
+                        <th>CLO Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>CLO1</td>
+                            <td>Hiểu được về đối tượng, mục đ&#237;ch, nhiệm vụ, phương ph&#225;p nghi&#234;n cứu, học tập m&#244;n học Lịch sử Đảng Cộng sản Việt Nam
+Understand the objects, purposes, tasks, research and study methods of the History of CPV</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>CLO2</td>
+                            <td>Ph&#226;n t&#237;ch sự ra đời của Đảng Cộng sản Việt Nam (1920 - 1930), sự l&#227;nh đạo của Đảng đối với c&#225;ch mạng Việt Nam trong thời kỳ đấu tranh gi&#224;nh ch&#237;nh quyền (1930 - 1945), trong hai cuộc kh&#225;ng chiến chống thực d&#226;n Ph&#225;p v&#224; đế quốc Mỹ x&#226;m lược (1945 - 1975)
+Analyze the establishment of the Communist Party of Vietnam (1920 - 1930),  the Party&#39;s leadership over the period of Rise to power (1930 - 1945) and two resistance wars against French colonialist and American imperialist invasions (1945 - 1975)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>CLO3</td>
+                            <td>Nắm được qu&#225; tr&#236;nh x&#226;y dựng v&#224; bảo vệ Tổ quốc, qu&#225; độ l&#234;n Chủ nghĩa x&#227; hội, tiến h&#224;nh c&#244;ng cuộc đổi mới to&#224;n diện đất nước (1975 - 2018) của Đảng Cộng sản Việt Nam. Từ đ&#243;, khẳng định c&#225;c th&#224;nh c&#244;ng, n&#234;u l&#234;n c&#225;c hạn chế, tổng kết những kinh nghiệm về sự l&#227;nh đạo trong thực tiễn c&#225;ch mạng
+Understand the national construction and defense, the transition to socialism, the implementation of the comprehensive renovation of the country (1975 - 2018) of the Communist Party of Vietnam. Thereby, affirming the successes, listing the limitations and summarizing experiences on leadership in revolutionary practices.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>CLO4</td>
+                            <td>Củng cố v&#224; n&#226;ng cao niềm tin, niềm tự h&#224;o v&#224;o sự l&#227;nh đạo của Đảng, định hướng phấn đấu theo mục ti&#234;u, l&#253; tưởng của Đảng
+Strengthen and enhance trust and pride in the Party’s leadership, and orient students to strive toward the Party’s goals and ideals.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td>CLO5</td>
+                            <td>Củng cố, n&#226;ng cao &#253; thức tự r&#232;n luyện v&#224; tu dưỡng đạo đức c&#225;ch mạng; thể hiện nhận thức ch&#237;nh trị, tư tưởng đ&#250;ng đắn trong học tập v&#224; hoạt động thực tiễn
+Consolidate and strengthen students’ awareness of self-discipline and the cultivation of revolutionary ethics; and demonstrate sound political and ideological awareness in academic work and practical activities.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td>CLO6</td>
+                            <td>N&#226;ng cao &#253; thức r&#245; hơn về tr&#225;ch nhiệm c&#244;ng d&#226;n trước những nhiệm vụ trọng đại của đất nước 
+Raise higher sense of civic responsibility over important duties of the country</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td>CLO7</td>
+                            <td>X&#226;y dựng phương ph&#225;p tư duy khoa học về lịch sử; kỹ năng lựa chọn v&#224; tổng hợp t&#224;i liệu nghi&#234;n cứu, học tập; ph&#225;t triển kỹ năng l&#224;m việc c&#225; nh&#226;n v&#224; nh&#243;m; ứng dụng c&#244;ng nghệ, đặc biệt l&#224; AI một c&#225;ch c&#243; đạo đức v&#224; tr&#225;ch nhiệm để hỗ trợ nghi&#234;n cứu v&#224; học tập; đồng thời n&#226;ng cao kỹ năng thuyết tr&#236;nh v&#224; tr&#236;nh b&#224;y sản phẩm, kết quả nghi&#234;n cứu gắn với chủ trương của Đảng
+Develop scientific thinking methods in history; acquire skills in selecting and synthesizing research and learning materials; strengthen individual and group work skills; apply technology, especially AI, in an ethical and responsible manner to support research and learning; and enhance presentation skills in delivering research products and outcomes in line with the Party’s guidelines.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td>CLO8</td>
+                            <td>Vận dụng nhận thức lịch sử v&#224; thực tiễn để nhận diện, ph&#226;n t&#237;ch v&#224; chủ động ph&#234; ph&#225;n quan niệm sai tr&#225;i về lịch sử của Đảng
+Apply historical and practical knowledge to identify, analyze, and proactively criticize false perceptions of the Party’s history.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td>CLO9</td>
+                            <td>Vận dụng quan điểm của Đảng v&#224;o cuộc sống v&#224; c&#244;ng t&#225;c, biết kết hợp với những kiến thức chuy&#234;n ng&#224;nh để chủ động, t&#237;ch cực giải quyết những thực tiễn đặt ra theo đường lối, ch&#237;nh s&#225;ch, ph&#225;p luật của Đảng v&#224; Nh&#224; nước
+Apply the Party&#39;s viewpoints to life and work, combine it with specialized knowledge to proactively solve problems in reality in accordance with the guidelines, policies and laws of the Party and State</td>
+                        </tr>
+                </tbody>
+            </table>
+        <a href="/CLOMapping/View?syllabusID=14468" target="_blank">View mapping of CLOs to PLOs</a>
+        <br />
+        <br />
+        <!-- Download Buttons & Schedule Section (student: no teacher materials / T-download) -->
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">
+            Download All Student Material
+        </button>
+        <label style="color: #23ac68;">
+        </label>
+            <table id="gvSchedule" class="auto-style2 table table-striped tbl-data" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Learning-Teaching Type</th>
+                        <th>LO</th>
+                        <th>ITU</th>
+                        <th>Student Materials</th>
+                        <th>S-Download</th>
+                        <th>Student's Tasks</th>
+                        <th>URLs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Chương nhập môn: Đối tượng, chức năng, nhiệm vụ, nội dung và phương pháp nghiên cứu, học tập Lịch sử Đảng Cộng sản Việt Nam<br/>I. Đối tượng nghiên cứu của môn học Lịch sử Đảng Cộng sản Việt Nam <br/>II. Chức năng, nhiệm vụ của môn học Lịch sử Đảng Cộng sản Việt Nam<br/><br/>Introductory chapter: Objects, purposes, tasks, research and study methods of the History of CPV<br/>I. Objects of study in the subject History of the Communist Party of Vietnam<br/>II. Functions and tasks of the subject History of the Communist Party of Vietnam</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>IT</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 7 đến trang 24<br/><br/>Read History of CPV textbook from page 7 to 24 in advance</td>
+                            <td>
+                                        <a href="https://drive.google.com/drive/folders/1CXun-a8RbmtyG688cPd3cweXGzsBJKjG?usp=drive_link" class="ContainSLink" target=_blank rel=noopener noreferrer>link1-1</a>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Chương nhập môn: Đối tượng, chức năng, nhiệm vụ, nội dung và phương pháp nghiên cứu, học tập lịch sử Đảng Cộng sản Việt Nam<br/>III. Phương pháp nghiên cứu, học tập môn Lịch sử Đảng Cộng sản Việt Nam <br/>IV. Mục đích, yêu cầu của môn học Lịch sử Đảng Cộng sản Việt Nam<br/><br/>Introductory chapter: Objects, purposes, tasks, research and study methods of the History of CPV<br/>III. Methods of studying and studying History of the Communist Party of Vietnam<br/>IV. Purpose and requirements of the subject History of the Communist Party of Vietnam</td>
+                            <td>Offline</td>
+                            <td>LO1</td>
+                            <td>IT</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 24 đến trang 34<br/><br/>Read History of CPV textbook from page 24 to 34 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>I. Đảng Cộng sản Việt Nam ra đời và Cương lĩnh chính trị đầu tiên của Đảng (tháng 2-1930)<br/>1. Bối cảnh lịch sử <br/>2. Nguyễn Ái Quốc chuẩn bị các điều kiện để thành lập Đảng<br/><br/>Chapter 1: The Communist Party of Vietnam was founded and led the rise to power (1930 - 1945)<br/>I. The Communist Party of Vietnam was founed and the Party's first Political Platform ( (February 1930)<br/>1. Historical background<br/>2. Nguyen Ai Quoc prepared the conditions for the establishment of the Party</td>
+                            <td>Offline</td>
+                            <td>CLO2, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 35 đến trang 58<br/><br/>Read History of CPV textbook from page 35 to 58 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>I. Đảng Cộng sản Việt Nam ra đời và Cương lĩnh chính trị đầu tiên của Đảng (tháng 2-1930)<br/>3. Thành lập Đảng Cộng sản Việt Nam và Cương lĩnh chính trị đầu tiên của Đảng <br/>4. Ý nghĩa lịch sử của việc thành lập Đảng Cộng sản Việt Nam <br/>Assignment<br/><br/>Chapter 1: The Communist Party of Vietnam was founded and led the rise to power (1930 - 1945)<br/>I. The Communist Party of Vietnam was founed and the Party's first Political Platform ( (February 1930)<br/>3. Establishment of the Communist Party of Vietnam and the Party's first political platform<br/>4. The historical significance of the establishment of the Communist Party of Vietnam<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>CLO2, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 58 đến trang 71<br/><br/>Read History of CPV textbook from page 58 to 71 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>II. Đảng lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>1. Phong trào cách mạng 1930 - 1931 và khôi phục phong trào cách mạng 1932 - 1935<br/>Assignment<br/><br/>Chapter 1:  Vietnam was founded and led the rise to power (1930 - 1945)<br/>II. The Party's leading the rise to power (1930 - 1945) (part 1)<br/>1. Revolutionary movements of 1930-1931 and restoring revolutionary movements 1932 - 1935<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 71 đến trang 83<br/><br/>Read History of CPV textbook from page 71 to 83 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>II. Đảng lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>2. Phong trào dân chủ 1936 - 1939<br/>Assignment<br/><br/>Vietnam was founded and led the rise to power (1930 - 1945)<br/>II. The Party's leading the rise to power (1930 - 1945) (part 1)<br/>2. The Democratic Movement 1936-1939<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 83 đến trang 91<br/><br/>Read History of CPV textbook from page 83 to 91 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>II. Đảng lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>3. Phong trào giải phóng dân tộc 1939 - 1945 (phần 1)<br/>Assignment<br/><br/>Chapter 1: The Communist Party of Vietnam was founded and led the rise to power (1930 - 1945)<br/>II. The Party's leading the rise to power (1930 - 1945) <br/>3. National Liberation Movement 1939 - 1945 (part 1)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 92 đến trang 104<br/><br/>Read History of CPV textbook from page 92 to 104 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>II. Đảng lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>3. Phong trào giải phóng dân tộc 1939 - 1945 (phần 2)<br/>Assignment<br/><br/>Chapter 1: The Communist Party of Vietnam was founded and led the rise to power (1930 - 1945)<br/>II. The Party's leading the rise to power (1930 - 1945) <br/>3. National Liberation Movement 1939 - 1945 (part 2)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 104 đến trang 119<br/><br/>Read History of CPV textbook from page 104 to 119 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>II. Đảng lãnh đạo đấu tranh giành chính quyền (1930 - 1945)<br/>4. Tính chất, ý nghĩa và kinh nghiệm của Cách mạng Tháng Tám năm 1945 <br/>Assignment<br/><br/>Chapter 1: The Communist Party of Vietnam was founded and led the rise to power (1930 - 1945)<br/>II. The Party's leading the rise to power (1930 - 1945) (part 3)<br/>4. The nature, significance and experience of the August Revolution of 1945 <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 119 đến trang 125<br/><br/>Read History of CPV textbook from page 119 to 123 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>I. Đảng lãnh đạo xây dựng, bảo vệ chính quyền cách mạng và kháng chiến chống thực dân Pháp xâm lược (1945 - 1954)<br/>1. Xây dựng và bảo vệ chính quyền cách mạng 1945 - 1946<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>I. The Party led the construction and defense of the revolutionary government and the resistance war against the French colonialists <br/>1. The construction and defense of the revolutionary government 1945 - 1946<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 127 đến trang 145<br/><br/>Read History of CPV textbook from page 127 to 145 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>I. Đảng lãnh đạo xây dựng, bảo vệ chính quyền cách mạng và kháng chiến chống thực dân Pháp xâm lược (1945 - 1954)<br/>2. Đường lối kháng chiến toàn quốc và quá trình tổ chức thực hiện (1946 - 1950)<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>I. The Party led the construction and defense of the revolutionary government and the resistance war against the French colonialists <br/>2. Guidelines on national resistance war against French colonialists and its implementation from 1946 to 1950 <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 145 đến trang 160<br/><br/>Read History of CPV textbook from page 145 to 160 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>I. Đảng lãnh đạo xây dựng, bảo vệ chính quyền cách mạng và kháng chiến chống thực dân Pháp xâm lược (1945 - 1954)<br/>3. Đẩy mạnh cuộc kháng chiến đến thắng lợi (1951 - 1954)<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>I. The Party led the construction and defense of the revolutionary government and the resistance war against the French colonialists<br/>3. Stepping up the resistance war against the invasion of French colonialists and American intervention to victory 1951 - 1954 <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 160 đến trang 175<br/><br/>Read History of CPV textbook from page 160 to 175 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>I. Đảng lãnh đạo xây dựng, bảo vệ chính quyền cách mạng và kháng chiến chống thực dân Pháp xâm lược (1945 - 1954)<br/>4. Ý nghĩa lịch sử và kinh nghiệm của Đảng trong lãnh đạo kháng chiến chống thực dân Pháp và can thiệp Mỹ<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>I. The Party led the construction and defense of the revolutionary government and the resistance war against the French colonialists  <br/>4. Historical significance and experience of the Party in leading the resistance war against French colonialism and American imperialism invasions<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 175 đến trang 179<br/><br/>Read History of CPV textbook from page 175 to 179 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>II. Lãnh đạo xây dựng chủ nghĩa xã hội ở miền Bắc và kháng chiến chống đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất đất nước (1954 - 1975)<br/>1 Sự lãnh đạo của Đảng đối với cách mạng hai miền Nam - Bắc (1954 - 1965) (Phần 1)<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>II. Leading the construction of socialism in the North and resistance war against American imperialist invasion, liberating the South and reuniting the country (1954 - 1975) <br/>1. Leading the revolution of the two regions in the period 1954 - 1965 (Part 1)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 180 đến trang 192<br/><br/>Read History of CPV textbook from page 180 to 205 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>II. Lãnh đạo xây dựng chủ nghĩa xã hội ở miền Bắc và kháng chiến chống đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất đất nước (1954 - 1975)<br/>1 Sự lãnh đạo của Đảng đối với cách mạng hai miền Nam - Bắc (1954 - 1965) (Phần 2)<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>II. Leading the construction of socialism in the North and resistance war against American imperialist invasion, liberating the South and reuniting the country (1954 - 1975) <br/>1. Leading the revolution of the two regions in the period 1954 - 1965 (Part 2)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 193 đến trang 205<br/><br/>Read History of CPV textbook from page 180 to 205 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>II. Lãnh đạo xây dựng chủ nghĩa xã hội ở miền Bắc và kháng chiến chống đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất đất nước (1954 - 1975)<br/>2. Lãnh đạo cách mạng cả nước (1965 - 1975) (Phần 1)<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>II. Leading the construction of socialism in the North and resistance war against American imperialist invasion, liberating the South and reuniting the country (1954 - 1975) <br/>2. Leading the national revolution in the period 1965 - 1975  (Part 1)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 205 đến trang 219<br/><br/>Read History of CPV textbook from page 205 to 233 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>II. Lãnh đạo xây dựng chủ nghĩa xã hội ở miền Bắc và kháng chiến chống đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất đất nước (1954 - 1975)<br/>2. Lãnh đạo cách mạng cả nước (1965 - 1975) (Phần 2)<br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>II. Leading the construction of socialism in the North and resistance war against American imperialist invasion, liberating the South and reuniting the country (1954 - 1975) <br/>2. Leading the national revolution in the period 1965 - 1975  (Part 2)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 220 đến trang 233<br/><br/>Read History of CPV textbook from page 205 to 233 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945 - 1975)<br/>II. Lãnh đạo xây dựng chủ nghĩa xã hội ở miền Bắc và kháng chiến chống đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất đất nước (1954 - 1975)<br/>3. Ý nghĩa lịch sử và kinh nghiệm lãnh đạo của Đảng thời kỳ 1954 - 1975 <br/>Assignment<br/><br/>Chapter 2: The Party led two resistance wars against foreign invasion, completed the national liberation and reunion (1945 - 1975)<br/>II. Leading the construction of socialism in the North and resistance war against American imperialist invasion, liberating the South and reuniting the country (1954 - 1975) <br/>3. The significance of the Party's leadership experience in the resistance wars against American imperialist invasion 1954 - 1975<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO2, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 233 đến trang 235<br/><br/>Read History of CPV textbook from page 233 to 234 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>I. Đảng lãnh đạo cả nước xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc (1975 - 1986)<br/>1. Xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc 1975 - 1981 (phần 1)<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>I.  The Party led whole country in building socialism and defending the country (1975 - 1986) (part 1)<br/>1. Building socialism and defending the country 1975 - 1981<br/>(Part 1)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 237 đến trang 242<br/><br/>Read History of CPV textbook from page 237 to 242 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>I. Đảng lãnh đạo cả nước xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc (1975 - 1986)<br/>1. Xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc 1975 - 1981 (phần 2)<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>I.  The Party led whole country in building socialism and defending the country (1975 - 1986) (part 1)<br/>1. Building socialism and defending the country 1975 - 1981<br/>(Part 2)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 242 đến trang 251<br/><br/>Read History of CPV textbook from page 242 to 251 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>I. Đảng lãnh đạo cả nước xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc (1975 - 1986)<br/>2. Đại hội đại biểu toàn quốc lần thứ V của Đảng và các bước đột phá tiếp tục đổi mới kinh tế 1982 - 1986<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>I.  The Party led whole country in building socialism and defending the country (1975 - 1986) (part 2)<br/>2. The 5th National Congress of the Communist Party of Vietnam and breakthroughs in economic renewal 1982 - 1986 <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 251 đến trang 260<br/><br/>Read History of CPV textbook from page 251 to 260 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>II. Lãnh đạo công cuộc đổi mới, đẩy mạnh công nghiệp hóa, hiện đại hóa và hội nhập quốc tế (từ năm 1986 đến nay)  <br/>1. Đổi mới toàn diện, đưa đất nước ra khỏi khủng hoảng kinh tế - xã hội 1986 - 1996<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>II. Leading the innovation process, promoting industrialization, modernization and international integration (1986 - 2018) (part 1)<br/>1. Comprehensive renovation, bringing the country out of the socio-economic crisis 1986 - 1996<br/>Assignment<br/>Progress test</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 260 đến trang 285<br/><br/>Read History of CPV textbook from page 260 to 285 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>II. Lãnh đạo công cuộc đổi mới, đẩy mạnh công nghiệp hóa, hiện đại hóa và hội nhập quốc tế (từ năm 1986 đến nay)<br/>2. Tiếp tục công cuộc đổi mới, đẩy mạnh công nghiệp hoá, hiện đại hoá và hội nhập quốc tế (từ năm 1996 đến nay) (phần 1) <br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>II. Leading the innovation process, promoting industrialization, modernization and international integration (1986 - 2018) (part 2)<br/>2. Continuing the renovation, accelerating industrialization, modernization and international integration 1996 - 2018 (from the VIII to the X National Congress) (Part 1)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 285 đến trang 295<br/><br/>Read History of CPV textbook from page 285 to 295 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>II. Lãnh đạo công cuộc đổi mới, đẩy mạnh công nghiệp hóa, hiện đại hóa và hội nhập quốc tế (từ năm 1986 đến nay)<br/>2. Tiếp tục công cuộc đổi mới, đẩy mạnh công nghiệp hoá, hiện đại hoá và hội nhập quốc tế (từ năm 1996 đến nay) (phần 2)<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>II. Leading the innovation process, promoting industrialization, modernization and international integration (1986 - 2018) (part 2)<br/>2. Continuing the renovation, accelerating industrialization, modernization and international integration 1996 - 2018 (from the VIII to the X National Congress) (Part 2)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 296 đến trang 310<br/><br/>Read History of CPV textbook from page 296 to 310 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>II. Lãnh đạo công cuộc đổi mới, đẩy mạnh công nghiệp hóa, hiện đại hóa và hội nhập quốc tế (từ năm 1986 đến nay)<br/>2. Tiếp tục công cuộc đổi mới, đẩy mạnh công nghiệp hoá, hiện đại hoá và hội nhập quốc tế (từ năm 1996 đến nay) (phần 3)<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>II. Leading the innovation process, promoting industrialization, modernization and international integration (1986 - 2018) (part 2)<br/>2. Continuing the renovation, accelerating industrialization, modernization and international integration 1996 - 2018 (from the VIII to the X National Congress) (Part 3)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 310 đến trang 334<br/><br/>Read History of CPV textbook from page 310 to 334 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>II. Lãnh đạo công cuộc đổi mới, đẩy mạnh công nghiệp hóa, hiện đại hóa và hội nhập quốc tế (từ năm 1986 đến nay) <br/>2. Tiếp tục công cuộc đổi mới, đẩy mạnh công nghiệp hoá, hiện đại hoá và hội nhập quốc tế (từ năm 1996 đến nay) (phần 4)<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>II. Leading the innovation process, promoting industrialization, modernization and international integration (1986 - 2018) (part 2)<br/>2. Continuing the renovation, accelerating industrialization, modernization and international integration 1996 - 2018 (from the VIII to the X National Congress) (Part 4)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 335 đến trang 366<br/><br/>Read History of CPV textbook from page 335 to 366 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>II. Lãnh đạo công cuộc đổi mới, đẩy mạnh công nghiệp hóa, hiện đại hóa và hội nhập quốc tế (từ năm 1986 đến nay) <br/>2. Tiếp tục công cuộc đổi mới, đẩy mạnh công nghiệp hoá, hiện đại hoá và hội nhập quốc tế (từ năm 1996 đến nay) (phần 5) <br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>II. Leading the innovation process, promoting industrialization, modernization and international integration (1986 - 2018) (part 2)<br/>2. Continuing the renovation, accelerating industrialization, modernization and international integration 1996 - 2018 (from the VIII to the X National Congress) (Part 5)<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 367 đến trang 393<br/><br/>Read History of CPV textbook from page 367 to 393 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>III. Thành tựu, kinh nghiệm của công cuộc đổi mới<br/>Assignment<br/><br/>Chapter 3: The Party led the national transition to socialism and carried out the Doi moi (1975-2018)<br/>III. Achievements and experiences of the renovation process <br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 394 đến trang 434<br/><br/>Read History of CPV textbook from page 394 to 434 in advance</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018)<br/>IV. Nguyên nhân và tác hại của tham nhũng<br/>Assignment<br/><br/>Chapter 3: The Party led the country in the transition to socialism and carried out the doi moi (1975 - 2018)<br/>IV. Causes and effects of corruption<br/>Assignment</td>
+                            <td>Offline</td>
+                            <td>LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>ITU</td>
+                            <td class="product">Đọc trước giáo trình Tài liệu giảng dạy về phòng, chống tham nhũng dùng cho các trường đại học, cao đẳng không chuyên về luật từ trang 28 - trang 42<br/><br/>Read in advance the textbook of anti-corruption teaching materials for non-law universities and colleges from page 28 - page 42</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/>Tài liệu giảng dạy về phòng, chống tham nhũng dùng cho các trường đại học, cao đẳng không chuyên về luật<br/>History of CPV textbook (2021), lecture outline of the lecturer.<br/>Teaching materials on anti-corruption for non-law universities and colleges</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Tổng kết chương  1, 2, 3<br/><br/>Summary of chapters 1, 2, 3</td>
+                            <td>Offline</td>
+                            <td>LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9</td>
+                            <td>IT</td>
+                            <td class="product">Tổng kết những kiến thức quan trọng của toàn bộ môn học<br/><br/>Summarize the important knowledge of the entire subject</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Giới thiệu khóa học online trên Coursera + Ôn tập kiến thức Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930-1945)<br/><br/>Online (Coursera): Course introduction + Chapter 1 review</td>
+                            <td>Online</td>
+                            <td>CLO2, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 35 đến trang 126.<br/><br/>Read History of CPV textbook from page 35 to 126 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>(Tiếp) <br/>Giới thiệu khóa học online trên Coursera + Ôn tập kiến thức Chương 1: Đảng Cộng sản Việt Nam ra đời và lãnh đạo đấu tranh giành chính quyền (1930-1945)<br/><br/>Online (Coursera): Course introduction + Chapter 1 review</td>
+                            <td>Online</td>
+                            <td>CLO2, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 35 đến trang 126.<br/><br/>Read History of CPV textbook from page 35 to 126 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Ôn tập kiến thức Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945-1975) - Học online trên Coursera<br/><br/>Online (Coursera): Chapter 2 review</td>
+                            <td>Online</td>
+                            <td>CLO2, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 127 đến trang 236.<br/><br/>Read History of CPV textbook from page 127 to 236 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945-1975) - Học online trên Coursera<br/><br/>Online (Coursera): Chapter 2 review</td>
+                            <td>Online</td>
+                            <td>CLO2, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 127 đến trang 236.<br/><br/>Read History of CPV textbook from page 127 to 236 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 2: Đảng lãnh đạo hai cuộc kháng chiến chống ngoại xâm, hoàn thành giải phóng dân tộc, thống nhất đất nước (1945-1975) - Học online trên Coursera<br/><br/>Online (Coursera): Chapter 2 review</td>
+                            <td>Online</td>
+                            <td>CLO2, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 127 đến trang 236.<br/><br/>Read History of CPV textbook from page 127 to 236 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Ôn tập kiến thức Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018) - Học online trên Coursera<br/><br/>Online (Coursera): Chapter 3 review + final quiz</td>
+                            <td>Online</td>
+                            <td>CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 237 đến trang 434.<br/><br/>Read History of CPV textbook from page 237 to 434 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018) - Học online trên Coursera<br/><br/>Online (Coursera): Chapter 3 review + final quiz</td>
+                            <td>Online</td>
+                            <td>CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 237 đến trang 434.<br/><br/>Read History of CPV textbook from page 237 to 434 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>(Tiếp) <br/>Ôn tập kiến thức Chương 3: Đảng lãnh đạo cả nước quá độ lên chủ nghĩa xã hội và tiến hành công cuộc đổi mới (1975 - 2018) - Học online trên Coursera<br/><br/>Online (Coursera): Chapter 3 review + final quiz</td>
+                            <td>Online</td>
+                            <td>CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product">Đọc trước giáo trình Lịch sử Đảng Cộng sản Việt Nam từ trang 237 đến trang 434.<br/><br/>Read History of CPV textbook from page 237 to 434 in advance.</td>
+                            <td>
+
+                            </td>
+                            <td>Giáo trình Lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia Sự thật, năm 2021, đề cương bài giảng của giảng viên.<br/><br/>History of CPV textbook (2021), lecture outline of the lecturer.</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Thông tin Đại hội Đại biểu toàn quốc lần thứ XIII và lần thứ XIV của Đảng - Học online trên Coursera<br/><br/>Online (Coursera): Information on the 13th and 14th National Party Congresses</td>
+                            <td>Online</td>
+                            <td>CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII - Tập 1, 2. NXB Chính trị quốc gia Sự thật, năm 2021.<br/>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIV - Tập 1, 2. NXB Chính trị quốc gia Sự thật, năm 2026.<br/><br/>Documents of the 13th National Party Congress - Volumes 1, 2 (2021).<br/>Documents of the 14th National Party Congress - Volumes 1, 2 (2026).</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>(Tiếp)<br/>Thông tin Đại hội Đại biểu toàn quốc lần thứ XIII và lần thứ XIV của Đảng - Học online trên Coursera<br/><br/>Online (Coursera): Information on the 13th and 14th National Party Congresses</td>
+                            <td>Online</td>
+                            <td>CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9</td>
+                            <td>TU</td>
+                            <td class="product"></td>
+                            <td>
+
+                            </td>
+                            <td>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII - Tập 1, 2. NXB Chính trị quốc gia Sự thật, năm 2021.<br/>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIV - Tập 1, 2. NXB Chính trị quốc gia Sự thật, năm 2026.<br/><br/>Documents of the 13th National Party Congress - Volumes 1, 2 (2021).<br/>Documents of the 14th National Party Congress - Volumes 1, 2 (2026).</td>
+                            <td>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Constructivist Questions Section -->
+        <label style="color: #23ac68;">46 Constructive question(s)</label>
+            <table id="gvCQ" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th style="width: 7%; text-align: center;">Session No</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 75%;">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="text-align: center;">2</td>
+                            <td>CQ1.1</td>
+                            <td>Tại sao c&#225;c phong tr&#224;o y&#234;u nước trước khi Đảng Cộng sản Việt Nam ra đời đều thất bại?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.2</td>
+                            <td>Nguyễn &#193;i Quốc đ&#227; chuẩn bị những g&#236; cho sự ra đời của Đảng Cộng sản Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="text-align: center;">3</td>
+                            <td>CQ1.3</td>
+                            <td>Vai tr&#242; v&#224; đường lối ch&#237;nh trị của Hội Việt Nam c&#225;ch mạng thanh ni&#234;n v&#224; sự ra đời của ba tổ chức cộng sản ở Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ2.1</td>
+                            <td>Điều g&#236; đ&#227; th&#250;c đẩy Nguyễn &#193;i Quốc th&#224;nh lập Đảng Cộng sản Việt Nam v&#224;o th&#225;ng 2 năm 1930?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="text-align: center;">4</td>
+                            <td>CQ2.2</td>
+                            <td>Cương lĩnh ch&#237;nh trị đầu ti&#234;n của Đảng Cộng sản Việt Nam c&#243; những nội dung g&#236;? Tại sao n&#243; lại được xem l&#224; một bước ngoặt quan trọng trong lịch sử của Đảng v&#224; c&#225;ch mạng Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.3</td>
+                            <td>Tại sao việc ra đời của Đảng Cộng sản Việt Nam lại c&#243; &#253; nghĩa quan trọng đối với lịch sử d&#226;n tộc Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="text-align: center;">5</td>
+                            <td>CQ2.4</td>
+                            <td>Tại sao phong tr&#224;o c&#225;ch mạng 1930-1931 lại thất bại? Những yếu tố n&#224;o đ&#227; ảnh hưởng đến sự thất bại của phong tr&#224;o n&#224;y?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="text-align: center;">6</td>
+                            <td>CQ2.5</td>
+                            <td>Điều g&#236; đ&#227; th&#250;c đẩy sự phục hồi của phong tr&#224;o c&#225;ch mạng trong giai đoạn 1932-1935? Tại sao giai đoạn n&#224;y lại được xem l&#224; một bước ngoặt quan trọng trong lịch sử c&#225;ch mạng của Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="text-align: center;">7</td>
+                            <td>CQ3.1</td>
+                            <td>Phong tr&#224;o d&#226;n chủ 1936-1939 v&#224; c&#225;c phong tr&#224;o c&#225;ch mạng kh&#225;c trước đ&#243; c&#243; những điểm tương đồng v&#224; kh&#225;c biệt g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.2</td>
+                            <td>Phong tr&#224;o d&#226;n chủ 1936-1939 c&#243; &#253; nghĩa g&#236; đối với lịch sử c&#225;ch mạng của Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.3</td>
+                            <td>Bối cảnh thế giới đ&#227; t&#225;c động như thế n&#224;o đến việc thay đổi chủ trương, s&#225;ch lược của Đảng Cộng sản Đ&#244;ng Dương giai đoạn 1939-1945?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="text-align: center;">8</td>
+                            <td>CQ3.4</td>
+                            <td>V&#236; sao n&#243;i chỉ thị &quot;Nhật - Ph&#225;p bắn nhau v&#224; h&#224;nh động của ch&#250;ng ta&quot; chứng tỏ sự nhạy b&#233;n, s&#225;ng suốt kịp thời của Đảng ta?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="text-align: center;">9</td>
+                            <td>CQ3.5</td>
+                            <td>Những yếu tố n&#224;o đ&#227; tạo n&#234;n thời cơ cho c&#225;ch mạng th&#225;ng T&#225;m?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="text-align: center;">10</td>
+                            <td>CQ4.1</td>
+                            <td>Những b&#224;i học kinh nghiệm của C&#225;ch mạng Th&#225;ng 8 năm 1945 thể hiện như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ4.2</td>
+                            <td>Nội dung v&#224; &#253; nghĩa của bản Chỉ thị Kh&#225;ng chiến kiến quốc ng&#224;y 25/11/1945 được thể hiện như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ4.3</td>
+                            <td>V&#236; sao n&#243;i: Sau c&#225;ch mạng th&#225;ng T&#225;m năm 1945, vận mệnh nước ta như ng&#224;n c&#226;n treo sợi t&#243;c?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ4.4</td>
+                            <td>Ph&#226;n t&#237;ch những văn kiện thể hiện nội dung đường lối kh&#225;ng chiến của Đảng ta từ năm 1946?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">18</td>
+                            <td style="text-align: center;">11</td>
+                            <td>CQ4.5</td>
+                            <td>Ng&#224;y 19/12/1946, Chủ tịch Hồ Ch&#237; Minh ra Lời k&#234;u gọi to&#224;n quốc kh&#225;ng chiến. Vậy h&#227;y l&#224;m r&#245;: Tại sao Ấn Độ đấu tranh kh&#244;ng d&#249;ng bạo lực m&#224; vẫn gi&#224;nh được độc lập, nhưng Việt Nam phải d&#249;ng bạo lực c&#225;ch mạng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">19</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ5.1</td>
+                            <td>Chứng minh đường lối l&#227;nh đạo đ&#250;ng đắn của Đảng ta đ&#227; gi&#224;nh được thắng lợi trong kh&#225;ng chiến chống thực d&#226;n Ph&#225;p giai đoạn 1951 -1954 như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">20</td>
+                            <td style="text-align: center;">13</td>
+                            <td>CQ5.2</td>
+                            <td>Năm 1951, tại sao Đảng ta ra hoạt động c&#244;ng khai?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">21</td>
+                            <td style="text-align: center;">14</td>
+                            <td>CQ5.3</td>
+                            <td>H&#227;y l&#224;m r&#245; c&#226;u n&#243;i của Chủ tịch Hồ Ch&#237; Minh: Lần đầu ti&#234;n trong lịch sử, một nước thuộc địa nhỏ yếu đ&#227; đ&#225;nh thắng một nước thực d&#226;n h&#249;ng mạnh?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ5.4</td>
+                            <td>Tại sao Mỹ x&#226;m lược miền Nam Việt Nam? H&#227;y l&#224;m r&#245; đặc điểm lớn nhất trong giai đoạn n&#224;y l&#224; một Đảng phải l&#227;nh đạo 2 cuộc c&#225;ch mạng kh&#225;c nhau chưa c&#243; tiền lệ tr&#234;n thế giới như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">15</td>
+                            <td>CQ5.5</td>
+                            <td>Việc cải c&#225;ch ruộng đất năm 1956 Đảng ta đ&#227; mắc sai lầm như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ6.1</td>
+                            <td>Khi Mỹ v&#224;o miền Nam, Đảng ta đ&#227; kịp thời chỉ đạo đường lối kh&#225;ng chiến như thế n&#224;o ở hai miền Nam, Bắc?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ6.2</td>
+                            <td>Điều g&#236; đ&#227; khiến Mỹ phải chấp nhận bắt đầu đ&#224;m ph&#225;n với ta tại Pari 1969?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">16</td>
+                            <td>CQ6.3</td>
+                            <td>Năm 1967, chủ tịch Hồ Ch&#237; Minh từng dự đo&#225;n: &quot;Ở Việt Nam, Mỹ nhất định thua. Nhưng n&#243; chỉ chịu thua sau khi thua tr&#234;n bầu trời H&#224; Nội&quot;. Bằng c&#225;c dữ kiện lịch sử v&#224; đường lối của Đảng, c&#225;c bạn h&#227;y ph&#226;n t&#237;ch tr&#234;n thực tế c&#243; diễn ra đ&#250;ng với B&#225;c dự đo&#225;n kh&#244;ng?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">27</td>
+                            <td style="text-align: center;">17</td>
+                            <td>CQ6.4</td>
+                            <td>Đại thắng M&#249;a Xu&#226;n 1975 c&#243; &#253; nghĩa như thế n&#224;o đối với đất nước Việt Nam?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">28</td>
+                            <td style="text-align: center;">18</td>
+                            <td>CQ6.4</td>
+                            <td>&#221; nghĩa lịch sử v&#224; kinh nghiệm l&#227;nh đạo của Đảng trong 21 năm kh&#225;ng chiến chống Mỹ, cứu nước (1954-1975) được thể hiện như thế n&#224;o?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">29</td>
+                            <td style="text-align: center;">19</td>
+                            <td>CQ7.1</td>
+                            <td>Một số luận điệu xuy&#234;n tạc cho rằng sau năm 1975, việc thống nhất đất nước về mặt nh&#224; nước l&#224; &quot;&#225;p đặt&quot; từ miền Bắc. Bằng c&#225;c dữ kiện lịch sử, h&#227;y phản b&#225;c luận điệu sai tr&#225;i n&#224;y.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">30</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.2</td>
+                            <td>Những cuộc x&#233; r&#224;o, đột ph&#225; trong quản l&#253; kinh tế n&#224;o đ&#227; đặt những bước ch&#226;n đầu ti&#234;n cho con đường đổi mới?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">31</td>
+                            <td style="text-align: center;">20</td>
+                            <td>CQ7.3</td>
+                            <td>Một số luận điệu của c&#225;c thế lực th&#249; địch cho rằng Việt Nam &quot;x&#226;m lược Campuchia&quot; giai đoạn 1975-1981, dẫn tới việc bị bao v&#226;y, cấm vận. Bằng c&#225;c dữ kiện lịch sử v&#224; đường lối của Đảng, h&#227;y phản b&#225;c luận điệu sai tr&#225;i tr&#234;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">32</td>
+                            <td style="text-align: center;">21</td>
+                            <td>CQ7.4</td>
+                            <td>Giai đoạn từ đại hội V (1982) đến đ&#234;m trước đổi mới (1986), nhận thức của Đảng về đổi mới kinh tế đ&#227; c&#243; những bước ph&#225;t triển g&#236;?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">33</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ8.1</td>
+                            <td>V&#236; sao c&#244;ng cuộc cải c&#225;ch về gi&#225; - lương - tiền lại l&#224; nguy&#234;n nh&#226;n trực tiếp để dẫn tới quyết định đổi mới to&#224;n diện nền kinh tế Việt Nam tại đại hội đảng VI? b&#224;i học g&#236; r&#250;t ra từ cuộc cải c&#225;ch xương m&#225;u n&#224;y?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">34</td>
+                            <td style="text-align: center;">22</td>
+                            <td>CQ8.2</td>
+                            <td>V&#236; sao n&#243;i đại hội Đảng lần thứ VI l&#224; đại hội “đổi mới”?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">35</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ8.3</td>
+                            <td>Tại sao lại coi Nghị quyết số 10-NQ/TW (hay c&#242;n gọi l&#224; Kho&#225;n 10) được coi l&#224; c&#250; h&#237;ch cho sản xuất n&#244;ng nghiệp.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">36</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ8.4</td>
+                            <td>Qu&#225; tr&#236;nh đổi mới nhận thức từ m&#244; h&#236;nh “chuy&#234;n ch&#237;nh v&#244; sản” đến “l&#224;m chủ tập thể” v&#224; “Nh&#224; nước ph&#225;p quyền x&#227; hội chủ nghĩa ở Việt Nam”  tại đại hội VII.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">37</td>
+                            <td style="text-align: center;">23</td>
+                            <td>CQ8.5</td>
+                            <td>V&#236; sao nghị quyết trung ương 5 kh&#243;a VIII được coi như l&#224; “tuy&#234;n ng&#244;n văn h&#243;a của Đảng”?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">38</td>
+                            <td style="text-align: center;">24</td>
+                            <td>CQ8.6</td>
+                            <td>&#221; nghĩa của việc thay đổi quan điểm của Đảng tại đại hội IX về đối ngoại đa phương h&#243;a, đa dạng h&#243;a từ khi chuyển từ “muốn l&#224; bạn” sang“sẵn s&#224;ng l&#224; bạn”, l&#224; “đối t&#225;c tin cậy của c&#225;c nước trong cộng đồng quốc tế”?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">39</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ9.1</td>
+                            <td>Tại sao đến đại hội lần thứ X của Đảng, ch&#250;ng ta lại ph&#225;t động phong tr&#224;o học tập v&#224; l&#224;m theo tấm gương đạo đức Hồ Ch&#237; Minh.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">40</td>
+                            <td style="text-align: center;">25</td>
+                            <td>CQ9.2</td>
+                            <td>Tại sao Đảng Cộng sản Việt Nam lại x&#225;c định c&#244;ng nghiệp h&#243;a, hiện đại h&#243;a gắn liền với kinh tế tri thức?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">41</td>
+                            <td style="text-align: center;">26</td>
+                            <td>CQ9.3</td>
+                            <td>Ph&#226;n t&#237;ch vai tr&#242; l&#227;nh đạo của Đảng Cộng sản Việt Nam thể hiện trong c&#225;c văn kiện Đại hội XI?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">42</td>
+                            <td style="text-align: center;">27</td>
+                            <td>CQ9.4</td>
+                            <td>Ph&#226;n t&#237;ch những điểm mới trong Nghị quyết Đại hội Đảng lần thứ XII về c&#244;ng nghiệp h&#243;a, hiện đại h&#243;a gắn với ph&#225;t triển kinh tế tri thức?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">43</td>
+                            <td style="text-align: center;">28</td>
+                            <td>CQ10.1</td>
+                            <td>Tại Đại hội XIII, Tổng B&#237; thư Nguyễn Ph&#250; Trọng đ&#227; nhận định: &quot;Đất nước ta chưa bao giờ c&#243; được cơ đồ, tiềm lực, vị thế v&#224; uy t&#237;n quốc tế như ng&#224;y nay&quot;. Bằng c&#225;c số liệu v&#224; th&#244;ng tin thực tế, h&#227;y ph&#226;n t&#237;ch, chứng minh nhận định tr&#234;n.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">44</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ10.2</td>
+                            <td>L&#224;m r&#245; nguy&#234;n nh&#226;n, bản chất của tệ tham nhũng v&#224; tr&#225;ch nhiệm, quyết t&#226;m của Đảng trong c&#244;ng t&#225;c ph&#242;ng, chống tham nhũng, ti&#234;u cực.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">45</td>
+                            <td style="text-align: center;">29</td>
+                            <td>CQ10.3</td>
+                            <td>Trải qua hơn 35 năm đổi mới, Đảng ta đ&#227; trưởng th&#224;nh hơn do biết thắng thắn nhận ra sai lầm, hạn chế v&#224; khắc phục n&#243;. Trong giai đoạn tới trước sự biến động của thế giới v&#224; trong nước, Đảng cần l&#224;m g&#236; để tiếp tục đưa Việt Nam tiến l&#234;n?</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">46</td>
+                            <td style="text-align: center;">30</td>
+                            <td>CQ10.4</td>
+                            <td>H&#227;y t&#243;m tắt c&#225;c thắng lợi vĩ đại của c&#225;ch mạng Việt Nam v&#224; c&#225;c b&#224;i học lớn cần r&#250;t ra.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+        <!-- Assessments Section -->
+        <label style="color: #23ac68;">4 assessment(s)</label>
+            <table id="gvAssessment" class="table table-striped tbl-data">
+                <thead>
+                    <tr>
+                        <th style="width: 3%; text-align: center;">No.</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Part</th>
+                        <th>Weight</th>
+                        <th>Completion Criteria</th>
+                        <th>Duration</th>
+                        <th>CLO</th>
+                        <th>Question Type</th>
+                        <th>No Question</th>
+                        <th>Knowledge and Skill</th>
+                        <th>Grading Guide</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td>Assignment</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>2</td>
+                            <td>
+40.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>Phụ thuộc theo hình thức kiểm tra đánh giá của giảng viên<br/>Depending on the instructor’s chosen form of assessment</td>
+                            <td>LO1-L9</td>
+                            <td>Bài thuyết trình và sản phẩm sáng tạo, bài thuyết trình, bài kiểm tra…<br/>Presentation with creative product, presentation, quiz…</td>
+                            <td>Phụ thuộc theo hình thức kiểm tra đánh giá của giảng viên<br/>Depending on the instructor’s chosen form of assessment</td>
+                            <td>Kiến thức và kỹ năng trong phạm vi chương mở 1,2,3 Cover chapter 1, 2,3</td>
+                            <td>Bài thuyết trình và sản phẩm sáng tạo, bài thuyết trình, bài kiểm tra… (Giảng linh hoạt lựa chọn hình thức kiểm tra đánh giá phù hợp)<br/>Presentation with a creative product, presentation, quiz, etc. (the instructor may flexibly choose the appropriate form of assessment)</td>
+                            <td>Sinh viên làm thuyết trình và sản phẩm sáng tạo, thuyết trình, hoặc quiz tuỳ theo sĩ số lớp và điều kiện cơ sở<br/>Depending on class size and institutional conditions, students may be assessed through a presentation with a creative product, a presentation, or a quiz</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td>Participation</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+10.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td></td>
+                            <td>LO1-L9</td>
+                            <td>Đề xuất của giảng viênTeachers' proposal</td>
+                            <td></td>
+                            <td></td>
+                            <td>Trong lớp học<br/>in class</td>
+                            <td>Sinh viên vắng không quá 20%<br/>Absent no more than 20% of class hours</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td>Progress test</td>
+                            <td>
+
+                                on-going
+                            </td>
+                            <td>1</td>
+                            <td>
+20.0%                            </td>
+                            <td>
+&gt;0                            </td>
+                            <td>20'</td>
+                            <td>LO1, LO2, LO4, LO5, LO6, LO8, LO9</td>
+                            <td>Câu hỏi trắc nghiệm dạng đúng sai, câu hỏi trắc nghiệm dạng nhiều lựa chọn.Yes-no questions, Multiple choice questions</td>
+                            <td>20- 25</td>
+                            <td>Progress test: Kiến thức trong phạm vi chương 1, 2 (LO1, LO2, LO4, LO5, LO6, LO8, LO9)Progress tests: cover chapter 1, 2 (LO1, LO2, LO4, LO5, LO6, LO8, LO9)</td>
+                            <td>Trong lớp học<br/>in class</td>
+                            <td>Sinh viên không được sử dụng tài liệu.<br/> Students are not allowed to use materials.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td>Final exam</td>
+                            <td>
+
+                                Final exam
+                            </td>
+                            <td>1</td>
+                            <td>
+30.0%                            </td>
+                            <td>
+4                            </td>
+                            <td>60'</td>
+                            <td>LO1-L9</td>
+                            <td>Câu hỏi trắc nghiệm dạng đúng sai, câu hỏi trắc nghiệm dạng nhiều lựa chọn.<br/>Yes-no questions, Multiple choice questions</td>
+                            <td>60</td>
+                            <td>Tất cả 3 chương (Chương 1: 20 câu, chương 2: 20 câu, chương 3: 20 câu) <br/>All 3 chapters included (Chapter 1: 20 questions, chapter 2: 20 questions, chapter 3: 20 questions)</td>
+                            <td>Phòng Khảo thí tổ chức<br/>by Office of Assessment</td>
+                            <td>Sinh viên không được sử dụng tài liệu.<br/> Students are not allowed to use materials.</td>
+                        </tr>
+                </tbody>
+            </table>
+        <br />
+</div>
+
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+    });
+
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456);
+    }
+
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        var result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    });
+
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#language').change(function () {
+            $.ajax({
+                url: '/Language', // comma here instead of semicolon
+                data: { language: $(this).val() },
+                success: function () {
+                    window.location.reload();
+                }
+
+            });
+        });
+        (function loadLanguage() {
+            let dt = JSON.stringify({
+                'ssName': 'language'
+            });
+            $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: '/ajax/getCookie/',
+                data: dt
+            }).done(function (data) {
+                $('#language').val(data);
+            })
+        })();
+
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+
+        $(document).ready(function () {
+            // Animated title effect - Marquee style
+            function animateTitle() {
+                const title = document.getElementById('pageTitle');
+                const originalText = 'FPT University Learning Materials';
+                const separator = ' • ';
+                const fullText = originalText + separator + originalText + separator;
+
+                let position = 0;
+                let animationId;
+                const speed = 300; // milliseconds between each character shift
+                const maxPosition = originalText.length + separator.length;
+
+                function updateTitle() {
+                    const displayText = fullText.substring(position, position + originalText.length);
+                    title.textContent = displayText;
+
+                    position++;
+                    if (position >= maxPosition) {
+                        position = 0;
+                    }
+
+                    // Continue animation
+                    animationId = setTimeout(updateTitle, speed);
+                }
+
+                // Check if user prefers reduced motion
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Don't animate if user prefers reduced motion
+                    title.textContent = originalText;
+                    return;
+                }
+
+                // Start the animation
+                updateTitle();
+
+                // Pause animation when tab is not visible (performance optimization)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        clearTimeout(animationId);
+                    } else {
+                        updateTitle();
+                    }
+                });
+            }
+
+            // Start title animation
+            animateTitle();
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+
+            $(".preventDefault").click(function (event) {
+                event.preventDefault();
+            });
+            $.get("/ajax/permission", function (data) {
+                loadData(data)
+            })
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+
+        });
+        function loadData(data) {
+            if (typeof (data) != 'string') {
+                $("#lblRole").html(data[0]);
+                $("#lblName").html(data[1]);
+                $("#lblEmail").html(data[2]);
+                $("#lblEduLevel").html(data[4]);
+                if (data[0] == 'Syl Reviewer' || data[0] == 'Syl Designer') {
+                    data[3] = data[3].replace('~', '..');
+                    $("#pnlEmail").css({ display: 'none' });
+                } else {
+                    $("#pnlEmail").css({ display: '' });
+                }
+                $("#ProfileImage").attr({ src: data[3] });
+                //Why index is 4???
+                //if (data[4]) {
+                //    $("#pnlEmail").css({ display: 'none' });
+                //} else {
+                //    $("#lblEmail").html(data[2]);
+                //}
+                if (data[0] === "Head") {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                } else if (data[0] === "Staff") {
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                } else {
+                    $("#panelStaffFeatures").css({ display: 'none' });
+                    $("#panelHeadFeatures").css({ display: 'none' });
+                    $("#sidebarCollapse").css({ display: 'none' });
+                }
+            } else {
+                window.location.replace(data);
+            }
+        }
+        $('#lbtnSignOut').click(() => {
+            // Check if user is logged in with FEID
+            var isLoginWithFEID = true;
+
+            if (isLoginWithFEID) {
+                // For FEID users, redirect to proper logout endpoint
+                // This will clear all authentication and redirect to regular login
+                window.location.href = '/Home/LogoutWithFEId';
+            } else {
+                // For regular users, use AJAX signout
+                $.get("/ajax/signOut", function (data) {
+                    window.location.replace('/Home/Login');
+                })
+            }
+        })
+        $('#lbtnAlumni').click(() => {
+            $.get("/UserAlumni/StudentAlumni", function (data) {
+
+            })
+        })
+
+        // Handle button clicks for accessibility
+        $('#lbtnSignOut').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        $('#lbtnAlumni').on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
