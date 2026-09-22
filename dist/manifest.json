@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian FLM",
+  "version": "0.1.0",
+  "description": "Exports academic source data from FLM for local import.",
+  "permissions": ["activeTab", "downloads", "storage", "scripting"],
+  "host_permissions": ["https://flm.fpt.edu.vn/*", "http://flm.fpt.edu.vn/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_title": "Obsidian FLM",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://flm.fpt.edu.vn/*", "http://flm.fpt.edu.vn/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

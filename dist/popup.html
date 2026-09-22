@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian FLM</title>
+    <script type="module" crossorigin src="/popup.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/popup-CwdYAVhu.css">
+  </head>
+  <body>
+    <main>
+      <header class="app-header">
+        <div class="brand-wrapper">
+          <div class="brand-icon" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="brand-copy">
+            <h1>Obsidian FLM</h1>
+          </div>
+        </div>
+        <span id="status-badge" class="status-badge">Idle</span>
+      </header>
+
+      <section id="page-card" class="page-card" aria-live="polite">
+        <span class="page-indicator" aria-hidden="true"></span>
+        <div class="page-info">
+          <strong id="page-title">Checking page...</strong>
+          <p id="page-status">Connecting to FLM...</p>
+        </div>
+      </section>
+
+      <section id="details" class="workspace" hidden>
+        <div class="curriculum-card">
+          <span class="eyebrow">Curriculum</span>
+          <strong id="curriculum">—</strong>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <span id="combos">0</span>
+            <small>Combos</small>
+          </div>
+          <div class="stat">
+            <span id="subjects">0</span>
+            <small>Subjects</small>
+          </div>
+          <div class="stat success">
+            <span id="completed">0</span>
+            <small>Done</small>
+          </div>
+          <div class="stat danger">
+            <span id="failed">0</span>
+            <small>Failed</small>
+          </div>
+        </div>
+
+        <div class="progress-block">
+          <div class="progress-copy">
+            <span id="current">Ready to crawl</span>
+            <span id="progress">0 / 0</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-label="Crawl progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="progress-fill"></span>
+          </div>
+        </div>
+      </section>
+
+      <p id="error" class="global-error" role="alert" hidden></p>
+
+      <section id="failures-panel" class="failures-panel" hidden>
+        <div class="section-heading">
+          <h2>Failures</h2>
+          <span id="failure-count">0</span>
+        </div>
+        <ul id="failures"></ul>
+      </section>
+
+      <div class="actions">
+        <button id="crawl" class="button primary" disabled>
+          <span>Start crawl</span>
+          <b aria-hidden="true">→</b>
+        </button>
+        <button id="cancel" class="button secondary" disabled>Cancel</button>
+        <button id="retry" class="button secondary" disabled>Retry</button>
+        <button id="export" class="button export" disabled>
+          <span id="export-label">Export</span>
+          <b aria-hidden="true">↓</b>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
