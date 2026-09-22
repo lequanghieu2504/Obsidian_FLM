@@ -640,15 +640,21 @@ class _DataGridState extends State<_DataGrid> {
     super.dispose();
   }
 
-  double _columnWidth(int index) {
+  /// Longest cell (in characters, header included) in column [index] —
+  /// the raw signal both [_columnWidth] and the panel-filling logic in
+  /// [build] size off of.
+  int _maxContentLength(int index) {
     var maxLen = index < widget.headers.length ? widget.headers[index].length : 0;
     for (final row in widget.rows) {
       if (index < row.length && row[index].length > maxLen) {
         maxLen = row[index].length;
       }
     }
-    return (maxLen * 6.8 + 28).clamp(90, 320);
+    return maxLen;
   }
+
+  double _columnWidth(int maxContentLength) =>
+      (maxContentLength * 6.8 + 28).clamp(90, 320);
 
   @override
   Widget build(BuildContext context) {
@@ -681,86 +687,113 @@ class _DataGridState extends State<_DataGrid> {
       );
     }
 
-    final columnWidths = [
-      for (var i = 0; i < headers.length; i++) _columnWidth(i),
+    final contentLengths = [
+      for (var i = 0; i < headers.length; i++) _maxContentLength(i),
     ];
-    final tableWidth = columnWidths.fold<double>(0, (sum, w) => sum + w);
+    final columnWidths = [for (final len in contentLengths) _columnWidth(len)];
+    final naturalWidth = columnWidths.fold<double>(0, (sum, w) => sum + w);
 
-    final table = Table(
-      border: TableBorder(
-        horizontalInside: BorderSide(color: theme.colorScheme.outlineVariant),
-        top: BorderSide(color: theme.colorScheme.outlineVariant),
-        bottom: BorderSide(color: theme.colorScheme.outlineVariant),
-      ),
-      columnWidths: {
-        for (var i = 0; i < headers.length; i++)
-          i: FixedColumnWidth(columnWidths[i]),
-      },
-      defaultVerticalAlignment: TableCellVerticalAlignment.top,
-      children: [
-        TableRow(
-          decoration: BoxDecoration(
-            color: theme.colorScheme.surfaceContainerHighest,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        const horizontalPadding = 32.0; // matches the SingleChildScrollView below
+        final available = constraints.maxWidth - horizontalPadding;
+
+        // When the columns' own (content-sized) widths already fit the
+        // panel, stretch the column with the longest content — normally
+        // the free-text one, e.g. "details" — to fill the rest of the
+        // width instead of leaving the remainder of the panel blank. Only
+        // a table that genuinely doesn't fit falls back to a fixed,
+        // horizontally-scrolling width.
+        final resolvedWidths = List<double>.from(columnWidths);
+        var tableWidth = naturalWidth;
+        if (available.isFinite && naturalWidth < available) {
+          var widest = 0;
+          for (var i = 1; i < contentLengths.length; i++) {
+            if (contentLengths[i] > contentLengths[widest]) widest = i;
+          }
+          resolvedWidths[widest] += available - naturalWidth;
+          tableWidth = available;
+        }
+
+        final table = Table(
+          border: TableBorder(
+            horizontalInside: BorderSide(
+              color: theme.colorScheme.outlineVariant,
+            ),
+            top: BorderSide(color: theme.colorScheme.outlineVariant),
+            bottom: BorderSide(color: theme.colorScheme.outlineVariant),
           ),
+          columnWidths: {
+            for (var i = 0; i < headers.length; i++)
+              i: FixedColumnWidth(resolvedWidths[i]),
+          },
+          defaultVerticalAlignment: TableCellVerticalAlignment.top,
           children: [
-            for (final header in headers)
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 10,
-                ),
-                child: Text(
-                  header,
-                  style: theme.textTheme.labelLarge?.copyWith(
-                    fontWeight: FontWeight.w700,
+            TableRow(
+              decoration: BoxDecoration(
+                color: theme.colorScheme.surfaceContainerHighest,
+              ),
+              children: [
+                for (final header in headers)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 10,
+                    ),
+                    child: Text(
+                      header,
+                      style: theme.textTheme.labelLarge?.copyWith(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
+              ],
+            ),
+            for (var r = 0; r < rows.length; r++)
+              TableRow(
+                decoration: BoxDecoration(
+                  color: r.isEven
+                      ? theme.colorScheme.surface
+                      : theme.colorScheme.surfaceContainerLow,
                 ),
+                children: [
+                  for (var c = 0; c < headers.length; c++)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 10,
+                      ),
+                      child: Text(
+                        c < rows[r].length ? rows[r][c] : '',
+                        style: theme.textTheme.bodyMedium,
+                      ),
+                    ),
+                ],
               ),
           ],
-        ),
-        for (var r = 0; r < rows.length; r++)
-          TableRow(
-            decoration: BoxDecoration(
-              color: r.isEven
-                  ? theme.colorScheme.surface
-                  : theme.colorScheme.surfaceContainerLow,
-            ),
-            children: [
-              for (var c = 0; c < headers.length; c++)
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 10,
-                  ),
-                  child: Text(
-                    c < rows[r].length ? rows[r][c] : '',
-                    style: theme.textTheme.bodyMedium,
-                  ),
-                ),
-            ],
-          ),
-      ],
-    );
+        );
 
-    return Scrollbar(
-      controller: _horizontalController,
-      thumbVisibility: true,
-      child: SingleChildScrollView(
-        controller: _horizontalController,
-        scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-        child: SizedBox(
-          width: tableWidth,
-          child: Scrollbar(
-            controller: _verticalController,
-            thumbVisibility: true,
-            child: SingleChildScrollView(
-              controller: _verticalController,
-              child: table,
+        return Scrollbar(
+          controller: _horizontalController,
+          thumbVisibility: true,
+          child: SingleChildScrollView(
+            controller: _horizontalController,
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+            child: SizedBox(
+              width: tableWidth,
+              child: Scrollbar(
+                controller: _verticalController,
+                thumbVisibility: true,
+                child: SingleChildScrollView(
+                  controller: _verticalController,
+                  child: table,
+                ),
+              ),
             ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

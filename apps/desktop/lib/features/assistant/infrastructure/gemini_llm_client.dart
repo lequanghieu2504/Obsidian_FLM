@@ -8,6 +8,8 @@ import 'package:http/http.dart' as http;
 
 import '../../subjects/domain/subject_workspace.dart';
 import '../application/llm_client.dart';
+import 'gemini_request.dart';
+import 'gemini_response.dart';
 
 class SecureGeminiKeyStore implements GeminiKeyStore {
   const SecureGeminiKeyStore();
@@ -32,12 +34,23 @@ class GeminiLlmClient implements LlmClient {
     this.timeout = const Duration(seconds: 60),
     this.maxAttempts = 3,
     this.maxHistoryMessages = 20,
-  }) : _client = client ?? http.Client();
+  }) : _client = client ?? http.Client(),
+       _requestBuilder = GeminiRequestBuilder(
+         maxHistoryMessages: maxHistoryMessages,
+       );
 
   final GeminiKeyStore keys;
   final http.Client _client;
   final String model;
   final Duration timeout;
+
+  /// Turns the generic prompt (context + history + attachments) into
+  /// Gemini's request JSON. See [GeminiRequestBuilder].
+  final GeminiRequestBuilder _requestBuilder;
+
+  /// Turns Gemini's response JSON back into plain reply text. See
+  /// [GeminiResponseParser].
+  static const _responseParser = GeminiResponseParser();
 
   /// Total attempts (the first try plus retries) for a request that fails
   /// with a transient error. Gemini's `503` ("model overloaded") is by far
@@ -94,49 +107,13 @@ class GeminiLlmClient implements LlmClient {
         'Content-Type': 'application/json',
         'x-goog-api-key': key.trim(),
       };
-      // Only the tail of the conversation is sent to Gemini (see
-      // [maxHistoryMessages]) — the full history stays in [messages] for
-      // the caller/UI, this is just what goes over the wire.
-      final sentMessages = messages.length > maxHistoryMessages
-          ? messages.sublist(messages.length - maxHistoryMessages)
-          : messages;
-      final body = jsonEncode({
-        'systemInstruction': {
-          'parts': [
-            {'text': context},
-          ],
-        },
-        'contents': sentMessages.indexed
-            .map(
-              (entry) => {
-                ...(() {
-                  final (index, m) = entry;
-                  final isCurrentMessage = index == sentMessages.length - 1;
-                  return {
-                    'role': m.role == ChatRole.user ? 'user' : 'model',
-                    'parts': [
-                      {'text': m.content},
-                      if (isCurrentMessage)
-                        ...attachments.map(
-                          (attachment) => attachment.text != null
-                              ? {
-                                  'text':
-                                      'Attached file ${attachment.fileName}:\n${attachment.text}',
-                                }
-                              : {
-                                  'inlineData': {
-                                    'mimeType': attachment.mimeType,
-                                    'data': base64Encode(attachment.bytes!),
-                                  },
-                                },
-                        ),
-                    ],
-                  };
-                })(),
-              },
-            )
-            .toList(),
-      });
+      final body = jsonEncode(
+        _requestBuilder.build(
+          context: context,
+          messages: messages,
+          attachments: attachments,
+        ),
+      );
 
       final response = await _postWithRetry(uri, headers, body);
       if (response.statusCode != 200) {
@@ -159,21 +136,7 @@ class GeminiLlmClient implements LlmClient {
         });
       }
       final decoded = jsonDecode(response.body) as Map<String, dynamic>;
-      final candidates = decoded['candidates'] as List<dynamic>? ?? [];
-      if (candidates.isEmpty) {
-        throw const WorkspaceFailure(
-          'Gemini returned no answer. Try rephrasing your question.',
-        );
-      }
-      final candidate = candidates.first as Map<String, dynamic>;
-      final content = candidate['content'] as Map<String, dynamic>?;
-      final parts = content?['parts'] as List<dynamic>? ?? [];
-      final text = parts
-          .whereType<Map<String, dynamic>>()
-          .where((part) => part['thought'] != true)
-          .map((part) => part['text'] as String? ?? '')
-          .join('\n')
-          .trim();
+      final text = _responseParser.extractText(decoded);
       if (text.isEmpty) {
         throw const WorkspaceFailure(
           'Gemini returned no text. Try rephrasing your question.',

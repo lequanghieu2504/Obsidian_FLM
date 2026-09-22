@@ -50,11 +50,14 @@ class SubjectDetailScreen extends StatefulWidget {
 }
 
 /// One tab of the "Detail" side of the screen: a title shown on the [Tab]
-/// and the information widget shown next to a [SubjectChatPanel] in that
-/// tab's body. (The Knowledge Graph tab gets the same chat-paired treatment
-/// directly in [_SubjectDetailScreenState.build] — it isn't built from
+/// and the information widget shown for it. There is a single
+/// [SubjectChatPanel] for the whole page (built once in
+/// [_SubjectDetailScreenState.build], next to the tab content rather than
+/// inside it) — every tab talks to the same conversation, so switching tabs
+/// never swaps out the chat or resets what's mid-draft in it. (The
+/// Knowledge Graph tab shares that one chat panel too — it isn't built from
 /// [SubjectRecord] data the way these are, so it doesn't go through
-/// [_buildDetailTabs].)
+/// [_buildDetailTabs], but it's appended right after them in the tab bar.)
 class _DetailTab {
   const _DetailTab({required this.title, required this.content});
   final String title;
@@ -124,36 +127,30 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   bool _failed = false;
   int _generation = 0;
 
-  /// One stable [GlobalKey] per Detail-side tab index, created lazily and
-  /// reused across rebuilds. Wide layouts put a tab's chat panel inside a
-  /// [_ResizableSplit]; narrow layouts stack it in a plain [Column] —
-  /// completely different ancestor widgets, so a [ValueKey] wouldn't survive
-  /// the switch (Flutter only matches those within the same parent's
-  /// children list). A [GlobalKey] is matched by identity anywhere in the
-  /// tree, so resizing the window keeps each tab's [SubjectChatPanel] state
-  /// (typed draft, scroll position) alive instead of recreating it.
-  final Map<int, GlobalKey> _chatKeys = {};
+  /// Identity for the page's one [SubjectChatPanel], reused across rebuilds.
+  /// Wide layouts put it inside a [_ResizableSplit]; narrow layouts stack it
+  /// in a plain [Column] — completely different ancestor widgets, so a
+  /// [ValueKey] wouldn't survive the switch (Flutter only matches those
+  /// within the same parent's children list). A [GlobalKey] is matched by
+  /// identity anywhere in the tree, so resizing the window keeps the chat
+  /// panel's own state (typed draft, scroll position) alive instead of
+  /// recreating it. Replaced with a fresh key in [_initialize] whenever a
+  /// new subject (a new [SubjectDetailController]) loads.
+  GlobalKey _chatKey = GlobalKey();
 
-  GlobalKey _chatKeyFor(int index) =>
-      _chatKeys.putIfAbsent(index, () => GlobalKey());
+  /// Whether the (single, page-wide) chat panel is currently minimized.
+  /// Collapsing swaps it for a slim [_CollapsedChatRail]; the information
+  /// side takes the freed-up space instead of it just sitting there blank.
+  bool _chatCollapsed = false;
 
-  /// Which tabs currently have their chat panel minimized (by tab index,
-  /// the same indexing as [_chatKeys] — detail tabs `0..detailTabs.length`
-  /// then the Knowledge Graph tab last). Collapsing swaps the chat pane for
-  /// a slim [_CollapsedChatRail]; the information panel takes the freed-up
-  /// space instead of it just sitting there blank.
-  final Set<int> _collapsedChat = {};
-
-  /// The resizable split's dragged width per tab, persisted here (rather
-  /// than left inside [_ResizableSplit]'s own state) so collapsing and then
-  /// re-expanding a tab's chat — which unmounts/remounts the split — restores
+  /// The resizable split's dragged width, persisted here (rather than left
+  /// inside [_ResizableSplit]'s own state) so collapsing and then
+  /// re-expanding the chat — which unmounts/remounts the split — restores
   /// the same width instead of resetting to the default fraction.
-  final Map<int, double> _chatSplitWidth = {};
+  double? _chatSplitWidth;
 
-  void _toggleChatCollapsed(int index) {
-    setState(() {
-      if (!_collapsedChat.remove(index)) _collapsedChat.add(index);
-    });
+  void _toggleChatCollapsed() {
+    setState(() => _chatCollapsed = !_chatCollapsed);
   }
 
   @override
@@ -187,9 +184,9 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
         controller.dispose();
         return;
       }
-      _chatKeys.clear();
-      _collapsedChat.clear();
-      _chatSplitWidth.clear();
+      _chatKey = GlobalKey();
+      _chatCollapsed = false;
+      _chatSplitWidth = null;
       setState(() => _controller = controller);
       await controller.load();
     } catch (_) {
@@ -207,20 +204,17 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   static const double _minPaneWidth = 340;
   static const double _handleWidth = 20;
 
-  /// [index] identifies this tab's chat for the minimize/resize state above
-  /// — it must be stable and unique per tab (see [_chatKeyFor]'s doc for why
-  /// a [GlobalKey], not just tree position, is what actually keeps the chat
-  /// panel's own state alive; [index] here only keys the *collapsed/width*
-  /// bookkeeping, which lives in this widget rather than in the panel).
+  /// Lays out the page's one chat panel next to (wide) or under (narrow)
+  /// [information] — the latter now being the whole tab-switching area, not
+  /// a single tab's content, since the chat itself no longer lives inside
+  /// any individual tab.
   Widget _tabBody({
-    required int index,
     required Widget information,
     required Widget chat,
     required bool wide,
   }) {
-    final collapsed = _collapsedChat.contains(index);
     if (wide) {
-      if (collapsed) {
+      if (_chatCollapsed) {
         return Padding(
           padding: const EdgeInsets.all(24),
           child: Row(
@@ -228,9 +222,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
             children: [
               Expanded(child: information),
               const SizedBox(width: 12),
-              _CollapsedChatRail(
-                onExpand: () => _toggleChatCollapsed(index),
-              ),
+              _CollapsedChatRail(onExpand: _toggleChatCollapsed),
             ],
           ),
         );
@@ -242,22 +234,19 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
           right: chat,
           minWidth: _minPaneWidth,
           handleWidth: _handleWidth,
-          initialWidth: _chatSplitWidth[index],
-          onWidthChanged: (width) => _chatSplitWidth[index] = width,
+          initialWidth: _chatSplitWidth,
+          onWidthChanged: (width) => _chatSplitWidth = width,
         ),
       );
     }
-    if (collapsed) {
+    if (_chatCollapsed) {
       return Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             Expanded(child: information),
             const SizedBox(height: 12),
-            _CollapsedChatRail(
-              vertical: false,
-              onExpand: () => _toggleChatCollapsed(index),
-            ),
+            _CollapsedChatRail(vertical: false, onExpand: _toggleChatCollapsed),
           ],
         ),
       );
@@ -301,17 +290,23 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                 listenable: controller,
                 builder: (context, _) {
                   final detailTabs = _buildDetailTabs(controller);
-                  // The Knowledge Graph tab is appended after every detail
-                  // tab, so it gets the next index in the same
-                  // chat-key/collapsed/split-width bookkeeping.
-                  final knowledgeGraphIndex = detailTabs.length;
                   final knowledgeGraph = SubjectKnowledgeGraphTab(
                     subjectCode: widget.subject.code,
+                  );
+                  // Only the tab content switches here — there's a single
+                  // chat panel for the whole page (below), so every tab,
+                  // Knowledge Graph included, talks to the same
+                  // conversation instead of each getting its own.
+                  final tabBarView = TabBarView(
+                    children: [
+                      for (final tab in detailTabs) tab.content,
+                      knowledgeGraph,
+                    ],
                   );
                   return LayoutBuilder(
                     builder: (context, constraints) {
                       final wide = constraints.maxWidth >= 960;
-                   
+
                       return DefaultTabController(
                         length: detailTabs.length + 1,
                         child: Column(
@@ -326,37 +321,14 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                               ],
                             ),
                             Expanded(
-                              child: TabBarView(
-                                children: [
-                                  for (
-                                    var i = 0;
-                                    i < detailTabs.length;
-                                    i++
-                                  )
-                                    _tabBody(
-                                      index: i,
-                                      information: detailTabs[i].content,
-                                      chat: SubjectChatPanel(
-                                        key: _chatKeyFor(i),
-                                        controller: controller,
-                                        onCollapse: () =>
-                                            _toggleChatCollapsed(i),
-                                      ),
-                                      wide: wide,
-                                    ),
-                                  _tabBody(
-                                    index: knowledgeGraphIndex,
-                                    information: knowledgeGraph,
-                                    chat: SubjectChatPanel(
-                                      key: _chatKeyFor(knowledgeGraphIndex),
-                                      controller: controller,
-                                      onCollapse: () => _toggleChatCollapsed(
-                                        knowledgeGraphIndex,
-                                      ),
-                                    ),
-                                    wide: wide,
-                                  ),
-                                ],
+                              child: _tabBody(
+                                information: tabBarView,
+                                chat: SubjectChatPanel(
+                                  key: _chatKey,
+                                  controller: controller,
+                                  onCollapse: _toggleChatCollapsed,
+                                ),
+                                wide: wide,
                               ),
                             ),
                           ],
