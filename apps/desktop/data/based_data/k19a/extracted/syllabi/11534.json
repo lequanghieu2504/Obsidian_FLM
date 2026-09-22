@@ -1,0 +1,4489 @@
+{
+  "id": "11534",
+  "metadata": {
+    "Syllabus ID": "11534",
+    "Syllabus Name": "SAP Application Development with ABAP_Phát triển ứng dụng SAP với ABAP",
+    "Course Name English": "SAP Application Development with ABAP",
+    "Subject Code": "SAP341",
+    "Learning-Teaching Method": "In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+    "Pre-Requisite": "PRO192, SAP311",
+    "Description": "This course covering basis programming with ABAP, high-level programming language developed by SAP, primarily used for building and customizing business applications within the SAP ecosystem. The students will learn from the basis (ABAP's syntax, data types, control structures, object-oriented programming) to advanced concepts (modulization, performance optimization...) of ABAP, ensuring a solid foundation and practical expertise ... Through interactive exercises, and hands-on projects, students will get familiar with developing SAP application in real-world scenarios.",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS at http://flm.fpt.edu.vn for up-to-date course information",
+    "Tools": "- Internet - SAP4 Hana Development",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "402/QĐ-ĐHFPT dated 04/22/2024",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/22/2024"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "11534"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "11534"
+        ],
+        [
+          "Syllabus Name:",
+          "SAP Application Development with ABAP_Phát triển ứng dụng SAP với ABAP"
+        ],
+        [
+          "Course Name English:",
+          "SAP Application Development with ABAP"
+        ],
+        [
+          "Subject Code:",
+          "SAP341"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h (60 sessions) contact hours + 1h final exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PRO192, SAP311"
+        ],
+        [
+          "Description:",
+          "This course covering basis programming with ABAP, high-level programming language developed by SAP, primarily used for building and customizing business applications within the SAP ecosystem. The students will learn from the basis (ABAP's syntax, data types, control structures, object-oriented programming) to advanced concepts (modulization, performance optimization...) of ABAP, ensuring a solid foundation and practical expertise ... Through interactive exercises, and hands-on projects, students will get familiar with developing SAP application in real-world scenarios."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS at http://flm.fpt.edu.vn for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Internet - SAP4 Hana Development"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "402/QĐ-ĐHFPT dated 04/22/2024"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/22/2024"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11534",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Application Development with ABAP_Phát triển ứng dụng SAP với ABAP",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Application Development with ABAP",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP341",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRO192, SAP311",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This course covering basis programming with ABAP, high-level programming language developed by SAP, primarily used for building and customizing business applications within the SAP ecosystem. The students will learn from the basis (ABAP's syntax, data types, control structures, object-oriented programming) to advanced concepts (modulization, performance optimization...) of ABAP, ensuring a solid foundation and practical expertise ... Through interactive exercises, and hands-on projects, students will get familiar with developing SAP application in real-world scenarios.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS at http://flm.fpt.edu.vn for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Internet - SAP4 Hana Development",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "402/QĐ-ĐHFPT dated 04/22/2024",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/22/2024",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "SAP Training Materials",
+          "SAP",
+          "SAP",
+          "",
+          "4.1",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Training Materials",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "8 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand the fundamental concepts and principles of ABAP programming, including data types, variables, and basic structures."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Use the ABAP Worchbench tools to create and maintain programs, function modules, and classes."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Use the Open SQL commands to read and write data, fetch and manipulate data from SAP database tables."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Apply object-oriented programming concepts, such as classes, objects, inheritance, and polymorphism in ABAP."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Understand techniques to build reusable, reliable and efficient programs."
+        ],
+        [
+          "6",
+          "CLO6",
+          "Use frameworks, libraries and protocols to create enterprise-ready web applications in an efficient way"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Apply the learned concepts in real-world programming assignments and projects."
+        ],
+        [
+          "8",
+          "CLO8",
+          "Develop professional working style, good teamwork skills and compliance with the production process."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the fundamental concepts and principles of ABAP programming, including data types, variables, and basic structures.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use the ABAP Worchbench tools to create and maintain programs, function modules, and classes.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use the Open SQL commands to read and write data, fetch and manipulate data from SAP database tables.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply object-oriented programming concepts, such as classes, objects, inheritance, and polymorphism in ABAP.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand techniques to build reusable, reliable and efficient programs.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use frameworks, libraries and protocols to create enterprise-ready web applications in an efficient way",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply the learned concepts in real-world programming assignments and projects.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop professional working style, good teamwork skills and compliance with the production process.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Unit 1: SAP Application Development Lecture Kick-off class Introduction",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "SAP Application Development 29 slides",
+          "SAP341",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "2",
+          "Unit 1: SAP Application Development Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "SAP Application Development 29 slides",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "3",
+          "Unit 1: SAP Application Development Exercise",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Introduction to SAP Programming",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "4",
+          "Unit 2: Introduction to ABAP Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Introduction to ABAP",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "5",
+          "Unit 2: Introduction to ABAP Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Introduction to ABAP",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "6",
+          "Unit 2: Development of a first program Exercise",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Development of a first program",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "7",
+          "Unit 3: Basic Concepts Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Basic Concepts",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "8",
+          "Unit 3: Basic Concepts Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Basic Concepts",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "9",
+          "Unit 3: Basic Concepts Exercise",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Basic Concepts",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "10",
+          "Unit 3: Basic Concepts Exercise",
+          "Offline",
+          "CLO1, CLO2",
+          "T,U",
+          "Basic Concepts",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "11",
+          "Unit 4: Database Access Lecture",
+          "Offline",
+          "CLO3",
+          "T,U",
+          "Database Access",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "12",
+          "Unit 4: Database Access Lecture",
+          "Offline",
+          "CLO3",
+          "T,U",
+          "Database Access",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "13",
+          "Unit 4: Database Access Exercise",
+          "Offline",
+          "CLO3",
+          "T,U",
+          "Database Access",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "14",
+          "Unit 4: Database Access Exercise",
+          "Offline",
+          "CLO3",
+          "T,U",
+          "Database Access",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "15",
+          "Unit 5: Dynamic Programs Lecture",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Dynamic Programs",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "16",
+          "Unit 5: Dynamic Programs Lecture",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Dynamic Programs",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "17",
+          "Unit 5: Dynamic Programs Exercise",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Dynamic Programs",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "18",
+          "Unit 5: Dynamic Programs Exercise",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Dynamic Programs",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "19",
+          "Unit 6: Modularization Lecture",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Modularization",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "20",
+          "Unit 6: Modularization Lecture",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Modularization",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "21",
+          "Unit 6: Modularization Exercise",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Modularization",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "22",
+          "Unit 6: Modularization Exercise",
+          "Offline",
+          "CLO4, CLO5",
+          "T,U",
+          "Modularization",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "23",
+          "Unit 7: ABAP Objects Lecture",
+          "Offline",
+          "CLO1, CLO4",
+          "T,U",
+          "ABAP Objects",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "24",
+          "Unit 7: ABAP Objects Lecture",
+          "Offline",
+          "CLO1, CLO4",
+          "T,U",
+          "ABAP Objects",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "25",
+          "Unit 7: ABAP Objects Exercise",
+          "Offline",
+          "CLO1, CLO4",
+          "T,U",
+          "ABAP Objects",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "26",
+          "Unit 7: ABAP Objects Exercise Progress test 1",
+          "Offline",
+          "CLO1, CLO4",
+          "T,U",
+          "ABAP Objects",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "27",
+          "Unit 8: Lock Concept Lecture",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Lock Concept",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "28",
+          "Unit 8: Lock Concept Lecture",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Lock Concept",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "29",
+          "Unit 8: Lock Concept Exercise",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Lock Concept",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "30",
+          "Unit 8: Lock Concept Exercise",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Lock Concept",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "31",
+          "Unit 9: Exceptions Lecture",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Exceptions",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "32",
+          "Unit 9: Exceptions Lecture",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Exceptions",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "33",
+          "Unit 9: Exception Handling Exercise",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Exception Handling",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "34",
+          "Unit 9: Exception Handling Exercise",
+          "Offline",
+          "CLO5",
+          "T,U",
+          "Exception Handling",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "35",
+          "Unit 10: HTML5 CSS JavaScript Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "HTML5 CSS JavaScript",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "36",
+          "Unit 10: HTML5 CSS JavaScript Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "HTML5 CSS JavaScript",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "37",
+          "Unit 10: HTML5 CSS JavaScript Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "HTML5 CSS JavaScript",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "38",
+          "Unit 10: HTML5 CSS JavaScript Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "HTML5 CSS JavaScript",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "39",
+          "Unit 11: SAPUI5 Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "SAPUI5",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "40",
+          "Unit 11: SAPUI5 Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "SAPUI5",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "41",
+          "Unit 11: SAPUI5 Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "SAPUI5",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "42",
+          "Unit 11: SAPUI5 Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "SAPUI5",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "43",
+          "Unit 12: OData Services Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "OData Services",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "44",
+          "Unit 12: OData Services Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "OData Services",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "45",
+          "Unit 12: OData Services Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "OData Services",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "46",
+          "Unit 12: OData Services Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "OData Services",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "47",
+          "Unit 13: Fiori Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "Fiori",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "48",
+          "Unit 13: Fiori Lecture",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "Fiori",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "49",
+          "Unit 13: Fiori Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "Fiori",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "50",
+          "Unit 13: Fiori Exercise",
+          "Offline",
+          "CLO6",
+          "T,U",
+          "Fiori",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "51",
+          "Unit 14: Analytical Apps Developemnt Lecture",
+          "Offline",
+          "CLO7",
+          "T,U",
+          "Analytical Apps Developemnt",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "52",
+          "Unit 14: Analytical Apps Developemnt Lecture",
+          "Offline",
+          "CLO7",
+          "T,U",
+          "Analytical Apps Developemnt",
+          "",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "53",
+          "Unit 14: Analytical App Development Exercise",
+          "Offline",
+          "CLO7",
+          "T,U",
+          "Analytical App Development",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "54",
+          "Unit 14: Analytical App Development Exercise Progress Test 2",
+          "Offline",
+          "CLO7",
+          "T,U",
+          "Analytical App Development",
+          "",
+          "-Read slides before the course -Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "55",
+          "SAP Project Application Development Workshop",
+          "Offline",
+          "All CLos",
+          "T,U",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "56",
+          "SAP Project Application Development Workshop",
+          "Offline",
+          "All CLos",
+          "T,U",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "57",
+          "SAP Project Application Development Workshop",
+          "Offline",
+          "All CLos",
+          "T,U",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "58",
+          "End-term-presentation Group Presentation",
+          "Offline",
+          "AlLL CLOs",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ],
+        [
+          "59",
+          "End-term-presentation Group Presentation",
+          "Offline",
+          "AlLL CLOs",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ],
+        [
+          "60",
+          "End-term-presentation Group Presentation",
+          "Offline",
+          "AlLL CLOs",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 1: SAP Application Development Lecture Kick-off class Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Application Development 29 slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP341",
+            "links": [
+              {
+                "text": "SAP341",
+                "href": "https://flm.fpt.edu.vn/download/9934/S/1_SAP341.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 1: SAP Application Development Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Application Development 29 slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 1: SAP Application Development Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to SAP Programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 2: Introduction to ABAP Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to ABAP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 2: Introduction to ABAP Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to ABAP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 2: Development of a first program Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Development of a first program",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 3: Basic Concepts Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basic Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 3: Basic Concepts Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basic Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 3: Basic Concepts Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basic Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 3: Basic Concepts Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basic Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Database Access Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Database Access",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Database Access Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Database Access",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Database Access Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Database Access",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Database Access Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Database Access",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 5: Dynamic Programs Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dynamic Programs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 5: Dynamic Programs Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dynamic Programs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 5: Dynamic Programs Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dynamic Programs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 5: Dynamic Programs Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dynamic Programs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Modularization Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Modularization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Modularization Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Modularization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Modularization Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Modularization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Modularization Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Modularization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 7: ABAP Objects Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ABAP Objects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 7: ABAP Objects Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ABAP Objects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 7: ABAP Objects Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ABAP Objects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 7: ABAP Objects Exercise Progress test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ABAP Objects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 8: Lock Concept Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lock Concept",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 8: Lock Concept Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lock Concept",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 8: Lock Concept Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lock Concept",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 8: Lock Concept Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lock Concept",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 9: Exceptions Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exceptions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 9: Exceptions Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exceptions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 9: Exception Handling Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exception Handling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 9: Exception Handling Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exception Handling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 10: HTML5 CSS JavaScript Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HTML5 CSS JavaScript",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 10: HTML5 CSS JavaScript Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HTML5 CSS JavaScript",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 10: HTML5 CSS JavaScript Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HTML5 CSS JavaScript",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 10: HTML5 CSS JavaScript Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HTML5 CSS JavaScript",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 11: SAPUI5 Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAPUI5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 11: SAPUI5 Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAPUI5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 11: SAPUI5 Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAPUI5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 11: SAPUI5 Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAPUI5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 12: OData Services Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "OData Services",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 12: OData Services Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "OData Services",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 12: OData Services Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "OData Services",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 12: OData Services Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "OData Services",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 13: Fiori Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Fiori",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 13: Fiori Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Fiori",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 13: Fiori Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Fiori",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 13: Fiori Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Fiori",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 14: Analytical Apps Developemnt Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analytical Apps Developemnt",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 14: Analytical Apps Developemnt Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analytical Apps Developemnt",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 14: Analytical App Development Exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analytical App Development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 14: Analytical App Development Exercise Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analytical App Development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Project Application Development Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLos",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Project Application Development Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLos",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP Project Application Development Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLos",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-term-presentation Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AlLL CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-term-presentation Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AlLL CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-term-presentation Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AlLL CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "End-term Presentation",
+          "on-going",
+          "1",
+          "30.0%",
+          ">0",
+          "15-20 mins/group",
+          "All CLOs",
+          "Slides presentation and Written report",
+          "NA",
+          "concepts, algorithms; all studied units",
+          "in class, by instructor",
+          "- 3-5 students/group - Students synthesize and present all knowledge they have learned, as well as review the mistakes they have made during practical sessions. -Each student has to give their an individual presentation. -Written report/slides by group."
+        ],
+        [
+          "2",
+          "Participation",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "all the course",
+          "CLO8",
+          "NA",
+          "NA",
+          "NA",
+          "",
+          "Students must attend more than 80% of contact slots Attendance check at any time during course"
+        ],
+        [
+          "3",
+          "Progress Test",
+          "on-going",
+          "2",
+          "20.0%",
+          ">0",
+          "30 mins",
+          "- PT1: CLO1-CLO5 - PT2: CLO5-CLO7",
+          "Multiple choices or Short question(s)",
+          "30",
+          "concepts, algorithms; all studied units - PT1: Unit 1-7 - PT2: Unit 8-14",
+          "in class, by instructor",
+          "Instruction and shedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has resposibility to review the test for students after graded."
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "1",
+          "40.0%",
+          "4",
+          "60'",
+          "CLO1-CLO7",
+          "Multiple choices Marked by Computer",
+          "50",
+          "concepts, algorithms; all studied units",
+          "by exam board, using computer",
+          "The exam questions must be updated or different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-term Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15-20 mins/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides presentation and Written report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "concepts, algorithms; all studied units",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- 3-5 students/group - Students synthesize and present all knowledge they have learned, as well as review the mistakes they have made during practical sessions. -Each student has to give their an individual presentation. -Written report/slides by group.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "all the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students must attend more than 80% of contact slots Attendance check at any time during course",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30 mins",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- PT1: CLO1-CLO5 - PT2: CLO5-CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choices or Short question(s)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "concepts, algorithms; all studied units - PT1: Unit 1-7 - PT2: Unit 8-14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instruction and shedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has resposibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choices Marked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "concepts, algorithms; all studied units",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board, using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated or different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

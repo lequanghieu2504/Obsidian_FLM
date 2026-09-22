@@ -1,0 +1,4759 @@
+{
+  "id": "14179",
+  "metadata": {
+    "Syllabus ID": "14179",
+    "Syllabus Name": "Software Architecture and Design_Kiến trúc và thiết kế phần mềm",
+    "Course Name English": "Software Architecture and Design",
+    "Subject Code": "SWD392",
+    "Learning-Teaching Method": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study",
+    "Pre-Requisite": "SWE201c or SWE202c, PRO192",
+    "Description": "This is a course in concepts and methods for the architectural design of software systems of sufficient size and complexity to require the effort of several people for many months. Fundamental design concepts and design notations are introduced. Several design methods are presented and compared, with examples of their use. Students will undertake a term project working in small groups addressing the design of a relatively complex software system.",
+    "StudentTasks": "Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Constantly follow announcements on LMS at https://flm.fpt.edu.vn/ for up-to-date course information regarding assignment submission and feedback on assignments and project work.",
+    "Tools": "-Internet -The Rational Software Architect CASE tool -Visual Paradigm, MagicDraw, and Visio",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "377/QĐ-ĐHFPT dated 04/09/2026",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/9/2026"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "14179"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "14179"
+        ],
+        [
+          "Syllabus Name:",
+          "Software Architecture and Design_Kiến trúc và thiết kế phần mềm"
+        ],
+        [
+          "Course Name English:",
+          "Software Architecture and Design"
+        ],
+        [
+          "Subject Code:",
+          "SWD392"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Social Constructivism,In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "SWE201c or SWE202c, PRO192"
+        ],
+        [
+          "Description:",
+          "This is a course in concepts and methods for the architectural design of software systems of sufficient size and complexity to require the effort of several people for many months. Fundamental design concepts and design notations are introduced. Several design methods are presented and compared, with examples of their use. Students will undertake a term project working in small groups addressing the design of a relatively complex software system."
+        ],
+        [
+          "StudentTasks:",
+          "Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Constantly follow announcements on LMS at https://flm.fpt.edu.vn/ for up-to-date course information regarding assignment submission and feedback on assignments and project work."
+        ],
+        [
+          "Tools:",
+          "-Internet -The Rational Software Architect CASE tool -Visual Paradigm, MagicDraw, and Visio"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "377/QĐ-ĐHFPT dated 04/09/2026"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/9/2026"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14179",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Architecture and Design_Kiến trúc và thiết kế phần mềm",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Architecture and Design",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWD392",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWE201c or SWE202c, PRO192",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This is a course in concepts and methods for the architectural design of software systems of sufficient size and complexity to require the effort of several people for many months. Fundamental design concepts and design notations are introduced. Several design methods are presented and compared, with examples of their use. Students will undertake a term project working in small groups addressing the design of a relatively complex software system.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Constantly follow announcements on LMS at https://flm.fpt.edu.vn/ for up-to-date course information regarding assignment submission and feedback on assignments and project work.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Internet -The Rational Software Architect CASE tool -Visual Paradigm, MagicDraw, and Visio",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "377/QĐ-ĐHFPT dated 04/09/2026",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/9/2026",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Software Modeling and Design: UML, Use Cases, Patterns, and Software Architectures",
+          "H. Gomaa",
+          "Cambridge University Press",
+          "2011",
+          "1st Edition",
+          "9780521764148",
+          "True",
+          "True",
+          "False",
+          "Books24x7, https://library.books24x7.com/toc.aspx?bookid=41618"
+        ],
+        [
+          "2",
+          "UML Distilled: A Brief Guide to the Standard Object Modeling Language",
+          "Fowler",
+          "Addison-Wesley",
+          "2004",
+          "3rd edition",
+          "978-0321193681",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "3",
+          "https://gmu.blackboard.com/webct/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "4",
+          "Design Patterns Elements of Reusable Object-Oriented Software",
+          "Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides",
+          "Addison-Wesley Publishing Company",
+          "1995",
+          "",
+          "",
+          "False",
+          "True",
+          "False",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Modeling and Design: UML, Use Cases, Patterns, and Software Architectures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "H. Gomaa",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cambridge University Press",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2011",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st Edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9780521764148",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Books24x7, https://library.books24x7.com/toc.aspx?bookid=41618",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UML Distilled: A Brief Guide to the Standard Object Modeling Language",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Fowler",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Addison-Wesley",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2004",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3rd edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-0321193681",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://gmu.blackboard.com/webct/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design Patterns Elements of Reusable Object-Oriented Software",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Addison-Wesley Publishing Company",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1995",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "7 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Know the Fundamentals of Software Design that includes Software Design Process, Concepts, Notations and Methods"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Able to explain the steps in Using COMET/UML, design concepts and multiplicity of associations Collaborative Object Modeling and architectural design method (COMET)"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Able to use artifacts in developing Software Analysis Model : classes and objects,statecharts for state dependent objects, object interaction diagrams for each use case Using AI tools generating UML diagrams"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Able to design overall Software Architecture in developing Software Design Model Analyzing design solutions with AI-driven improvement recommendations."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Able to design relational database in developing Software Design Model"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Able to explain the structure and document a Design Pattern"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Effectively utilize AI tools (ChatGPT, PlantUML, Copilot) to support software architecture analysis and design, including: suggesting appropriate architectural models based on system requirements, generating UML diagrams (Use Case, Class, Sequence, Statechart...)"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Know the Fundamentals of Software Design that includes Software Design Process, Concepts, Notations and Methods",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Able to explain the steps in Using COMET/UML, design concepts and multiplicity of associations Collaborative Object Modeling and architectural design method (COMET)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Able to use artifacts in developing Software Analysis Model : classes and objects,statecharts for state dependent objects, object interaction diagrams for each use case Using AI tools generating UML diagrams",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Able to design overall Software Architecture in developing Software Design Model Analyzing design solutions with AI-driven improvement recommendations.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Able to design relational database in developing Software Design Model",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Able to explain the structure and document a Design Pattern",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Effectively utilize AI tools (ChatGPT, PlantUML, Copilot) to support software architecture analysis and design, including: suggesting appropriate architectural models based on system requirements, generating UML diagrams (Use Case, Class, Sequence, Statechart...)",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course IntroductionIntro to Software Design (Chapter 1-2)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Slide, Video",
+          "SWD392",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "2",
+          "Course IntroductionIntro to Software Design (Chapter 1-2)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "3",
+          "Course IntroductionIntro to Software Design (Chapter 1-2)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "4",
+          "Intro to Software Design (Chapter 3-4)Course Project introduction",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "5",
+          "Intro to Software Design (Chapter 3-4)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "6",
+          "Intro to Software Design (Chapter 3-4)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "7",
+          "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "8",
+          "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "9",
+          "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "10",
+          "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20).Use ChatGPT to generate use case descriptions based on user requirements.Use GitHub Copilot to generate boilerplate code for logic implementation based on the use case",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "11",
+          "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "12",
+          "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "13",
+          "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "14",
+          "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "15",
+          "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9, 11)Finite State Machines and Statecharts (Chapter 10)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "16",
+          "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9, 11)Finite State Machines and Statecharts (Chapter 10)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "17",
+          "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9-10-11)Finite State Machines and Statecharts (Chapter 10)",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "18",
+          "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9-10-11)Finite State Machines and Statecharts (Chapter 10)Generate UML architecture diagrams using PlantUML code.",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "19",
+          "Introduction to Design Patterns (Material 3)",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "20",
+          "Creational & Structural Patterns",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "21",
+          "Behavioral Patterns",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "22",
+          "Use ChatGPT to suggest appropriate design patterns.Progress test 1Course Project- On-going Assessment 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "23",
+          "Course Project- On-going Assessment 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "24",
+          "Course Project- On-going Assessment 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "25",
+          "Course Project- On-going Assessment 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "26",
+          "Overview of Software Architecture (Chapter 12)Software Subsystem Architectural Design (Chapter 13)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "27",
+          "Overview of Software Architecture (Chapter 12)Software Subsystem Architectural Design (Chapter 13)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "28",
+          "Overview of Software Architecture (Chapter 12)- Software Subsystem Architectural Design (Chapter 13)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "29",
+          "Overview of Software Architecture (Chapter 12)- Software Subsystem Architectural Design (Chapter 13)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "30",
+          "Designing Object-Oriented Software Architectures (Chapter 14)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "31",
+          "Designing Object-Oriented Software Architectures (Chapter 14)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "32",
+          "Designing Object-Oriented Software Architectures (Chapter 14)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "33",
+          "Designing Object-Oriented Software Architectures (Chapter 14)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "34",
+          "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "35",
+          "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "36",
+          "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "37",
+          "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "38",
+          "Progress test 2Using ChatGPT and PlantUML suggest applying relevant patterns in the designCourse Project- On-going Assessment 2",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "39",
+          "Course Project- On-going Assessment 2",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "40",
+          "Course Project- On-going Assessment 2",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "41",
+          "Course Project- On-going Assessment 2",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "Slide, Video",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "42",
+          "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "43",
+          "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "44",
+          "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "45",
+          "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "46",
+          "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "47",
+          "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "48",
+          "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "49",
+          "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "50",
+          "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "51",
+          "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "52",
+          "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "53",
+          "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slide, Video",
+          "",
+          "Read Slide Watch VideoDo quizzes and assignments (if any)",
+          ""
+        ],
+        [
+          "54",
+          "Progrest test 3Course Project:Support writing architectural documentation.Generate UML diagrams with example code using PlantUML or Mermaid.Suggest design pattern, architectural Patterns application rules",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "55",
+          "Course Project - Final Evaluation (Team 1-2-3-4)",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "56",
+          "Course Project - Final Evaluation (Team 1-2-3-4)",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "57",
+          "Course Project - Final Evaluation (Team 1-2-3-4)",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "58",
+          "Course Project - Final Evaluation (Team 5-6)",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "59",
+          "Course Project - Final Evaluation (Team 5-6)",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "",
+          "",
+          "Do presentation",
+          ""
+        ],
+        [
+          "60",
+          "Course Review",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "",
+          "",
+          "Do presentation",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course IntroductionIntro to Software Design (Chapter 1-2)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWD392",
+            "links": [
+              {
+                "text": "SWD392",
+                "href": "https://flm.fpt.edu.vn/download/12898/S/1_SWD392.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course IntroductionIntro to Software Design (Chapter 1-2)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course IntroductionIntro to Software Design (Chapter 1-2)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro to Software Design (Chapter 3-4)Course Project introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro to Software Design (Chapter 3-4)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro to Software Design (Chapter 3-4)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements and Use Case Modeling (Chapter 5-6)Software Quality Attributes (Chapter 20).Use ChatGPT to generate use case descriptions based on user requirements.Use GitHub Copilot to generate boilerplate code for logic implementation based on the use case",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Static modeling (Chapter 7)Analysis Modeling – Object and Class Structuring (Chapter 8)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9, 11)Finite State Machines and Statecharts (Chapter 10)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9, 11)Finite State Machines and Statecharts (Chapter 10)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9-10-11)Finite State Machines and Statecharts (Chapter 10)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis Modeling – Dynamic Interaction Modeling (Chapter 9-10-11)Finite State Machines and Statecharts (Chapter 10)Generate UML architecture diagrams using PlantUML code.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Design Patterns (Material 3)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creational & Structural Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Behavioral Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use ChatGPT to suggest appropriate design patterns.Progress test 1Course Project- On-going Assessment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project- On-going Assessment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project- On-going Assessment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project- On-going Assessment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Overview of Software Architecture (Chapter 12)Software Subsystem Architectural Design (Chapter 13)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Overview of Software Architecture (Chapter 12)Software Subsystem Architectural Design (Chapter 13)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Overview of Software Architecture (Chapter 12)- Software Subsystem Architectural Design (Chapter 13)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Overview of Software Architecture (Chapter 12)- Software Subsystem Architectural Design (Chapter 13)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Object-Oriented Software Architectures (Chapter 14)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Object-Oriented Software Architectures (Chapter 14)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Object-Oriented Software Architectures (Chapter 14)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Object-Oriented Software Architectures (Chapter 14)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Client/Server Software Architectures (Chapter 15)Client/Server Software Architectures Case Study (Chapter 21)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2Using ChatGPT and PlantUML suggest applying relevant patterns in the designCourse Project- On-going Assessment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project- On-going Assessment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project- On-going Assessment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project- On-going Assessment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Service-Oriented Architectures (Chapter 16) Service-Oriented Architectures Case Study(Chapter 22)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Component-Based Software Architectures (Chapter 17) Component-Based Software Architectures Case Study (Chapter 23)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Concurrent and Real-time Software Architectures (Chapter 18)Real-time Software Architectures Case Study (Chapter 24)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide, Video",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Slide Watch VideoDo quizzes and assignments (if any)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progrest test 3Course Project:Support writing architectural documentation.Generate UML diagrams with example code using PlantUML or Mermaid.Suggest design pattern, architectural Patterns application rules",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project - Final Evaluation (Team 1-2-3-4)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project - Final Evaluation (Team 1-2-3-4)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project - Final Evaluation (Team 1-2-3-4)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project - Final Evaluation (Team 5-6)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project - Final Evaluation (Team 5-6)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Project",
+          "on-going",
+          "1",
+          "25.0%",
+          "5",
+          "Option 1: 30 slots; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "All LOs",
+          "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Software Design and Modeling",
+          "in class, by instructor",
+          "1. On-going Assessment: 40% Students work in a project team of 4-5 members on the assignments as appointed by the teacher The works are organized by iterations with the contents and assessments as below (each student is assign to practice full-stack codes on assigned/selected function). Throughout the process, students are encouraged to use AI tools (e.g., ChatGPT, GitHub Copilot), under the following conditions: - Must transparently declare AI usage (e.g., what prompt was used, which part was generated by AI). - Must explain AI-generated output using their own understanding. a. Evaluation 1 (20%) – Requirement Analysis & Modeling Create use case descriptions and UML diagrams (static and dynamic models). AI can assist with modeling, but students must present their reasoning independently. Required Deliverables: AI prompts (if used), UML diagrams (e.g., PlantUML or Visio), written explanations. b. Evaluation 2 (20%) – Software Architecture & Design Design software architecture, decompose into subsystems, object-oriented design, and database schema. AI can help propose architecture or generate code samples, but students must refine and justify the result. Required Deliverables: Architecture docs, diagrams, code snippets, explanation of AI-assisted parts. 2. Final Project Presentation: 60% Each team presents their integrated software product and individual responsibilities. The individual evaluation includes an additional component for AI usage as follows: - Integrated Software Product Demostration for Software design (30%): Web API , Web Admin, Mobile App... - Mastery of assigned works: weighted 20% - Soft Skills & Working Attitudes: weighted 10% AI Evaluation Rubric (for individual performance – up to 10 points) - Understanding of AI Output - Customization and Enhancement of AI Output - Transparency (Prompt + AI Use Declaration) - Effective and Ethical AI Usage To be selected to the Final Presentation, each student needs: * All on-going assessments (Evaluation 1 & Evaluation 2) >=5/10 * No cheating during the project progress"
+        ],
+        [
+          "2",
+          "Progress test",
+          "on-going",
+          "3",
+          "15.0%",
+          ">0",
+          "Option 1: 30'; ; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "All LOs",
+          "Option 1: Multiple Choices; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: 30; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "All LOs",
+          "in class, by instructor",
+          "There are 3 progress tests for this course. ( 5% for each progress test)"
+        ],
+        [
+          "3",
+          "Final exam",
+          "Final exam",
+          "2",
+          "60.0%",
+          "4",
+          "145 minutes",
+          "All CLOs",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "Each part of the final exam must be >=4/10 & Final Result >=5/10."
+        ],
+        [
+          "4",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "20.0%",
+          "4",
+          "85'",
+          "All LOs",
+          "Assignment",
+          "",
+          "All studied chapters",
+          "by Exam Board",
+          ""
+        ],
+        [
+          "5",
+          "Theory Exam",
+          "Final exam",
+          "1",
+          "40.0%",
+          "4",
+          "60'",
+          "All LOs",
+          "Multiple Choices",
+          "60",
+          "All LOs",
+          "by exam board, using computer",
+          "The exam questions must be different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30 slots; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Design and Modeling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. On-going Assessment: 40% Students work in a project team of 4-5 members on the assignments as appointed by the teacher The works are organized by iterations with the contents and assessments as below (each student is assign to practice full-stack codes on assigned/selected function). Throughout the process, students are encouraged to use AI tools (e.g., ChatGPT, GitHub Copilot), under the following conditions: - Must transparently declare AI usage (e.g., what prompt was used, which part was generated by AI). - Must explain AI-generated output using their own understanding. a. Evaluation 1 (20%) – Requirement Analysis & Modeling Create use case descriptions and UML diagrams (static and dynamic models). AI can assist with modeling, but students must present their reasoning independently. Required Deliverables: AI prompts (if used), UML diagrams (e.g., PlantUML or Visio), written explanations. b. Evaluation 2 (20%) – Software Architecture & Design Design software architecture, decompose into subsystems, object-oriented design, and database schema. AI can help propose architecture or generate code samples, but students must refine and justify the result. Required Deliverables: Architecture docs, diagrams, code snippets, explanation of AI-assisted parts. 2. Final Project Presentation: 60% Each team presents their integrated software product and individual responsibilities. The individual evaluation includes an additional component for AI usage as follows: - Integrated Software Product Demostration for Software design (30%): Web API , Web Admin, Mobile App... - Mastery of assigned works: weighted 20% - Soft Skills & Working Attitudes: weighted 10% AI Evaluation Rubric (for individual performance – up to 10 points) - Understanding of AI Output - Customization and Enhancement of AI Output - Transparency (Prompt + AI Use Declaration) - Effective and Ethical AI Usage To be selected to the Final Presentation, each student needs: * All on-going assessments (Evaluation 1 & Evaluation 2) >=5/10 * No cheating during the project progress",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30'; ; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Multiple Choices; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "There are 3 progress tests for this course. ( 5% for each progress test)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145 minutes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Each part of the final exam must be >=4/10 & Final Result >=5/10.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All studied chapters",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by Exam Board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theory Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple Choices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board, using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

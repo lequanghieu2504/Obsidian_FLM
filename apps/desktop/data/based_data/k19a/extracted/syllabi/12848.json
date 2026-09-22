@@ -1,0 +1,4821 @@
+{
+  "id": "12848",
+  "metadata": {
+    "Syllabus ID": "12848",
+    "Syllabus Name": "Multiplatform Mobile App Development_Phát triển ứng dụng di động đa nền tảng",
+    "Course Name English": "Multiplatform Mobile App Development",
+    "Subject Code": "MMA301",
+    "Learning-Teaching Method": "Problem based learning, Active Learning",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 1h TE + 85' PE + 103.6h self-study",
+    "Pre-Requisite": "FER202",
+    "Description": "This course helps learners master the knowledge of React Native. Learners can quickly develop mobile applications running on iOS and Android platforms. Contents to be implemented include:- Overview of React Native and its benefits.- Setting up the development environment.- Understanding components and navigation.- Hands-on experience with iOS simulator and Android emulators- Techniques for styling applications.- State management strategies using hooks and Redux.- Managing user input and touch events.- Using FlatList and SectionList for data presentation.- Mobile Notifications: Learn to integrate personalized notifications to enhance user engagement.- Databases: Explore using SQLite, Firebase for data management.- Debugging techniques and tools.- Publishing applications using Expo.- Integrate mobile app with Gemini AI",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises given by instructor in class or at home and submit on time- Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "- Visual Studio Code (https://code.visualstudio.com)- Internet- ChatGPT (https://chatgpt.com)- Gemini (https://gemini.google.com/app)- V0 by Vercel (https://v0.dev)",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "437/QĐ-ĐHFPT dated 04/25/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/25/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "12848"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "12848"
+        ],
+        [
+          "Syllabus Name:",
+          "Multiplatform Mobile App Development_Phát triển ứng dụng di động đa nền tảng"
+        ],
+        [
+          "Course Name English:",
+          "Multiplatform Mobile App Development"
+        ],
+        [
+          "Subject Code:",
+          "MMA301"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Problem based learning, Active Learning"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 1h TE + 85' PE + 103.6h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "FER202"
+        ],
+        [
+          "Description:",
+          "This course helps learners master the knowledge of React Native. Learners can quickly develop mobile applications running on iOS and Android platforms. Contents to be implemented include:- Overview of React Native and its benefits.- Setting up the development environment.- Understanding components and navigation.- Hands-on experience with iOS simulator and Android emulators- Techniques for styling applications.- State management strategies using hooks and Redux.- Managing user input and touch events.- Using FlatList and SectionList for data presentation.- Mobile Notifications: Learn to integrate personalized notifications to enhance user engagement.- Databases: Explore using SQLite, Firebase for data management.- Debugging techniques and tools.- Publishing applications using Expo.- Integrate mobile app with Gemini AI"
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises given by instructor in class or at home and submit on time- Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Visual Studio Code (https://code.visualstudio.com)- Internet- ChatGPT (https://chatgpt.com)- Gemini (https://gemini.google.com/app)- V0 by Vercel (https://v0.dev)"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "437/QĐ-ĐHFPT dated 04/25/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/25/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12848",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiplatform Mobile App Development_Phát triển ứng dụng di động đa nền tảng",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiplatform Mobile App Development",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MMA301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Problem based learning, Active Learning",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 1h TE + 85' PE + 103.6h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FER202",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This course helps learners master the knowledge of React Native. Learners can quickly develop mobile applications running on iOS and Android platforms. Contents to be implemented include:- Overview of React Native and its benefits.- Setting up the development environment.- Understanding components and navigation.- Hands-on experience with iOS simulator and Android emulators- Techniques for styling applications.- State management strategies using hooks and Redux.- Managing user input and touch events.- Using FlatList and SectionList for data presentation.- Mobile Notifications: Learn to integrate personalized notifications to enhance user engagement.- Databases: Explore using SQLite, Firebase for data management.- Debugging techniques and tools.- Publishing applications using Expo.- Integrate mobile app with Gemini AI",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises given by instructor in class or at home and submit on time- Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Visual Studio Code (https://code.visualstudio.com)- Internet- ChatGPT (https://chatgpt.com)- Gemini (https://gemini.google.com/app)- V0 by Vercel (https://v0.dev)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "437/QĐ-ĐHFPT dated 04/25/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/25/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "React Native: Developing Android and iOS Apps",
+          "",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/mobile-app-notifications-databases-publishing"
+        ],
+        [
+          "2",
+          "Mobile App Notifications, Databases, & Publishing",
+          "",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/react-native-developing-android-and-ios-apps"
+        ],
+        [
+          "3",
+          "https://docs.expo.dev/",
+          "",
+          "Expo",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://docs.expo.dev/"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "React Native: Developing Android and iOS Apps",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/mobile-app-notifications-databases-publishing",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mobile App Notifications, Databases, & Publishing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/react-native-developing-android-and-ios-apps",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.expo.dev/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Expo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.expo.dev/",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "13 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand what React Native is and how it can be used"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Understand how React Native works"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Be able to build the React-native Application"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Be able to understand the Components used for Mobile development"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Understand how to style for React Native apps"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Be able to manage state using hooks and Redux"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Be able to using list in react-native for data presentation"
+        ],
+        [
+          "8",
+          "CLO8",
+          "Be able to use Debugging and Developer's Tools"
+        ],
+        [
+          "9",
+          "CLO9",
+          "Understand how to Modeling and Storing data"
+        ],
+        [
+          "10",
+          "CLO10",
+          "Be able to integrated Gemini AI and Apply GenAI in solving problem"
+        ],
+        [
+          "11",
+          "CLO11",
+          "Be able to integrated Firebase services (FCM, Realtime database,...)"
+        ],
+        [
+          "12",
+          "CLO12",
+          "Understand how to push notification in React Native apps"
+        ],
+        [
+          "13",
+          "CLO13",
+          "Understand how to publish an application"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand what React Native is and how it can be used",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand how React Native works",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to build the React-native Application",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to understand the Components used for Mobile development",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand how to style for React Native apps",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to manage state using hooks and Redux",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to using list in react-native for data presentation",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to use Debugging and Developer's Tools",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand how to Modeling and Storing data",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to integrated Gemini AI and Apply GenAI in solving problem",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to integrated Firebase services (FCM, Realtime database,...)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand how to push notification in React Native apps",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand how to publish an application",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction",
+          "Offline",
+          "CLO1",
+          "I",
+          "Slides",
+          "MMA301",
+          "Listen actively, understand course structure, objectives, grading, and expectations. Ask clarifying questions.",
+          ""
+        ],
+        [
+          "2",
+          "Introduction to React Native- What is React Native- Features and Use Cases of React Native - React Native architecture",
+          "Offline",
+          "CLO1, CLO2",
+          "I",
+          "Slides",
+          "",
+          "Understand core concepts, features, pros/cons of React Native. Take notes. Ask questions.",
+          ""
+        ],
+        [
+          "3",
+          "Setting up the React Native Development Ecosystem- Common Dependencies- Node.js Installation- Android Studio Setup- Android SDK Configuration- Environment Variables: Set up the ANDROID_HOME environment",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Slides",
+          "",
+          "Follow instructions to install Node.js, Watchman, IDE extensions, Expo CLI dependencies. Troubleshoot setup issues with guidance.",
+          ""
+        ],
+        [
+          "4",
+          "Setting up the React Native Development Ecosystem (Cont)- Expo and Its Features- Install Expo Go on your device- Expo CLI- Setting up the Environment using Expo Snack",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Slides",
+          "",
+          "Complete Expo setup. Create a new project using Expo CLI. Run the basic app on a device or simulator.",
+          ""
+        ],
+        [
+          "5",
+          "Emulator and Simulator Basics in React Native Development- Understanding Android SDK Emulator - Android SDK Emulator- Working with Android Emulator using Android Studio- iOS Simulator- Configuring iOS Simulator",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Slides",
+          "",
+          "Set up and configure an Android Emulator (AVD) and/or iOS Simulator. Practice running their app on these virtual devices.",
+          ""
+        ],
+        [
+          "6",
+          "- Navigating the project structure in React Native using Expo commands- Compare Expo CLI versus React Native CLI",
+          "Offline",
+          "CLO2, CLO3",
+          "I",
+          "Slides",
+          "",
+          "Explore the folders and files in a standard Expo/React Native project. Understand the purpose of key files (App.js, package.json, assets, etc.).",
+          ""
+        ],
+        [
+          "7",
+          "Introduction to Virtual DOM in React Native",
+          "Offline",
+          "CLO1, CLO2",
+          "I",
+          "Slides",
+          "",
+          "Understand the concept of the Virtual DOM and how it contributes to React Native's performance. Compare briefly with the web DOM.",
+          ""
+        ],
+        [
+          "8",
+          "Introduction to Basic Components- View- Text- Image- Button- Text Input- Scroll View- Flat List",
+          "Offline",
+          "CLO4",
+          "I",
+          "Slides",
+          "",
+          "Learn the syntax and basic props for View, Text, Image, Button, TextInput. Practice using these components to build a simple static screen layout.",
+          ""
+        ],
+        [
+          "9",
+          "Introduction to React Navigation ComponentsImplementation of Stack, Drawer, and Tab Navigation",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slides",
+          "",
+          "Implement basic stack navigation between two or more screens using react-navigation. Understand navigator setup.",
+          ""
+        ],
+        [
+          "10",
+          "Introduction to Stylesheets",
+          "Offline",
+          "CLO5",
+          "I",
+          "Slides",
+          "",
+          "Learn how to create and apply styles using StyleSheet.createPractice styling basic components (color, font size, margins, padding)",
+          ""
+        ],
+        [
+          "11",
+          "Styling with Layouts and Flexbox",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides",
+          "",
+          "Practice using Flexbox properties (flexDirection, justifyContent, alignItems, flex, etc.) to create responsive layouts. Complete layout exercises.",
+          ""
+        ],
+        [
+          "12",
+          "Using Styled-Components in React Native",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides",
+          "",
+          "Understand the concept of CSS-in-JS with Styled Components. Practice defining and using styled components. (Optional: Refactor previous styles).",
+          ""
+        ],
+        [
+          "13",
+          "Managing State with useState and useReducer",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Practice using useState for simple state variables and useReducer for more complex state logic within components. Implement examples like counters or simple forms.",
+          ""
+        ],
+        [
+          "14",
+          "Using Context API for State Management",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Implement state sharing between components using the Context API. Understand createContext, Provider, and useContext.",
+          ""
+        ],
+        [
+          "15",
+          "Redux in React Native",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slide",
+          "",
+          "Understand the core Redux concepts (actions, reducers, store, dispatch). Practice connecting a component to the Redux store (if guided).",
+          ""
+        ],
+        [
+          "16",
+          "Handling TextInput and Forms",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slides",
+          "",
+          "Build a form with TextInput fields. Implement controlled components by managing input state using useState. Handle form submission.",
+          ""
+        ],
+        [
+          "17",
+          "Validating Forms with Formik and Yup",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slides",
+          "",
+          "Integrate Formik to manage form state and Yup for validation rules in their practice form. Display validation errors.",
+          ""
+        ],
+        [
+          "18",
+          "Using AsyncStorage for Persistent Data",
+          "Offline",
+          "CLO9",
+          "TU",
+          "Slides",
+          "",
+          "Practice saving simple data (e.g., user preferences, a token) to AsyncStorage and retrieving it when the app restarts.",
+          ""
+        ],
+        [
+          "19",
+          "Introduction to FlatList and SectionList",
+          "Offline",
+          "CLO7",
+          "ITU",
+          "Slides",
+          "",
+          "Practice rendering large lists of data efficiently using FlatList. Understand data, renderItem, keyExtractor. Implement a SectionList for grouped data.",
+          ""
+        ],
+        [
+          "20",
+          "Implementing Pull-to-Refresh",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Slides",
+          "",
+          "Add pull-to-refresh functionality to a FlatList or ScrollView using RefreshControl. Trigger a data refresh action.",
+          ""
+        ],
+        [
+          "21",
+          "Implement Infinite Scrolling",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Slides",
+          "",
+          "Implement infinite scrolling (load more data on reaching the end) on a FlatList using onEndReached prop.",
+          ""
+        ],
+        [
+          "22",
+          "Assignment 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+          "U",
+          "Slides, assignment's questions",
+          "",
+          "Work actively on Assignment 1, applying concepts from sessions 1-21. Ask specific questions for clarification or help.",
+          ""
+        ],
+        [
+          "23",
+          "Assignment 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+          "U",
+          "Slides, assignment's questions",
+          "",
+          "Continue working on Assignment 1. Focus on problem-solving and implementation. Collaborate if permitted.",
+          ""
+        ],
+        [
+          "24",
+          "Assignment 1 ReviewProject Introduction",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+          "TU",
+          "Slides, assignment's questions",
+          "",
+          "Submit Assignment 1. Pay attention to the review, noting common mistakes or best practices. Understand the final project scope and start brainstorming. Ask questions about the project.",
+          ""
+        ],
+        [
+          "25",
+          "Progress Test 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+          "U",
+          "",
+          "",
+          "Take the test",
+          ""
+        ],
+        [
+          "26",
+          "Working with React DevTools - Inspecting Components- Using Context API",
+          "Offline",
+          "CLO8",
+          "ITU",
+          "Slides",
+          "",
+          "Practice using React DevTools to inspect component hierarchy, view/edit props and state in their own or example apps.",
+          ""
+        ],
+        [
+          "27",
+          "Working with React DevTools (Cont)- Performance Profiling",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Slides",
+          "",
+          "Practice using the Profiler tab in React DevTools to identify rendering bottlenecks in simple scenarios.",
+          ""
+        ],
+        [
+          "28",
+          "Handling Errors and Debugging - Importance of Error Handling- Common Error Types- Error Handling Techniques:",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Slides",
+          "",
+          "Learn common types of errors. Practice using console logs and the debugger (Chrome DevTools) for basic debugging. Understand Error Boundaries concept.",
+          ""
+        ],
+        [
+          "29",
+          "Handling Errors and Debugging (Cont)- Debugging Tools",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Slides",
+          "",
+          "Practice setting breakpoints, inspecting variables, and stepping through code using the debugger.",
+          ""
+        ],
+        [
+          "30",
+          "Creating Android APK FilesHandling Updates in React Native",
+          "Offline",
+          "CLO3, CLO13",
+          "TU",
+          "Slides",
+          "",
+          "Understand the process for creating a release build (APK/AAB). Learn the concept of Over-the-Air (OTA) updates.",
+          ""
+        ],
+        [
+          "31",
+          "Mobile App Notifications, Databases, & Publishing Introduction",
+          "Offline",
+          "CLO11, CLO12, CLO13",
+          "I",
+          "Slides",
+          "",
+          "Gain a high-level understanding of push notifications, local vs. remote databases, and the app store submission process.",
+          ""
+        ],
+        [
+          "32",
+          "Handling Notifications in Mobile AppsNotification Delivery Systems",
+          "Offline",
+          "CLO11, CLO12",
+          "TU",
+          "Slides",
+          "",
+          "Understand the flow of push notifications (client registration, server sending, client receiving). Learn about permissions.",
+          ""
+        ],
+        [
+          "33",
+          "Creating Notifications in React Native",
+          "Offline",
+          "CLO12",
+          "TU",
+          "Slides",
+          "",
+          "Practice setting up a library (e.g., expo-notifications) to request permissions and potentially receive local or test push notifications.",
+          ""
+        ],
+        [
+          "34",
+          "Embedded databases introduction- Local Storage- SQLite- Couchbase Lite- LevelDB- BerkeleyDBBest Practices for Developers",
+          "Offline",
+          "CLO9, CLO11",
+          "I",
+          "Slides",
+          "",
+          "Understand use cases for local databases. Learn basic SQL concepts relevant to SQLite. Practice setting up expo-sqlite.",
+          ""
+        ],
+        [
+          "35",
+          "CRUD Operations in Embedded Databases- Operations",
+          "Offline",
+          "CLO9",
+          "TU",
+          "Slides",
+          "",
+          "Practice writing and executing SQL queries for Create, Read, Update, and Delete operations in SQLite",
+          ""
+        ],
+        [
+          "36",
+          "CRUD Operations in Embedded Databases ( cont )- Practical Application",
+          "Offline",
+          "CLO9",
+          "TU",
+          "Slides",
+          "",
+          "Apply CRUD operations to a practical example within their app (e.g., saving notes, user data locally). Handle asynchronous database operations.",
+          ""
+        ],
+        [
+          "37",
+          "Overview of Remote Databases",
+          "Offline",
+          "CLO9, CLO11",
+          "I",
+          "Slide",
+          "",
+          "Understand the difference between local and remote databases. Learn about common remote database types (SQL, NoSQL) and BaaS options.",
+          ""
+        ],
+        [
+          "38",
+          "Connecting Mobile Apps to Remote Databases",
+          "Offline",
+          "CLO9, CLO11",
+          "TU",
+          "Slides",
+          "",
+          "Practice making API calls to retrieve data from a sample public API or a simple backend provided by the lecturer. Handle responses and errors.",
+          ""
+        ],
+        [
+          "39",
+          "Introduction to Firebase",
+          "Offline",
+          "CLO11",
+          "I",
+          "Slides",
+          "",
+          "Create a Firebase project. Understand the key services offered (Firestore/Realtime DB, Auth, etc.). Connect their React Native app to the Firebase project.",
+          ""
+        ],
+        [
+          "40",
+          "Explore Google Firebase",
+          "Offline",
+          "CLO11",
+          "TU",
+          "Slides",
+          "",
+          "Explore the Firebase console. Practice basic data operations (adding/reading data) in Firestore or Realtime Database directly or through guided app integration.",
+          ""
+        ],
+        [
+          "41",
+          "Creating Notifications in React Native with Firebase",
+          "Offline",
+          "CLO11, CLO12",
+          "TU",
+          "Slides",
+          "",
+          "Integrate Firebase Cloud Messaging (FCM) setup into their app. Practice receiving notifications sent via the Firebase console.",
+          ""
+        ],
+        [
+          "42",
+          "Gemini AI integration- Get API key- Project configuration",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Slides",
+          "",
+          "Obtain a Gemini API key. Set up the necessary SDK/API call structure in their project. Configure the project securely.",
+          ""
+        ],
+        [
+          "43",
+          "Gemini AI integration (cont)- AI Model selection - Make promt and processing result",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Slides",
+          "",
+          "Practice selecting an appropriate Gemini model. Formulate prompts and make API calls from the app. Display the AI-generated response.",
+          ""
+        ],
+        [
+          "44",
+          "Map integration - Request permission- Access location API",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slides",
+          "",
+          "Install react-native-maps. Request location permissions. Get the device's current location and display it on a map component with a marker.",
+          ""
+        ],
+        [
+          "45",
+          "Image picker integration",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Slides",
+          "",
+          "Install expo-image-picker. Implement functionality to request permissions, open the device's image gallery or camera, and handle the selected image URI.",
+          ""
+        ],
+        [
+          "46",
+          "Assigment 2",
+          "Offline",
+          "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "U",
+          "Slides, assignment's questions",
+          "",
+          "Work actively on Assignment 2, integrating concepts from sessions 26-45 (debugging, APIs, Firebase, hardware features etc.). Ask specific questions.",
+          ""
+        ],
+        [
+          "47",
+          "Assigment 2",
+          "Offline",
+          "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "U",
+          "Slides, assignment's questions",
+          "",
+          "Continue working on Assignment 2, focusing on integration and problem-solving.",
+          ""
+        ],
+        [
+          "48",
+          "Assigment 2 review",
+          "Offline",
+          "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "Slides, assignment's questions",
+          "",
+          "Submit Assignment 2. Pay attention to the review feedback. Finalize project preparation based on assignment experience.",
+          ""
+        ],
+        [
+          "49",
+          "Review",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "Slides",
+          "",
+          "Actively participate in the review session. Ask questions on unclear topics from the entire course. Prepare for Progress Test 2 and Final Project Defense.",
+          ""
+        ],
+        [
+          "50",
+          "Review",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "Slides",
+          "",
+          "Continue active review and Q&A. Solidify understanding of core and advanced concepts.",
+          ""
+        ],
+        [
+          "51",
+          "Review",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "Slides",
+          "",
+          "Final opportunity for clarification before the test/defense. Consolidate notes and understanding.",
+          ""
+        ],
+        [
+          "52",
+          "Progress Test 2",
+          "Offline",
+          "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "U",
+          "",
+          "",
+          "Take the test",
+          ""
+        ],
+        [
+          "53",
+          "Course summary",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "Slides",
+          "",
+          "Reflect on the key skills and knowledge gained. Ask final questions about the course material or potential next steps in learning.",
+          ""
+        ],
+        [
+          "54",
+          "Course summary",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "Slides",
+          "",
+          "Final wrap-up and Q&A session. Ensure all administrative aspects are clear.",
+          ""
+        ],
+        [
+          "55",
+          "Final Project Defense",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "",
+          "",
+          "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+          ""
+        ],
+        [
+          "56",
+          "Final Project Defense",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "",
+          "",
+          "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+          ""
+        ],
+        [
+          "57",
+          "Final Project Defense",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "",
+          "",
+          "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+          ""
+        ],
+        [
+          "58",
+          "Final Project Defense",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "",
+          "",
+          "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+          ""
+        ],
+        [
+          "59",
+          "Final Project Defense",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "",
+          "",
+          "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+          ""
+        ],
+        [
+          "60",
+          "Final Project Defense",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+          "TU",
+          "",
+          "",
+          "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MMA301",
+            "links": [
+              {
+                "text": "MMA301",
+                "href": "https://flm.fpt.edu.vn/download/12848/S/1_MMA301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Listen actively, understand course structure, objectives, grading, and expectations. Ask clarifying questions.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to React Native- What is React Native- Features and Use Cases of React Native - React Native architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand core concepts, features, pros/cons of React Native. Take notes. Ask questions.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Setting up the React Native Development Ecosystem- Common Dependencies- Node.js Installation- Android Studio Setup- Android SDK Configuration- Environment Variables: Set up the ANDROID_HOME environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow instructions to install Node.js, Watchman, IDE extensions, Expo CLI dependencies. Troubleshoot setup issues with guidance.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Setting up the React Native Development Ecosystem (Cont)- Expo and Its Features- Install Expo Go on your device- Expo CLI- Setting up the Environment using Expo Snack",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Complete Expo setup. Create a new project using Expo CLI. Run the basic app on a device or simulator.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Emulator and Simulator Basics in React Native Development- Understanding Android SDK Emulator - Android SDK Emulator- Working with Android Emulator using Android Studio- iOS Simulator- Configuring iOS Simulator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Set up and configure an Android Emulator (AVD) and/or iOS Simulator. Practice running their app on these virtual devices.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Navigating the project structure in React Native using Expo commands- Compare Expo CLI versus React Native CLI",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explore the folders and files in a standard Expo/React Native project. Understand the purpose of key files (App.js, package.json, assets, etc.).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Virtual DOM in React Native",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the concept of the Virtual DOM and how it contributes to React Native's performance. Compare briefly with the web DOM.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Basic Components- View- Text- Image- Button- Text Input- Scroll View- Flat List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn the syntax and basic props for View, Text, Image, Button, TextInput. Practice using these components to build a simple static screen layout.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to React Navigation ComponentsImplementation of Stack, Drawer, and Tab Navigation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement basic stack navigation between two or more screens using react-navigation. Understand navigator setup.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Stylesheets",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn how to create and apply styles using StyleSheet.createPractice styling basic components (color, font size, margins, padding)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Styling with Layouts and Flexbox",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice using Flexbox properties (flexDirection, justifyContent, alignItems, flex, etc.) to create responsive layouts. Complete layout exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Using Styled-Components in React Native",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the concept of CSS-in-JS with Styled Components. Practice defining and using styled components. (Optional: Refactor previous styles).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Managing State with useState and useReducer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice using useState for simple state variables and useReducer for more complex state logic within components. Implement examples like counters or simple forms.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Using Context API for State Management",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement state sharing between components using the Context API. Understand createContext, Provider, and useContext.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Redux in React Native",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the core Redux concepts (actions, reducers, store, dispatch). Practice connecting a component to the Redux store (if guided).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Handling TextInput and Forms",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build a form with TextInput fields. Implement controlled components by managing input state using useState. Handle form submission.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Validating Forms with Formik and Yup",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integrate Formik to manage form state and Yup for validation rules in their practice form. Display validation errors.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Using AsyncStorage for Persistent Data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice saving simple data (e.g., user preferences, a token) to AsyncStorage and retrieving it when the app restarts.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to FlatList and SectionList",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice rendering large lists of data efficiently using FlatList. Understand data, renderItem, keyExtractor. Implement a SectionList for grouped data.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implementing Pull-to-Refresh",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Add pull-to-refresh functionality to a FlatList or ScrollView using RefreshControl. Trigger a data refresh action.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement Infinite Scrolling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement infinite scrolling (load more data on reaching the end) on a FlatList using onEndReached prop.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Work actively on Assignment 1, applying concepts from sessions 1-21. Ask specific questions for clarification or help.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Continue working on Assignment 1. Focus on problem-solving and implementation. Collaborate if permitted.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1 ReviewProject Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Assignment 1. Pay attention to the review, noting common mistakes or best practices. Understand the final project scope and start brainstorming. Ask questions about the project.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Take the test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working with React DevTools - Inspecting Components- Using Context API",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice using React DevTools to inspect component hierarchy, view/edit props and state in their own or example apps.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working with React DevTools (Cont)- Performance Profiling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice using the Profiler tab in React DevTools to identify rendering bottlenecks in simple scenarios.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Handling Errors and Debugging - Importance of Error Handling- Common Error Types- Error Handling Techniques:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn common types of errors. Practice using console logs and the debugger (Chrome DevTools) for basic debugging. Understand Error Boundaries concept.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Handling Errors and Debugging (Cont)- Debugging Tools",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice setting breakpoints, inspecting variables, and stepping through code using the debugger.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creating Android APK FilesHandling Updates in React Native",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the process for creating a release build (APK/AAB). Learn the concept of Over-the-Air (OTA) updates.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mobile App Notifications, Databases, & Publishing Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Gain a high-level understanding of push notifications, local vs. remote databases, and the app store submission process.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Handling Notifications in Mobile AppsNotification Delivery Systems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO11, CLO12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the flow of push notifications (client registration, server sending, client receiving). Learn about permissions.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creating Notifications in React Native",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice setting up a library (e.g., expo-notifications) to request permissions and potentially receive local or test push notifications.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Embedded databases introduction- Local Storage- SQLite- Couchbase Lite- LevelDB- BerkeleyDBBest Practices for Developers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9, CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand use cases for local databases. Learn basic SQL concepts relevant to SQLite. Practice setting up expo-sqlite.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CRUD Operations in Embedded Databases- Operations",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice writing and executing SQL queries for Create, Read, Update, and Delete operations in SQLite",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CRUD Operations in Embedded Databases ( cont )- Practical Application",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply CRUD operations to a practical example within their app (e.g., saving notes, user data locally). Handle asynchronous database operations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Overview of Remote Databases",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9, CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the difference between local and remote databases. Learn about common remote database types (SQL, NoSQL) and BaaS options.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Connecting Mobile Apps to Remote Databases",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9, CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice making API calls to retrieve data from a sample public API or a simple backend provided by the lecturer. Handle responses and errors.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Firebase",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Create a Firebase project. Understand the key services offered (Firestore/Realtime DB, Auth, etc.). Connect their React Native app to the Firebase project.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explore Google Firebase",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explore the Firebase console. Practice basic data operations (adding/reading data) in Firestore or Realtime Database directly or through guided app integration.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Creating Notifications in React Native with Firebase",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO11, CLO12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integrate Firebase Cloud Messaging (FCM) setup into their app. Practice receiving notifications sent via the Firebase console.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Gemini AI integration- Get API key- Project configuration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Obtain a Gemini API key. Set up the necessary SDK/API call structure in their project. Configure the project securely.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Gemini AI integration (cont)- AI Model selection - Make promt and processing result",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice selecting an appropriate Gemini model. Formulate prompts and make API calls from the app. Display the AI-generated response.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Map integration - Request permission- Access location API",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install react-native-maps. Request location permissions. Get the device's current location and display it on a map component with a marker.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Image picker integration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install expo-image-picker. Implement functionality to request permissions, open the device's image gallery or camera, and handle the selected image URI.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assigment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Work actively on Assignment 2, integrating concepts from sessions 26-45 (debugging, APIs, Firebase, hardware features etc.). Ask specific questions.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assigment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Continue working on Assignment 2, focusing on integration and problem-solving.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assigment 2 review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Assignment 2. Pay attention to the review feedback. Finalize project preparation based on assignment experience.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Actively participate in the review session. Ask questions on unclear topics from the entire course. Prepare for Progress Test 2 and Final Project Defense.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Continue active review and Q&A. Solidify understanding of core and advanced concepts.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final opportunity for clarification before the test/defense. Consolidate notes and understanding.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Take the test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course summary",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Reflect on the key skills and knowledge gained. Ask final questions about the course material or potential next steps in learning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course summary",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final wrap-up and Q&A session. Ensure all administrative aspects are clear.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Defense",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Defense",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Defense",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Defense",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Defense",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Defense",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9, CLO10, CLO11, CLO12, CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present their final React Native project. Demonstrate its functionality. Explain design choices and technical implementation. Answer questions effectively.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "Guided and reviewed in tutorial sesions; Cont. at home",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+          "practical exercises",
+          "",
+          "Assignment 1: CLO1 - CLO7Assignment 2: CLO1 - CLO13",
+          "Teachers support tutorials and students do them by themselves",
+          "It is allowed to use AI support to solve the assignment, however, students must provide evidence for the use of AI for support. Students need to fully store the promt if using GenAI for support and provide it to the lecturer when necessary. Students must understand and master the products they create with the support of AI, can easily customize according to some small modification requests from the lecturer based on the knowledge learned in the course."
+        ],
+        [
+          "2",
+          "Practical Exam",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "85'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+          "Preferable to be marked by scripts",
+          "",
+          "problem(s) to solve by programming with AI integration covering CLO1 - CLO13",
+          "supervised by instructor",
+          "- It is allowed to use AI support to solve the assignment, however, students must provide evidence for the use of AI for support. Students need to fully store the promt if using GenAI for support and provide it to the lecturer when necessary. - Students must understand and master the products they create with the support of AI, can easily customize according to some small modification requests from the lecturer based on the knowledge learned in the course.- 90% points for fixed function list serving the problem10% points for students to freely create, apply reasonable AI features to expand the problem requirements"
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "20'-40'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+          "essay or multiple choice",
+          "15-30 if multiple choice",
+          "PT 1: CLO1 - CLO7PT 2: CLO8 - CLO13",
+          "supervised by instructor",
+          "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "4",
+          "Project",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "Guided and reviewed in tutorial sesions; Cont. at home",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+          "a problem similar to real one",
+          "",
+          "problem(s) to solve by programming with AI integration, covering CLO1 - CLO13",
+          "Individual or team work, guided by instructor, submission by a given deadline",
+          "Students/student groups choose their own topics or solve topics assigned by the instructor80% of the score is assessed on non-AI functions20% of the score is assessed on AI integration appropriate to the problem's business"
+        ],
+        [
+          "5",
+          "Final exam",
+          "Final exam",
+          "1",
+          "40.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+          "multiple choice",
+          "50",
+          "all topics; more than 70% new questions (for the current semester);",
+          "supervised by proctor(s) sent by exam board",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guided and reviewed in tutorial sesions; Cont. at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "practical exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1: CLO1 - CLO7Assignment 2: CLO1 - CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teachers support tutorials and students do them by themselves",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "It is allowed to use AI support to solve the assignment, however, students must provide evidence for the use of AI for support. Students need to fully store the promt if using GenAI for support and provide it to the lecturer when necessary. Students must understand and master the products they create with the support of AI, can easily customize according to some small modification requests from the lecturer based on the knowledge learned in the course.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Preferable to be marked by scripts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "problem(s) to solve by programming with AI integration covering CLO1 - CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "supervised by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- It is allowed to use AI support to solve the assignment, however, students must provide evidence for the use of AI for support. Students need to fully store the promt if using GenAI for support and provide it to the lecturer when necessary. - Students must understand and master the products they create with the support of AI, can easily customize according to some small modification requests from the lecturer based on the knowledge learned in the course.- 90% points for fixed function list serving the problem10% points for students to freely create, apply reasonable AI features to expand the problem requirements",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20'-40'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "essay or multiple choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15-30 if multiple choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PT 1: CLO1 - CLO7PT 2: CLO8 - CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "supervised by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guided and reviewed in tutorial sesions; Cont. at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "a problem similar to real one",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "problem(s) to solve by programming with AI integration, covering CLO1 - CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by a given deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students/student groups choose their own topics or solve topics assigned by the instructor80% of the score is assessed on non-AI functions20% of the score is assessed on AI integration appropriate to the problem's business",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7, CLO8, CLO9,CLO10,CLO11,CLO12,CLO13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "multiple choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "all topics; more than 70% new questions (for the current semester);",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "supervised by proctor(s) sent by exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

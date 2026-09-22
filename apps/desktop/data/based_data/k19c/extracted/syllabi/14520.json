@@ -1,0 +1,6441 @@
+{
+  "id": "14520",
+  "metadata": {
+    "Syllabus ID": "14520",
+    "Syllabus Name": "Computer Networking_Mạng máy tính",
+    "Course Name English": "Computer Networking",
+    "Subject Code": "NWC204",
+    "Learning-Teaching Method": "Lecture,Active learning,Offline",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "45 hours of contact learning (60 sessions) + 1.4 hours of Practical Examination (PE) + 1 hour of Final Examination (FE) + 102.6 hours of self-study.",
+    "Pre-Requisite": "",
+    "Description": "This course is based on the first course in the CCNA curriculum. It introduces the network architectures, models, protocols, and components that enable communication among users, devices, applications, and data across modern computer networks and the Internet. Key topics include Ethernet fundamentals, IP addressing, basic network operations, and introductory network security. By the end of the course, students will be able to build and configure simple local area networks (LANs), develop appropriate IP addressing schemes, apply basic security measures, configure routers and switches, verify network connectivity, and troubleshoot common network problems. The course includes an individual Practical Examination (PE) that assesses each student’s ability to apply these skills independently. During the examination, students are required to design or complete a small network, calculate and configure IP addresses, perform basic router and switch configurations, secure network devices, verify connectivity, and identify and correct common configuration errors. The course is organized into a series of modules, each of which represents an integrated unit of learning. Every module includes instructional content, practical activities, and assessments aligned with a defined set of competencies. The scope and duration of each module vary according to the level of knowledge and practical skill required. Some modules provide foundational knowledge that supports later learning and prepares students for concepts covered in the CCNA certification examination, even where the foundational content is not assessed directly.",
+    "StudentTasks": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Students are responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information - Students must complete all assignments on the Cisco Networking Academy (https://www.netacad.com/) with a result of at least 75%.",
+    "Tools": "Baseline Equipment Bundle: - 2 x ISR4221/K9 Routers - 2 x WS-C2960+24TC-L Catalyst switches - 1 wireless router (generic brand) with WPA2 support - Ethernet patch cables - PCs - Internet connection for lab and study PCs - Optional equipment for connecting to a WLAN + 1 printer or integrated printer/scanner/copier for the class to share + Smartphones and tablets are desirable for use with the labs Software: - Cisco IOS versions: + Routers: Version 15.0 or higher, IP Base feature set + Switches: Version 15.0 or higher, lanbaseK9 feature set - Packet Tracer, the most recent version. - Open-source server software: + For various services and protocols, such as Telnet, SSH, HTTP, DHCP, FTP, TFTP, etc. - Tera Term source SSH client software for lab PCs. - Oracle VirtualBox, most recent version. - Wireshark, the most recent version.",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "968/QĐ-ĐHFPT dated 08/07/2026",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "8/7/2026"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "14520"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "14520"
+        ],
+        [
+          "Syllabus Name:",
+          "Computer Networking_Mạng máy tính"
+        ],
+        [
+          "Course Name English:",
+          "Computer Networking"
+        ],
+        [
+          "Subject Code:",
+          "NWC204"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Lecture,Active learning,Offline"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "45 hours of contact learning (60 sessions) + 1.4 hours of Practical Examination (PE) + 1 hour of Final Examination (FE) + 102.6 hours of self-study."
+        ],
+        [
+          "Pre-Requisite:",
+          ""
+        ],
+        [
+          "Description:",
+          "This course is based on the first course in the CCNA curriculum. It introduces the network architectures, models, protocols, and components that enable communication among users, devices, applications, and data across modern computer networks and the Internet. Key topics include Ethernet fundamentals, IP addressing, basic network operations, and introductory network security. By the end of the course, students will be able to build and configure simple local area networks (LANs), develop appropriate IP addressing schemes, apply basic security measures, configure routers and switches, verify network connectivity, and troubleshoot common network problems. The course includes an individual Practical Examination (PE) that assesses each student’s ability to apply these skills independently. During the examination, students are required to design or complete a small network, calculate and configure IP addresses, perform basic router and switch configurations, secure network devices, verify connectivity, and identify and correct common configuration errors. The course is organized into a series of modules, each of which represents an integrated unit of learning. Every module includes instructional content, practical activities, and assessments aligned with a defined set of competencies. The scope and duration of each module vary according to the level of knowledge and practical skill required. Some modules provide foundational knowledge that supports later learning and prepares students for concepts covered in the CCNA certification examination, even where the foundational content is not assessed directly."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Students are responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information - Students must complete all assignments on the Cisco Networking Academy (https://www.netacad.com/) with a result of at least 75%."
+        ],
+        [
+          "Tools:",
+          "Baseline Equipment Bundle: - 2 x ISR4221/K9 Routers - 2 x WS-C2960+24TC-L Catalyst switches - 1 wireless router (generic brand) with WPA2 support - Ethernet patch cables - PCs - Internet connection for lab and study PCs - Optional equipment for connecting to a WLAN + 1 printer or integrated printer/scanner/copier for the class to share + Smartphones and tablets are desirable for use with the labs Software: - Cisco IOS versions: + Routers: Version 15.0 or higher, IP Base feature set + Switches: Version 15.0 or higher, lanbaseK9 feature set - Packet Tracer, the most recent version. - Open-source server software: + For various services and protocols, such as Telnet, SSH, HTTP, DHCP, FTP, TFTP, etc. - Tera Term source SSH client software for lab PCs. - Oracle VirtualBox, most recent version. - Wireshark, the most recent version."
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "968/QĐ-ĐHFPT dated 08/07/2026"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "8/7/2026"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14520",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Computer Networking_Mạng máy tính",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Computer Networking",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NWC204",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture,Active learning,Offline",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45 hours of contact learning (60 sessions) + 1.4 hours of Practical Examination (PE) + 1 hour of Final Examination (FE) + 102.6 hours of self-study.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This course is based on the first course in the CCNA curriculum. It introduces the network architectures, models, protocols, and components that enable communication among users, devices, applications, and data across modern computer networks and the Internet. Key topics include Ethernet fundamentals, IP addressing, basic network operations, and introductory network security. By the end of the course, students will be able to build and configure simple local area networks (LANs), develop appropriate IP addressing schemes, apply basic security measures, configure routers and switches, verify network connectivity, and troubleshoot common network problems. The course includes an individual Practical Examination (PE) that assesses each student’s ability to apply these skills independently. During the examination, students are required to design or complete a small network, calculate and configure IP addresses, perform basic router and switch configurations, secure network devices, verify connectivity, and identify and correct common configuration errors. The course is organized into a series of modules, each of which represents an integrated unit of learning. Every module includes instructional content, practical activities, and assessments aligned with a defined set of competencies. The scope and duration of each module vary according to the level of knowledge and practical skill required. Some modules provide foundational knowledge that supports later learning and prepares students for concepts covered in the CCNA certification examination, even where the foundational content is not assessed directly.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Students are responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information - Students must complete all assignments on the Cisco Networking Academy (https://www.netacad.com/) with a result of at least 75%.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Baseline Equipment Bundle: - 2 x ISR4221/K9 Routers - 2 x WS-C2960+24TC-L Catalyst switches - 1 wireless router (generic brand) with WPA2 support - Ethernet patch cables - PCs - Internet connection for lab and study PCs - Optional equipment for connecting to a WLAN + 1 printer or integrated printer/scanner/copier for the class to share + Smartphones and tablets are desirable for use with the labs Software: - Cisco IOS versions: + Routers: Version 15.0 or higher, IP Base feature set + Switches: Version 15.0 or higher, lanbaseK9 feature set - Packet Tracer, the most recent version. - Open-source server software: + For various services and protocols, such as Telnet, SSH, HTTP, DHCP, FTP, TFTP, etc. - Tera Term source SSH client software for lab PCs. - Oracle VirtualBox, most recent version. - Wireshark, the most recent version.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "968/QĐ-ĐHFPT dated 08/07/2026",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8/7/2026",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "31 Packet Tracer activities",
+          "Cisco",
+          "Cisco",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "CCNA: Introduction to Networks Slides",
+          "Cisco",
+          "Cisco",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "3",
+          "E-Learning Content: 17 modules",
+          "Cisco",
+          "Cisco",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "4",
+          "Labs: 24 hands-on and paper-based labs.",
+          "Cisco",
+          "Cisco",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "5",
+          "Videos: 36 videos",
+          "Cisco",
+          "Cisco",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "31 Packet Tracer activities",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CCNA: Introduction to Networks Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "E-Learning Content: 17 modules",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Labs: 24 hands-on and paper-based labs.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Videos: 36 videos",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cisco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "10 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Describe the evolution of network technologies and explain how layered protocols enable communication and support end-user applications."
+        ],
+        [
+          "2",
+          "CLO10",
+          "Students use AI and digital tools to collaborate, design, and present small network projects. The approach blends dialogue-based assessment with self-directed learning."
+        ],
+        [
+          "3",
+          "CLO2",
+          "Apply Ethernet and switching concepts to explain and configure technologies that support efficient and reliable data transfer."
+        ],
+        [
+          "4",
+          "CLO3",
+          "Configure switches, routers, and end devices with IP addressing and security settings to establish basic network connectivity."
+        ],
+        [
+          "5",
+          "CLO4",
+          "Explain how physical, data link, network, and transport layers interact to enable reliable and structured data communication."
+        ],
+        [
+          "6",
+          "CLO5",
+          "Design and implement IPv4 and IPv6 addressing schemes by calculating subnets and applying efficient address configurations in networks."
+        ],
+        [
+          "7",
+          "CLO6",
+          "Use diagnostic tools and techniques to test and troubleshoot network connectivity, including ICMP utilities and AI-assisted methods."
+        ],
+        [
+          "8",
+          "CLO7",
+          "Implement basic security measures by applying device hardening and configuration techniques to protect network devices and communications."
+        ],
+        [
+          "9",
+          "CLO8",
+          "Design and implement a small network topology with routers, switches, and end devices, considering performance and scalability."
+        ],
+        [
+          "10",
+          "CLO9",
+          "Utilize AI tools to analyze, configure, monitor, and troubleshoot networks, enhancing learning, efficiency, and network management capabilities."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe the evolution of network technologies and explain how layered protocols enable communication and support end-user applications.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students use AI and digital tools to collaborate, design, and present small network projects. The approach blends dialogue-based assessment with self-directed learning.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply Ethernet and switching concepts to explain and configure technologies that support efficient and reliable data transfer.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Configure switches, routers, and end devices with IP addressing and security settings to establish basic network connectivity.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain how physical, data link, network, and transport layers interact to enable reliable and structured data communication.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design and implement IPv4 and IPv6 addressing schemes by calculating subnets and applying efficient address configurations in networks.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use diagnostic tools and techniques to test and troubleshoot network connectivity, including ICMP utilities and AI-assisted methods.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement basic security measures by applying device hardening and configuration techniques to protect network devices and communications.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design and implement a small network topology with routers, switches, and end devices, considering performance and scalability.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Utilize AI tools to analyze, configure, monitor, and troubleshoot networks, enhancing learning, efficiency, and network management capabilities.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course overview1. Networking Today1.1 Networks Affect Our Lives1.2 Network Components1.3 Network Representations and Topologies1.4 Common Types of Networks",
+          "Offline",
+          "CLO1, CLO9",
+          "T",
+          "Module 1: Networking Today",
+          "",
+          "Read Module 1",
+          ""
+        ],
+        [
+          "2",
+          "1.5 Internet Connections1.6 Reliable Networks1.7 Network Trends1.8 Network Security1.9 The IT Professional1.10 Integrate AI Tools for Explaining Concepts",
+          "Offline",
+          "CLO1, CLO9",
+          "T",
+          "Module 1: Networking Today",
+          "",
+          "Read Module 1",
+          ""
+        ],
+        [
+          "3",
+          "2. Basic Switch and End Device Configuration2.1 Cisco IOS Access2.2 IOS Navigation2.3 The Command Structure2.4 Basic Device Configuration",
+          "Offline",
+          "CLO2, CLO3, CLO9",
+          "T",
+          "Module 2: Basic Switch and End Device Configuration",
+          "",
+          "Read Module 2",
+          ""
+        ],
+        [
+          "4",
+          "2.5 Save Configurations2.6 Ports and Addresses2.7 Configure IP Addressing2.8 Verify Connectivity2.9 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO2, CLO3, CLO9",
+          "T",
+          "Module 2: Basic Switch and End Device Configuration",
+          "",
+          "Read Module 2",
+          ""
+        ],
+        [
+          "5",
+          "Lab 1.1: Basic Switch and End Device Configuration- Navigate the IOS by Using Tera Term for Console Connectivity- Basic Switch and End Device Configuration- Use AI Tools for Configuration and Troubleshooting",
+          "Offline",
+          "CLO2, CLO3, CLO9",
+          "U",
+          "2.3.8 Lab Manual (or 2.3.7 Packet Tracer)2.9.2 Lab Manual (or 2.9.1 Packet Tracer)",
+          "",
+          "Practice Lab 1.1",
+          ""
+        ],
+        [
+          "6",
+          "Lab 1.1 (continue)",
+          "Offline",
+          "CLO2, CLO3, CLO9",
+          "U",
+          "2.3.8 Lab Manual (or 2.3.7 Packet Tracer)2.9.2 Lab Manual (or 2.9.1 Packet Tracer)",
+          "",
+          "Practice Lab 1.1",
+          ""
+        ],
+        [
+          "7",
+          "3. Protocols and Models3.1 The Rules3.2 Protocols3.3 Protocol Suites3.4 Standards Organizations",
+          "Offline",
+          "CLO1, CLO9",
+          "T",
+          "Module 3: Protocols and Models",
+          "",
+          "Read Module 3",
+          ""
+        ],
+        [
+          "8",
+          "3.5 Reference Models3.6 Data Encapsulation3.7 Data Access3.8 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO1, CLO9",
+          "T",
+          "Module 3: Protocols and Models",
+          "",
+          "Read Module 3",
+          ""
+        ],
+        [
+          "9",
+          "Lab 1.2 (Dialogue-based Assessment & Self Learning)- Design a Communications System- Research Networking Standards- Install Wireshark- Integrate AI Tools for Explaining Concepts",
+          "Offline",
+          "CLO1, CLO9",
+          "U",
+          "3.0.3 Lab Manual3.4.4 Lab Manual3.7.9 Lab Manual3.7.10 Lab Manual",
+          "",
+          "Practice Lab 1.2",
+          ""
+        ],
+        [
+          "10",
+          "Lab 1.2 (continue)",
+          "Offline",
+          "CLO1, CLO9",
+          "U",
+          "3.0.3 Lab Manual3.4.4 Lab Manual3.7.9 Lab Manual3.7.10 Lab Manual",
+          "",
+          "Practice Lab 1.2",
+          ""
+        ],
+        [
+          "11",
+          "4. Physical Layer4.1 Purpose of the Physical Layer4.2 Physical Layer Characteristics4.3 Copper Cabling",
+          "Offline",
+          "CLO4, CLO9",
+          "T",
+          "Module 4: Physical Layer",
+          "",
+          "Student: Read Module 4",
+          ""
+        ],
+        [
+          "12",
+          "4.4 UTP Cabling4.5 Fiber-Optic Cabling4.6 Wireless Media4.7 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO4, CLO9",
+          "T",
+          "Module 4: Physical Layer",
+          "",
+          "Student: Read Module 4",
+          ""
+        ],
+        [
+          "13",
+          "Lab 1.3 (Dialogue-based Assessment & Self Learning)- View Wired and Wireless NIC Information- Integrate AI Tools for Explaining Concepts",
+          "Offline",
+          "CLO4, CLO9",
+          "U",
+          "4.6.5 Packet Tracer4.6.6 Lab Manual",
+          "",
+          "Practice Lab 1.3",
+          ""
+        ],
+        [
+          "14",
+          "Lab 1.3 (continue)",
+          "Offline",
+          "CLO4, CLO9",
+          "U",
+          "4.6.5 Packet Tracer4.6.6 Lab Manual",
+          "",
+          "Practice Lab 1.3",
+          ""
+        ],
+        [
+          "15",
+          "5. Data Link Layer5.1 Purpose of the Data Link Layer",
+          "Offline",
+          "CLO2, CLO4, CLO9",
+          "T",
+          "Module 6: Data Link Layer",
+          "",
+          "Student: Read Module 6",
+          ""
+        ],
+        [
+          "16",
+          "5.2 Topologies5.3 Data Link Frame5.4 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO2, CLO4, CLO9",
+          "T",
+          "Module 6: Data Link Layer",
+          "",
+          "Student: Read Module 6",
+          ""
+        ],
+        [
+          "17",
+          "6. Ethernet Switching6.1 Ethernet Frame6.2 Ethernet MAC Address",
+          "Offline",
+          "CLO2, CLO4, CLO9",
+          "T",
+          "Module 7: Ethernet Switching",
+          "",
+          "Student: Read Module 7",
+          ""
+        ],
+        [
+          "18",
+          "6.3 The MAC Address Table6.4 Switch Speeds and Forwarding Methods6.5 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO2, CLO4, CLO9",
+          "T",
+          "Module 7: Ethernet Switching",
+          "",
+          "Student: Read Module 7",
+          ""
+        ],
+        [
+          "19",
+          "Lab 1.4 (Dialogue-based Assessment & Self Learning)- Use Wireshark to Examine Ethernet Frames- View Network Device MAC Addresses- View the Switch MAC Address Table - Use AI Tools for Analyzing Captured Packets",
+          "Offline",
+          "CLO2, CLO4, CLO9",
+          "U",
+          "7.1.6 Lab Manual7.2.7 Lab Manual7.3.7 Lab Manual",
+          "",
+          "Practice Lab 1.4",
+          ""
+        ],
+        [
+          "20",
+          "Lab 1.4 (continue)",
+          "Offline",
+          "CLO2, CLO4, CLO9",
+          "U",
+          "7.1.6 Lab Manual7.2.7 Lab Manual7.3.7 Lab Manual",
+          "",
+          "Practice Lab 1.4",
+          ""
+        ],
+        [
+          "21",
+          "7. Network Layer7.1 Network Layer Characteristics7.2 IPv4 Packet",
+          "Offline",
+          "CLO4, CLO9",
+          "T",
+          "Module 8: Network Layer",
+          "",
+          "Read Module 8",
+          ""
+        ],
+        [
+          "22",
+          "7.3 IPv6 Packet7.4 How a Host Routes7.5 Router Routing Tables7.6 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO4, CLO9",
+          "T",
+          "Module 8: Network Layer",
+          "",
+          "Read Module 8",
+          ""
+        ],
+        [
+          "23",
+          "Review Modules 1-7",
+          "Offline",
+          "CLO1-4",
+          "",
+          "",
+          "",
+          "Review",
+          ""
+        ],
+        [
+          "24",
+          "8. Address Resolution8.1 MAC and IP",
+          "Offline",
+          "CLO4, CLO9",
+          "T",
+          "Module 9: Address Resolution",
+          "",
+          "Read Module 9",
+          ""
+        ],
+        [
+          "25",
+          "8.2 ARP8.3 Neighbor Discovery8.4 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO4, CLO9",
+          "T",
+          "Module 9: Address Resolution",
+          "",
+          "Read Module 9",
+          ""
+        ],
+        [
+          "26",
+          "9. Basic Router Configuration9.1 Configure Initial Router Settings",
+          "Offline",
+          "CLO3, CLO8, CLO9",
+          "T",
+          "Module 10: Basic Router Configuration",
+          "",
+          "Read Module 10",
+          ""
+        ],
+        [
+          "27",
+          "9.2 Configure Interfaces9.4 Configure the Default Gateway9.5 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO3, CLO8, CLO9",
+          "T",
+          "Module 10: Basic Router Configuration",
+          "",
+          "Read Module 10",
+          ""
+        ],
+        [
+          "28",
+          "Lab 2.1: Build a Switch and Router Network- Build a Switch and Router Network- Use AI Tools for Configuration and Troubleshooting",
+          "Offline",
+          "CLO3, CLO8, CLO9",
+          "U",
+          "10.4.4 Lab Manual",
+          "",
+          "Practice Lab 2.1",
+          ""
+        ],
+        [
+          "29",
+          "Lab 2.1 (continue)",
+          "Offline",
+          "CLO3, CLO8, CLO9",
+          "U",
+          "10.4.4 Lab Manual",
+          "",
+          "Practice Lab 2.1",
+          ""
+        ],
+        [
+          "30",
+          "10. IPv4 Addressing10.1 IPv4 Address Structure10.2 IPv4 Unicast, Broadcast, and Multicast10.3 Types of IPv4 Addresses10.4 Network Segmentation",
+          "Offline",
+          "CLO5, CLO9",
+          "T",
+          "Module 11: IPv4 Addressing",
+          "",
+          "Read Module 11",
+          ""
+        ],
+        [
+          "31",
+          "10.5 Subnet an IPv410.6 Subnet a /16 and /8 Prefix10.7 Subnet to Meet Requirements10.8 Variable Length Subnet Masking10.9 Structured Design10.10 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO5, CLO9",
+          "T",
+          "Module 11: IPv4 Addressing",
+          "",
+          "Read Module 11",
+          ""
+        ],
+        [
+          "32",
+          "Lab 2.2 (Dialogue-based Assessment & Self Learning)- Calculate IPv4 Subnets- Design and Implement a VLSM Addressing Scheme- Use AI Tools for Calculating IPv4 Subnets",
+          "Offline",
+          "CLO5, CLO9",
+          "U",
+          "11.6.6 Lab Manual11.10.2 Lab Manual",
+          "",
+          "Practice Lab 2.2",
+          ""
+        ],
+        [
+          "33",
+          "Lab 2.2 (continue)",
+          "Offline",
+          "CLO5, CLO9",
+          "U",
+          "11.6.6 Lab Manual11.10.2 Lab Manual",
+          "",
+          "Practice Lab 2.2",
+          ""
+        ],
+        [
+          "34",
+          "Midterm Progress Test",
+          "Offline",
+          "CLO1 - CLO9",
+          "",
+          "",
+          "",
+          "Review",
+          ""
+        ],
+        [
+          "35",
+          "11. IPv6 Addressing11.1 IPv6 Addressing11.2 IPv4 Issues11.3 IPv6 Addressing11.4 IPv6 Address Types",
+          "Offline",
+          "CLO5, CLO9",
+          "T",
+          "Module 12: IPv6 Addressing",
+          "",
+          "Read Module 12",
+          ""
+        ],
+        [
+          "36",
+          "11.5 GUA and LLA Static Configuration11.6 Dynamic Addressing for IPv6 GUAs11.7 Dynamic Addressing for IPv6 LLAs11.8 IPv6 Multicast Addresses11.9 Subnet an IPv6 Network11.10 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO5, CLO9",
+          "T",
+          "Module 12: IPv6 Addressing",
+          "",
+          "Read Module 12",
+          ""
+        ],
+        [
+          "37",
+          "12. ICMP12.1 ICMP Messages",
+          "Offline",
+          "CLO6, CLO9",
+          "T",
+          "Module 13: ICMP",
+          "",
+          "Read Module 13",
+          ""
+        ],
+        [
+          "38",
+          "12.2 Ping and Traceroute Testing12.3 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO6, CLO9",
+          "T",
+          "Module 13: ICMP",
+          "",
+          "Read Module 13",
+          ""
+        ],
+        [
+          "39",
+          "Lab 2.3: Use Ping and Traceroute to Test Network Connectivity- Use Ping and Traceroute to Test Network Connectivity- Use AI Tools for Configuration and Troubleshooting",
+          "Offline",
+          "CLO6, CLO9",
+          "U",
+          "13.3.2 Lab Manual (or 13.2.7 Packet Tracer, 13.3.1 Packet Tracer)",
+          "",
+          "Practice Lab 2.3",
+          ""
+        ],
+        [
+          "40",
+          "Lab 2.3 (continue)",
+          "Offline",
+          "CLO6, CLO9",
+          "U",
+          "13.3.2 Lab Manual (or 13.2.7 Packet Tracer, 13.3.1 Packet Tracer)",
+          "",
+          "Practice Lab 2.3",
+          ""
+        ],
+        [
+          "41",
+          "13.Transport Layer13.1 Transportation of Data13.2 TCP Overview13.3 UDP Overview",
+          "Offline",
+          "CLO1, CLO4, CLO9",
+          "T",
+          "Module 14: Transport Layer",
+          "",
+          "Read Module 14",
+          ""
+        ],
+        [
+          "42",
+          "13.4 Port Numbers13.5 TCP Communication Process13.6 Reliability and Flow Control .13.7 UDP Communication13.8 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO1, CLO4, CLO9",
+          "T",
+          "Module 14: Transport Layer",
+          "",
+          "Read Module 14",
+          ""
+        ],
+        [
+          "43",
+          "Project: Design and Implement a Basic Small Network with AI Assistance- Divide student groups",
+          "Offline",
+          "CLO7-10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "44",
+          "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+          "Offline",
+          "CLO7-10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "45",
+          "14. Application Layer14.1 Application, Presentation, and Session14.2 Peer-to-Peer",
+          "Offline",
+          "CLO1, CLO4, CLO9",
+          "T",
+          "Module 15: Application Layer",
+          "",
+          "Read Module 15",
+          ""
+        ],
+        [
+          "46",
+          "14.3 Web and Email Protocols14.4 IP Addressing Services14.5 File Sharing Services14.6 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO1, CLO4, CLO9",
+          "T",
+          "Module 15: Application Layer",
+          "",
+          "Read Module 15",
+          ""
+        ],
+        [
+          "47",
+          "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+          "Offline",
+          "CLO7-10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "48",
+          "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+          "Offline",
+          "CLO7-10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "49",
+          "15. Network Security Fundamentals15.1 Security Threats and Vulnerabilities15.2 Network Attacks",
+          "Offline",
+          "CLO7, CLO9",
+          "T",
+          "Module 16: Network Security Fundamentals",
+          "",
+          "Read Module 16",
+          ""
+        ],
+        [
+          "50",
+          "15.3 Network Attack Mitigation15.4 Device Security15.5 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO7, CLO10",
+          "T",
+          "Module 16: Network Security Fundamentals",
+          "",
+          "Read Module 16",
+          ""
+        ],
+        [
+          "51",
+          "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+          "Offline",
+          "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "52",
+          "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+          "Offline",
+          "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "53",
+          "Review Modules 8-15",
+          "Offline",
+          "CLO5-CLO10",
+          "",
+          "",
+          "",
+          "Review",
+          ""
+        ],
+        [
+          "54",
+          "16. Build a Small Network16.1 Devices in a Small Network16.2 Small Network Applications and Protocols16.3 Scale to Larger Networks",
+          "Offline",
+          "CLO8, CLO9",
+          "T",
+          "Module 17: Build a Small Network",
+          "",
+          "Read Module 17",
+          ""
+        ],
+        [
+          "55",
+          "16.4 Verify Connectivity16.5 Host and IOS Commands16.6 Troubleshooting Methodologies16.7 Troubleshooting Scenarios16.8 Integrate AI Tools for Explaining Concepts (Self Learning)",
+          "Offline",
+          "CLO8, CLO9",
+          "T",
+          "Module 17: Build a Small Network",
+          "",
+          "Read Module 17",
+          ""
+        ],
+        [
+          "56",
+          "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+          "Offline",
+          "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "57",
+          "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+          "Offline",
+          "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+          "U",
+          "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+          "",
+          "Practice and Review Project",
+          ""
+        ],
+        [
+          "58",
+          "Review",
+          "Offline",
+          "CLO1-CLO10",
+          "T",
+          "Textbook, slides",
+          "",
+          "Review",
+          ""
+        ],
+        [
+          "59",
+          "Review",
+          "Offline",
+          "CLO1-CLO10",
+          "T",
+          "Textbook, slides",
+          "",
+          "Review",
+          ""
+        ],
+        [
+          "60",
+          "Review",
+          "Offline",
+          "CLO1-CLO11",
+          "T",
+          "Textbook, slides",
+          "",
+          "Review",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course overview1. Networking Today1.1 Networks Affect Our Lives1.2 Network Components1.3 Network Representations and Topologies1.4 Common Types of Networks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 1: Networking Today",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.5 Internet Connections1.6 Reliable Networks1.7 Network Trends1.8 Network Security1.9 The IT Professional1.10 Integrate AI Tools for Explaining Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 1: Networking Today",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2. Basic Switch and End Device Configuration2.1 Cisco IOS Access2.2 IOS Navigation2.3 The Command Structure2.4 Basic Device Configuration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 2: Basic Switch and End Device Configuration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.5 Save Configurations2.6 Ports and Addresses2.7 Configure IP Addressing2.8 Verify Connectivity2.9 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 2: Basic Switch and End Device Configuration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.1: Basic Switch and End Device Configuration- Navigate the IOS by Using Tera Term for Console Connectivity- Basic Switch and End Device Configuration- Use AI Tools for Configuration and Troubleshooting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.3.8 Lab Manual (or 2.3.7 Packet Tracer)2.9.2 Lab Manual (or 2.9.1 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.1 (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.3.8 Lab Manual (or 2.3.7 Packet Tracer)2.9.2 Lab Manual (or 2.9.1 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3. Protocols and Models3.1 The Rules3.2 Protocols3.3 Protocol Suites3.4 Standards Organizations",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 3: Protocols and Models",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.5 Reference Models3.6 Data Encapsulation3.7 Data Access3.8 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 3: Protocols and Models",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.2 (Dialogue-based Assessment & Self Learning)- Design a Communications System- Research Networking Standards- Install Wireshark- Integrate AI Tools for Explaining Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.0.3 Lab Manual3.4.4 Lab Manual3.7.9 Lab Manual3.7.10 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.2 (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.0.3 Lab Manual3.4.4 Lab Manual3.7.9 Lab Manual3.7.10 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4. Physical Layer4.1 Purpose of the Physical Layer4.2 Physical Layer Characteristics4.3 Copper Cabling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 4: Physical Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Student: Read Module 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.4 UTP Cabling4.5 Fiber-Optic Cabling4.6 Wireless Media4.7 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 4: Physical Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Student: Read Module 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.3 (Dialogue-based Assessment & Self Learning)- View Wired and Wireless NIC Information- Integrate AI Tools for Explaining Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.6.5 Packet Tracer4.6.6 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.3 (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.6.5 Packet Tracer4.6.6 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5. Data Link Layer5.1 Purpose of the Data Link Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 6: Data Link Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Student: Read Module 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.2 Topologies5.3 Data Link Frame5.4 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 6: Data Link Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Student: Read Module 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6. Ethernet Switching6.1 Ethernet Frame6.2 Ethernet MAC Address",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 7: Ethernet Switching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Student: Read Module 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.3 The MAC Address Table6.4 Switch Speeds and Forwarding Methods6.5 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 7: Ethernet Switching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Student: Read Module 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.4 (Dialogue-based Assessment & Self Learning)- Use Wireshark to Examine Ethernet Frames- View Network Device MAC Addresses- View the Switch MAC Address Table - Use AI Tools for Analyzing Captured Packets",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.1.6 Lab Manual7.2.7 Lab Manual7.3.7 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1.4 (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.1.6 Lab Manual7.2.7 Lab Manual7.3.7 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 1.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7. Network Layer7.1 Network Layer Characteristics7.2 IPv4 Packet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 8: Network Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.3 IPv6 Packet7.4 How a Host Routes7.5 Router Routing Tables7.6 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 8: Network Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Modules 1-7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8. Address Resolution8.1 MAC and IP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 9: Address Resolution",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8.2 ARP8.3 Neighbor Discovery8.4 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 9: Address Resolution",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9. Basic Router Configuration9.1 Configure Initial Router Settings",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 10: Basic Router Configuration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.2 Configure Interfaces9.4 Configure the Default Gateway9.5 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 10: Basic Router Configuration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.1: Build a Switch and Router Network- Build a Switch and Router Network- Use AI Tools for Configuration and Troubleshooting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.4.4 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.1 (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.4.4 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10. IPv4 Addressing10.1 IPv4 Address Structure10.2 IPv4 Unicast, Broadcast, and Multicast10.3 Types of IPv4 Addresses10.4 Network Segmentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 11: IPv4 Addressing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.5 Subnet an IPv410.6 Subnet a /16 and /8 Prefix10.7 Subnet to Meet Requirements10.8 Variable Length Subnet Masking10.9 Structured Design10.10 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 11: IPv4 Addressing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.2 (Dialogue-based Assessment & Self Learning)- Calculate IPv4 Subnets- Design and Implement a VLSM Addressing Scheme- Use AI Tools for Calculating IPv4 Subnets",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.6.6 Lab Manual11.10.2 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.2 (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.6.6 Lab Manual11.10.2 Lab Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Midterm Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1 - CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11. IPv6 Addressing11.1 IPv6 Addressing11.2 IPv4 Issues11.3 IPv6 Addressing11.4 IPv6 Address Types",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 12: IPv6 Addressing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.5 GUA and LLA Static Configuration11.6 Dynamic Addressing for IPv6 GUAs11.7 Dynamic Addressing for IPv6 LLAs11.8 IPv6 Multicast Addresses11.9 Subnet an IPv6 Network11.10 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 12: IPv6 Addressing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12. ICMP12.1 ICMP Messages",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 13: ICMP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12.2 Ping and Traceroute Testing12.3 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 13: ICMP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.3: Use Ping and Traceroute to Test Network Connectivity- Use Ping and Traceroute to Test Network Connectivity- Use AI Tools for Configuration and Troubleshooting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13.3.2 Lab Manual (or 13.2.7 Packet Tracer, 13.3.1 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 2.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.3 (continue)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13.3.2 Lab Manual (or 13.2.7 Packet Tracer, 13.3.1 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice Lab 2.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13.Transport Layer13.1 Transportation of Data13.2 TCP Overview13.3 UDP Overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 14: Transport Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13.4 Port Numbers13.5 TCP Communication Process13.6 Reliability and Flow Control .13.7 UDP Communication13.8 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 14: Transport Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance- Divide student groups",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7-10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7-10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14. Application Layer14.1 Application, Presentation, and Session14.2 Peer-to-Peer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 15: Application Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14.3 Web and Email Protocols14.4 IP Addressing Services14.5 File Sharing Services14.6 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 15: Application Layer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7-10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7-10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15. Network Security Fundamentals15.1 Security Threats and Vulnerabilities15.2 Network Attacks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 16: Network Security Fundamentals",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.3 Network Attack Mitigation15.4 Device Security15.5 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 16: Network Security Fundamentals",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Modules 8-15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5-CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "16. Build a Small Network16.1 Devices in a Small Network16.2 Small Network Applications and Protocols16.3 Scale to Larger Networks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 17: Build a Small Network",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "16.4 Verify Connectivity16.5 Host and IOS Commands16.6 Troubleshooting Methodologies16.7 Troubleshooting Scenarios16.8 Integrate AI Tools for Explaining Concepts (Self Learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 17: Build a Small Network",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Module 17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project: Design and Implement a Basic Small Network with AI Assistance (continue)- Work on group and report project progress- Dialogue-based Assessment & Self Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.4.8 Lab Manual16.2.6 Lab Manual16.4.7 Lab Manual (or 16.4.6 Packet Tracer)16.5.2 Lab Manual (or 16.5.1 Packet Tracer)17.4.6 Lab Manual17.7.6 Lab Manual (or 17.7.7 Packet Tracer)17.8.1 Lab Manual (or 17.8.2 Packet Tracer)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice and Review Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook, slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook, slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Textbook, slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "52 Constructive question(s)",
+      "headers": [
+        "no",
+        "sessionno",
+        "name",
+        "details"
+      ],
+      "rows": [
+        [
+          "1",
+          "1",
+          "CQ1.1",
+          "What is the Internet?"
+        ],
+        [
+          "2",
+          "1",
+          "CQ1.2",
+          "How can computers in network talk together?"
+        ],
+        [
+          "3",
+          "2",
+          "CQ1.3",
+          "Why do we need a reliable networks?"
+        ],
+        [
+          "4",
+          "3",
+          "CQ1.4",
+          "What is the Cisco IOS?"
+        ],
+        [
+          "5",
+          "4",
+          "CQ2.1",
+          "How to write the correct command in Cisco IOS?"
+        ],
+        [
+          "6",
+          "5",
+          "CQ2.2",
+          "What should we do when implement basic network with switches and end devices?"
+        ],
+        [
+          "7",
+          "7",
+          "CQ3.1",
+          "Explain why protocols are necessary in network communication."
+        ],
+        [
+          "8",
+          "8",
+          "CQ3.2",
+          "Explain how the TCP/IP model and the OSI model are used to facilitate standardization in the communication process."
+        ],
+        [
+          "9",
+          "10",
+          "CQ4.1",
+          "What are the purpose and functions of the physical layer in the network?"
+        ],
+        [
+          "10",
+          "11",
+          "CQ4.2",
+          "Constrast and compare between copper and fiber optic capling"
+        ],
+        [
+          "11",
+          "12",
+          "CQ4.3",
+          "While trying to solve a network issue, a technician made multiple changes to the current router configuration file. The changes did not solve the problem and were not saved. What action can the technician take to discard the changes and work with the file in NVRAM?"
+        ],
+        [
+          "12",
+          "13",
+          "CQ5.1",
+          "How does UTP cable used in Ethernet networks?"
+        ],
+        [
+          "13",
+          "14",
+          "CQ5.2",
+          "How to connect devices using wired and wireless media"
+        ],
+        [
+          "14",
+          "17",
+          "CQ6.1",
+          "How does MAC protocol in the data link layer supports communication across networks?"
+        ],
+        [
+          "15",
+          "18",
+          "CQ6.2",
+          "Compare and constrast the characteristics of media access control methods on WAN and LAN technologies"
+        ],
+        [
+          "16",
+          "19",
+          "CQ7.1",
+          "What is the Frame?"
+        ],
+        [
+          "17",
+          "20",
+          "CQ7.2",
+          "How to detect and fix when receive an error frame on transmission?"
+        ],
+        [
+          "18",
+          "21",
+          "CQ7.3",
+          "How does Ethernet works in a switched network?"
+        ],
+        [
+          "19",
+          "23",
+          "CQ8.1",
+          "Why do we need use IP protocol for reliable communications?"
+        ],
+        [
+          "20",
+          "24",
+          "CQ8.2",
+          "How does the network devices use routing tables to direct packets to a destination networks?"
+        ],
+        [
+          "21",
+          "25",
+          "CQ9.1",
+          "How can ARP enable communication on a network?"
+        ],
+        [
+          "22",
+          "26",
+          "CQ9.2",
+          "How does Neighbor Discovery operate on a network?"
+        ],
+        [
+          "23",
+          "27",
+          "CQ9.3",
+          "Compare the roles of the ARP address and the IP address"
+        ],
+        [
+          "24",
+          "28",
+          "CQ10.1",
+          "How do two computers connect over the outside network?"
+        ],
+        [
+          "25",
+          "29",
+          "CQ10.2",
+          "How does the way of the router device forward packets?"
+        ],
+        [
+          "26",
+          "31",
+          "CQ11.1",
+          "Progress Test 2"
+        ],
+        [
+          "27",
+          "32",
+          "CQ11.2",
+          "Compare and constrast the characteristics and uses of the unicast, broadcast and multicast IPv4 address"
+        ],
+        [
+          "28",
+          "33",
+          "CQ11.3",
+          "how many are there type of the IPv4 address? How to use it?"
+        ],
+        [
+          "29",
+          "34",
+          "CQ12.1",
+          "What is the structure of an IPv4 address?"
+        ],
+        [
+          "30",
+          "35",
+          "CQ12.2",
+          "A company has plan to deploy a network with more departments. How can we calculate IPv4 address to optimize in this case?"
+        ],
+        [
+          "31",
+          "37",
+          "CQ13.1",
+          "What happens do we use IPv4 in nowadays?"
+        ],
+        [
+          "32",
+          "38",
+          "CQ13.2",
+          "Compare types of IPv6 network addresses"
+        ],
+        [
+          "33",
+          "39",
+          "CQ13.3",
+          "How to configure IPv6 address on Cisco devices?"
+        ],
+        [
+          "34",
+          "40",
+          "CQ14.1",
+          "What is ICMP?"
+        ],
+        [
+          "35",
+          "41",
+          "CQ14.2",
+          "How to test network connectivity using ICMP?"
+        ],
+        [
+          "36",
+          "42",
+          "CQ14.3",
+          "Which other tools can we use to test network connectivity? How does it works(Do lab 7)?"
+        ],
+        [
+          "37",
+          "43",
+          "CQ15.1",
+          "What characteristics are there in the Transport Layer?"
+        ],
+        [
+          "38",
+          "44",
+          "CQ15.2",
+          "Compare between TCP and UDP? Which protocol do you like to implement?"
+        ],
+        [
+          "39",
+          "45",
+          "CQ15.3",
+          "How does TCP session establishment and termination processes facilitate reliable communication?"
+        ],
+        [
+          "40",
+          "46",
+          "CQ16.1",
+          "What is the functions of the Application Layer to provide network services to end users?"
+        ],
+        [
+          "41",
+          "47",
+          "CQ16.2",
+          "How does end-user application operate in a peer-to-peer network?"
+        ],
+        [
+          "42",
+          "48",
+          "CQ16.3",
+          "List of services operate in Application Layer? How does it works? Do lab 8"
+        ],
+        [
+          "43",
+          "49",
+          "CQ17.1",
+          "Why basic security measure are necessary on network devices?"
+        ],
+        [
+          "44",
+          "50",
+          "CQ17.2",
+          "How to detect vulnerabilities on the network and technical mitigation?"
+        ],
+        [
+          "45",
+          "51",
+          "CQ17.3",
+          "Why do we need to mitigate security threats on a network devices?"
+        ],
+        [
+          "46",
+          "52",
+          "CQ18.1",
+          "What is one of the most effective security tools available for protecting users from external threats?"
+        ],
+        [
+          "47",
+          "53",
+          "CQ18.2",
+          "What type of attack may involve the use of tools such as nslookup and fping?"
+        ],
+        [
+          "48",
+          "54",
+          "CQ18.3",
+          "Which component is designed to protect against unauthorized communications to and from a computer?"
+        ],
+        [
+          "49",
+          "55",
+          "CQ19.1",
+          "Which type of network threat is intended to prevent authorized users from accessing resources?"
+        ],
+        [
+          "50",
+          "57",
+          "CQ19.2",
+          "Which element of scaling a network involves identifying the physical and logical topologies?"
+        ],
+        [
+          "51",
+          "58",
+          "CQ20.1",
+          "A small company has only one router as the exit point to its ISP. Which solution could be adopted to maintain connectivity if the router itself, or its connection to the ISP, fails?"
+        ],
+        [
+          "52",
+          "59",
+          "CQ20.2",
+          "What mechanism can be implemented in a small network to help minimize network latency for real-time streaming applications?"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What is the Internet?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can computers in network talk together?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why do we need a reliable networks?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What is the Cisco IOS?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How to write the correct command in Cisco IOS?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What should we do when implement basic network with switches and end devices?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain why protocols are necessary in network communication.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ3.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain how the TCP/IP model and the OSI model are used to facilitate standardization in the communication process.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What are the purpose and functions of the physical layer in the network?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Constrast and compare between copper and fiber optic capling",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "While trying to solve a network issue, a technician made multiple changes to the current router configuration file. The changes did not solve the problem and were not saved. What action can the technician take to discard the changes and work with the file in NVRAM?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ5.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does UTP cable used in Ethernet networks?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ5.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How to connect devices using wired and wireless media",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ6.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does MAC protocol in the data link layer supports communication across networks?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ6.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compare and constrast the characteristics of media access control methods on WAN and LAN technologies",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ7.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What is the Frame?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ7.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How to detect and fix when receive an error frame on transmission?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ7.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does Ethernet works in a switched network?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why do we need use IP protocol for reliable communications?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ8.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does the network devices use routing tables to direct packets to a destination networks?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ9.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can ARP enable communication on a network?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ9.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does Neighbor Discovery operate on a network?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ9.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compare the roles of the ARP address and the IP address",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ10.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How do two computers connect over the outside network?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ10.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does the way of the router device forward packets?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ11.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ11.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compare and constrast the characteristics and uses of the unicast, broadcast and multicast IPv4 address",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ11.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "how many are there type of the IPv4 address? How to use it?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ12.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What is the structure of an IPv4 address?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ12.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "A company has plan to deploy a network with more departments. How can we calculate IPv4 address to optimize in this case?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ13.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What happens do we use IPv4 in nowadays?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ13.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compare types of IPv6 network addresses",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ13.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How to configure IPv6 address on Cisco devices?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ14.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What is ICMP?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ14.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How to test network connectivity using ICMP?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ14.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Which other tools can we use to test network connectivity? How does it works(Do lab 7)?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ15.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What characteristics are there in the Transport Layer?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ15.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compare between TCP and UDP? Which protocol do you like to implement?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ15.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does TCP session establishment and termination processes facilitate reliable communication?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ16.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What is the functions of the Application Layer to provide network services to end users?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ16.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does end-user application operate in a peer-to-peer network?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ16.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "List of services operate in Application Layer? How does it works? Do lab 8",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ17.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why basic security measure are necessary on network devices?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ17.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How to detect vulnerabilities on the network and technical mitigation?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ17.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why do we need to mitigate security threats on a network devices?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ18.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What is one of the most effective security tools available for protecting users from external threats?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ18.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What type of attack may involve the use of tools such as nslookup and fping?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ18.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Which component is designed to protect against unauthorized communications to and from a computer?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ19.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Which type of network threat is intended to prevent authorized users from accessing resources?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ19.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Which element of scaling a network involves identifying the physical and logical topologies?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ20.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "A small company has only one router as the exit point to its ISP. Which solution could be adopted to maintain connectivity if the router itself, or its connection to the ISP, fails?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ20.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What mechanism can be implemented in a small network to help minimize network latency for real-time streaming applications?",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Lab",
+          "on-going",
+          "2",
+          "20.0%",
+          ">0",
+          "120–180 minutes/lab",
+          "CLO1 - CLO9",
+          "Practice hands-on;Dialogue-based assessment with self-directed learning.",
+          "",
+          "technical aspect of studied topics",
+          "Two assessed Lab packages are conducted under instructor guidance. Students must complete the assigned individual or group tasks, submit the required configuration files and evidence, and respond to dialogue-based questions used to verify understanding.",
+          "The lab report content can be obtained from the lab manual, or created by the instructor to align with the chapters."
+        ],
+        [
+          "2",
+          "Midterm Progress Test",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "60 minutes/each",
+          "CLO1 - CLO9",
+          "Multiple choices; Marked by Computer or a suitable format",
+          "50",
+          "Module 1 to Module 10",
+          "In class, by instructor",
+          "Instruction and schedules for Progress Tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "3",
+          "Project",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "Conducted during assigned sessions",
+          "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+          "Practice hands-on;Dialogue-based assessment with self-directed learning.",
+          "",
+          "Design, configure, secure, verify, document, and present a basic small network. Students may use approved AI tools to support planning, configuration review, troubleshooting, and documentation, but must verify all AI-generated outputs and explain their final technical decisions",
+          "Students work in groups under instructor supervision. Assessment evidence must include the network topology, addressing plan, configuration artifacts, testing results, troubleshooting records, presentation or demonstration, and individual dialogue-based assessment. Individual scores may be adjusted according to demonstrated contribution and technical understanding",
+          "The project content must incorporate the lab manuals from Modules 13 to 16, or instructor-created materials that align with those modules."
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "2",
+          "50.0%",
+          "4",
+          "145 minutes",
+          "All CLOs",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "Each part of the final exam must be >=4/10 & Final Result >=5/10."
+        ],
+        [
+          "5",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "20.0%",
+          "4",
+          "85 minutes/each",
+          "CLO2, CLO3, CLO5, CLO6, CLO7 and CLO8",
+          "Hands-on practical configuration and troubleshooting tasks in a network simulation environment",
+          "One integrated scenario consisting of several task groups",
+          "Interpret or complete a basic network topology.Calculate IPv4 subnets and assign IPv4 addresses correctly.onfigure basic IPv6 addressing when included in the approved PE blueprint.Configure switches, routers and end devices.Configure default gateways and router interfaces.Apply basic device security, including passwords, encrypted secrets, banners, SSH or login protection when required.Verify connectivity using show commands, ping, tracert/traceroute or equivalent utilities.Identify and correct common addressing, interface, gateway, VLAN, routing or security configuration errors.",
+          "Exam room",
+          "The PE question bank should contain multiple equivalent variants. Network numbers, host requirements, device names and planted configuration errors should be randomized to reduce copying while maintaining equivalent difficulty."
+        ],
+        [
+          "6",
+          "Theoretical Exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60 minutes/each",
+          "CLO1-CLO8",
+          "Discipline and communication skills",
+          "50",
+          "Theoretical concepts and applied reasoning from Modules 1–16, with emphasis on protocol models, Ethernet, network and transport layers, IPv4 and IPv6 addressing, subnetting, address resolution, ICMP, application services, basic network security, small-network operation, and troubleshooting methodology.",
+          "Exam room",
+          "The exam questions must be updated"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "120–180 minutes/lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1 - CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice hands-on;Dialogue-based assessment with self-directed learning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "technical aspect of studied topics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Two assessed Lab packages are conducted under instructor guidance. Students must complete the assigned individual or group tasks, submit the required configuration files and evidence, and respond to dialogue-based questions used to verify understanding.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The lab report content can be obtained from the lab manual, or created by the instructor to align with the chapters.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Midterm Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60 minutes/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1 - CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choices; Marked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 1 to Module 10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instruction and schedules for Progress Tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Conducted during assigned sessions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5, CLO6, CLO7, CLO8, CLO9 and CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice hands-on;Dialogue-based assessment with self-directed learning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design, configure, secure, verify, document, and present a basic small network. Students may use approved AI tools to support planning, configuration review, troubleshooting, and documentation, but must verify all AI-generated outputs and explain their final technical decisions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students work in groups under instructor supervision. Assessment evidence must include the network topology, addressing plan, configuration artifacts, testing results, troubleshooting records, presentation or demonstration, and individual dialogue-based assessment. Individual scores may be adjusted according to demonstrated contribution and technical understanding",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The project content must incorporate the lab manuals from Modules 13 to 16, or instructor-created materials that align with those modules.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145 minutes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Each part of the final exam must be >=4/10 & Final Result >=5/10.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85 minutes/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO5, CLO6, CLO7 and CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Hands-on practical configuration and troubleshooting tasks in a network simulation environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "One integrated scenario consisting of several task groups",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Interpret or complete a basic network topology.Calculate IPv4 subnets and assign IPv4 addresses correctly.onfigure basic IPv6 addressing when included in the approved PE blueprint.Configure switches, routers and end devices.Configure default gateways and router interfaces.Apply basic device security, including passwords, encrypted secrets, banners, SSH or login protection when required.Verify connectivity using show commands, ping, tracert/traceroute or equivalent utilities.Identify and correct common addressing, interface, gateway, VLAN, routing or security configuration errors.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exam room",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The PE question bank should contain multiple equivalent variants. Network numbers, host requirements, device names and planted configuration errors should be randomized to reduce copying while maintaining equivalent difficulty.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theoretical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60 minutes/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discipline and communication skills",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theoretical concepts and applied reasoning from Modules 1–16, with emphasis on protocol models, Ethernet, network and transport layers, IPv4 and IPv6 addressing, subnetting, address resolution, ICMP, application services, basic network security, small-network operation, and troubleshooting methodology.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exam room",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4792 @@
+{
+  "id": "13201",
+  "metadata": {
+    "Syllabus ID": "13201",
+    "Syllabus Name": "Python for Applied Data Science _Lập trình Python cho khoa học dữ liệu ứng dụng",
+    "Course Name English": "Python for Applied Data Science",
+    "Subject Code": "PDS301m",
+    "Learning-Teaching Method": "Inquiry-Based Learning,In-class lecture, Active Learning",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45 contact hours + 1h FE + 104h self-study",
+    "Pre-Requisite": "MAS291",
+    "Description": "This hands-on course introduces students to Python programming with a specific focus on data science applications. Designed for beginners, it starts with the essentials of programming and guides learners through structured modules including Python basics, data structures, programming fundamentals, data handling, and APIs. Students will learn to write clean and efficient Python code, manipulate and analyze datasets, and automate data collection from external sources. Each topic is reinforced with review sessions and lab-based activities to ensure practical understanding and application. By the end of the course, students will be able to develop Python programs that solve real-world data problems and form a strong foundation for further study in data science and machine learning.",
+    "StudentTasks": "- Student must complete the coursera course:https://www.coursera.org/learn/python-for-applied-data-science-ai/- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose- Promptly access to the FU LMS at https://flm.fpt.edu.vn/ for up-to-date course information- Learn by coding practice",
+    "Tools": "Anacoda, Jupyter Notebook, Google Colab, Visual Studio Code",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "932/QĐ-ĐHFPT dated 08/22/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "8/22/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13201"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13201"
+        ],
+        [
+          "Syllabus Name:",
+          "Python for Applied Data Science _Lập trình Python cho khoa học dữ liệu ứng dụng"
+        ],
+        [
+          "Course Name English:",
+          "Python for Applied Data Science"
+        ],
+        [
+          "Subject Code:",
+          "PDS301m"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Inquiry-Based Learning,In-class lecture, Active Learning"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45 contact hours + 1h FE + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "MAS291"
+        ],
+        [
+          "Description:",
+          "This hands-on course introduces students to Python programming with a specific focus on data science applications. Designed for beginners, it starts with the essentials of programming and guides learners through structured modules including Python basics, data structures, programming fundamentals, data handling, and APIs. Students will learn to write clean and efficient Python code, manipulate and analyze datasets, and automate data collection from external sources. Each topic is reinforced with review sessions and lab-based activities to ensure practical understanding and application. By the end of the course, students will be able to develop Python programs that solve real-world data problems and form a strong foundation for further study in data science and machine learning."
+        ],
+        [
+          "StudentTasks:",
+          "- Student must complete the coursera course:https://www.coursera.org/learn/python-for-applied-data-science-ai/- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose- Promptly access to the FU LMS at https://flm.fpt.edu.vn/ for up-to-date course information- Learn by coding practice"
+        ],
+        [
+          "Tools:",
+          "Anacoda, Jupyter Notebook, Google Colab, Visual Studio Code"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "932/QĐ-ĐHFPT dated 08/22/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "8/22/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13201",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python for Applied Data Science _Lập trình Python cho khoa học dữ liệu ứng dụng",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python for Applied Data Science",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PDS301m",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Inquiry-Based Learning,In-class lecture, Active Learning",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45 contact hours + 1h FE + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MAS291",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This hands-on course introduces students to Python programming with a specific focus on data science applications. Designed for beginners, it starts with the essentials of programming and guides learners through structured modules including Python basics, data structures, programming fundamentals, data handling, and APIs. Students will learn to write clean and efficient Python code, manipulate and analyze datasets, and automate data collection from external sources. Each topic is reinforced with review sessions and lab-based activities to ensure practical understanding and application. By the end of the course, students will be able to develop Python programs that solve real-world data problems and form a strong foundation for further study in data science and machine learning.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Student must complete the coursera course:https://www.coursera.org/learn/python-for-applied-data-science-ai/- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose- Promptly access to the FU LMS at https://flm.fpt.edu.vn/ for up-to-date course information- Learn by coding practice",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Anacoda, Jupyter Notebook, Google Colab, Visual Studio Code",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "932/QĐ-ĐHFPT dated 08/22/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8/22/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Python for Data Science, AI & Development",
+          "Joseph Santarcangelo",
+          "Coursera",
+          "N/A",
+          "N/A",
+          "N/A",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/python-for-applied-data-science-ai"
+        ],
+        [
+          "2",
+          "Python Data Science Handbook",
+          "Jake VanderPlas",
+          "O'Reilly Media",
+          "2022",
+          "2nd",
+          "978-1-098121198",
+          "False",
+          "True",
+          "False",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python for Data Science, AI & Development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Joseph Santarcangelo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/python-for-applied-data-science-ai",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Science Handbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Jake VanderPlas",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "O'Reilly Media",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2022",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2nd",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1-098121198",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Develop a foundational understanding of Python programming by learning basic syntax, data types, expressions, variables, and string operations."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Understand the key data structure in Python such as using data structures, conditions and branching, loops, functions, exception handling, objects, and classes."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Know how to apply proficiency in using Python libraries such as Pandas and Numpy and developing code using Jupyter Notebooks."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Understand and implement the way to access and extract web-based data by working with REST APIs using requests and performing web scraping"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Apply AI tools to enhance Python programming skills and critically justify the logic of the implemented code"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop a foundational understanding of Python programming by learning basic syntax, data types, expressions, variables, and string operations.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the key data structure in Python such as using data structures, conditions and branching, loops, functions, exception handling, objects, and classes.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Know how to apply proficiency in using Python libraries such as Pandas and Numpy and developing code using Jupyter Notebooks.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand and implement the way to access and extract web-based data by working with REST APIs using requests and performing web scraping",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply AI tools to enhance Python programming skills and critically justify the logic of the implemented code",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Introduction programming for Data Science + Set up environment",
+          "Offline",
+          "CLO1",
+          "ITU",
+          "Slide: Guide",
+          "PDS301m",
+          "Set up environment",
+          ""
+        ],
+        [
+          "2",
+          "Introduction programming for Data Science + Set up environment",
+          "Offline",
+          "CLO1",
+          "ITU",
+          "Slide: Guide",
+          "PDS301m",
+          "Set up environment",
+          ""
+        ],
+        [
+          "3",
+          "Assignment introduction",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "T",
+          "Assignment",
+          "",
+          "Assignment",
+          ""
+        ],
+        [
+          "4",
+          "Python Basic",
+          "Offline",
+          "CLO1",
+          "T",
+          "Slide and Module 1 (online course): Python Basics",
+          "link4-1",
+          "Complete module 1 and review slide: Python Basic",
+          ""
+        ],
+        [
+          "5",
+          "Python Basic (con't)",
+          "Offline",
+          "CLO1",
+          "T",
+          "Slide and Module 1 (online course): Python Basics",
+          "link5-1",
+          "Complete module 1 and review slide: Python Basic",
+          ""
+        ],
+        [
+          "6",
+          "Project introduction",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "T",
+          "Project",
+          "",
+          "Project",
+          ""
+        ],
+        [
+          "7",
+          "Lab 1 & Lab 2 evaluation",
+          "Offline",
+          "CLO1, CLO5",
+          "U",
+          "Lab 1 & Lab 2 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "8",
+          "Lab 1 & Lab 2 evaluation",
+          "Offline",
+          "CLO1, CLO5",
+          "U",
+          "Lab 1 & Lab 2 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "9",
+          "Python Data Structures: List & Tuples",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link9-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "10",
+          "Python Data Structures: List & Tuples (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link10-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "11",
+          "Python Data Structures: List & Tuples (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link11-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "12",
+          "Python Data Structures: Dictionaries",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link12-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "13",
+          "Python Data Structures: Dictionaries (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link13-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "14",
+          "Python Data Structures: Dictionaries (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link14-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "15",
+          "Python Data Structures: Sets",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link15-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "16",
+          "Python Data Structures: Sets (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 2 (online course): Python Data Structures",
+          "link16-1",
+          "Complete module 2 and review slide: Python Data Structures",
+          ""
+        ],
+        [
+          "17",
+          "Review project -phase 1",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Project",
+          "",
+          "Present project",
+          ""
+        ],
+        [
+          "18",
+          "Evaluation Lab 3-4-5 Evaluation",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "Lab 3-4-5 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "19",
+          "Evaluation Lab 3-4-5 Evaluation",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "Lab 3-4-5 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "20",
+          "Evaluation Lab 3-4-5 Evaluation",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "Lab 3-4-5 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "21",
+          "Conditional & Branching",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Conditional & Branching",
+          "link21-1",
+          "Complete module 3 (part 1) and review slide: Conditional & Branching",
+          ""
+        ],
+        [
+          "22",
+          "Conditional & Branching (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Conditional & Branching",
+          "link22-1",
+          "Complete module 3 (part 1) and review slide: Conditional & Branching",
+          ""
+        ],
+        [
+          "23",
+          "Conditional & Branching (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Conditional & Branching",
+          "link23-1",
+          "Complete module 3 (part 1) and review slide: Conditional & Branching",
+          ""
+        ],
+        [
+          "24",
+          "Lab 6 Evaluation",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "Lab 6 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "25",
+          "Loops",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Loops",
+          "link25-1",
+          "Complete module 3 (part 1) and review slide: Loops",
+          ""
+        ],
+        [
+          "26",
+          "Loops (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Loops",
+          "link26-1",
+          "Complete module 3 (part 1) and review slide: Loops",
+          ""
+        ],
+        [
+          "27",
+          "Review project -phase 2",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Project",
+          "",
+          "Present project",
+          ""
+        ],
+        [
+          "28",
+          "Lab 7 Evaluation",
+          "Offline",
+          "CLO2",
+          "U",
+          "Lab 7 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "29",
+          "Functions",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Functions",
+          "link29-1",
+          "Complete module 3 (part 1) and review slide: Functions",
+          ""
+        ],
+        [
+          "30",
+          "Functions (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Functions",
+          "link30-1",
+          "Complete module 3 (part 1) and review slide: Functions",
+          ""
+        ],
+        [
+          "31",
+          "Functions (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Functions",
+          "link31-1",
+          "Complete module 3 (part 1) and review slide: Functions",
+          ""
+        ],
+        [
+          "32",
+          "Lab 8 Evaluation",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "Lab 8 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "33",
+          "Objects and Classes",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Objects and Classes",
+          "link33-1",
+          "Complete module 3 (part 2) and review slide: Objects and Classes",
+          ""
+        ],
+        [
+          "34",
+          "Objects and Classes (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 3 (online course): Objects and Classes",
+          "link34-1",
+          "Complete module 3 (part 2) and review slide: Objects and Classes",
+          ""
+        ],
+        [
+          "35",
+          "Review project -phase 3",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Project",
+          "",
+          "Present project",
+          ""
+        ],
+        [
+          "36",
+          "Lab 9 Evaluation",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "Lab 9 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "37",
+          "Progress test 1",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "Progress test 1",
+          "",
+          "Progress test 1",
+          ""
+        ],
+        [
+          "38",
+          "Working with data in Python",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 4 (online course): Working with data in Python",
+          "link38-1",
+          "Complete module 4 and review slide: Working with data in Python",
+          ""
+        ],
+        [
+          "39",
+          "Working with data in Python (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 4 (online course): Working with data in Python",
+          "link39-1",
+          "Complete module 4 and review slide: Working with data in Python",
+          ""
+        ],
+        [
+          "40",
+          "Working with data in Python (con't)",
+          "Offline",
+          "CLO2",
+          "T",
+          "Slide and Module 4 (online course): Working with data in Python",
+          "link40-1",
+          "Complete module 4 and review slide: Working with data in Python",
+          ""
+        ],
+        [
+          "41",
+          "Lab 10 Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO5",
+          "U",
+          "Lab 10 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "42",
+          "APIs and Data collection",
+          "Offline",
+          "CLO3",
+          "T",
+          "Slide and Module 5 (online course): APIs and Data collection",
+          "link42-1",
+          "Complete module 5 and review silde: APIs and Data collection",
+          ""
+        ],
+        [
+          "43",
+          "APIs and Data collection (con't)",
+          "Offline",
+          "CLO3",
+          "T",
+          "Slide and Module 5 (online course): APIs and Data collection",
+          "link43-1",
+          "Complete module 5 and review silde: APIs and Data collection",
+          ""
+        ],
+        [
+          "44",
+          "APIs and Data collection (con't)",
+          "Offline",
+          "CLO3",
+          "T",
+          "Slide and Module 5 (online course): APIs and Data collection",
+          "link44-1",
+          "Complete module 5 and review silde: APIs and Data collection",
+          ""
+        ],
+        [
+          "45",
+          "Lab 11 Evaluation",
+          "Offline",
+          "CLO3, CLO5",
+          "U",
+          "Lab 11 tutorial",
+          "",
+          "Do the lab and submit to system",
+          ""
+        ],
+        [
+          "46",
+          "Progress test 2",
+          "Offline",
+          "CLO3, CLO5",
+          "U",
+          "Progress test 2",
+          "",
+          "Progress test 2",
+          ""
+        ],
+        [
+          "47",
+          "Assignment evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Assignment tutorial",
+          "",
+          "Do assignment and submit to system",
+          ""
+        ],
+        [
+          "48",
+          "Assignment evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Assignment tutorial",
+          "",
+          "Do assignment and submit to system",
+          ""
+        ],
+        [
+          "49",
+          "Assignment evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Assignment tutorial",
+          "",
+          "Do assignment and submit to system",
+          ""
+        ],
+        [
+          "50",
+          "Assignment evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Assignment tutorial",
+          "",
+          "Do assignment and submit to system",
+          ""
+        ],
+        [
+          "51",
+          "Assignment evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Assignment tutorial",
+          "",
+          "Do assignment and submit to system",
+          ""
+        ],
+        [
+          "52",
+          "Assignment evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Assignment tutorial",
+          "",
+          "Do assignment and submit to system",
+          ""
+        ],
+        [
+          "53",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ],
+        [
+          "54",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ],
+        [
+          "55",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ],
+        [
+          "56",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ],
+        [
+          "57",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ],
+        [
+          "58",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ],
+        [
+          "59",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ],
+        [
+          "60",
+          "Group project presentation & evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "Proposed project based on project guidelines",
+          "",
+          "Do project, present and submit to system",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction programming for Data Science + Set up environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide: Guide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PDS301m",
+            "links": [
+              {
+                "text": "PDS301m",
+                "href": "https://flm.fpt.edu.vn/download/13201/S/1_PDS301m.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Set up environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction programming for Data Science + Set up environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide: Guide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PDS301m",
+            "links": [
+              {
+                "text": "PDS301m",
+                "href": "https://flm.fpt.edu.vn/download/13201/S/2_PDS301m.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Set up environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Basic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 1 (online course): Python Basics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link4-1",
+            "links": [
+              {
+                "text": "link4-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/1"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 1 and review slide: Python Basic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Basic (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 1 (online course): Python Basics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link5-1",
+            "links": [
+              {
+                "text": "link5-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/1"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 1 and review slide: Python Basic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1 & Lab 2 evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1 & Lab 2 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1 & Lab 2 evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1 & Lab 2 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: List & Tuples",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link9-1",
+            "links": [
+              {
+                "text": "link9-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: List & Tuples (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link10-1",
+            "links": [
+              {
+                "text": "link10-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: List & Tuples (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link11-1",
+            "links": [
+              {
+                "text": "link11-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: Dictionaries",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link12-1",
+            "links": [
+              {
+                "text": "link12-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: Dictionaries (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link13-1",
+            "links": [
+              {
+                "text": "link13-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: Dictionaries (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link14-1",
+            "links": [
+              {
+                "text": "link14-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: Sets",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link15-1",
+            "links": [
+              {
+                "text": "link15-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Structures: Sets (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 2 (online course): Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link16-1",
+            "links": [
+              {
+                "text": "link16-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/2"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 2 and review slide: Python Data Structures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review project -phase 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluation Lab 3-4-5 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3-4-5 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluation Lab 3-4-5 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3-4-5 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluation Lab 3-4-5 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3-4-5 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Conditional & Branching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Conditional & Branching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link21-1",
+            "links": [
+              {
+                "text": "link21-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Conditional & Branching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Conditional & Branching (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Conditional & Branching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link22-1",
+            "links": [
+              {
+                "text": "link22-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Conditional & Branching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Conditional & Branching (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Conditional & Branching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link23-1",
+            "links": [
+              {
+                "text": "link23-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Conditional & Branching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 6 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 6 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Loops",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Loops",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link25-1",
+            "links": [
+              {
+                "text": "link25-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Loops",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Loops (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Loops",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link26-1",
+            "links": [
+              {
+                "text": "link26-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Loops",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review project -phase 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 7 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 7 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Functions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Functions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link29-1",
+            "links": [
+              {
+                "text": "link29-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Functions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Functions (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Functions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link30-1",
+            "links": [
+              {
+                "text": "link30-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Functions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Functions (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Functions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link31-1",
+            "links": [
+              {
+                "text": "link31-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 1) and review slide: Functions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 8 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 8 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Objects and Classes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Objects and Classes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link33-1",
+            "links": [
+              {
+                "text": "link33-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 2) and review slide: Objects and Classes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Objects and Classes (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 3 (online course): Objects and Classes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link34-1",
+            "links": [
+              {
+                "text": "link34-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/3"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 3 (part 2) and review slide: Objects and Classes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review project -phase 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 9 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 9 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working with data in Python",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 4 (online course): Working with data in Python",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link38-1",
+            "links": [
+              {
+                "text": "link38-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/4"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 4 and review slide: Working with data in Python",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working with data in Python (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 4 (online course): Working with data in Python",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link39-1",
+            "links": [
+              {
+                "text": "link39-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/4"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 4 and review slide: Working with data in Python",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working with data in Python (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 4 (online course): Working with data in Python",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link40-1",
+            "links": [
+              {
+                "text": "link40-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/4"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 4 and review slide: Working with data in Python",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 10 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 10 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "APIs and Data collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 5 (online course): APIs and Data collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link42-1",
+            "links": [
+              {
+                "text": "link42-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/5"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 5 and review silde: APIs and Data collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "APIs and Data collection (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 5 (online course): APIs and Data collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link43-1",
+            "links": [
+              {
+                "text": "link43-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/5"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 5 and review silde: APIs and Data collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "APIs and Data collection (con't)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide and Module 5 (online course): APIs and Data collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link44-1",
+            "links": [
+              {
+                "text": "link44-1",
+                "href": "https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/5"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Complete module 5 and review silde: APIs and Data collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 11 Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 11 tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do the lab and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group project presentation & evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proposed project based on project guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do project, present and submit to system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "1",
+          "20.0%",
+          "1",
+          "At home",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Homework, mini-projects, and optionally the constructivist approach as proposed by the lecturer.",
+          "by instructor",
+          "All topics",
+          "Individual or team work, guided by instructor, submission by a given deadline",
+          "Instructor has responsible for guiding students in carrying out the taskView assignment on slot 20"
+        ],
+        [
+          "2",
+          "Labs",
+          "on-going",
+          "11",
+          "10.0%",
+          "1",
+          "",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Mini-project",
+          "by instructor",
+          "All topics",
+          "Individual or team work, guided by instructor, submission by a given deadline",
+          "Instructor has resposibility to guide and review the lab practice for students."
+        ],
+        [
+          "3",
+          "Progress test 1",
+          "on-going",
+          "1",
+          "5.0%",
+          ">0",
+          "30'",
+          "CLO1, CLO2,",
+          "Multiple choices",
+          "25",
+          "CLO1, CLO2, CLO5",
+          "in class, by instructor",
+          "N/A"
+        ],
+        [
+          "4",
+          "Progress test 2",
+          "on-going",
+          "1",
+          "5.0%",
+          ">0",
+          "30'",
+          "CLO3, CLO4,",
+          "Multiple choices",
+          "25",
+          "CLO3, CLO4, CLO5",
+          "in class, by instructor",
+          "N/A"
+        ],
+        [
+          "5",
+          "Project",
+          "on-going",
+          "1",
+          "30.0%",
+          "4",
+          "360'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Project",
+          "by Instructor",
+          "All topics; knowledge and skills",
+          "The examination is conducted by the exam board. A minimum of two teachers is required for grading the Final Project.Each team is allocated 30 minutes for the presentation of their project followed by a Q&A session.Evaluation of the final presentation is based on the final report, project demonstration, and Q&A interaction.The grade is determined by averaging the grades given by the two teachers.",
+          ""
+        ],
+        [
+          "6",
+          "Final exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Multiple choicesMarked by Computer",
+          "50",
+          "All topics",
+          "by exam board,using computer",
+          "The exam questions must be updated or different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "At home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Homework, mini-projects, and optionally the constructivist approach as proposed by the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All topics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by a given deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has responsible for guiding students in carrying out the taskView assignment on slot 20",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mini-project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All topics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by a given deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has resposibility to guide and review the lab practice for students.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2,",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4,",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "360'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by Instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All topics; knowledge and skills",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The examination is conducted by the exam board. A minimum of two teachers is required for grading the Final Project.Each team is allocated 30 minutes for the presentation of their project followed by a Q&A session.Evaluation of the final presentation is based on the final report, project demonstration, and Q&A interaction.The grade is determined by averaging the grades given by the two teachers.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All topics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board,using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated or different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

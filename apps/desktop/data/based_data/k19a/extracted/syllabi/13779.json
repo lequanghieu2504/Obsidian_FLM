@@ -1,0 +1,4945 @@
+{
+  "id": "13779",
+  "metadata": {
+    "Syllabus ID": "13779",
+    "Syllabus Name": "Game Design Fundamentals - From Concept to Creation_Thiết kế game cơ bản - Từ ý tưởng đến thực hiện",
+    "Course Name English": "Game Design Fundamentals - From Concept to Creation",
+    "Subject Code": "GDC301",
+    "Learning-Teaching Method": "Project based learning, In-class lecture, Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+    "Pre-Requisite": "PRO192",
+    "Description": "Embark on a journey into the world of game design with this comprehensive course. Before diving into coding, we'll explore the foundational elements that shape engaging video games. Discover the core concepts that drive player interaction, understand the mechanics and rules that define different game genres, and explore the art of storytelling in gaming.This course encourages you to think creatively and take risks as you develop your own unique game concepts. You'll learn to craft compelling narratives, design immersive environments, and create memorable characters. We'll also guide you through hands-on tutorials, enabling you to experiment with gameplay mechanics without the need for extensive coding.Key Learning Outcomes: - Understand and apply core game design frameworks (MDA, Core Loops, Design Pillars) to analyze existing games and design new mechanics - Design and document game systems including progression, economy, and balance using industry-standard GDD formats - Design player-centric levels that effectively guide, challenge, and teach players through intentional spatial layout and pacing - Design characters and combat systems with clear gameplay roles, readable animations, and balanced combat parameters - Craft compelling game narratives including premises, themes, and story structures that enhance player experienceIntegrate and direct game art assets to create cohesive visual experiences that support gameplay readabilityImplement game feel and physics-based interactions including responsive controls, animation states, and satisfying feedback - Execute complete game development cycle from concept through production to showcase using iterative design and playtesting methodologiesBy the end of this course, you'll have a solid foundation in game design, equipped to embark on your own game development journey.",
+    "StudentTasks": "- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose",
+    "Tools": "- Visual Studio 2019 or later (C# programming language)- Unity Hub and Unity 5 (version 2021.3 LTS or later)- ProBuilder (in Unity)- Git + GitHub (Student Pack)- Figma/Canva (web based)- Draw.io (web based)- Minimum hardware requirement: Windows 10, 64-bit versions, CPU: X64, RAM: 8GB- Students use Unity with their personal email for educational purposes only",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1318/QĐ-ĐHFPT dated 11/27/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "11/27/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13779"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13779"
+        ],
+        [
+          "Syllabus Name:",
+          "Game Design Fundamentals - From Concept to Creation_Thiết kế game cơ bản - Từ ý tưởng đến thực hiện"
+        ],
+        [
+          "Course Name English:",
+          "Game Design Fundamentals - From Concept to Creation"
+        ],
+        [
+          "Subject Code:",
+          "GDC301"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Project based learning, In-class lecture, Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "45h (60 sessions) contact hours + 1h final exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PRO192"
+        ],
+        [
+          "Description:",
+          "Embark on a journey into the world of game design with this comprehensive course. Before diving into coding, we'll explore the foundational elements that shape engaging video games. Discover the core concepts that drive player interaction, understand the mechanics and rules that define different game genres, and explore the art of storytelling in gaming.This course encourages you to think creatively and take risks as you develop your own unique game concepts. You'll learn to craft compelling narratives, design immersive environments, and create memorable characters. We'll also guide you through hands-on tutorials, enabling you to experiment with gameplay mechanics without the need for extensive coding.Key Learning Outcomes: - Understand and apply core game design frameworks (MDA, Core Loops, Design Pillars) to analyze existing games and design new mechanics - Design and document game systems including progression, economy, and balance using industry-standard GDD formats - Design player-centric levels that effectively guide, challenge, and teach players through intentional spatial layout and pacing - Design characters and combat systems with clear gameplay roles, readable animations, and balanced combat parameters - Craft compelling game narratives including premises, themes, and story structures that enhance player experienceIntegrate and direct game art assets to create cohesive visual experiences that support gameplay readabilityImplement game feel and physics-based interactions including responsive controls, animation states, and satisfying feedback - Execute complete game development cycle from concept through production to showcase using iterative design and playtesting methodologiesBy the end of this course, you'll have a solid foundation in game design, equipped to embark on your own game development journey."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose"
+        ],
+        [
+          "Tools:",
+          "- Visual Studio 2019 or later (C# programming language)- Unity Hub and Unity 5 (version 2021.3 LTS or later)- ProBuilder (in Unity)- Git + GitHub (Student Pack)- Figma/Canva (web based)- Draw.io (web based)- Minimum hardware requirement: Windows 10, 64-bit versions, CPU: X64, RAM: 8GB- Students use Unity with their personal email for educational purposes only"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1318/QĐ-ĐHFPT dated 11/27/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "11/27/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13779",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Game Design Fundamentals - From Concept to Creation_Thiết kế game cơ bản - Từ ý tưởng đến thực hiện",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Game Design Fundamentals - From Concept to Creation",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "GDC301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project based learning, In-class lecture, Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRO192",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Embark on a journey into the world of game design with this comprehensive course. Before diving into coding, we'll explore the foundational elements that shape engaging video games. Discover the core concepts that drive player interaction, understand the mechanics and rules that define different game genres, and explore the art of storytelling in gaming.This course encourages you to think creatively and take risks as you develop your own unique game concepts. You'll learn to craft compelling narratives, design immersive environments, and create memorable characters. We'll also guide you through hands-on tutorials, enabling you to experiment with gameplay mechanics without the need for extensive coding.Key Learning Outcomes: - Understand and apply core game design frameworks (MDA, Core Loops, Design Pillars) to analyze existing games and design new mechanics - Design and document game systems including progression, economy, and balance using industry-standard GDD formats - Design player-centric levels that effectively guide, challenge, and teach players through intentional spatial layout and pacing - Design characters and combat systems with clear gameplay roles, readable animations, and balanced combat parameters - Craft compelling game narratives including premises, themes, and story structures that enhance player experienceIntegrate and direct game art assets to create cohesive visual experiences that support gameplay readabilityImplement game feel and physics-based interactions including responsive controls, animation states, and satisfying feedback - Execute complete game development cycle from concept through production to showcase using iterative design and playtesting methodologiesBy the end of this course, you'll have a solid foundation in game design, equipped to embark on your own game development journey.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Visual Studio 2019 or later (C# programming language)- Unity Hub and Unity 5 (version 2021.3 LTS or later)- ProBuilder (in Unity)- Git + GitHub (Student Pack)- Figma/Canva (web based)- Draw.io (web based)- Minimum hardware requirement: Windows 10, 64-bit versions, CPU: X64, RAM: 8GB- Students use Unity with their personal email for educational purposes only",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1318/QĐ-ĐHFPT dated 11/27/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11/27/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Level Up! The Guide to great video game design",
+          "Scott Rogers",
+          "Wiley",
+          "2024",
+          "3rd",
+          "978-1394298761",
+          "True",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "Unity 6.2 User Manual",
+          "Unity",
+          "Unity",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://docs.unity3d.com/Manual/index.html"
+        ],
+        [
+          "3",
+          "Unity Learn Platform",
+          "Unity",
+          "Unity",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://learn.unity.com"
+        ],
+        [
+          "4",
+          "Game Design Workshop: A Playcentric Approach to Creating Innovative Games",
+          "Tracy Fullerton",
+          "A K Peters/CRC Press",
+          "2024",
+          "5th",
+          "978-1032607016",
+          "False",
+          "True",
+          "False",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Level Up! The Guide to great video game design",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Scott Rogers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Wiley",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2024",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3rd",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1394298761",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity 6.2 User Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Manual/index.html",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Learn Platform",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.unity.com",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Game Design Workshop: A Playcentric Approach to Creating Innovative Games",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tracy Fullerton",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "A K Peters/CRC Press",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2024",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5th",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1032607016",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "8 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand and apply core game design frameworks (MDA, Core Loops, Design Pillars) to analyze existing games and design new mechanics"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Design and document game systems including progression, economy, and balance using industry-standard GDD formats"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Design player-centric levels that effectively guide, challenge, and teach players through intentional spatial layout and pacing"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Design characters and combat systems with clear gameplay roles, readable animations, and balanced combat parameters"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Craft compelling game narratives including premises, themes, and story structures that enhance player experience"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Integrate and direct game art assets to create cohesive visual experiences that support gameplay readability"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Implement game feel and physics-based interactions including responsive controls, animation states, and satisfying feedback"
+        ],
+        [
+          "8",
+          "CLO8",
+          "Execute complete game development cycle from concept through production to showcase using iterative design and playtesting methodologies"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand and apply core game design frameworks (MDA, Core Loops, Design Pillars) to analyze existing games and design new mechanics",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design and document game systems including progression, economy, and balance using industry-standard GDD formats",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design player-centric levels that effectively guide, challenge, and teach players through intentional spatial layout and pacing",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design characters and combat systems with clear gameplay roles, readable animations, and balanced combat parameters",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Craft compelling game narratives including premises, themes, and story structures that enhance player experience",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integrate and direct game art assets to create cohesive visual experiences that support gameplay readability",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement game feel and physics-based interactions including responsive controls, animation states, and satisfying feedback",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Execute complete game development cycle from concept through production to showcase using iterative design and playtesting methodologies",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Overview & AssessmentModule 1: Game Design Fundamentals1.1 Aesthetics-Dynamics-Mechanics Framework",
+          "Offline",
+          "CLO1",
+          "IT",
+          "SlidesTextbook",
+          "GDC301",
+          "Skim required readingfollow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+          ""
+        ],
+        [
+          "2",
+          "1.2 ADM Analysis Workshop",
+          "Offline",
+          "CLO1",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Produce a one-page MDA analysis of a reference game.",
+          ""
+        ],
+        [
+          "3",
+          "1.3 Core Loops & Design Pillars",
+          "Offline",
+          "CLO1",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Draft a 5–7 node core loop and define 2 KPIs (e.g., time-to-fun, completion%).",
+          ""
+        ],
+        [
+          "4",
+          "1.4 Project Scoping & Risk Analysis",
+          "Offline",
+          "CLO1, CLO8",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+          ""
+        ],
+        [
+          "5",
+          "1.5 Ideation Techniques WorkshopASSIGN PROJECT & ASSIGNMENT 1 INTRODUCTION",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Slides",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log.",
+          ""
+        ],
+        [
+          "6",
+          "Module 2: Prototyping & Early Documentation 2.1 Paper Prototyping Fundamentals",
+          "Offline",
+          "CLO1, CLO8",
+          "T",
+          "Slides",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Build a paper prototype; run 2 cross-tests; log time-to-fun and issues.",
+          ""
+        ],
+        [
+          "7",
+          "2.2 Paper Prototyping Lab",
+          "Offline",
+          "CLO1, CLO8",
+          "TU",
+          "SlidesTextbook",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Build a paper prototype; run 2 cross-tests; log time-to-fun and issues.",
+          ""
+        ],
+        [
+          "8",
+          "2.3 Unity Graybox with ProBuilder",
+          "Offline",
+          "CLO1, CLO8",
+          "TU",
+          "SlidesTextbook Paper prototyping quick guide",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Create the first room with spawn/camera and traversal; push to repo. Implement HUD elements and basic audio mix; quick usability check.",
+          ""
+        ],
+        [
+          "9",
+          "2.4 GDD Structure Introduction",
+          "Offline",
+          "CLO2",
+          "T",
+          "SlidesUnity Manual",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+          ""
+        ],
+        [
+          "10",
+          "2.5 Risk-First Prototyping",
+          "Offline",
+          "CLO1, CLO8",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+          ""
+        ],
+        [
+          "11",
+          "2.6 GDD Draft Workshop",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "Slides",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+          ""
+        ],
+        [
+          "12",
+          "Module 3: Systems Foundation3.1 Game Systems OverviewASSIGNMENT 2 INTRODUCTIONSUBMIT ASSIGNMENT 1",
+          "Offline",
+          "CLO2",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Sketch the progression/economy loop and list incentives/sinks.",
+          ""
+        ],
+        [
+          "13",
+          "3.2 Systems Design Workshop",
+          "Offline",
+          "CLO2",
+          "TU",
+          "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Sketch the progression/economy loop and list incentives/sinks.",
+          ""
+        ],
+        [
+          "14",
+          "Module 4: Concept Pitch Preparation4.1 Pitch Structure & Storytelling",
+          "Offline",
+          "CLO1, CLO2",
+          "T",
+          "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+          ""
+        ],
+        [
+          "15",
+          "4.2 Pitch Development Workshop4.3 Demo Rehearsal & Feedback",
+          "Offline",
+          "CLO1, CLO8",
+          "TU",
+          "SlidesTextbook",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+          ""
+        ],
+        [
+          "16",
+          "CONCEPT PITCH PRESENTATIONS",
+          "Offline",
+          "CLO1, CLO2, CLO8",
+          "U",
+          "Slides",
+          "",
+          "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+          ""
+        ],
+        [
+          "17",
+          "Module 5: GDD Complete & Narrative 5.1 Premise, Theme & Player Experience5.2 Story Beat Sheet & Pacing",
+          "Offline",
+          "CLO2, CLO5",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+          ""
+        ],
+        [
+          "18",
+          "5.3 World Building Lab",
+          "Offline",
+          "CLO2, CLO5",
+          "TU",
+          "Slides",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement HUD elements and basic audio mix; quick usability check.",
+          ""
+        ],
+        [
+          "19",
+          "5.4 GDD Vision, Pillars & Core Loop",
+          "Offline",
+          "CLO2",
+          "T",
+          "SlidesUnity Manual",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Draft a 5–7 node core loop and define 2 KPIs (e.g., time-to-fun, completion%). Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+          ""
+        ],
+        [
+          "20",
+          "5.5 GDD Narrative & Technical Sections",
+          "Offline",
+          "CLO2, CLO5",
+          "TU",
+          "Slides",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+          ""
+        ],
+        [
+          "21",
+          "5.6 GDD v1 Peer Review",
+          "Offline",
+          "CLO2, CLO5",
+          "U",
+          "SlidesTextbook",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Fill One-sheet/Ten-pager sections; align with the pitch deck. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem.",
+          ""
+        ],
+        [
+          "22",
+          "Module 6: Level Design 6.1 Player Guidance Principles",
+          "Offline",
+          "CLO3",
+          "T",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Implement HUD elements and basic audio mix; quick usability check.",
+          ""
+        ],
+        [
+          "23",
+          "6.2 Gating & Challenge Pacing",
+          "Offline",
+          "CLO3",
+          "T",
+          "SlidesTextbookUnity Manual",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+          ""
+        ],
+        [
+          "24",
+          "6.3 Level Blockout Theory",
+          "Offline",
+          "CLO3",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+          ""
+        ],
+        [
+          "25",
+          "6.4 Level Blockout Lab - Part 16.5 Level Blockout Lab - Part 2",
+          "Offline",
+          "CLO3",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+          ""
+        ],
+        [
+          "26",
+          "6.6 Goals, Checkpoints & Camera",
+          "Offline",
+          "CLO3",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+          ""
+        ],
+        [
+          "27",
+          "6.7 Onboarding & Playtest Prep",
+          "Offline",
+          "CLO3",
+          "TU",
+          "SlidesTextbook",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "28",
+          "Progress Test 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO5, CLO8",
+          "U",
+          "Progress Test 1",
+          "",
+          "Progress Test 1",
+          ""
+        ],
+        [
+          "29",
+          "Module 7: System Balancing7.1 Balancing: Difficulty CurvesSUBMIT ASSIGNMENT 2ASSIGNMENT 3 INTRODUCTION",
+          "Offline",
+          "CLO2, CLO8",
+          "T",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+          ""
+        ],
+        [
+          "30",
+          "7.2 Spreadsheet Balancing",
+          "Offline",
+          "CLO2, CLO8",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+          ""
+        ],
+        [
+          "31",
+          "7.3 Parameterization & Tuning",
+          "Offline",
+          "CLO2, CLO8",
+          "T",
+          "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+          ""
+        ],
+        [
+          "32",
+          "7.4 Balance Workshop",
+          "Offline",
+          "CLO2, CLO8",
+          "U",
+          "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+          ""
+        ],
+        [
+          "33",
+          "7.5 Progression & Economy Design",
+          "Offline",
+          "CLO2, CLO8",
+          "T",
+          "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Sketch the progression/economy loop and list incentives/sinks.",
+          ""
+        ],
+        [
+          "34",
+          "Module 8: Vertical Slice Planning8.1 Vertical Slice Scope & Criteria",
+          "Offline",
+          "CLO2, CLO8",
+          "T",
+          "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Define acceptance criteria and a cut-list aligned to the sprint.",
+          ""
+        ],
+        [
+          "35",
+          "8.2 Vertical Slice Integration Sprint",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Slides",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Define acceptance criteria and a cut-list aligned to the sprint.",
+          ""
+        ],
+        [
+          "36",
+          "Module 9: Character & Combat Design9.1 Hero Design: Silhouette & Role",
+          "Offline",
+          "CLO4",
+          "T",
+          "Slides",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Define roles and telegraphs; capture GIFs of readable attacks/counters.",
+          ""
+        ],
+        [
+          "37",
+          "9.2 Enemy Archetypes & Telegraphing9.3 Combat Feel: Anticipation-Action-Recovery",
+          "Offline",
+          "CLO4, CLO7",
+          "T",
+          "SlidesTextbook",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Define roles and telegraphs; capture GIFs of readable attacks/counters.",
+          ""
+        ],
+        [
+          "38",
+          "9.4 Animator: Locomotion States",
+          "Offline",
+          "CLO4, CLO7",
+          "TU",
+          "SlidesTextbook",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Build state machines; set transitions; verify exit times and blends.",
+          ""
+        ],
+        [
+          "39",
+          "9.5 Animator: Combat States",
+          "Offline",
+          "CLO4, CLO7",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Define roles and telegraphs; capture GIFs of readable attacks/counters. Build state machines; set transitions; verify exit times and blends.",
+          ""
+        ],
+        [
+          "40",
+          "9.6 Hitboxes, Feedback & PlaytestSubmit assignment 3",
+          "Offline",
+          "CLO4, CLO7",
+          "TU",
+          "SlidesTextbookUnity Manual",
+          "",
+          "Complete lab checkpoints, then run a short peer playtest; capture GIFs/logs and record issues. Implement hit/hurtboxes and i-frames; run a 5-player playtest and collect TTK metrics. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "41",
+          "Module 10: Art Integration10.1 Art Direction for Designers",
+          "Offline",
+          "CLO6",
+          "T",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Curate coherent assets; import & set materials/LODs; maintain readability.",
+          ""
+        ],
+        [
+          "42",
+          "10.2 Unity Import Pipeline",
+          "Offline",
+          "CLO6",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Curate coherent assets; import & set materials/LODs; maintain readability.",
+          ""
+        ],
+        [
+          "43",
+          "10.3 Art Integration Lab",
+          "Offline",
+          "CLO6",
+          "U",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Curate coherent assets; import & set materials/LODs; maintain readability.",
+          ""
+        ],
+        [
+          "44",
+          "MIDTERM DEMO: Vertical Slice Review",
+          "Offline",
+          "All",
+          "U",
+          "SlidesTextbookUnity Manual",
+          "",
+          "Show the current build; receive targeted feedback; update the issue tracker with prioritized fixes. Define acceptance criteria and a cut-list aligned to the sprint. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "45",
+          "Module 11: Physics, Feel & UI11.1 Movement Controllers & Physics",
+          "Offline",
+          "CLO7",
+          "T",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Implement a controller; test collisions and slopes; document trade-offs.",
+          ""
+        ],
+        [
+          "46",
+          "11.2 Physics & Custom Gravity Lab",
+          "Offline",
+          "CLO7",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement a controller; test collisions and slopes; document trade-offs.",
+          ""
+        ],
+        [
+          "47",
+          "11.3 Input Buffering & Juice",
+          "Offline",
+          "CLO7",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Add buffering (50–150ms), screen shake, particles, and SFX timing; record before/after clips. Implement HUD elements and basic audio mix; quick usability check.",
+          ""
+        ],
+        [
+          "48",
+          "11.4 HUD & UI Design Lab",
+          "Offline",
+          "CLO3, CLO6",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement HUD elements and basic audio mix; quick usability check.",
+          ""
+        ],
+        [
+          "49",
+          "11.5 Audio Integration Lab",
+          "Offline",
+          "CLO3",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement HUD elements and basic audio mix; quick usability check.",
+          ""
+        ],
+        [
+          "50",
+          "11.6 First Playable Build Workshop",
+          "Offline",
+          "CLO8",
+          "TU",
+          "SlidesUnity Manual",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Implement HUD elements and basic audio mix; quick usability check.",
+          ""
+        ],
+        [
+          "51",
+          "Module 12: Playtesting Cycle12.1 Onboarding & Accessibility",
+          "Offline",
+          "CLO3, CLO8",
+          "T",
+          "SlidesUnity Manual",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "52",
+          "12.2 Playtest Planning Workshop",
+          "Offline",
+          "CLO3, CLO8",
+          "TU",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "53",
+          "12.3 Cross-Team Playtest Session",
+          "Offline",
+          "CLO3, CLO8",
+          "TU",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "54",
+          "12.4 Data Analysis & Beta Readiness",
+          "Offline",
+          "CLO3, CLO8",
+          "TU",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "55",
+          "Progress test 2",
+          "Offline",
+          "CLO2, CLO3, CLO4, CLO6, CLO7, CLO8",
+          "U",
+          "Progress test 2",
+          "",
+          "Progress test 2",
+          ""
+        ],
+        [
+          "56",
+          "Final Polish & Review",
+          "Offline",
+          "CLO8",
+          "TU",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Show the current build; receive targeted feedback; update the issue tracker with prioritized fixes. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "57",
+          "FINAL SHOWCASE & POSTMORTEM",
+          "Offline",
+          "All",
+          "U",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "58",
+          "FINAL SHOWCASE & POSTMORTEM",
+          "Offline",
+          "All",
+          "U",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "59",
+          "FINAL SHOWCASE & POSTMORTEM",
+          "Offline",
+          "All",
+          "U",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ],
+        [
+          "60",
+          "FINAL SHOWCASE & POSTMORTEM",
+          "Offline",
+          "All",
+          "U",
+          "SlidesTextbookUnity Analytics",
+          "",
+          "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Overview & AssessmentModule 1: Game Design Fundamentals1.1 Aesthetics-Dynamics-Mechanics Framework",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "GDC301",
+            "links": [
+              {
+                "text": "GDC301",
+                "href": "https://flm.fpt.edu.vn/download/13779/S/1_GDC301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Skim required readingfollow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.2 ADM Analysis Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Produce a one-page MDA analysis of a reference game.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.3 Core Loops & Design Pillars",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Draft a 5–7 node core loop and define 2 KPIs (e.g., time-to-fun, completion%).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.4 Project Scoping & Risk Analysis",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.5 Ideation Techniques WorkshopASSIGN PROJECT & ASSIGNMENT 1 INTRODUCTION",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 2: Prototyping & Early Documentation 2.1 Paper Prototyping Fundamentals",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Build a paper prototype; run 2 cross-tests; log time-to-fun and issues.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.2 Paper Prototyping Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Build a paper prototype; run 2 cross-tests; log time-to-fun and issues.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.3 Unity Graybox with ProBuilder",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook Paper prototyping quick guide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Create the first room with spawn/camera and traversal; push to repo. Implement HUD elements and basic audio mix; quick usability check.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.4 GDD Structure Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.5 Risk-First Prototyping",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.6 GDD Draft Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 3: Systems Foundation3.1 Game Systems OverviewASSIGNMENT 2 INTRODUCTIONSUBMIT ASSIGNMENT 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Sketch the progression/economy loop and list incentives/sinks.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.2 Systems Design Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Sketch the progression/economy loop and list incentives/sinks.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 4: Concept Pitch Preparation4.1 Pitch Structure & Storytelling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.2 Pitch Development Workshop4.3 Demo Rehearsal & Feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CONCEPT PITCH PRESENTATIONS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 5: GDD Complete & Narrative 5.1 Premise, Theme & Player Experience5.2 Story Beat Sheet & Pacing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.3 World Building Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement HUD elements and basic audio mix; quick usability check.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.4 GDD Vision, Pillars & Core Loop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Draft a 5–7 node core loop and define 2 KPIs (e.g., time-to-fun, completion%). Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.5 GDD Narrative & Technical Sections",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Fill One-sheet/Ten-pager sections; align with the pitch deck.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.6 GDD v1 Peer Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Fill One-sheet/Ten-pager sections; align with the pitch deck. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 6: Level Design 6.1 Player Guidance Principles",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Implement HUD elements and basic audio mix; quick usability check.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.2 Gating & Challenge Pacing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.3 Level Blockout Theory",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.4 Level Blockout Lab - Part 16.5 Level Blockout Lab - Part 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.6 Goals, Checkpoints & Camera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.7 Onboarding & Playtest Prep",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO5, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 7: System Balancing7.1 Balancing: Difficulty CurvesSUBMIT ASSIGNMENT 2ASSIGNMENT 3 INTRODUCTION",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.2 Spreadsheet Balancing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.3 Parameterization & Tuning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.4 Balance Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Create/adjust a balancing spreadsheet; plan one A/B variable.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.5 Progression & Economy Design",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Sketch the progression/economy loop and list incentives/sinks.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 8: Vertical Slice Planning8.1 Vertical Slice Scope & Criteria",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook Sample spreadsheets (DPS/TTK)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Define acceptance criteria and a cut-list aligned to the sprint.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8.2 Vertical Slice Integration Sprint",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Define acceptance criteria and a cut-list aligned to the sprint.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 9: Character & Combat Design9.1 Hero Design: Silhouette & Role",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Define roles and telegraphs; capture GIFs of readable attacks/counters.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.2 Enemy Archetypes & Telegraphing9.3 Combat Feel: Anticipation-Action-Recovery",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Define roles and telegraphs; capture GIFs of readable attacks/counters.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.4 Animator: Locomotion States",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Build state machines; set transitions; verify exit times and blends.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.5 Animator: Combat States",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Define roles and telegraphs; capture GIFs of readable attacks/counters. Build state machines; set transitions; verify exit times and blends.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.6 Hitboxes, Feedback & PlaytestSubmit assignment 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Complete lab checkpoints, then run a short peer playtest; capture GIFs/logs and record issues. Implement hit/hurtboxes and i-frames; run a 5-player playtest and collect TTK metrics. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 10: Art Integration10.1 Art Direction for Designers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Curate coherent assets; import & set materials/LODs; maintain readability.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.2 Unity Import Pipeline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Curate coherent assets; import & set materials/LODs; maintain readability.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.3 Art Integration Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Curate coherent assets; import & set materials/LODs; maintain readability.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MIDTERM DEMO: Vertical Slice Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show the current build; receive targeted feedback; update the issue tracker with prioritized fixes. Define acceptance criteria and a cut-list aligned to the sprint. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 11: Physics, Feel & UI11.1 Movement Controllers & Physics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Implement a controller; test collisions and slopes; document trade-offs.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.2 Physics & Custom Gravity Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement a controller; test collisions and slopes; document trade-offs.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.3 Input Buffering & Juice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Add buffering (50–150ms), screen shake, particles, and SFX timing; record before/after clips. Implement HUD elements and basic audio mix; quick usability check.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.4 HUD & UI Design Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement HUD elements and basic audio mix; quick usability check.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.5 Audio Integration Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow the lecture (and/or demo); complete lab checkpoints; commit to Git with a short README and a GIF/video capture. Implement HUD elements and basic audio mix; quick usability check.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.6 First Playable Build Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Implement HUD elements and basic audio mix; quick usability check.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Module 12: Playtesting Cycle12.1 Onboarding & Accessibility",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesUnity Manual",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Apply Three Cs; place landmarks and gates; record a 30–60s walkthrough. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12.2 Playtest Planning Workshop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12.3 Cross-Team Playtest Session",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate in teams; run peer reviews or playtests; document decisions and next steps in the team log. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12.4 Data Analysis & Beta Readiness",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Skim required reading; follow the lecture; complete a 10–15 min micro-exercise mapping the concept to your project. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4, CLO6, CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Polish & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show the current build; receive targeted feedback; update the issue tracker with prioritized fixes. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FINAL SHOWCASE & POSTMORTEM",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FINAL SHOWCASE & POSTMORTEM",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FINAL SHOWCASE & POSTMORTEM",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FINAL SHOWCASE & POSTMORTEM",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SlidesTextbookUnity Analytics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present within time limit; answer Q&A; submit deck/build and an iteration plan based on feedback. Prepare protocol/forms; run or participate in tests; analyze data; write postmortem (for S60).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "7 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment 1 (Milestone 1 of Project)",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "1-3 weeks",
+          "",
+          "Project-based process products",
+          "",
+          "Cover content 1,2",
+          "- Guided by instructor- Application- Work in group",
+          "Instructor has responsibility to review for students after graded."
+        ],
+        [
+          "2",
+          "Assignment 2 (Milestone 2 of Project)",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "1-3 weeks",
+          "",
+          "Project-based process products",
+          "",
+          "Cover content 3, 4, 5",
+          "- Guided by instructor- Application- Work in group",
+          "Instructor has responsibility to review for students after graded."
+        ],
+        [
+          "3",
+          "Assignment 3 (Milestone 3 of Project)",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "1-3 weeks",
+          "",
+          "Project-based process products",
+          "",
+          "Cover content 6, 7, 8, 9",
+          "- Guided by instructor- Application- Work in group",
+          "Instructor has responsibility to review for students after graded."
+        ],
+        [
+          "4",
+          "Progress test 1",
+          "on-going",
+          "1",
+          "5.0%",
+          ">0",
+          "30'",
+          "",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "25",
+          "Cover content 1,2,3,4, 5, 6",
+          "in class, by instructor",
+          "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "5",
+          "Progress test 2",
+          "on-going",
+          "1",
+          "5.0%",
+          ">0",
+          "30'",
+          "",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "25",
+          "Cover content 7, 8, 9, 10, 11, 12",
+          "in class, by instructor",
+          "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "6",
+          "Project",
+          "on-going",
+          "1",
+          "30.0%",
+          ">0",
+          "8-10 weeks",
+          "",
+          "Project",
+          "",
+          "All modules, chapters",
+          "- Guided by instructor- Application- Work in group",
+          ""
+        ],
+        [
+          "7",
+          "Final exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "",
+          "Multiple choicesMarked by Computer",
+          "50",
+          "concepts, algorithms; all studied chapters",
+          "by exam board,using computer",
+          "The exam questions must be updated or different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1 (Milestone 1 of Project)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1-3 weeks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project-based process products",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cover content 1,2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Guided by instructor- Application- Work in group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has responsibility to review for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 2 (Milestone 2 of Project)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1-3 weeks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project-based process products",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cover content 3, 4, 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Guided by instructor- Application- Work in group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has responsibility to review for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 3 (Milestone 3 of Project)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1-3 weeks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project-based process products",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cover content 6, 7, 8, 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Guided by instructor- Application- Work in group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has responsibility to review for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cover content 1,2,3,4, 5, 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cover content 7, 8, 9, 10, 11, 12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8-10 weeks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All modules, chapters",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Guided by instructor- Application- Work in group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "concepts, algorithms; all studied chapters",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board,using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated or different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

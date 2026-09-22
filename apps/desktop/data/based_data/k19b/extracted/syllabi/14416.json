@@ -1,0 +1,5151 @@
+{
+  "id": "14416",
+  "metadata": {
+    "Syllabus ID": "14416",
+    "Syllabus Name": "Big Data Technologies & Tools_Công cụ và kỹ thuật trên dữ liệu lớn.",
+    "Course Name English": "Big Data Technologies & Tools",
+    "Subject Code": "BDT301",
+    "Learning-Teaching Method": "Inquiry-Based Learning, In-class lecture, Active Learning",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours (60 sessions x 45') + 1h final exam + 104h self-study",
+    "Pre-Requisite": "MDS301",
+    "Description": "This course introduces students to the principles and trade-offs in designing data-intensive systems, using Designing Data-Intensive Applications (2nd Edition) as the primary textbook.Students will study:1. Trade-offs in data systems architecture: OLTP vs OLAP, Cloud vs Self-Hosting, Distributed vs Single-Node systems.2. Nonfunctional requirements: Scalability, Reliability, and Maintainability.3. Data models: Relational, Document, and Graph-Like models.4. Storage and retrieval: LSM-tree, B-Trees, columnar storage, Cloud Data Warehouses.5. Batch processing: MapReduce and Apache Spark on large-scale public datasets.6. Stream processing: Change Data Capture (CDC), Kafka/Redpanda, log-based messaging.7. Data encoding: JSON, Protocol Buffers, Avro, schema evolution.8. Distributed systems: Replication, Sharding, Transactions, and Isolation.9. End-to-end data pipeline design from OLTP ingestion to OLAP analytical output.",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose- Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "- Docker Desktop (https://www.docker.com/products/docker-desktop/)- Python 3.10+ (https://www.python.org/)- VS Code (https://code.visualstudio.com/)- Git (https://git-scm.com/)- DBeaver (https://dbeaver.io/) — for PostgreSQL, ClickHouse- InternetTools provided via Docker:- PostgreSQL, Redis, MongoDB- Apache Spark (bitnami/spark)- Redpanda (Kafka-compatible)- MinIO (S3-compatible object storage)- ClickHouse (OLAP analytics)Minimum hardware requirement:- RAM ≥ 8GB (16GB recommended for Lab 05 full-stack CDC pipeline)- Free disk space ≥ 20GB- CPU: 4 cores or more recommended",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "968/QĐ-ĐHFPT dated 08/07/2026",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "8/7/2026"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "14416"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "14416"
+        ],
+        [
+          "Syllabus Name:",
+          "Big Data Technologies & Tools_Công cụ và kỹ thuật trên dữ liệu lớn."
+        ],
+        [
+          "Course Name English:",
+          "Big Data Technologies & Tools"
+        ],
+        [
+          "Subject Code:",
+          "BDT301"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Inquiry-Based Learning, In-class lecture, Active Learning"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours (60 sessions x 45') + 1h final exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "MDS301"
+        ],
+        [
+          "Description:",
+          "This course introduces students to the principles and trade-offs in designing data-intensive systems, using Designing Data-Intensive Applications (2nd Edition) as the primary textbook.Students will study:1. Trade-offs in data systems architecture: OLTP vs OLAP, Cloud vs Self-Hosting, Distributed vs Single-Node systems.2. Nonfunctional requirements: Scalability, Reliability, and Maintainability.3. Data models: Relational, Document, and Graph-Like models.4. Storage and retrieval: LSM-tree, B-Trees, columnar storage, Cloud Data Warehouses.5. Batch processing: MapReduce and Apache Spark on large-scale public datasets.6. Stream processing: Change Data Capture (CDC), Kafka/Redpanda, log-based messaging.7. Data encoding: JSON, Protocol Buffers, Avro, schema evolution.8. Distributed systems: Replication, Sharding, Transactions, and Isolation.9. End-to-end data pipeline design from OLTP ingestion to OLAP analytical output."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose- Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Docker Desktop (https://www.docker.com/products/docker-desktop/)- Python 3.10+ (https://www.python.org/)- VS Code (https://code.visualstudio.com/)- Git (https://git-scm.com/)- DBeaver (https://dbeaver.io/) — for PostgreSQL, ClickHouse- InternetTools provided via Docker:- PostgreSQL, Redis, MongoDB- Apache Spark (bitnami/spark)- Redpanda (Kafka-compatible)- MinIO (S3-compatible object storage)- ClickHouse (OLAP analytics)Minimum hardware requirement:- RAM ≥ 8GB (16GB recommended for Lab 05 full-stack CDC pipeline)- Free disk space ≥ 20GB- CPU: 4 cores or more recommended"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "968/QĐ-ĐHFPT dated 08/07/2026"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "8/7/2026"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14416",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Big Data Technologies & Tools_Công cụ và kỹ thuật trên dữ liệu lớn.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Big Data Technologies & Tools",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "BDT301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Inquiry-Based Learning, In-class lecture, Active Learning",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours (60 sessions x 45') + 1h final exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MDS301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This course introduces students to the principles and trade-offs in designing data-intensive systems, using Designing Data-Intensive Applications (2nd Edition) as the primary textbook.Students will study:1. Trade-offs in data systems architecture: OLTP vs OLAP, Cloud vs Self-Hosting, Distributed vs Single-Node systems.2. Nonfunctional requirements: Scalability, Reliability, and Maintainability.3. Data models: Relational, Document, and Graph-Like models.4. Storage and retrieval: LSM-tree, B-Trees, columnar storage, Cloud Data Warehouses.5. Batch processing: MapReduce and Apache Spark on large-scale public datasets.6. Stream processing: Change Data Capture (CDC), Kafka/Redpanda, log-based messaging.7. Data encoding: JSON, Protocol Buffers, Avro, schema evolution.8. Distributed systems: Replication, Sharding, Transactions, and Isolation.9. End-to-end data pipeline design from OLTP ingestion to OLAP analytical output.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose- Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Docker Desktop (https://www.docker.com/products/docker-desktop/)- Python 3.10+ (https://www.python.org/)- VS Code (https://code.visualstudio.com/)- Git (https://git-scm.com/)- DBeaver (https://dbeaver.io/) — for PostgreSQL, ClickHouse- InternetTools provided via Docker:- PostgreSQL, Redis, MongoDB- Apache Spark (bitnami/spark)- Redpanda (Kafka-compatible)- MinIO (S3-compatible object storage)- ClickHouse (OLAP analytics)Minimum hardware requirement:- RAM ≥ 8GB (16GB recommended for Lab 05 full-stack CDC pipeline)- Free disk space ≥ 20GB- CPU: 4 cores or more recommended",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "968/QĐ-ĐHFPT dated 08/07/2026",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8/7/2026",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Designing Data-Intensive Applications (2nd Edition)",
+          "Martin Kleppmann, Chris Riccomini",
+          "O'Reilly Media",
+          "2026",
+          "2nd",
+          "9781098119065",
+          "True",
+          "True",
+          "False",
+          "Distributed systems, storage, replication, partitioning, batch processing, stream processing"
+        ],
+        [
+          "2",
+          "Data-Intensive Systems: Principles and Fundamentals Using Hadoop and Spark",
+          "Tomasz Wiktorski",
+          "Springer",
+          "2019",
+          "1st",
+          "9783030046026",
+          "False",
+          "True",
+          "False",
+          "Big Data concepts, Hadoop, HDFS, MapReduce, Spark, Spark SQL"
+        ],
+        [
+          "3",
+          "Big Data Analytics with Spark",
+          "Mohammed Guller",
+          "Apress / Springer Nature",
+          "2015",
+          "1st",
+          "9781484209653",
+          "False",
+          "True",
+          "False",
+          "Apache Spark, RDD, Spark SQL, Spark Streaming, MLlib, GraphX"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Designing Data-Intensive Applications (2nd Edition)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Martin Kleppmann, Chris Riccomini",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "O'Reilly Media",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2026",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2nd",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781098119065",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Distributed systems, storage, replication, partitioning, batch processing, stream processing",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data-Intensive Systems: Principles and Fundamentals Using Hadoop and Spark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tomasz Wiktorski",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Springer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2019",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9783030046026",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Big Data concepts, Hadoop, HDFS, MapReduce, Spark, Spark SQL",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Big Data Analytics with Spark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mohammed Guller",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apress / Springer Nature",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2015",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781484209653",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apache Spark, RDD, Spark SQL, Spark Streaming, MLlib, GraphX",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Analyze trade-offs and nonfunctional requirements of data systems, including OLTP versus OLAP, scalability, reliability, and maintainability."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Compare data models, storage engines, and encoding formats to select appropriate solutions for given workloads."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Explain replication, sharding, and transaction isolation in distributed data systems."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Apply batch processing techniques to analyze large datasets using Apache Spark and Spark SQL."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Build streaming data pipelines and design end-to-end systems from OLTP to OLAP."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analyze trade-offs and nonfunctional requirements of data systems, including OLTP versus OLAP, scalability, reliability, and maintainability.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compare data models, storage engines, and encoding formats to select appropriate solutions for given workloads.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain replication, sharding, and transaction isolation in distributed data systems.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply batch processing techniques to analyze large datasets using Apache Spark and Spark SQL.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build streaming data pipelines and design end-to-end systems from OLTP to OLAP.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Topic 1 — Trade-Offs in Data Systems Architecture (Part 1/3)1.1 Operational vs Analytical Systems1.2 OLTP vs OLAP1.3 Data Warehousing and Systems of Record",
+          "Offline",
+          "CLO1",
+          "IT",
+          "DDIA2 Ch.1 (Trade-Offs in Data Systems Architecture — Operational vs Analytical, p.27–35)+ Install Docker Desktop, download starter pack",
+          "BDT301",
+          "Before class: skim materials & identify dataset/business questions.In class: complete exercises, discuss with peers. After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "2",
+          "Topic 1 — Trade-Offs in Data Systems Architecture (Part 2/3)1.4 Cloud Versus Self-Hosting1.5 Cloud Native System Architecture1.6 Operations in the Cloud Era",
+          "Offline",
+          "CLO1",
+          "IT",
+          "DDIA2 Ch.1 (Cloud Versus Self-Hosting, p.36–42)+ Cloud architecture diagram",
+          "link2-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "3",
+          "Topic 1 — Trade-Offs in Data Systems Architecture (Part 3/3)1.7 Distributed vs Single-Node Systems1.8 Microservices and Serverless1.9 Cloud Computing vs Supercomputing",
+          "Offline",
+          "CLO1",
+          "IT",
+          "DDIA2 Ch.1 (Distributed Versus Single-Node, p.43–48)+ checkpoint worksheet",
+          "link3-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "4",
+          "Topic 2 — Nonfunctional Requirements (Part 1/3)2.1 Scalability: Load Parameters, Throughput2.2 Latency and Response Time, Percentiles2.3 Shared-Memory, Shared-Disk, Shared-Nothing",
+          "Offline",
+          "CLO1",
+          "IT",
+          "DDIA2 Ch.2 (Defining Nonfunctional Requirements — Scalability, p.57–76)+ Social Network timeline case study",
+          "link4-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "5",
+          "Topic 2 — Nonfunctional Requirements (Part 2/3)2.4 Reliability and Fault Tolerance2.5 Hardware and Software Faults2.6 Maintainability: Operability, Simplicity, Evolvability",
+          "Offline",
+          "CLO1",
+          "IT",
+          "DDIA2 Ch.2 (Reliability, Maintainability, p.67–80)+ fault tolerance worksheet",
+          "link5-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "6",
+          "Topic 2 — Nonfunctional Requirements (Part 3/3)2.7 Principles for Scalability2.8 Review: Ch.1+2Preparation for Lab 01",
+          "Offline",
+          "CLO1",
+          "IT",
+          "DDIA2 Ch.1 (review)+ DDIA2 Ch.2 (review)+ Docker compose (PostgreSQL + pgbench), checkpoint template",
+          "link6-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "7",
+          "Lab 01 — OLTP vs OLAP Setup (Part 1/3)Lab 01 Source: ddia2_6_labs Lab 1Objective: Distinguish OLTP and OLAP and explain why analytics should not run directly on OLTP.",
+          "Offline",
+          "CLO1",
+          "IT",
+          "Lab 01 guide (DDIA2 Lab 1)+ Docker compose (PostgreSQL + pgbench)+ OLTP load script",
+          "link7-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "8",
+          "Lab 01 — OLTP vs OLAP Setup (Part 2/3)Setup OLAP queries, compare OLTP vs OLAP performanceMeasure latency, throughput, EXPLAIN ANALYZE",
+          "Offline",
+          "CLO1",
+          "IT",
+          "Lab 01 guide+ pgbench benchmark worksheet+ EXPLAIN ANALYZE exercise",
+          "link8-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "9",
+          "Lab 01 — OLTP vs OLAP Setup (Part 3/3)Conclusion: when to separate OLAPSubmit the Lab 01 submission template",
+          "Offline",
+          "CLO1",
+          "IT",
+          "Lab 01 guide+ Lab 01 submission template",
+          "link9-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "10",
+          "Topic 3 — Data Models and Query Languages (Part 1/3)3.1 Relational vs Document Models3.2 Object-Relational Mismatch3.3 Normalization, Denormalization, Joins",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.3 (Data Models — Relational vs Document, p.89–107)+ MongoDB Manual (intro)",
+          "link10-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "11",
+          "Topic 3 — Data Models and Query Languages (Part 2/3)3.4 Graph-Like Data Models3.5 Property Graphs, Cypher Query Language3.6 Event Sourcing and CQRS",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.3 (Graph-Like Data Models, p.108–131)+ Cypher query exercise",
+          "link11-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "12",
+          "Topic 3 — Data Models (Part 3/3)3.7 DataFrames, Matrices, and ArraysCheckpoint before Lab 02",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.3 (DataFrames, p.129–131)+ checkpoint template",
+          "link12-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "13",
+          "Lab 02 — Relational vs Document (Part 1/3)Lab 02Objective: Decide when to use relational and document models. Normalization vs denormalization.",
+          "Offline",
+          "CLO2",
+          "IT",
+          "Lab 02 guide (DDIA2 Lab 2)+ Docker compose (PostgreSQL + MongoDB)+ LMS seed dataset",
+          "link13-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "14",
+          "Lab 02 — Relational vs Document (Part 2/3)Schema design: normalized PostgreSQL vs denormalized MongoDBMongoDB aggregation pipeline vs SQL JOIN",
+          "Offline",
+          "CLO2",
+          "IT",
+          "Lab 02 guide+ MongoDB aggregation exercise+ LMS dataset",
+          "link14-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "15",
+          "Lab 02 — Relational vs Document (Part 3/3)Query comparison: JOIN (PostgreSQL) vs embedded document (MongoDB)Submit the Lab 02 submission template",
+          "Offline",
+          "CLO2",
+          "IT",
+          "Lab 02 guide+ Lab 02 submission template+ peer review checklist",
+          "link15-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "16",
+          "Topic 4 — Storage and Retrieval (Part 1/3)4.1 Log-Structured Storage: LSM-tree, SSTables4.2 B-Trees: structure, read/write performance4.3 Comparing B-Trees and LSM-Trees",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.4 (Storage and Retrieval — Log-Structured Storage, B-Trees, p.139–155)+ storage engine comparison worksheet",
+          "link16-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "17",
+          "Topic 4 — Storage and Retrieval (Part 2/3)4.4 Multicolumn and Secondary Indexes4.5 Keeping Everything in Memory4.6 Cloud Data Warehouses",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.4 (Indexes, Cloud Data Warehouses, p.153–168)+ index benchmark notebook",
+          "link17-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "18",
+          "Topic 4 — Storage and Retrieval (Part 3/3)4.7 Column-Oriented Storage4.8 Materialized Views and Data CubesCheckpoint before Lab 03",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.4 (Column-Oriented Storage, p.160–174)+ Parquet concept worksheet",
+          "link18-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "19",
+          "Lab 03 — Storage, Index, Cache (Part 1/3)Lab 03 Source: ddia2_6_labs Lab 3Objective: Explain how indexes speed up queries and why cache is derived data.",
+          "Offline",
+          "CLO2",
+          "IT",
+          "Lab 03 guide (DDIA2 Lab 3)+ Docker compose (PostgreSQL + Redis)+ benchmark dataset",
+          "link19-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "20",
+          "Lab 03 — Storage, Index, Cache (Part 2/3)Benchmark: query with/without indexCache hit/miss, stale dataEXPLAIN ANALYZE",
+          "Offline",
+          "CLO2",
+          "IT",
+          "Lab 03 guide+ EXPLAIN ANALYZE worksheet+ Redis cache exercise",
+          "link20-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "21",
+          "Lab 03 — Storage, Index, Cache (Part 3/3)Conclusion: when to use index vs cacheSubmit the Lab 03 submission template",
+          "Offline",
+          "CLO2",
+          "IT",
+          "Lab 03 guide+ Lab 03 submission template",
+          "link21-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "22",
+          "Topic 5 — Encoding and Schema Evolution (Part 1/3)5.1 Formats for Encoding Data: JSON, XML, Binary5.2 Protocol Buffers and Avro5.3 The Merits of Schemas",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.5 (Encoding and Evolution — JSON, Protobuf, Avro, p.185–201)+ Protobuf vs JSON comparison",
+          "link22-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "23",
+          "Topic 5 — Encoding and Schema Evolution (Part 2/3)5.4 Backward and Forward Compatibility5.5 Dataflow Through Databases5.6 Event-Driven Architectures",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.5 (Modes of Dataflow, p.202–215)+ schema migration exercise",
+          "link23-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "24",
+          "Topic 5 — Encoding (Part 3/3)5.7 Durable Execution and WorkflowsCheckpoint before Lab 04",
+          "Offline",
+          "CLO2",
+          "IT",
+          "DDIA2 Ch.5 (Durable Execution, p.211–215)+ checkpoint template",
+          "link24-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "25",
+          "Topic 6 — Replication (Part 1/3)6.1 Single-Leader Replication6.2 Synchronous vs Asynchronous Replication6.3 Replication Lag Problems",
+          "Offline",
+          "CLO3",
+          "IT",
+          "DDIA2 Ch.6 (Replication — Single-Leader, p.221–238)+ replication lag diagram",
+          "link25-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "26",
+          "Topic 6 — Replication (Part 2/3)6.4 Multi-Leader Replication6.5 Leaderless Replication6.6 Detecting Concurrent Writes",
+          "Offline",
+          "CLO3",
+          "IT",
+          "DDIA2 Ch.6 (Multi-Leader, Leaderless, p.239–266)+ conflict resolution worksheet",
+          "link26-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "27",
+          "Topic 7 — Sharding and Transactions (Part 1/3)7.1 Sharding by Key Range and Hash7.2 ACID Properties and Isolation LevelsLab 06 — Transaction Isolation: observe isolation anomaly (lost update / non-repeatable read) on PostgreSQL",
+          "Offline",
+          "CLO3",
+          "IT",
+          "DDIA2 Ch.7 (Sharding, p.275–295)+ DDIA2 Ch.8 (Transactions — ACID, Isolation, p.301–359)+ checkpoint template",
+          "link27-1",
+          "In class: run two concurrent transactions, observe isolation anomaly, test different isolation levels.After class: submit Lab 06 note (which anomaly, which isolation level fixes it).",
+          ""
+        ],
+        [
+          "28",
+          "Topic 8 — Batch Processing (Part 1/3)8.1 Batch Processing with Unix Tools8.2 MapReduce and Distributed Filesystems8.3 Why MapReduce? Design philosophy",
+          "Offline",
+          "CLO4",
+          "IT",
+          "DDIA2 Ch.11 (Batch Processing — MapReduce, Distributed Filesystems, p.475–492)+ Wiktorski Ch.5 (MapReduce code examples)",
+          "link28-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "29",
+          "Topic 8 — Batch Processing (Part 2/3)8.4 Dataflow Engines: Spark, Flink8.5 Why Spark is faster than MapReduce8.6 DataFrames and Spark SQL",
+          "Offline",
+          "CLO4",
+          "IT",
+          "DDIA2 Ch.11 (Dataflow Engines, DataFrames, p.492–504)+ Wiktorski Ch.9 (Spark RDD, DataFrame code)+ PySpark starter notebook",
+          "link29-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "30",
+          "Topic 8 — Batch Processing (Part 3/3)8.7 ETL and Batch Analytics8.8 Column-Oriented Processing in SparkCheckpoint + Progress Test 1 (Ch.1–5)",
+          "Offline",
+          "CLO1, CLO2, CLO4",
+          "IT",
+          "DDIA2 Ch.11 (ETL, Analytics, p.504–510)+ Wiktorski Ch.7 (MR algorithms)+ Progress Test 1 paper",
+          "link30-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "31",
+          "Lab 04 — Spark Batch Processing (Part 1/3)Lab 04 Source: ddia2_lab_hadoop_spark Lab 7+8Objective: Use Spark SQL to analyze NYC Taxi data: revenue per day, top locations, and average fare.",
+          "Offline",
+          "CLO4",
+          "IT",
+          "Lab 04 guide (ddia2_lab_hadoop_spark Lab 7+8)+ Docker compose (bitnami/spark)+ NYC Taxi Parquet dataset+ lab04a_nyc_taxi_analytics.py",
+          "link31-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "32",
+          "Lab 04 — Spark Batch Processing (Part 2/3)CSV vs Parquet benchmark (Lab 9)GH Archive JSON nested schema (Lab 10)",
+          "Offline",
+          "CLO4",
+          "IT",
+          "Lab 04 guide (Lab 9+10)+ Parquet benchmark worksheet+ GH Archive dataset",
+          "link32-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "33",
+          "Lab 04 — Spark Batch Processing (Part 3/3)Submit the Lab 04 submission template",
+          "Offline",
+          "CLO4",
+          "IT",
+          "Lab 04 guide+ Lab 04 submission template",
+          "link33-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "34",
+          "Topic 9 — Stream Processing (Part 1/3)9.1 Transmitting Event Streams9.2 Messaging Systems: direct, broker9.3 Log-Based Message Brokers: Kafka, Redpanda9.4 Change Data Capture (CDC)",
+          "Offline",
+          "CLO5",
+          "IT",
+          "DDIA2 Ch.12 (Stream Processing — Messaging Systems, CDC, p.511–535)+ Kafka/Redpanda architecture diagram",
+          "link34-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "35",
+          "Topic 9 — Stream Processing (Part 2/3)9.5 Processing Streams: aggregation, joins9.6 Stream Joins: stream-stream, stream-table9.7 Fault Tolerance and Exactly-Once Semantics",
+          "Offline",
+          "CLO5",
+          "IT",
+          "DDIA2 Ch.12 (Processing Streams, p.535–555)+ stream join diagram",
+          "link35-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "36",
+          "Topic 9 — Stream Processing (Part 3/3)9.8 DDIA2 Ch.13: Philosophy of Streaming Systems9.9 Batch + Stream unified: Lambda vs Kappa ArchitectureCheckpoint before Integration",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "DDIA2 Ch.13 (Philosophy of Streaming Systems, p.563–608)+ Lambda vs Kappa diagram+ checkpoint template",
+          "link36-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "37",
+          "Lab 05 — CDC Pipeline End-to-End (Part 1/3)Lab 05 Source: ddia2_6_labs Lab 6Objective: Build CDC from OLTP to analytics. PostgreSQL, Debezium, Redpanda, MinIO, ClickHouse.",
+          "Offline",
+          "CLO5",
+          "IT",
+          "Lab 05 guide (DDIA2 Lab 6)+ Docker compose (PostgreSQL+Redpanda+Debezium+MinIO+ClickHouse)+ MinIO quickstart",
+          "link37-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "38",
+          "Lab 05 — CDC Pipeline End-to-End (Part 2/3)consumer.py + connector.json3 failure cases: consumer failure, duplicate event, schema change",
+          "Offline",
+          "CLO5",
+          "IT",
+          "Lab 05 guide+ consumer.py+ Debezium connector.json+ cost estimation worksheet",
+          "link38-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "39",
+          "Lab 05 — CDC Pipeline End-to-End (Part 3/3)Submit the Lab 05 submission templateReview: OLTP in Lab 01, Batch in Lab 04, Streaming in Lab 05",
+          "Offline",
+          "CLO5",
+          "IT",
+          "Lab 05 guide+ Lab 05 submission template",
+          "link39-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "40",
+          "Integration Review (Part 1/3)Ch.1 to Ch.13: full pictureConnect Lab 01-05 into a complete system",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "DDIA2 Ch.11 (review)+ DDIA2 Ch.12 (review)+ Lab 01–05 review rubric",
+          "link40-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "41",
+          "Integration Review (Part 2/3)Applied scenarios: design a data system from requirementsStack: OLTP, CDC, Data Lake, OLAP",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "All course materials+ mock scenario exercises",
+          "link41-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "42",
+          "Integration Review (Part 3/3)Progress Test 2 (Ch.6–13)Debrief",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "All course materials+ Progress Test 2 paper",
+          "link42-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "43",
+          "Follow-up Lab + Deep Review (Part 1/3)GDELT Event Analytics (Lab 11)Spark SQL on a larger dataset",
+          "Offline",
+          "CLO4",
+          "IT",
+          "Lab 04 guide (ddia2_lab_hadoop_spark Lab 11 — GDELT)+ GDELT dataset+ Spark SQL exercise",
+          "link43-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "44",
+          "Follow-up Lab + Deep Review (Part 2/3)Mini Capstone: Public Data Lake (Lab 13)Build a data lake from at least 2 public data sources",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "Lab 04 guide (ddia2_lab_hadoop_spark Lab 13 — Mini Capstone)+ dataset suggestion list+ data lake architecture canvas",
+          "link44-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "45",
+          "Follow-up Lab + Deep Review (Part 3/3)Full pipeline review: PostgreSQL OLTP (Lab 01), Spark Batch (Lab 04), CDC Streaming (Lab 05)Full stack review",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "All course materials+ Lab 01–05 review rubric",
+          "link45-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "46",
+          "Exam Preparation (Part 1/3)Sample practical exam taskReview all Ch.1–13 concepts",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "All course materials",
+          "link46-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "47",
+          "Exam Preparation (Part 2/3)Mock practical exam (30 minutes)Review errors",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "All course materials",
+          "link47-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "48",
+          "Exam Preparation (Part 3/3)Final Q&AExam logistics briefing",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "All course materials",
+          "link48-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "49",
+          "Project Guidance (Part 1/3)Project requirements: pipeline Ch.1–13 conceptsDataset selection, architecture design",
+          "Offline",
+          "CLO5",
+          "IT",
+          "Project rubric + guidelines (FLM)+ architecture canvas+ dataset suggestion list",
+          "link49-1",
+          "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+          ""
+        ],
+        [
+          "50",
+          "Project Guidance (Part 2/3)Draft architecture reviewFeedback on data model and pipeline design",
+          "Offline",
+          "CLO5",
+          "IT",
+          "Project rubric+ draft project plan",
+          "link50-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "51",
+          "Project Guidance (Part 3/3)Peer reviewRevise project plan based on feedback",
+          "Offline",
+          "CLO5",
+          "IT",
+          "Project rubric+ peer review checklist",
+          "link51-1",
+          "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+          ""
+        ],
+        [
+          "52",
+          "Project Consultation 11-on-1: check pipeline progressFeedback on code and architecture",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "Project rubric",
+          "link52-1",
+          "In class: work on project, meet instructor for 1-on-1 consultation.After class: continue pipeline development.",
+          ""
+        ],
+        [
+          "53",
+          "Project Consultation 2Finalise analysis and visualisationPrepare presentation slides",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "Project rubric",
+          "link53-1",
+          "Finalise analysis and visualisation, prepare presentation slides.After class: write executive summary.",
+          ""
+        ],
+        [
+          "54",
+          "Project Consultation 3 — Dry run5-minute dry run presentationSubmit final project to FLM",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "Project rubric",
+          "link54-1",
+          "Deliver 5-minute dry run, submit final project code and slides to FLM.",
+          ""
+        ],
+        [
+          "55",
+          "Project Presentation (Part 1/3)Group presentations — batch 1Q&A from instructor and peers",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "Project rubric",
+          "link55-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "56",
+          "Project Presentation (Part 2/3)Group presentations — batch 2Q&A from instructor and peers",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "Project rubric",
+          "link56-1",
+          "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+          ""
+        ],
+        [
+          "57",
+          "Project Presentation (Part 3/3)Group presentations — batch 3Course feedback survey",
+          "Offline",
+          "CLO4, CLO5",
+          "IT",
+          "Project rubric",
+          "link57-1",
+          "Present project, fill in course feedback survey.",
+          ""
+        ],
+        [
+          "58",
+          "Individual Contribution CheckSpot-check: explain your code and architecture3-5 minutes per student",
+          "Offline",
+          "CLO5",
+          "IT",
+          "Project rubric",
+          "link58-1",
+          "Answer instructor questions about personal contribution (3-5 minutes per student).",
+          ""
+        ],
+        [
+          "59",
+          "Lab Deliverables Final CheckVerify Lab 01–05 submissionsSpot-check code understanding",
+          "Offline",
+          "CLO1, CLO2, CLO4, CLO5",
+          "IT",
+          "Lab 01–05 submissions",
+          "link59-1",
+          "Explain Lab 01-05 code and output on the spot when called upon.",
+          ""
+        ],
+        [
+          "60",
+          "Course ClosingFinal on-going scoresCourse feedback survey",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "IT",
+          "—",
+          "link60-1",
+          "Fill in course feedback survey.Receive final on-going scores.",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 1 — Trade-Offs in Data Systems Architecture (Part 1/3)1.1 Operational vs Analytical Systems1.2 OLTP vs OLAP1.3 Data Warehousing and Systems of Record",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.1 (Trade-Offs in Data Systems Architecture — Operational vs Analytical, p.27–35)+ Install Docker Desktop, download starter pack",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "BDT301",
+            "links": [
+              {
+                "text": "BDT301",
+                "href": "https://flm.fpt.edu.vn/download/14416/S/1_BDT301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: complete exercises, discuss with peers. After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 1 — Trade-Offs in Data Systems Architecture (Part 2/3)1.4 Cloud Versus Self-Hosting1.5 Cloud Native System Architecture1.6 Operations in the Cloud Era",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.1 (Cloud Versus Self-Hosting, p.36–42)+ Cloud architecture diagram",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link2-1",
+            "links": [
+              {
+                "text": "link2-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 1 — Trade-Offs in Data Systems Architecture (Part 3/3)1.7 Distributed vs Single-Node Systems1.8 Microservices and Serverless1.9 Cloud Computing vs Supercomputing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.1 (Distributed Versus Single-Node, p.43–48)+ checkpoint worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link3-1",
+            "links": [
+              {
+                "text": "link3-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 2 — Nonfunctional Requirements (Part 1/3)2.1 Scalability: Load Parameters, Throughput2.2 Latency and Response Time, Percentiles2.3 Shared-Memory, Shared-Disk, Shared-Nothing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.2 (Defining Nonfunctional Requirements — Scalability, p.57–76)+ Social Network timeline case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link4-1",
+            "links": [
+              {
+                "text": "link4-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 2 — Nonfunctional Requirements (Part 2/3)2.4 Reliability and Fault Tolerance2.5 Hardware and Software Faults2.6 Maintainability: Operability, Simplicity, Evolvability",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.2 (Reliability, Maintainability, p.67–80)+ fault tolerance worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link5-1",
+            "links": [
+              {
+                "text": "link5-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 2 — Nonfunctional Requirements (Part 3/3)2.7 Principles for Scalability2.8 Review: Ch.1+2Preparation for Lab 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.1 (review)+ DDIA2 Ch.2 (review)+ Docker compose (PostgreSQL + pgbench), checkpoint template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link6-1",
+            "links": [
+              {
+                "text": "link6-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01 — OLTP vs OLAP Setup (Part 1/3)Lab 01 Source: ddia2_6_labs Lab 1Objective: Distinguish OLTP and OLAP and explain why analytics should not run directly on OLTP.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01 guide (DDIA2 Lab 1)+ Docker compose (PostgreSQL + pgbench)+ OLTP load script",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link7-1",
+            "links": [
+              {
+                "text": "link7-1",
+                "href": "https://www.postgresql.org/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01 — OLTP vs OLAP Setup (Part 2/3)Setup OLAP queries, compare OLTP vs OLAP performanceMeasure latency, throughput, EXPLAIN ANALYZE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01 guide+ pgbench benchmark worksheet+ EXPLAIN ANALYZE exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link8-1",
+            "links": [
+              {
+                "text": "link8-1",
+                "href": "https://www.postgresql.org/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01 — OLTP vs OLAP Setup (Part 3/3)Conclusion: when to separate OLAPSubmit the Lab 01 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01 guide+ Lab 01 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link9-1",
+            "links": [
+              {
+                "text": "link9-1",
+                "href": "https://www.postgresql.org/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 3 — Data Models and Query Languages (Part 1/3)3.1 Relational vs Document Models3.2 Object-Relational Mismatch3.3 Normalization, Denormalization, Joins",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.3 (Data Models — Relational vs Document, p.89–107)+ MongoDB Manual (intro)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link10-1",
+            "links": [
+              {
+                "text": "link10-1",
+                "href": "https://www.mongodb.com/docs/manual/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 3 — Data Models and Query Languages (Part 2/3)3.4 Graph-Like Data Models3.5 Property Graphs, Cypher Query Language3.6 Event Sourcing and CQRS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.3 (Graph-Like Data Models, p.108–131)+ Cypher query exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link11-1",
+            "links": [
+              {
+                "text": "link11-1",
+                "href": "https://neo4j.com/docs/cypher-manual/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 3 — Data Models (Part 3/3)3.7 DataFrames, Matrices, and ArraysCheckpoint before Lab 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.3 (DataFrames, p.129–131)+ checkpoint template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link12-1",
+            "links": [
+              {
+                "text": "link12-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02 — Relational vs Document (Part 1/3)Lab 02Objective: Decide when to use relational and document models. Normalization vs denormalization.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02 guide (DDIA2 Lab 2)+ Docker compose (PostgreSQL + MongoDB)+ LMS seed dataset",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link13-1",
+            "links": [
+              {
+                "text": "link13-1",
+                "href": "https://www.mongodb.com/docs/manual/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02 — Relational vs Document (Part 2/3)Schema design: normalized PostgreSQL vs denormalized MongoDBMongoDB aggregation pipeline vs SQL JOIN",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02 guide+ MongoDB aggregation exercise+ LMS dataset",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link14-1",
+            "links": [
+              {
+                "text": "link14-1",
+                "href": "https://www.mongodb.com/docs/manual/aggregation/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02 — Relational vs Document (Part 3/3)Query comparison: JOIN (PostgreSQL) vs embedded document (MongoDB)Submit the Lab 02 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02 guide+ Lab 02 submission template+ peer review checklist",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link15-1",
+            "links": [
+              {
+                "text": "link15-1",
+                "href": "https://www.postgresql.org/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 4 — Storage and Retrieval (Part 1/3)4.1 Log-Structured Storage: LSM-tree, SSTables4.2 B-Trees: structure, read/write performance4.3 Comparing B-Trees and LSM-Trees",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.4 (Storage and Retrieval — Log-Structured Storage, B-Trees, p.139–155)+ storage engine comparison worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link16-1",
+            "links": [
+              {
+                "text": "link16-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 4 — Storage and Retrieval (Part 2/3)4.4 Multicolumn and Secondary Indexes4.5 Keeping Everything in Memory4.6 Cloud Data Warehouses",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.4 (Indexes, Cloud Data Warehouses, p.153–168)+ index benchmark notebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link17-1",
+            "links": [
+              {
+                "text": "link17-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 4 — Storage and Retrieval (Part 3/3)4.7 Column-Oriented Storage4.8 Materialized Views and Data CubesCheckpoint before Lab 03",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.4 (Column-Oriented Storage, p.160–174)+ Parquet concept worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link18-1",
+            "links": [
+              {
+                "text": "link18-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 03 — Storage, Index, Cache (Part 1/3)Lab 03 Source: ddia2_6_labs Lab 3Objective: Explain how indexes speed up queries and why cache is derived data.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 03 guide (DDIA2 Lab 3)+ Docker compose (PostgreSQL + Redis)+ benchmark dataset",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link19-1",
+            "links": [
+              {
+                "text": "link19-1",
+                "href": "https://redis.io/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 03 — Storage, Index, Cache (Part 2/3)Benchmark: query with/without indexCache hit/miss, stale dataEXPLAIN ANALYZE",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 03 guide+ EXPLAIN ANALYZE worksheet+ Redis cache exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link20-1",
+            "links": [
+              {
+                "text": "link20-1",
+                "href": "https://www.postgresql.org/docs/current/sql-explain.html"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 03 — Storage, Index, Cache (Part 3/3)Conclusion: when to use index vs cacheSubmit the Lab 03 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 03 guide+ Lab 03 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link21-1",
+            "links": [
+              {
+                "text": "link21-1",
+                "href": "https://redis.io/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 5 — Encoding and Schema Evolution (Part 1/3)5.1 Formats for Encoding Data: JSON, XML, Binary5.2 Protocol Buffers and Avro5.3 The Merits of Schemas",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.5 (Encoding and Evolution — JSON, Protobuf, Avro, p.185–201)+ Protobuf vs JSON comparison",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link22-1",
+            "links": [
+              {
+                "text": "link22-1",
+                "href": "https://protobuf.dev/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 5 — Encoding and Schema Evolution (Part 2/3)5.4 Backward and Forward Compatibility5.5 Dataflow Through Databases5.6 Event-Driven Architectures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.5 (Modes of Dataflow, p.202–215)+ schema migration exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link23-1",
+            "links": [
+              {
+                "text": "link23-1",
+                "href": "https://avro.apache.org/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 5 — Encoding (Part 3/3)5.7 Durable Execution and WorkflowsCheckpoint before Lab 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.5 (Durable Execution, p.211–215)+ checkpoint template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link24-1",
+            "links": [
+              {
+                "text": "link24-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 6 — Replication (Part 1/3)6.1 Single-Leader Replication6.2 Synchronous vs Asynchronous Replication6.3 Replication Lag Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.6 (Replication — Single-Leader, p.221–238)+ replication lag diagram",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link25-1",
+            "links": [
+              {
+                "text": "link25-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 6 — Replication (Part 2/3)6.4 Multi-Leader Replication6.5 Leaderless Replication6.6 Detecting Concurrent Writes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.6 (Multi-Leader, Leaderless, p.239–266)+ conflict resolution worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link26-1",
+            "links": [
+              {
+                "text": "link26-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 7 — Sharding and Transactions (Part 1/3)7.1 Sharding by Key Range and Hash7.2 ACID Properties and Isolation LevelsLab 06 — Transaction Isolation: observe isolation anomaly (lost update / non-repeatable read) on PostgreSQL",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.7 (Sharding, p.275–295)+ DDIA2 Ch.8 (Transactions — ACID, Isolation, p.301–359)+ checkpoint template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link27-1",
+            "links": [
+              {
+                "text": "link27-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: run two concurrent transactions, observe isolation anomaly, test different isolation levels.After class: submit Lab 06 note (which anomaly, which isolation level fixes it).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 8 — Batch Processing (Part 1/3)8.1 Batch Processing with Unix Tools8.2 MapReduce and Distributed Filesystems8.3 Why MapReduce? Design philosophy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.11 (Batch Processing — MapReduce, Distributed Filesystems, p.475–492)+ Wiktorski Ch.5 (MapReduce code examples)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link28-1",
+            "links": [
+              {
+                "text": "link28-1",
+                "href": "https://hadoop.apache.org/docs/stable/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 8 — Batch Processing (Part 2/3)8.4 Dataflow Engines: Spark, Flink8.5 Why Spark is faster than MapReduce8.6 DataFrames and Spark SQL",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.11 (Dataflow Engines, DataFrames, p.492–504)+ Wiktorski Ch.9 (Spark RDD, DataFrame code)+ PySpark starter notebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link29-1",
+            "links": [
+              {
+                "text": "link29-1",
+                "href": "https://spark.apache.org/docs/latest/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 8 — Batch Processing (Part 3/3)8.7 ETL and Batch Analytics8.8 Column-Oriented Processing in SparkCheckpoint + Progress Test 1 (Ch.1–5)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.11 (ETL, Analytics, p.504–510)+ Wiktorski Ch.7 (MR algorithms)+ Progress Test 1 paper",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link30-1",
+            "links": [
+              {
+                "text": "link30-1",
+                "href": "https://spark.apache.org/docs/latest/sql-programming-guide.html"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 — Spark Batch Processing (Part 1/3)Lab 04 Source: ddia2_lab_hadoop_spark Lab 7+8Objective: Use Spark SQL to analyze NYC Taxi data: revenue per day, top locations, and average fare.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 guide (ddia2_lab_hadoop_spark Lab 7+8)+ Docker compose (bitnami/spark)+ NYC Taxi Parquet dataset+ lab04a_nyc_taxi_analytics.py",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link31-1",
+            "links": [
+              {
+                "text": "link31-1",
+                "href": "https://spark.apache.org/docs/latest/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 — Spark Batch Processing (Part 2/3)CSV vs Parquet benchmark (Lab 9)GH Archive JSON nested schema (Lab 10)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 guide (Lab 9+10)+ Parquet benchmark worksheet+ GH Archive dataset",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link32-1",
+            "links": [
+              {
+                "text": "link32-1",
+                "href": "https://www.gharchive.org/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 — Spark Batch Processing (Part 3/3)Submit the Lab 04 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 guide+ Lab 04 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link33-1",
+            "links": [
+              {
+                "text": "link33-1",
+                "href": "https://www.gdeltproject.org/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 9 — Stream Processing (Part 1/3)9.1 Transmitting Event Streams9.2 Messaging Systems: direct, broker9.3 Log-Based Message Brokers: Kafka, Redpanda9.4 Change Data Capture (CDC)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.12 (Stream Processing — Messaging Systems, CDC, p.511–535)+ Kafka/Redpanda architecture diagram",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link34-1",
+            "links": [
+              {
+                "text": "link34-1",
+                "href": "https://redpanda.com/guides/kafka-tutorial"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 9 — Stream Processing (Part 2/3)9.5 Processing Streams: aggregation, joins9.6 Stream Joins: stream-stream, stream-table9.7 Fault Tolerance and Exactly-Once Semantics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.12 (Processing Streams, p.535–555)+ stream join diagram",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link35-1",
+            "links": [
+              {
+                "text": "link35-1",
+                "href": "https://redpanda.com/guides/kafka-tutorial"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 9 — Stream Processing (Part 3/3)9.8 DDIA2 Ch.13: Philosophy of Streaming Systems9.9 Batch + Stream unified: Lambda vs Kappa ArchitectureCheckpoint before Integration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.13 (Philosophy of Streaming Systems, p.563–608)+ Lambda vs Kappa diagram+ checkpoint template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link36-1",
+            "links": [
+              {
+                "text": "link36-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 05 — CDC Pipeline End-to-End (Part 1/3)Lab 05 Source: ddia2_6_labs Lab 6Objective: Build CDC from OLTP to analytics. PostgreSQL, Debezium, Redpanda, MinIO, ClickHouse.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 05 guide (DDIA2 Lab 6)+ Docker compose (PostgreSQL+Redpanda+Debezium+MinIO+ClickHouse)+ MinIO quickstart",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link37-1",
+            "links": [
+              {
+                "text": "link37-1",
+                "href": "https://min.io/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 05 — CDC Pipeline End-to-End (Part 2/3)consumer.py + connector.json3 failure cases: consumer failure, duplicate event, schema change",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 05 guide+ consumer.py+ Debezium connector.json+ cost estimation worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link38-1",
+            "links": [
+              {
+                "text": "link38-1",
+                "href": "https://debezium.io/documentation/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 05 — CDC Pipeline End-to-End (Part 3/3)Submit the Lab 05 submission templateReview: OLTP in Lab 01, Batch in Lab 04, Streaming in Lab 05",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 05 guide+ Lab 05 submission template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link39-1",
+            "links": [
+              {
+                "text": "link39-1",
+                "href": "https://clickhouse.com/docs/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integration Review (Part 1/3)Ch.1 to Ch.13: full pictureConnect Lab 01-05 into a complete system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DDIA2 Ch.11 (review)+ DDIA2 Ch.12 (review)+ Lab 01–05 review rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link40-1",
+            "links": [
+              {
+                "text": "link40-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integration Review (Part 2/3)Applied scenarios: design a data system from requirementsStack: OLTP, CDC, Data Lake, OLAP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All course materials+ mock scenario exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link41-1",
+            "links": [
+              {
+                "text": "link41-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integration Review (Part 3/3)Progress Test 2 (Ch.6–13)Debrief",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All course materials+ Progress Test 2 paper",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link42-1",
+            "links": [
+              {
+                "text": "link42-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow-up Lab + Deep Review (Part 1/3)GDELT Event Analytics (Lab 11)Spark SQL on a larger dataset",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 guide (ddia2_lab_hadoop_spark Lab 11 — GDELT)+ GDELT dataset+ Spark SQL exercise",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link43-1",
+            "links": [
+              {
+                "text": "link43-1",
+                "href": "https://www.gdeltproject.org/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow-up Lab + Deep Review (Part 2/3)Mini Capstone: Public Data Lake (Lab 13)Build a data lake from at least 2 public data sources",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 04 guide (ddia2_lab_hadoop_spark Lab 13 — Mini Capstone)+ dataset suggestion list+ data lake architecture canvas",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link44-1",
+            "links": [
+              {
+                "text": "link44-1",
+                "href": "https://spark.apache.org/docs/latest/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Follow-up Lab + Deep Review (Part 3/3)Full pipeline review: PostgreSQL OLTP (Lab 01), Spark Batch (Lab 04), CDC Streaming (Lab 05)Full stack review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All course materials+ Lab 01–05 review rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link45-1",
+            "links": [
+              {
+                "text": "link45-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exam Preparation (Part 1/3)Sample practical exam taskReview all Ch.1–13 concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All course materials",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link46-1",
+            "links": [
+              {
+                "text": "link46-1",
+                "href": "https://dataintensive.net/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exam Preparation (Part 2/3)Mock practical exam (30 minutes)Review errors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All course materials",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link47-1",
+            "links": [
+              {
+                "text": "link47-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exam Preparation (Part 3/3)Final Q&AExam logistics briefing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All course materials",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link48-1",
+            "links": [
+              {
+                "text": "link48-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Guidance (Part 1/3)Project requirements: pipeline Ch.1–13 conceptsDataset selection, architecture design",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric + guidelines (FLM)+ architecture canvas+ dataset suggestion list",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link49-1",
+            "links": [
+              {
+                "text": "link49-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Before class: skim materials & identify dataset/business questions.In class: follow demo, take notes.After class: complete short warm-up exercises.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Guidance (Part 2/3)Draft architecture reviewFeedback on data model and pipeline design",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric+ draft project plan",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link50-1",
+            "links": [
+              {
+                "text": "link50-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Guidance (Part 3/3)Peer reviewRevise project plan based on feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric+ peer review checklist",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link51-1",
+            "links": [
+              {
+                "text": "link51-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: finish mini-lab and checkpoint.After class: submit checkpoint deliverables (code and brief answers).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Consultation 11-on-1: check pipeline progressFeedback on code and architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link52-1",
+            "links": [
+              {
+                "text": "link52-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: work on project, meet instructor for 1-on-1 consultation.After class: continue pipeline development.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Consultation 2Finalise analysis and visualisationPrepare presentation slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link53-1",
+            "links": [
+              {
+                "text": "link53-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Finalise analysis and visualisation, prepare presentation slides.After class: write executive summary.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Consultation 3 — Dry run5-minute dry run presentationSubmit final project to FLM",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link54-1",
+            "links": [
+              {
+                "text": "link54-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Deliver 5-minute dry run, submit final project code and slides to FLM.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Presentation (Part 1/3)Group presentations — batch 1Q&A from instructor and peers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link55-1",
+            "links": [
+              {
+                "text": "link55-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Presentation (Part 2/3)Group presentations — batch 2Q&A from instructor and peers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link56-1",
+            "links": [
+              {
+                "text": "link56-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "In class: complete guided lab steps, record outputs.After class: finish practice tasks, update notebook/report draft.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Presentation (Part 3/3)Group presentations — batch 3Course feedback survey",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link57-1",
+            "links": [
+              {
+                "text": "link57-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Present project, fill in course feedback survey.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual Contribution CheckSpot-check: explain your code and architecture3-5 minutes per student",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project rubric",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link58-1",
+            "links": [
+              {
+                "text": "link58-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Answer instructor questions about personal contribution (3-5 minutes per student).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab Deliverables Final CheckVerify Lab 01–05 submissionsSpot-check code understanding",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01–05 submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link59-1",
+            "links": [
+              {
+                "text": "link59-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Explain Lab 01-05 code and output on the spot when called upon.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course ClosingFinal on-going scoresCourse feedback survey",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "—",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link60-1",
+            "links": [
+              {
+                "text": "link60-1",
+                "href": "https://flm.fpt.edu.vn/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Fill in course feedback survey.Receive final on-going scores.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "10 Constructive question(s)",
+      "headers": [
+        "no",
+        "sessionno",
+        "name",
+        "details"
+      ],
+      "rows": [
+        [
+          "1",
+          "3",
+          "CQ1",
+          "Why do you think modern companies choose to separate their transaction processing systems (OLTP) from their analytics systems (OLAP), even though this adds complexity?"
+        ],
+        [
+          "2",
+          "6",
+          "CQ2",
+          "How would you explain to a non-technical manager why a system that works perfectly with 100 users might fail with 1 million users — and what would you do about it?"
+        ],
+        [
+          "3",
+          "12",
+          "CQ3",
+          "Why might choosing a document database over a relational database for a social network make the application faster to build but harder to maintain over time?"
+        ],
+        [
+          "4",
+          "18",
+          "CQ4",
+          "Why do you think column-oriented storage is better suited for analytics queries than row-oriented storage, even though both contain the same data?"
+        ],
+        [
+          "5",
+          "23",
+          "CQ8",
+          "Why is it important that a new version of an application can still read data written by an older version — and what happens when this backward compatibility breaks?"
+        ],
+        [
+          "6",
+          "27",
+          "CQ9",
+          "How can two simultaneous bank transfers from the same distributed account both succeed and leave it overdrawn — and what database mechanism prevents this?"
+        ],
+        [
+          "7",
+          "29",
+          "CQ5",
+          "Why might processing the same dataset take minutes with MapReduce but seconds with Spark — and when would you still choose MapReduce over Spark?"
+        ],
+        [
+          "8",
+          "32",
+          "CQ7",
+          "How would you explain why running the same Spark SQL query on CSV versus Parquet produces identical results but very different performance — and what does this tell you about columnar storage?"
+        ],
+        [
+          "9",
+          "34",
+          "CQ6",
+          "How does Change Data Capture (CDC) allow analytics systems to stay up-to-date without putting load on the production database?"
+        ],
+        [
+          "10",
+          "39",
+          "CQ10",
+          "Looking at the CDC pipeline you built in Lab 05 (PostgreSQL to Redpanda to MinIO to ClickHouse), at which point does data transform from a transactional record into an analytical insight?"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why do you think modern companies choose to separate their transaction processing systems (OLTP) from their analytics systems (OLAP), even though this adds complexity?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you explain to a non-technical manager why a system that works perfectly with 100 users might fail with 1 million users — and what would you do about it?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why might choosing a document database over a relational database for a social network make the application faster to build but harder to maintain over time?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why do you think column-oriented storage is better suited for analytics queries than row-oriented storage, even though both contain the same data?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is it important that a new version of an application can still read data written by an older version — and what happens when this backward compatibility breaks?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can two simultaneous bank transfers from the same distributed account both succeed and leave it overdrawn — and what database mechanism prevents this?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why might processing the same dataset take minutes with MapReduce but seconds with Spark — and when would you still choose MapReduce over Spark?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you explain why running the same Spark SQL query on CSV versus Parquet produces identical results but very different performance — and what does this tell you about columnar storage?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does Change Data Capture (CDC) allow analytics systems to stay up-to-date without putting load on the production database?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Looking at the CDC pipeline you built in Lab 05 (PostgreSQL to Redpanda to MinIO to ClickHouse), at which point does data transform from a transactional record into an analytical insight?",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Group Project / Presentation",
+          "on-going",
+          "1",
+          "25.0%",
+          "4",
+          "Option 1: S49–60 (self-study + consultation), evaluation in slots 49–60.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Option 1: Group project — presentation + live demo + Q&A.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: Rubric-basedOption 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Dataset >=1GB, pipeline: ingest to Spark processing to NoSQL/storage to insight.Self-study development across S49-60, evaluation in slots 49-60.",
+          "Lecturers, repository or structured project folder + README + presentation. Instructor has responsibility for guiding students. View assignment on slot 49.",
+          ""
+        ],
+        [
+          "2",
+          "Lab",
+          "on-going",
+          "6",
+          "30.0%",
+          "4",
+          "Option 1: Lab 01-05: 3 sessions each; Lab 06: 1 session (mini-lab on transaction isolation).Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Lab 01: CLO1Lab 02: CLO2Lab 03: CLO2Lab 04: CLO4Lab 05: CLO5Lab 06: CLO3",
+          "Option 1: Practical exercises — code + output + screenshots.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: N/AOption 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Lab 01: OLTP vs OLAP setup - Ch.1+2 (S7-9)Lab 02: Relational vs Document - Ch.3 (S13-15)Lab 03: Storage, Index, Cache - Ch.4 (S19-21)Lab 04: Spark Batch Processing - Ch.11 (S31-33)Lab 05: CDC End-to-End Pipeline - Ch.12 (S37-39)Lab 06: Transaction Isolation - Ch.7+8 (S27)",
+          "The instructor support tutorials, students complete independently, submission by deadline",
+          ""
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "2",
+          "15.0%",
+          ">0",
+          "Option 1: 30'/each.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "CLO1, CLO2 (PT1: Ch.1-5)CLO3, CLO4, CLO5 (PT2: Ch.6-13)",
+          "Option 1: Multiple choices Marked by Computer or a suitable format.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: 30 questions/test.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Test 1: Ch.1-5 (CLO1, CLO2) - Sessions 1-30Test 2: Ch.6-13 (CLO3, CLO4, CLO5) - Sessions 31-42",
+          "In class, by instructor",
+          "Instruction and schedules for Progress Tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "4",
+          "Theoretical exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Multiple choices Marked by Computer",
+          "50",
+          "All subjects in syllabus (Ch.1-13):Ch.1-4: Trade-offs, Nonfunctional, Data Models, StorageCh.5-10: Encoding, Replication, Sharding, Transactions, Distributed SystemsCh.11-13: Batch, Stream, Philosophy of Streaming",
+          "By exam board, using computer",
+          "The exam questions must be updated"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project / Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: S49–60 (self-study + consultation), evaluation in slots 49–60.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Group project — presentation + live demo + Q&A.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Rubric-basedOption 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dataset >=1GB, pipeline: ingest to Spark processing to NoSQL/storage to insight.Self-study development across S49-60, evaluation in slots 49-60.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecturers, repository or structured project folder + README + presentation. Instructor has responsibility for guiding students. View assignment on slot 49.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Lab 01-05: 3 sessions each; Lab 06: 1 session (mini-lab on transaction isolation).Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01: CLO1Lab 02: CLO2Lab 03: CLO2Lab 04: CLO4Lab 05: CLO5Lab 06: CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Practical exercises — code + output + screenshots.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: N/AOption 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01: OLTP vs OLAP setup - Ch.1+2 (S7-9)Lab 02: Relational vs Document - Ch.3 (S13-15)Lab 03: Storage, Index, Cache - Ch.4 (S19-21)Lab 04: Spark Batch Processing - Ch.11 (S31-33)Lab 05: CDC End-to-End Pipeline - Ch.12 (S37-39)Lab 06: Transaction Isolation - Ch.7+8 (S27)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The instructor support tutorials, students complete independently, submission by deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30'/each.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2 (PT1: Ch.1-5)CLO3, CLO4, CLO5 (PT2: Ch.6-13)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Multiple choices Marked by Computer or a suitable format.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30 questions/test.Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test 1: Ch.1-5 (CLO1, CLO2) - Sessions 1-30Test 2: Ch.6-13 (CLO3, CLO4, CLO5) - Sessions 31-42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instruction and schedules for Progress Tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theoretical exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choices Marked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus (Ch.1-13):Ch.1-4: Trade-offs, Nonfunctional, Data Models, StorageCh.5-10: Encoding, Replication, Sharding, Transactions, Distributed SystemsCh.11-13: Batch, Stream, Philosophy of Streaming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board, using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}
