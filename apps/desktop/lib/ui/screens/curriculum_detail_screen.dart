@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import '../../models/subject.dart';
+import '../../models/curriculum_data.dart';
 import '../../app/theme/app_colors.dart';
 import '../widgets/stat_card.dart';
+import 'roadmap_carousel_screen.dart';
 
 class CurriculumDetailScreen extends StatefulWidget {
-  final String curriculumCode;
-  final List<Subject> subjects;
+  final CurriculumData curriculumData;
 
   const CurriculumDetailScreen({
     super.key,
-    required this.curriculumCode,
-    required this.subjects,
+    required this.curriculumData,
   });
 
   @override
@@ -24,7 +24,7 @@ class _CurriculumDetailScreenState extends State<CurriculumDetailScreen> {
   void initState() {
     super.initState();
     _semesterGroups = {};
-    for (var sub in widget.subjects) {
+    for (var sub in widget.curriculumData.subjects) {
       if (!_semesterGroups.containsKey(sub.semester)) {
         _semesterGroups[sub.semester] = [];
       }
@@ -39,7 +39,7 @@ class _CurriculumDetailScreenState extends State<CurriculumDetailScreen> {
     // Tính toán một số thống kê cơ bản
     int totalCredits = 0;
     int prereqCount = 0;
-    for (var sub in widget.subjects) {
+    for (var sub in widget.curriculumData.subjects) {
       totalCredits += int.tryParse(sub.credits) ?? 0;
       if (sub.preRequisite.isNotEmpty &&
           sub.preRequisite.toLowerCase() != 'none') {
@@ -54,58 +54,76 @@ class _CurriculumDetailScreenState extends State<CurriculumDetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header / Intro
-            const Text(
-              'Chương trình đào tạo',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: AppColors.primary,
-                letterSpacing: 0.5,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              widget.curriculumCode,
-              style: const TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.w900,
-                color: AppColors.textMain,
-                letterSpacing: -1,
-              ),
-            ),
-            const SizedBox(height: 16),
-            const Text(
-              'Dưới đây là thống kê tổng quan và lộ trình chi tiết các học kỳ của bạn.',
-              style: TextStyle(
-                  fontSize: 16, color: AppColors.textSub, height: 1.5),
-            ),
-            const SizedBox(height: 32),
-
-            // Thống kê nhanh (Stats)
+            // Header / Intro & Thống kê nhanh (Stats)
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(width: 16),
                 Expanded(
-                    child: StatCard(
-                        title: 'Học kỳ',
-                        value: '${sortedSemesters.length}',
-                        icon: Icons.calendar_month_rounded,
-                        subtitle: 'Tổng số học kỳ')),
-                const SizedBox(width: 16),
+                  flex: 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Chương trình đào tạo',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.primary,
+                          letterSpacing: 0.5,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        widget.curriculumData.metadata['curriculumCode'] ?? widget.curriculumData.metadata['name'] ?? 'Curriculum',
+                        style: const TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.textMain,
+                          letterSpacing: -1,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      const Text(
+                        'Dưới đây là thống kê tổng quan và lộ trình chi tiết các học kỳ của bạn.',
+                        style: TextStyle(fontSize: 16, color: AppColors.textSub, height: 1.5),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 48),
                 Expanded(
-                    child: StatCard(
-                        title: 'Môn học',
-                        value: '${widget.subjects.length}',
-                        icon: Icons.menu_book_rounded,
-                        subtitle: 'Tổng số môn học')),
-                const SizedBox(width: 16),
-                Expanded(
-                    child: StatCard(
-                        title: 'Tín chỉ',
-                        value: '$totalCredits',
-                        icon: Icons.military_tech_rounded,
-                        subtitle: 'Tổng số tín chỉ')),
+                  flex: 3,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: StatCard(
+                          title: 'Học kỳ',
+                          value: '${sortedSemesters.length}',
+                          icon: Icons.calendar_month_rounded,
+                          subtitle: 'Tổng số học kỳ'
+                        )
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: StatCard(
+                          title: 'Môn học',
+                          value: '${widget.curriculumData.subjects.length}',
+                          icon: Icons.menu_book_rounded,
+                          subtitle: 'Tổng số môn học'
+                        )
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: StatCard(
+                          title: 'Tín chỉ',
+                          value: '$totalCredits',
+                          icon: Icons.military_tech_rounded,
+                          subtitle: 'Tổng số tín chỉ'
+                        )
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
 
@@ -125,12 +143,38 @@ class _CurriculumDetailScreenState extends State<CurriculumDetailScreen> {
                       fontWeight: FontWeight.bold,
                       color: AppColors.textMain),
                 ),
+                const SizedBox(width: 24),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      PageRouteBuilder(
+                        opaque: false, // Allows background blur to show through
+                        pageBuilder: (context, animation, secondaryAnimation) => RoadmapCarouselScreen(
+                          semesterGroups: _semesterGroups,
+                          sortedSemesters: sortedSemesters,
+                          syllabi: widget.curriculumData.syllabi,
+                        ),
+                        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                          return FadeTransition(opacity: animation, child: child);
+                        },
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.fullscreen_rounded, size: 20),
+                  label: const Text('Xem chi tiết'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  ),
+                ),
                 const Spacer(),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
-                    color: AppColors.warning.withValues(alpha: 0.1),
+                    color: AppColors.warning.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Row(

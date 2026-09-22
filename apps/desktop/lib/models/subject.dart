@@ -4,6 +4,7 @@ class Subject {
   final String name;
   final String credits;
   final String preRequisite;
+  final bool isPlaceholder;
 
   Subject({
     required this.semester,
@@ -11,6 +12,7 @@ class Subject {
     required this.name,
     required this.credits,
     required this.preRequisite,
+    this.isPlaceholder = false,
   });
 
   Map<String, dynamic> toJson() => {
@@ -19,13 +21,26 @@ class Subject {
     'name': name,
     'credits': credits,
     'preRequisite': preRequisite,
+    'isPlaceholder': isPlaceholder,
   };
 
-  factory Subject.fromJson(Map<String, dynamic> json) => Subject(
-    semester: json['semester'] ?? 0,
-    code: json['code'] ?? '',
-    name: json['name'] ?? '',
-    credits: json['credits'] ?? '',
-    preRequisite: json['preRequisite'] ?? '',
-  );
+  factory Subject.fromJson(Map<String, dynamic> json) {
+    int parsedSemester = 0;
+    if (json['semester'] != null) {
+      if (json['semester'] is int) {
+        parsedSemester = json['semester'];
+      } else if (json['semester'] is String) {
+        parsedSemester = int.tryParse(json['semester']) ?? 0;
+      }
+    }
+
+    return Subject(
+      semester: parsedSemester,
+      code: json['code']?.toString() ?? '',
+      name: json['name']?.toString() ?? '',
+      credits: json['credits']?.toString() ?? '',
+      preRequisite: json['preRequisite']?.toString() ?? json['prerequisite']?.toString() ?? '', // Handle both camelCase and lowercase from extension
+      isPlaceholder: json['isPlaceholder'] ?? false,
+    );
+  }
 }
