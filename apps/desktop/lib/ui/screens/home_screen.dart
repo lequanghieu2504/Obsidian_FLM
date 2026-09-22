@@ -1,110 +1,189 @@
-import 'dart:io';
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import '../../models/curriculum.dart';
-import '../../services/storage_service.dart';
 import '../../utils/notification_helper.dart';
 import '../../app/theme/app_colors.dart';
 import '../layouts/dashboard_layout.dart';
-import 'scraping_screen.dart';
-import 'curriculum_list_screen.dart';
+import '../../utils/folder_reader.dart';
+import '../../models/curriculum_data.dart';
+import '../../utils/user_settings.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final bool forceShowUpload;
+
+  const HomeScreen({super.key, this.forceShowUpload = false});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final _cohortController = TextEditingController();
-  
+  bool _isLoading = false;
+  bool _hasCache = false;
+  bool _isCheckingCache = true;
+
   @override
-  void dispose() {
-    _cohortController.dispose();
-    super.dispose();
+  void initState() {
+    super.initState();
+    _checkCache();
   }
 
-  void _validateCohort() async {
-    final input = _cohortController.text.trim().toUpperCase();
-    if (input.isEmpty) {
-      NotificationHelper.showToast(context, 'Vui lòng nhập niên khóa (VD: K19)', isError: true);
-      return;
-    }
-
-    final currentYear = DateTime.now().year;
-    final maxK = currentYear - 2004; // K1 là năm 2004
-
-    final regex = RegExp(r'^K(\d{1,2})([A-Z])?$');
-    final match = regex.firstMatch(input);
-
-    if (match == null) {
-      NotificationHelper.showToast(
-          context, 'Định dạng không hợp lệ. Vui lòng nhập dạng K19 hoặc K19B.',
-          isError: true);
-      return;
-    }
-
-    final kNumber = int.parse(match.group(1)!);
-    final suffix = match.group(2);
-
-    if (kNumber < 1 || kNumber > maxK) {
-      NotificationHelper.showToast(
-          context, 'Niên khóa không hợp lệ (phải từ K1 đến K$maxK)',
-          isError: true);
-      return;
-    }
-
-    if (suffix == null) {
-      NotificationHelper.showToast(
-          context, 'Vui lòng bổ sung hậu tố cho ngành (VD: A, B, C...)',
-          isError: true);
-      return;
-    }
-
-    NotificationHelper.showToast(
-      context,
-      'Niên khóa hợp lệ: $input... Đang chuẩn bị dữ liệu.',
-    );
-
-    final resultStr = await Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => ScrapingScreen(cohort: input)),
-    );
-
+  Future<void> _checkCache() async {
+    await UserSettings.load();
+    final cached = await FolderReader.getCachedCurriculum();
     if (!mounted) return;
+    
+    if (cached != null && !widget.forceShowUpload) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => DashboardLayout(curriculumData: cached),
+        ),
+      );
+    } else {
+      setState(() {
+        _isCheckingCache = false;
+        _hasCache = cached != null;
+      });
+    }
+  }
 
-    if (resultStr != null && resultStr is String) {
-      try {
-        final List<dynamic> jsonList = jsonDecode(resultStr);
-        final List<Curriculum> curricula =
-            jsonList.map((e) => Curriculum.fromJson(e)).toList();
+  void _handleUploadFolder() async {
+    setState(() {
+      _isLoading = true;
+    });
 
-        final storage = StorageService();
-        await storage.saveCurriculumList(input, curricula);
+    try {
+      var curriculumData = await FolderReader.importAndParseFolder();
+      
+      if (!mounted) return;
+      
+      if (curriculumData == null) {
+        setState(() {
+          _isLoading = false;
+        });
+        return; // User canceled picker
+      }
 
-        if (!mounted) return;
+      if (curriculumData.combos.isNotEmpty) {
+        final selectedComboId = await _showComboSelectionDialog(curriculumData.combos);
+        if (selectedComboId != null) {
+          await FolderReader.saveSelectedCombo(selectedComboId);
+          // Re-parse để lấy dữ liệu đã lọc môn theo combo
+          curriculumData = await FolderReader.getCachedCurriculum();
+        }
+      }
+      
+      if (!mounted || curriculumData == null) return;
+      
+      NotificationHelper.showToast(context, 'Tải dữ liệu thành công!');
+      
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => DashboardLayout(curriculumData: curriculumData!),
+        ),
+      );
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
+      });
+      NotificationHelper.showToast(context, 'Lỗi tải dữ liệu: $e', isError: true);
+    }
+  }
 
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => CurriculumListScreen(
-              curricula: curricula,
-              cohort: input,
+  Future<String?> _showComboSelectionDialog(List<Combo> combos) async {
+    return showDialog<String>(
+      context: context,
+      barrierDismissible: false, // Bắt buộc chọn
+      builder: (context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+          title: const Text('Chọn Chuyên ngành hẹp', style: TextStyle(fontWeight: FontWeight.bold)),
+          content: SizedBox(
+            width: 400,
+            child: ListView.separated(
+              shrinkWrap: true,
+              itemCount: combos.length,
+              separatorBuilder: (_, __) => const SizedBox(height: 8),
+              itemBuilder: (context, index) {
+                final combo = combos[index];
+                return InkWell(
+                  onTap: () => Navigator.of(context).pop(combo.id),
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.primary.withOpacity(0.2)),
+                      borderRadius: BorderRadius.circular(12),
+                      color: AppColors.primaryBg,
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.bookmark_added_rounded, color: AppColors.primary),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            combo.name,
+                            style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.textMain),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
             ),
           ),
         );
-      } catch (e) {
-        debugPrint('Parse JSON error: $e');
+      },
+    );
+  }
+
+  void _handleLoadCache() async {
+    setState(() {
+      _isLoading = true;
+    });
+
+    try {
+      final curriculumData = await FolderReader.getCachedCurriculum();
+      
+      if (!mounted) return;
+      
+      if (curriculumData != null) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => DashboardLayout(curriculumData: curriculumData),
+          ),
+        );
+      } else {
+        setState(() {
+          _isLoading = false;
+        });
+        NotificationHelper.showToast(context, 'Không tìm thấy dữ liệu đã lưu', isError: true);
       }
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
+      });
+      NotificationHelper.showToast(context, 'Lỗi đọc dữ liệu: $e', isError: true);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_isCheckingCache) {
+      return const Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: CircularProgressIndicator(color: AppColors.primary),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Row(
         children: [
-          // Nửa trái: Illustration giống s-login
+          // Nửa trái: Illustration
           Expanded(
             flex: 5,
             child: Container(
@@ -118,7 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 borderRadius: BorderRadius.circular(40),
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.3),
+                    color: AppColors.primary.withOpacity(0.3),
                     blurRadius: 30,
                     offset: const Offset(0, 15),
                   )
@@ -133,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     const Icon(Icons.school_rounded, size: 80, color: Colors.white),
                     const SizedBox(height: 32),
                     const Text(
-                      'Biết mình đang ở đâu trong chương trình học',
+                      'Làm chủ lộ trình\nhọc tập của bạn',
                       style: TextStyle(
                         fontSize: 48,
                         fontWeight: FontWeight.w900,
@@ -144,10 +223,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     const SizedBox(height: 24),
                     Text(
-                      'Xem toàn bộ môn học của ngành, môn nào phải học trước, và hỏi trợ lý khi cần chọn môn cho kỳ tới.',
+                      'Tận dụng dữ liệu từ hệ thống để phân tích, sắp xếp và vạch ra chiến lược học tập hiệu quả nhất.',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white.withValues(alpha: 0.8),
+                        color: Colors.white.withOpacity(0.8),
                         height: 1.5,
                       ),
                     ),
@@ -157,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-          // Nửa phải: Form nhập khóa giống s-cohort
+          // Nửa phải: Hướng dẫn & Tải lên
           Expanded(
             flex: 4,
             child: Center(
@@ -169,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(32),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.03),
+                      color: Colors.black.withOpacity(0.03),
                       blurRadius: 40,
                       offset: const Offset(0, 10),
                     )
@@ -181,14 +260,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Row(
                       children: [
-                        const Icon(Icons.looks_one_rounded, color: AppColors.primaryLight, size: 24),
+                        const Icon(Icons.extension_rounded, color: AppColors.primaryLight, size: 24),
                         const SizedBox(width: 12),
                         Text(
-                          'Thiết lập lần đầu, bước 1 trên 2',
+                          'Chuẩn bị dữ liệu',
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
-                            color: AppColors.primaryLight.withValues(alpha: 0.8),
+                            color: AppColors.primaryLight.withOpacity(0.8),
                             letterSpacing: 0.5,
                           ),
                         ),
@@ -196,7 +275,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     const SizedBox(height: 24),
                     const Text(
-                      'Bạn học khóa nào?',
+                      'Tải lên khung chương trình',
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.w900,
@@ -204,55 +283,80 @@ class _HomeScreenState extends State<HomeScreen> {
                         letterSpacing: -1,
                       ),
                     ),
-                    const SizedBox(height: 12),
-                    const Text(
-                      'Khóa quyết định khung chương trình áp dụng cho bạn, nên các môn và tiên quyết sẽ khớp với khóa của bạn.',
-                      style: TextStyle(fontSize: 15, color: AppColors.textSub, height: 1.5),
-                    ),
-                    const SizedBox(height: 40),
+                    const SizedBox(height: 24),
                     
+                    // Instructions
                     Container(
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: AppColors.background,
+                        color: AppColors.primaryBg,
                         borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: const Color(0xFFE2E8F0)),
+                        border: Border.all(color: AppColors.primary.withOpacity(0.1)),
                       ),
-                      child: TextField(
-                        controller: _cohortController,
-                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                        decoration: const InputDecoration(
-                          hintText: 'Nhập khóa (VD: K19B)',
-                          hintStyle: TextStyle(color: AppColors.textSub, fontWeight: FontWeight.normal, fontSize: 16),
-                          prefixIcon: Icon(Icons.school_rounded, color: AppColors.primary),
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-                        ),
-                        onSubmitted: (_) => _validateCohort(),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _buildInstructionStep(
+                            '1',
+                            'Cài đặt Extension "Obsidian FLM" trên trình duyệt của bạn.',
+                          ),
+                          const SizedBox(height: 12),
+                          _buildInstructionStep(
+                            '2',
+                            'Đăng nhập vào hệ thống trường và dùng Extension để tải về thư mục dữ liệu.',
+                          ),
+                          const SizedBox(height: 12),
+                          _buildInstructionStep(
+                            '3',
+                            'Giải nén thư mục vừa tải và chọn tải lên tại đây.',
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'Gợi ý: Chỉ nhập đúng định dạng hệ thống quy định (VD: K19B, K18A).',
-                      style: TextStyle(fontSize: 13, color: AppColors.textSub),
-                    ),
+                    
                     const SizedBox(height: 32),
                     
-                    SizedBox(
-                      width: double.infinity,
-                      height: 56,
-                      child: ElevatedButton(
-                        onPressed: _validateCohort,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.primary,
-                          foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                    if (_isLoading)
+                      const Center(child: CircularProgressIndicator(color: AppColors.primary))
+                    else ...[
+                      SizedBox(
+                        width: double.infinity,
+                        height: 56,
+                        child: ElevatedButton.icon(
+                          onPressed: _handleUploadFolder,
+                          icon: const Icon(Icons.folder_open_rounded),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.primary,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            elevation: 0,
                           ),
-                          elevation: 0,
+                          label: const Text('Chọn thư mục dữ liệu', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                         ),
-                        child: const Text('Tiếp tục', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                       ),
-                    ),
+                      
+                      if (_hasCache) ...[
+                        const SizedBox(height: 16),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 56,
+                          child: OutlinedButton.icon(
+                            onPressed: _handleLoadCache,
+                            icon: const Icon(Icons.history_rounded),
+                            style: OutlinedButton.styleFrom(
+                              foregroundColor: AppColors.primary,
+                              side: BorderSide(color: AppColors.primary.withOpacity(0.5), width: 1.5),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            label: const Text('Tiếp tục với dữ liệu lần trước', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                          ),
+                        ),
+                      ]
+                    ],
                   ],
                 ),
               ),
@@ -260,6 +364,43 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildInstructionStep(String step, String text) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: 24,
+          height: 24,
+          decoration: const BoxDecoration(
+            color: AppColors.primary,
+            shape: BoxShape.circle,
+          ),
+          child: Center(
+            child: Text(
+              step,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 12,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: AppColors.textMain,
+              height: 1.4,
+              fontSize: 14,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

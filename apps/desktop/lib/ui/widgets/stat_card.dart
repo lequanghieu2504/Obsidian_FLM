@@ -48,14 +48,22 @@ class StatCard extends StatelessWidget {
                 ),
                 child: Icon(icon, color: color, size: 24),
               ),
-              const Spacer(),
-              Text(
-                value,
-                style: const TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w900,
-                  color: AppColors.textMain,
-                  letterSpacing: -1,
+              const SizedBox(width: 8),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      value,
+                      style: const TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w900,
+                        color: AppColors.textMain,
+                        letterSpacing: -1,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -68,6 +76,8 @@ class StatCard extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: AppColors.textMain,
             ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 4),
           Text(
@@ -76,6 +86,8 @@ class StatCard extends StatelessWidget {
               fontSize: 13,
               color: AppColors.textSub,
             ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),

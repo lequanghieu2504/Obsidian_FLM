@@ -6,12 +6,12 @@ class AppColors {
   static const Color primaryLight = Color(0xFF3B82F6); // blue-500
   static const Color primaryDark = Color(0xFF1D4ED8); // blue-700
   static const Color primaryBg = Color(0xFFEFF6FF); // blue-50
-  
+
   // Neutral Colors (Background & Surface)
   static const Color background = Color(0xFFF8FAFC); // slate-50
   static const Color surface = Colors.white;
   static const Color sidebarBackground = Color(0xFFF1F5F9); // slate-100
-  
+
   // Text Colors
   static const Color textMain = Color(0xFF0F172A); // slate-900
   static const Color textSub = Color(0xFF64748B); // slate-500
