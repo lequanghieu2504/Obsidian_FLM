@@ -37,7 +37,8 @@ class _DashboardLayoutState extends State<DashboardLayout> {
         children: [
           // 1. Sidebar (Trái)
           AppSidebar(
-            selectedIndex: _selectedIndex,
+            // Keep the current screen highlighted while the AI panel is open.
+            selectedIndex: _lastMainIndex,
             onItemSelected: (index) {
               setState(() {
                 if (index == 2) {
@@ -72,15 +73,50 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                   child: Row(
                     children: [
                       Text(
-                        _selectedIndex == 0 ? 'Tổng quan' : _selectedIndex == 1 ? 'Quản lý môn học' : _selectedIndex == 3 ? 'Khám phá chuyên ngành' : _selectedIndex == 4 ? 'Quản lý điểm' : 'Trợ lý học vụ',
+                        _selectedIndex == 2 && !_isChatOverlay
+                            ? 'Trợ lý học vụ'
+                            : _lastMainIndex == 0
+                                ? 'Tổng quan'
+                                : _lastMainIndex == 1
+                                    ? 'Quản lý môn học'
+                                    : _lastMainIndex == 3
+                                        ? 'Khám phá chuyên ngành'
+                                        : 'Quản lý điểm',
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: AppColors.textMain,
                         ),
                       ),
-                      // "Trợ lý" button removed: it duplicated the
-                      // sidebar's "Trợ lý học vụ" item.
+                      const Spacer(),
+                      const SizedBox(width: 16),
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          setState(() {
+                            if (_selectedIndex == 2) {
+                              _selectedIndex = _lastMainIndex;
+                            } else {
+                              _selectedIndex = 2;
+                              _isChatOverlay = true; // Default to overlay when using topbar button
+                            }
+                          });
+                        },
+                        icon: const Icon(Icons.chat_bubble_outline_rounded,
+                            size: 18),
+                        label: const Text('Trợ lý'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _selectedIndex == 2
+                              ? AppColors.primary
+                              : AppColors.surface,
+                          foregroundColor:
+                              _selectedIndex == 2 ? Colors.white : AppColors.textMain,
+                          elevation: 0,
+                          side: BorderSide(
+                              color: _selectedIndex == 2
+                                  ? AppColors.primary
+                                  : const Color(0xFFE2E8F0)),
+                        ),
+                      )
                     ],
                   ),
                 ),

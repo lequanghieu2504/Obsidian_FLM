@@ -190,8 +190,9 @@ class _AppSidebarState extends State<AppSidebar> {
                 children: [
                   _buildNavItem(0, Icons.grid_view_rounded, 'Tổng quan'),
                   _buildNavItem(1, Icons.menu_book_rounded, 'Môn học'),
-                  _buildNavItem(
-                      2, Icons.chat_bubble_outline_rounded, 'Trợ lý học vụ'),
+                  // Index 2 (Trợ lý học vụ) has no sidebar item: the AI
+                  // assistant is opened from the "Trợ lý" button in the
+                  // topbar, which is available on every screen.
                   _buildNavItem(3, Icons.search_rounded, 'Khám phá'),
                   _buildNavItem(4, Icons.assessment_rounded, 'Bảng điểm'),
                 ],
