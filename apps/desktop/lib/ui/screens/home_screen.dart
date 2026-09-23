@@ -28,13 +28,28 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _checkCache() async {
     await UserSettings.ensureLoaded();
-    final cached = await FolderReader.getCachedCurriculum();
+    var cached = await FolderReader.getCachedCurriculum();
     if (!mounted) return;
     
     if (cached != null && !widget.forceShowUpload) {
+      // A cached curriculum may have been imported without ever picking a
+      // "chuyên ngành hẹp" (e.g. the app was closed while the picker was
+      // open). Ask now instead of silently showing every combo's subjects.
+      if (cached.allCombos.isNotEmpty &&
+          !await FolderReader.hasSelectedCombo()) {
+        if (!mounted) return;
+        final selectedComboId =
+            await _showComboSelectionDialog(cached.allCombos);
+        if (selectedComboId != null) {
+          await FolderReader.saveSelectedCombo(selectedComboId);
+          cached = await FolderReader.getCachedCurriculum() ?? cached;
+        }
+        if (!mounted) return;
+      }
+      final data = cached;
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => DashboardLayout(curriculumData: cached),
+          builder: (context) => DashboardLayout(curriculumData: data),
         ),
       );
     } else {
