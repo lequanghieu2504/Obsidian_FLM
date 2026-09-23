@@ -657,26 +657,47 @@ class _SubjectsScreenState extends State<SubjectsScreen>
 
   Graph _buildSubGraph(String targetCode) {
     final Graph graph = Graph()..isTree = false;
-    final Set<String> relatedNodes = {targetCode};
 
-    // Forward and backward search for dependencies
-    bool changed = true;
-    while (changed) {
-      changed = false;
+    final Set<String> ancestors = {};
+    final Set<String> descendants = {};
+
+    // Tìm các môn tiên quyết (Ancestors) của target
+    Set<String> currentToProcess = {targetCode};
+    while (currentToProcess.isNotEmpty) {
+      Set<String> nextToProcess = {};
       for (var sub in widget.curriculumData.subjects) {
-        final reqs = _parsePrerequisites(sub.preRequisite);
-        for (var req in reqs) {
-          if (relatedNodes.contains(req) && !relatedNodes.contains(sub.code)) {
-            relatedNodes.add(sub.code);
-            changed = true;
-          } else if (relatedNodes.contains(sub.code) &&
-              !relatedNodes.contains(req)) {
-            relatedNodes.add(req);
-            changed = true;
+        if (currentToProcess.contains(sub.code)) {
+          final reqs = _parsePrerequisites(sub.preRequisite);
+          for (var req in reqs) {
+            if (!ancestors.contains(req)) {
+              ancestors.add(req);
+              nextToProcess.add(req);
+            }
           }
         }
       }
+      currentToProcess = nextToProcess;
     }
+
+    // Tìm các môn học sau (Descendants) yêu cầu target
+    currentToProcess = {targetCode};
+    while (currentToProcess.isNotEmpty) {
+      Set<String> nextToProcess = {};
+      for (var sub in widget.curriculumData.subjects) {
+        if (!descendants.contains(sub.code)) {
+          final reqs = _parsePrerequisites(sub.preRequisite);
+          for (var req in reqs) {
+            if (currentToProcess.contains(req)) {
+              descendants.add(sub.code);
+              nextToProcess.add(sub.code);
+            }
+          }
+        }
+      }
+      currentToProcess = nextToProcess;
+    }
+
+    final Set<String> relatedNodes = {targetCode, ...ancestors, ...descendants};
 
     Map<String, Node> nodeMap = {};
     for (var code in relatedNodes) {
@@ -725,31 +746,33 @@ class _SubjectsScreenState extends State<SubjectsScreen>
                 if (!_isFullGraphView) ...[
                   const SizedBox(width: 24),
                   Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      decoration: BoxDecoration(
-                        color: AppColors.background,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: const Color(0xFFE2E8F0)),
-                      ),
-                      child: DropdownButtonHideUnderline(
-                        child: DropdownButton<String>(
-                          value: _selectedGraphSubject,
-                          isExpanded: true,
-                          hint: const Text(
-                              'Chọn một môn học để xem chuỗi tiên quyết...'),
-                          items: widget.curriculumData.subjects
-                              .map((s) => DropdownMenuItem(
-                                    value: s.code,
-                                    child: Text('${s.code} - ${s.name}',
-                                        overflow: TextOverflow.ellipsis),
-                                  ))
-                              .toList(),
-                          onChanged: (val) {
-                            setState(() => _selectedGraphSubject = val);
-                          },
+                    child: DropdownMenu<String>(
+                      initialSelection: _selectedGraphSubject,
+                      expandedInsets: EdgeInsets.zero,
+                      hintText: 'Tìm kiếm hoặc chọn môn học...',
+                      menuHeight: 300,
+                      inputDecorationTheme: InputDecorationTheme(
+                        filled: true,
+                        fillColor: AppColors.background,
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(color: Color(0xFFE2E8F0)),
                         ),
                       ),
+                      onSelected: (val) {
+                        if (val != null) setState(() => _selectedGraphSubject = val);
+                      },
+                      dropdownMenuEntries: widget.curriculumData.subjects
+                          .map((s) => DropdownMenuEntry(
+                                value: s.code,
+                                label: '${s.code} - ${s.name}',
+                              ))
+                          .toList(),
                     ),
                   ),
                 ]
