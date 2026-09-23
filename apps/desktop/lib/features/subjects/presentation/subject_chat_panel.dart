@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../../ui/widgets/ai_settings_form.dart';
+import '../../../utils/user_settings.dart';
 import '../../assistant/presentation/simple_markdown.dart';
 import '../application/subject_detail_controller.dart';
 import '../domain/subject_workspace.dart';
@@ -29,7 +31,12 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
     _text.text = widget.controller.draft;
     _text.addListener(_saveDraft);
     _focus.onKeyEvent = _handleComposerKeyEvent;
+    // The Gemini key/model are shared with "Trợ lý học vụ": refresh when
+    // they change anywhere in the app.
+    UserSettings.aiSettingsRevision.addListener(_onAiSettingsChanged);
   }
+
+  void _onAiSettingsChanged() => widget.controller.loadKey();
 
   /// Enter sends the message. Shift+Enter (and the numpad Enter key held
   /// with Shift) falls through to the field's own default handling
@@ -63,6 +70,7 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
   bool get wantKeepAlive => true;
   @override
   void dispose() {
+    UserSettings.aiSettingsRevision.removeListener(_onAiSettingsChanged);
     _text.dispose();
     _focus.dispose();
     super.dispose();
@@ -156,11 +164,11 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
                           : 'Add Gemini key',
                       onPressed: controller.sending || controller.keyBusy
                           ? null
-                          : () => showDialog<void>(
-                              context: context,
-                              builder: (_) =>
-                                  _GeminiKeyDialog(controller: controller),
-                            ),
+                          : () async {
+                              // Same settings form as "Trợ lý học vụ".
+                              await showAiSettingsDialog(context);
+                              await controller.loadKey();
+                            },
                       icon: const Icon(Icons.key_outlined),
                     ),
                     IconButton(
@@ -214,7 +222,7 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
                         if (!controller.hasKey) ...[
                           const SizedBox(height: 16),
                           const Text(
-                            'Add your own Gemini API key using the key button above.',
+                            'Add your Gemini API key using the key button above (shared with Trợ lý học vụ — enter it once).',
                           ),
                         ],
                       ],
@@ -522,102 +530,5 @@ class _AttachmentPickerState extends State<_AttachmentPicker> {
         child: Text('Attach ${selected.length} files'),
       ),
     ],
-  );
-}
-
-class _GeminiKeyDialog extends StatefulWidget {
-  const _GeminiKeyDialog({required this.controller});
-  final SubjectDetailController controller;
-  @override
-  State<_GeminiKeyDialog> createState() => _GeminiKeyDialogState();
-}
-
-class _GeminiKeyDialogState extends State<_GeminiKeyDialog> {
-  final _key = TextEditingController();
-  @override
-  void dispose() {
-    _key.clear();
-    _key.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => ListenableBuilder(
-    listenable: widget.controller,
-    builder: (context, _) => AlertDialog(
-      title: const Text('Your Gemini API key'),
-      content: SizedBox(
-        width: 400,
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Stored in your system credential store. Your existing key is never displayed.',
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: _key,
-                obscureText: true,
-                autocorrect: false,
-                enableSuggestions: false,
-                autofocus: true,
-                readOnly: widget.controller.keyBusy,
-                decoration: const InputDecoration(
-                  labelText: 'Gemini API key',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              if (widget.controller.keyError != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 12),
-                  child: Semantics(
-                    liveRegion: true,
-                    child: Text(
-                      widget.controller.keyError!,
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.error,
-                      ),
-                    ),
-                  ),
-                ),
-            ],
-          ),
-        ),
-      ),
-      actions: [
-        if (widget.controller.hasKey)
-          TextButton(
-            onPressed: widget.controller.keyBusy
-                ? null
-                : () async {
-                    await widget.controller.removeKey();
-                    if (context.mounted && !widget.controller.hasKey) {
-                      Navigator.pop(context);
-                    }
-                  },
-            child: const Text('Remove key'),
-          ),
-        TextButton(
-          onPressed: widget.controller.keyBusy
-              ? null
-              : () => Navigator.pop(context),
-          child: const Text('Cancel'),
-        ),
-        ValueListenableBuilder(
-          valueListenable: _key,
-          builder: (context, value, _) => FilledButton(
-            onPressed: widget.controller.keyBusy || value.text.trim().isEmpty
-                ? null
-                : () async {
-                    final saved = await widget.controller.saveKey(_key.text);
-                    if (context.mounted && saved) Navigator.pop(context);
-                  },
-            child: Text(widget.controller.keyBusy ? 'Saving…' : 'Save key'),
-          ),
-        ),
-      ],
-    ),
   );
 }

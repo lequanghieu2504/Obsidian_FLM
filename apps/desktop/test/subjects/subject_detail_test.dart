@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:obsidian_flm_desktop/features/assistant/infrastructure/gemini_llm_client.dart';
 import 'package:obsidian_flm_desktop/features/subjects/application/subject_detail_controller.dart';
 import 'package:obsidian_flm_desktop/features/subjects/presentation/subject_detail_screen.dart';
 import 'package:obsidian_flm_desktop/models/subject.dart';
+import 'package:obsidian_flm_desktop/utils/user_settings.dart';
 
 import 'test_support.dart';
 
@@ -108,14 +111,18 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('missing key disables send and key can be configured securely', (
+  testWidgets('missing key disables send; key is set in the shared AI settings', (
     tester,
   ) async {
     tester.view.physicalSize = const Size(1200, 900);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    final keys = MemoryKeys()..value = null;
+    // The subject chat uses the app-wide key (same as Trợ lý học vụ).
+    FlutterSecureStorage.setMockInitialValues({});
+    await tester.runAsync(() => UserSettings.ensureLoaded());
+    await tester.runAsync(() => UserSettings.clearApiKey());
+    const keys = SecureGeminiKeyStore();
     await tester.pumpWidget(
       MaterialApp(
         home: SubjectDetailScreen(
@@ -145,9 +152,12 @@ void main() {
     );
     await tester.enterText(secretField, 'new-test-key');
     await tester.pump();
-    await tester.tap(find.text('Save key'));
+    await tester.runAsync(() async {
+      await tester.tap(find.text('Lưu'));
+      await Future<void>.delayed(const Duration(milliseconds: 200));
+    });
     await tester.pumpAndSettle();
-    expect(keys.value, 'new-test-key');
+    expect(UserSettings.geminiApiKey, 'new-test-key');
     expect(find.text('new-test-key'), findsNothing);
     expect(
       tester

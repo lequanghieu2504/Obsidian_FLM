@@ -3,6 +3,7 @@ import '../../app/theme/app_colors.dart';
 import '../../services/chat_service.dart';
 import '../../models/curriculum_data.dart';
 import '../../utils/user_settings.dart';
+import 'ai_settings_form.dart';
 
 class ChatBox extends StatefulWidget {
   final CurriculumData curriculumData;
@@ -29,19 +30,20 @@ class _ChatBoxState extends State<ChatBox> {
   bool _isLoading = false;
   bool _isSettingsMode = false;
 
-  late TextEditingController _apiController;
-  late String _selectedModel;
-
   @override
   void initState() {
     super.initState();
-    _apiController = TextEditingController(text: UserSettings.geminiApiKey);
-    _selectedModel = UserSettings.validModels.contains(UserSettings.geminiModel)
-        ? UserSettings.geminiModel
-        : 'gemini-3.8-flash';
-    if (UserSettings.geminiApiKey.isEmpty) {
+    if (!UserSettings.hasApiKey) {
       _isSettingsMode = true;
     }
+    // Key/model are shared app-wide: re-create the Gemini session whenever
+    // they change (here or from a subject's chat).
+    UserSettings.aiSettingsRevision.addListener(_onAiSettingsChanged);
+    _initChat();
+  }
+
+  void _onAiSettingsChanged() {
+    if (!mounted) return;
     _initChat();
   }
 
@@ -67,7 +69,7 @@ class _ChatBoxState extends State<ChatBox> {
   Future<void> _sendMessage(String text) async {
     if (text.trim().isEmpty) return;
 
-    if (UserSettings.geminiApiKey.isEmpty) {
+    if (!UserSettings.hasApiKey) {
       setState(() => _isSettingsMode = true);
       return;
     }
@@ -86,7 +88,7 @@ class _ChatBoxState extends State<ChatBox> {
 
   @override
   void dispose() {
-    _apiController.dispose();
+    UserSettings.aiSettingsRevision.removeListener(_onAiSettingsChanged);
     _textController.dispose();
     _scrollController.dispose();
     super.dispose();
@@ -96,104 +98,12 @@ class _ChatBoxState extends State<ChatBox> {
     return Expanded(
       child: Container(
         color: const Color(0xFFF8FAFC),
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Cấu hình Trợ lý',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.primaryDark)),
-            const SizedBox(height: 8),
-            const Text('Vui lòng nhập API Key để sử dụng tính năng Chat.',
-                style: TextStyle(fontSize: 14, color: AppColors.textSub)),
-            const SizedBox(height: 24),
-            const Text('Gemini API Key:',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600, color: AppColors.textMain)),
-            const SizedBox(height: 8),
-            TextField(
-              controller: _apiController,
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: 'Nhập API Key của bạn...',
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: Color(0xFFE2E8F0))),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: Color(0xFFE2E8F0))),
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              ),
-            ),
-            const SizedBox(height: 16),
-            const Text('Chọn Model:',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600, color: AppColors.textMain)),
-            const SizedBox(height: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: const Color(0xFFE2E8F0)),
-                  borderRadius: BorderRadius.circular(12)),
-              child: DropdownButtonHideUnderline(
-                child: DropdownButton<String>(
-                  value: _selectedModel,
-                  isExpanded: true,
-                  items: const [
-                    DropdownMenuItem(
-                        value: 'gemini-3.8-flash',
-                        child: Text('Gemini 3.8 Flash')),
-                    DropdownMenuItem(
-                        value: 'gemini-3.5-flash-lite',
-                        child: Text('Gemini 3.5 Flash-Lite')),
-                    DropdownMenuItem(
-                        value: 'gemini-3.1-pro-preview',
-                        child: Text('Gemini Pro (Bản cũ)')),
-                  ],
-                  onChanged: (val) {
-                    if (val != null) setState(() => _selectedModel = val);
-                  },
-                ),
-              ),
-            ),
-            const Spacer(),
-            SizedBox(
-              width: double.infinity,
-              height: 48,
-              child: ElevatedButton(
-                onPressed: () async {
-                  await UserSettings.saveGeminiSettings(
-                      _apiController.text, _selectedModel);
-                  _initChat();
-                  setState(() => _isSettingsMode = false);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primary,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                ),
-                child: const Text('Lưu & Bắt đầu Chat'),
-              ),
-            ),
-            if (UserSettings.geminiApiKey.isNotEmpty) ...[
-              const SizedBox(height: 12),
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: () => setState(() => _isSettingsMode = false),
-                  child: const Text('Hủy',
-                      style: TextStyle(color: AppColors.textSub)),
-                ),
-              )
-            ]
-          ],
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24),
+          child: AiSettingsForm(
+            onSaved: () => setState(() => _isSettingsMode = false),
+            onCancel: () => setState(() => _isSettingsMode = false),
+          ),
         ),
       ),
     );

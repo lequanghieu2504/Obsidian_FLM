@@ -3,45 +3,56 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
 
+import '../../../utils/user_settings.dart';
 import '../../subjects/domain/subject_workspace.dart';
 import '../application/llm_client.dart';
 import 'gemini_request.dart';
 import 'gemini_response.dart';
 
+/// Reads/writes the app-wide Gemini key kept by [UserSettings] (OS
+/// credential store), so the subject assistant and "Trợ lý học vụ" share
+/// one key that the user enters once.
 class SecureGeminiKeyStore implements GeminiKeyStore {
   const SecureGeminiKeyStore();
-  static const _storage = FlutterSecureStorage();
-  static const _key = 'obsidian_flm.gemini.api_key';
   @override
-  Future<String?> read() => _storage.read(key: _key);
+  Future<String?> read() async {
+    await UserSettings.ensureLoaded();
+    return UserSettings.hasApiKey ? UserSettings.geminiApiKey : null;
+  }
+
   @override
-  Future<void> write(String key) => _storage.write(key: _key, value: key);
+  Future<void> write(String key) async {
+    await UserSettings.ensureLoaded();
+    await UserSettings.saveGeminiSettings(key, UserSettings.geminiModel);
+  }
+
   @override
-  Future<void> delete() => _storage.delete(key: _key);
+  Future<void> delete() => UserSettings.clearApiKey();
 }
 
 class GeminiLlmClient implements LlmClient {
   GeminiLlmClient({
     required this.keys,
     http.Client? client,
-    this.model = const String.fromEnvironment(
-      'GEMINI_MODEL',
-      defaultValue: 'gemini-3.5-flash-lite',
-    ),
+    String? model,
     this.timeout = const Duration(seconds: 60),
     this.maxAttempts = 3,
     this.maxHistoryMessages = 20,
-  }) : _client = client ?? http.Client(),
+  }) : _modelOverride = model,
+       _client = client ?? http.Client(),
        _requestBuilder = GeminiRequestBuilder(
          maxHistoryMessages: maxHistoryMessages,
        );
 
   final GeminiKeyStore keys;
   final http.Client _client;
-  final String model;
+  /// Fixed model (tests); null = the model chosen in the shared AI settings.
+  final String? _modelOverride;
+
+  /// The model in use — the same one "Trợ lý học vụ" uses.
+  String get model => _modelOverride ?? UserSettings.geminiModel;
   final Duration timeout;
 
   /// Turns the generic prompt (context + history + attachments) into
@@ -121,14 +132,14 @@ class GeminiLlmClient implements LlmClient {
           400 || 401 || 403 =>
             'Gemini rejected the request. Check your API key and API access, then retry.',
           404 =>
-            'The configured Gemini model is unavailable. Update GEMINI_MODEL and retry.',
+            'The selected Gemini model is unavailable. Pick another model in the AI settings (key button) and retry.',
           429 =>
             'Gemini quota or rate limit reached (retried automatically). '
             'If this keeps happening, your API key has likely hit its '
             'daily free-tier request/token cap for this model — that '
             'resets at midnight Pacific time, not after a short wait. '
             'Check aistudio.google.com/rate-limit for your actual limits, '
-            'or switch GEMINI_MODEL / enable billing for higher quota.',
+            'or switch model in the AI settings / enable billing for higher quota.',
           503 =>
             "Gemini's servers are temporarily overloaded (retried automatically). Please try again in a moment.",
           _ =>

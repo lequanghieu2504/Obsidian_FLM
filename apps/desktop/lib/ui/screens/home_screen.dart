@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _checkCache() async {
-    await UserSettings.load();
+    await UserSettings.ensureLoaded();
     final cached = await FolderReader.getCachedCurriculum();
     if (!mounted) return;
     
