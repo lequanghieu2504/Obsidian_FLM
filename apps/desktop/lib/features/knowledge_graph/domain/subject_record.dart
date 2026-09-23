@@ -95,6 +95,30 @@ class SubjectRecord {
   /// The label shown on a subject's graph node.
   String get displayLabel => subjectCode.isNotEmpty ? subjectCode : syllabusId;
 
+  /// This subject's week-by-week session-plan table ([sessionPlanHeading]),
+  /// or null if the raw file didn't have one (some subjects' files lack a
+  /// session plan).
+  SyllabusSection? get sessionPlanSection {
+    for (final section in sections) {
+      if (section.heading == sessionPlanHeading) return section;
+    }
+    return null;
+  }
+
+  /// This subject's "constructive question(s)" table — discussion/
+  /// reflection prompts FLM ties to a specific session via its own
+  /// `SessionNo` column (see `domain/constructive_questions.dart`) — or
+  /// null if the raw file doesn't have one (not every subject's export
+  /// includes this section).
+  SyllabusSection? get constructiveQuestionsSection {
+    for (final section in sections) {
+      if (_constructiveQuestionHeading.hasMatch(section.heading)) {
+        return section;
+      }
+    }
+    return null;
+  }
+
   /// A regex that matches any section heading produced for the "learning
   /// outcomes" table, e.g. `"5 LO(s)"`, `"12 LO(s)"`.
   static final RegExp _learningOutcomeHeading = RegExp(r'LO\(s\)\s*$');
@@ -125,6 +149,23 @@ class SubjectRecord {
   /// string.
   static const referenceMaterialsHeading = 'Reference materials';
 
+  /// The [SyllabusSection.heading] a subject's week-by-week session-plan
+  /// table is normalized to (see [_resolveHeading]). Public so callers that
+  /// want to single that table out — e.g. mapping a knowledge-graph topic/
+  /// subtopic node to the session(s) that actually cover it (see
+  /// `domain/session_plan.dart`) — key off this instead of duplicating the
+  /// literal string.
+  static const sessionPlanHeading = 'Session plan';
+
+  /// A regex matching any section heading produced for the "constructive
+  /// questions" table, e.g. `"28 Constructive question(s)"` — the same
+  /// "N thing(s)" shape FLM gives [_learningOutcomeHeading]'s table, so
+  /// (unlike [sessionPlanHeading]/[referenceMaterialsHeading]) this one
+  /// never goes through [_resolveHeading] — FLM already names it something
+  /// real, just with a leading count.
+  static final RegExp _constructiveQuestionHeading =
+      RegExp(r'Constructive question\(s\)\s*$', caseSensitive: false);
+
   static String _resolveHeading(String heading, List<String> headers) {
     if (!_genericTableHeading.hasMatch(heading.trim())) return heading;
     final normalizedHeaders = headers.map((h) => h.toLowerCase()).toSet();
@@ -132,7 +173,7 @@ class SubjectRecord {
       return referenceMaterialsHeading;
     }
     if (normalizedHeaders.contains('learningteachingtype')) {
-      return 'Session plan';
+      return sessionPlanHeading;
     }
     return 'Additional information';
   }

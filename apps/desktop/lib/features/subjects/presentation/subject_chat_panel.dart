@@ -28,6 +28,25 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
     super.initState();
     _text.text = widget.controller.draft;
     _text.addListener(_saveDraft);
+    _focus.onKeyEvent = _handleComposerKeyEvent;
+  }
+
+  /// Enter sends the message. Shift+Enter (and the numpad Enter key held
+  /// with Shift) falls through to the field's own default handling
+  /// (returning [KeyEventResult.ignored]), which inserts a newline.
+  KeyEventResult _handleComposerKeyEvent(FocusNode node, KeyEvent event) {
+    final isEnter =
+        event.logicalKey == LogicalKeyboardKey.enter ||
+        event.logicalKey == LogicalKeyboardKey.numpadEnter;
+    if (event is! KeyDownEvent ||
+        !isEnter ||
+        HardwareKeyboard.instance.isShiftPressed) {
+      return KeyEventResult.ignored;
+    }
+    if (widget.controller.canSend && _text.text.trim().isNotEmpty) {
+      _send();
+    }
+    return KeyEventResult.handled;
   }
 
   void _saveDraft() => widget.controller.draft = _text.text;
@@ -376,39 +395,18 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
                       ),
                       const SizedBox(height: 8),
                     ],
-                    Shortcuts(
-                      shortcuts: const {
-                        SingleActivator(
-                          LogicalKeyboardKey.enter,
-                          control: true,
-                        ): ActivateIntent(),
-                      },
-                      child: Actions(
-                        actions: {
-                          ActivateIntent: CallbackAction<ActivateIntent>(
-                            onInvoke: (_) {
-                              if (controller.canSend &&
-                                  _text.text.trim().isNotEmpty) {
-                                _send();
-                              }
-                              return null;
-                            },
-                          ),
-                        },
-                        child: TextField(
-                          controller: _text,
-                          focusNode: _focus,
-                          readOnly: controller.sending,
-                          minLines: 1,
-                          maxLines: 4,
-                          maxLength: 16000,
-                          decoration: const InputDecoration(
-                            labelText: 'Ask a question',
-                            helperText: 'Ctrl+Enter to send',
-                            border: OutlineInputBorder(),
-                            counterText: '',
-                          ),
-                        ),
+                    TextField(
+                      controller: _text,
+                      focusNode: _focus,
+                      readOnly: controller.sending,
+                      minLines: 1,
+                      maxLines: 4,
+                      maxLength: 16000,
+                      decoration: const InputDecoration(
+                        labelText: 'Ask a question',
+                        helperText: 'Enter to send · Shift+Enter for a new line',
+                        border: OutlineInputBorder(),
+                        counterText: '',
                       ),
                     ),
                     const SizedBox(height: 8),

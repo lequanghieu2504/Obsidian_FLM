@@ -11,12 +11,14 @@ String graphNodeTooltipMessage(GraphNodeData data) {
       final subjectCode = (data.attributes['subjectCode'] ?? '').toString();
       final subtopicCount = data.attributes['subtopicCount'] ?? 0;
       return '${data.label}\n'
-          'Chủ đề của môn $subjectCode · $subtopicCount khái niệm con';
+          'Chủ đề của môn $subjectCode · $subtopicCount khái niệm con\n'
+          'Bấm để xem thuộc buổi học nào';
     case NodeType.subtopic:
       final subjectCode = (data.attributes['subjectCode'] ?? '').toString();
       final topicLabel = (data.attributes['topicLabel'] ?? '').toString();
       return '${data.label}\n'
-          'Thuộc chủ đề "$topicLabel" · Môn $subjectCode';
+          'Thuộc chủ đề "$topicLabel" · Môn $subjectCode\n'
+          'Bấm để xem thuộc buổi học nào';
     case NodeType.subject:
     default:
       final name = (data.attributes['name'] ?? '').toString();

@@ -139,9 +139,12 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   GlobalKey _chatKey = GlobalKey();
 
   /// Whether the (single, page-wide) chat panel is currently minimized.
-  /// Collapsing swaps it for a slim [_CollapsedChatRail]; the information
+  /// Collapsing swaps it for a small [_CollapsedChatButton]; the information
   /// side takes the freed-up space instead of it just sitting there blank.
-  bool _chatCollapsed = false;
+  /// Starts collapsed — opening a subject should land on its content, not
+  /// its chat; a person who wants the chat taps [_CollapsedChatButton] to
+  /// bring it up themselves.
+  bool _chatCollapsed = true;
 
   /// The resizable split's dragged width, persisted here (rather than left
   /// inside [_ResizableSplit]'s own state) so collapsing and then
@@ -185,7 +188,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
         return;
       }
       _chatKey = GlobalKey();
-      _chatCollapsed = false;
+      _chatCollapsed = true;
       _chatSplitWidth = null;
       setState(() => _controller = controller);
       await controller.load();
@@ -218,11 +221,11 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
         return Padding(
           padding: const EdgeInsets.all(24),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(child: information),
               const SizedBox(width: 12),
-              _CollapsedChatRail(onExpand: _toggleChatCollapsed),
+              _CollapsedChatButton(onExpand: _toggleChatCollapsed),
             ],
           ),
         );
@@ -246,7 +249,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
           children: [
             Expanded(child: information),
             const SizedBox(height: 12),
-            _CollapsedChatRail(vertical: false, onExpand: _toggleChatCollapsed),
+            _CollapsedChatButton(onExpand: _toggleChatCollapsed),
           ],
         ),
       );
@@ -496,61 +499,23 @@ class _PaneResizeHandleState extends State<_PaneResizeHandle> {
   }
 }
 
-/// What a tab's chat pane becomes while minimized: a slim, always-tappable
-/// strip (instead of the full [SubjectChatPanel]) that hands the freed-up
-/// space to the information panel next to it, with one affordance — tap
-/// anywhere on it — to bring the chat back.
-class _CollapsedChatRail extends StatelessWidget {
-  const _CollapsedChatRail({required this.onExpand, this.vertical = true});
+/// What a tab's chat pane becomes while minimized: a single small icon
+/// button (instead of the full [SubjectChatPanel] or a wide rail) that
+/// hands essentially all the freed-up space back to the information panel
+/// next to it, with one affordance — tap it — to bring the chat back.
+class _CollapsedChatButton extends StatelessWidget {
+  const _CollapsedChatButton({required this.onExpand});
 
   final VoidCallback onExpand;
 
-  /// True for the wide (side-by-side) layout, where this is a slim column
-  /// stretched to the full height next to the information panel. False for
-  /// the narrow (stacked) layout, where it's a slim row under it instead.
-  final bool vertical;
-
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final label = Text(
-      'Chat',
-      style: theme.textTheme.labelLarge?.copyWith(
-        color: theme.colorScheme.onSurfaceVariant,
-        fontWeight: FontWeight.w700,
+    return Tooltip(
+      message: 'Expand chat',
+      child: IconButton.filledTonal(
+        onPressed: onExpand,
+        icon: const Icon(Icons.chat_bubble_outline),
       ),
     );
-    final icon = Icon(
-      vertical ? Icons.chevron_left : Icons.chevron_right,
-      color: theme.colorScheme.onSurfaceVariant,
-    );
-    final content = vertical
-        ? Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              icon,
-              const SizedBox(height: 8),
-              RotatedBox(quarterTurns: 3, child: label),
-            ],
-          )
-        : Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [label, const SizedBox(width: 8), icon],
-          );
-    final rail = Card(
-      margin: EdgeInsets.zero,
-      child: Tooltip(
-        message: 'Expand chat',
-        child: InkWell(
-          onTap: onExpand,
-          borderRadius: BorderRadius.circular(12),
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: content,
-          ),
-        ),
-      ),
-    );
-    return vertical ? SizedBox(width: 56, child: rail) : SizedBox(height: 56, child: rail);
   }
 }
