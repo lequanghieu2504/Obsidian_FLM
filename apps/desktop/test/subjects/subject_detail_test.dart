@@ -46,26 +46,26 @@ void main() {
       await tester.enterText(find.byType(TextField), 'Explain a servlet');
       tester.view.physicalSize = const Size(600, 850);
       await tester.pumpAndSettle();
-      await tester.tap(find.text('Gemini Assistant').first);
+      await tester.tap(find.text('Trợ lý môn học').first);
       await tester.pumpAndSettle();
       expect(find.text('Explain a servlet'), findsOneWidget);
-      await tester.tap(find.widgetWithText(FilledButton, 'Send'));
+      await tester.tap(find.widgetWithText(FilledButton, 'Gửi'));
       await tester.pumpAndSettle();
       expect(find.text('Gemini is unavailable. Please retry.'), findsOneWidget);
       expect(tester.takeException(), isNull);
       llm.fail = false;
-      await tester.tap(find.text('Retry answer'));
+      await tester.tap(find.text('Thử lại câu trả lời'));
       await tester.pumpAndSettle();
       expect(find.text('Test response'), findsOneWidget);
       expect(llm.context, contains('Code: PRJ301'));
-      await tester.tap(find.byTooltip('Clear conversation'));
+      await tester.tap(find.byTooltip('Xóa lịch sử chat'));
       await tester.pumpAndSettle();
-      await tester.tap(find.text('Cancel'));
+      await tester.tap(find.text('Hủy'));
       await tester.pumpAndSettle();
       expect(find.text('Test response'), findsOneWidget);
-      await tester.tap(find.byTooltip('Clear conversation'));
+      await tester.tap(find.byTooltip('Xóa lịch sử chat'));
       await tester.pumpAndSettle();
-      await tester.tap(find.widgetWithText(FilledButton, 'Clear conversation'));
+      await tester.tap(find.widgetWithText(FilledButton, 'Xóa lịch sử'));
       await tester.pumpAndSettle();
       expect(find.text('Test response'), findsNothing);
     },
@@ -106,7 +106,7 @@ void main() {
     );
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
-    await tester.tap(find.text('Gemini Assistant').first);
+    await tester.tap(find.text('Trợ lý môn học').first);
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull);
   });
@@ -141,11 +141,11 @@ void main() {
     await tester.enterText(find.byType(TextField), 'Question');
     expect(
       tester
-          .widget<FilledButton>(find.widgetWithText(FilledButton, 'Send'))
+          .widget<FilledButton>(find.widgetWithText(FilledButton, 'Gửi'))
           .onPressed,
       isNull,
     );
-    await tester.tap(find.byTooltip('Add Gemini key'));
+    await tester.tap(find.byTooltip('Thêm API Key'));
     await tester.pumpAndSettle();
     final secretField = find.byWidgetPredicate(
       (widget) => widget is TextField && widget.obscureText,
@@ -161,7 +161,7 @@ void main() {
     expect(find.text('new-test-key'), findsNothing);
     expect(
       tester
-          .widget<FilledButton>(find.widgetWithText(FilledButton, 'Send'))
+          .widget<FilledButton>(find.widgetWithText(FilledButton, 'Gửi'))
           .onPressed,
       isNotNull,
     );
