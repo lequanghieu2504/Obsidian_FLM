@@ -331,19 +331,24 @@ class _InformationField extends StatelessWidget {
     required this.label,
     required this.value,
     this.wide = false,
+    this.fill = false,
   });
 
   final String label;
   final String value;
   final bool wide;
 
+  /// Take all the width available (no 720px cap) — for long prose such as
+  /// the Description, so it reflows with the panel/window width.
+  final bool fill;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return ConstrainedBox(
       constraints: BoxConstraints(
-        minWidth: wide ? 280 : 120,
-        maxWidth: wide ? 720 : 220,
+        minWidth: fill ? 0 : (wide ? 280 : 120),
+        maxWidth: fill ? double.infinity : (wide ? 720 : 220),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -451,7 +456,7 @@ class _SyllabusSection extends StatelessWidget {
           _InformationField(
             label: 'Description',
             value: syllabus.description,
-            wide: true,
+            fill: true,
           ),
         ],
       ],
