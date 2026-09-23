@@ -7,6 +7,7 @@ import '../../features/subjects/presentation/subject_list_screen.dart';
 import '../screens/explore_curriculums_screen.dart';
 import '../screens/transcript_screen.dart';
 import '../widgets/chat_box.dart';
+import '../widgets/pane_resize_handle.dart';
 
 class DashboardLayout extends StatefulWidget {
   final CurriculumData curriculumData;
@@ -28,6 +29,14 @@ class _DashboardLayoutState extends State<DashboardLayout> {
   int _lastMainIndex = 0; // Lưu vết màn hình chính trước khi mở chat
   bool _isChatOverlay = true;
   bool _isSidebarOpen = true;
+
+  // Width of the AI drawer; the user can drag its left edge to resize it.
+  static const double _minChatWidth = 320;
+  double _chatWidth = 380;
+  bool _resizingChat = false;
+
+  double _maxChatWidth(BuildContext context) =>
+      (MediaQuery.sizeOf(context).width * 0.7).clamp(_minChatWidth, double.infinity);
 
   @override
   Widget build(BuildContext context) {
@@ -166,10 +175,24 @@ class _DashboardLayoutState extends State<DashboardLayout> {
           ),
 
           // 3. Chatbot Panel (Overlay Drawer)
+          if (_selectedIndex == 2 && _isChatOverlay)
+            PaneResizeHandle(
+              onDragStart: () => setState(() => _resizingChat = true),
+              onDragEnd: () => setState(() => _resizingChat = false),
+              // Handle sits on the drawer's left edge: dragging left widens it.
+              onDrag: (dx) => setState(() {
+                _chatWidth = (_chatWidth - dx)
+                    .clamp(_minChatWidth, _maxChatWidth(context));
+              }),
+            ),
           AnimatedContainer(
-            duration: const Duration(milliseconds: 300),
+            duration: _resizingChat
+                ? Duration.zero
+                : const Duration(milliseconds: 300),
             curve: Curves.easeInOut,
-            width: (_selectedIndex == 2 && _isChatOverlay) ? 380 : 0,
+            width: (_selectedIndex == 2 && _isChatOverlay)
+                ? _chatWidth.clamp(_minChatWidth, _maxChatWidth(context))
+                : 0,
             decoration: const BoxDecoration(
               color: Colors.white,
             ),

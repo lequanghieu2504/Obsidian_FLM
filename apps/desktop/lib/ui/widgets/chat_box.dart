@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../../features/assistant/presentation/simple_markdown.dart';
 import '../../app/theme/app_colors.dart';
 import '../../services/chat_service.dart';
 import '../../models/curriculum_data.dart';
@@ -27,6 +29,7 @@ class _ChatBoxState extends State<ChatBox> {
   final ChatService _chatService = ChatService();
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
+  final FocusNode _inputFocus = FocusNode();
   bool _isLoading = false;
   bool _isSettingsMode = false;
 
@@ -39,7 +42,34 @@ class _ChatBoxState extends State<ChatBox> {
     // Key/model are shared app-wide: re-create the Gemini session whenever
     // they change (here or from a subject's chat).
     UserSettings.aiSettingsRevision.addListener(_onAiSettingsChanged);
+    _inputFocus.onKeyEvent = _handleComposerKeyEvent;
     _initChat();
+  }
+
+  /// Same as the subject chat: Enter sends, Shift+Enter adds a new line.
+  KeyEventResult _handleComposerKeyEvent(FocusNode node, KeyEvent event) {
+    final isEnter = event.logicalKey == LogicalKeyboardKey.enter ||
+        event.logicalKey == LogicalKeyboardKey.numpadEnter;
+    if (event is! KeyDownEvent ||
+        !isEnter ||
+        HardwareKeyboard.instance.isShiftPressed) {
+      return KeyEventResult.ignored;
+    }
+    if (!_isLoading) _sendMessage(_textController.text);
+    return KeyEventResult.handled;
+  }
+
+  Future<void> _copyMessage(String content) async {
+    await Clipboard.setData(ClipboardData(text: content));
+    if (!mounted) return;
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        const SnackBar(
+          content: Text('Đã copy vào clipboard'),
+          duration: Duration(seconds: 2),
+        ),
+      );
   }
 
   void _onAiSettingsChanged() {
@@ -91,6 +121,7 @@ class _ChatBoxState extends State<ChatBox> {
     UserSettings.aiSettingsRevision.removeListener(_onAiSettingsChanged);
     _textController.dispose();
     _scrollController.dispose();
+    _inputFocus.dispose();
     super.dispose();
   }
 
@@ -112,7 +143,7 @@ class _ChatBoxState extends State<ChatBox> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget.isOverlay ? 380 : double.infinity,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         border: widget.isOverlay
@@ -172,6 +203,7 @@ class _ChatBoxState extends State<ChatBox> {
                       setState(() {
                         _chatService.clearHistory();
                       });
+                      _initChat();
                     } else if (value == 'close') {
                       widget.onClose();
                     }
@@ -218,63 +250,7 @@ class _ChatBoxState extends State<ChatBox> {
                   }
 
                   final msg = _chatService.history[index];
-                  final isUser = msg.role == 'user';
-
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: Row(
-                      mainAxisAlignment: isUser
-                          ? MainAxisAlignment.end
-                          : MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        if (!isUser) ...[
-                          Container(
-                            width: 28,
-                            height: 28,
-                            margin: const EdgeInsets.only(right: 8),
-                            decoration: const BoxDecoration(
-                              color: AppColors.primaryBg,
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Icon(Icons.smart_toy_rounded,
-                                size: 14, color: AppColors.primary),
-                          ),
-                        ],
-                        Flexible(
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 16, vertical: 12),
-                            decoration: BoxDecoration(
-                              color: isUser
-                                  ? AppColors.primary
-                                  : const Color(0xFFF8FAFC),
-                              borderRadius: BorderRadius.circular(16).copyWith(
-                                bottomRight: isUser
-                                    ? const Radius.circular(4)
-                                    : const Radius.circular(16),
-                                bottomLeft: !isUser
-                                    ? const Radius.circular(4)
-                                    : const Radius.circular(16),
-                              ),
-                              border: isUser
-                                  ? null
-                                  : Border.all(color: const Color(0xFFE2E8F0)),
-                            ),
-                            child: Text(
-                              msg.text,
-                              style: TextStyle(
-                                color:
-                                    isUser ? Colors.white : AppColors.textMain,
-                                height: 1.5,
-                              ),
-                            ),
-                          ),
-                        ),
-                        if (isUser) const SizedBox(width: 28),
-                      ],
-                    ),
-                  );
+                  return _buildMessage(msg);
                 },
               ),
             ),
@@ -293,61 +269,120 @@ class _ChatBoxState extends State<ChatBox> {
                 ),
               ),
 
-            // Input Box
+            // Composer (same layout as the subject chat)
             Container(
               padding: const EdgeInsets.all(16),
               decoration: const BoxDecoration(
                 color: Colors.white,
                 border: Border(top: BorderSide(color: Color(0xFFE2E8F0))),
               ),
-              child: Row(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: TextField(
-                      controller: _textController,
-                      decoration: InputDecoration(
-                        hintText: 'Hỏi về môn học...',
-                        hintStyle: const TextStyle(color: AppColors.textSub),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(24),
-                          borderSide:
-                              const BorderSide(color: Color(0xFFE2E8F0)),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(24),
-                          borderSide:
-                              const BorderSide(color: Color(0xFFE2E8F0)),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(24),
-                          borderSide:
-                              const BorderSide(color: AppColors.primary),
-                        ),
-                        contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 14),
-                      ),
-                      onSubmitted: _sendMessage,
+                  if (_isLoading) ...[
+                    const LinearProgressIndicator(
+                      semanticsLabel: 'Đang chờ Gemini',
+                    ),
+                    const SizedBox(height: 12),
+                  ],
+                  TextField(
+                    controller: _textController,
+                    focusNode: _inputFocus,
+                    readOnly: _isLoading,
+                    minLines: 1,
+                    maxLines: 4,
+                    decoration: const InputDecoration(
+                      labelText: 'Hỏi về chương trình, môn học...',
+                      helperText: 'Enter để gửi · Shift+Enter để xuống dòng',
+                      border: OutlineInputBorder(),
                     ),
                   ),
-                  const SizedBox(width: 12),
-                  InkWell(
-                    onTap: () => _sendMessage(_textController.text),
-                    borderRadius: BorderRadius.circular(24),
-                    child: Container(
-                      width: 48,
-                      height: 48,
-                      decoration: const BoxDecoration(
-                        color: AppColors.primary,
-                        shape: BoxShape.circle,
+                  const SizedBox(height: 8),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: SizedBox(
+                      width: 140,
+                      child: ValueListenableBuilder(
+                        valueListenable: _textController,
+                        builder: (context, value, _) => FilledButton.icon(
+                          onPressed: !_isLoading && value.text.trim().isNotEmpty
+                              ? () => _sendMessage(_textController.text)
+                              : null,
+                          icon: const Icon(Icons.send_outlined),
+                          label: const Text('Gửi'),
+                        ),
                       ),
-                      child: const Icon(Icons.send_rounded,
-                          color: Colors.white, size: 20),
                     ),
                   ),
                 ],
               ),
             ),
           ],
+        ],
+      ),
+    );
+  }
+
+  /// One message card — same format as the subject chat
+  /// ([SubjectChatPanel]): sender label, copy button, Markdown body that can
+  /// be selected and copied.
+  Widget _buildMessage(ChatMessage msg) {
+    final theme = Theme.of(context);
+    final isUser = msg.role == 'user';
+    final bubbleColor = isUser
+        ? theme.colorScheme.primaryContainer
+        : theme.colorScheme.surfaceContainerHighest;
+    final onBubbleColor = isUser
+        ? theme.colorScheme.onPrimaryContainer
+        : theme.colorScheme.onSurface;
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: bubbleColor,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                isUser ? Icons.person_outline : Icons.auto_awesome_outlined,
+                size: 16,
+                color: onBubbleColor,
+              ),
+              const SizedBox(width: 6),
+              Text(
+                isUser ? 'Bạn' : 'Gemini',
+                style: theme.textTheme.labelLarge?.copyWith(
+                  color: onBubbleColor,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const Spacer(),
+              SizedBox(
+                width: 28,
+                height: 28,
+                child: IconButton(
+                  padding: EdgeInsets.zero,
+                  tooltip: 'Copy tin nhắn',
+                  iconSize: 16,
+                  color: onBubbleColor,
+                  onPressed: () => _copyMessage(msg.text),
+                  icon: const Icon(Icons.copy_outlined),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          SimpleMarkdown(
+            data: msg.text,
+            baseStyle: theme.textTheme.bodyLarge?.copyWith(
+              color: onBubbleColor,
+              height: 1.5,
+            ),
+          ),
         ],
       ),
     );
