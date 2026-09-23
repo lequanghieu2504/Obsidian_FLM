@@ -8,6 +8,7 @@ import '../screens/explore_curriculums_screen.dart';
 import '../screens/transcript_screen.dart';
 import '../widgets/chat_box.dart';
 import '../widgets/pane_resize_handle.dart';
+import '../widgets/min_width_guard.dart';
 
 class DashboardLayout extends StatefulWidget {
   final CurriculumData curriculumData;
@@ -35,8 +36,16 @@ class _DashboardLayoutState extends State<DashboardLayout> {
   double _chatWidth = 380;
   bool _resizingChat = false;
 
-  double _maxChatWidth(BuildContext context) =>
-      (MediaQuery.sizeOf(context).width * 0.7).clamp(_minChatWidth, double.infinity);
+  /// Narrowest the main screen (Tổng quan, Môn học, ...) is laid out at.
+  static const double _minMainWidth = 760;
+
+  /// The AI drawer may only grow as far as it leaves [_minMainWidth] for the
+  /// main screen, so dragging it never squashes the other screens.
+  double _maxChatWidth(BuildContext context) {
+    final sidebar = _isSidebarOpen ? 260.0 : 80.0;
+    final max = MediaQuery.sizeOf(context).width - sidebar - 12 - _minMainWidth;
+    return max < _minChatWidth ? _minChatWidth : max;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +77,9 @@ class _DashboardLayoutState extends State<DashboardLayout> {
 
           // 2. Main Content (Giữa)
           Expanded(
-            child: Column(
+            child: MinWidthGuard(
+              minWidth: _minMainWidth,
+              child: Column(
               children: [
                 // Topbar
                 Container(
@@ -165,6 +176,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                 ),
               ],
             ),
+            ),
           ),
 
           // 3. Chatbot Panel (Overlay Drawer)
@@ -189,9 +201,16 @@ class _DashboardLayoutState extends State<DashboardLayout> {
             decoration: const BoxDecoration(
               color: Colors.white,
             ),
+            // The chat is laid out at its final width and only clipped while
+            // the drawer animates open, instead of being squeezed from 0px
+            // (which spammed "RenderFlex overflowed" errors).
             child: ClipRect(
-              child: (_selectedIndex == 2 && _isChatOverlay) 
-                ? ChatBox(
+              child: (_selectedIndex == 2 && _isChatOverlay)
+                ? OverflowBox(
+                    alignment: Alignment.centerLeft,
+                    minWidth: _chatWidth.clamp(_minChatWidth, _maxChatWidth(context)),
+                    maxWidth: _chatWidth.clamp(_minChatWidth, _maxChatWidth(context)),
+                    child: ChatBox(
                     key: _chatBoxKey,
                     curriculumData: widget.curriculumData,
                     isOverlay: true,
@@ -201,7 +220,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                     onClose: () {
                       setState(() => _selectedIndex = _lastMainIndex);
                     },
-                  )
+                  ))
                 : const SizedBox.shrink(),
             ),
           )

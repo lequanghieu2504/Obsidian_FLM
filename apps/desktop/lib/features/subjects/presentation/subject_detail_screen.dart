@@ -12,6 +12,7 @@ import '../../knowledge_graph/presentation/subject_knowledge_graph_tab.dart';
 import '../application/subject_detail_controller.dart';
 import '../data/local_subject_workspace_repository.dart';
 import '../domain/subject_workspace.dart';
+import '../../../ui/widgets/min_width_guard.dart';
 import 'subject_chat_panel.dart';
 import 'subject_resources_panel.dart';
 
@@ -138,6 +139,13 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   /// new subject (a new [SubjectDetailController]) loads.
   GlobalKey _chatKey = GlobalKey();
 
+  /// Same idea for the information side (the whole TabBarView, including
+  /// the Knowledge Graph tab): opening/minimizing the chat moves it between
+  /// a plain Row and [_ResizableSplit], and without a GlobalKey Flutter
+  /// rebuilt it from scratch — e.g. the selected graph node and its session
+  /// panel disappeared as soon as the chat was opened.
+  GlobalKey _infoKey = GlobalKey();
+
   /// Whether the (single, page-wide) chat panel is currently minimized.
   /// Collapsing swaps it for a small [_CollapsedChatButton]; the information
   /// side takes the freed-up space instead of it just sitting there blank.
@@ -188,6 +196,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
         return;
       }
       _chatKey = GlobalKey();
+      _infoKey = GlobalKey();
       _chatCollapsed = true;
       _chatSplitWidth = null;
       setState(() => _controller = controller);
@@ -204,7 +213,12 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
     super.dispose();
   }
 
-  static const double _minPaneWidth = 340;
+  /// Narrowest each side is ever laid out at. Below these the content
+  /// (tables, graph + node panel, chat composer) started overflowing, so
+  /// the split never drags past them, and [MinWidthGuard] scrolls instead
+  /// of squashing if the window itself is too small.
+  static const double _minInfoWidth = 560;
+  static const double _minChatWidth = 360;
   static const double _handleWidth = 20;
 
   /// Lays out the page's one chat panel next to (wide) or under (narrow)
@@ -216,6 +230,11 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
     required Widget chat,
     required bool wide,
   }) {
+    information = KeyedSubtree(
+      key: _infoKey,
+      child: MinWidthGuard(minWidth: _minInfoWidth, child: information),
+    );
+    chat = MinWidthGuard(minWidth: _minChatWidth, child: chat);
     if (wide) {
       if (_chatCollapsed) {
         return Padding(
@@ -235,7 +254,8 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
         child: _ResizableSplit(
           left: information,
           right: chat,
-          minWidth: _minPaneWidth,
+          leftMinWidth: _minInfoWidth,
+          rightMinWidth: _minChatWidth,
           handleWidth: _handleWidth,
           initialWidth: _chatSplitWidth,
           onWidthChanged: (width) => _chatSplitWidth = width,
@@ -308,7 +328,8 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                   );
                   return LayoutBuilder(
                     builder: (context, constraints) {
-                      final wide = constraints.maxWidth >= 960;
+                      final wide = constraints.maxWidth >=
+                          _minInfoWidth + _minChatWidth + _handleWidth + 48;
 
                       return DefaultTabController(
                         length: detailTabs.length + 1,
@@ -350,7 +371,8 @@ class _ResizableSplit extends StatefulWidget {
   const _ResizableSplit({
     required this.left,
     required this.right,
-    required this.minWidth,
+    required this.leftMinWidth,
+    required this.rightMinWidth,
     required this.handleWidth,
     this.initialFraction = 0.58,
     this.initialWidth,
@@ -359,7 +381,8 @@ class _ResizableSplit extends StatefulWidget {
 
   final Widget left;
   final Widget right;
-  final double minWidth;
+  final double leftMinWidth;
+  final double rightMinWidth;
   final double handleWidth;
   final double initialFraction;
 
@@ -418,16 +441,18 @@ class _ResizableSplitState extends State<_ResizableSplit> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final available = constraints.maxWidth - widget.handleWidth;
-        final maxLeftWidth = (available - widget.minWidth).clamp(
-          widget.minWidth,
+        // Left pane can't shrink below its own minimum nor grow so far
+        // that the right pane drops below its minimum.
+        final maxLeftWidth = (available - widget.rightMinWidth).clamp(
+          widget.leftMinWidth,
           double.infinity,
         );
         final leftWidth =
             (_leftWidth ?? available * widget.initialFraction).clamp(
-              widget.minWidth,
+              widget.leftMinWidth,
               maxLeftWidth,
             );
-        _minWidthForFrame = widget.minWidth;
+        _minWidthForFrame = widget.leftMinWidth;
         _maxWidthForFrame = maxLeftWidth;
         return Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,

@@ -56,7 +56,13 @@ class SubjectKnowledgeGraphTab extends StatefulWidget {
       _SubjectKnowledgeGraphTabState();
 }
 
-class _SubjectKnowledgeGraphTabState extends State<SubjectKnowledgeGraphTab> {
+class _SubjectKnowledgeGraphTabState extends State<SubjectKnowledgeGraphTab>
+    with AutomaticKeepAliveClientMixin {
+  /// Keep the graph (and the selected node + its session panel) alive while
+  /// the person switches to other tabs or uses the chat.
+  @override
+  bool get wantKeepAlive => true;
+
   late Future<KnowledgeGraph?> _loadFuture;
   String? _selectedNodeId;
 
@@ -102,7 +108,7 @@ class _SubjectKnowledgeGraphTabState extends State<SubjectKnowledgeGraphTab> {
 
     final concepts =
         conceptsByCode[widget.subjectCode] ?? SubjectConcepts.empty;
-    _selectedNodeId = widget.subjectCode;
+    _selectedNodeId ??= widget.subjectCode;
     return KnowledgeGraphBuilder.buildConceptGraph(subject, concepts);
   }
 
@@ -115,6 +121,7 @@ class _SubjectKnowledgeGraphTabState extends State<SubjectKnowledgeGraphTab> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return FutureBuilder<KnowledgeGraph?>(
       future: _loadFuture,
       builder: (context, snapshot) {
