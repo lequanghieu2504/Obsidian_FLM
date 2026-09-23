@@ -4,6 +4,7 @@ import 'package:graphview/GraphView.dart';
 import '../../models/subject.dart';
 import '../../models/curriculum_data.dart';
 import '../../app/theme/app_colors.dart';
+import '../../features/subjects/presentation/subject_detail_screen.dart';
 
 class SubjectsScreen extends StatefulWidget {
   final CurriculumData curriculumData;
@@ -67,161 +68,24 @@ class _SubjectsScreenState extends State<SubjectsScreen>
     return foundCodes;
   }
 
+  /// Opens the subject's detail page (syllabus, resources, knowledge graph,
+  /// Gemini chat) from the subject-browser feature (lib/features/subjects).
   void _showSyllabus(String code) {
     final subIdx =
         widget.curriculumData.subjects.indexWhere((s) => s.code == code);
     if (subIdx == -1) return;
     final subject = widget.curriculumData.subjects[subIdx];
+    final curriculumCode =
+        widget.curriculumData.metadata['curriculumCode']?.toString() ??
+            'Curriculum';
 
-    String description = 'Chưa có mô tả.';
-    if (widget.curriculumData.syllabi.containsKey(code)) {
-      final syllabus = widget.curriculumData.syllabi[code];
-      if (syllabus['metadata'] != null &&
-          syllabus['metadata']['Description'] != null) {
-        description = syllabus['metadata']['Description'];
-      }
-    }
-
-    showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-            title: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: AppColors.primary.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Text(code,
-                      style: const TextStyle(
-                          color: AppColors.primary,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold)),
-                ),
-                const SizedBox(height: 8),
-                Text(subject.name,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: AppColors.textMain,
-                        fontSize: 20)),
-              ],
-            ),
-            content: SizedBox(
-              width: 800, // Make dialog wider for the table
-              child: SingleChildScrollView(
-                child: _buildDescriptionTable(description),
-              ),
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text('Đóng',
-                    style: TextStyle(
-                        color: AppColors.primary, fontWeight: FontWeight.bold)),
-              )
-            ],
-          );
-        });
-  }
-
-  Widget _buildDescriptionTable(String description) {
-    final hasBullets = description.contains('•');
-    final hasHyphenBullets = description.contains(' - ');
-
-    if (!hasBullets && !hasHyphenBullets) {
-      return Text(description,
-          style: const TextStyle(color: AppColors.textMain, height: 1.5));
-    }
-
-    final splitPattern = hasBullets ? '•' : ' - ';
-    final parts = description.split(splitPattern);
-
-    final intro = parts[0].trim();
-    final bullets = parts.sublist(1);
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        if (intro.isNotEmpty) ...[
-          Text(intro,
-              style: const TextStyle(
-                  color: AppColors.textMain,
-                  fontWeight: FontWeight.bold,
-                  height: 1.5)),
-          const SizedBox(height: 16),
-        ],
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: const Color(0xFFE2E8F0)),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Table(
-              border: const TableBorder(
-                horizontalInside: BorderSide(color: Color(0xFFE2E8F0)),
-                verticalInside: BorderSide(color: Color(0xFFE2E8F0)),
-              ),
-              columnWidths: const {
-                0: FixedColumnWidth(60),
-                1: FlexColumnWidth(),
-              },
-              children: [
-                TableRow(
-                  decoration:
-                      BoxDecoration(color: AppColors.primary.withOpacity(0.05)),
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text('STT',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.primaryDark),
-                          textAlign: TextAlign.center),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text('Nội dung',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.primaryDark)),
-                    ),
-                  ],
-                ),
-                ...bullets.asMap().entries.map((entry) {
-                  int idx = entry.key;
-                  String content = entry.value.trim();
-                  return TableRow(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Text('${idx + 1}',
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                color: AppColors.textSub,
-                                fontWeight: FontWeight.bold)),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Text(content,
-                            style: const TextStyle(
-                                color: AppColors.textMain, height: 1.5)),
-                      ),
-                    ],
-                  );
-                }).toList(),
-              ],
-            ),
-          ),
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => SubjectDetailScreen(
+          curriculumCode: curriculumCode,
+          subject: subject,
         ),
-      ],
+      ),
     );
   }
 

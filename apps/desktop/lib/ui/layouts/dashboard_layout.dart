@@ -3,7 +3,7 @@ import '../../app/theme/app_colors.dart';
 import '../widgets/app_sidebar.dart';
 import '../../models/curriculum_data.dart';
 import '../screens/curriculum_detail_screen.dart';
-import '../../features/subjects/presentation/subject_list_screen.dart';
+import '../screens/subjects_screen.dart';
 import '../screens/explore_curriculums_screen.dart';
 import '../screens/transcript_screen.dart';
 import '../widgets/chat_box.dart';
@@ -129,7 +129,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                     ],
                   ),
                 ),
-                // Nơi chứa màn hình thực tế (CurriculumDetailScreen, SubjectListScreen)
+                // Nơi chứa màn hình thực tế (CurriculumDetailScreen, SubjectsScreen)
                 Expanded(
                   child: _selectedIndex == 2 && !_isChatOverlay 
                     // Fullscreen Chat Mode
@@ -151,18 +151,11 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                           CurriculumDetailScreen(
                             curriculumData: widget.curriculumData,
                           ),
-                          // Subject/course browser comes from the
-                          // knowledge-graph/subject-browser branch
-                          // (lib/features/subjects), fed with the subjects of
-                          // the curriculum loaded in this dashboard.
-                          SubjectListScreen(
-                            curriculumCode: widget.curriculumData
-                                    .metadata['curriculumCode']
-                                    ?.toString() ??
-                                'Curriculum',
-                            subjects: widget.curriculumData.subjects
-                                .where((s) => !s.isPlaceholder)
-                                .toList(growable: false),
+                          // Subject list from feature/curriculum-and-transcript;
+                          // tapping a subject opens the detail page from
+                          // lib/features/subjects (SubjectDetailScreen).
+                          SubjectsScreen(
+                            curriculumData: widget.curriculumData,
                           ),
                           const SizedBox.shrink(), // Index 2 is Chat
                           const ExploreCurriculumsScreen(),
