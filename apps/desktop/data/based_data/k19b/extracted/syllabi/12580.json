@@ -1,0 +1,4733 @@
+{
+  "id": "12580",
+  "metadata": {
+    "Syllabus ID": "12580",
+    "Syllabus Name": "Front-End web development with React_Phát triển web Front-End với React",
+    "Course Name English": "Front-End web development with React",
+    "Subject Code": "FER202",
+    "Learning-Teaching Method": "Project based learning, Problem based learning, Active learning, In-class lecture",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 1h final exam + 85' practical exam + 104h self-study",
+    "Pre-Requisite": "WED201c",
+    "Description": "Learn front-end web development for implementing a multi-platform solution:- Overview of client-side web UI frameworks, focusing on Bootstrap. Students will explore grids, responsive design, Bootstrap CSS, and JavaScript components.- Basics of Node.js, npm- JavaScript-based front-end development with the React library: ES6 for React applications, Reactstrap for Bootstrap-based responsive UI, React components, React Router for single-page applications, and designing controlled forms.- Hooks to leverage React features like state and lifecycle in functional components, reducing reliance on class components.- Flux architecture and Redux, covering Redux principles and building React-Redux powered applications.Fetch for client-server communication, integrating REST APIs on the server side.- Modern syntax and patterns for ReactJS development, paired with foundational knowledge to ensure long-term relevance.- AI Integration: Use of AI tools (e.g., code generation with GenAI) to enhance development efficiency, with emphasis on transparency and ethical usage.- Assessment Methods: Evaluation through practical labs, assignments, and reviews using stratified sampling, scored via Likert scales (1-5) for syntax, logic, customization, and transparency, converted to a 10-point scale.",
+    "StudentTasks": "- Students must attend at least 80% of contact slots to be eligible for the final examination.- Students are responsible for completing all exercises assigned by the instructor in class or at home and submitting them on time.- Regularly check announcements on FU FLM at https://flm.fpt.edu.vn/ for the latest course updates, including assignment submission deadlines and feedback on assignments and project work.- AI-Related Task: Utilize AI tools (e.g., GenAI for code generation or debugging) responsibly in assignments and projects, and clearly document their usage (e.g., prompts, outputs) in submissions to ensure transparency and ethical application.",
+    "Tools": "- Visual Studio Code (https://code.visualstudio.com) - Internet- Git (Bitbucket/Github source management)- Node.jsAI tools- Gemini (https://gemini.google.com/app)- Grok (https://grok.com/)- ChatGPT (https://chatgpt.com/)",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "359/QĐ-ĐHFPT dated 04/09/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/9/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "12580"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "12580"
+        ],
+        [
+          "Syllabus Name:",
+          "Front-End web development with React_Phát triển web Front-End với React"
+        ],
+        [
+          "Course Name English:",
+          "Front-End web development with React"
+        ],
+        [
+          "Subject Code:",
+          "FER202"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Project based learning, Problem based learning, Active learning, In-class lecture"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 1h final exam + 85' practical exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "WED201c"
+        ],
+        [
+          "Description:",
+          "Learn front-end web development for implementing a multi-platform solution:- Overview of client-side web UI frameworks, focusing on Bootstrap. Students will explore grids, responsive design, Bootstrap CSS, and JavaScript components.- Basics of Node.js, npm- JavaScript-based front-end development with the React library: ES6 for React applications, Reactstrap for Bootstrap-based responsive UI, React components, React Router for single-page applications, and designing controlled forms.- Hooks to leverage React features like state and lifecycle in functional components, reducing reliance on class components.- Flux architecture and Redux, covering Redux principles and building React-Redux powered applications.Fetch for client-server communication, integrating REST APIs on the server side.- Modern syntax and patterns for ReactJS development, paired with foundational knowledge to ensure long-term relevance.- AI Integration: Use of AI tools (e.g., code generation with GenAI) to enhance development efficiency, with emphasis on transparency and ethical usage.- Assessment Methods: Evaluation through practical labs, assignments, and reviews using stratified sampling, scored via Likert scales (1-5) for syntax, logic, customization, and transparency, converted to a 10-point scale."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots to be eligible for the final examination.- Students are responsible for completing all exercises assigned by the instructor in class or at home and submitting them on time.- Regularly check announcements on FU FLM at https://flm.fpt.edu.vn/ for the latest course updates, including assignment submission deadlines and feedback on assignments and project work.- AI-Related Task: Utilize AI tools (e.g., GenAI for code generation or debugging) responsibly in assignments and projects, and clearly document their usage (e.g., prompts, outputs) in submissions to ensure transparency and ethical application."
+        ],
+        [
+          "Tools:",
+          "- Visual Studio Code (https://code.visualstudio.com) - Internet- Git (Bitbucket/Github source management)- Node.jsAI tools- Gemini (https://gemini.google.com/app)- Grok (https://grok.com/)- ChatGPT (https://chatgpt.com/)"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "359/QĐ-ĐHFPT dated 04/09/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/9/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12580",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Front-End web development with React_Phát triển web Front-End với React",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Front-End web development with React",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FER202",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project based learning, Problem based learning, Active learning, In-class lecture",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 1h final exam + 85' practical exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "WED201c",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn front-end web development for implementing a multi-platform solution:- Overview of client-side web UI frameworks, focusing on Bootstrap. Students will explore grids, responsive design, Bootstrap CSS, and JavaScript components.- Basics of Node.js, npm- JavaScript-based front-end development with the React library: ES6 for React applications, Reactstrap for Bootstrap-based responsive UI, React components, React Router for single-page applications, and designing controlled forms.- Hooks to leverage React features like state and lifecycle in functional components, reducing reliance on class components.- Flux architecture and Redux, covering Redux principles and building React-Redux powered applications.Fetch for client-server communication, integrating REST APIs on the server side.- Modern syntax and patterns for ReactJS development, paired with foundational knowledge to ensure long-term relevance.- AI Integration: Use of AI tools (e.g., code generation with GenAI) to enhance development efficiency, with emphasis on transparency and ethical usage.- Assessment Methods: Evaluation through practical labs, assignments, and reviews using stratified sampling, scored via Likert scales (1-5) for syntax, logic, customization, and transparency, converted to a 10-point scale.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots to be eligible for the final examination.- Students are responsible for completing all exercises assigned by the instructor in class or at home and submitting them on time.- Regularly check announcements on FU FLM at https://flm.fpt.edu.vn/ for the latest course updates, including assignment submission deadlines and feedback on assignments and project work.- AI-Related Task: Utilize AI tools (e.g., GenAI for code generation or debugging) responsibly in assignments and projects, and clearly document their usage (e.g., prompts, outputs) in submissions to ensure transparency and ethical application.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Visual Studio Code (https://code.visualstudio.com) - Internet- Git (Bitbucket/Github source management)- Node.jsAI tools- Gemini (https://gemini.google.com/app)- Grok (https://grok.com/)- ChatGPT (https://chatgpt.com/)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "359/QĐ-ĐHFPT dated 04/09/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/9/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "2",
+          "https://react.dev/learn",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "3",
+          "https://react.dev/learn/start-a-new-react-project#nextjs",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://react.dev/learn",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://react.dev/learn/start-a-new-react-project#nextjs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "9 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Describe Front-end Web UI Frameworks overview"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Install React application and Understand React component"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Explain JSX and ES6"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Explain the Bootstrap, React-boostrap"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Discuss the React Component Life Cycle, Forms and Routes"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Discuss Hook, Event Handling and crafting reusable component in React"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Discuss fetch and catching data in Client-Server Communication and Code Splitting Using Lazy Components and Suspense"
+        ],
+        [
+          "8",
+          "CLO8",
+          "Discuss Flow Architecture and Redux"
+        ],
+        [
+          "9",
+          "CLO9",
+          "Apply AI tools in React development and evaluate their ethical use and transparency"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe Front-end Web UI Frameworks overview",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install React application and Understand React component",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain JSX and ES6",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain the Bootstrap, React-boostrap",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss the React Component Life Cycle, Forms and Routes",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss Hook, Event Handling and crafting reusable component in React",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss fetch and catching data in Client-Server Communication and Code Splitting Using Lazy Components and Suspense",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss Flow Architecture and Redux",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply AI tools in React development and evaluate their ethical use and transparency",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment Introduction with AI Integration",
+          "Offline",
+          "CLO1-CLO9",
+          "I, T",
+          "Assignment brief",
+          "FER202",
+          "Study assignment brief, brainstorm app idea with AI, note CLO1-CLO9 requirements",
+          ""
+        ],
+        [
+          "2",
+          "Course Introduction1.1 Full Stack Web Development: The Big Picture1.2 React 19 Introduction",
+          "Offline",
+          "CLO1",
+          "I",
+          "Slides",
+          "",
+          "Study slides, note key concepts of full-stack and React 19",
+          ""
+        ],
+        [
+          "3",
+          "1.3 Git- Setting up Git- Basic Git Commands- Setting up an Online Git repository1.4 Node.js and npm- Setting up Node.js and npm- Basics of Node.js and npm",
+          "Offline",
+          "CLO1",
+          "I, T, U",
+          "Slides",
+          "",
+          "Install Git, practice basic commands (init, add, commit), study slidesCreate GitHub account, push repo, install Node.js/npm, study slides",
+          ""
+        ],
+        [
+          "4",
+          "Rendering with JSX + ES 62.1 ES6",
+          "Offline",
+          "CLO3",
+          "I, T",
+          "Slides",
+          "",
+          "Study ES6 features (arrow functions, destructuring), practice examples",
+          ""
+        ],
+        [
+          "5",
+          "2.2 ES6 (cont'd)- Using AI to generate ES6 code snippets",
+          "Offline",
+          "CLO3, CLO9",
+          "T, U",
+          "Slides, exercises, AI tool",
+          "",
+          "Use GenAI (e.g., ChatGPT) to generate ES6 snippets, compare with slides, do exercises",
+          ""
+        ],
+        [
+          "6",
+          "2.3 ES6 (cont'd)",
+          "Offline",
+          "CLO3",
+          "U",
+          "Slides, exercises",
+          "",
+          "Complete ES6 exercises, apply to simple React components",
+          ""
+        ],
+        [
+          "7",
+          "3.1 Rendering HTML3.2 Creating your own JSX elements",
+          "Offline",
+          "CLO3",
+          "T, U",
+          "Slides",
+          "",
+          "Study JSX syntax, create basic JSX elements, practice rendering",
+          ""
+        ],
+        [
+          "8",
+          "3.3 Using JavaScript expressions",
+          "Offline",
+          "CLO3",
+          "U",
+          "Slides",
+          "",
+          "Use JS expressions in JSX, practice with examples",
+          ""
+        ],
+        [
+          "9",
+          "3.4 Building fragments of JSXLAB 1: Install React + JSX Basics",
+          "Offline",
+          "CLO1, CLO2, CLO3",
+          "T, U",
+          "Slides, lab questions",
+          "",
+          "Install React app with CRA, build JSX fragments, complete Lab 1",
+          ""
+        ],
+        [
+          "10",
+          "Review Lab 1",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 1, use AI to debug code, prepare questions for review",
+          ""
+        ],
+        [
+          "11",
+          "Review Lab 1 (td)",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 1, use AI to debug code, prepare questions for review",
+          ""
+        ],
+        [
+          "12",
+          "Bootstrap and React-bootstrap4.1 Bootstrap & React-Bootstrap Introduction- Set up a project with Bootstrap & React-Bootstrap- Configure a web project to use Bootstrap and React-Bootstrap",
+          "Offline",
+          "CLO4",
+          "I, T",
+          "Slides",
+          "",
+          "Study Bootstrap/React-Bootstrap, set up project with both",
+          ""
+        ],
+        [
+          "13",
+          "4.2 Bootstrap Grid System",
+          "Offline",
+          "CLO4",
+          "T, U",
+          "Slides",
+          "",
+          "Practice grid system layouts, apply to sample UI",
+          ""
+        ],
+        [
+          "14",
+          "4.3 Bootstrap and React-Bootstrap CSS Components- Navigation and Navigation Bar- Icon and Fonts- User Input: Buttons and Forms- Tabular data (Table)",
+          "Offline",
+          "CLO4",
+          "T, U",
+          "Slides, exercises",
+          "",
+          "Build UI with BS components (nav, buttons), do exercises",
+          ""
+        ],
+        [
+          "15",
+          "5.1 Bootstrap JavaScript Components- Tabs, Pills and Tabbed Navigation",
+          "Offline",
+          "CLO4",
+          "T, U",
+          "Slides, exercises",
+          "",
+          "Implement JS components (tabs/pills), test functionality",
+          ""
+        ],
+        [
+          "16",
+          "5.2 Hide and Seek: Collapse and Accordion",
+          "Offline",
+          "CLO4",
+          "U",
+          "Slides, exercises",
+          "",
+          "Add collapse/accordion to UI, practice interactivity",
+          ""
+        ],
+        [
+          "17",
+          "5.3 Compare betweent Bootstrap and React-Bootstrap",
+          "Offline",
+          "CLO4",
+          "T, U",
+          "Slides, exercises",
+          "",
+          "Build UI with BS/React-BS",
+          ""
+        ],
+        [
+          "18",
+          "LAB 2: Bootstrap and React-Bootstrap UI",
+          "Offline",
+          "CLO4",
+          "T, U",
+          "Slides, lab questions",
+          "",
+          "Compare in Lab 2, submit work",
+          ""
+        ],
+        [
+          "19",
+          "Review Lab 2",
+          "Offline",
+          "CLO4, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 2, use AI to optimize UI code, prepare for review",
+          ""
+        ],
+        [
+          "20",
+          "Review Lab 2 (td)",
+          "Offline",
+          "CLO4, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 2, use AI to optimize UI code, prepare for review",
+          ""
+        ],
+        [
+          "21",
+          "React Component6.1 What's react component? How to build it?6.2 Component Properties",
+          "Offline",
+          "CLO2",
+          "I, T, U",
+          "Slides",
+          "",
+          "Study component basics, build a simple component with props",
+          ""
+        ],
+        [
+          "22",
+          "6.3 Component State- Setting initial component state- Creating component state- Merging component state",
+          "Offline",
+          "CLO2",
+          "I, T",
+          "Slides, exercises",
+          "",
+          "Practice setting initial state in components, do exercisesBuild components with state (Class/Functional), merge state, practice",
+          ""
+        ],
+        [
+          "23",
+          "Event Handling7.1 Declaring event handlers- Binding handlers to elements- Using synthetic event objects- Understanding event pooling",
+          "Offline",
+          "CLO6",
+          "I, T, U",
+          "Slides, exercises",
+          "",
+          "Study event handling, bind handlers to elements, practicePractice synthetic events, explore pooling, do exercises",
+          ""
+        ],
+        [
+          "24",
+          "7.2 Using event handler context and parameters- Declaring inline event handlersLAB 3: Class vs Functional Components",
+          "Offline",
+          "CLO2, CLO6",
+          "T, U",
+          "Slides, exercises, lab questions",
+          "",
+          "Add inline handlers, compare Class/Functional in Lab 3, submit work",
+          ""
+        ],
+        [
+          "25",
+          "Review Lab 3",
+          "Offline",
+          "CLO2, CLO6, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 3, use AI to refactor code, prepare for review",
+          ""
+        ],
+        [
+          "26",
+          "Review Lab 3 (td)",
+          "Offline",
+          "CLO2, CLO6, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 3, use AI to refactor code, prepare for review",
+          ""
+        ],
+        [
+          "27",
+          "8.1 Passing property values8.2 Stateless Components",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slides",
+          "",
+          "Build stateless components, pass props, practice",
+          ""
+        ],
+        [
+          "28",
+          "Container components8.3 Providing and consuming contex",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slides",
+          "",
+          "Implement context in components, test data sharing, practice",
+          ""
+        ],
+        [
+          "29",
+          "8.4 Render props8.5 Refactoring class components using hooks",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slides",
+          "",
+          "Refactor class components with Hooks, practice render props",
+          ""
+        ],
+        [
+          "30",
+          "Getting Started with Hooks9.1 Maintaining state using Hooks",
+          "Offline",
+          "CLO6",
+          "I, T",
+          "Slides",
+          "",
+          "Study useState, implement in a component, practice",
+          ""
+        ],
+        [
+          "31",
+          "9.2 Performing initialization and cleanup actions",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slides, exercises",
+          "",
+          "Use useEffect for lifecycle tasks, do exercises",
+          ""
+        ],
+        [
+          "32",
+          "9.3 Sharing Data with Context Hooks",
+          "Offline",
+          "CLO5, CLO6",
+          "T, U",
+          "Slides",
+          "",
+          "Implement context Hooks, share data across components, practice",
+          ""
+        ],
+        [
+          "33",
+          "9.4 Using Reducer Hooks for State ManagementLAB 4: Hooks & Events",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slides, lab questions",
+          "",
+          "Use useReducer for complex state, complete Lab 4 with events",
+          ""
+        ],
+        [
+          "34",
+          "Review Lab 4",
+          "Offline",
+          "CLO6, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 4, use AI to enhance event logic, prepare for review",
+          ""
+        ],
+        [
+          "35",
+          "Review Lab 4 (td)",
+          "Offline",
+          "CLO6, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 4, use AI to enhance event logic, prepare for review",
+          ""
+        ],
+        [
+          "36",
+          "Progress Test - 01",
+          "Offline",
+          "CLO1-CLO6",
+          "T, U",
+          "Test questions",
+          "",
+          "Study materials, complete Progress Test 1",
+          ""
+        ],
+        [
+          "37",
+          "Handling Navigation with Routes10.1 Declaring routes- Decoupling route declaration",
+          "Offline",
+          "CLO5",
+          "I, T",
+          "Slides",
+          "",
+          "Study React Router, set up basic routes, practice",
+          ""
+        ],
+        [
+          "38",
+          "10.2 Handling route parameters- Resource IDs in routes- Optional parameters",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slides",
+          "",
+          "Add route parameters, test navigation, practice",
+          ""
+        ],
+        [
+          "39",
+          "10.3 Using link components- Basic linking- URL and query parameters",
+          "Offline",
+          "CLO5, CLO7",
+          "T, U",
+          "Slides",
+          "",
+          "Build routed app with and lazy loading, complete Lab 5",
+          ""
+        ],
+        [
+          "40",
+          "Code Splitting Using Lazy Components and Suspense11.1 Using Lazy API11.2 Using the Suspense component-Simulating latency",
+          "Offline",
+          "CLO7",
+          "T, U",
+          "Slides",
+          "",
+          "Use React.lazy and Suspense, simulate latency, do exercises",
+          ""
+        ],
+        [
+          "41",
+          "11.3 Avoiding lazy components11.4 Exploring lazy pages and routes",
+          "Offline",
+          "CLO7",
+          "T, U",
+          "Slides, exercises",
+          "",
+          "Apply lazy loading to routes, test performance",
+          ""
+        ],
+        [
+          "42",
+          "Client - Server Communication12.1 Set up a simple server that makes data available for clientsLAB 5: Routes & Lazy Loading",
+          "Offline",
+          "CLO7",
+          "I, T",
+          "Slides, lab questions",
+          "",
+          "Set up JSON server, study client-server basics, complete Lab 5",
+          ""
+        ],
+        [
+          "43",
+          "Review Lab 5",
+          "Offline",
+          "CLO5, CLO7, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 5, use AI to optimize routing, prepare for review",
+          ""
+        ],
+        [
+          "44",
+          "Review Lab 5 (td)",
+          "Offline",
+          "CLO5, CLO7, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 5, use AI to optimize routing, prepare for review",
+          ""
+        ],
+        [
+          "45",
+          "12.2 Access the data from the server using a browser12.3 Use the json-server as a simple static web server",
+          "Offline",
+          "CLO7",
+          "T, U",
+          "Slides",
+          "",
+          "Fetch data from server, display in app, practice",
+          ""
+        ],
+        [
+          "46",
+          "Fetching and Catching Data with React13.1 When to fetch and store data in React.How to use window.fetch.",
+          "Offline",
+          "CLO7",
+          "I, T",
+          "Slides",
+          "",
+          "Study fetch, implement in app, practice",
+          ""
+        ],
+        [
+          "47",
+          "13.2 What promises are.How async/await works.",
+          "Offline",
+          "CLO7",
+          "T, U",
+          "Slides, exercises",
+          "",
+          "Use async/await with fetch, practice exercises",
+          ""
+        ],
+        [
+          "48",
+          "13.3 Getting Data with AxiosHow to simplify network requests with Axios.LAB 6: Fetching Data",
+          "Offline",
+          "CLO7",
+          "T, U",
+          "Slides, lab questions",
+          "",
+          "Replace fetch with Axios, complete Lab 6",
+          ""
+        ],
+        [
+          "49",
+          "Review Lab 6",
+          "Offline",
+          "CLO7, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 6, use AI to refine fetch logic, prepare for review",
+          ""
+        ],
+        [
+          "50",
+          "Review Lab 6 (td)",
+          "Offline",
+          "CLO7, CLO9",
+          "U",
+          "Lab submissions",
+          "",
+          "Submit Lab 6, use AI to refine fetch logic, prepare for review",
+          ""
+        ],
+        [
+          "51",
+          "Flow Architecture and Intrduction to Redux14.1 Explain the Redux approach to implementing a variant of the Flow architecture.",
+          "Offline",
+          "CLO8",
+          "I, T",
+          "Slides",
+          "",
+          "Study Redux principles, set up basic store, practice",
+          ""
+        ],
+        [
+          "52",
+          "14.2 Install and Configure Redux.",
+          "Offline",
+          "CLO8",
+          "I, T",
+          "Slides",
+          "",
+          "Install Redux, configure store, practice",
+          ""
+        ],
+        [
+          "53",
+          "14.3 Define Redux Toolkit",
+          "Offline",
+          "CLO8, CLO9",
+          "T, U",
+          "Slides, AI tool",
+          "",
+          "Use GenAI to generate Redux Toolkit code, integrate into app, practice",
+          ""
+        ],
+        [
+          "54",
+          "Redux architecture15.1 Split the reducer function into multiple simpler functions and combine the reducer functions15.2 Use Redux Thunk middleware to return a function instead of an action",
+          "Offline",
+          "CLO8",
+          "T, U",
+          "Slides",
+          "",
+          "Split reducers, implement Redux Thunk for async, practice",
+          ""
+        ],
+        [
+          "55",
+          "15.3 Use a logger middleware to print a log of actions initiated on the Redux store",
+          "Offline",
+          "CLO8",
+          "T, U",
+          "Slides",
+          "",
+          "Add logger middleware, monitor actions, practice",
+          ""
+        ],
+        [
+          "56",
+          "Progress Test - 02",
+          "Offline",
+          "CLO7-CLO8CLO1-CLO8",
+          "T, U",
+          "Test questions",
+          "",
+          "Study materials, complete Progress Test 2",
+          ""
+        ],
+        [
+          "57",
+          "Assignment Evaluate",
+          "Offline",
+          "CLO1-CLO9",
+          "U",
+          "Assignment submissions",
+          "",
+          "Submit assignment, prepare for review with AI-optimized code",
+          ""
+        ],
+        [
+          "58",
+          "Assignment Evaluate",
+          "Offline",
+          "CLO1-CLO9",
+          "U",
+          "Assignment submissions",
+          "",
+          "Submit assignment, prepare for review with AI-optimized code",
+          ""
+        ],
+        [
+          "59",
+          "Assignment Evaluate",
+          "Offline",
+          "CLO1-CLO9",
+          "U",
+          "Assignment submissions",
+          "",
+          "Submit assignment, prepare for review with AI-optimized code",
+          ""
+        ],
+        [
+          "60",
+          "Assignment Evaluate",
+          "Offline",
+          "CLO1-CLO9",
+          "U",
+          "Assignment submissions",
+          "",
+          "Submit assignment, prepare for review with AI-optimized code",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment Introduction with AI Integration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment brief",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FER202",
+            "links": [
+              {
+                "text": "FER202",
+                "href": "https://flm.fpt.edu.vn/download/12580/S/1_FER202.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Study assignment brief, brainstorm app idea with AI, note CLO1-CLO9 requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction1.1 Full Stack Web Development: The Big Picture1.2 React 19 Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study slides, note key concepts of full-stack and React 19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.3 Git- Setting up Git- Basic Git Commands- Setting up an Online Git repository1.4 Node.js and npm- Setting up Node.js and npm- Basics of Node.js and npm",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install Git, practice basic commands (init, add, commit), study slidesCreate GitHub account, push repo, install Node.js/npm, study slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Rendering with JSX + ES 62.1 ES6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study ES6 features (arrow functions, destructuring), practice examples",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.2 ES6 (cont'd)- Using AI to generate ES6 code snippets",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises, AI tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use GenAI (e.g., ChatGPT) to generate ES6 snippets, compare with slides, do exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.3 ES6 (cont'd)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Complete ES6 exercises, apply to simple React components",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.1 Rendering HTML3.2 Creating your own JSX elements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study JSX syntax, create basic JSX elements, practice rendering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.3 Using JavaScript expressions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use JS expressions in JSX, practice with examples",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.4 Building fragments of JSXLAB 1: Install React + JSX Basics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, lab questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install React app with CRA, build JSX fragments, complete Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 1, use AI to debug code, prepare questions for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 1 (td)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 1, use AI to debug code, prepare questions for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bootstrap and React-bootstrap4.1 Bootstrap & React-Bootstrap Introduction- Set up a project with Bootstrap & React-Bootstrap- Configure a web project to use Bootstrap and React-Bootstrap",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study Bootstrap/React-Bootstrap, set up project with both",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.2 Bootstrap Grid System",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice grid system layouts, apply to sample UI",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Bootstrap and React-Bootstrap CSS Components- Navigation and Navigation Bar- Icon and Fonts- User Input: Buttons and Forms- Tabular data (Table)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build UI with BS components (nav, buttons), do exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.1 Bootstrap JavaScript Components- Tabs, Pills and Tabbed Navigation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement JS components (tabs/pills), test functionality",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.2 Hide and Seek: Collapse and Accordion",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Add collapse/accordion to UI, practice interactivity",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.3 Compare betweent Bootstrap and React-Bootstrap",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build UI with BS/React-BS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LAB 2: Bootstrap and React-Bootstrap UI",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, lab questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compare in Lab 2, submit work",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 2, use AI to optimize UI code, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 2 (td)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 2, use AI to optimize UI code, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "React Component6.1 What's react component? How to build it?6.2 Component Properties",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study component basics, build a simple component with props",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.3 Component State- Setting initial component state- Creating component state- Merging component state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice setting initial state in components, do exercisesBuild components with state (Class/Functional), merge state, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Event Handling7.1 Declaring event handlers- Binding handlers to elements- Using synthetic event objects- Understanding event pooling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study event handling, bind handlers to elements, practicePractice synthetic events, explore pooling, do exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.2 Using event handler context and parameters- Declaring inline event handlersLAB 3: Class vs Functional Components",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises, lab questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Add inline handlers, compare Class/Functional in Lab 3, submit work",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 3, use AI to refactor code, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 3 (td)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 3, use AI to refactor code, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8.1 Passing property values8.2 Stateless Components",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build stateless components, pass props, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Container components8.3 Providing and consuming contex",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement context in components, test data sharing, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8.4 Render props8.5 Refactoring class components using hooks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Refactor class components with Hooks, practice render props",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Getting Started with Hooks9.1 Maintaining state using Hooks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study useState, implement in a component, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.2 Performing initialization and cleanup actions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use useEffect for lifecycle tasks, do exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.3 Sharing Data with Context Hooks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement context Hooks, share data across components, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9.4 Using Reducer Hooks for State ManagementLAB 4: Hooks & Events",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, lab questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use useReducer for complex state, complete Lab 4 with events",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 4, use AI to enhance event logic, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 4 (td)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 4, use AI to enhance event logic, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test - 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study materials, complete Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Handling Navigation with Routes10.1 Declaring routes- Decoupling route declaration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study React Router, set up basic routes, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.2 Handling route parameters- Resource IDs in routes- Optional parameters",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Add route parameters, test navigation, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.3 Using link components- Basic linking- URL and query parameters",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build routed app with and lazy loading, complete Lab 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Code Splitting Using Lazy Components and Suspense11.1 Using Lazy API11.2 Using the Suspense component-Simulating latency",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use React.lazy and Suspense, simulate latency, do exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11.3 Avoiding lazy components11.4 Exploring lazy pages and routes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply lazy loading to routes, test performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Client - Server Communication12.1 Set up a simple server that makes data available for clientsLAB 5: Routes & Lazy Loading",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, lab questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Set up JSON server, study client-server basics, complete Lab 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 5, use AI to optimize routing, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 5 (td)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 5, use AI to optimize routing, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12.2 Access the data from the server using a browser12.3 Use the json-server as a simple static web server",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Fetch data from server, display in app, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Fetching and Catching Data with React13.1 When to fetch and store data in React.How to use window.fetch.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study fetch, implement in app, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13.2 What promises are.How async/await works.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use async/await with fetch, practice exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13.3 Getting Data with AxiosHow to simplify network requests with Axios.LAB 6: Fetching Data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, lab questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Replace fetch with Axios, complete Lab 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 6, use AI to refine fetch logic, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 6 (td)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Lab 6, use AI to refine fetch logic, prepare for review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Flow Architecture and Intrduction to Redux14.1 Explain the Redux approach to implementing a variant of the Flow architecture.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study Redux principles, set up basic store, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14.2 Install and Configure Redux.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Install Redux, configure store, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14.3 Define Redux Toolkit",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, AI tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use GenAI to generate Redux Toolkit code, integrate into app, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Redux architecture15.1 Split the reducer function into multiple simpler functions and combine the reducer functions15.2 Use Redux Thunk middleware to return a function instead of an action",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Split reducers, implement Redux Thunk for async, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.3 Use a logger middleware to print a log of actions initiated on the Redux store",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Add logger middleware, monitor actions, practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test - 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7-CLO8CLO1-CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study materials, complete Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment Evaluate",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit assignment, prepare for review with AI-optimized code",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment Evaluate",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit assignment, prepare for review with AI-optimized code",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment Evaluate",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit assignment, prepare for review with AI-optimized code",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment Evaluate",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment submissions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit assignment, prepare for review with AI-optimized code",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "1",
+          "15.0%",
+          ">0",
+          "Guided in tutorials (Sessions 1), cont. at home",
+          "CLO1-CLO9",
+          "AI prompt, Likert review",
+          "",
+          "Full-stack app using React, AI tools, covering CLO1-CLO9",
+          "Individual or team work, guided by instructor, submission by deadline",
+          "Introduced in Session 1, Evaluate in Session 57-60."
+        ],
+        [
+          "2",
+          "Labs",
+          "on-going",
+          "6",
+          "20.0%",
+          ">0",
+          "Guided and reviewed in tutorial sesions; Cont. at home",
+          "Lab 1: CLO1, CLO2, CLO3Lab 2: CLO4Lab 3: CLO2, CLO6Lab 4: CLO6, CLO9Lab 5: CLO5, CLO7Lab 6: CLO7, CLO9",
+          "Practical exercises using AI prompt, Likert review",
+          "",
+          "Lab 1: React setup, JSXLab 2: Bootstrap UILab 3: Components, EventsLab 4: HooksLab 5: Routes, Lazy LoadingLab 6: Fetching data",
+          "Teachers support tutorials, students complete independently, 1-1 review for 10 students per Lab",
+          "Reviewed in Sessions 10, 19, 25, 34, 43, 49 using AI assistance (CLO9). Submission via EduNext."
+        ],
+        [
+          "3",
+          "Practical Exam",
+          "on-going",
+          "1",
+          "20.0%",
+          "4",
+          "85'",
+          "CLO1-CLO9",
+          "Preferable to be marked by scripts",
+          "",
+          "Build React app with AI integration, covering CLO1-CLO9",
+          "Supervised by proctor(s) sent by exam board",
+          ""
+        ],
+        [
+          "4",
+          "Progress test",
+          "on-going",
+          "2",
+          "15.0%",
+          ">0",
+          "30' each",
+          "PT 1CLO1 - CLO6PT 2CLO7 - CLO8",
+          "Multiple choice or essay",
+          "20-25 (MCQ) or 5-8 (essay) per PT",
+          "PT 1: Fundamentals, Components, HooksPT 2: Client-Server, Redux",
+          "Supervised by instructor, online or in-class",
+          "PT 1 in Session 36, PT 2 in Session 56, reviewed post-grading by instructor."
+        ],
+        [
+          "5",
+          "Final exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1-CLO9",
+          "multiple choice",
+          "50",
+          "all topics; more than 70% new questions (for the current semester);",
+          "supervised by proctor(s) sent by exam board",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guided in tutorials (Sessions 1), cont. at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI prompt, Likert review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Full-stack app using React, AI tools, covering CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduced in Session 1, Evaluate in Session 57-60.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Labs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guided and reviewed in tutorial sesions; Cont. at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1: CLO1, CLO2, CLO3Lab 2: CLO4Lab 3: CLO2, CLO6Lab 4: CLO6, CLO9Lab 5: CLO5, CLO7Lab 6: CLO7, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical exercises using AI prompt, Likert review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1: React setup, JSXLab 2: Bootstrap UILab 3: Components, EventsLab 4: HooksLab 5: Routes, Lazy LoadingLab 6: Fetching data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teachers support tutorials, students complete independently, 1-1 review for 10 students per Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Reviewed in Sessions 10, 19, 25, 34, 43, 49 using AI assistance (CLO9). Submission via EduNext.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Preferable to be marked by scripts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build React app with AI integration, covering CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised by proctor(s) sent by exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30' each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PT 1CLO1 - CLO6PT 2CLO7 - CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choice or essay",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20-25 (MCQ) or 5-8 (essay) per PT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PT 1: Fundamentals, Components, HooksPT 2: Client-Server, Redux",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised by instructor, online or in-class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PT 1 in Session 36, PT 2 in Session 56, reviewed post-grading by instructor.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1-CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "multiple choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "all topics; more than 70% new questions (for the current semester);",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "supervised by proctor(s) sent by exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

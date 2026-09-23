@@ -1,0 +1,4677 @@
+{
+  "id": "13822",
+  "metadata": {
+    "Syllabus ID": "13822",
+    "Syllabus Name": "Mobile Programming_Lập trình di động",
+    "Course Name English": "Mobile Programming",
+    "Subject Code": "PRM393",
+    "Learning-Teaching Method": "Project based learning, In-class lecture, Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study",
+    "Pre-Requisite": "PRO192",
+    "Description": "1. Understand the fundamental concepts of mobile programming with Flutter and Dart. 2. Experience using popular widgets and plugins to build cross-platform user interfaces. 3. Knowledge of state management, form handling, and navigation between screens in mobile applications. 4. Learn and apply asynchronous programming techniques with Future and async/await. 5. Ability to integrate RESTful APIs to exchange data between mobile applications and servers, as well as store data locally using SharedPreferences and SQLite. 6. Proficient in using Dart libraries and command-line tools to optimize the application development process. 7. Knowledge of implementing mobile notification systems, including local and push notifications.",
+    "StudentTasks": "- Students must attend more than 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS at http://lms.fpt.edu.vn for up-to-date course information",
+    "Tools": "- Android Studio + Flutter SDK + Dart SDK (Latest Version) - Virtual device attached android studio (or other virtual device), android mobile (only for learning, not for exam - optional) - Laptop: 16GB RAM, 25GB free space before installing studio Note: - Install all neccessary tools before the first slot of the course",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1402/QĐ-ĐHFPT dated 12/12/2025",
+    "IsApproved": "True",
+    "Note": "- Visual Studio Code (recommended, lightweight and supports many Flutter/Dart extensions). - Xcode (only needed if building & testing iOS, required on macOS).",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "12/12/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13822"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13822"
+        ],
+        [
+          "Syllabus Name:",
+          "Mobile Programming_Lập trình di động"
+        ],
+        [
+          "Course Name English:",
+          "Mobile Programming"
+        ],
+        [
+          "Subject Code:",
+          "PRM393"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Project based learning, In-class lecture, Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PRO192"
+        ],
+        [
+          "Description:",
+          "1. Understand the fundamental concepts of mobile programming with Flutter and Dart. 2. Experience using popular widgets and plugins to build cross-platform user interfaces. 3. Knowledge of state management, form handling, and navigation between screens in mobile applications. 4. Learn and apply asynchronous programming techniques with Future and async/await. 5. Ability to integrate RESTful APIs to exchange data between mobile applications and servers, as well as store data locally using SharedPreferences and SQLite. 6. Proficient in using Dart libraries and command-line tools to optimize the application development process. 7. Knowledge of implementing mobile notification systems, including local and push notifications."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend more than 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS at http://lms.fpt.edu.vn for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Android Studio + Flutter SDK + Dart SDK (Latest Version) - Virtual device attached android studio (or other virtual device), android mobile (only for learning, not for exam - optional) - Laptop: 16GB RAM, 25GB free space before installing studio Note: - Install all neccessary tools before the first slot of the course"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1402/QĐ-ĐHFPT dated 12/12/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          "- Visual Studio Code (recommended, lightweight and supports many Flutter/Dart extensions). - Xcode (only needed if building & testing iOS, required on macOS)."
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "12/12/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13822",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mobile Programming_Lập trình di động",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mobile Programming",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRM393",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project based learning, In-class lecture, Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRO192",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Understand the fundamental concepts of mobile programming with Flutter and Dart. 2. Experience using popular widgets and plugins to build cross-platform user interfaces. 3. Knowledge of state management, form handling, and navigation between screens in mobile applications. 4. Learn and apply asynchronous programming techniques with Future and async/await. 5. Ability to integrate RESTful APIs to exchange data between mobile applications and servers, as well as store data locally using SharedPreferences and SQLite. 6. Proficient in using Dart libraries and command-line tools to optimize the application development process. 7. Knowledge of implementing mobile notification systems, including local and push notifications.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend more than 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU LMS at http://lms.fpt.edu.vn for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Android Studio + Flutter SDK + Dart SDK (Latest Version) - Virtual device attached android studio (or other virtual device), android mobile (only for learning, not for exam - optional) - Laptop: 16GB RAM, 25GB free space before installing studio Note: - Install all neccessary tools before the first slot of the course",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1402/QĐ-ĐHFPT dated 12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Visual Studio Code (recommended, lightweight and supports many Flutter/Dart extensions). - Xcode (only needed if building & testing iOS, required on macOS).",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Mastering Flutter: Learn to Develop Flutter Apps for iOS, Android, Desktop and Web",
+          "Kevin Moore",
+          "BPB Publications",
+          "2025",
+          "1st",
+          "9789365899177",
+          "True",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "Beginning App Development with Flutter: Create Cross-Platform Mobile Apps",
+          "Rap Payne",
+          "Apress",
+          "2019",
+          "1st",
+          "9781484251805",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "3",
+          "Developing Mobile Apps with Flutter Specialization",
+          "IBM Skills Network Team",
+          "Coursera",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://www.coursera.org/specializations/developing-mobile-apps-with-flutter"
+        ],
+        [
+          "4",
+          "E-learning Platforms",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://flutter.dev https://docs.flutter.dev https://dart.dev/guides/language/language-tour https://github.com/flutter/samples"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mastering Flutter: Learn to Develop Flutter Apps for iOS, Android, Desktop and Web",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Kevin Moore",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "BPB Publications",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2025",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9789365899177",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Beginning App Development with Flutter: Create Cross-Platform Mobile Apps",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Rap Payne",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apress",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2019",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781484251805",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Developing Mobile Apps with Flutter Specialization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IBM Skills Network Team",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/specializations/developing-mobile-apps-with-flutter",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "E-learning Platforms",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://flutter.dev https://docs.flutter.dev https://dart.dev/guides/language/language-tour https://github.com/flutter/samples",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "7 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand the fundamental concepts of mobile programming with Flutter and Dart."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Experience using popular widgets and plugins to build cross-platform user interfaces."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Knowledge of state management, form handling, and navigation between screens in mobile applications."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Learn and apply asynchronous programming techniques with Future and async/await."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Ability to integrate RESTful APIs to exchange data between mobile applications and servers, as well as store data locally using SharedPreferences and SQLite."
+        ],
+        [
+          "6",
+          "CLO6",
+          "Proficient in using Dart libraries and command-line tools to optimize the application development process."
+        ],
+        [
+          "7",
+          "CLO7",
+          "Knowledge of implementing mobile notification systems, including local and push notifications."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the fundamental concepts of mobile programming with Flutter and Dart.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Experience using popular widgets and plugins to build cross-platform user interfaces.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Knowledge of state management, form handling, and navigation between screens in mobile applications.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn and apply asynchronous programming techniques with Future and async/await.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Ability to integrate RESTful APIs to exchange data between mobile applications and servers, as well as store data locally using SharedPreferences and SQLite.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Proficient in using Dart libraries and command-line tools to optimize the application development process.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Knowledge of implementing mobile notification systems, including local and push notifications.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Flutter Overview & Environment Setup",
+          "Offline",
+          "CLO1",
+          "ITU",
+          "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+          "PRM393",
+          "Verify setups; troubleshoot common install issues; walk-through run configurations.",
+          ""
+        ],
+        [
+          "2",
+          "Project Structure & Tooling",
+          "Offline",
+          "CLO1, CLO6",
+          "TU",
+          "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure",
+          "",
+          "Explain folder structure; demonstrate build flavors; answer Q&A.",
+          ""
+        ],
+        [
+          "3",
+          "Hot Reload/Restart & Widget Tree",
+          "Offline",
+          "CLO1, CLO6",
+          "TU",
+          "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+          "",
+          "Demo hot reload/hot restart; show DevTools widget inspector.",
+          ""
+        ],
+        [
+          "4",
+          "Basic UI Composition with Scaffold",
+          "Offline",
+          "CLO1, CLO6",
+          "TU",
+          "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+          "",
+          "Live-code scaffold customization; review students’ changes.",
+          ""
+        ],
+        [
+          "5",
+          "Summary & Setup Issues",
+          "Offline",
+          "CLO1, CLO6",
+          "TU",
+          "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+          "",
+          "Summarize pitfalls; collect environment reports; set expectations.",
+          ""
+        ],
+        [
+          "6",
+          "Dart Types & Variables",
+          "Offline",
+          "CLO1, CLO4",
+          "TU",
+          "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+          "",
+          "Review type system & null safety; address common errors.",
+          ""
+        ],
+        [
+          "7",
+          "Functions & Functional Patterns",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+          "",
+          "Demonstrate function patterns; code review live.",
+          ""
+        ],
+        [
+          "8",
+          "Classes & Constructors",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+          "",
+          "Explain class design; refactor student solutions.",
+          ""
+        ],
+        [
+          "9",
+          "Collections & Operations",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+          "",
+          "Show idiomatic collection usage; performance tips.",
+          ""
+        ],
+        [
+          "10",
+          "Intro to Futures & Async",
+          "Offline",
+          "CLO2, CLO3",
+          "TU",
+          "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+          "",
+          "Introduce async model; clarify event loop concepts.",
+          ""
+        ],
+        [
+          "11",
+          "Future-based Async Programming",
+          "Offline",
+          "CLO1, CLO3",
+          "TU",
+          "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+          "",
+          "Explain Future scheduling; demonstrate error propagation.",
+          ""
+        ],
+        [
+          "12",
+          "Streams & StreamController",
+          "Offline",
+          "CLO1, CLO3",
+          "TU",
+          "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+          "",
+          "Show StreamController patterns; memory-safety notes.",
+          ""
+        ],
+        [
+          "13",
+          "StreamBuilder in Flutter",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+          "",
+          "Live-code StreamBuilder; discuss rebuild behavior.",
+          ""
+        ],
+        [
+          "14",
+          "Repository Pattern",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+          "",
+          "Present repository abstraction; layering guidance.",
+          ""
+        ],
+        [
+          "15",
+          "Reactive Patterns (Concept)",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+          "",
+          "Discuss reactive patterns; pitfalls and best practices.",
+          ""
+        ],
+        [
+          "16",
+          "Progress Test 1",
+          "Offline",
+          "CLO1, CLO2, CLO3",
+          "U",
+          "Progress Test 1",
+          "",
+          "Progress Test 1",
+          ""
+        ],
+        [
+          "17",
+          "UI Basics – Scaffold LayoutListView & Card/ListTile",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+          "",
+          "Demonstrate composition; spacing best practices.Code-along list patterns; performance considerations.",
+          ""
+        ],
+        [
+          "18",
+          "Interactive Widgets",
+          "Offline",
+          "CLO1, CLO3",
+          "TU",
+          "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+          "",
+          "Handle onChanged; explain ephemeral vs app state.",
+          ""
+        ],
+        [
+          "19",
+          "Pickers – Date/Time",
+          "Offline",
+          "CLO3",
+          "TU",
+          "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+          "",
+          "Show pickers & result handling; UX guidance.",
+          ""
+        ],
+        [
+          "20",
+          "Theming & UI Polishing",
+          "Offline",
+          "CLO3",
+          "TU",
+          "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+          "",
+          "Review theming knobs; show common polish tips.",
+          ""
+        ],
+        [
+          "21",
+          "Navigator 1.0 – Push/Pop",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state. Session focus: Part 1.",
+          "",
+          "Explain Navigator stack; demo simple flow.",
+          ""
+        ],
+        [
+          "22",
+          "Named Routes & Arguments",
+          "Offline",
+          "CLO1, CLO6",
+          "TU",
+          "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+          "",
+          "Show RouteSettings & argument handling patterns.",
+          ""
+        ],
+        [
+          "23",
+          "Navigator 2.0 Concepts",
+          "Offline",
+          "CLO1, CLO7",
+          "TU",
+          "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+          "",
+          "Present RouterDelegate/RouteInformationParser overview.",
+          ""
+        ],
+        [
+          "24",
+          "Android Deep Linking",
+          "Offline",
+          "CLO1, CLO5",
+          "TU",
+          "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+          "",
+          "Walk-through manifest intent-filters; test live.",
+          ""
+        ],
+        [
+          "25",
+          "iOS URL Scheme Navigation",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+          "",
+          "Guide Info.plist & associated domains; QA routing.Assign and confirm project topics",
+          ""
+        ],
+        [
+          "26",
+          "Flex Layout (Row/Column)",
+          "Offline",
+          "CLO1, CLO3",
+          "TU",
+          "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+          "",
+          "Explain constraints; demonstrate Flex factors.",
+          ""
+        ],
+        [
+          "27",
+          "GridView & Stack",
+          "Offline",
+          "CLO1, CLO3",
+          "TU",
+          "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+          "",
+          "Show grid/stack patterns; layering tips.",
+          ""
+        ],
+        [
+          "28",
+          "LayoutBuilder & MediaQuery",
+          "Offline",
+          "CLO5",
+          "TU",
+          "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+          "",
+          "Introduce breakpoints; compute layout decisions.",
+          ""
+        ],
+        [
+          "29",
+          "Responsive UI Design",
+          "Offline",
+          "CLO7, CLO2",
+          "TU",
+          "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+          "",
+          "Critique responsive solutions; UX considerations.",
+          ""
+        ],
+        [
+          "30",
+          "Responsive Refactor",
+          "Offline",
+          "CLO1, CLO5",
+          "TU",
+          "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+          "",
+          "Refactor example; code review and feedback.",
+          ""
+        ],
+        [
+          "31",
+          "Progress Test 2",
+          "Offline",
+          "CLO3, CLO4, CLO5",
+          "U",
+          "Progress Test 2",
+          "",
+          "Progress Test 2",
+          ""
+        ],
+        [
+          "32",
+          "Forms & ControllersValidation & Errors",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M7 – Forms & Validation. Reference: Chapter 4 (Basic Widgets) & Chapter 14 (User Input)Chapter 4 (Form Widgets) & Chapter 14 (Validation UX)",
+          "",
+          "Explain controllers lifecycle; disposal rules.Demonstrate validation patterns; UX for errors.",
+          ""
+        ],
+        [
+          "33",
+          "Submit Flow & Data",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M7 – Forms & Validation. Reference: Chapter 14 (Input Flow), Chapter 6 (State Concepts)",
+          "",
+          "Show submit flow; data handling & confirmation.",
+          ""
+        ],
+        [
+          "34",
+          "Form Draft Save",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M7 – Forms & Validation. Reference: Chapter 6 (State Basics) & Chapter 14 (Input Events)",
+          "",
+          "Discuss draft-saving approaches; data model notes.",
+          ""
+        ],
+        [
+          "35",
+          "Focus & Keyboard Actions",
+          "Offline",
+          "CLO1, CLO7",
+          "TU",
+          "M7 – Forms & Validation. Reference: Chapter 14 (Focus, Keyboard Actions)",
+          "",
+          "Show focus traversal; accessibility considerations.",
+          ""
+        ],
+        [
+          "36",
+          "HTTP Request & JSON Parsing",
+          "Offline",
+          "CLO2, CLO7",
+          "TU",
+          "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+          "",
+          "Explain HTTP basics; JSON to model mapping.",
+          ""
+        ],
+        [
+          "37",
+          "FutureBuilder & List Rendering",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+          "",
+          "Live-code FutureBuilder; list rendering tips.",
+          ""
+        ],
+        [
+          "38",
+          "Error/Loading UI",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+          "",
+          "Error/empty/loading design; UX standards.",
+          ""
+        ],
+        [
+          "39",
+          "Detail Screen via API ID",
+          "Offline",
+          "CLO1, CLO6",
+          "TU",
+          "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+          "",
+          "Route to detail by ID; data flow sanity checks.",
+          ""
+        ],
+        [
+          "40",
+          "Retry & Caching",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilde",
+          "",
+          "Discuss caching layers; avoiding redundant calls.",
+          ""
+        ],
+        [
+          "41",
+          "SharedPreferences Basics",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching..",
+          "",
+          "Contrast prefs vs database; data lifecycle.",
+          ""
+        ],
+        [
+          "42",
+          "Local DB (SQLite/Hive)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+          "",
+          "Schema modeling; CRUD operations overview.",
+          ""
+        ],
+        [
+          "43",
+          "Persistent List Rendering",
+          "Offline",
+          "CLO3, CLO5",
+          "TU",
+          "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+          "",
+          "Render persisted data; integrity checks.",
+          ""
+        ],
+        [
+          "44",
+          "Sync-Up Concept",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+          "",
+          "Discuss sync patterns; conflict resolution basics.",
+          ""
+        ],
+        [
+          "45",
+          "Export/Backup JSON",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+          "",
+          "Show export concept; data portability discussion.",
+          ""
+        ],
+        [
+          "46",
+          "Login Form & Mock Auth",
+          "Offline",
+          "LO1, CLO2",
+          "TU",
+          "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+          "",
+          "Explain auth concepts; security caveats.",
+          ""
+        ],
+        [
+          "47",
+          "Session State Management",
+          "Offline",
+          "CLO3",
+          "TU",
+          "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+          "",
+          "Session/state handling; update UI accordingly.",
+          ""
+        ],
+        [
+          "48",
+          "Guarded Routes",
+          "Offline",
+          "CLO2",
+          "TU",
+          "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+          "",
+          "Route guarding patterns; navigation decisions.",
+          ""
+        ],
+        [
+          "49",
+          "Token Persistence (Mock)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+          "",
+          "Persist token mock; discuss security limits.",
+          ""
+        ],
+        [
+          "50",
+          "Integrated Auth Flow",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes. Session focus: Part 5.",
+          "",
+          "End-to-end demo; troubleshooting common issues.",
+          ""
+        ],
+        [
+          "51",
+          "Unit Tests for Project Features",
+          "Offline",
+          "LO1, CLO2",
+          "TU",
+          "M11 – Testing & Debugging. Core concepts from Ch.12.",
+          "",
+          "Explain testing setup in project context; assist integration.",
+          ""
+        ],
+        [
+          "52",
+          "Widget Tests & Debugging",
+          "Offline",
+          "CLO7",
+          "TU",
+          "M11 – Testing & Debugging. Core debugging tools.",
+          "",
+          "Review test coverage; show debugging techniques.",
+          ""
+        ],
+        [
+          "53",
+          "Progress Test 3",
+          "Offline",
+          "CLO5, CLO6, CLO7",
+          "U",
+          "Progress Test 3",
+          "",
+          "Progress Test 3",
+          ""
+        ],
+        [
+          "54",
+          "Sprint 3 ReviewRefactoring & Polishing",
+          "Offline",
+          "CLO1, CLO6",
+          "TU",
+          "Project Work – Sprint 3 Review.Project Work – Polishing & Refactoring.",
+          "",
+          "Conduct sprint review; give improvement feedback.Provide code review session; guide refactoring priorities.",
+          ""
+        ],
+        [
+          "55",
+          "User Testing & Report",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Project Work – User Testing.",
+          "",
+          "Supervise test execution; monitor report documentation.",
+          ""
+        ],
+        [
+          "56",
+          "Build & Release Config",
+          "Offline",
+          "CLO1",
+          "TU",
+          "M12 – Build & Release. Ch.13 (condensed).",
+          "",
+          "Demonstrate build process (debug/release).",
+          ""
+        ],
+        [
+          "57",
+          "Packaging & Release Build",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Project Work – Packaging.",
+          "",
+          "Guide deployment process; validate final artifacts.",
+          ""
+        ],
+        [
+          "58",
+          "Presentation Rehearsal",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Project Work – Presentation Rehearsal.",
+          "",
+          "Mentor on presentation skills; storytelling & flow.",
+          ""
+        ],
+        [
+          "59",
+          "Mock Defense",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Final Evaluation – Mock Defense.",
+          "",
+          "Act as evaluator; simulate defense Q&A.",
+          ""
+        ],
+        [
+          "60",
+          "Final Project Submission",
+          "Offline",
+          "CLO1",
+          "U",
+          "Final Project Presentation",
+          "",
+          "Grade presentation; summarize learning outcomes.",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Flutter Overview & Environment Setup",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRM393",
+            "links": [
+              {
+                "text": "PRM393",
+                "href": "https://flm.fpt.edu.vn/download/13822/S/1_PRM393.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Verify setups; troubleshoot common install issues; walk-through run configurations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Structure & Tooling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain folder structure; demonstrate build flavors; answer Q&A.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Hot Reload/Restart & Widget Tree",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demo hot reload/hot restart; show DevTools widget inspector.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basic UI Composition with Scaffold",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Live-code scaffold customization; review students’ changes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Summary & Setup Issues",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M1 – Introduction to Flutter. Reference: Ch.1 Getting Started, tooling, project structure.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Summarize pitfalls; collect environment reports; set expectations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dart Types & Variables",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review type system & null safety; address common errors.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Functions & Functional Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate function patterns; code review live.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Classes & Constructors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain class design; refactor student solutions.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collections & Operations",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show idiomatic collection usage; performance tips.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro to Futures & Async",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M2 – Dart Essentials. Reference: Ch.2–3 Dart syntax, types, functions, classes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduce async model; clarify event loop concepts.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Future-based Async Programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain Future scheduling; demonstrate error propagation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Streams & StreamController",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show StreamController patterns; memory-safety notes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "StreamBuilder in Flutter",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Live-code StreamBuilder; discuss rebuild behavior.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Repository Pattern",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present repository abstraction; layering guidance.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Reactive Patterns (Concept)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M3 – OOP & Asynchronous. Reference: Ch.3–4 OOP patterns, Futures, Streams, async/await.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss reactive patterns; pitfalls and best practices.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "UI Basics – Scaffold LayoutListView & Card/ListTile",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate composition; spacing best practices.Code-along list patterns; performance considerations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Interactive Widgets",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Handle onChanged; explain ephemeral vs app state.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Pickers – Date/Time",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show pickers & result handling; UX guidance.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theming & UI Polishing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M4 – UI Fundamentals. Reference: Ch.4 Widgets, Layouts, MaterialApp, lists & pickers.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review theming knobs; show common polish tips.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Navigator 1.0 – Push/Pop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state. Session focus: Part 1.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain Navigator stack; demo simple flow.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Named Routes & Arguments",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show RouteSettings & argument handling patterns.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Navigator 2.0 Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present RouterDelegate/RouteInformationParser overview.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Android Deep Linking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Walk-through manifest intent-filters; test live.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "iOS URL Scheme Navigation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M5 – Navigation & State Management. Reference: Ch.8 Navigator 1.0/2.0, named routes, deep links, basic state.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guide Info.plist & associated domains; QA routing.Assign and confirm project topics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Flex Layout (Row/Column)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain constraints; demonstrate Flex factors.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "GridView & Stack",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show grid/stack patterns; layering tips.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LayoutBuilder & MediaQuery",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduce breakpoints; compute layout decisions.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Responsive UI Design",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Critique responsive solutions; UX considerations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Responsive Refactor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M6 – Layout & Responsive Design. Reference: Ch.5–6 Advanced layouts (Grid/Stack/Flex), responsive patterns.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Refactor example; code review and feedback.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Forms & ControllersValidation & Errors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M7 – Forms & Validation. Reference: Chapter 4 (Basic Widgets) & Chapter 14 (User Input)Chapter 4 (Form Widgets) & Chapter 14 (Validation UX)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain controllers lifecycle; disposal rules.Demonstrate validation patterns; UX for errors.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit Flow & Data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M7 – Forms & Validation. Reference: Chapter 14 (Input Flow), Chapter 6 (State Concepts)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show submit flow; data handling & confirmation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Form Draft Save",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M7 – Forms & Validation. Reference: Chapter 6 (State Basics) & Chapter 14 (Input Events)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss draft-saving approaches; data model notes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Focus & Keyboard Actions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M7 – Forms & Validation. Reference: Chapter 14 (Focus, Keyboard Actions)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show focus traversal; accessibility considerations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HTTP Request & JSON Parsing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain HTTP basics; JSON to model mapping.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FutureBuilder & List Rendering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Live-code FutureBuilder; list rendering tips.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Error/Loading UI",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Error/empty/loading design; UX standards.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Detail Screen via API ID",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilder.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Route to detail by ID; data flow sanity checks.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Retry & Caching",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M8 – Networking & JSON API. Reference: Ch.9 HTTP/REST, JSON parsing, FutureBuilde",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss caching layers; avoiding redundant calls.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SharedPreferences Basics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching..",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Contrast prefs vs database; data lifecycle.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Local DB (SQLite/Hive)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Schema modeling; CRUD operations overview.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Persistent List Rendering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Render persisted data; integrity checks.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sync-Up Concept",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss sync patterns; conflict resolution basics.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Export/Backup JSON",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M9 – Local Storage & Persistence. Reference: Ch.10 SharedPreferences, SQLite/Hive, caching.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Show export concept; data portability discussion.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Login Form & Mock Auth",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain auth concepts; security caveats.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Session State Management",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Session/state handling; update UI accordingly.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guarded Routes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Route guarding patterns; navigation decisions.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Token Persistence (Mock)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Persist token mock; discuss security limits.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integrated Auth Flow",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M10 – Authentication & User Management. Reference: Ch.11 Auth basics, session, guarded routes. Session focus: Part 5.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-to-end demo; troubleshooting common issues.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit Tests for Project Features",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M11 – Testing & Debugging. Core concepts from Ch.12.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain testing setup in project context; assist integration.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Widget Tests & Debugging",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M11 – Testing & Debugging. Core debugging tools.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review test coverage; show debugging techniques.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sprint 3 ReviewRefactoring & Polishing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Work – Sprint 3 Review.Project Work – Polishing & Refactoring.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Conduct sprint review; give improvement feedback.Provide code review session; guide refactoring priorities.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "User Testing & Report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Work – User Testing.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervise test execution; monitor report documentation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Build & Release Config",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "M12 – Build & Release. Ch.13 (condensed).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate build process (debug/release).",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Packaging & Release Build",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Work – Packaging.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guide deployment process; validate final artifacts.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation Rehearsal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Work – Presentation Rehearsal.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mentor on presentation skills; storytelling & flow.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mock Defense",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Evaluation – Mock Defense.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Act as evaluator; simulate defense Q&A.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Submission",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Grade presentation; summarize learning outcomes.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Practical Exam",
+          "on-going",
+          "1",
+          "25.0%",
+          "4",
+          "90'/each",
+          "All CLOs",
+          "Write a program",
+          "By instructor, in class",
+          "studied chapters knowledge and skills",
+          "Students prepare personal computer with Android studio and virtual machines installed. The exam proctor will monitor and grade exam directly in the exam room.",
+          "1 x 25% =25% of total progress mark (each student write a small program)"
+        ],
+        [
+          "2",
+          "Progress Test",
+          "on-going",
+          "3",
+          "15.0%",
+          ">0",
+          "Option 1: 30'; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "PT1: CLO1, CLO2, CLO3; PT2: CLO3, CLO4, CLO5;PT3: CLO5 CLO6,CLO7",
+          "Option 1: Multi-choice Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1:25; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "studied chapters knowledge and skills",
+          "by instructor",
+          "3 x 5% = 15% of total progress mark"
+        ],
+        [
+          "3",
+          "Project",
+          "on-going",
+          "1",
+          "30.0%",
+          ">0",
+          "Option 1: At home; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "All CLOs",
+          "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "All chapters; knowledge and skills of mobile programming",
+          "by instructor",
+          "(20% product, 10% presentation); each student chooses project by himself"
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "All CLOs",
+          "Multi-Choice",
+          "50",
+          "All chapters; knowledge and skills of mobile programming",
+          "by exam board",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "90'/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write a program",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By instructor, in class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "studied chapters knowledge and skills",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students prepare personal computer with Android studio and virtual machines installed. The exam proctor will monitor and grade exam directly in the exam room.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1 x 25% =25% of total progress mark (each student write a small program)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30'; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PT1: CLO1, CLO2, CLO3; PT2: CLO3, CLO4, CLO5;PT3: CLO5 CLO6,CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Multi-choice Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1:25; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "studied chapters knowledge and skills",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3 x 5% = 15% of total progress mark",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: At home; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All chapters; knowledge and skills of mobile programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "(20% product, 10% presentation); each student chooses project by himself",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multi-Choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All chapters; knowledge and skills of mobile programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

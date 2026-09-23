@@ -1,0 +1,4602 @@
+{
+  "id": "11725",
+  "metadata": {
+    "Syllabus ID": "11725",
+    "Syllabus Name": "SAP General 1_Tổng quan về SAP 1",
+    "Course Name English": "SAP General 1",
+    "Subject Code": "SAP311",
+    "Learning-Teaching Method": "Lecture,Project based learning,Problem based learning",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+    "Pre-Requisite": "None",
+    "Description": "The course demonstrates concepts, principles, techniques, and applications of ERP systems in general and SAP in particular. The course recalls the components and the structure of an enterprise and introduces the design of SAP that is compatible with this structure. The course also introduces the first three SAP modules, SD (Sales Distribution), MM (Material Management) and PP (Product Planning). Theory, case study, practical sessions and workshop with SAP Experts are arranged alternately, helping students understand the operation of these modules.",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to http://flm.fpt.edu.vn for up-to-date course information",
+    "Tools": "- Internet - SAP Hana 4",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "765/QĐ-ĐHFPT dated 07/29/2024",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "7/29/2024"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "11725"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "11725"
+        ],
+        [
+          "Syllabus Name:",
+          "SAP General 1_Tổng quan về SAP 1"
+        ],
+        [
+          "Course Name English:",
+          "SAP General 1"
+        ],
+        [
+          "Subject Code:",
+          "SAP311"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Lecture,Project based learning,Problem based learning"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h (60 sessions) contact hours + 1h final exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "None"
+        ],
+        [
+          "Description:",
+          "The course demonstrates concepts, principles, techniques, and applications of ERP systems in general and SAP in particular. The course recalls the components and the structure of an enterprise and introduces the design of SAP that is compatible with this structure. The course also introduces the first three SAP modules, SD (Sales Distribution), MM (Material Management) and PP (Product Planning). Theory, case study, practical sessions and workshop with SAP Experts are arranged alternately, helping students understand the operation of these modules."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to http://flm.fpt.edu.vn for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Internet - SAP Hana 4"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "765/QĐ-ĐHFPT dated 07/29/2024"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "7/29/2024"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11725",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP General 1_Tổng quan về SAP 1",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP General 1",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP311",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture,Project based learning,Problem based learning",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "None",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The course demonstrates concepts, principles, techniques, and applications of ERP systems in general and SAP in particular. The course recalls the components and the structure of an enterprise and introduces the design of SAP that is compatible with this structure. The course also introduces the first three SAP modules, SD (Sales Distribution), MM (Material Management) and PP (Product Planning). Theory, case study, practical sessions and workshop with SAP Experts are arranged alternately, helping students understand the operation of these modules.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to http://flm.fpt.edu.vn for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Internet - SAP Hana 4",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "765/QĐ-ĐHFPT dated 07/29/2024",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7/29/2024",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Slides SAP Training Materials",
+          "SAP",
+          "SAP",
+          "",
+          "4.1",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "2",
+          "Slides Chapter 1, Concepts in Enterprise Resource Planning",
+          "Ellen F. Monk and Bret J. Wagner",
+          "Cengage Learning",
+          "2012",
+          "4th",
+          "9781111820398",
+          "True",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides SAP Training Materials",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides Chapter 1, Concepts in Enterprise Resource Planning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Ellen F. Monk and Bret J. Wagner",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cengage Learning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2012",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4th",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781111820398",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Describe the fundamentals of ERP and SAP: their concepts, techniques, navigations and applications."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Describe the integrated order-to-cash cycle (SD), the purchase-to-pay business process (MM) and the Product Planning (PP) modules."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Perform simple operations on SD, MM, PP modules"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Analyze business case studies and apply SAP system to handle situations"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Evaluate all the tasks performed to solve the case studies"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Develop professional working style, good teamwork skills and compliance with the production process."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe the fundamentals of ERP and SAP: their concepts, techniques, navigations and applications.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe the integrated order-to-cash cycle (SD), the purchase-to-pay business process (MM) and the Product Planning (PP) modules.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Perform simple operations on SD, MM, PP modules",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analyze business case studies and apply SAP system to handle situations",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluate all the tasks performed to solve the case studies",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop professional working style, good teamwork skills and compliance with the production process.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Introduction about the course:- Learning outcomes - Grading structure- Learning method- Materials",
+          "Offline",
+          "CLO6",
+          "I",
+          "Slides - Course Introduction",
+          "SAP311_S4HANA 4.1",
+          "Discuss, ask questions",
+          ""
+        ],
+        [
+          "2",
+          "Unit 1: Introduction to ERP and SAP S4HANALectureIntroduction to ERP",
+          "Offline",
+          "CLO1",
+          "I,T,U",
+          "Slides Chapter 1, Concepts in Enterprise Resource Planning, Ellen F. Monk and Bret J. Wagner Cengage Learning, 2012, 4th, ISBN: 9781111820398",
+          "SAP311_S4HAHA 4.2",
+          "-Read slides before the course",
+          ""
+        ],
+        [
+          "3",
+          "Unit 2: NavigationLecture",
+          "Offline",
+          "CLO1",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Navigation_Course_en_v4.1",
+          "",
+          "-Read slides before the course-Q&A",
+          ""
+        ],
+        [
+          "4",
+          "Unit 3: Global bike Lecture",
+          "Offline",
+          "CLO1,CLO2",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_GB_Slides_en_v4.1Intro_S4HANA_Using_Global_Bike_Story_en_v4.1",
+          "",
+          "-Read slides before the course-Q&A",
+          ""
+        ],
+        [
+          "5",
+          "Unit 3: Global bike Lecture",
+          "Offline",
+          "CLO1",
+          "I,T,U",
+          "Intro_S4HANA from FsoftSlides Chapter 1, Concepts in Enterprise Resource Planning, Ellen F. Monk and Bret J. Wagner Cengage Learning, 2012, 4th, ISBN: 9781111820398",
+          "",
+          "-Read slides before the course-Q&A",
+          ""
+        ],
+        [
+          "6",
+          "Unit 3: Global bike Lecture",
+          "Offline",
+          "CLO1,CLO2",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_GB_Slides_en_v4.1Intro_S4HANA_Using_Global_Bike_Story_en_v4.1",
+          "",
+          "-Read slides before the course-Q&A",
+          ""
+        ],
+        [
+          "7",
+          "Unit 4: Sales Distribution (SD)Lecture",
+          "Offline",
+          "CLO2",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Slides_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Q&A",
+          ""
+        ],
+        [
+          "8",
+          "Unit 4: Sales Distribution (SD)Lecture",
+          "Offline",
+          "CLO2",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Slides_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Q&A",
+          ""
+        ],
+        [
+          "9",
+          "Unit 4: Sales Distribution (SD)Lecture",
+          "Offline",
+          "CLO2",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Slides_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Q&A",
+          ""
+        ],
+        [
+          "10",
+          "Quiz 1 (Unit 1,2,3,4)",
+          "Offline",
+          "CLO1,CLO2",
+          "U",
+          "",
+          "",
+          "Quiz 1",
+          ""
+        ],
+        [
+          "11",
+          "Unit 4: Sales Distribution (SD)Exercices",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Exercises_SD_en_v4.1",
+          "",
+          "-Read slides before the course- Practice",
+          ""
+        ],
+        [
+          "12",
+          "Unit 4: Sales Distribution (SD)Exercices",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Exercises_SD_en_v4.1",
+          "",
+          "-Read slides before the course- Practice",
+          ""
+        ],
+        [
+          "13",
+          "Unit 4: Sales Distribution (SD) Case study Individual Assignment 1 (session 13-24)",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "ITU",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1 Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1 Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course -Follow the instructor's guidelines -Practice",
+          ""
+        ],
+        [
+          "14",
+          "Unit 4: Sales Distribution (SD)Case studyInstruction & define topic presentation of Group Presentation - Module SD",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Practice",
+          ""
+        ],
+        [
+          "15",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Practice",
+          ""
+        ],
+        [
+          "16",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Practice",
+          ""
+        ],
+        [
+          "17",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Practice",
+          ""
+        ],
+        [
+          "18",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Practice",
+          ""
+        ],
+        [
+          "19",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Practice",
+          ""
+        ],
+        [
+          "20",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course- Practice",
+          ""
+        ],
+        [
+          "21",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course- Practice",
+          ""
+        ],
+        [
+          "22",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course- Practice",
+          ""
+        ],
+        [
+          "23",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course- Practice",
+          ""
+        ],
+        [
+          "24",
+          "Unit 4: Sales Distribution (SD)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+          "",
+          "-Read slides before the course- Practice",
+          ""
+        ],
+        [
+          "25",
+          "Unit 5: Material Management (MM)Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Slides_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "26",
+          "Unit 5: Material Management (MM)Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Slides_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "27",
+          "Unit 5: Material Management (MM)Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Slides_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "28",
+          "Unit5: Material Management (MM)Exercices",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Exercises_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines",
+          ""
+        ],
+        [
+          "29",
+          "Unit5: Material Management (MM)Exercices",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Exercises_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines",
+          ""
+        ],
+        [
+          "30",
+          "Unit5: Material Management (MM) Case study Individual Assignment 2 (session 30-41)",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "TU",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1 Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1 Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course -Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "31",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "32",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "33",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "34",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "35",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "36",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "37",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "38",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "39",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "40",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Pratice",
+          ""
+        ],
+        [
+          "41",
+          "Unit5: Material Management (MM)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "U",
+          "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Practice",
+          ""
+        ],
+        [
+          "42",
+          "Unit 6: Production Planning (PP)Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Slides_PP_en_v4.1",
+          "",
+          "-Read slides before the course-Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "43",
+          "Unit 6: Production PlanningLecture",
+          "Offline",
+          "CLO1, CLO2",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Slides_PP_en_v4.1",
+          "",
+          "-Read slides before the course-Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "44",
+          "Unit 6: Production Planning (PP)Lecture",
+          "Offline",
+          "CLO1, CLO2",
+          "I, T",
+          "Intro_S4HANA_Using_Global_Bike_Slides_PP_en_v4.1",
+          "",
+          "-Read slides before the course-Do exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "45",
+          "Quiz 2 (Unit 5,6)",
+          "Offline",
+          "CLO1, CLO2",
+          "U",
+          "",
+          "",
+          "Quiz 2",
+          ""
+        ],
+        [
+          "46",
+          "Unit 6: Production Planning (PP)Exercices",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I, T",
+          "",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines",
+          ""
+        ],
+        [
+          "47",
+          "Unit 6: Production Planning (PP) Case study Individual Assignment 3 (session 47-54)",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "TU",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdf Intro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdf Intro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course -Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "48",
+          "Unit 6: Production Planning (PP)Case studyInstruction & define topic presentation of Group Presentation - Module MM, PP",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "49",
+          "Unit 6: Production Planning (PP)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "50",
+          "Unit 6: Production Planning (PP)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "51",
+          "Unit 6: Production Planning (PP)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "52",
+          "Unit 6: Production Planning (PP)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "53",
+          "Unit 6: Production Planning (PP)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "T,U",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course-Do practical exercises as requested by the teacher",
+          ""
+        ],
+        [
+          "54",
+          "Unit 6: Production Planning (PP)Case study",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "I,T",
+          "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+          "",
+          "-Read slides before the course-Follow the instructor's guidelines-Pratice",
+          ""
+        ],
+        [
+          "55",
+          "Unit 4, 5, 6: SD, MM, PPGroup PresentationReport Submission",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation- Report Submission",
+          ""
+        ],
+        [
+          "56",
+          "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ],
+        [
+          "57",
+          "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ],
+        [
+          "58",
+          "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ],
+        [
+          "59",
+          "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ],
+        [
+          "60",
+          "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "T,U",
+          "",
+          "",
+          "-Group Presentation",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction about the course:- Learning outcomes - Grading structure- Learning method- Materials",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides - Course Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP311_S4HANA 4.1",
+            "links": [
+              {
+                "text": "SAP311_S4HANA 4.1",
+                "href": "https://flm.fpt.edu.vn/download/11725/S/1_SAP311_S4HANA%204.1.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Discuss, ask questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 1: Introduction to ERP and SAP S4HANALectureIntroduction to ERP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides Chapter 1, Concepts in Enterprise Resource Planning, Ellen F. Monk and Bret J. Wagner Cengage Learning, 2012, 4th, ISBN: 9781111820398",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SAP311_S4HAHA 4.2",
+            "links": [
+              {
+                "text": "SAP311_S4HAHA 4.2",
+                "href": "https://flm.fpt.edu.vn/download/11725/S/2_SAP311_S4HAHA%204.2.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 2: NavigationLecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Navigation_Course_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 3: Global bike Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_GB_Slides_en_v4.1Intro_S4HANA_Using_Global_Bike_Story_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 3: Global bike Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA from FsoftSlides Chapter 1, Concepts in Enterprise Resource Planning, Ellen F. Monk and Bret J. Wagner Cengage Learning, 2012, 4th, ISBN: 9781111820398",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 3: Global bike Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_GB_Slides_en_v4.1Intro_S4HANA_Using_Global_Bike_Story_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 1 (Unit 1,2,3,4)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Exercices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Exercises_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course- Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Exercices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Exercises_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course- Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD) Case study Individual Assignment 1 (session 13-24)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1 Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1 Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Follow the instructor's guidelines -Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case studyInstruction & define topic presentation of Group Presentation - Module SD",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course- Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course- Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course- Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course- Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4: Sales Distribution (SD)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_SD_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_SD_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course- Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 5: Material Management (MM)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 5: Material Management (MM)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 5: Material Management (MM)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Exercices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Exercises_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Exercices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Exercises_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM) Case study Individual Assignment 2 (session 30-41)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1 Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1 Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Pratice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit5: Material Management (MM)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Case_Study_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Data_Sheet_MM_en_v4.1Intro_S4HANA_Using_Global_Bike_Notes_MM_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_PP_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production PlanningLecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_PP_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Lecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_Global_Bike_Slides_PP_en_v4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 2 (Unit 5,6)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Exercices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP) Case study Individual Assignment 3 (session 47-54)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdf Intro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdf Intro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course -Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Case studyInstruction & define topic presentation of Group Presentation - Module MM, PP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Do practical exercises as requested by the teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 6: Production Planning (PP)Case study",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Intro_S4HANA_Using_GB_Case_Study_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Data_Sheet_PP_en_v4.1.pdfIntro_S4HANA_Using_Global_Bike_Notes_PP_en_v4.1.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Read slides before the course-Follow the instructor's guidelines-Pratice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4, 5, 6: SD, MM, PPGroup PresentationReport Submission",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation- Report Submission",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4, 5, 6: SD, MM, PPGroup Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Group Presentation",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "Presentation: 15'/group in classQ&A: 10'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "Presentation and written report or slides",
+          "",
+          "3 modules SD, MM, PP",
+          "- Guided by instructor- 3-5 students/group- Students synthesize and present all knowledge they have learned, as well as review the mistakes they have made during practical sessions. -Each student has to givetheir an individual presentation.-Written report/slides by group.",
+          ""
+        ],
+        [
+          "2",
+          "Individual Assignment",
+          "on-going",
+          "3",
+          "30.0%",
+          ">0",
+          "10'-30'",
+          "CLO2, CLO3, CLO4",
+          "Case study,Exercise,Case Challenge",
+          "Unit 4 - Individual Assignment 1: 1 Case Study, 1 Exercise, 1 Case Challenge Unit 5 - Individual Assignment 2: 1 Case Study, 1 Exercise, 1 Case Challenge Unit 6 - Individual Assignment 3: 1 Case Study, 1 Exercise, 1 Case Challenge",
+          "Unit 4,5,6",
+          "-Students use SAP to solve a specific business situation",
+          "20% Exercise;50% Case Study; 30% Case Challenge"
+        ],
+        [
+          "3",
+          "Participation",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "all the course",
+          "CLO4",
+          "",
+          "",
+          "",
+          "Students must attend more than 80% of contact slotsAttendance check at any time during course",
+          ""
+        ],
+        [
+          "4",
+          "Quizzes",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "30'",
+          "CLO1, CLO2, CLO3, CLO4",
+          "Multiple choicesMarked by Computer or a suitable format;ORShort answer questionsORShort essay",
+          "MCQ'15-20 question/QuizOR1-3 Short question",
+          "- Quiz 1: unit 1,2,3,4- Quiz 2: unit 5,6",
+          "in class, by instructor",
+          ""
+        ],
+        [
+          "5",
+          "Final exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Multiple choicesMarked by Computer",
+          "50",
+          "concepts, algorithms; all studied chapters",
+          "by exam board,using computer",
+          "The exam questions must be updated or different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation: 15'/group in classQ&A: 10'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation and written report or slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3 modules SD, MM, PP",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Guided by instructor- 3-5 students/group- Students synthesize and present all knowledge they have learned, as well as review the mistakes they have made during practical sessions. -Each student has to givetheir an individual presentation.-Written report/slides by group.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10'-30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Case study,Exercise,Case Challenge",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4 - Individual Assignment 1: 1 Case Study, 1 Exercise, 1 Case Challenge Unit 5 - Individual Assignment 2: 1 Case Study, 1 Exercise, 1 Case Challenge Unit 6 - Individual Assignment 3: 1 Case Study, 1 Exercise, 1 Case Challenge",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unit 4,5,6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "-Students use SAP to solve a specific business situation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20% Exercise;50% Case Study; 30% Case Challenge",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "all the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students must attend more than 80% of contact slotsAttendance check at any time during course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quizzes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format;ORShort answer questionsORShort essay",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MCQ'15-20 question/QuizOR1-3 Short question",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Quiz 1: unit 1,2,3,4- Quiz 2: unit 5,6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "concepts, algorithms; all studied chapters",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board,using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated or different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

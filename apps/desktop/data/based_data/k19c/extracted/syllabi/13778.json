@@ -1,0 +1,4974 @@
+{
+  "id": "13778",
+  "metadata": {
+    "Syllabus ID": "13778",
+    "Syllabus Name": "Advanced Game Development_Phát triển game nâng cao",
+    "Course Name English": "Advanced Game Development",
+    "Subject Code": "AGU301",
+    "Learning-Teaching Method": "Project-Based Learning, In-class lecture, Active Learning",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+    "Pre-Requisite": "FGU301",
+    "Description": "This advanced Unity course builds on foundational skills to empower you with expert-level knowledge in creating professional, high-performance games. You'll dive deep into SOLID principles and design patterns for writing clean, scalable code, while mastering Unity's networking tools and cloud services to build engaging multiplayer experiences. Hands-on projects will help you optimize performance, integrate AI, and deliver polished games ready for consoles, PC, and beyond.Key Learning Outcomes: - Master SOLID Principles: Build a solid grasp of the five SOLID principles (Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion) and apply them to make your Unity code more modular and easier to maintain. - Implement Design Patterns: Get hands-on with essential Unity patterns like Singleton, Observer, Command, Strategy, Factory, Decorator, and State to organize code, boost flexibility, and simplify complex game logic. - Build with Unity Networking: Explore Unity Relay and Netcode to design smooth, reliable multiplayer systems that handle real-time interactions effortlessly. - Integrate Unity Gaming Services: Use cloud tools like Player Authentication, Lobbies, In-Game Economy, and Leaderboards to add secure, scalable features that enhance player engagement. - Optimize Performance: Discover profiling techniques and best practices to fine-tune your games for buttery-smooth gameplay, reduced lag, and efficient resource use on various devices. - Create Multiplayer Games: Develop small real-time multiplayer prototypes using Unity's networking and collaboration tools, following industry-standard workflows. - Leverage Unity AI: Incorporate AI models via Unity Sentis or similar tools to add intelligent behaviors, like smart NPCs or procedural content, to your game projects.By the end of this course, you'll have the confidence and skills to solve tough game development problems, from code architecture to live multiplayer features, and produce professional-quality games with cutting-edge design and tech.",
+    "StudentTasks": "- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose - Promptly access to the FU CMS at https://lms-hcmuni.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1318/QĐ-ĐHFPT dated 11/27/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "11/27/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13778"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13778"
+        ],
+        [
+          "Syllabus Name:",
+          "Advanced Game Development_Phát triển game nâng cao"
+        ],
+        [
+          "Course Name English:",
+          "Advanced Game Development"
+        ],
+        [
+          "Subject Code:",
+          "AGU301"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Project-Based Learning, In-class lecture, Active Learning"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "45h (60 sessions) contact hours + 1h final exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "FGU301"
+        ],
+        [
+          "Description:",
+          "This advanced Unity course builds on foundational skills to empower you with expert-level knowledge in creating professional, high-performance games. You'll dive deep into SOLID principles and design patterns for writing clean, scalable code, while mastering Unity's networking tools and cloud services to build engaging multiplayer experiences. Hands-on projects will help you optimize performance, integrate AI, and deliver polished games ready for consoles, PC, and beyond.Key Learning Outcomes: - Master SOLID Principles: Build a solid grasp of the five SOLID principles (Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion) and apply them to make your Unity code more modular and easier to maintain. - Implement Design Patterns: Get hands-on with essential Unity patterns like Singleton, Observer, Command, Strategy, Factory, Decorator, and State to organize code, boost flexibility, and simplify complex game logic. - Build with Unity Networking: Explore Unity Relay and Netcode to design smooth, reliable multiplayer systems that handle real-time interactions effortlessly. - Integrate Unity Gaming Services: Use cloud tools like Player Authentication, Lobbies, In-Game Economy, and Leaderboards to add secure, scalable features that enhance player engagement. - Optimize Performance: Discover profiling techniques and best practices to fine-tune your games for buttery-smooth gameplay, reduced lag, and efficient resource use on various devices. - Create Multiplayer Games: Develop small real-time multiplayer prototypes using Unity's networking and collaboration tools, following industry-standard workflows. - Leverage Unity AI: Incorporate AI models via Unity Sentis or similar tools to add intelligent behaviors, like smart NPCs or procedural content, to your game projects.By the end of this course, you'll have the confidence and skills to solve tough game development problems, from code architecture to live multiplayer features, and produce professional-quality games with cutting-edge design and tech."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose - Promptly access to the FU CMS at https://lms-hcmuni.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          ""
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1318/QĐ-ĐHFPT dated 11/27/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "11/27/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13778",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Advanced Game Development_Phát triển game nâng cao",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Advanced Game Development",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AGU301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project-Based Learning, In-class lecture, Active Learning",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45h (60 sessions) contact hours + 1h final exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "FGU301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This advanced Unity course builds on foundational skills to empower you with expert-level knowledge in creating professional, high-performance games. You'll dive deep into SOLID principles and design patterns for writing clean, scalable code, while mastering Unity's networking tools and cloud services to build engaging multiplayer experiences. Hands-on projects will help you optimize performance, integrate AI, and deliver polished games ready for consoles, PC, and beyond.Key Learning Outcomes: - Master SOLID Principles: Build a solid grasp of the five SOLID principles (Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion) and apply them to make your Unity code more modular and easier to maintain. - Implement Design Patterns: Get hands-on with essential Unity patterns like Singleton, Observer, Command, Strategy, Factory, Decorator, and State to organize code, boost flexibility, and simplify complex game logic. - Build with Unity Networking: Explore Unity Relay and Netcode to design smooth, reliable multiplayer systems that handle real-time interactions effortlessly. - Integrate Unity Gaming Services: Use cloud tools like Player Authentication, Lobbies, In-Game Economy, and Leaderboards to add secure, scalable features that enhance player engagement. - Optimize Performance: Discover profiling techniques and best practices to fine-tune your games for buttery-smooth gameplay, reduced lag, and efficient resource use on various devices. - Create Multiplayer Games: Develop small real-time multiplayer prototypes using Unity's networking and collaboration tools, following industry-standard workflows. - Leverage Unity AI: Incorporate AI models via Unity Sentis or similar tools to add intelligent behaviors, like smart NPCs or procedural content, to your game projects.By the end of this course, you'll have the confidence and skills to solve tough game development problems, from code architecture to live multiplayer features, and produce professional-quality games with cutting-edge design and tech.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend more than 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose - Promptly access to the FU CMS at https://lms-hcmuni.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1318/QĐ-ĐHFPT dated 11/27/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11/27/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Unity 6.2 User Manual.",
+          "Unity Technologies",
+          "Unity Technologies",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://docs.unity3d.com/Manual/index.html"
+        ],
+        [
+          "2",
+          "A tour of the C# language",
+          "Microsoft",
+          "Microsoft",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/overview"
+        ],
+        [
+          "3",
+          "Unity’s official e-book: Level up your code with design patterns and SOLID",
+          "Unity Technologies",
+          "Unity Technologies",
+          "2024",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://unity.com/resources/design-patterns-solid-ebook"
+        ],
+        [
+          "4",
+          "Unity’s official e-book: Optimize your console and PC game performance",
+          "Unity Resources",
+          "Unity Technologies",
+          "2023",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance"
+        ],
+        [
+          "5",
+          "Unity’s official e-book: Ultimate Guide to Profiling Unity Games",
+          "Unity Resources",
+          "Unity Technologies",
+          "2023",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://unity.com/resources/ultimate-guide-to-profiling-unity-games"
+        ],
+        [
+          "6",
+          "Unity’s official e-book: The ultimate guide to multiplayer networking for advanced Unity developers",
+          "Unity Resources",
+          "Unity Technologies",
+          "2024",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://unity.com/resources/ultimate-guide-advanced-multiplayer-networking"
+        ],
+        [
+          "7",
+          "Unity Gaming Services",
+          "Unity Technologies",
+          "Unity Technologies",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://docs.unity.com/ugs/en-us/manual/overview/manual/unity-gaming-services-home"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity 6.2 User Manual.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Manual/index.html",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "A tour of the C# language",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/overview",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity’s official e-book: Level up your code with design patterns and SOLID",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2024",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity’s official e-book: Optimize your console and PC game performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Resources",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2023",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity’s official e-book: Ultimate Guide to Profiling Unity Games",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Resources",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2023",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/ultimate-guide-to-profiling-unity-games",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity’s official e-book: The ultimate guide to multiplayer networking for advanced Unity developers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Resources",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2024",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/ultimate-guide-advanced-multiplayer-networking",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Gaming Services",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unity Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity.com/ugs/en-us/manual/overview/manual/unity-gaming-services-home",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "8 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand SOLID principles and design patterns in game development."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Ability to use common Unity design patterns, such as Singleton, Observer, Command, Strategy, Factory, Decorator, and State Pattern."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Understanding profiling in Unity"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Understand how to optimize game performance."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Understand the Unity Netcode solution and Unity Services."
+        ],
+        [
+          "6",
+          "CLO6",
+          "The ability to utilize Unity AI and apply AI models to game projects is essential."
+        ],
+        [
+          "7",
+          "CLO7",
+          "Develop multiplayer game applications using Unity."
+        ],
+        [
+          "8",
+          "CLO8",
+          "Collaborate effectively in a team environment for game development projects."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand SOLID principles and design patterns in game development.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Ability to use common Unity design patterns, such as Singleton, Observer, Command, Strategy, Factory, Decorator, and State Pattern.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understanding profiling in Unity",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand how to optimize game performance.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the Unity Netcode solution and Unity Services.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The ability to utilize Unity AI and apply AI models to game projects is essential.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop multiplayer game applications using Unity.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate effectively in a team environment for game development projects.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction & Topic Allocation.",
+          "Offline",
+          "",
+          "IT",
+          "",
+          "AGU301",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "Course Introduction & Topic Allocation.",
+          "Offline",
+          "",
+          "IT",
+          "",
+          "AGU301",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "4",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "5",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "6",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "7",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "8",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "9",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "10",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "11",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "12",
+          "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+          "Offline",
+          "CLL01, CLO2",
+          "T",
+          "https://unity.com/resources/design-patterns-solid-ebook",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "13",
+          "Assessment 1 (Week3): Milestone 1 Review & Evaluation",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "14",
+          "Assessment 1 (Week3): Milestone 1 Review & Evaluation",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "15",
+          "Quiz 1",
+          "Offline",
+          "CLO1, CLO2",
+          "U",
+          "Quiz 1",
+          "",
+          "Do quiz",
+          ""
+        ],
+        [
+          "16",
+          "Chapter 2: Optimize your game performance2.1 Profiling",
+          "Offline",
+          "CLO3",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "17",
+          "Chapter 2: Optimize your game performance2.1 Profiling",
+          "Offline",
+          "CLO3",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "18",
+          "Chapter 2: Optimize your game performance2.1 Profiling",
+          "Offline",
+          "CLO3",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "19",
+          "Chapter 2: Optimize your game performance2.2 Use the Memory Profiler",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "20",
+          "Chapter 2: Optimize your game performance2.2 Use the Memory Profiler",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "21",
+          "Chapter 2: Optimize your game performance2.2 Use the Memory Profiler",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "22",
+          "Chapter 2: Optimize your game performance2.3 Programming and code architecture",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "23",
+          "Chapter 2: Optimize your game performance2.3 Programming and code architecture",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "24",
+          "Chapter 2: Optimize your game performance2.3 Programming and code architecture",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "25",
+          "Chapter 2: Optimize your game performance2.4 Unity profiling and debug tools",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "26",
+          "Chapter 2: Optimize your game performance2.4 Unity profiling and debug tools",
+          "Offline",
+          "CLO4",
+          "T",
+          "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "27",
+          "Quiz 2",
+          "Offline",
+          "CLO3, CLO4",
+          "U",
+          "Quiz 2",
+          "",
+          "Do quiz",
+          ""
+        ],
+        [
+          "28",
+          "Chapter 3: Unity networking solutions3.1 Netcode for GameObjects and Netcode for Entities3.2 Setting up your first Netcode project.Network synchronization",
+          "Offline",
+          "CLO5, CLO7",
+          "T",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "29",
+          "Chapter 3: Unity networking solutions3.1 Netcode for GameObjects and Netcode for Entities3.2 Setting up your first Netcode project.Network synchronization",
+          "Offline",
+          "CLO5, CLO7",
+          "T",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "30",
+          "Chapter 3: Unity networking solutions3.1 Netcode for GameObjects and Netcode for Entities3.2 Setting up your first Netcode project.Network synchronization",
+          "Offline",
+          "CLO5, CLO7",
+          "T",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "31",
+          "Chapter 4: Third-party networking",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Critical thinking, AI literacy",
+          "",
+          "- Self practice",
+          ""
+        ],
+        [
+          "32",
+          "Chapter 4: Third-party networking",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Critical thinking, AI literacy",
+          "",
+          "- Self practice",
+          ""
+        ],
+        [
+          "33",
+          "Chapter 4: Third-party networking",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Critical thinking, AI literacy",
+          "",
+          "- Self practice",
+          ""
+        ],
+        [
+          "34",
+          "Assessment 2 (Week 6):Milestone 2 Review & Evaluation",
+          "Offline",
+          "CLO3, CLO4, CLO7",
+          "TU",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "35",
+          "Assessment 2 (Week 6):Milestone 2 Review & Evaluation",
+          "Offline",
+          "CLO3, CLO4, CLO7",
+          "TU",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "36",
+          "Assessment 2 (Week 6):Milestone 2 Review & Evaluation",
+          "Offline",
+          "CLO3, CLO4, CLO7",
+          "TU",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "37",
+          "Chapter 5: Inference Engine (Unity Sentis)5.1 Understand the Inference Engine workflow5.2 Models in Inference Engine",
+          "Offline",
+          "CLO6",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "38",
+          "Chapter 5: Inference Engine (Unity Sentis)5.1 Understand the Inference Engine workflow5.2 Models in Inference Engine",
+          "Offline",
+          "CLO6",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "39",
+          "Chapter 5: Inference Engine (Unity Sentis)5.1 Understand the Inference Engine workflow5.2 Models in Inference Engine",
+          "Offline",
+          "CLO6",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "40",
+          "Chapter 5: Inference Engine (Unity Sentis)5.3 Use tensors",
+          "Offline",
+          "CLO6",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "41",
+          "Chapter 5: Inference Engine (Unity Sentis)5.3 Use tensors",
+          "Offline",
+          "CLO6",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "42",
+          "Chapter 5: Inference Engine (Unity Sentis)5.3 Use tensors",
+          "Offline",
+          "CLO6",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "43",
+          "Chapter 6: AI Assistant",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "44",
+          "Chapter 6: AI Assistant",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "45",
+          "Chapter 6: AI Assistant",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "46",
+          "Assessment 3 (Week 8):Milestone 3 Review & Evaluation",
+          "Offline",
+          "CLO5, CLO6, CLO7",
+          "TU",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "47",
+          "Assessment 3 (Week 8):Milestone 3 Review & Evaluation",
+          "Offline",
+          "CLO5, CLO6, CLO7",
+          "TU",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "48",
+          "Quiz 3",
+          "Offline",
+          "CLO5, CLO6",
+          "U",
+          "Quiz 3",
+          "",
+          "Do quiz",
+          ""
+        ],
+        [
+          "49",
+          "Chapter 7: AI generator7.1 Sprite Generator and Texture2D Generator7.2 Sound Generator",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "50",
+          "Chapter 7: AI generator7.1 Sprite Generator and Texture2D Generator7.2 Sound Generator",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "51",
+          "Chapter 7: AI generator7.1 Sprite Generator and Texture2D Generator7.2 Sound Generator",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "52",
+          "Chapter 7: AI generator7.3 Animation Generator & Material Generator",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "53",
+          "Chapter 7: AI generator7.3 Animation Generator & Material Generator",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "54",
+          "Chapter 7: AI generator7.3 Animation Generator & Material Generator",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "55",
+          "Final Project Presentation",
+          "Offline",
+          "CLO7, CLO8",
+          "U",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "56",
+          "Final Project Presentation",
+          "Offline",
+          "CLO7, CLO8",
+          "U",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "57",
+          "Final Project Presentation",
+          "Offline",
+          "CLO7, CLO8",
+          "U",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "58",
+          "Final Project Presentation",
+          "Offline",
+          "CLO7, CLO8",
+          "U",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "59",
+          "Final Project Presentation",
+          "Offline",
+          "CLO7, CLO8",
+          "U",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ],
+        [
+          "60",
+          "Final Project Presentation",
+          "Offline",
+          "CLO7, CLO8",
+          "U",
+          "Presentation slides, report",
+          "",
+          "Present milestone, receive feedback",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction & Topic Allocation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AGU301",
+            "links": [
+              {
+                "text": "AGU301",
+                "href": "https://flm.fpt.edu.vn/download/13778/S/1_AGU301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction & Topic Allocation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AGU301",
+            "links": [
+              {
+                "text": "AGU301",
+                "href": "https://flm.fpt.edu.vn/download/13778/S/2_AGU301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.1 The SOLID principles",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1: SOLID and Common Design Pattern in Game Development1.2 Design patterns for game development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLL01, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/design-patterns-solid-ebook",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 1 (Week3): Milestone 1 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 1 (Week3): Milestone 1 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do quiz",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.1 Profiling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.1 Profiling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.1 Profiling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.2 Use the Memory Profiler",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.2 Use the Memory Profiler",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.2 Use the Memory Profiler",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.3 Programming and code architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.3 Programming and code architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.3 Programming and code architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.4 Unity profiling and debug tools",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2: Optimize your game performance2.4 Unity profiling and debug tools",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://unity.com/resources/optimize-your-console-and-pc-game-performance",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do quiz",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3: Unity networking solutions3.1 Netcode for GameObjects and Netcode for Entities3.2 Setting up your first Netcode project.Network synchronization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3: Unity networking solutions3.1 Netcode for GameObjects and Netcode for Entities3.2 Setting up your first Netcode project.Network synchronization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3: Unity networking solutions3.1 Netcode for GameObjects and Netcode for Entities3.2 Setting up your first Netcode project.Network synchronization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4: Third-party networking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Critical thinking, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4: Third-party networking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Critical thinking, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4: Third-party networking",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Critical thinking, AI literacy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 2 (Week 6):Milestone 2 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 2 (Week 6):Milestone 2 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 2 (Week 6):Milestone 2 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5: Inference Engine (Unity Sentis)5.1 Understand the Inference Engine workflow5.2 Models in Inference Engine",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5: Inference Engine (Unity Sentis)5.1 Understand the Inference Engine workflow5.2 Models in Inference Engine",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5: Inference Engine (Unity Sentis)5.1 Understand the Inference Engine workflow5.2 Models in Inference Engine",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5: Inference Engine (Unity Sentis)5.3 Use tensors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5: Inference Engine (Unity Sentis)5.3 Use tensors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5: Inference Engine (Unity Sentis)5.3 Use tensors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6: AI Assistant",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6: AI Assistant",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6: AI Assistant",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/[email protected]/manual/index.html",
+            "links": [
+              {
+                "text": "[email protected]",
+                "href": "https://flm.fpt.edu.vn/cdn-cgi/l/email-protection"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 3 (Week 8):Milestone 3 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 3 (Week 8):Milestone 3 Review & Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do quiz",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7: AI generator7.1 Sprite Generator and Texture2D Generator7.2 Sound Generator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7: AI generator7.1 Sprite Generator and Texture2D Generator7.2 Sound Generator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7: AI generator7.1 Sprite Generator and Texture2D Generator7.2 Sound Generator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7: AI generator7.3 Animation Generator & Material Generator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7: AI generator7.3 Animation Generator & Material Generator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7: AI generator7.3 Animation Generator & Material Generator",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.unity3d.com/Packages/com.unity.ai.generators@latest",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation slides, report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present milestone, receive feedback",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assessment (PBL milestones check)",
+          "on-going",
+          "3",
+          "30.0%",
+          ">0",
+          "20'/group",
+          "Assessment 1 (Week3): CLO1, CLO2Assessment 2 (Week 6): CLO3, CLO4, CLO7Assessment 3 (Week 8): CLO5, CLO6, CLO7",
+          "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+          "By instructor",
+          "Assessment 1: CLO1, CLO2Assessment 2: CLO3, CLO4, CLO7Assessment 3: CLO5, CLO6, CLO7",
+          "in class, by instructor",
+          "Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "2",
+          "Final Project Presentation",
+          "on-going",
+          "1",
+          "30.0%",
+          "5",
+          "30'/group",
+          "CLO7, CLO8",
+          "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+          "By instructor",
+          "",
+          "in class, by instructor",
+          "Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "3",
+          "Progress test (Quiz)",
+          "on-going",
+          "3",
+          "15.0%",
+          ">0",
+          "30'",
+          "Quiz 1: Chapter 1; CLO1, CLO2Quiz 2: Chapter 2; CLO3, CLO4Quiz 3: Chapter 4, 5, 6; CLO5, CLO6",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "25",
+          "Quiz 1 cover content: Chapter 1, 2Quiz 2 cover content: Chapter 3, 4Quiz 3 cover content: Chapter 5, 6, 7",
+          "by exam board,using computer",
+          "Instruction and schedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "4",
+          "Final Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "60'",
+          "CL1 - CLO6",
+          "Multiple choicesMarked by Computer",
+          "50",
+          "concepts, algorithms; all studied chapters",
+          "by exam board, using computer",
+          "The exam questions must be updated or different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment (PBL milestones check)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20'/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 1 (Week3): CLO1, CLO2Assessment 2 (Week 6): CLO3, CLO4, CLO7Assessment 3 (Week 8): CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assessment 1: CLO1, CLO2Assessment 2: CLO3, CLO4, CLO7Assessment 3: CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'/group",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The student presents slides, gives a demonstration, and answers questions from the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test (Quiz)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 1: Chapter 1; CLO1, CLO2Quiz 2: Chapter 2; CLO3, CLO4Quiz 3: Chapter 4, 5, 6; CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz 1 cover content: Chapter 1, 2Quiz 2 cover content: Chapter 3, 4Quiz 3 cover content: Chapter 5, 6, 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board,using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instruction and schedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CL1 - CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "concepts, algorithms; all studied chapters",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board, using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated or different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

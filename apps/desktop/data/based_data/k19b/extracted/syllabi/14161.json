@@ -1,0 +1,4804 @@
+{
+  "id": "14161",
+  "metadata": {
+    "Syllabus ID": "14161",
+    "Syllabus Name": "Machine Learning in Data Science_Học máy trong khoa học dữ liệu",
+    "Course Name English": "Machine Learning in Data Science",
+    "Subject Code": "MDS301",
+    "Learning-Teaching Method": "Inquiry-Based Learning,In-class lecture, Active Learning",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study",
+    "Pre-Requisite": "PDS301m, MAE101",
+    "Description": "1. This course introduces the core concepts and practical techniques of machine learning for data science through practical, hands-on work with Python. 2. Students will learn how to preprocess and analyze data, implement common machine learning algorithms, and evaluate model performance using appropriate metrics. 3. Using modern tools such as Scikit-Learn and PyTorch, student will practice solving real data problems including prediction, classification, clustering and basic deep learning.4. Additionally, students will gain basic experience deploying trained models through simple APIs and interpreting predictions with attention to ethical considerations.",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose - Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "Jupyter, Visual Studio Code, Git/GitHub, Docker (basic), FastAPI, Mlflow",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "377/QĐ-ĐHFPT dated 04/09/2026",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/9/2026"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "14161"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "14161"
+        ],
+        [
+          "Syllabus Name:",
+          "Machine Learning in Data Science_Học máy trong khoa học dữ liệu"
+        ],
+        [
+          "Course Name English:",
+          "Machine Learning in Data Science"
+        ],
+        [
+          "Subject Code:",
+          "MDS301"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Inquiry-Based Learning,In-class lecture, Active Learning"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PDS301m, MAE101"
+        ],
+        [
+          "Description:",
+          "1. This course introduces the core concepts and practical techniques of machine learning for data science through practical, hands-on work with Python. 2. Students will learn how to preprocess and analyze data, implement common machine learning algorithms, and evaluate model performance using appropriate metrics. 3. Using modern tools such as Scikit-Learn and PyTorch, student will practice solving real data problems including prediction, classification, clustering and basic deep learning.4. Additionally, students will gain basic experience deploying trained models through simple APIs and interpreting predictions with attention to ethical considerations."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose - Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "Jupyter, Visual Studio Code, Git/GitHub, Docker (basic), FastAPI, Mlflow"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "377/QĐ-ĐHFPT dated 04/09/2026"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/9/2026"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14161",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Machine Learning in Data Science_Học máy trong khoa học dữ liệu",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Machine Learning in Data Science",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MDS301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Inquiry-Based Learning,In-class lecture, Active Learning",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 1h final exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PDS301m, MAE101",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. This course introduces the core concepts and practical techniques of machine learning for data science through practical, hands-on work with Python. 2. Students will learn how to preprocess and analyze data, implement common machine learning algorithms, and evaluate model performance using appropriate metrics. 3. Using modern tools such as Scikit-Learn and PyTorch, student will practice solving real data problems including prediction, classification, clustering and basic deep learning.4. Additionally, students will gain basic experience deploying trained models through simple APIs and interpreting predictions with attention to ethical considerations.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination.- Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time- Use laptop in class only for learning purpose - Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Jupyter, Visual Studio Code, Git/GitHub, Docker (basic), FastAPI, Mlflow",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "377/QĐ-ĐHFPT dated 04/09/2026",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/9/2026",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Hands-On Machine Learning with Scikit-Learn and PyTorch: Concepts, Tools, and Techniques to Build Intelligent Systems",
+          "Aurélien Géron",
+          "O’Reilly Media",
+          "2025",
+          "1 st",
+          "979-8341607989",
+          "True",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "Python Data Science Handbook: Essential Tools for Working with Data",
+          "VanderPlas, J.",
+          "O’Reilly Media",
+          "2023",
+          "2nd",
+          "978-1098121228",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "3",
+          "Introduction to Machine Learning with Python: A Guide for Data Scientists",
+          "Müller, A. C., & Guido, S.",
+          "O’Reilly Media",
+          "2016",
+          "1st",
+          "978-1449369415",
+          "False",
+          "True",
+          "False",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Hands-On Machine Learning with Scikit-Learn and PyTorch: Concepts, Tools, and Techniques to Build Intelligent Systems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Aurélien Géron",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "O’Reilly Media",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2025",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1 st",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "979-8341607989",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Python Data Science Handbook: Essential Tools for Working with Data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "VanderPlas, J.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "O’Reilly Media",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2023",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2nd",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1098121228",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Machine Learning with Python: A Guide for Data Scientists",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Müller, A. C., & Guido, S.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "O’Reilly Media",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2016",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1449369415",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "7 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand Core Concepts: Explain fundamental machine learning principles of machine learning, distinguish between supervised, unsupervised, and reinforcement learning, and describe the end-to-end ML workflow."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Prepare and Analyze Data: Proficiently preprocess datasets, perform exploratory data analysis, and engineer relevant features to support effective model training."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Implement and Train Models: Implement and train a variety of key machine learning algorithms - including linear models, tree-based ensembles, and clustering methods - using standard Python machine learning libraries."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Evaluate and Validate Models: Select and use appropriate metrics to evaluate model performance, diagnose issues such as overfitting or underfitting, and validate model performance using techniques like cross-validation."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Apply Neural Networks: Understand the fundamentals of neural networks and build/train deep learning model using modern frameworks such as PyTorch for tasks including image classification."
+        ],
+        [
+          "6",
+          "CLO6",
+          "Deploy and Interpret Models: Demonstrate basic model deployment by exposing a trained model through a simple API and interpret model predictions while recognizing ethical and data bias considerations."
+        ],
+        [
+          "7",
+          "CLO7",
+          "Integrate ML solution into software system: Design, implement, and integrate a complete ML solution into a software system, including proper documentation, testing, and API deployment following software engineering best practices."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand Core Concepts: Explain fundamental machine learning principles of machine learning, distinguish between supervised, unsupervised, and reinforcement learning, and describe the end-to-end ML workflow.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Prepare and Analyze Data: Proficiently preprocess datasets, perform exploratory data analysis, and engineer relevant features to support effective model training.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Implement and Train Models: Implement and train a variety of key machine learning algorithms - including linear models, tree-based ensembles, and clustering methods - using standard Python machine learning libraries.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluate and Validate Models: Select and use appropriate metrics to evaluate model performance, diagnose issues such as overfitting or underfitting, and validate model performance using techniques like cross-validation.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply Neural Networks: Understand the fundamentals of neural networks and build/train deep learning model using modern frameworks such as PyTorch for tasks including image classification.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deploy and Interpret Models: Demonstrate basic model deployment by exposing a trained model through a simple API and interpret model predictions while recognizing ethical and data bias considerations.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Integrate ML solution into software system: Design, implement, and integrate a complete ML solution into a software system, including proper documentation, testing, and API deployment following software engineering best practices.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Summary of Math Prerequisites for Machine Learning:+ Linear Algebra (vectors, matrices)+ Probability & Statistics (probability distributions, mean, variance)+ Differential Calculus (gradients, derivatives)",
+          "Offline",
+          "CLO1",
+          "T",
+          "Slides",
+          "MDS301",
+          "Read slides",
+          ""
+        ],
+        [
+          "2",
+          "Course introduction and Setup environmentIntroduction to Machine Learning (ML)+ Definition of ML+ Applications of ML+ Types of ML (supervised, unsupervised, reinforcement learning)",
+          "Offline",
+          "CLO1",
+          "T",
+          "Slides, Textbook chapter 1, requirements.txt",
+          "",
+          "Read textbook, slidesSetup environment",
+          ""
+        ],
+        [
+          "3",
+          "Introduction to Machine Learning (ML)+ Main challenges of ML+ Testing and Validating+ ML vs Statistical Modeling",
+          "Offline",
+          "CLO1",
+          "T",
+          "Slides, Textbook chapter 1",
+          "",
+          "Read textbook, slidesDo exercises",
+          ""
+        ],
+        [
+          "4",
+          "End-to-end ML workflow via small project+ Problem framing and Performance Measure Selection+ Data collection+ Exploratory Data Analysis & Visualization+ demo",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "Slides, Textbook chapter 2",
+          "link4-1",
+          "Read textbook, slidesDo project by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "5",
+          "End-to-end ML workflow via small project+ Data preprocessing: Data Cleaning, Feature Engineering, Custom Transformers, Preprocessing pipelines+ demo",
+          "Offline",
+          "CLO1, CLO2",
+          "TU",
+          "Slides, Textbook chapter 2",
+          "link5-1",
+          "Read textbook, slidesDo project by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "6",
+          "End-to-end ML workflow via small project+ Select and Train the model+ Fine-Tune the model+ demo",
+          "Offline",
+          "CLO1, CLO3",
+          "TU",
+          "Slides, Textbook chapter 2",
+          "link6-1",
+          "Read textbook, slidesDo project by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "7",
+          "Supervised learning: Introduction+ Regression vs Classification+ Typical supervised learning workflow+ Training vs testing+ Train/test split",
+          "Offline",
+          "CLO3, CLO4",
+          "T",
+          "Slides, Textbook chapter 3, Refference book",
+          "",
+          "Read textbook, slidesDo exercises",
+          ""
+        ],
+        [
+          "8",
+          "Supervised Learning: Model Evaluation: + Metrics for regression+ Metrics for classification+ Overfitting and underfitting+ demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 3, Refference book",
+          "",
+          "Read textbook, slidesDo exercises",
+          ""
+        ],
+        [
+          "9",
+          "Supervised Learning: Regression Algorithms+ Linear Regression+ Gradient Descent+ demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 4",
+          "link9-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "10",
+          "Supervised Learning: Regression Algorithms+ Polynomial Regression+ Learning Curves+ demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 4",
+          "link10-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "11",
+          "Supervised Learning: Regression Algorithms+ Regularized Linear Models+ Logistic Regression+ demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 4",
+          "link11-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "12",
+          "Supervised Learning: Classification Algorithms+ K-nearest neighbors+ Naïve Bayes Classifiers+ demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, 2nd Textbook chapter 2",
+          "",
+          "Read textbook, slidesDemo of K-nearest neighbors and naïve Bayes Classifiers in 2nd textbook chapter 2",
+          ""
+        ],
+        [
+          "13",
+          "Supervised Learning: Classification Algorithms+ Decision Trees+ Random Forests+ demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, 1st Textbook chap 5 and 6",
+          "link13-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "14",
+          "Supervised Learning: Classification Algorithms+ Support Vertor Machines (SVM) + SVM Kernels+ demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Introduction to Machine Learning with Python, chapter 2",
+          "",
+          "Read textbook, slidesDemo of SVM in Introduction to Machine Learning with Python, chapter 2",
+          ""
+        ],
+        [
+          "15",
+          "Lab 01",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "TU",
+          "Slides, Textbooks, Lab's questions",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "16",
+          "Lab 01",
+          "Offline",
+          "CLO2, CLO3, CLO4",
+          "TU",
+          "Slides, Textbooks, Lab's questions",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "17",
+          "Unsupervised Learning: Introduction+ Introduction of Clustering and Dimensionality Reduction+ Evaluation of Unsupervised Models: Internal vs. External metrics",
+          "Offline",
+          "CLO3, CLO4",
+          "T",
+          "Slides, Python Data Science Handbook, chapter 5; Introduction to Machine Learning with Python, chapter 3",
+          "",
+          "Read textbook, slidesDo exercises",
+          ""
+        ],
+        [
+          "18",
+          "Unsupervised Learning: Clustering Algorithms+ K-means+ Density-Based Clustering (DBSCAN)+ Demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 8",
+          "link18-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "19",
+          "Unsupervised Learning: Clustering Algorithms+ Hierarchical clustering: dendrogram, agglomerative clustering+ Linkage criteria: single linkage, complete linkage, average linkage+ Demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 8",
+          "link19-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "20",
+          "Unsupervised Learning: Clustering Algorithms+ Gaussian Mixtures+ Demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 8",
+          "link20-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "21",
+          "Unsupervised Learning: Dimensionality Reduction Algorithms+ The curse of Dimensionality+ PCA+ Random Projection+ LLE+ Demo",
+          "Offline",
+          "CLO3, CLO4",
+          "TU",
+          "Slides, Textbook chapter 7",
+          "link21-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "22",
+          "Assignment 01",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "Slides, Textbooks, Assignment's questions",
+          "",
+          "Do Assignment at home",
+          ""
+        ],
+        [
+          "23",
+          "Assignment 01",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "Slides, Textbooks, Assignment's questions",
+          "",
+          "Do Assignment at home",
+          ""
+        ],
+        [
+          "24",
+          "Progress Test",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "U",
+          "Slides, Textbooks",
+          "",
+          "Do test",
+          ""
+        ],
+        [
+          "25",
+          "Basics of Neural Networks:+ Artificial neuron+ Perceptron+ Activation Functions (ReLU, Sigmoid, Tanh)+ Multilayer Perceptron (MLP) and Backpropagation+ Optimizers (Adam, SGD)+ demo",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbook chapter 9 and 11",
+          "link25-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "26",
+          "Building and Training simple MLPs with Scikit-Learn:+ Regression MLPs+ demo",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbook chapter 9 and 11",
+          "link26-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "27",
+          "Building and Training simple MLPs with Scikit-Learn:+ Classification MLPs+ demoHyperparameter Tuning Guidelines: number of hidden layers, number of neurons per hidden layer, learning rate, batch size",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbook chapter 9 and 11",
+          "link27-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "28",
+          "Introduction of Deep Learning Frameworks:+ What is framework? Why we need frameworks?+ Simple comparison of TensorFlow/Keras and PyTorch+ PyTorch fundamentals: tensor, hardware acceleration, autograd+ Building an Image Classifier with PyTorch (demo)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbook chapter 10",
+          "link28-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "29",
+          "Deep learning for image with PyTorch: + Convolutional Neural Networks (CNN): convolutional layers, pooling layers, CNN architectures",
+          "Offline",
+          "CLO5",
+          "T",
+          "Slides, Textbook chapter 12",
+          "",
+          "Read textbook, slidesDo exercises",
+          ""
+        ],
+        [
+          "30",
+          "Deep learning for image with PyTorch: + Implementing convolutional layers, pooling layers, ResNet-34 in PyTorch+ demo",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbook chapter 12",
+          "link30-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "31",
+          "Transfer Learning: + Pretrained models for transfer learning (TorchVision)+ Fine-tuning pretrained models+ Regularization+ Demo",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbook chapter 12",
+          "link31-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "32",
+          "Lab 02",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbooks, Lab's questions",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "33",
+          "Lab 02",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Slides, Textbooks, Lab's questions",
+          "",
+          "Do Lab",
+          ""
+        ],
+        [
+          "34",
+          "MLOps introductionModel deployment:+ Definition of Model deployment+ Deployment workflow+ Model serialization: save and load trained model (with demo)",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "35",
+          "Model deployment:+ Build prediction model+ Deploy model as REST API (Flask/FastAPI)+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "36",
+          "Model deployment:+ Containerization: concept and workflow, tools presentation (Docker, Kubernetes)+ Cloud deployment: concept, architecture, cloud service providers (AWS, Azure, GCP)",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slides, self learning for coding deployment",
+          ""
+        ],
+        [
+          "37",
+          "Model Monitoring:+ Definition of model monitoring+ Drift Detection: Data drift, concept drift",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slides, Do exercises",
+          ""
+        ],
+        [
+          "38",
+          "Model Monitoring:+ Performance decay+ Prediction distribution monitoring+ Logging predictions",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slides, Do exercises",
+          ""
+        ],
+        [
+          "39",
+          "Model Monitoring:+ Simple monitoring demo+ Practical monitoring workflow",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "40",
+          "ML Pipelines and Software Engineering practices for ML Systems+ ML Pipelines: - Pipeline concepts- Scikit-learn Pipelines (build pipeline, train, predict, evaluate)- demo+ Software Engineering practices for ML Systems:- Version control for ML projects (Git workflow)- Repository structure for ML projects- Unit testing for ML components- Introduction to CI/CD for ML pipelines",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "Slides",
+          "",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "41",
+          "MLFlow and Experiment Tracking: + Experiment tracking + Model versioning+ Reproducibility+ Demo",
+          "Offline",
+          "CLO6, CLO7",
+          "TU",
+          "Slides",
+          "link41-1",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "42",
+          "Assignment 02 guides:Assignment 02 Requirements:+ ML pipeline implementation+ Model deployment as REST API+ GitHub repository submission+ Documentation (README)",
+          "Offline",
+          "CLO5, CLO6",
+          "TU",
+          "Slides, Textbook,",
+          "",
+          "Do Assignment and commit to Github",
+          ""
+        ],
+        [
+          "43",
+          "Assignment 02 review",
+          "Offline",
+          "CLO5, CLO6",
+          "TU",
+          "Slides, Textbook,",
+          "",
+          "Do Assignment and commit to Github",
+          ""
+        ],
+        [
+          "44",
+          "Assignment 02 review",
+          "Offline",
+          "CLO5, CLO6",
+          "TU",
+          "Slides, Textbook,",
+          "",
+          "Do Assignment and commit to Github",
+          ""
+        ],
+        [
+          "45",
+          "Time Series Forecasting: + Time Series concepts+ ARMA model family+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides, Textbook chapter 13",
+          "link45-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "46",
+          "Time Series Forecasting: + Prophet (Meta)",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read textbook, slides",
+          ""
+        ],
+        [
+          "47",
+          "Time Series Forecasting: + Basics of Recurrent Neural Networks (RNNs)+ LSTM model+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides, Textbook chapter 13",
+          "link47-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "48",
+          "Natural Language Processing (NLP):+ NLP basics and workflow+ Tokenization, Bag-of-Words, TF-IDF+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides, Textbook chapter 14 and chapter 15",
+          "link48-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "49",
+          "Natural Language Processing (NLP):+ Word Embeddings (Word2Vec)+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides, Textbook chapter 14 and chapter 15",
+          "link49-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "50",
+          "Natural Language Processing (NLP):+ Transformers & BERT using Hugging Face+ demo: sentiment analysis with Hugging Face",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides, Textbook chapter 14 and chapter 15",
+          "link50-1",
+          "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+          ""
+        ],
+        [
+          "51",
+          "Recommendation Systems:+ Recommendation system + Content-Based Filtering+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "52",
+          "Recommendation Systems:+ Collaborative Filtering+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "53",
+          "Recommendation Systems:+ Matrix Factorization+ demo",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slidesDemo by following teacher",
+          ""
+        ],
+        [
+          "54",
+          "AI Ethics and Responsible AI:+ Responsible AI principles+ Ethical risks in AI system",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slides",
+          "",
+          "Read slides",
+          ""
+        ],
+        [
+          "55",
+          "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "U",
+          "",
+          "",
+          "Final reports + demo",
+          ""
+        ],
+        [
+          "56",
+          "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "U",
+          "",
+          "",
+          "Final reports + demo",
+          ""
+        ],
+        [
+          "57",
+          "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "U",
+          "",
+          "",
+          "Final reports + demo",
+          ""
+        ],
+        [
+          "58",
+          "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "U",
+          "",
+          "",
+          "Final reports + demo",
+          ""
+        ],
+        [
+          "59",
+          "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "U",
+          "",
+          "",
+          "Final reports + demo",
+          ""
+        ],
+        [
+          "60",
+          "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "U",
+          "",
+          "",
+          "Final reports + demo",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Summary of Math Prerequisites for Machine Learning:+ Linear Algebra (vectors, matrices)+ Probability & Statistics (probability distributions, mean, variance)+ Differential Calculus (gradients, derivatives)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MDS301",
+            "links": [
+              {
+                "text": "MDS301",
+                "href": "https://flm.fpt.edu.vn/download/14161/S/1_MDS301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course introduction and Setup environmentIntroduction to Machine Learning (ML)+ Definition of ML+ Applications of ML+ Types of ML (supervised, unsupervised, reinforcement learning)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 1, requirements.txt",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesSetup environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Machine Learning (ML)+ Main challenges of ML+ Testing and Validating+ ML vs Statistical Modeling",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-to-end ML workflow via small project+ Problem framing and Performance Measure Selection+ Data collection+ Exploratory Data Analysis & Visualization+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link4-1",
+            "links": [
+              {
+                "text": "link4-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo project by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-to-end ML workflow via small project+ Data preprocessing: Data Cleaning, Feature Engineering, Custom Transformers, Preprocessing pipelines+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link5-1",
+            "links": [
+              {
+                "text": "link5-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo project by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "End-to-end ML workflow via small project+ Select and Train the model+ Fine-Tune the model+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link6-1",
+            "links": [
+              {
+                "text": "link6-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo project by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised learning: Introduction+ Regression vs Classification+ Typical supervised learning workflow+ Training vs testing+ Train/test split",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 3, Refference book",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised Learning: Model Evaluation: + Metrics for regression+ Metrics for classification+ Overfitting and underfitting+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 3, Refference book",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised Learning: Regression Algorithms+ Linear Regression+ Gradient Descent+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link9-1",
+            "links": [
+              {
+                "text": "link9-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised Learning: Regression Algorithms+ Polynomial Regression+ Learning Curves+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link10-1",
+            "links": [
+              {
+                "text": "link10-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised Learning: Regression Algorithms+ Regularized Linear Models+ Logistic Regression+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link11-1",
+            "links": [
+              {
+                "text": "link11-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised Learning: Classification Algorithms+ K-nearest neighbors+ Naïve Bayes Classifiers+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, 2nd Textbook chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo of K-nearest neighbors and naïve Bayes Classifiers in 2nd textbook chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised Learning: Classification Algorithms+ Decision Trees+ Random Forests+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, 1st Textbook chap 5 and 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link13-1",
+            "links": [
+              {
+                "text": "link13-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Supervised Learning: Classification Algorithms+ Support Vertor Machines (SVM) + SVM Kernels+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Introduction to Machine Learning with Python, chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo of SVM in Introduction to Machine Learning with Python, chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbooks, Lab's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbooks, Lab's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unsupervised Learning: Introduction+ Introduction of Clustering and Dimensionality Reduction+ Evaluation of Unsupervised Models: Internal vs. External metrics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Python Data Science Handbook, chapter 5; Introduction to Machine Learning with Python, chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unsupervised Learning: Clustering Algorithms+ K-means+ Density-Based Clustering (DBSCAN)+ Demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link18-1",
+            "links": [
+              {
+                "text": "link18-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unsupervised Learning: Clustering Algorithms+ Hierarchical clustering: dendrogram, agglomerative clustering+ Linkage criteria: single linkage, complete linkage, average linkage+ Demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link19-1",
+            "links": [
+              {
+                "text": "link19-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unsupervised Learning: Clustering Algorithms+ Gaussian Mixtures+ Demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link20-1",
+            "links": [
+              {
+                "text": "link20-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Unsupervised Learning: Dimensionality Reduction Algorithms+ The curse of Dimensionality+ PCA+ Random Projection+ LLE+ Demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link21-1",
+            "links": [
+              {
+                "text": "link21-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbooks, Assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Assignment at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbooks, Assignment's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Assignment at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbooks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basics of Neural Networks:+ Artificial neuron+ Perceptron+ Activation Functions (ReLU, Sigmoid, Tanh)+ Multilayer Perceptron (MLP) and Backpropagation+ Optimizers (Adam, SGD)+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 9 and 11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link25-1",
+            "links": [
+              {
+                "text": "link25-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Building and Training simple MLPs with Scikit-Learn:+ Regression MLPs+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 9 and 11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link26-1",
+            "links": [
+              {
+                "text": "link26-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Building and Training simple MLPs with Scikit-Learn:+ Classification MLPs+ demoHyperparameter Tuning Guidelines: number of hidden layers, number of neurons per hidden layer, learning rate, batch size",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 9 and 11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link27-1",
+            "links": [
+              {
+                "text": "link27-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction of Deep Learning Frameworks:+ What is framework? Why we need frameworks?+ Simple comparison of TensorFlow/Keras and PyTorch+ PyTorch fundamentals: tensor, hardware acceleration, autograd+ Building an Image Classifier with PyTorch (demo)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link28-1",
+            "links": [
+              {
+                "text": "link28-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deep learning for image with PyTorch: + Convolutional Neural Networks (CNN): convolutional layers, pooling layers, CNN architectures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDo exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deep learning for image with PyTorch: + Implementing convolutional layers, pooling layers, ResNet-34 in PyTorch+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link30-1",
+            "links": [
+              {
+                "text": "link30-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Transfer Learning: + Pretrained models for transfer learning (TorchVision)+ Fine-tuning pretrained models+ Regularization+ Demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link31-1",
+            "links": [
+              {
+                "text": "link31-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbooks, Lab's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbooks, Lab's questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MLOps introductionModel deployment:+ Definition of Model deployment+ Deployment workflow+ Model serialization: save and load trained model (with demo)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Model deployment:+ Build prediction model+ Deploy model as REST API (Flask/FastAPI)+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Model deployment:+ Containerization: concept and workflow, tools presentation (Docker, Kubernetes)+ Cloud deployment: concept, architecture, cloud service providers (AWS, Azure, GCP)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slides, self learning for coding deployment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Model Monitoring:+ Definition of model monitoring+ Drift Detection: Data drift, concept drift",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slides, Do exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Model Monitoring:+ Performance decay+ Prediction distribution monitoring+ Logging predictions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slides, Do exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Model Monitoring:+ Simple monitoring demo+ Practical monitoring workflow",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ML Pipelines and Software Engineering practices for ML Systems+ ML Pipelines: - Pipeline concepts- Scikit-learn Pipelines (build pipeline, train, predict, evaluate)- demo+ Software Engineering practices for ML Systems:- Version control for ML projects (Git workflow)- Repository structure for ML projects- Unit testing for ML components- Introduction to CI/CD for ML pipelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MLFlow and Experiment Tracking: + Experiment tracking + Model versioning+ Reproducibility+ Demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link41-1",
+            "links": [
+              {
+                "text": "link41-1",
+                "href": "https://mlflow.org/"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 02 guides:Assignment 02 Requirements:+ ML pipeline implementation+ Model deployment as REST API+ GitHub repository submission+ Documentation (README)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook,",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Assignment and commit to Github",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 02 review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook,",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Assignment and commit to Github",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 02 review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook,",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Assignment and commit to Github",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Time Series Forecasting: + Time Series concepts+ ARMA model family+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link45-1",
+            "links": [
+              {
+                "text": "link45-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Time Series Forecasting: + Prophet (Meta)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Time Series Forecasting: + Basics of Recurrent Neural Networks (RNNs)+ LSTM model+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link47-1",
+            "links": [
+              {
+                "text": "link47-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Natural Language Processing (NLP):+ NLP basics and workflow+ Tokenization, Bag-of-Words, TF-IDF+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 14 and chapter 15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link48-1",
+            "links": [
+              {
+                "text": "link48-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Natural Language Processing (NLP):+ Word Embeddings (Word2Vec)+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 14 and chapter 15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link49-1",
+            "links": [
+              {
+                "text": "link49-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Natural Language Processing (NLP):+ Transformers & BERT using Hugging Face+ demo: sentiment analysis with Hugging Face",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, Textbook chapter 14 and chapter 15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "link50-1",
+            "links": [
+              {
+                "text": "link50-1",
+                "href": "https://github.com/ageron/handson-mlp"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbook, slidesDemo by following:https://github.com/ageron/handson-mlp",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Recommendation Systems:+ Recommendation system + Content-Based Filtering+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Recommendation Systems:+ Collaborative Filtering+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Recommendation Systems:+ Matrix Factorization+ demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slidesDemo by following teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "AI Ethics and Responsible AI:+ Responsible AI principles+ Ethical risks in AI system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final reports + demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final reports + demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final reports + demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final reports + demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final reports + demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Project Presentation and Demo:+ system architecture+ ML model+ deployed API demo+ Q&A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final reports + demo",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "2",
+          "20.0%",
+          ">0",
+          "At home",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "Homework, mini-projects, and optionally the constructivist approach as proposed by the lecturer.",
+          "by instructor",
+          "All subjects in syllabus",
+          "in class, by instructor",
+          ""
+        ],
+        [
+          "2",
+          "Lab",
+          "on-going",
+          "2",
+          "20.0%",
+          ">0",
+          "90",
+          "CLO2, CLO3, CLO4, CLO5, CLO6",
+          "Practical Lab",
+          "by instructor",
+          "",
+          "Individual or team work, guided by instructor, submission by a given deadline",
+          "Instructor has resposibility to guide and review the lab practice for students."
+        ],
+        [
+          "3",
+          "Progress Test",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "30'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "Multiple choicesMarked by Computer",
+          "25",
+          "",
+          "in class, by instructor",
+          ""
+        ],
+        [
+          "4",
+          "Project",
+          "on-going",
+          "1",
+          "20.0%",
+          "4",
+          "At home",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "Homework, mini-projects, and optionally the constructivist approach as proposed by the lecturer.",
+          "by instructor",
+          "All Modules",
+          "in class, by instructor",
+          "Instructor has resposibility to review for students.Submit Exercise 1 on slot 13"
+        ],
+        [
+          "5",
+          "Final exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+          "Multiple choicesMarked by Computer",
+          "50",
+          "All Modules",
+          "by exam board,using computer",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "At home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Homework, mini-projects, and optionally the constructivist approach as proposed by the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "90",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by a given deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has resposibility to guide and review the lab practice for students.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "At home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Homework, mini-projects, and optionally the constructivist approach as proposed by the lecturer.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All Modules",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructor has resposibility to review for students.Submit Exercise 1 on slot 13",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All Modules",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board,using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

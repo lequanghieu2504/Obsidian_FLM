@@ -1,0 +1,4890 @@
+{
+  "id": "14176",
+  "metadata": {
+    "Syllabus ID": "14176",
+    "Syllabus Name": "Software Requirement_Yêu cầu phần mềm",
+    "Course Name English": "Software Requirement",
+    "Subject Code": "SWR302",
+    "Learning-Teaching Method": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study",
+    "Pre-Requisite": "SWE102 or SWE201c or SWE202c",
+    "Description": "This course is a model-based introduction to RE, providing the conceptual background and terminology on RE, addressing a variety of techniques for requirements development including Analysis and Requirements Elicitation; Requirements Evaluation; Requirements Specification and Documentation; Requirements Quality Assurance. To implement these frameworks, student will be learnt how to find appropriate customer representatives, elicit requirements from them, and document user requirements, business rules, functional requirements, data requirements, and nonfunctional requirements. The numerous visual models that will be represented to illustrate the requirements from various perspectives to supplement natural-language text. Other contents recommend the most effective requirements approaches for various specific classes of projects: agile projects developing products of any type, enhancement and replacement projects, projects that incorporate packaged solutions, outsourced projects, business process automation projects, business analytics projects, and embedded and other real-time systems.",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "- Microsoft office for documents and presentation. - https://www.visual-paradigm.com/download/community.jsp students must install visual-paradigm for drawing UML (offline) before taking Final Practical Exam - BOUML (http://bouml.free.fr/) : UML Drawing software",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "377/QĐ-ĐHFPT dated 04/09/2026",
+    "IsApproved": "True",
+    "Note": "In the case: (5 > Final TE Score >=4) & (5 > Final PE Score >=4) & FR < 5, the student can choose to take the resit of both TE & PE OR just either TE or PE.",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/9/2026"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "14176"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "14176"
+        ],
+        [
+          "Syllabus Name:",
+          "Software Requirement_Yêu cầu phần mềm"
+        ],
+        [
+          "Course Name English:",
+          "Software Requirement"
+        ],
+        [
+          "Subject Code:",
+          "SWR302"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Social Constructivism,In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "SWE102 or SWE201c or SWE202c"
+        ],
+        [
+          "Description:",
+          "This course is a model-based introduction to RE, providing the conceptual background and terminology on RE, addressing a variety of techniques for requirements development including Analysis and Requirements Elicitation; Requirements Evaluation; Requirements Specification and Documentation; Requirements Quality Assurance. To implement these frameworks, student will be learnt how to find appropriate customer representatives, elicit requirements from them, and document user requirements, business rules, functional requirements, data requirements, and nonfunctional requirements. The numerous visual models that will be represented to illustrate the requirements from various perspectives to supplement natural-language text. Other contents recommend the most effective requirements approaches for various specific classes of projects: agile projects developing products of any type, enhancement and replacement projects, projects that incorporate packaged solutions, outsourced projects, business process automation projects, business analytics projects, and embedded and other real-time systems."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Microsoft office for documents and presentation. - https://www.visual-paradigm.com/download/community.jsp students must install visual-paradigm for drawing UML (offline) before taking Final Practical Exam - BOUML (http://bouml.free.fr/) : UML Drawing software"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "377/QĐ-ĐHFPT dated 04/09/2026"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          "In the case: (5 > Final TE Score >=4) & (5 > Final PE Score >=4) & FR < 5, the student can choose to take the resit of both TE & PE OR just either TE or PE."
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/9/2026"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14176",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Requirement_Yêu cầu phần mềm",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Requirement",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWR302",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWE102 or SWE201c or SWE202c",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This course is a model-based introduction to RE, providing the conceptual background and terminology on RE, addressing a variety of techniques for requirements development including Analysis and Requirements Elicitation; Requirements Evaluation; Requirements Specification and Documentation; Requirements Quality Assurance. To implement these frameworks, student will be learnt how to find appropriate customer representatives, elicit requirements from them, and document user requirements, business rules, functional requirements, data requirements, and nonfunctional requirements. The numerous visual models that will be represented to illustrate the requirements from various perspectives to supplement natural-language text. Other contents recommend the most effective requirements approaches for various specific classes of projects: agile projects developing products of any type, enhancement and replacement projects, projects that incorporate packaged solutions, outsourced projects, business process automation projects, business analytics projects, and embedded and other real-time systems.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Microsoft office for documents and presentation. - https://www.visual-paradigm.com/download/community.jsp students must install visual-paradigm for drawing UML (offline) before taking Final Practical Exam - BOUML (http://bouml.free.fr/) : UML Drawing software",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "377/QĐ-ĐHFPT dated 04/09/2026",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In the case: (5 > Final TE Score >=4) & (5 > Final PE Score >=4) & FR < 5, the student can choose to take the resit of both TE & PE OR just either TE or PE.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/9/2026",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Software Requirements",
+          "Karl E. Wiegers",
+          "Microsoft Press",
+          "",
+          "Third Edition",
+          "978-0-7356-7966-5",
+          "True",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "More About Software Requirements: Thorny Issues and Practical Advice",
+          "Karl E. Wiegers",
+          "Microsoft Press",
+          "",
+          "",
+          "978-0-7356-2267-8",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "3",
+          "The Software Requirements Memory Jogger: A Pocket Guide to Help Software And Business Teams Develop and Manage Requirements",
+          "Ellen Gottesdiener",
+          "GOAL/QPC",
+          "",
+          "",
+          "978-1-57681-060-6",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "4",
+          "Requirements Engineering: Secure Software Specifications Specialization",
+          "",
+          "Coursera",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://www.coursera.org/specializations/requirements-engineering-secure-software"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Karl E. Wiegers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft Press",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Third Edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-0-7356-7966-5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "More About Software Requirements: Thorny Issues and Practical Advice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Karl E. Wiegers",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft Press",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-0-7356-2267-8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The Software Requirements Memory Jogger: A Pocket Guide to Help Software And Business Teams Develop and Manage Requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Ellen Gottesdiener",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "GOAL/QPC",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1-57681-060-6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements Engineering: Secure Software Specifications Specialization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/specializations/requirements-engineering-secure-software",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "9 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Develop a good understanding of principles and techniques for requirement enginneering (RE) regarding requirement inception, requirement development(elicitation, analysis, specification, validation) and requirement management; understand main characteristics of specific projects"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Identify the appropriate requirements elicitiation techniques to identify requirements"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Utilize various requirements validation techniques to critically evaluate their requirements to identify defects"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Analysis of system requirements and the production of system specifications"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Create models of requirements using a variety of notations and techniques, including domain and usage models"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Design and plan software solutions to problems using an object-oriented strategy"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Prepare and deliver coherent and structured verbal and written technical reports"
+        ],
+        [
+          "8",
+          "CLO8",
+          "Understand how to reduce risks by prototyping."
+        ],
+        [
+          "9",
+          "CLO9",
+          "Utilize the tactic of requirements management regarding changing, tracing and improving requirements"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop a good understanding of principles and techniques for requirement enginneering (RE) regarding requirement inception, requirement development(elicitation, analysis, specification, validation) and requirement management; understand main characteristics of specific projects",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Identify the appropriate requirements elicitiation techniques to identify requirements",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Utilize various requirements validation techniques to critically evaluate their requirements to identify defects",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analysis of system requirements and the production of system specifications",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Create models of requirements using a variety of notations and techniques, including domain and usage models",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design and plan software solutions to problems using an object-oriented strategy",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Prepare and deliver coherent and structured verbal and written technical reports",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand how to reduce risks by prototyping.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Utilize the tactic of requirements management regarding changing, tracing and improving requirements",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction The essential of software requirement - Software requirements defined",
+          "Offline",
+          "LO1",
+          "I",
+          "Chapter 1 + Slides",
+          "SWR302",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "The essential of software requirement (cnt) - Requirements development and management - When bad requirements happen to good people - Benefits from a high-quality requirements process",
+          "Offline",
+          "LO1",
+          "I",
+          "Chapter 1 + Slides",
+          "SWR302",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "Requirements from the customer’s perspective - Who is the customer? - The customer-development partnership - Creating a culture that respects requirement",
+          "Offline",
+          "LO1",
+          "I,T",
+          "Chapter 2 + Slides",
+          "",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "Requirements from the customer’s perspective (cnt) - Identifying decision makers - Reaching agreement on requirements Assignment introduction",
+          "Offline",
+          "LO1",
+          "I,T",
+          "Chapter 2 + Slides",
+          "",
+          "do homework",
+          ""
+        ],
+        [
+          "5",
+          "Good practices for requirements engineering (introduce) - A requirements development process framework - Requirements elicitation - Requirements analysis - Requirements specification - Requirements validation - Requirements management",
+          "Offline",
+          "LO1, LO2",
+          "I,T",
+          "Chapter 3 +Slides",
+          "",
+          "",
+          ""
+        ],
+        [
+          "6",
+          "Good practices for requirements engineering (practice/apply)",
+          "Offline",
+          "LO1, LO2",
+          "I,T",
+          "Chapter 3 +Slides",
+          "",
+          "do homework",
+          ""
+        ],
+        [
+          "7",
+          "Group discussion Summary and Exercises (groups)",
+          "Offline",
+          "LO2, LO4, LO5",
+          "",
+          "Chapter 4+ Business Analyst Job Description.docx + Slides",
+          "",
+          "Discuss what students have to do in their Assignment",
+          ""
+        ],
+        [
+          "8",
+          "Group discussion Summary and Exercises (groups)",
+          "Offline",
+          "LO2, LO4, LO5",
+          "",
+          "Chapter 4+ Business Analyst Job Description.docx + Slides",
+          "",
+          "Discuss what students have to do in their Assignment",
+          ""
+        ],
+        [
+          "9",
+          "The business analyst - The business analyst role - The business analyst’s tasks - Essential analyst skills - Essential analyst knowledge - The making of a business analyst - The analyst role on agile projects",
+          "Offline",
+          "LO2, LO4, LO5",
+          "I,T, U",
+          "Chapter 4+ Business Analyst Job Description.docx + Slides",
+          "",
+          "Write Vision and Scope for Assignment",
+          ""
+        ],
+        [
+          "10",
+          "Establishing the business requirements - Defining business requirements - Vision and scope document - Scope representation techniques",
+          "Offline",
+          "LO2, LO4, LO5",
+          "I,T, U",
+          "Chapter 5 + Vision and Scope Template.docx + Slides",
+          "",
+          "Write Vision and Scope for Assignment",
+          ""
+        ],
+        [
+          "11",
+          "Establishing the business requirements (con't) - Keeping the scope in focus - Vision and scope on agile projects - Introduce LAB requirements: draw 1 context diagram, 1 swimlane diagram and 1 state diagram.",
+          "Offline",
+          "LO2, LO4, LO5",
+          "",
+          "Chapter 5 + Vision and Scope Template.docx + Slides",
+          "",
+          "Practice on first half of Assignment",
+          ""
+        ],
+        [
+          "12",
+          "Finding the voice of users - User classes - User personal - Connecting with user representatives - The product champion - User representation on agile project - Resolving conflicting requirements",
+          "Offline",
+          "LO2, LO4, LO5",
+          "",
+          "Chapter 6 + Product Champion Responsibilities.docx + Slides",
+          "",
+          "Practice on first half of Assignment",
+          ""
+        ],
+        [
+          "13",
+          "Requirements elicitation - Requirements elicitation techniques: Interviews, workshops, Focus groups, Observations, Questionaires, System interface analysis, User Interface Analysis, Document Analysis - Planning and Preparing for elicitation on your project - Performing elicitation activities - Follow up after elicitation",
+          "Offline",
+          "LO2, LO3",
+          "I,T, U",
+          "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+          "",
+          "Finish Use Case document",
+          ""
+        ],
+        [
+          "14",
+          "Requirements elicitation (cnt) - Classifying customer input - Some cautions about elicitation - Assumed and implied requirements - Finding missing requirements",
+          "Offline",
+          "LO2, LO3",
+          "I,T, U",
+          "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+          "",
+          "Finish Use Case document",
+          ""
+        ],
+        [
+          "15",
+          "Understanding user requirements - Use cases and user stories",
+          "Offline",
+          "LO5, LO6",
+          "T,U",
+          "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+          "",
+          "Finish Use Case document",
+          ""
+        ],
+        [
+          "16",
+          "Understanding user requirements (cnt) - The use case approach - Benefits of usage-centric requirements",
+          "Offline",
+          "LO5, LO6",
+          "T,U",
+          "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+          "",
+          "Finish Use Case document",
+          ""
+        ],
+        [
+          "17",
+          "Playing by the rules - A business rules taxonomy - Documenting business rules - Discovering business rules - Business rules and requirements - Tying everything together",
+          "Offline",
+          "LO4, LO5",
+          "T,U",
+          "1.Software Requirements Specification Template.docx 2. Chapter 9 + 10 +Slides",
+          "",
+          "Preparing the structure of SRS document (based on student's assignment)",
+          ""
+        ],
+        [
+          "18",
+          "Progress test 1 and Review",
+          "Offline",
+          "LO1,LO2,LO3,LO4,LO5,LO6",
+          "",
+          "LSM questions",
+          "",
+          "Quiz test",
+          ""
+        ],
+        [
+          "19",
+          "Documenting the requirements - The software requirements specification",
+          "Offline",
+          "LO7",
+          "T,U",
+          "1.Software Requirements Specification Template.docx",
+          "",
+          "Preparing the structure of SRS document (based on student's assignment)",
+          ""
+        ],
+        [
+          "20",
+          "Documenting the requirements (cnt) - A software requirements specification template - Requirements specification on agile projects",
+          "Offline",
+          "LO7",
+          "T,U",
+          "2. Chapter 9 + 10 +Slides",
+          "",
+          "Preparing the structure of SRS document (based on student's assignment)",
+          ""
+        ],
+        [
+          "21",
+          "Writing excellent requirements - Characteristics of excellent requirements - Guidelines for writing requirements - Sample requirements, before and after",
+          "Offline",
+          "LO5",
+          "T,U",
+          "Chapter 11 + Slides",
+          "",
+          "Write SRS document based on guidelines",
+          ""
+        ],
+        [
+          "22",
+          "A picture is worth 1024 words - Data flow diagram; Swimlane diagram; State-transition diagram and state table ; Dialog map ;",
+          "Offline",
+          "LO5",
+          "T,U",
+          "Chapter 12 + Slides",
+          "",
+          "Write SRS document based on guidelines",
+          ""
+        ],
+        [
+          "23",
+          "A picture is worth 1024 words (con't) - Decision tables and decision trees;",
+          "Offline",
+          "LO5",
+          "T,U",
+          "Chapter 12 + Slides",
+          "",
+          "Write SRS document based on guidelines",
+          ""
+        ],
+        [
+          "24",
+          "A picture is worth 1024 words (con't) - Event-response tables ; Modeling on agile projects",
+          "Offline",
+          "LO5",
+          "T,U",
+          "Chapter 12 + Slides",
+          "",
+          "Write SRS document based on guidelines",
+          ""
+        ],
+        [
+          "25",
+          "Specifying data requirements - Modeling data relationships - The data dictionary",
+          "Offline",
+          "LO5",
+          "T,U",
+          "1.Guidance for Data Dictionaries.docx 2.Chapter 13 +Slides",
+          "",
+          "Finish Data Dictionaries of Assignment",
+          ""
+        ],
+        [
+          "26",
+          "Specifying data requirements (cnt) - Data analysis - Specifying reports",
+          "Offline",
+          "LO5",
+          "T,U",
+          "1.Guidance for Data Dictionaries.docx 2.Chapter 13 +Slides",
+          "",
+          "Finish Data Dictionaries of Assignment",
+          ""
+        ],
+        [
+          "27",
+          "Beyond functionality - Software quality attributes - Exploring quality attributes - Defining quality requirements - Specifying quality requirements with Planguage",
+          "Offline",
+          "LO5",
+          "T,U",
+          "Chapter 14 + Slides",
+          "",
+          "Finish Data Dictionaries of Assignment",
+          ""
+        ],
+        [
+          "28",
+          "Beyond functionality (cnt) - Quality attribute trade-offs - Implementing quality attribute requirements - Constraint - Handling quality attributes on agile projects",
+          "Offline",
+          "LO5",
+          "T,U",
+          "Chapter 14 + Slides",
+          "",
+          "Finish Data Dictionaries of Assignment",
+          ""
+        ],
+        [
+          "29",
+          "Risk reduction through prototyping - Prototyping: What and why - Mock-ups and proofs of concept - Throwaway and evolutionary prototypes - Paper and electronic prototypes",
+          "Offline",
+          "LO8",
+          "T,U",
+          "Chapter 15 + Slides",
+          "",
+          "Finish Requirements Prioritization worksheet",
+          ""
+        ],
+        [
+          "30",
+          "Risk reduction through prototyping (cnt) - Working with prototypes - Prototype evaluation - Risks of prototyping - Prototyping success factors",
+          "Offline",
+          "LO8",
+          "T,U",
+          "Chapter 15 + Slides",
+          "",
+          "Finish Requirements Prioritization worksheet",
+          ""
+        ],
+        [
+          "31",
+          "First things first: Setting requirement priorities - Why prioritize requirements? - Some prioritization pragmatics - Games people play with priorities",
+          "Offline",
+          "LO2",
+          "T,U",
+          "1. Requirements Prioritization Spreadsheet.docx 2. Chapter 16 + Slides",
+          "",
+          "Finish Requirements Prioritization worksheet",
+          ""
+        ],
+        [
+          "32",
+          "First things first: Setting requirement priorities (cnt) - Some prioritization techniques - Prioritization based on value, cost, and risk",
+          "Offline",
+          "LO2",
+          "T,U",
+          "1. Requirements Prioritization Spreadsheet.docx 2. Chapter 16 + Slides",
+          "",
+          "Finish Requirements Prioritization worksheet",
+          ""
+        ],
+        [
+          "33",
+          "Validating the requirements - Validation and verification - Reviewing requirements - Prototyping requirements",
+          "Offline",
+          "LO3",
+          "T",
+          "1. Requirements Review Checklist.docx 2. Chapter 17 +Slides",
+          "",
+          "Check progress of Assignment's requirements",
+          ""
+        ],
+        [
+          "34",
+          "Validating the requirements - Testing the requirements - Validating requirements with acceptance criteria",
+          "Offline",
+          "LO3",
+          "T",
+          "1. Requirements Review Checklist.docx 2. Chapter 17 +Slides",
+          "",
+          "Check progress of Assignment's requirements",
+          ""
+        ],
+        [
+          "35",
+          "Exercises (can be interspersed with the lecture)",
+          "Offline",
+          "LO3, LO5",
+          "I,T,U",
+          "1. Chapter 18 + 19 2. Requirements Estimation Tool.xlsx +Slides",
+          "",
+          "Do requirements estimation",
+          ""
+        ],
+        [
+          "36",
+          "Discuss and/or present on Chapter 6",
+          "Offline",
+          "LO3, LO5",
+          "I,T,U",
+          "1. Chapter 18 + 19 2. Requirements Estimation Tool.xlsx +Slides",
+          "",
+          "Do requirements estimation",
+          ""
+        ],
+        [
+          "37",
+          "Requirements reuse - Why reuse requirements? - Dimensions of requirements reuse - Types of requirements information to reuse - Common reuse scenarios - Requirement patterns - Tools to facilitate reuse - Making requirements reusable - Requirements reuse barriers and success factors",
+          "Offline",
+          "",
+          "",
+          "1. Chapter 18 2. Requirements Estimation Tool.xlsx +Slides",
+          "",
+          "",
+          ""
+        ],
+        [
+          "38",
+          "Beyond requirements development - Estimating requirements effort - From requirements to project plans,designs and code, tests, success Review the first half of assignment and evaluation",
+          "Offline",
+          "LO2,LO3,LO5,LO7,LO8",
+          "",
+          "1. Chapter 189 Assignment documents",
+          "",
+          "Oral test",
+          ""
+        ],
+        [
+          "39",
+          "Review the first half of assignment and evaluation",
+          "Offline",
+          "LO2,LO3,LO5,LO7,LO8",
+          "",
+          "Assignment documents Assignment document templates",
+          "",
+          "Oral test",
+          ""
+        ],
+        [
+          "40",
+          "Progress test 2 and Review - Review LAB",
+          "Offline",
+          "LO2,LO3,LO5,LO7,LO8",
+          "",
+          "LSM questions",
+          "",
+          "Quiz test",
+          ""
+        ],
+        [
+          "41",
+          "Agile projects - Limitations of the waterfall - The agile development approach - Essential aspects of an agile approach to requirements - Adapting requirements practices to agile projects - Transitioning to agile: Now what?",
+          "Offline",
+          "LO4",
+          "I,T,U",
+          "Chapter 20+Slides",
+          "",
+          "",
+          ""
+        ],
+        [
+          "42",
+          "Enhancement and replacement projects - Expected challenges - Requirements techniques when there is an existing system - Prioritizing by using business objectives - When old requirements don’t exist - Encouraging new system adoption",
+          "Offline",
+          "LO4",
+          "I,T,U",
+          "Chapter 21 +Slides",
+          "",
+          "",
+          ""
+        ],
+        [
+          "43",
+          "Packaged solution projects - Requirements for selecting packaged solutions - Requirements for implementing packaged solutions - Common challenges with packaged solution",
+          "Offline",
+          "LO4",
+          "I,T,U",
+          "1. Chapter 22 2. Request for Proposal Template.docx 3. Slides",
+          "",
+          "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+          ""
+        ],
+        [
+          "44",
+          "Outsourced projects - Appropriate levels of requirements detail - Acquirer-supplier interactions - Change management - Acceptance criteria",
+          "Offline",
+          "LO4",
+          "I,T,U",
+          "1. Chapter 23 2. Request for Proposal Template.docx 3. Slides",
+          "",
+          "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+          ""
+        ],
+        [
+          "45",
+          "Group discussion Summary and Exercises",
+          "Offline",
+          "",
+          "",
+          "1. Chapter 24 + 25 + Slides",
+          "",
+          "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+          ""
+        ],
+        [
+          "46",
+          "Group discussion (cnt) Summary and Exercises (cnt)",
+          "Offline",
+          "",
+          "",
+          "1. Chapter 24 + 25 + Slides",
+          "",
+          "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+          ""
+        ],
+        [
+          "47",
+          "Assignment supporting",
+          "Offline",
+          "",
+          "",
+          "1. Chapter 26 + Slides",
+          "",
+          "Checking SRS document",
+          ""
+        ],
+        [
+          "48",
+          "Assignment supporting (cnt)",
+          "Offline",
+          "",
+          "",
+          "1. Chapter 26 + Slides",
+          "",
+          "Checking SRS document",
+          ""
+        ],
+        [
+          "49",
+          "Requirements management practices - Requirements management process - The requirements baseline - Requirements version control - Requirement attributes",
+          "Offline",
+          "LO4",
+          "I,T,U",
+          "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+          "",
+          "Do assignment - based on guidelines",
+          ""
+        ],
+        [
+          "50",
+          "Requirements management practices (cnt) - Tracking requirements status - Resolving requirements issues - Measuring requirements effort - Managing requirements on agile projects",
+          "Offline",
+          "LO4",
+          "I,T,U",
+          "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+          "",
+          "Do assignment - based on guidelines",
+          ""
+        ],
+        [
+          "51",
+          "Change happens - Change control policy - Basic concepts of the change control process - A change control process description - The change control board",
+          "Offline",
+          "LO9",
+          "I,T,U",
+          "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+          "",
+          "Do assignment - based on guidelines",
+          ""
+        ],
+        [
+          "52",
+          "Change happens (cnt) - Change control tools - Measuring change activity - Change impact analysis - Change management on agile projects",
+          "Offline",
+          "LO9",
+          "I,T,U",
+          "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+          "",
+          "Do assignment - based on guidelines",
+          ""
+        ],
+        [
+          "53",
+          "Links in the requirements chain - Tracing requirements - Motivations for tracing requirements - The requirements traceability matrix",
+          "Offline",
+          "LO9",
+          "I,T,U",
+          "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+          "",
+          "Do assignment - based on guidelines",
+          ""
+        ],
+        [
+          "54",
+          "Links in the requirements chain (cnt) - Tools for requirements tracing - A requirements tracing procedure",
+          "Offline",
+          "LO9",
+          "I,T,U",
+          "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+          "",
+          "Do assignment - based on guidelines",
+          ""
+        ],
+        [
+          "55",
+          "Tools for requirements engineering (self-study) Improving your requirements processes - How requirements relate to other project processes - Requirements and various stakeholder groups - Gaining commitment to change - Fundamentals of software process improvement - Root cause analysis - The process improvement cycle - Requirements engineering process assets - Creating a requirements process improvement road map",
+          "Offline",
+          "LO8, LO9",
+          "ITU",
+          "1. Chapter 31 2. Action Plan Template.docx 3. Risk Management Plan Template.docx 4. Slides",
+          "",
+          "Finish assignment's documents",
+          ""
+        ],
+        [
+          "56",
+          "Software requirements and risk management - Fundamentals of software risk management - Requirements-related risks - Risk management is your friend",
+          "Offline",
+          "LO8, LO9",
+          "ITU",
+          "1. Chapter 32 2. Action Plan Template.docx 3. Risk Management Plan Template.docx 4. Slides",
+          "",
+          "Finish assignment 's documents",
+          ""
+        ],
+        [
+          "57",
+          "Progress test 3",
+          "Offline",
+          "LO4,LO8,LO9",
+          "",
+          "LSM questions",
+          "",
+          "Quiz test",
+          ""
+        ],
+        [
+          "58",
+          "Assignment evaluation",
+          "Offline",
+          "All LOs",
+          "",
+          "Assignment documents",
+          "",
+          "Oral test",
+          ""
+        ],
+        [
+          "59",
+          "Assignment evaluation",
+          "Offline",
+          "All LOs",
+          "",
+          "Assignment documents",
+          "",
+          "Oral test",
+          ""
+        ],
+        [
+          "60",
+          "Assignment evaluation",
+          "Offline",
+          "All LOs",
+          "",
+          "Assignment documents",
+          "",
+          "Oral test",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction The essential of software requirement - Software requirements defined",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWR302",
+            "links": [
+              {
+                "text": "SWR302",
+                "href": "https://flm.fpt.edu.vn/download/10020/S/1_SWR302.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The essential of software requirement (cnt) - Requirements development and management - When bad requirements happen to good people - Benefits from a high-quality requirements process",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWR302",
+            "links": [
+              {
+                "text": "SWR302",
+                "href": "https://flm.fpt.edu.vn/download/10020/S/2_SWR302.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements from the customer’s perspective - Who is the customer? - The customer-development partnership - Creating a culture that respects requirement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements from the customer’s perspective (cnt) - Identifying decision makers - Reaching agreement on requirements Assignment introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "do homework",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Good practices for requirements engineering (introduce) - A requirements development process framework - Requirements elicitation - Requirements analysis - Requirements specification - Requirements validation - Requirements management",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Good practices for requirements engineering (practice/apply)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "do homework",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group discussion Summary and Exercises (groups)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4+ Business Analyst Job Description.docx + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss what students have to do in their Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group discussion Summary and Exercises (groups)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4+ Business Analyst Job Description.docx + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss what students have to do in their Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The business analyst - The business analyst role - The business analyst’s tasks - Essential analyst skills - Essential analyst knowledge - The making of a business analyst - The analyst role on agile projects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4+ Business Analyst Job Description.docx + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write Vision and Scope for Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Establishing the business requirements - Defining business requirements - Vision and scope document - Scope representation techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5 + Vision and Scope Template.docx + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write Vision and Scope for Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Establishing the business requirements (con't) - Keeping the scope in focus - Vision and scope on agile projects - Introduce LAB requirements: draw 1 context diagram, 1 swimlane diagram and 1 state diagram.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5 + Vision and Scope Template.docx + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice on first half of Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finding the voice of users - User classes - User personal - Connecting with user representatives - The product champion - User representation on agile project - Resolving conflicting requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6 + Product Champion Responsibilities.docx + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practice on first half of Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements elicitation - Requirements elicitation techniques: Interviews, workshops, Focus groups, Observations, Questionaires, System interface analysis, User Interface Analysis, Document Analysis - Planning and Preparing for elicitation on your project - Performing elicitation activities - Follow up after elicitation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Use Case document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements elicitation (cnt) - Classifying customer input - Some cautions about elicitation - Assumed and implied requirements - Finding missing requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Use Case document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understanding user requirements - Use cases and user stories",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Use Case document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understanding user requirements (cnt) - The use case approach - Benefits of usage-centric requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Use Case Template.docx 2. Chapter 7 + 8 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Use Case document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Playing by the rules - A business rules taxonomy - Documenting business rules - Discovering business rules - Business rules and requirements - Tying everything together",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.Software Requirements Specification Template.docx 2. Chapter 9 + 10 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Preparing the structure of SRS document (based on student's assignment)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 1 and Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1,LO2,LO3,LO4,LO5,LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LSM questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Documenting the requirements - The software requirements specification",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.Software Requirements Specification Template.docx",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Preparing the structure of SRS document (based on student's assignment)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Documenting the requirements (cnt) - A software requirements specification template - Requirements specification on agile projects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2. Chapter 9 + 10 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Preparing the structure of SRS document (based on student's assignment)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Writing excellent requirements - Characteristics of excellent requirements - Guidelines for writing requirements - Sample requirements, before and after",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write SRS document based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "A picture is worth 1024 words - Data flow diagram; Swimlane diagram; State-transition diagram and state table ; Dialog map ;",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 12 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write SRS document based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "A picture is worth 1024 words (con't) - Decision tables and decision trees;",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 12 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write SRS document based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "A picture is worth 1024 words (con't) - Event-response tables ; Modeling on agile projects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 12 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Write SRS document based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Specifying data requirements - Modeling data relationships - The data dictionary",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.Guidance for Data Dictionaries.docx 2.Chapter 13 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Data Dictionaries of Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Specifying data requirements (cnt) - Data analysis - Specifying reports",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.Guidance for Data Dictionaries.docx 2.Chapter 13 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Data Dictionaries of Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Beyond functionality - Software quality attributes - Exploring quality attributes - Defining quality requirements - Specifying quality requirements with Planguage",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 14 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Data Dictionaries of Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Beyond functionality (cnt) - Quality attribute trade-offs - Implementing quality attribute requirements - Constraint - Handling quality attributes on agile projects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 14 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Data Dictionaries of Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Risk reduction through prototyping - Prototyping: What and why - Mock-ups and proofs of concept - Throwaway and evolutionary prototypes - Paper and electronic prototypes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 15 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Requirements Prioritization worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Risk reduction through prototyping (cnt) - Working with prototypes - Prototype evaluation - Risks of prototyping - Prototyping success factors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 15 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Requirements Prioritization worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "First things first: Setting requirement priorities - Why prioritize requirements? - Some prioritization pragmatics - Games people play with priorities",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Requirements Prioritization Spreadsheet.docx 2. Chapter 16 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Requirements Prioritization worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "First things first: Setting requirement priorities (cnt) - Some prioritization techniques - Prioritization based on value, cost, and risk",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Requirements Prioritization Spreadsheet.docx 2. Chapter 16 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish Requirements Prioritization worksheet",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Validating the requirements - Validation and verification - Reviewing requirements - Prototyping requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Requirements Review Checklist.docx 2. Chapter 17 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Check progress of Assignment's requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Validating the requirements - Testing the requirements - Validating requirements with acceptance criteria",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Requirements Review Checklist.docx 2. Chapter 17 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Check progress of Assignment's requirements",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exercises (can be interspersed with the lecture)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 18 + 19 2. Requirements Estimation Tool.xlsx +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do requirements estimation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss and/or present on Chapter 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 18 + 19 2. Requirements Estimation Tool.xlsx +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do requirements estimation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements reuse - Why reuse requirements? - Dimensions of requirements reuse - Types of requirements information to reuse - Common reuse scenarios - Requirement patterns - Tools to facilitate reuse - Making requirements reusable - Requirements reuse barriers and success factors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 18 2. Requirements Estimation Tool.xlsx +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Beyond requirements development - Estimating requirements effort - From requirements to project plans,designs and code, tests, success Review the first half of assignment and evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2,LO3,LO5,LO7,LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 189 Assignment documents",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Oral test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review the first half of assignment and evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2,LO3,LO5,LO7,LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment documents Assignment document templates",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Oral test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2 and Review - Review LAB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2,LO3,LO5,LO7,LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LSM questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Agile projects - Limitations of the waterfall - The agile development approach - Essential aspects of an agile approach to requirements - Adapting requirements practices to agile projects - Transitioning to agile: Now what?",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 20+Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Enhancement and replacement projects - Expected challenges - Requirements techniques when there is an existing system - Prioritizing by using business objectives - When old requirements don’t exist - Encouraging new system adoption",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 21 +Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Packaged solution projects - Requirements for selecting packaged solutions - Requirements for implementing packaged solutions - Common challenges with packaged solution",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 22 2. Request for Proposal Template.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Outsourced projects - Appropriate levels of requirements detail - Acquirer-supplier interactions - Change management - Acceptance criteria",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 23 2. Request for Proposal Template.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group discussion Summary and Exercises",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 24 + 25 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group discussion (cnt) Summary and Exercises (cnt)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 24 + 25 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read and understand the proposal template ( what are contents and the purpose of these ones)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment supporting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 26 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Checking SRS document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment supporting (cnt)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 26 + Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Checking SRS document",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements management practices - Requirements management process - The requirements baseline - Requirements version control - Requirement attributes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment - based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Requirements management practices (cnt) - Tracking requirements status - Resolving requirements issues - Measuring requirements effort - Managing requirements on agile projects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment - based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Change happens - Change control policy - Basic concepts of the change control process - A change control process description - The change control board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment - based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Change happens (cnt) - Change control tools - Measuring change activity - Change impact analysis - Change management on agile projects",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment - based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Links in the requirements chain - Tracing requirements - Motivations for tracing requirements - The requirements traceability matrix",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment - based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Links in the requirements chain (cnt) - Tools for requirements tracing - A requirements tracing procedure",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T,U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 25 + 26 + 27 2. a. CCB Charter Template.docx b. Change Control Process.docx c. Impact Analysis Checklist.docx 3. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do assignment - based on guidelines",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tools for requirements engineering (self-study) Improving your requirements processes - How requirements relate to other project processes - Requirements and various stakeholder groups - Gaining commitment to change - Fundamentals of software process improvement - Root cause analysis - The process improvement cycle - Requirements engineering process assets - Creating a requirements process improvement road map",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 31 2. Action Plan Template.docx 3. Risk Management Plan Template.docx 4. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish assignment's documents",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software requirements and risk management - Fundamentals of software risk management - Requirements-related risks - Risk management is your friend",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Chapter 32 2. Action Plan Template.docx 3. Risk Management Plan Template.docx 4. Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Finish assignment 's documents",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4,LO8,LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LSM questions",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment documents",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Oral test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment documents",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Oral test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All LOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment documents",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Oral test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "Option 1: 26 slots ; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+          "Option 1: Teacher raise projects, students practice step by step to complete their assignments. Student could base on study guide COS_Document_Example to do assignments. Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: Depending on questions in assignment Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "All subjects in syllabus",
+          "in class, by teacher",
+          ""
+        ],
+        [
+          "2",
+          "LAB",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "Option 1: 26slots/each Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "LO5",
+          "1. Model 1 Context diagram based on the topic of assignment. 2. Model 1 Swimlane diagam based on the topic of assignment. 3. Model 1 State diagam based on the topic of assignment.",
+          "Option 1: Depending on questions in assignment Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Chapter 5, Chapter 12",
+          "In class, by teacher",
+          "The output of LAB: draw 1 Context diagram, 1 Swimlane diagram and 1 State diagram. These diagrams will be drawn by individuals and will be presented by each student at week 7. After presenting LAB, the student will put these diagrams on his or her Assignment document."
+        ],
+        [
+          "3",
+          "Progress Test",
+          "on-going",
+          "3",
+          "20.0%",
+          ">0",
+          "Option 1: 30'/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9",
+          "Option 1: Multiple choices Marked by Computer or a suitable format; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: 30/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Test 1: Chapter 1-> Chapter 9 Test 2: Chapter 10 ->20 Test 3: Chapter 21 -->32",
+          "in class, by LMS system",
+          ""
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "2",
+          "50.0%",
+          "4",
+          "145 minutes",
+          "All CLOs",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "Each part of the final exam must be >=4/10 & Final Result >=5/10."
+        ],
+        [
+          "5",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "85'",
+          "LO1, LO2, LO3, LO4, LO5, LO7, LO8, LO9",
+          "",
+          "",
+          "All subjects in syllabus",
+          "LSM system",
+          "Customized from the Assignment or projects that students have learned"
+        ],
+        [
+          "6",
+          "Theory Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "60'/each",
+          "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9",
+          "Multiple choicesMarked by Computer",
+          "60",
+          "All subjects in syllabus",
+          "LSM system",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 26 slots ; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Teacher raise projects, students practice step by step to complete their assignments. Student could base on study guide COS_Document_Example to do assignments. Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Depending on questions in assignment Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LAB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 26slots/each Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1. Model 1 Context diagram based on the topic of assignment. 2. Model 1 Swimlane diagam based on the topic of assignment. 3. Model 1 State diagam based on the topic of assignment.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Depending on questions in assignment Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5, Chapter 12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In class, by teacher",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The output of LAB: draw 1 Context diagram, 1 Swimlane diagram and 1 State diagram. These diagrams will be drawn by individuals and will be presented by each student at week 7. After presenting LAB, the student will put these diagrams on his or her Assignment document.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30'/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Multiple choices Marked by Computer or a suitable format; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test 1: Chapter 1-> Chapter 9 Test 2: Chapter 10 ->20 Test 3: Chapter 21 -->32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by LMS system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145 minutes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Each part of the final exam must be >=4/10 & Final Result >=5/10.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LSM system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Customized from the Assignment or projects that students have learned",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theory Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LSM system",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

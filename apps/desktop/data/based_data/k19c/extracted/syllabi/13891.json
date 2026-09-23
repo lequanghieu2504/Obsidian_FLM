@@ -1,0 +1,5237 @@
+{
+  "id": "13891",
+  "metadata": {
+    "Syllabus ID": "13891",
+    "Syllabus Name": "Basis Cross-Platform Application Programming With .NET_Lập trình ứng dụng đa nền tảng cơ bản với .NET",
+    "Course Name English": "Basis Cross-Platform Application Programming With .NET",
+    "Subject Code": "PRN212",
+    "Learning-Teaching Method": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 49.5h contact hours + 145 minute final exam + 98.1h self-study",
+    "Pre-Requisite": "PRO192, DBI202",
+    "Description": "Upon completion of this course students should: 1. Understand the followings: • C# language for developing .NET applications; • Fundamental concepts of .NET Platform • Basic knowledge of Windows Presentation Foundation in .NET 2. Be able to: • Develop Cross-platform Desktop applications and support for user experience ( UI & UX ) 3. Be able to work in a team and present group's results",
+    "StudentTasks": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "- Internet - Visual Studio.NET 2022 or later - MS SQL Server 2019 or later - Platform : .NET 8.0 or later - GitHub Copilot: Automated suggestions when writing code in C#, XAML, SQL, ... - AI-enhanced Debuggers (JetBrains Rider AI or Visual Studio IntelliCode) - GitHub Workflow",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1402/QĐ-ĐHFPT dated 12/12/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "12/12/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13891"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13891"
+        ],
+        [
+          "Syllabus Name:",
+          "Basis Cross-Platform Application Programming With .NET_Lập trình ứng dụng đa nền tảng cơ bản với .NET"
+        ],
+        [
+          "Course Name English:",
+          "Basis Cross-Platform Application Programming With .NET"
+        ],
+        [
+          "Subject Code:",
+          "PRN212"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Social Constructivism,In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 49.5h contact hours + 145 minute final exam + 98.1h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PRO192, DBI202"
+        ],
+        [
+          "Description:",
+          "Upon completion of this course students should: 1. Understand the followings: • C# language for developing .NET applications; • Fundamental concepts of .NET Platform • Basic knowledge of Windows Presentation Foundation in .NET 2. Be able to: • Develop Cross-platform Desktop applications and support for user experience ( UI & UX ) 3. Be able to work in a team and present group's results"
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Internet - Visual Studio.NET 2022 or later - MS SQL Server 2019 or later - Platform : .NET 8.0 or later - GitHub Copilot: Automated suggestions when writing code in C#, XAML, SQL, ... - AI-enhanced Debuggers (JetBrains Rider AI or Visual Studio IntelliCode) - GitHub Workflow"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1402/QĐ-ĐHFPT dated 12/12/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "12/12/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13891",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basis Cross-Platform Application Programming With .NET_Lập trình ứng dụng đa nền tảng cơ bản với .NET",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Basis Cross-Platform Application Programming With .NET",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRN212",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 49.5h contact hours + 145 minute final exam + 98.1h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRO192, DBI202",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Upon completion of this course students should: 1. Understand the followings: • C# language for developing .NET applications; • Fundamental concepts of .NET Platform • Basic knowledge of Windows Presentation Foundation in .NET 2. Be able to: • Develop Cross-platform Desktop applications and support for user experience ( UI & UX ) 3. Be able to work in a team and present group's results",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Internet - Visual Studio.NET 2022 or later - MS SQL Server 2019 or later - Platform : .NET 8.0 or later - GitHub Copilot: Automated suggestions when writing code in C#, XAML, SQL, ... - AI-enhanced Debuggers (JetBrains Rider AI or Visual Studio IntelliCode) - GitHub Workflow",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1402/QĐ-ĐHFPT dated 12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "C# 12 in a Nutshell",
+          "Joseph Albahari",
+          "O’Reilly Media, Inc.",
+          "2024",
+          "",
+          "9781098147440",
+          "False",
+          "False",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "https://learn.microsoft.com/en-us/ef/core/",
+          "Microsoft",
+          "Microsoft",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "3",
+          "C# 12 and .NET 8 – ModernCross-Platform DevelopmentFundamentals",
+          "Mark J. Price",
+          "Packt Publishing Ltd.",
+          "2023",
+          "8th Edition",
+          "9781837635870",
+          "False",
+          "False",
+          "False",
+          ""
+        ],
+        [
+          "4",
+          "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+          "Microsoft",
+          "Microsoft",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "5",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12",
+          "Microsoft",
+          "Microsoft",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "C# 12 in a Nutshell",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Joseph Albahari",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "O’Reilly Media, Inc.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2024",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781098147440",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/ef/core/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "C# 12 and .NET 8 – ModernCross-Platform DevelopmentFundamentals",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mark J. Price",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Packt Publishing Ltd.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2023",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8th Edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781837635870",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Describe about .NET Core Platform, and more new features of C# language ."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Demonstrate about OOP , Generic, Delegate & Event , LINQ and Design Pattern in C#"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Demonstrate about Windows Presentation Foundation"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Demonstrate about accessing to the database by Entity Framework ( ORM )"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Explain about Concurrency programming, Stream I/O"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Apply Generative AI tools to support software development tasks in .NET"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe about .NET Core Platform, and more new features of C# language .",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate about OOP , Generic, Delegate & Event , LINQ and Design Pattern in C#",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate about Windows Presentation Foundation",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate about accessing to the database by Entity Framework ( ORM )",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Explain about Concurrency programming, Stream I/O",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply Generative AI tools to support software development tasks in .NET",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction Working EnvironmentProject Introduction",
+          "Offline",
+          "CLO1",
+          "IT",
+          "Course Introduction SlideProject List",
+          "PRN212",
+          "- Choose Group (3-5 Students)- Choose Topic- Collect requirements about Topic",
+          ""
+        ],
+        [
+          "2",
+          "Chapter 01: Introduction to .NET Platform & Visual Studio.NET",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "3",
+          "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "4",
+          "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "5",
+          "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "6",
+          "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "7",
+          "Chapter 02: C# Programming",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Chapter 3. Controlling Flow, Converting Types, and Handling ExceptionsChapter 4. Writing, Debugging, and Testing Functions (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "8",
+          "Chapter 02: C# Programming (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Chapter 3. Controlling Flow, Converting Types, and Handling ExceptionsChapter 4. Writing, Debugging, and Testing Functions (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "9",
+          "Chapter 02: C# Programming (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Chapter 3. Controlling Flow, Converting Types, and Handling ExceptionsChapter 4. Writing, Debugging, and Testing Functions (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "10",
+          "Chapter 03: Object-Oriented Programming with C#",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Chapter 5. Building Your Own Types with Object-Oriented Programming (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "11",
+          "Chapter 03: Object-Oriented Programming with C# (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Chapter 5. Building Your Own Types with Object-Oriented Programming (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "12",
+          "Chapter 03: Object-Oriented Programming with C# (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Chapter 5. Building Your Own Types with Object-Oriented Programming (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "13",
+          "Chapter 04: Collections & Generic",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/vi-vn/dotnet/standard/generics/collections",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "14",
+          "Chapter 04: Collections & Generic (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/collections",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "15",
+          "Chapter 04: Collections & Generic (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/collections",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "16",
+          "Chapter 05: Design Pattern in .NET",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://refactoring.guru/design-patterns/csharphttps://sourcemaking.com/design_patterns/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "17",
+          "Chapter 05: Design Pattern in .NET (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://refactoring.guru/design-patterns/csharphttps://sourcemaking.com/design_patterns/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "18",
+          "Chapter 05: Design Pattern in .NET (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://refactoring.guru/design-patterns/csharphttps://sourcemaking.com/design_patterns/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "19",
+          "Chapter 06: Delegate , Event & LINQ",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "20",
+          "Chapter 06: Delegate , Event & LINQ (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "21",
+          "Chapter 06: Delegate , Event & LINQ (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "22",
+          "Chapter 06: Delegate , Event & LINQ (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "23",
+          "Chapter 06: Delegate , Event & LINQ (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/Chapter 11. Querying and Manipulating Data Using LINQ (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "24",
+          "GENAI: Applying Generative AI & Workflow CI/CD in .NET",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slide",
+          "",
+          "- Read the slide",
+          ""
+        ],
+        [
+          "25",
+          "GENAI: Applying Generative AI & Workflow CI/CD in .NET (cont.)",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slide",
+          "",
+          "- Read the slide",
+          ""
+        ],
+        [
+          "26",
+          "GENAI: Applying Generative AI & Workflow CI/CD in .NET (cont.)",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Slide",
+          "",
+          "- Read the slide",
+          ""
+        ],
+        [
+          "27",
+          "Progress Test 1",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Exam",
+          "",
+          "- Do Quiz",
+          ""
+        ],
+        [
+          "28",
+          "Project Review 01",
+          "Offline",
+          "CLO2, CLO6",
+          "TU",
+          "Project List",
+          "",
+          "- Gather Requirements- Use GenAI to help write UseCases and preliminary UI- Create diagrams using PlantUML- Upload diagrams + documentation to GitHub",
+          ""
+        ],
+        [
+          "29",
+          "Chapter 07: Building WPF Application",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/?view=netdesktop-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "30",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/windows/?view=netdesktop-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "31",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/windows/?view=netdesktop-8.1",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "32",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/styles-templates-overview?view=netdesktop-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "33",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/styles-templates-overview?view=netdesktop-8.1",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "34",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/styles-templates-overview?view=netdesktop-8.2",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "35",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/?view=netdesktop-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "36",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/?view=netdesktop-8.1",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "37",
+          "Chapter 07: Building WPF Application (cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/?view=netdesktop-8.2",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "38",
+          "Lab 1",
+          "Offline",
+          "CLO1, CLO2, CLO3",
+          "TU",
+          "Lab 01",
+          "",
+          "- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "39",
+          "Assignment 1",
+          "Offline",
+          "CLO1, CLO2, CLO3",
+          "TU",
+          "Assignment 01",
+          "",
+          "- Discuss assignment problems",
+          ""
+        ],
+        [
+          "40",
+          "Project Review 02",
+          "Offline",
+          "CLO1, CLO2, CL3, CLO6",
+          "TU",
+          "Project List",
+          "",
+          "- WPF Project Setup- Layout and Logic Setup- Testing (Unit Test / UI Test)- Reporting and Reflecting on GenAI Usage",
+          ""
+        ],
+        [
+          "41",
+          "Chapter 08: Working with Databases Using Entity Framework Core",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "42",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "43",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "44",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "45",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/ef/core/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "46",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/ef/core/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "47",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/ef/core/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "48",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/ef/core/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "49",
+          "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/ef/core/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "50",
+          "Chapter 09: Working with Files and System.IO",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Chapter 9. Working with Files, Streams, and Serialization (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "51",
+          "Chapter 09: Working with Files and System.IO (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Chapter 9. Working with Files, Streams, and Serialization (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "52",
+          "Chapter 09: Working with Files and System.IO (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Chapter 9. Working with Files, Streams, and Serialization (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "53",
+          "Project Review 03",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "Project List",
+          "",
+          "- Application Demo- Performance Reporting- Reflection on GenAI Usage and Teamwork",
+          ""
+        ],
+        [
+          "54",
+          "Chapter 10: Working with XML and JSON Serializing",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://www.json.org/json-en.htmlhttps://learn.microsoft.com/vi-vn/dotnet/standard/serialization/system-text-json/overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "55",
+          "Lab 2",
+          "Offline",
+          "CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "Lab 02",
+          "",
+          "- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "56",
+          "Assignment 2",
+          "Offline",
+          "CLO3, CLO4, CLO5, CLO6",
+          "TU",
+          "Assignment 02",
+          "",
+          "- Discuss assignment problems",
+          ""
+        ],
+        [
+          "57",
+          "Progress Test 2",
+          "Offline",
+          "CLO3, CLO4, CLO5",
+          "TU",
+          "Exam",
+          "",
+          "- Do Quiz",
+          ""
+        ],
+        [
+          "58",
+          "Chapter 11: Introduction to Concurrency Programming",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "59",
+          "Chapter 11: Introduction to Concurrency Programming (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "60",
+          "Chapter 11: Introduction to Concurrency Programming (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "61",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "62",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "63",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "64",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "65",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "66",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction Working EnvironmentProject Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction SlideProject List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRN212",
+            "links": [
+              {
+                "text": "PRN212",
+                "href": "https://flm.fpt.edu.vn/download/12705/S/1_PRN212.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "- Choose Group (3-5 Students)- Choose Topic- Collect requirements about Topic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to .NET Platform & Visual Studio.NET",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to .NET Platform & Visual Studio.NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 02: C# Programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Controlling Flow, Converting Types, and Handling ExceptionsChapter 4. Writing, Debugging, and Testing Functions (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 02: C# Programming (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Controlling Flow, Converting Types, and Handling ExceptionsChapter 4. Writing, Debugging, and Testing Functions (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 02: C# Programming (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Controlling Flow, Converting Types, and Handling ExceptionsChapter 4. Writing, Debugging, and Testing Functions (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Object-Oriented Programming with C#",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5. Building Your Own Types with Object-Oriented Programming (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Object-Oriented Programming with C# (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5. Building Your Own Types with Object-Oriented Programming (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Object-Oriented Programming with C# (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5. Building Your Own Types with Object-Oriented Programming (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04: Collections & Generic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/vi-vn/dotnet/standard/generics/collections",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04: Collections & Generic (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/collections",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04: Collections & Generic (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/collections",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Design Pattern in .NET",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://refactoring.guru/design-patterns/csharphttps://sourcemaking.com/design_patterns/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Design Pattern in .NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://refactoring.guru/design-patterns/csharphttps://sourcemaking.com/design_patterns/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Design Pattern in .NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://refactoring.guru/design-patterns/csharphttps://sourcemaking.com/design_patterns/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Delegate , Event & LINQ",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Delegate , Event & LINQ (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Delegate , Event & LINQ (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Delegate , Event & LINQ (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Delegate , Event & LINQ (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/https://learn.microsoft.com/vi-vn/dotnet/csharp/programming-guide/events/https://learn.microsoft.com/en-us/dotnet/csharp/linq/Chapter 11. Querying and Manipulating Data Using LINQ (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "GENAI: Applying Generative AI & Workflow CI/CD in .NET",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "GENAI: Applying Generative AI & Workflow CI/CD in .NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "GENAI: Applying Generative AI & Workflow CI/CD in .NET (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do Quiz",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Review 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Gather Requirements- Use GenAI to help write UseCases and preliminary UI- Create diagrams using PlantUML- Upload diagrams + documentation to GitHub",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/?view=netdesktop-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/windows/?view=netdesktop-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/windows/?view=netdesktop-8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/styles-templates-overview?view=netdesktop-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/styles-templates-overview?view=netdesktop-8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/styles-templates-overview?view=netdesktop-8.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/?view=netdesktop-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/?view=netdesktop-8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Building WPF Application (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/?view=netdesktop-8.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss assignment problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Review 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CL3, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- WPF Project Setup- Layout and Logic Setup- Testing (Unit Test / UI Test)- Reporting and Reflecting on GenAI Usage",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Data Using Entity Framework Core (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/ef/core/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/ef/core/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/ef/core/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/ef/core/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Working with Databases Using Entity Framework Core (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/ef/core/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Working with Files and System.IO",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 9. Working with Files, Streams, and Serialization (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Working with Files and System.IO (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 9. Working with Files, Streams, and Serialization (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Working with Files and System.IO (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 9. Working with Files, Streams, and Serialization (C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Review 03",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Application Demo- Performance Reporting- Reflection on GenAI Usage and Teamwork",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10: Working with XML and JSON Serializing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.json.org/json-en.htmlhttps://learn.microsoft.com/vi-vn/dotnet/standard/serialization/system-text-json/overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss assignment problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do Quiz",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11: Introduction to Concurrency Programming",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11: Introduction to Concurrency Programming (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11: Introduction to Concurrency Programming (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "61",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "62",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "63",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "64",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "65",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "66",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "2",
+          "15.0%",
+          ">0",
+          "12 slots",
+          "CLO2, CLO3, CLO4, CLO5",
+          "",
+          "",
+          "Studied subjects in syllabus",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "Group Project",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "20 slots",
+          "CLO2, CLO3, CLO4, CLO5, CLO6",
+          "",
+          "",
+          "Studied subjects in syllabus",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "30'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "20/each",
+          "Studied subjects in syllabus",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "2",
+          "55.0%",
+          "",
+          "145'",
+          "All CLOs",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "TE >= 4, PE > 0 & Min Avg Mark To Pass >= 5"
+        ],
+        [
+          "5",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          ">0",
+          "85'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "",
+          "Manual evaluating",
+          "All subjects in syllabus",
+          "By exam board",
+          ""
+        ],
+        [
+          "6",
+          "Theoretical exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "",
+          "50",
+          "All subjects in syllabus",
+          "By exam board",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Studied subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4, CLO5, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Studied subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Studied subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "55.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TE >= 4, PE > 0 & Min Avg Mark To Pass >= 5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theoretical exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+import 'package:flutter/material.dart';
+import '../../app/theme/app_colors.dart';
+import '../widgets/app_sidebar.dart';
+import '../../models/curriculum_data.dart';
+import '../screens/curriculum_detail_screen.dart';
+import '../../features/subjects/presentation/subject_list_screen.dart';
+import '../screens/explore_curriculums_screen.dart';
+import '../screens/transcript_screen.dart';
+import '../widgets/chat_box.dart';
+
+class DashboardLayout extends StatefulWidget {
+  final CurriculumData curriculumData;
+  final String? userName;
+
+  const DashboardLayout({
+    super.key,
+    required this.curriculumData,
+    this.userName,
+  });
+
+  @override
+  State<DashboardLayout> createState() => _DashboardLayoutState();
+}
+
+class _DashboardLayoutState extends State<DashboardLayout> {
+  final GlobalKey _chatBoxKey = GlobalKey();
+  int _selectedIndex = 0;
+  int _lastMainIndex = 0; // Lưu vết màn hình chính trước khi mở chat
+  bool _isChatOverlay = true;
+  bool _isSidebarOpen = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: Row(
+        children: [
+          // 1. Sidebar (Trái)
+          AppSidebar(
+            selectedIndex: _selectedIndex,
+            onItemSelected: (index) {
+              setState(() {
+                if (index == 2) {
+                  _selectedIndex = 2;
+                } else {
+                  _selectedIndex = index;
+                  _lastMainIndex = index;
+                }
+              });
+            },
+            curriculumCode:
+                widget.curriculumData.metadata['curriculumCode']?.toString(),
+            isOpen: _isSidebarOpen,
+            onToggle: () {
+              setState(() => _isSidebarOpen = !_isSidebarOpen);
+            },
+          ),
+
+          // 2. Main Content (Giữa)
+          Expanded(
+            child: Column(
+              children: [
+                // Topbar
+                Container(
+                  height: 72,
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  decoration: const BoxDecoration(
+                    color: AppColors.background,
+                    border: Border(
+                        bottom: BorderSide(color: Color(0xFFE2E8F0))),
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        _selectedIndex == 0 ? 'Tổng quan' : _selectedIndex == 1 ? 'Quản lý môn học' : _selectedIndex == 3 ? 'Khám phá chuyên ngành' : _selectedIndex == 4 ? 'Quản lý điểm' : 'Trợ lý học vụ',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.textMain,
+                        ),
+                      ),
+                      const Spacer(),
+                      const SizedBox(width: 16),
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          setState(() {
+                            if (_selectedIndex == 2) {
+                              _selectedIndex = _lastMainIndex;
+                            } else {
+                              _selectedIndex = 2;
+                              _isChatOverlay = true; // Default to overlay when using topbar button
+                            }
+                          });
+                        },
+                        icon: const Icon(Icons.chat_bubble_outline_rounded,
+                            size: 18),
+                        label: const Text('Trợ lý'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _selectedIndex == 2
+                              ? AppColors.primary
+                              : AppColors.surface,
+                          foregroundColor:
+                              _selectedIndex == 2 ? Colors.white : AppColors.textMain,
+                          elevation: 0,
+                          side: BorderSide(
+                              color: _selectedIndex == 2
+                                  ? AppColors.primary
+                                  : const Color(0xFFE2E8F0)),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                // Nơi chứa màn hình thực tế (CurriculumDetailScreen, SubjectListScreen)
+                Expanded(
+                  child: _selectedIndex == 2 && !_isChatOverlay 
+                    // Fullscreen Chat Mode
+                    ? ChatBox(
+                        key: _chatBoxKey,
+                        curriculumData: widget.curriculumData,
+                        isOverlay: false,
+                        onToggleMode: () {
+                          setState(() => _isChatOverlay = true);
+                        },
+                        onClose: () {
+                          setState(() => _selectedIndex = _lastMainIndex);
+                        },
+                      )
+                    // Normal Main Screen
+                    : IndexedStack(
+                        index: _lastMainIndex,
+                        children: [
+                          CurriculumDetailScreen(
+                            curriculumData: widget.curriculumData,
+                          ),
+                          // Subject/course browser comes from the
+                          // knowledge-graph/subject-browser branch
+                          // (lib/features/subjects), fed with the subjects of
+                          // the curriculum loaded in this dashboard.
+                          SubjectListScreen(
+                            curriculumCode: widget.curriculumData
+                                    .metadata['curriculumCode']
+                                    ?.toString() ??
+                                'Curriculum',
+                            subjects: widget.curriculumData.subjects
+                                .where((s) => !s.isPlaceholder)
+                                .toList(growable: false),
+                          ),
+                          const SizedBox.shrink(), // Index 2 is Chat
+                          const ExploreCurriculumsScreen(),
+                          const TranscriptScreen(),
+                        ],
+                      ),
+                ),
+              ],
+            ),
+          ),
+
+          // 3. Chatbot Panel (Overlay Drawer)
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+            width: (_selectedIndex == 2 && _isChatOverlay) ? 380 : 0,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+            ),
+            child: ClipRect(
+              child: (_selectedIndex == 2 && _isChatOverlay) 
+                ? ChatBox(
+                    key: _chatBoxKey,
+                    curriculumData: widget.curriculumData,
+                    isOverlay: true,
+                    onToggleMode: () {
+                      setState(() => _isChatOverlay = false);
+                    },
+                    onClose: () {
+                      setState(() => _selectedIndex = _lastMainIndex);
+                    },
+                  )
+                : const SizedBox.shrink(),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}

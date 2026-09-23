@@ -1,0 +1,5215 @@
+{
+  "id": "13893",
+  "metadata": {
+    "Syllabus ID": "13893",
+    "Syllabus Name": "Building Cross-Platform Back-End Application With .NET_Xây dựng ứng dụng back-end với .NET",
+    "Course Name English": "Building Cross-Platform Back-End Application With .NET",
+    "Subject Code": "PRN232",
+    "Learning-Teaching Method": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 49.5h contact hours + 145' Final exam + 98.1h self-study",
+    "Pre-Requisite": "PRN22x",
+    "Description": "Upon completion of this course students shoud: 1. Understand the followings: • Apply C# language for develop ASP.NET WEB API ( RESTful Service applications ) • Fundamental concepts of .NET Core Platform • Basic knowledge of ASP.NET WEB API on .NET Core • Basic knowledge of RESTful Service and Microservice architecture 2. Be able to: • Develop Cross - platform Back-end application can be used by Desktop or Web applications (Cross - platform) • Develop RESTful Service applications by ASP.NET Web API and Windows Communication Foundation (WCF) • Implement security in the ASP.NET WEB API • Implement sending Ajax request to ASP.NET WEB API • Implement security JWT in ASP.NET Core Web API • Develop Distributed applications based on Microservice architecture 3. Be able to work in team and present group's results",
+    "StudentTasks": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information",
+    "Tools": "- Internet - Visual Studio.NET 2019 version 16.8.3 or later - Platform : .NET 5.0 or later",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1402/QĐ-ĐHFPT dated 12/12/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "12/12/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13893"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13893"
+        ],
+        [
+          "Syllabus Name:",
+          "Building Cross-Platform Back-End Application With .NET_Xây dựng ứng dụng back-end với .NET"
+        ],
+        [
+          "Course Name English:",
+          "Building Cross-Platform Back-End Application With .NET"
+        ],
+        [
+          "Subject Code:",
+          "PRN232"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Social Constructivism,In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 49.5h contact hours + 145' Final exam + 98.1h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PRN22x"
+        ],
+        [
+          "Description:",
+          "Upon completion of this course students shoud: 1. Understand the followings: • Apply C# language for develop ASP.NET WEB API ( RESTful Service applications ) • Fundamental concepts of .NET Core Platform • Basic knowledge of ASP.NET WEB API on .NET Core • Basic knowledge of RESTful Service and Microservice architecture 2. Be able to: • Develop Cross - platform Back-end application can be used by Desktop or Web applications (Cross - platform) • Develop RESTful Service applications by ASP.NET Web API and Windows Communication Foundation (WCF) • Implement security in the ASP.NET WEB API • Implement sending Ajax request to ASP.NET WEB API • Implement security JWT in ASP.NET Core Web API • Develop Distributed applications based on Microservice architecture 3. Be able to work in team and present group's results"
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Internet - Visual Studio.NET 2019 version 16.8.3 or later - Platform : .NET 5.0 or later"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1402/QĐ-ĐHFPT dated 12/12/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "12/12/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13893",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Building Cross-Platform Back-End Application With .NET_Xây dựng ứng dụng back-end với .NET",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Building Cross-Platform Back-End Application With .NET",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRN232",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 49.5h contact hours + 145' Final exam + 98.1h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRN22x",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Upon completion of this course students shoud: 1. Understand the followings: • Apply C# language for develop ASP.NET WEB API ( RESTful Service applications ) • Fundamental concepts of .NET Core Platform • Basic knowledge of ASP.NET WEB API on .NET Core • Basic knowledge of RESTful Service and Microservice architecture 2. Be able to: • Develop Cross - platform Back-end application can be used by Desktop or Web applications (Cross - platform) • Develop RESTful Service applications by ASP.NET Web API and Windows Communication Foundation (WCF) • Implement security in the ASP.NET WEB API • Implement sending Ajax request to ASP.NET WEB API • Implement security JWT in ASP.NET Core Web API • Develop Distributed applications based on Microservice architecture 3. Be able to work in team and present group's results",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Internet - Visual Studio.NET 2019 version 16.8.3 or later - Platform : .NET 5.0 or later",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1402/QĐ-ĐHFPT dated 12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "https://learn.microsoft.com/en-us/ef/core/",
+          "Microsoft",
+          "Microsoft",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "2",
+          "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+          "Microsoft",
+          "Microsoft",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "3",
+          "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12",
+          "Microsoft",
+          "Microsoft",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "4",
+          "C# 12 in a Nutshell",
+          "Joseph Albahari",
+          "O’Reilly Media, Inc.",
+          "2023",
+          "1st Edition",
+          "9781098147440",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "5",
+          "C# 12 and .NET 8 – ModernCross-Platform DevelopmentFundamentals",
+          "Mark J. Price",
+          "Packt Publishing Ltd.",
+          "2023",
+          "8th Edition",
+          "9781837635870",
+          "False",
+          "True",
+          "False",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/ef/core/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microsoft",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "C# 12 in a Nutshell",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Joseph Albahari",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "O’Reilly Media, Inc.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2023",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st Edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781098147440",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "C# 12 and .NET 8 – ModernCross-Platform DevelopmentFundamentals",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mark J. Price",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Packt Publishing Ltd.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2023",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8th Edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9781837635870",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Describe about .NET Core Platform, and ASP.NET WEB API Architecture"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Demonstrate Models, ODATA, Entity Framework Core ,and Media Formatters & Content Negotiation"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Demonstrate about implementing security in RESTful WebService"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Demonstrate about JavaScript Client and sending AJAX Requests to ASP.NET Web API"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Demonstrate about implementing RESTful Services by WCF, gRPC Services and introduction about Microservices architecture."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe about .NET Core Platform, and ASP.NET WEB API Architecture",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate Models, ODATA, Entity Framework Core ,and Media Formatters & Content Negotiation",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate about implementing security in RESTful WebService",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate about JavaScript Client and sending AJAX Requests to ASP.NET Web API",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate about implementing RESTful Services by WCF, gRPC Services and introduction about Microservices architecture.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction",
+          "Offline",
+          "CLO1",
+          "IT",
+          "Slide",
+          "PRN232",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "2",
+          "Review C# Basics, Desktop Application/Web Application with ASP.NET Core",
+          "Offline",
+          "CLO1",
+          "",
+          "PRN212, PRN222 slides",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "3",
+          "Group Project Introduction",
+          "Offline",
+          "CLO1",
+          "",
+          "Project List",
+          "",
+          "- Choose Group (3-5 Students)- Choose Topic- Collect requirements about Topic",
+          ""
+        ],
+        [
+          "4",
+          "Chapter 01: Introduction to ASP.NET Core and RESTful Service",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "5",
+          "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.1",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "6",
+          "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.2",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "7",
+          "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.3",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "8",
+          "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.4",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "9",
+          "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.5",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "10",
+          "Chapter 02: Models in Web API",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Chapter 10. Working with Data Using EntityFramework CoreChapter 14. Building and Consuming Web Services",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "11",
+          "Chapter 02: Models in Web API (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Chapter 10. Working with Data Using EntityFramework CoreChapter 14. Building and Consuming Web Services",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "12",
+          "Project Assistant - 01",
+          "Offline",
+          "CLO2",
+          "U",
+          "Project List",
+          "",
+          "- Discuss project problems",
+          ""
+        ],
+        [
+          "13",
+          "Chapter 03: Media Formatters and Content Negotiation",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "14",
+          "Chapter 03: Media Formatters and Content Negotiation (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "15",
+          "Chapter 03: Media Formatters and Content Negotiation (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "16",
+          "Chapter 03: Media Formatters and Content Negotiation (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "17",
+          "Chapter 04: Binding, Validation and Routing",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "18",
+          "Chapter 04: Binding, Validation and Routing (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "19",
+          "Lab 1",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Lab 1",
+          "",
+          "- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "20",
+          "Assignmnet 1",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Assignment 1",
+          "",
+          "- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "21",
+          "Progress Test 1",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Project List",
+          "",
+          "- Do Quiz",
+          ""
+        ],
+        [
+          "22",
+          "Chapter 05: OData in ASP.NET Core Web API",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "23",
+          "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "24",
+          "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "25",
+          "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "26",
+          "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "27",
+          "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "28",
+          "Chapter 06: Implement security in RESTful WebService",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "29",
+          "Chapter 06: Implement security in RESTful WebService(cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.1",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "30",
+          "Chapter 06: Implement security in RESTful WebService(cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.2",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "31",
+          "Chapter 06: Implement security in RESTful WebService(cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.3",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "32",
+          "Chapter 06: Implement security in RESTful WebService(cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.4",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "33",
+          "Chapter 06: Implement security in RESTful WebService(cont.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.5",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "34",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "35",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "36",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "37",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "38",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "39",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "40",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "41",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "42",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "43",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "44",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "45",
+          "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "46",
+          "Lab 2, Assignmnet 2",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Lab 2, Assignment 2",
+          "",
+          "- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "47",
+          "Progress Test 2",
+          "Offline",
+          "CLO4",
+          "TU",
+          "LMS",
+          "",
+          "- Do Quiz",
+          ""
+        ],
+        [
+          "48",
+          "Project Assistant - 02",
+          "Offline",
+          "CLO4",
+          "U",
+          "Project List",
+          "",
+          "- Discuss project problems",
+          ""
+        ],
+        [
+          "49",
+          "Chapter 08: Building RESTful Service with Windows Communication Foundation (WCF)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf#features-of-wcfhttps://dotnet.microsoft.com/en-us/platform/support/policy/corewcf",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "50",
+          "Chapter 08: Building RESTful Service with Windows Communication Foundation (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf#features-of-wcfhttps://dotnet.microsoft.com/en-us/platform/support/policy/corewcf",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "51",
+          "Chapter 08: Building RESTful Service with Windows Communication Foundation (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://learn.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf#features-of-wcfhttps://dotnet.microsoft.com/en-us/platform/support/policy/corewcf",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "52",
+          "Chapter 09: Introduction to gRPC Service",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.0",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "53",
+          "Chapter 09: Introduction to gRPC Service (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.1",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "54",
+          "Chapter 09: Introduction to gRPC Service (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.2",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "55",
+          "Chapter 09: Introduction to gRPC Service (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.3",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "56",
+          "Chapter 09: Introduction to gRPC Service (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.4",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "57",
+          "Chapter 09: Introduction to gRPC Service (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.5",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "58",
+          "Chapter 10: Introduction to Microservices Architecture",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://dotnet.microsoft.com/en-us/learn/aspnet/microservices-architecturehttps://raw.githubusercontent.com/dotnet-architecture/eBooks/main/current/microservices/NET-Microservices-Architecture-for-Containerized-NET-Applications.pdf",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "59",
+          "Chapter 10: Introduction to Microservices Architecture (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://dotnet.microsoft.com/en-us/learn/aspnet/microservices-architecturehttps://raw.githubusercontent.com/dotnet-architecture/eBooks/main/current/microservices/NET-Microservices-Architecture-for-Containerized-NET-Applications.pdf",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "60",
+          "Chapter 10: Introduction to Microservices Architecture (cont.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://dotnet.microsoft.com/en-us/learn/aspnet/microservices-architecturehttps://raw.githubusercontent.com/dotnet-architecture/eBooks/main/current/microservices/NET-Microservices-Architecture-for-Containerized-NET-Applications.pdf",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "61",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "62",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO6",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "63",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO7",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "64",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO8",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "65",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO9",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ],
+        [
+          "66",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4, CLO10",
+          "U",
+          "",
+          "",
+          "Group Presentation",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRN232",
+            "links": [
+              {
+                "text": "PRN232",
+                "href": "https://flm.fpt.edu.vn/download/12703/S/1_PRN232.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review C# Basics, Desktop Application/Web Application with ASP.NET Core",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRN212, PRN222 slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Choose Group (3-5 Students)- Choose Topic- Collect requirements about Topic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to ASP.NET Core and RESTful Service",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: Introduction to ASP.NET Core and RESTful Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 02: Models in Web API",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Data Using EntityFramework CoreChapter 14. Building and Consuming Web Services",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 02: Models in Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Data Using EntityFramework CoreChapter 14. Building and Consuming Web Services",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Assistant - 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss project problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Media Formatters and Content Negotiation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Media Formatters and Content Negotiation (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Media Formatters and Content Negotiation (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Media Formatters and Content Negotiation (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_typeshttps://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04: Binding, Validation and Routing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04: Binding, Validation and Routing (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignmnet 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do Quiz",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: OData in ASP.NET Core Web API",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: OData in ASP.NET Core Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.odata.org/documentation/https://www.odata.org/libraries/ (.NET)https://learn.microsoft.com/en-us/odata/webapi-8/Overview",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Implement security in RESTful WebService",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Implement security in RESTful WebService(cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Implement security in RESTful WebService(cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Implement security in RESTful WebService(cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Implement security in RESTful WebService(cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Implement security in RESTful WebService(cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt-authn?view=aspnetcore-8.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: JavaScript Clients and ASP.NET Web API (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-8.0https://react.dev/learn/writing-markup-with-jsxhttps://react.dev/learn/adding-interactivityhttps://react.dev/learn/managing-state",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2, Assignmnet 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2, Assignment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LMS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Do Quiz",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Assistant - 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss project problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Building RESTful Service with Windows Communication Foundation (WCF)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf#features-of-wcfhttps://dotnet.microsoft.com/en-us/platform/support/policy/corewcf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Building RESTful Service with Windows Communication Foundation (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf#features-of-wcfhttps://dotnet.microsoft.com/en-us/platform/support/policy/corewcf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Building RESTful Service with Windows Communication Foundation (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://learn.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf#features-of-wcfhttps://dotnet.microsoft.com/en-us/platform/support/policy/corewcf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Introduction to gRPC Service",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Introduction to gRPC Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Introduction to gRPC Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Introduction to gRPC Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Introduction to gRPC Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Introduction to gRPC Service (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://grpc.io/docs/languages/csharp/https://learn.microsoft.com/vi-vn/aspnet/core/grpc/basics?view=aspnetcore-8.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10: Introduction to Microservices Architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://dotnet.microsoft.com/en-us/learn/aspnet/microservices-architecturehttps://raw.githubusercontent.com/dotnet-architecture/eBooks/main/current/microservices/NET-Microservices-Architecture-for-Containerized-NET-Applications.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10: Introduction to Microservices Architecture (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://dotnet.microsoft.com/en-us/learn/aspnet/microservices-architecturehttps://raw.githubusercontent.com/dotnet-architecture/eBooks/main/current/microservices/NET-Microservices-Architecture-for-Containerized-NET-Applications.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10: Introduction to Microservices Architecture (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://dotnet.microsoft.com/en-us/learn/aspnet/microservices-architecturehttps://raw.githubusercontent.com/dotnet-architecture/eBooks/main/current/microservices/NET-Microservices-Architecture-for-Containerized-NET-Applications.pdf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "61",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "62",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "63",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "64",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "65",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "66",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "2",
+          "15.0%",
+          ">0",
+          "12 slots",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "Group Project",
+          "on-going",
+          "1",
+          "25.0%",
+          ">0",
+          "20 slots",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "2",
+          "5.0%",
+          ">0",
+          "30'",
+          "",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "20/each",
+          "",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "2",
+          "55.0%",
+          "",
+          "145'",
+          "All CLOs",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "PE > 0, TE >= 4 & Min Avg Mark To Pass >= 5"
+        ],
+        [
+          "5",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          ">0",
+          "85'",
+          "",
+          "",
+          "Manual evaluating",
+          "",
+          "By exam board Manual evaluating",
+          ""
+        ],
+        [
+          "6",
+          "Theoretical exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "questions distribution:LO1.x: 5 - 15LO2.x: 5 - 15LO3.x: 5 - 15 LO4.x: 5 - 15",
+          "",
+          "50",
+          "All subjects in syllabus",
+          "By exam board",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "55.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PE > 0, TE >= 4 & Min Avg Mark To Pass >= 5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theoretical exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "questions distribution:LO1.x: 5 - 15LO2.x: 5 - 15LO3.x: 5 - 15 LO4.x: 5 - 15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

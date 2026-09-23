@@ -1,0 +1,4698 @@
+{
+  "id": "11218",
+  "metadata": {
+    "Syllabus ID": "11218",
+    "Syllabus Name": "Data Mining_Khai phá dữ liệu",
+    "Course Name English": "Data Mining",
+    "Subject Code": "DBM302m",
+    "Learning-Teaching Method": "In-class lecture, Social Constructivism, Active Learning",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "45h (60 sessions) contact hours + 1h final exam + 104h self-study;",
+    "Pre-Requisite": "",
+    "Description": "- This course introduces the key steps involved in the data mining pipeline, including data understanding, data preprocessing, data warehousing, data modeling, interpretation and evaluation, and real-world applications. - Students will learn the general concepts of data mining along with basic methodologies and applications. Then dive into one subfield in data mining: pattern discovery. Learn in-depth concepts, methods, and applications of pattern discovery in data mining. This courser will introduce methods for pattern-based classification and some interesting applications of pattern discovery. It also provides you the opportunity to learn skills and content to practice and engage in scalable pattern discovery methods on massive transactional data, discuss pattern evaluation measures, and study methods for mining diverse kinds of patterns, sequential patterns, and sub-graph patterns.",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "Jupyter Notebooks, RStudio IDE",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "358/QĐ-ĐHFPT dated 04/03/2024",
+    "IsApproved": "True",
+    "Note": "Assignment: plus 0.5 to 1 points for completed Coursera certification, Final Result <=10",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/3/2024"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "11218"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "11218"
+        ],
+        [
+          "Syllabus Name:",
+          "Data Mining_Khai phá dữ liệu"
+        ],
+        [
+          "Course Name English:",
+          "Data Mining"
+        ],
+        [
+          "Subject Code:",
+          "DBM302m"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "In-class lecture, Social Constructivism, Active Learning"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "45h (60 sessions) contact hours + 1h final exam + 104h self-study;"
+        ],
+        [
+          "Pre-Requisite:",
+          ""
+        ],
+        [
+          "Description:",
+          "- This course introduces the key steps involved in the data mining pipeline, including data understanding, data preprocessing, data warehousing, data modeling, interpretation and evaluation, and real-world applications. - Students will learn the general concepts of data mining along with basic methodologies and applications. Then dive into one subfield in data mining: pattern discovery. Learn in-depth concepts, methods, and applications of pattern discovery in data mining. This courser will introduce methods for pattern-based classification and some interesting applications of pattern discovery. It also provides you the opportunity to learn skills and content to practice and engage in scalable pattern discovery methods on massive transactional data, discuss pattern evaluation measures, and study methods for mining diverse kinds of patterns, sequential patterns, and sub-graph patterns."
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "Jupyter Notebooks, RStudio IDE"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "358/QĐ-ĐHFPT dated 04/03/2024"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          "Assignment: plus 0.5 to 1 points for completed Coursera certification, Final Result <=10"
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/3/2024"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11218",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Mining_Khai phá dữ liệu",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Mining",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DBM302m",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In-class lecture, Social Constructivism, Active Learning",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45h (60 sessions) contact hours + 1h final exam + 104h self-study;",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- This course introduces the key steps involved in the data mining pipeline, including data understanding, data preprocessing, data warehousing, data modeling, interpretation and evaluation, and real-world applications. - Students will learn the general concepts of data mining along with basic methodologies and applications. Then dive into one subfield in data mining: pattern discovery. Learn in-depth concepts, methods, and applications of pattern discovery in data mining. This courser will introduce methods for pattern-based classification and some interesting applications of pattern discovery. It also provides you the opportunity to learn skills and content to practice and engage in scalable pattern discovery methods on massive transactional data, discuss pattern evaluation measures, and study methods for mining diverse kinds of patterns, sequential patterns, and sub-graph patterns.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Jupyter Notebooks, RStudio IDE",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "358/QĐ-ĐHFPT dated 04/03/2024",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment: plus 0.5 to 1 points for completed Coursera certification, Final Result <=10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/3/2024",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Data Mining Pipeline",
+          "",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/data-mining-pipeline?specialization=data-mining-foundations-practice"
+        ],
+        [
+          "2",
+          "Data Visualization",
+          "",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/datavisualization?specialization=data-mining"
+        ],
+        [
+          "3",
+          "Pattern Discovery in Data Mining",
+          "",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/data-patterns?specialization=data-mining"
+        ],
+        [
+          "4",
+          "Cluster Analysis in Data Mining",
+          "",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/cluster-analysis?specialization=data-mining"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Mining Pipeline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/data-mining-pipeline?specialization=data-mining-foundations-practice",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Visualization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/datavisualization?specialization=data-mining",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Pattern Discovery in Data Mining",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/data-patterns?specialization=data-mining",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cluster Analysis in Data Mining",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/cluster-analysis?specialization=data-mining",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand what is data mining and what are key components of the data mining pipeline"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Learn and apply one of the basic core of data mining: data visualization"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Understand and apply one subtield in data mining: patern discovery, practice with the data visualization of data mining"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Apply another subtield in data mining: cluster analysis"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand what is data mining and what are key components of the data mining pipeline",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Learn and apply one of the basic core of data mining: data visualization",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand and apply one subtield in data mining: patern discovery, practice with the data visualization of data mining",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apply another subtield in data mining: cluster analysis",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "- Course Introduction - Chapter 1: 1.1.Introduction to Data mining1.2.Introduction to Data mining Pipeline",
+          "Offline",
+          "CLO1",
+          "IT",
+          "- Slides: Introduction'- Slides: Chapter 1.1, 1.2",
+          "mat1",
+          "Read slide introduction Syllabus Syllabus DSR301mRead Chapter 1.1, 1.2",
+          ""
+        ],
+        [
+          "2",
+          "1.3 Data understanding - Objects & Attributes, Statistics, Visual1.4 Data understadining - Data similarity",
+          "Offline",
+          "CLO1",
+          "T",
+          "- slide chapter 1.3, 1.4",
+          "mat2",
+          "Read Chapter 1.3, 1.4",
+          ""
+        ],
+        [
+          "3",
+          "1.5 Data Preprocessing - Cleaning, Integration, Transformation, Reduction",
+          "Offline",
+          "CLO1",
+          "T",
+          "- slide chapter 1.5",
+          "",
+          "Read chapter 1.5",
+          ""
+        ],
+        [
+          "4",
+          "1.6 Data warehousing - Warehousem Cube and OLAP1.7 Data warehousing - Data Warehouse Architecture",
+          "Offline",
+          "CLO1",
+          "T",
+          "- slide chapter 1.6, 1.7",
+          "",
+          "Read Chapter 1.6, 1.7",
+          ""
+        ],
+        [
+          "5",
+          "- Chapter 2: Data visualization2.1 Introduction of data visualization",
+          "Offline",
+          "CLO2",
+          "T",
+          "- slide chapter 2.1",
+          "",
+          "Read Chapter 2.1",
+          ""
+        ],
+        [
+          "6",
+          "2.2 Visualization of Numerical Data",
+          "Offline",
+          "CLO2",
+          "T",
+          "- slide chapter 2.2",
+          "",
+          "Read Chapter 2.2",
+          ""
+        ],
+        [
+          "7",
+          "2.3 Visualization of Non-Numerical Data",
+          "Offline",
+          "CLO2",
+          "T",
+          "- slide chapter 2.3",
+          "",
+          "Read Chapter 2.3",
+          ""
+        ],
+        [
+          "8",
+          "2.4 The Visualization of Dashboard",
+          "Offline",
+          "CLO2",
+          "T",
+          "- slide chapter 2.4",
+          "",
+          "Read Chapter 2.4",
+          ""
+        ],
+        [
+          "9",
+          "Lab 2.1",
+          "Offline",
+          "CLO2",
+          "T U",
+          "- slide chapter 2, lab 2.1",
+          "",
+          "Read chapter 2, lab 2.1",
+          ""
+        ],
+        [
+          "10",
+          "Lab 2.2",
+          "Offline",
+          "CLO2",
+          "T U",
+          "- slide chapter 2, lab 2.2",
+          "",
+          "Read chapter 2, lab 2.2",
+          ""
+        ],
+        [
+          "11",
+          "Review Lab 2.1, 2.2Chapter 3: Pattern Discovery in Data mining3.1 Introduction to Pattern Discovery 13.1.1 What Is Pattern Discovery? Why Is It Important?3.1.2 Frequent Patterns and Association Rules",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.1",
+          "",
+          "Read Chapter 3.1",
+          ""
+        ],
+        [
+          "12",
+          "Introduction to Pattern Discovery 2 3.1.3 Compressed Representation: Closed Patterns and Max-Patterns3.1.4 The Downward Closure Property of Frequent Patterns",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.1",
+          "",
+          "Read Chapter 3.1",
+          ""
+        ],
+        [
+          "13",
+          "3.2 The Apriori Algorithm",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.2",
+          "",
+          "Read Chapter 3.2",
+          ""
+        ],
+        [
+          "14",
+          "3.3 Extensions or Improvements of Apriori",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.3",
+          "",
+          "Read Chapter 3.3",
+          ""
+        ],
+        [
+          "15",
+          "3.4 Mining Frequent Patterns by Exploring Vertical Data Format",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.4",
+          "",
+          "Read Chapter 3.4",
+          ""
+        ],
+        [
+          "16",
+          "3.5 FPGrowth: A Pattern Growth Approach",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.5",
+          "",
+          "Read Chapter 3.5",
+          ""
+        ],
+        [
+          "17",
+          "3.6 Mining Closed Patterns",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.6",
+          "",
+          "Read Chapter 3.6",
+          ""
+        ],
+        [
+          "18",
+          "Lab 3.1",
+          "",
+          "CLO3",
+          "TU",
+          "- slide chapter 3, lab 3.1",
+          "",
+          "Read chapter 3, lab 3.1",
+          ""
+        ],
+        [
+          "19",
+          "3.7 Pattern Evaluation 1 3.7.1. Limitation of the Support-Confidence Framework 3.7.2. Interestingness Measures: Lift and χ",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.7",
+          "",
+          "Read Chapter 3.7",
+          ""
+        ],
+        [
+          "20",
+          "3.7 Pattern Evaluation 2 3.7.3. Null Invariance Measures 3.7.4. Comparison of Null-Invariant Measures",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.7",
+          "",
+          "Read Chapter 3.7",
+          ""
+        ],
+        [
+          "21",
+          "3.8 Mining methods 1 3.8.1. Mining Multi-Level Associations3.8.2. Mining Multi-Dimensional Associations3.8.3. Mining Quantitative Associations",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.8",
+          "",
+          "Read Chapter 3.8",
+          ""
+        ],
+        [
+          "22",
+          "3.8 Mining methods 2 :3.8.4. Mining Negative Correlations3.8.5. Mining Compressed Patterns",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.8",
+          "",
+          "Read Chapter 3.8",
+          ""
+        ],
+        [
+          "23",
+          "Lab 3.2",
+          "Offline",
+          "CLO3",
+          "TU",
+          "- slide chapter 3, lab 3.2",
+          "",
+          "Read chapter 3, lab 3.2",
+          ""
+        ],
+        [
+          "24",
+          "3.9 Mining sequential patterns 3.9.1. Sequential Pattern and Sequential Pattern Mining3.9.2. GSP: Apriori-Based Sequential Pattern Mining",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.9",
+          "",
+          "Read Chapter 3.9",
+          ""
+        ],
+        [
+          "25",
+          "3.9 Mining sequential patterns 2 3.9.3. SPADE—Sequential Pattern Mining in Vertical Data Format3.9.4. PrefixSpan—Sequential Pattern Mining by Pattern-Growth3.9.5. CloSpan—Mining Closed Sequential Patterns",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.9",
+          "",
+          "Read Chapter 3.9",
+          ""
+        ],
+        [
+          "26",
+          "3.10 Mining spatiotemporal and trajectory patterns 1 3.10.1. Mining Spatial Associations 3.10.2. Mining Spatial Colocation Patterns 3.10.3. Mining and Aggregating Patterns over Multiple Trajectories",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.10",
+          "",
+          "Read Chapter 3.10",
+          ""
+        ],
+        [
+          "27",
+          "3.10 Mining spatiotemporal and trajectory patterns 2 3.10.4. Mining Semantics-Rich Movement Patterns 3.10.5. Mining Periodic Movement Patterns",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.10",
+          "",
+          "Read Chapter 3.10",
+          ""
+        ],
+        [
+          "28",
+          "Lab 3.3",
+          "Offline",
+          "CLO3",
+          "TU",
+          "- slide chapter 3, lab 3.3",
+          "",
+          "Read chapter 3, lab 3.3",
+          ""
+        ],
+        [
+          "29",
+          "3.11 Mining quality phrases 1 3.11.1. From Frequent Pattern Mining to Phrase Mining 3.11.2. Previous Phrase Mining Methods",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.11",
+          "",
+          "Read Chapter 3.11",
+          ""
+        ],
+        [
+          "30",
+          "3.11 Mining quality phrases 2 3.11.3. ToPMine: Phrase Mining without Training Data 3.11.4. SegPhrase: Phrase Mining with Tiny Training Sets",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.11",
+          "",
+          "Read Chapter 3.11",
+          ""
+        ],
+        [
+          "31",
+          "3.12 Advanced topics on pattern discovery 1 3.12.1. Frequent Pattern Mining in Data Streams 3.12.2. Pattern Discovery for Software Bug Mining 3.12.3. Pattern Discovery for Image Analysis",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.12",
+          "",
+          "Read Chapter 3.12",
+          ""
+        ],
+        [
+          "32",
+          "3.12 Advanced Topics on Pattern Discovery 2 3.12.4 Pattern Mining and Society—Privacy Issue 3.12.5. Looking Forward",
+          "Offline",
+          "CLO3",
+          "T",
+          "- Slide chapter 3.12",
+          "",
+          "Read Chapter 3.12",
+          ""
+        ],
+        [
+          "33",
+          "Lab 3.4",
+          "Offline",
+          "CLO3",
+          "TU",
+          "- slide chapter 3, lab 3.4",
+          "",
+          "Read chapter 3, lab 3.4",
+          ""
+        ],
+        [
+          "34",
+          "Review Lab 3.1, 3.2, 3.3, 3.4",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "35",
+          "Review Chapter 1-2-3",
+          "",
+          "CLO1, CLO2, CLO3",
+          "I",
+          "- Slide chapter 1, 2, 3",
+          "",
+          "Read Chapter 1, 2, 3",
+          ""
+        ],
+        [
+          "36",
+          "Progress Test 1",
+          "",
+          "CLO1, CLO2, CLO3",
+          "U",
+          "- Slide chapter 1, 2, 3",
+          "",
+          "- Slide chapter 1, 2,3",
+          ""
+        ],
+        [
+          "37",
+          "Chapter 4: Cluster Analysis in Data mining4.1 Introduction to Cluster Analysis 1 4.1.1. What is Cluster Analysis 4.1.2. Applications of Cluster Analysis 4.1.3 Requirements and Challenges",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.1",
+          "",
+          "Read Chapter 4.1",
+          ""
+        ],
+        [
+          "38",
+          "4.1 Introduction to Cluster Analysis 2 4.1.4 A Multi-Dimensional Categorization 4.1.5 An Overview of Typical Clustering Methodologies 4.1.6 An Overview of Clustering Different Types of Data 4.1.7 An Overview of User Insights and Clustering",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.1",
+          "",
+          "Read Chapter 4.1",
+          ""
+        ],
+        [
+          "39",
+          "4.2 Similarity Measures for Cluster Analysis 1 4.2.1 Basic Concepts: Measuring Similarity between Objects 4.2.2 Distance on Numeric Data Minkowski Distance 4.2.3 Proximity Measure for Symetric vs Asymmetric Binary Variables",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.2",
+          "",
+          "Read Chapter 4.2",
+          ""
+        ],
+        [
+          "40",
+          "4.2 Similarity Measures for Cluster Analysis 2 4.2.4 Distance between Categorical Attributes Ordinal Attributes and Mixed Types4.2.5 Proximity Measure between Two Vectors Cosine Similarity4.2.6 Correlation Measures between Two variables Covariance and Correlation Coefficient",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.2",
+          "",
+          "Read Chapter 4.2",
+          ""
+        ],
+        [
+          "41",
+          "Lab 4.1",
+          "Offline",
+          "CLO4",
+          "TU",
+          "- slide chapter 4, lab 4.1",
+          "",
+          "Read chapter 4, lab 4.1",
+          ""
+        ],
+        [
+          "42",
+          "4.3 Partitioning-Based Clustering Methods 14.3.1 Partitioning-Based Clustering Methods4.3.2 K-Means Clustering Method",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.3",
+          "",
+          "Read Chapter 4.3",
+          ""
+        ],
+        [
+          "43",
+          "4.3 Partitioning-Based Clustering Methods 24.3.3 Initialization of K-Means Clustering4.3.4 The K-Medoids Clustering Method",
+          "",
+          "CLO4",
+          "T",
+          "- slide chapter 4.3",
+          "",
+          "Read Chapter 4.3",
+          ""
+        ],
+        [
+          "44",
+          "4.3 Partitioning-Based Clustering Methods 34.3.5 The K-Medians and K-Modes Clustering Methods4.3.6 Kernel K-Means Clustering",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.3",
+          "",
+          "Read Chapter 4.3",
+          ""
+        ],
+        [
+          "45",
+          "4.4 Hierarchical Clustering Methods 14.4.1 Hierarchical Clustering Methods4.4.2 Agglomerative Clustering Algorithms",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.4",
+          "",
+          "Read Chapter 4.4",
+          ""
+        ],
+        [
+          "46",
+          "4.4 Hierarchical Clustering Methods 24.4.3 Divisive Clustering Algorithms4.4.4 Extensions to Hierarchical Clustering4.4.5 BIRCH: A Micro-Clustering-Based Approach",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.4",
+          "",
+          "Read Chapter 4.4",
+          ""
+        ],
+        [
+          "47",
+          "Lab 4.2",
+          "Offline",
+          "CLO4",
+          "TU",
+          "- slide chapter 4, lab 4.2",
+          "",
+          "Read chapter 4, lab 4.2",
+          ""
+        ],
+        [
+          "48",
+          "4.4 Hierarchical Clustering Methods 3* Overview4.4.6 CURE: Clustering Using Well-Scattered Representatives4.4.7 CHAMELEON: Graph Partitioning on the KNN Graph of the Data",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.4",
+          "",
+          "Read Chapter 4.4",
+          ""
+        ],
+        [
+          "49",
+          "4.4 Hierarchical Clustering Methods 34.4.8 Probabilistic Hierarchical Clustering",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.4",
+          "",
+          "Read Chapter 4.4",
+          ""
+        ],
+        [
+          "50",
+          "4.5 Density-Based and Grid-Based Clustering MethodsOverview4.5.1 Density-Based and Grid-Based Clustering Methods4.5.2 DBSCAN: A Density-Based Clustering Algorithm",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.5",
+          "",
+          "Read Chapter 4.5",
+          ""
+        ],
+        [
+          "51",
+          "4.5 Density-Based and Grid-Based Clustering Methods 24.5.3 OPTICS: Ordering Points To Identify Clustering Structure4.5.4 Grid-Based Clustering Methods",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.5",
+          "",
+          "Read Chapter 4.5",
+          ""
+        ],
+        [
+          "52",
+          "4.5 Density-Based and Grid-Based Clustering Methods 34.5.5 STING: A Statistical Information Grid Approach4.5.6 CLIQUE: Grid-Based Subspace Clustering",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.5",
+          "",
+          "Read Chapter 4.5",
+          ""
+        ],
+        [
+          "53",
+          "Lab 4.3",
+          "Offline",
+          "CLO4",
+          "TU",
+          "- slide chapter 4, lab 4.3",
+          "",
+          "Read chapter 4, lab 4.3",
+          ""
+        ],
+        [
+          "54",
+          "4.6 Methods for Clustering Validation 1Overview4.6.1 Methods for Clustering Validation4.6.2 Clustering Evaluation Measuring Clustering Quality4.6.3 Constraint-Based Clustering",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.6",
+          "",
+          "Read Chapter 4.6",
+          ""
+        ],
+        [
+          "55",
+          "4.6 Methods for Clustering Validation 24.6.4 External Measures 1: Matching-Based Measures4.6.5 External Measure 2: Entropy-Based Measures",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.6",
+          "",
+          "Read Chapter 4.6",
+          ""
+        ],
+        [
+          "56",
+          "4.6 Methods for Clustering Validation 34.6.6 External Measure 3: Pairwise Measures4.6.7 Internal Measures for Clustering Validation",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.6",
+          "",
+          "Read Chapter 4.6",
+          ""
+        ],
+        [
+          "57",
+          "4.6 Methods for Clustering Validation 44.6.8 Relative Measures4.6.9 Cluster Stability4.6.10 Clustering Tendency",
+          "Offline",
+          "CLO4",
+          "T",
+          "- slide chapter 4.6",
+          "",
+          "Read Chapter 4.6",
+          ""
+        ],
+        [
+          "58",
+          "Lab 4.4",
+          "Offline",
+          "CLO4",
+          "TU",
+          "- slide chapter 4, lab 4.4",
+          "",
+          "Read chapter 4, lab 4.4",
+          ""
+        ],
+        [
+          "59",
+          "Review lab 4.1, 4.2, 4.3, 4.4",
+          "Offline",
+          "CLO5",
+          "U",
+          "- slide chapter 4, lab 4.1, 4.2, 4.3, 4.4",
+          "",
+          "Read chapter 4, lab 4.1, 4.2, 4.3, 4.4",
+          ""
+        ],
+        [
+          "60",
+          "Review",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "I",
+          "All Slides",
+          "",
+          "Review Slide",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Course Introduction - Chapter 1: 1.1.Introduction to Data mining1.2.Introduction to Data mining Pipeline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slides: Introduction'- Slides: Chapter 1.1, 1.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "mat1",
+            "links": [
+              {
+                "text": "mat1",
+                "href": "https://flm.fpt.edu.vn/download/10572/S/1_mat1.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read slide introduction Syllabus Syllabus DSR301mRead Chapter 1.1, 1.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.3 Data understanding - Objects & Attributes, Statistics, Visual1.4 Data understadining - Data similarity",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 1.3, 1.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "mat2",
+            "links": [
+              {
+                "text": "mat2",
+                "href": "https://flm.fpt.edu.vn/download/10572/S/2_mat2.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 1.3, 1.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.5 Data Preprocessing - Cleaning, Integration, Transformation, Reduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 1.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 1.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.6 Data warehousing - Warehousem Cube and OLAP1.7 Data warehousing - Data Warehouse Architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 1.6, 1.7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 1.6, 1.7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Chapter 2: Data visualization2.1 Introduction of data visualization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.2 Visualization of Numerical Data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.3 Visualization of Non-Numerical Data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 2.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 2.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.4 The Visualization of Dashboard",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 2.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 2.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 2, lab 2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 2, lab 2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 2, lab 2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 2, lab 2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 2.1, 2.2Chapter 3: Pattern Discovery in Data mining3.1 Introduction to Pattern Discovery 13.1.1 What Is Pattern Discovery? Why Is It Important?3.1.2 Frequent Patterns and Association Rules",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Introduction to Pattern Discovery 2 3.1.3 Compressed Representation: Closed Patterns and Max-Patterns3.1.4 The Downward Closure Property of Frequent Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.2 The Apriori Algorithm",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.3 Extensions or Improvements of Apriori",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.4 Mining Frequent Patterns by Exploring Vertical Data Format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.5 FPGrowth: A Pattern Growth Approach",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.6 Mining Closed Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 3, lab 3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 3, lab 3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.7 Pattern Evaluation 1 3.7.1. Limitation of the Support-Confidence Framework 3.7.2. Interestingness Measures: Lift and χ",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.7 Pattern Evaluation 2 3.7.3. Null Invariance Measures 3.7.4. Comparison of Null-Invariant Measures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.8 Mining methods 1 3.8.1. Mining Multi-Level Associations3.8.2. Mining Multi-Dimensional Associations3.8.3. Mining Quantitative Associations",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.8 Mining methods 2 :3.8.4. Mining Negative Correlations3.8.5. Mining Compressed Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 3, lab 3.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 3, lab 3.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.9 Mining sequential patterns 3.9.1. Sequential Pattern and Sequential Pattern Mining3.9.2. GSP: Apriori-Based Sequential Pattern Mining",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.9 Mining sequential patterns 2 3.9.3. SPADE—Sequential Pattern Mining in Vertical Data Format3.9.4. PrefixSpan—Sequential Pattern Mining by Pattern-Growth3.9.5. CloSpan—Mining Closed Sequential Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.10 Mining spatiotemporal and trajectory patterns 1 3.10.1. Mining Spatial Associations 3.10.2. Mining Spatial Colocation Patterns 3.10.3. Mining and Aggregating Patterns over Multiple Trajectories",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.10 Mining spatiotemporal and trajectory patterns 2 3.10.4. Mining Semantics-Rich Movement Patterns 3.10.5. Mining Periodic Movement Patterns",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 3, lab 3.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 3, lab 3.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.11 Mining quality phrases 1 3.11.1. From Frequent Pattern Mining to Phrase Mining 3.11.2. Previous Phrase Mining Methods",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.11 Mining quality phrases 2 3.11.3. ToPMine: Phrase Mining without Training Data 3.11.4. SegPhrase: Phrase Mining with Tiny Training Sets",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.12 Advanced topics on pattern discovery 1 3.12.1. Frequent Pattern Mining in Data Streams 3.12.2. Pattern Discovery for Software Bug Mining 3.12.3. Pattern Discovery for Image Analysis",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.12 Advanced Topics on Pattern Discovery 2 3.12.4 Pattern Mining and Society—Privacy Issue 3.12.5. Looking Forward",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 3.12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 3.12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 3, lab 3.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 3, lab 3.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 3.1, 3.2, 3.3, 3.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Chapter 1-2-3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 1, 2, 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 1, 2, 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 1, 2, 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Slide chapter 1, 2,3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4: Cluster Analysis in Data mining4.1 Introduction to Cluster Analysis 1 4.1.1. What is Cluster Analysis 4.1.2. Applications of Cluster Analysis 4.1.3 Requirements and Challenges",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.1 Introduction to Cluster Analysis 2 4.1.4 A Multi-Dimensional Categorization 4.1.5 An Overview of Typical Clustering Methodologies 4.1.6 An Overview of Clustering Different Types of Data 4.1.7 An Overview of User Insights and Clustering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.2 Similarity Measures for Cluster Analysis 1 4.2.1 Basic Concepts: Measuring Similarity between Objects 4.2.2 Distance on Numeric Data Minkowski Distance 4.2.3 Proximity Measure for Symetric vs Asymmetric Binary Variables",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.2 Similarity Measures for Cluster Analysis 2 4.2.4 Distance between Categorical Attributes Ordinal Attributes and Mixed Types4.2.5 Proximity Measure between Two Vectors Cosine Similarity4.2.6 Correlation Measures between Two variables Covariance and Correlation Coefficient",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4, lab 4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 4, lab 4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Partitioning-Based Clustering Methods 14.3.1 Partitioning-Based Clustering Methods4.3.2 K-Means Clustering Method",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Partitioning-Based Clustering Methods 24.3.3 Initialization of K-Means Clustering4.3.4 The K-Medoids Clustering Method",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Partitioning-Based Clustering Methods 34.3.5 The K-Medians and K-Modes Clustering Methods4.3.6 Kernel K-Means Clustering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.4 Hierarchical Clustering Methods 14.4.1 Hierarchical Clustering Methods4.4.2 Agglomerative Clustering Algorithms",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.4 Hierarchical Clustering Methods 24.4.3 Divisive Clustering Algorithms4.4.4 Extensions to Hierarchical Clustering4.4.5 BIRCH: A Micro-Clustering-Based Approach",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4, lab 4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 4, lab 4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.4 Hierarchical Clustering Methods 3* Overview4.4.6 CURE: Clustering Using Well-Scattered Representatives4.4.7 CHAMELEON: Graph Partitioning on the KNN Graph of the Data",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.4 Hierarchical Clustering Methods 34.4.8 Probabilistic Hierarchical Clustering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.5 Density-Based and Grid-Based Clustering MethodsOverview4.5.1 Density-Based and Grid-Based Clustering Methods4.5.2 DBSCAN: A Density-Based Clustering Algorithm",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.5 Density-Based and Grid-Based Clustering Methods 24.5.3 OPTICS: Ordering Points To Identify Clustering Structure4.5.4 Grid-Based Clustering Methods",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.5 Density-Based and Grid-Based Clustering Methods 34.5.5 STING: A Statistical Information Grid Approach4.5.6 CLIQUE: Grid-Based Subspace Clustering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4, lab 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 4, lab 4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.6 Methods for Clustering Validation 1Overview4.6.1 Methods for Clustering Validation4.6.2 Clustering Evaluation Measuring Clustering Quality4.6.3 Constraint-Based Clustering",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.6 Methods for Clustering Validation 24.6.4 External Measures 1: Matching-Based Measures4.6.5 External Measure 2: Entropy-Based Measures",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.6 Methods for Clustering Validation 34.6.6 External Measure 3: Pairwise Measures4.6.7 Internal Measures for Clustering Validation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.6 Methods for Clustering Validation 44.6.8 Relative Measures4.6.9 Cluster Stability4.6.10 Clustering Tendency",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read Chapter 4.6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4, lab 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 4, lab 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review lab 4.1, 4.2, 4.3, 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- slide chapter 4, lab 4.1, 4.2, 4.3, 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read chapter 4, lab 4.1, 4.2, 4.3, 4.4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Lab 2",
+          "on-going",
+          "1",
+          "15.0%",
+          ">0",
+          "45'",
+          "CLO2",
+          "Home work, class",
+          "1",
+          "- cover chapter 2",
+          "in class, by instructor",
+          "Lab is named after the index of the chapter."
+        ],
+        [
+          "2",
+          "Lab 3",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "45'",
+          "CLO3",
+          "Home work, class",
+          "1",
+          "- cover chapter 3",
+          "in class, by instructor",
+          "Lab is named after the index of the chapter."
+        ],
+        [
+          "3",
+          "Lab 4",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "45'",
+          "CLO4",
+          "Home work, class",
+          "1",
+          "- cover chapter 4",
+          "in class, by instructor",
+          "Lab is named after the index of the chapter."
+        ],
+        [
+          "4",
+          "Progress test",
+          "on-going",
+          "1",
+          "15.0%",
+          ">0",
+          "45'",
+          "CLO1,CLO2, CLO3",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "40",
+          "- cover chapter 1, 2, 3",
+          "in class, by instructor",
+          "Instruction and shedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has resposibility to review the test for students after graded."
+        ],
+        [
+          "5",
+          "Final exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4",
+          "Multiple choicesMarked by Computer",
+          "50",
+          "- cover chapter 1, 2, 3, 4",
+          "by exam board,using computer",
+          "The exam questions must be updated or different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Home work, class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab is named after the index of the chapter.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Home work, class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab is named after the index of the chapter.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Home work, class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab is named after the index of the chapter.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 1, 2, 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "in class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instruction and shedules for Progress tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has resposibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 1, 2, 3, 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board,using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated or different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

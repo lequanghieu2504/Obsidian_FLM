@@ -47,11 +47,8 @@ app.*.map.json
 # Widget Preview related
 .widget_preview/
 
-# Platforms not targeted by this project (keep only lib/, data/, android/ under
-# version control for the platform-specific tree; remove these lines if you
-# later need to build for one of them)
-/ios/
-/linux/
-/macos/
-/windows/
-/web/
+# User generated and cached data
+data/cached_curriculums/
+data/chat_history.json
+data/transcript.json
+data/user_settings.json

@@ -6,20 +6,28 @@ environment:
   sdk: ">=3.10.0 <4.0.0"
   flutter: ">=3.38.0"
 dependencies:
-  file_selector: ^1.1.0
   flutter:
     sdk: flutter
-  # No third-party graph-drawing package: the knowledge graph is drawn with
-  # a hand-rolled canvas (Stack/Positioned/CustomPaint) in
-  # lib/features/knowledge_graph/presentation/widgets/concept_graph_canvas.dart.
-  # A `graphview: ^1.5.1` dependency lived here through "Lần 4" of that
-  # feature; see its README.md "Lần 5" for why it was dropped.
+  # --- Subject browser / knowledge graph (feature/knowledge-graph-subject-browser-merge) ---
+  # The knowledge graph is drawn with a hand-rolled canvas
+  # (lib/features/knowledge_graph/presentation/widgets/concept_graph_canvas.dart),
+  # see its README.md "Lần 5". `graphview` below is only used by the
+  # curriculum screens (lib/ui/screens/subjects_screen.dart).
+  file_selector: ^1.1.0
   flutter_secure_storage: ^11.2.0
   http: ^1.6.0
   path: ^1.9.1
   path_provider: ^2.1.6
   url_launcher: ^6.3.2
   uuid: ^4.6.0
+  # --- Curriculum / transcript / dashboard (feature/curriculum-and-transcript) ---
+  webview_windows: any
+  dio: any
+  html: any
+  google_fonts: ^6.1.0
+  graphview: any
+  file_picker: ^8.0.0+1
+  google_generative_ai: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

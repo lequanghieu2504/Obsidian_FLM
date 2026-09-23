@@ -1,0 +1,6180 @@
+{
+  "id": "14178",
+  "metadata": {
+    "Syllabus ID": "14178",
+    "Syllabus Name": "Software Testing_Kiểm thử phần mềm",
+    "Course Name English": "Software Testing",
+    "Subject Code": "SWT301",
+    "Learning-Teaching Method": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h (60 sessions) contact hours + 145-minute final exam + 102,6h self-study",
+    "Pre-Requisite": "SWE102 or SWE201c or SWE202c",
+    "Description": "• General principles of software testing, including its purposes and objectives. • Testing integrated into software development processes, covering test levels, test types, and maintenance testing. • Static testing basics, including feedback and review processes to enhance software quality. • Techniques such as black-box (functional), white-box (structural), and experience-based testing applied to derive test cases. • Test activities like planning, estimation, monitoring, risk management, defect reporting, and test automation usage. • Tools and methods to support effective testing, emphasizing benefits and potential risks. • AI is used to explore testing concepts, support static testing, and create/optimize Test Plans.",
+    "StudentTasks": "Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Students are responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time. - The use of AI in assessments and exams must comply with the instructions of the course instructor. - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+    "Tools": "- Unit Test Framework - Bug Management Tool - Ms Office - IDE - Static Analyst Tool - Automation Tool - AI Tools: Grok (xAI), ChatGPT, Gemini, Deepseek",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "377/QĐ-ĐHFPT dated 04/09/2026",
+    "IsApproved": "True",
+    "Note": "In the case: (5 > Final TE Score >=4) & (5 > Final PE Score >=4) & FR < 5, the student can choose to take the resit of both TE & PE OR just either TE or PE.",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "4/9/2026"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "14178"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "14178"
+        ],
+        [
+          "Syllabus Name:",
+          "Software Testing_Kiểm thử phần mềm"
+        ],
+        [
+          "Course Name English:",
+          "Software Testing"
+        ],
+        [
+          "Subject Code:",
+          "SWT301"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Social Constructivism,In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h (60 sessions) contact hours + 145-minute final exam + 102,6h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "SWE102 or SWE201c or SWE202c"
+        ],
+        [
+          "Description:",
+          "• General principles of software testing, including its purposes and objectives. • Testing integrated into software development processes, covering test levels, test types, and maintenance testing. • Static testing basics, including feedback and review processes to enhance software quality. • Techniques such as black-box (functional), white-box (structural), and experience-based testing applied to derive test cases. • Test activities like planning, estimation, monitoring, risk management, defect reporting, and test automation usage. • Tools and methods to support effective testing, emphasizing benefits and potential risks. • AI is used to explore testing concepts, support static testing, and create/optimize Test Plans."
+        ],
+        [
+          "StudentTasks:",
+          "Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Students are responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time. - The use of AI in assessments and exams must comply with the instructions of the course instructor. - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Unit Test Framework - Bug Management Tool - Ms Office - IDE - Static Analyst Tool - Automation Tool - AI Tools: Grok (xAI), ChatGPT, Gemini, Deepseek"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "377/QĐ-ĐHFPT dated 04/09/2026"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          "In the case: (5 > Final TE Score >=4) & (5 > Final PE Score >=4) & FR < 5, the student can choose to take the resit of both TE & PE OR just either TE or PE."
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "4/9/2026"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14178",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Testing_Kiểm thử phần mềm",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Software Testing",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWT301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h (60 sessions) contact hours + 145-minute final exam + 102,6h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWE102 or SWE201c or SWE202c",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "• General principles of software testing, including its purposes and objectives. • Testing integrated into software development processes, covering test levels, test types, and maintenance testing. • Static testing basics, including feedback and review processes to enhance software quality. • Techniques such as black-box (functional), white-box (structural), and experience-based testing applied to derive test cases. • Test activities like planning, estimation, monitoring, risk management, defect reporting, and test automation usage. • Tools and methods to support effective testing, emphasizing benefits and potential risks. • AI is used to explore testing concepts, support static testing, and create/optimize Test Plans.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Students are responsible to do all exercises, assignments and labs given by instructor in class or at home and submit on time. - The use of AI in assessments and exams must comply with the instructions of the course instructor. - Use laptop in class only for learning purpose - Promptly access to the https://flm.fpt.edu.vn/ for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Unit Test Framework - Bug Management Tool - Ms Office - IDE - Static Analyst Tool - Automation Tool - AI Tools: Grok (xAI), ChatGPT, Gemini, Deepseek",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "377/QĐ-ĐHFPT dated 04/09/2026",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In the case: (5 > Final TE Score >=4) & (5 > Final PE Score >=4) & FR < 5, the student can choose to take the resit of both TE & PE OR just either TE or PE.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4/9/2026",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Foundations of Software Testing: ISTQB Certification",
+          "Dorothy Graham, ‎ Erik van Veenendaal,‎‎ Rex Black",
+          "Cengage Learning, EMEA",
+          "2020",
+          "4th",
+          "978-1-4737-6479-8",
+          "True",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "Agile Testing: A Practical Guide for Testers and Agile Teams",
+          "Lisa Crispin,Janet Gregory",
+          "",
+          "",
+          "",
+          "978-0321534460",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "3",
+          "Computer Software Validation. Alan Muirhead. News & Views, March 2000. Available at http://www.stcpmc.org/archive/archive/n&v/feat0300.html",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "4",
+          "Course Software Testing and Quality Assurance by Tian in http://engr.smu.edu/~tian/class/7314.06f/syl.html (availble in FU library)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Foundations of Software Testing: ISTQB Certification",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dorothy Graham, ‎ Erik van Veenendaal,‎‎ Rex Black",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cengage Learning, EMEA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2020",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4th",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-1-4737-6479-8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Agile Testing: A Practical Guide for Testers and Agile Teams",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lisa Crispin,Janet Gregory",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-0321534460",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Computer Software Validation. Alan Muirhead. News & Views, March 2000. Available at http://www.stcpmc.org/archive/archive/n&v/feat0300.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Software Testing and Quality Assurance by Tian in http://engr.smu.edu/~tian/class/7314.06f/syl.html (availble in FU library)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "10 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Know definitions, concepts and terminologies about Software Testing, using AI to explore testing principles and real-world testing scenarios through effective prompts."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Understand the software testing process. Distinguish between levels of testing (e.g. unit, integration, system, acceptance) and types of testing (e.g. functional, non-functional) applied to a specific group project (encouraged to choose project in SWP391)"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Use static testing techniques to detect errors through a review process, using AI to review documents for defects (e.g., ambiguity, inconsistency) and analyze static code for errors (e.g., code smells, bug patterns)."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Use dynamic testing techniques like black-box, white-box, and experience-based testing to design and execute test cases, and determine test coverage."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Develop a comprehensive test plan for an AI-enabled project, clearly defining its scope, goals, resources, and testing schedule."
+        ],
+        [
+          "6",
+          "CLO6",
+          "Analyze and prioritize risks to focus testing efforts effectively. Understand and apply bug logging, bug reporting, and test reporting practices."
+        ],
+        [
+          "7",
+          "CLO7",
+          "Classify and select appropriate testing tools, evaluate the benefits and risks of test automation, and choose an automation tool for testing functionalities in the team project."
+        ],
+        [
+          "8",
+          "CLO8",
+          "Understand and apply Agile testing methods."
+        ],
+        [
+          "9",
+          "CLO9",
+          "Utilize AI tools to support learning and exercises related to the course."
+        ],
+        [
+          "10",
+          "CLO10",
+          "Demonstrate presentation skills and effective teamwork"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Know definitions, concepts and terminologies about Software Testing, using AI to explore testing principles and real-world testing scenarios through effective prompts.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the software testing process. Distinguish between levels of testing (e.g. unit, integration, system, acceptance) and types of testing (e.g. functional, non-functional) applied to a specific group project (encouraged to choose project in SWP391)",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use static testing techniques to detect errors through a review process, using AI to review documents for defects (e.g., ambiguity, inconsistency) and analyze static code for errors (e.g., code smells, bug patterns).",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Use dynamic testing techniques like black-box, white-box, and experience-based testing to design and execute test cases, and determine test coverage.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop a comprehensive test plan for an AI-enabled project, clearly defining its scope, goals, resources, and testing schedule.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Analyze and prioritize risks to focus testing efforts effectively. Understand and apply bug logging, bug reporting, and test reporting practices.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Classify and select appropriate testing tools, evaluate the benefits and risks of test automation, and choose an automation tool for testing functionalities in the team project.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand and apply Agile testing methods.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Utilize AI tools to support learning and exercises related to the course.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Demonstrate presentation skills and effective teamwork",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "- Course Introduction- Introducing AI integration in teaching and learning, as well as assessment",
+          "Offline",
+          "LO1 - LO9",
+          "",
+          "Slides, AI tool",
+          "SWT301",
+          "- Divide into groups- Discuss and ask questions about the assignment and assessment",
+          ""
+        ],
+        [
+          "2",
+          "Topic 1. Fundamentals of testing1.1 What is testing?",
+          "Offline",
+          "LO1",
+          "",
+          "text book: Chapter 1 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "3",
+          "1.2 Why is testing necessary?",
+          "Offline",
+          "LO1",
+          "",
+          "text book: Chapter 1 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "4",
+          "1.3 Testing principles",
+          "Offline",
+          "LO1",
+          "",
+          "text book: Chapter 1 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "5",
+          "1.4 Fundamental test process",
+          "Offline",
+          "LO1",
+          "",
+          "text book: Chapter 1 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "6",
+          "1.5 The psychology of testing1.6 Codes of ethics",
+          "Offline",
+          "LO1",
+          "",
+          "text book: Chapter 1 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "7",
+          "Guiding Lab 1 (Use chat AI to explore testing fundamentals through effective prompts)",
+          "Offline",
+          "LO1, LO9",
+          "",
+          "text book: Chapter 1, AI Tool",
+          "",
+          "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+          ""
+        ],
+        [
+          "8",
+          "Topic 2. Testing throughout the software life cycle2.1 Software development models",
+          "Offline",
+          "LO2",
+          "",
+          "text book: Chapter 2 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "9",
+          "2.2 Test levels",
+          "Offline",
+          "LO2",
+          "",
+          "text book: Chapter 2 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "10",
+          "2.2 Test levels (cont.)",
+          "Offline",
+          "LO2",
+          "",
+          "text book: Chapter 2 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "11",
+          "2.3 Test types: the targets of testing",
+          "Offline",
+          "LO2",
+          "",
+          "text book: Chapter 2 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "12",
+          "2.4 Maintenance testing",
+          "Offline",
+          "LO2",
+          "",
+          "text book: Chapter 2 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "13",
+          "Progress test 1",
+          "Offline",
+          "LO1, LO2",
+          "",
+          "text book: Chapter 1 and Chapter 2",
+          "",
+          "- Enter the exam system- Complete Progress Test",
+          ""
+        ],
+        [
+          "14",
+          "Review Lab 1",
+          "Offline",
+          "LO1, LO9",
+          "",
+          "text book: Chapter 1, AI Tool",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "15",
+          "Guiding Lab 2 (Install and study an unit test framework, Use IDE to write unit test code and run unit test)",
+          "Offline",
+          "LO2",
+          "",
+          "text book: Chapter 2, AI Tool",
+          "",
+          "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+          ""
+        ],
+        [
+          "16",
+          "Topic 3. Static techniques3.1 Reviews and the test process",
+          "Offline",
+          "LO3",
+          "",
+          "text book: Chapter 3 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "17",
+          "Topic 3. Static techniques3.2 Review process",
+          "Offline",
+          "LO3",
+          "",
+          "text book: Chapter 3 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "18",
+          "3.2 Review process (cont.)",
+          "Offline",
+          "LO3",
+          "",
+          "text book: Chapter 3 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "19",
+          "3.2 Review process (cont.)",
+          "Offline",
+          "LO3",
+          "",
+          "text book: Chapter 3 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "20",
+          "3.3 Static analysis by tools",
+          "Offline",
+          "LO3",
+          "",
+          "text book: Chapter 3 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "21",
+          "Guiding Lab 3 (Static techniques: Manually review documents or use AI for static code analysis)",
+          "Offline",
+          "LO3, LO9",
+          "",
+          "text book: Chapter 3 andSlides",
+          "",
+          "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+          ""
+        ],
+        [
+          "22",
+          "Topic 4. Test design techniques4.1 The test development process",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "23",
+          "4.2 Categories of test design techniques",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "24",
+          "4.3 Specification-based or black-box techniques",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "25",
+          "4.3 Specification-based or black-box techniques (cont.)",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "26",
+          "4.3 Specification-based or black-box techniques (cont.)",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "27",
+          "4.3 Specification-based or black-box techniques (cont.)",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "28",
+          "4.4 Structure-based or white-box techniques",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "29",
+          "4.5 Experience-based techniques",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "30",
+          "4.6 Choosing a test technique",
+          "Offline",
+          "LO4",
+          "",
+          "text book: Chapter 4 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "31",
+          "Progress test 2",
+          "Offline",
+          "LO3, LO4",
+          "",
+          "text book: Chapter 3&4 and Slides",
+          "",
+          "- Enter the exam system- Complete Progress Test",
+          ""
+        ],
+        [
+          "32",
+          "Review Lab 2",
+          "Offline",
+          "LO2, LO9",
+          "",
+          "text book: Chapter 2, AI Tool",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "33",
+          "Review Lab 3",
+          "Offline",
+          "LO3, LO9",
+          "",
+          "text book: Chapter 3, AI Tool",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "34",
+          "Topic 5. Test management5.1 Test organization",
+          "Offline",
+          "LO5, LO6",
+          "",
+          "text book: Chapter 5 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "35",
+          "5.2 Test plans, estimates, and strategies",
+          "Offline",
+          "LO5, LO6",
+          "",
+          "text book: Chapter 5 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "36",
+          "Guiding Lab 4 (Create Test Plan with AI)",
+          "Offline",
+          "LO5, LO9",
+          "",
+          "text book: Chapter 5 andTutorial",
+          "",
+          "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+          ""
+        ],
+        [
+          "37",
+          "5.3 Test progress monitoring and control",
+          "Offline",
+          "LO5, LO6",
+          "",
+          "text book: Chapter 5 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "38",
+          "5.4 Configuration management",
+          "Offline",
+          "LO5, LO6",
+          "",
+          "text book: Chapter 5 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "39",
+          "5.5 Risk and testing",
+          "Offline",
+          "LO5, LO6",
+          "",
+          "text book: Chapter 5 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "40",
+          "5.6 Incident management",
+          "Offline",
+          "LO5, LO6",
+          "",
+          "text book: Chapter 5 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "41",
+          "Review Lab 4",
+          "Offline",
+          "LO5, LO9",
+          "",
+          "text book: Chapter 5, AI Tool",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "42",
+          "Review Problems",
+          "Offline",
+          "LO1 - LO9",
+          "",
+          "Tutorial",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "43",
+          "Topic 6. Tool support for testing 6.1 Types of test tool",
+          "Offline",
+          "LO7",
+          "",
+          "text book: Chapter 6 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "44",
+          "6.2 Effective use of tools: Potential benefits and risks",
+          "Offline",
+          "LO7",
+          "",
+          "text book: Chapter 6 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "45",
+          "6.3 Introducing a tool into an organization",
+          "Offline",
+          "LO7",
+          "",
+          "text book: Chapter 6 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "46",
+          "Progress Test 3",
+          "Offline",
+          "LO5, LO6, LO7",
+          "",
+          "Tutorial",
+          "",
+          "- Enter the exam system- Complete Progress Test",
+          ""
+        ],
+        [
+          "47",
+          "Topic 7. ISTQB Foundation Exam7.1 Preparing for the exam7.2 Taking the exam",
+          "Offline",
+          "LO1 - LO8",
+          "",
+          "text book: Chapter 7 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "48",
+          "7.3 Mock exam",
+          "Offline",
+          "LO1 - LO8",
+          "",
+          "text book: Chapter 7 andSlides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "49",
+          "Topic 8. Agile Testing8.1 The fundamentals of Agile software development8.2 Aspects of Agile approaches",
+          "Offline",
+          "LO8",
+          "",
+          "text book and Slides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "50",
+          "8.3 Mostly used Agile Methods8.4 Fundamental Agile Testing Principles, Practicles and Processes",
+          "Offline",
+          "LO8",
+          "",
+          "text book and Slides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "51",
+          "8.5 Agile Testing Methods, Techniques and Toools",
+          "Offline",
+          "LO8",
+          "",
+          "text book and Slides",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "52",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "53",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "54",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "55",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "56",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "57",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "58",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "59",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ],
+        [
+          "60",
+          "Individual presentation and mark",
+          "Offline",
+          "LO2, LO4, LO5, LO6, LO7,LO10",
+          "",
+          "Assignments submitted",
+          "",
+          "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Course Introduction- Introducing AI integration in teaching and learning, as well as assessment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1 - LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slides, AI tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SWT301",
+            "links": [
+              {
+                "text": "SWT301",
+                "href": "https://flm.fpt.edu.vn/download/12660/S/1_SWT301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "- Divide into groups- Discuss and ask questions about the assignment and assessment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 1. Fundamentals of testing1.1 What is testing?",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.2 Why is testing necessary?",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.3 Testing principles",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.4 Fundamental test process",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1.5 The psychology of testing1.6 Codes of ethics",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab 1 (Use chat AI to explore testing fundamentals through effective prompts)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1, AI Tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 2. Testing throughout the software life cycle2.1 Software development models",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 2 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.2 Test levels",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 2 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.2 Test levels (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 2 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.3 Test types: the targets of testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 2 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.4 Maintenance testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 2 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1 and Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Enter the exam system- Complete Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 1, AI Tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab 2 (Install and study an unit test framework, Use IDE to write unit test code and run unit test)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 2, AI Tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 3. Static techniques3.1 Reviews and the test process",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 3. Static techniques3.2 Review process",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.2 Review process (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.2 Review process (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.3 Static analysis by tools",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab 3 (Static techniques: Manually review documents or use AI for static code analysis)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 4. Test design techniques4.1 The test development process",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.2 Categories of test design techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Specification-based or black-box techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Specification-based or black-box techniques (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Specification-based or black-box techniques (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.3 Specification-based or black-box techniques (cont.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.4 Structure-based or white-box techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.5 Experience-based techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4.6 Choosing a test technique",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 4 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3&4 and Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Enter the exam system- Complete Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 2, AI Tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO3, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 3, AI Tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 5. Test management5.1 Test organization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.2 Test plans, estimates, and strategies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Lab 4 (Create Test Plan with AI)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5 andTutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all relevant materials- Use Chat AI- Self Practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.3 Test progress monitoring and control",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.4 Configuration management",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.5 Risk and testing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5.6 Incident management",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Lab 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 5, AI Tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review Problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1 - LO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 6. Tool support for testing 6.1 Types of test tool",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 6 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.2 Effective use of tools: Potential benefits and risks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 6 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6.3 Introducing a tool into an organization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 6 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO5, LO6, LO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Tutorial",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Enter the exam system- Complete Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 7. ISTQB Foundation Exam7.1 Preparing for the exam7.2 Taking the exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1 - LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 7 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7.3 Mock exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1 - LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book: Chapter 7 andSlides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Topic 8. Agile Testing8.1 The fundamentals of Agile software development8.2 Aspects of Agile approaches",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book and Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8.3 Mostly used Agile Methods8.4 Fundamental Agile Testing Principles, Practicles and Processes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book and Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8.5 Agile Testing Methods, Techniques and Toools",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "text book and Slides",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual presentation and mark",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7,LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignments submitted",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Teamwork and Self Study- Read all materials in the module- Presentation & Review",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "45 Constructive question(s)",
+      "headers": [
+        "no",
+        "sessionno",
+        "name",
+        "details"
+      ],
+      "rows": [
+        [
+          "1",
+          "1",
+          "CQ1.1",
+          "What challenges might arise when integrating AI into teaching software testing, and how can we address them?"
+        ],
+        [
+          "2",
+          "2",
+          "CQ1.2",
+          "How would you explain the concept of \"testing\" to someone who has no background in software development?"
+        ],
+        [
+          "3",
+          "3",
+          "CQ1.3",
+          "How does testing contribute to building trust in software systems for end-users?"
+        ],
+        [
+          "4",
+          "4",
+          "CQ2.1",
+          "Why do you think defect clustering is a common phenomenon in software projects?"
+        ],
+        [
+          "5",
+          "5",
+          "CQ2.2",
+          "How would you adapt the fundamental test process for a small project with limited resources?"
+        ],
+        [
+          "6",
+          "6",
+          "CQ2.3",
+          "How can a tester’s mindset differ from a developer’s mindset, and why does this matter in testing?"
+        ],
+        [
+          "7",
+          "7",
+          "CQ3.1",
+          "Why should ethical considerations, such as avoiding bias, be a priority in software testing?"
+        ],
+        [
+          "8",
+          "8",
+          "CQ3.2",
+          "What are the advantages of integrating testing early in a V-Model compared to a Waterfall model?"
+        ],
+        [
+          "9",
+          "9",
+          "CQ3.3",
+          "How does writing unit tests in an IDE help you understand the code’s functionality?"
+        ],
+        [
+          "10",
+          "10",
+          "CQ4.1",
+          "Why might integration testing reveal defects that were missed during component testing?"
+        ],
+        [
+          "11",
+          "11",
+          "CQ4.2",
+          "How would you justify the need for acceptance testing to a project manager who wants to skip it?"
+        ],
+        [
+          "12",
+          "12",
+          "CQ4.3",
+          "How would you decide whether to prioritize functional or non-functional testing for a mobile app?"
+        ],
+        [
+          "13",
+          "13",
+          "CQ5.1",
+          "Why is regression testing critical after a software update, and how can it be optimized?"
+        ],
+        [
+          "14",
+          "14",
+          "CQ5.2",
+          "How does maintenance testing differ from testing during initial development?"
+        ],
+        [
+          "15",
+          "15",
+          "CQ5.3",
+          "What factors would you consider when planning maintenance testing for a legacy system?"
+        ],
+        [
+          "16",
+          "16",
+          "CQ6.1",
+          "Why are reviews considered an effective way to find defects early in the development process?"
+        ],
+        [
+          "17",
+          "17",
+          "CQ6.2",
+          "How does the role of a moderator impact the success of a review session?"
+        ],
+        [
+          "18",
+          "18",
+          "CQ6.3",
+          "How would you handle a situation where team members disagree on a defect found during a review?"
+        ],
+        [
+          "19",
+          "19",
+          "CQ7.1",
+          "Why is follow-up after a review as important as the review itself?"
+        ],
+        [
+          "20",
+          "20",
+          "CQ7.2",
+          "What limitations of static analysis tools should you be aware of when using them?"
+        ],
+        [
+          "21",
+          "21",
+          "CQ7.3",
+          "What criteria would you use to decide whether to use AI or manual methods for static analysis?"
+        ],
+        [
+          "22",
+          "22",
+          "CQ8.1",
+          "Why is it important to define test conditions before designing test cases?"
+        ],
+        [
+          "23",
+          "23",
+          "CQ8.2",
+          "When might you choose an experience-based technique over a specification-based one?"
+        ],
+        [
+          "24",
+          "24",
+          "CQ8.3",
+          "How does equivalence partitioning reduce the number of test cases while maintaining coverage?"
+        ],
+        [
+          "25",
+          "25",
+          "CQ9.1",
+          "Why is boundary value analysis particularly effective for finding defects?"
+        ],
+        [
+          "26",
+          "26",
+          "CQ9.2",
+          "How can you use decision tables to ensure all possible scenarios are tested?"
+        ],
+        [
+          "27",
+          "27",
+          "CQ9.3",
+          "How does state transition testing help in testing systems with complex workflows?"
+        ],
+        [
+          "28",
+          "28",
+          "CQ10.1",
+          "Why might you combine multiple black-box techniques in a single test effort?"
+        ],
+        [
+          "29",
+          "29",
+          "CQ10.2",
+          "Why might decision coverage be more valuable than statement coverage in critical systems?"
+        ],
+        [
+          "30",
+          "30",
+          "CQ10.3",
+          "How can exploratory testing uncover defects that structured techniques might miss?"
+        ],
+        [
+          "31",
+          "31",
+          "CQ11.1",
+          "What skills are most important for a tester using experience-based techniques?"
+        ],
+        [
+          "32",
+          "32",
+          "CQ11.2",
+          "How would you decide which test technique to use for a time-constrained project?"
+        ],
+        [
+          "33",
+          "33",
+          "CQ11.3",
+          "Why might the choice of test technique vary depending on the project’s risk level?"
+        ],
+        [
+          "34",
+          "34",
+          "CQ12.1",
+          "How does a clear test organization structure improve the efficiency of a testing team?"
+        ],
+        [
+          "35",
+          "35",
+          "CQ12.2",
+          "Why is accurate test estimation critical to project success?"
+        ],
+        [
+          "36",
+          "36",
+          "CQ12.3",
+          "How can metrics help you monitor testing progress effectively?"
+        ],
+        [
+          "37",
+          "37",
+          "CQ13.1",
+          "What actions would you take if testing progress falls behind schedule?"
+        ],
+        [
+          "38",
+          "38",
+          "CQ13.2",
+          "Why is configuration management essential for maintaining test integrity?"
+        ],
+        [
+          "39",
+          "39",
+          "CQ13.3",
+          "How can risk analysis guide your testing efforts in a high-stakes project?"
+        ],
+        [
+          "40",
+          "40",
+          "CQ14.1",
+          "What steps would you take to mitigate a newly identified risk during testing?"
+        ],
+        [
+          "41",
+          "41",
+          "CQ14.2",
+          "How would you prioritize incidents found during testing to ensure efficient resolution?"
+        ],
+        [
+          "42",
+          "42",
+          "CQ14.3",
+          "Why is it important to document incidents thoroughly even if they are not fixed immediately?"
+        ],
+        [
+          "43",
+          "43",
+          "CQ15.1",
+          "How do different types of test tools support various stages of the testing process?"
+        ],
+        [
+          "44",
+          "44",
+          "CQ15.2",
+          "What risks might arise from over-relying on testing tools, and how can you mitigate them?"
+        ],
+        [
+          "45",
+          "45",
+          "CQ15.3",
+          "Why is a pilot project important when introducing a new testing tool to an organization?"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What challenges might arise when integrating AI into teaching software testing, and how can we address them?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you explain the concept of \"testing\" to someone who has no background in software development?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ1.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does testing contribute to building trust in software systems for end-users?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ2.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why do you think defect clustering is a common phenomenon in software projects?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ2.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you adapt the fundamental test process for a small project with limited resources?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ2.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can a tester’s mindset differ from a developer’s mindset, and why does this matter in testing?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ3.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why should ethical considerations, such as avoiding bias, be a priority in software testing?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ3.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What are the advantages of integrating testing early in a V-Model compared to a Waterfall model?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ3.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does writing unit tests in an IDE help you understand the code’s functionality?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ4.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why might integration testing reveal defects that were missed during component testing?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ4.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you justify the need for acceptance testing to a project manager who wants to skip it?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ4.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you decide whether to prioritize functional or non-functional testing for a mobile app?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ5.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is regression testing critical after a software update, and how can it be optimized?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ5.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does maintenance testing differ from testing during initial development?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ5.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What factors would you consider when planning maintenance testing for a legacy system?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ6.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why are reviews considered an effective way to find defects early in the development process?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ6.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does the role of a moderator impact the success of a review session?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ6.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you handle a situation where team members disagree on a defect found during a review?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ7.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is follow-up after a review as important as the review itself?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ7.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What limitations of static analysis tools should you be aware of when using them?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ7.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What criteria would you use to decide whether to use AI or manual methods for static analysis?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ8.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is it important to define test conditions before designing test cases?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ8.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "When might you choose an experience-based technique over a specification-based one?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ8.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does equivalence partitioning reduce the number of test cases while maintaining coverage?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ9.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is boundary value analysis particularly effective for finding defects?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ9.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can you use decision tables to ensure all possible scenarios are tested?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ9.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does state transition testing help in testing systems with complex workflows?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ10.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why might you combine multiple black-box techniques in a single test effort?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ10.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why might decision coverage be more valuable than statement coverage in critical systems?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ10.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can exploratory testing uncover defects that structured techniques might miss?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ11.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What skills are most important for a tester using experience-based techniques?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ11.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you decide which test technique to use for a time-constrained project?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ11.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why might the choice of test technique vary depending on the project’s risk level?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ12.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How does a clear test organization structure improve the efficiency of a testing team?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ12.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is accurate test estimation critical to project success?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ12.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can metrics help you monitor testing progress effectively?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ13.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What actions would you take if testing progress falls behind schedule?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ13.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is configuration management essential for maintaining test integrity?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ13.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How can risk analysis guide your testing efforts in a high-stakes project?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ14.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What steps would you take to mitigate a newly identified risk during testing?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ14.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How would you prioritize incidents found during testing to ensure efficient resolution?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ14.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is it important to document incidents thoroughly even if they are not fixed immediately?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ15.1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "How do different types of test tools support various stages of the testing process?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ15.2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "What risks might arise from over-relying on testing tools, and how can you mitigate them?",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CQ15.3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Why is a pilot project important when introducing a new testing tool to an organization?",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Lab",
+          "on-going",
+          "4",
+          "25.0%",
+          ">0",
+          "Option 1: Lab 1: 2-6 weeks; Lab 2-4: 2 weeks. Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "LO1, LO2, LO3, LO5, LO9, LO10",
+          "Option 1: Practical exercises using AI prompt; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: Lab1: Use chat AI to explore testing fundamentals through effective prompts; Lab2: Install and study an unit test framework, Use IDE to write unit test code and run unit test; Lab 3: Static techniques (Manually review documents or use AI for static code analysis); Lab 4: Create Test Plan with AI. Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "The instructor support tutorials, students complete independently, submission by deadline",
+          ""
+        ],
+        [
+          "2",
+          "Presentation",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "Option 1: 10'/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "LO2, LO4, LO5, LO6, LO7, LO10",
+          "Option 1: Personal Presentation; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: N/A ;Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Test Plan, NUnit, JUnit, Test tool Selenium, Katalon Or Jira, Design test cases with Decision table testing, Use case testing techniques",
+          "Individual or team work, guided by instructor, submission by deadline",
+          "The instructor recommends that each team apply testing activities to their SWP391 project. Each team member is responsible for a part of the testing activity and presents individually for about 8 minutes/person. The presentation is from slot 18 to 20."
+        ],
+        [
+          "3",
+          "Progress Test",
+          "on-going",
+          "3",
+          "15.0%",
+          ">0",
+          "Option 1: 30'/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+          "Option 1: Multiple choices Marked by Computer or a suitable format; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Option 1: 20-30/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+          "Test 1: Chapter 1 and 2; Test 2: Chapter 3 and 4; Test 3: Chapter 5 and 6",
+          "In class, by instructor",
+          "Instruction and schedules for Progress Tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "2",
+          "50.0%",
+          "4",
+          "145 minutes",
+          "All CLOs",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "Each part of the final exam must be >=4/10 & Final Result >=5/10."
+        ],
+        [
+          "5",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "85'",
+          "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+          "Assignment",
+          "",
+          "Chapter 1 to 6",
+          "by Exam Board",
+          "Customized from the assignments or labs that students have learned"
+        ],
+        [
+          "6",
+          "Theory Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "60'",
+          "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+          "Multiple choicesMarked by Computer",
+          "60",
+          "Chapter 1 to 6",
+          "by exam board, using computer",
+          "The exam questions must be updated or different at least 70% to the previous ones."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lab",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Lab 1: 2-6 weeks; Lab 2-4: 2 weeks. Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO5, LO9, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Practical exercises using AI prompt; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: N/A; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Lab1: Use chat AI to explore testing fundamentals through effective prompts; Lab2: Install and study an unit test framework, Use IDE to write unit test code and run unit test; Lab 3: Static techniques (Manually review documents or use AI for static code analysis); Lab 4: Create Test Plan with AI. Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The instructor support tutorials, students complete independently, submission by deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 10'/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO2, LO4, LO5, LO6, LO7, LO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Personal Presentation; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: N/A ;Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test Plan, NUnit, JUnit, Test tool Selenium, Katalon Or Jira, Design test cases with Decision table testing, Use case testing techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The instructor recommends that each team apply testing activities to their SWP391 project. Each team member is responsible for a part of the testing activity and presents individually for about 8 minutes/person. The presentation is from slot 18 to 20.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 30'/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: Multiple choices Marked by Computer or a suitable format; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Option 1: 20-30/each; Option 2 (For Constructivism Approach only): Follow lecturer's proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Test 1: Chapter 1 and 2; Test 2: Chapter 3 and 4; Test 3: Chapter 5 and 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "In class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instruction and schedules for Progress Tests must be presented in the Course Implementation Plan approved by director of the campus. Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145 minutes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Each part of the final exam must be >=4/10 & Final Result >=5/10.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1 to 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by Exam Board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Customized from the assignments or labs that students have learned",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theory Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "LO1, LO2, LO3, LO4, LO5, LO6, LO7, LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1 to 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "by exam board, using computer",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "The exam questions must be updated or different at least 70% to the previous ones.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}
