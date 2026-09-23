@@ -118,16 +118,17 @@ class _AppSidebarState extends State<AppSidebar> {
         children: [
           // Brand Logo & Toggle
           Padding(
-            padding: const EdgeInsets.only(
-                top: 32.0, bottom: 24.0, left: 16, right: 16),
+            padding: EdgeInsets.only(
+              top: 32,
+              bottom: 24,
+              left: widget.isOpen ? 16 : 8,
+              right: widget.isOpen ? 16 : 8,
+            ),
             child: Row(
-              mainAxisAlignment: widget.isOpen
-                  ? MainAxisAlignment.start
-                  : MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 40,
-                  height: 40,
+                  width: widget.isOpen ? 40 : 32,
+                  height: widget.isOpen ? 40 : 32,
                   decoration: BoxDecoration(
                     color: AppColors.primary,
                     borderRadius: BorderRadius.circular(12),
@@ -151,36 +152,27 @@ class _AppSidebarState extends State<AppSidebar> {
                     ),
                   ),
                 ],
+                Tooltip(
+                  message: widget.isOpen ? 'Thu gọn' : 'Mở rộng',
+                  child: InkWell(
+                    onTap: widget.onToggle,
+                    borderRadius: BorderRadius.circular(10),
+                    child: SizedBox(
+                      width: widget.isOpen ? 36 : 32,
+                      height: widget.isOpen ? 40 : 32,
+                      child: Icon(
+                        widget.isOpen
+                            ? Icons.keyboard_double_arrow_left_rounded
+                            : Icons.keyboard_double_arrow_right_rounded,
+                        color: AppColors.textSub,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
-
-          // Toggle Button (Dễ nhìn hơn)
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: InkWell(
-              onTap: widget.onToggle,
-              borderRadius: BorderRadius.circular(12),
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 12),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: AppColors.background,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: const Color(0xFFE2E8F0)),
-                ),
-                child: Icon(
-                  widget.isOpen
-                      ? Icons.keyboard_double_arrow_left_rounded
-                      : Icons.keyboard_double_arrow_right_rounded,
-                  color: AppColors.textSub,
-                  size: 20,
-                ),
-              ),
-            ),
-          ),
-
-          const SizedBox(height: 24),
 
           // Navigation
           Expanded(
