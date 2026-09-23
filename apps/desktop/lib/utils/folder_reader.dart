@@ -238,18 +238,6 @@ class FolderReader {
     return null;
   }
 
-  /// Whether the most recently cached curriculum already has a chosen
-  /// "chuyên ngành hẹp" (selected_combo.json).
-  static Future<bool> hasSelectedCombo() async {
-    final cachedDataDir = await _getCacheDirectory();
-    final entities = await cachedDataDir.list().toList();
-    if (entities.isEmpty) return false;
-    entities.sort((a, b) => b.path.compareTo(a.path));
-    final latestDir = entities.first;
-    if (latestDir is! Directory) return false;
-    return File(p.join(latestDir.path, 'selected_combo.json')).exists();
-  }
-
   static Future<void> saveSelectedCombo(String comboId) async {
     final cachedDataDir = await _getCacheDirectory();
 
