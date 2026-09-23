@@ -1,8 +1,8 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=D:\TaiLieu_FA26\PRM\Flutter\flutter"
-export "FLUTTER_APPLICATION_PATH=D:\TaiLieu_FA26\PRM\Project\Obsidian_FLM\apps\desktop"
-export "FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH=D:\TaiLieu_FA26\PRM\Project\Obsidian_FLM\apps\desktop\macos\Flutter\ephemeral\Packages\.packages\FlutterFramework"
+export "FLUTTER_ROOT=C:\Users\ASUS\flutter"
+export "FLUTTER_APPLICATION_PATH=D:\FPT\CN8\PRM393_Hoc lieu\PRM_PROJECT\Obsidian_FLM\apps\desktop"
+export "FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH=D:\FPT\CN8\PRM393_Hoc lieu\PRM_PROJECT\Obsidian_FLM\apps\desktop\macos\Flutter\ephemeral\Packages\.packages\FlutterFramework"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=0.1.0"
