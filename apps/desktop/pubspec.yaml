@@ -14,7 +14,8 @@ dependencies:
   # see its README.md "Lần 5". `graphview` below is only used by the
   # curriculum screens (lib/ui/screens/subjects_screen.dart).
   file_selector: ^1.1.0
-  flutter_secure_storage: ^11.2.0
+  # ^10 (not ^11): v11 needs win32 6.x, which conflicts with file_picker ^8 (win32 5.x).
+  flutter_secure_storage: ^10.0.0
   http: ^1.6.0
   path: ^1.9.1
   path_provider: ^2.1.6
