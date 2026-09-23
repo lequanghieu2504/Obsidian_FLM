@@ -111,7 +111,7 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('missing key disables send; key is set in the shared AI settings', (
+  testWidgets('missing key disables send; key set in Trợ lý học vụ enables it', (
     tester,
   ) async {
     tester.view.physicalSize = const Size(1200, 900);
@@ -145,17 +145,14 @@ void main() {
           .onPressed,
       isNull,
     );
-    await tester.tap(find.byTooltip('Thêm API Key'));
-    await tester.pumpAndSettle();
-    final secretField = find.byWidgetPredicate(
-      (widget) => widget is TextField && widget.obscureText,
+    // The subject chat has no key UI; the key is set in Trợ lý học vụ
+    // (UserSettings) and the panel picks it up.
+    await tester.runAsync(
+      () => UserSettings.saveGeminiSettings('new-test-key', UserSettings.geminiModel),
     );
-    await tester.enterText(secretField, 'new-test-key');
-    await tester.pump();
-    await tester.runAsync(() async {
-      await tester.tap(find.text('Lưu'));
-      await Future<void>.delayed(const Duration(milliseconds: 200));
-    });
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 100)),
+    );
     await tester.pumpAndSettle();
     expect(UserSettings.geminiApiKey, 'new-test-key');
     expect(find.text('new-test-key'), findsNothing);

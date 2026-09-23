@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../ui/widgets/ai_settings_form.dart';
 import '../../../ui/widgets/assistant_chat_layout.dart';
 import '../../../utils/user_settings.dart';
 import '../application/subject_detail_controller.dart';
@@ -130,8 +129,9 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
         children: [
           if (!controller.hasKey)
             const Text(
-              'Thêm Gemini API Key bằng nút chìa khoá phía trên (dùng chung '
-              'với Trợ lý học vụ — chỉ nhập một lần).',
+              'Chưa có Gemini API Key. Hãy mở Trợ lý học vụ (nút "Trợ lý" '
+              'trên thanh trên cùng) và nhập key một lần — chat trong từng '
+              'môn sẽ dùng chung key đó.',
             ),
         ],
       );
@@ -174,18 +174,8 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
       subtitle:
           '${controller.workspace.subjectCode} · dựa trên syllabus của môn',
       actions: [
-        AssistantHeaderAction(
-          icon: Icons.key_outlined,
-          tooltip:
-              controller.hasKey ? 'Cài đặt API Key & Model' : 'Thêm API Key',
-          onPressed: controller.sending || controller.keyBusy
-              ? null
-              : () async {
-                  // Same settings form as "Trợ lý học vụ".
-                  await showAiSettingsDialog(context);
-                  await controller.loadKey();
-                },
-        ),
+        // No API-key button here: the key/model are configured only in
+        // "Trợ lý học vụ" (shared app-wide via UserSettings).
         AssistantHeaderAction(
           icon: Icons.delete_sweep_outlined,
           tooltip: 'Xóa lịch sử chat',
