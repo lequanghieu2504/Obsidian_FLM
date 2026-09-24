@@ -272,7 +272,9 @@ class _SubjectsScreenState extends State<SubjectsScreen>
           children: [
             // Code Badge
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              width: 116,
+              alignment: Alignment.center,
+              padding: const EdgeInsets.symmetric(vertical: 8),
               decoration: BoxDecoration(
                 color: AppColors.primary.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(8),

@@ -2,6 +2,7 @@ import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../app/theme/app_colors.dart';
 import '../../../models/subject.dart';
 import '../../assistant/application/llm_client.dart';
 import '../../knowledge_graph/domain/subject_record.dart';
@@ -611,21 +612,23 @@ class _SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final titleWidth = (MediaQuery.sizeOf(context).width - 150).clamp(
-      120.0,
-      360.0,
-    );
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, size: 22, color: theme.colorScheme.primary),
-        const SizedBox(width: 8),
-        SizedBox(
-          width: titleWidth,
+        Container(
+          padding: const EdgeInsets.all(6),
+          decoration: BoxDecoration(
+            color: AppColors.primaryBg,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(icon, size: 18, color: AppColors.primary),
+        ),
+        const SizedBox(width: 10),
+        Flexible(
           child: Text(
             title,
-            style: theme.textTheme.titleLarge?.copyWith(
-              color: theme.colorScheme.primary,
+            style: theme.textTheme.titleMedium?.copyWith(
+              color: AppColors.textMain,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -635,6 +638,8 @@ class _SectionHeader extends StatelessWidget {
   }
 }
 
+/// Dedicated tab for a subject's learning outcomes (CLOs) — split out of
+/// the overview so this doesn't turn into one long scrolling page.
 /// Dedicated tab for a subject's learning outcomes (CLOs) — split out of
 /// the overview so this doesn't turn into one long scrolling page.
 class LearningOutcomesPanel extends StatelessWidget {
@@ -647,67 +652,234 @@ class LearningOutcomesPanel extends StatelessWidget {
     final outcomes = controller.syllabus?.learningOutcomes ?? const [];
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: const Color(0xFFF7FBFF),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: const Color(0xFFDCEBFF)),
+        color: AppColors.background,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
       ),
       child: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(22),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const _SectionHeader(
-              icon: Icons.flag_outlined,
-              title: 'Learning outcomes',
-            ),
-            const SizedBox(height: 16),
-            for (final outcome in outcomes)
-              Container(
-                margin: const EdgeInsets.only(bottom: 8),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 10,
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF2563EB), Color(0xFF3B82F6)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x252563EB),
+                        blurRadius: 8,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(
+                    Icons.flag_rounded,
+                    size: 18,
+                    color: Colors.white,
+                  ),
                 ),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: const Color(0xFFE2EEFF)),
-                ),
-                child: Row(
+                const SizedBox(width: 12),
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      constraints: const BoxConstraints(minWidth: 66),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 6,
-                      ),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFDCEBFF),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Text(
-                        outcome.code,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          color: Color(0xFF075CE5),
-                          fontWeight: FontWeight.w700,
+                    Row(
+                      children: [
+                        Text(
+                          'Learning outcomes',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: AppColors.textMain,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 18,
+                            letterSpacing: -0.2,
+                          ),
                         ),
-                      ),
+                        if (outcomes.isNotEmpty) ...[
+                          const SizedBox(width: 10),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 9,
+                              vertical: 2.5,
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryBg,
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: AppColors.primary.withOpacity(0.15),
+                              ),
+                            ),
+                            child: Text(
+                              '${outcomes.length} outcomes',
+                              style: theme.textTheme.labelSmall?.copyWith(
+                                color: AppColors.primaryDark,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 11.5,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ],
                     ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: SelectableText(
-                        outcome.detail,
-                        style: theme.textTheme.bodyMedium?.copyWith(
-                          height: 1.45,
-                        ),
+                    const SizedBox(height: 2),
+                    const Text(
+                      'Course Learning Outcomes (CLOs) defined in the syllabus',
+                      style: TextStyle(
+                        color: AppColors.textSub,
+                        fontSize: 12.5,
                       ),
                     ),
                   ],
                 ),
-              ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            if (outcomes.isEmpty)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 40),
+                child: Center(
+                  child: Column(
+                    children: [
+                      Icon(
+                        Icons.flag_outlined,
+                        size: 36,
+                        color: AppColors.textSub,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'No learning outcomes available.',
+                        style: TextStyle(
+                          color: AppColors.textSub,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            else
+              for (final outcome in outcomes)
+                _LearningOutcomeCard(outcome: outcome),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _LearningOutcomeCard extends StatefulWidget {
+  const _LearningOutcomeCard({required this.outcome});
+  final LearningOutcome outcome;
+
+  @override
+  State<_LearningOutcomeCard> createState() => _LearningOutcomeCardState();
+}
+
+class _LearningOutcomeCardState extends State<_LearningOutcomeCard> {
+  bool _isHovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        curve: Curves.easeOutCubic,
+        margin: const EdgeInsets.only(bottom: 12),
+        decoration: BoxDecoration(
+          color: _isHovered ? const Color(0xFFFAFCFF) : AppColors.surface,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: _isHovered
+                ? AppColors.primary.withOpacity(0.4)
+                : const Color(0xFFE2E8F0),
+            width: 1,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: _isHovered
+                  ? AppColors.primary.withOpacity(0.08)
+                  : const Color(0x05000000),
+              blurRadius: _isHovered ? 12 : 4,
+              offset: Offset(0, _isHovered ? 4 : 1),
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(14),
+          child: IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 150),
+                  width: 4,
+                  decoration: BoxDecoration(
+                    color: _isHovered
+                        ? AppColors.primary
+                        : AppColors.primary.withOpacity(0.3),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 14,
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4.5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.primaryBg,
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                              color: AppColors.primary.withOpacity(0.2),
+                            ),
+                          ),
+                          child: Text(
+                            widget.outcome.code,
+                            style: const TextStyle(
+                              color: AppColors.primaryDark,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              letterSpacing: 0.5,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 1),
+                            child: SelectableText(
+                              widget.outcome.detail,
+                              style: theme.textTheme.bodyMedium?.copyWith(
+                                color: AppColors.textMain,
+                                height: 1.55,
+                                fontSize: 14.5,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -717,12 +889,16 @@ class LearningOutcomesPanel extends StatelessWidget {
 /// Dedicated tab for the syllabus metadata that isn't already shown as a
 /// named field elsewhere (grading scale, workload, tools, approval/admin
 /// info, ...).
+/// Dedicated tab for the syllabus metadata that isn't already shown as a
+/// named field elsewhere (grading scale, workload, tools, approval/admin
+/// info, ...).
 class OtherSyllabusFieldsPanel extends StatelessWidget {
   const OtherSyllabusFieldsPanel({super.key, required this.controller});
   final SubjectDetailController controller;
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     final syllabus = controller.syllabus;
     final fields = syllabus == null
         ? const <String, String>{}
@@ -730,33 +906,107 @@ class OtherSyllabusFieldsPanel extends StatelessWidget {
     final grouped = _SyllabusFieldGroups.from(fields);
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: const Color(0xFFF7FBFF),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: const Color(0xFFDCEBFF)),
+        color: AppColors.background,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
       ),
       child: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(22),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const _SectionHeader(
-              icon: Icons.list_alt_outlined,
-              title: 'Other syllabus fields',
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF2563EB), Color(0xFF3B82F6)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x252563EB),
+                        blurRadius: 8,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(
+                    Icons.list_alt_rounded,
+                    size: 18,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Other syllabus fields',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: AppColors.textMain,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 18,
+                            letterSpacing: -0.2,
+                          ),
+                        ),
+                        if (fields.isNotEmpty) ...[
+                          const SizedBox(width: 10),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 9,
+                              vertical: 2.5,
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryBg,
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: AppColors.primary.withOpacity(0.15),
+                              ),
+                            ),
+                            child: Text(
+                              '${fields.length} fields',
+                              style: theme.textTheme.labelSmall?.copyWith(
+                                color: AppColors.primaryDark,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 11.5,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                    const SizedBox(height: 2),
+                    const Text(
+                      'Additional course metadata, evaluation rules, and administrative records',
+                      style: TextStyle(
+                        color: AppColors.textSub,
+                        fontSize: 12.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 24),
             if (grouped.requirements.isNotEmpty)
               _MetadataSection(
                 title: 'Course Requirements',
-                tint: const Color(0xFFF1F7FF),
+                icon: Icons.assignment_outlined,
                 entries: grouped.requirements,
-                preferredWeights: const [1, 1.5],
+                preferredWeights: const [1.2, 1],
                 wideColumnCount: 2,
               ),
             if (grouped.resources.isNotEmpty) ...[
               if (grouped.requirements.isNotEmpty) const SizedBox(height: 24),
               _MetadataSection(
                 title: 'Course Resources & Evaluation',
-                tint: const Color(0xFFF5F9FF),
+                icon: Icons.assessment_outlined,
                 entries: grouped.resources,
                 wideColumnCount: 3,
               ),
@@ -767,7 +1017,7 @@ class OtherSyllabusFieldsPanel extends StatelessWidget {
                 const SizedBox(height: 24),
               _MetadataSection(
                 title: 'Administrative Information',
-                tint: const Color(0xFFF8FAFD),
+                icon: Icons.admin_panel_settings_outlined,
                 entries: grouped.administration,
                 wideColumnCount: 3,
               ),
@@ -828,17 +1078,48 @@ class _SyllabusFieldGroups {
 String _normalizedMetadataKey(String key) =>
     key.toLowerCase().replaceAll(RegExp('[^a-z0-9]'), '');
 
+IconData _metadataKeyIcon(String key) {
+  final norm = _normalizedMetadataKey(key);
+  switch (norm) {
+    case 'timeallocation':
+      return Icons.schedule_rounded;
+    case 'studenttasks':
+      return Icons.task_alt_rounded;
+    case 'tools':
+      return Icons.build_circle_outlined;
+    case 'scoringscale':
+      return Icons.linear_scale_rounded;
+    case 'minavgmarktopass':
+      return Icons.fact_check_rounded;
+    case 'decisionnommddyyyy':
+    case 'decisionno':
+      return Icons.gavel_rounded;
+    case 'approveddate':
+      return Icons.calendar_month_rounded;
+    case 'isapproved':
+      return Icons.verified_user_rounded;
+    case 'isscored':
+      return Icons.grade_rounded;
+    case 'isactive':
+      return Icons.toggle_on_rounded;
+    case 'note':
+      return Icons.notes_rounded;
+    default:
+      return Icons.info_outline_rounded;
+  }
+}
+
 class _MetadataSection extends StatelessWidget {
   const _MetadataSection({
     required this.title,
-    required this.tint,
+    required this.icon,
     required this.entries,
     required this.wideColumnCount,
     this.preferredWeights,
   });
 
   final String title;
-  final Color tint;
+  final IconData icon;
   final List<MapEntry<String, String>> entries;
   final int wideColumnCount;
   final List<double>? preferredWeights;
@@ -847,17 +1128,23 @@ class _MetadataSection extends StatelessWidget {
   Widget build(BuildContext context) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
-        title,
-        style: Theme.of(context).textTheme.titleMedium?.copyWith(
-          color: const Color(0xFF123E7C),
-          fontWeight: FontWeight.w700,
-        ),
+      Row(
+        children: [
+          Icon(icon, size: 18, color: AppColors.primary),
+          const SizedBox(width: 8),
+          Text(
+            title,
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+              color: AppColors.textMain,
+              fontWeight: FontWeight.w700,
+              fontSize: 15,
+            ),
+          ),
+        ],
       ),
       const SizedBox(height: 12),
       _ResponsiveMetadataGrid(
         entries: entries,
-        tint: tint,
         wideColumnCount: wideColumnCount,
         preferredWeights: preferredWeights,
       ),
@@ -868,13 +1155,11 @@ class _MetadataSection extends StatelessWidget {
 class _ResponsiveMetadataGrid extends StatelessWidget {
   const _ResponsiveMetadataGrid({
     required this.entries,
-    required this.tint,
     required this.wideColumnCount,
     this.preferredWeights,
   });
 
   final List<MapEntry<String, String>> entries;
-  final Color tint;
   final int wideColumnCount;
   final List<double>? preferredWeights;
 
@@ -890,7 +1175,7 @@ class _ResponsiveMetadataGrid extends StatelessWidget {
       final columnCount = entries.length < responsiveColumnCount
           ? entries.length
           : responsiveColumnCount;
-      const gap = 16.0;
+      const gap = 14.0;
       final canUseWeights =
           columnCount == entries.length &&
           preferredWeights != null &&
@@ -903,7 +1188,7 @@ class _ResponsiveMetadataGrid extends StatelessWidget {
               if (index > 0) const SizedBox(width: gap),
               Expanded(
                 flex: (preferredWeights![index] * 10).round(),
-                child: _MetadataCard(entry: entries[index], tint: tint),
+                child: _MetadataCard(entry: entries[index]),
               ),
             ],
           ],
@@ -918,7 +1203,7 @@ class _ResponsiveMetadataGrid extends StatelessWidget {
           for (final entry in entries)
             SizedBox(
               width: cardWidth,
-              child: _MetadataCard(entry: entry, tint: tint),
+              child: _MetadataCard(entry: entry),
             ),
         ],
       );
@@ -926,44 +1211,90 @@ class _ResponsiveMetadataGrid extends StatelessWidget {
   );
 }
 
-class _MetadataCard extends StatelessWidget {
-  const _MetadataCard({required this.entry, required this.tint});
+class _MetadataCard extends StatefulWidget {
+  const _MetadataCard({required this.entry});
 
   final MapEntry<String, String> entry;
-  final Color tint;
+
+  @override
+  State<_MetadataCard> createState() => _MetadataCardState();
+}
+
+class _MetadataCardState extends State<_MetadataCard> {
+  bool _isHovered = false;
 
   @override
   Widget build(BuildContext context) {
-    final normalizedKey = _normalizedMetadataKey(entry.key);
+    final normalizedKey = _normalizedMetadataKey(widget.entry.key);
     final isBoolean = const {
       'isapproved',
       'isscored',
       'isactive',
     }.contains(normalizedKey);
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: tint,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFDCE8F6)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            entry.key,
-            style: Theme.of(context).textTheme.labelLarge?.copyWith(
-              color: const Color(0xFF31557F),
-              fontWeight: FontWeight.w600,
-            ),
+    final icon = _metadataKeyIcon(widget.entry.key);
+
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        curve: Curves.easeOutCubic,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        decoration: BoxDecoration(
+          color: _isHovered ? const Color(0xFFFAFCFF) : AppColors.surface,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: _isHovered
+                ? AppColors.primary.withOpacity(0.4)
+                : const Color(0xFFE2E8F0),
+            width: 1,
           ),
-          const SizedBox(height: 8),
-          if (isBoolean)
-            _BooleanStatusBadge(value: entry.value)
-          else
-            _MetadataTextValue(value: entry.value),
-        ],
+          boxShadow: [
+            BoxShadow(
+              color: _isHovered
+                  ? AppColors.primary.withOpacity(0.08)
+                  : const Color(0x05000000),
+              blurRadius: _isHovered ? 10 : 4,
+              offset: Offset(0, _isHovered ? 3 : 1),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryBg,
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Icon(icon, size: 14, color: AppColors.primary),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    widget.entry.key,
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                      color: AppColors.textMain,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            if (isBoolean)
+              _BooleanStatusBadge(value: widget.entry.value)
+            else
+              _MetadataTextValue(value: widget.entry.value),
+          ],
+        ),
       ),
     );
   }
@@ -1004,23 +1335,39 @@ class _BooleanStatusBadge extends StatelessWidget {
       '1',
     }.contains(value.trim().toLowerCase());
     final foreground = isPositive
-        ? const Color(0xFF176B4D)
-        : const Color(0xFF675B42);
+        ? const Color(0xFF047857)
+        : const Color(0xFF475569);
     final background = isPositive
-        ? const Color(0xFFE5F5ED)
-        : const Color(0xFFF4F0E7);
+        ? const Color(0xFFECFDF5)
+        : const Color(0xFFF1F5F9);
+    final border = isPositive
+        ? const Color(0xFFA7F3D0)
+        : const Color(0xFFCBD5E1);
+    final icon = isPositive
+        ? Icons.check_circle_rounded
+        : Icons.cancel_outlined;
+
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
         color: background,
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: border),
       ),
-      child: Text(
-        value,
-        style: Theme.of(context).textTheme.labelMedium?.copyWith(
-          color: foreground,
-          fontWeight: FontWeight.w700,
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 14, color: foreground),
+          const SizedBox(width: 5),
+          Text(
+            value,
+            style: Theme.of(context).textTheme.labelMedium?.copyWith(
+              color: foreground,
+              fontWeight: FontWeight.w700,
+              fontSize: 12,
+            ),
+          ),
+        ],
       ),
     );
   }
