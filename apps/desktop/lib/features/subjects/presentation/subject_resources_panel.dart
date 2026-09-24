@@ -687,55 +687,58 @@ class LearningOutcomesPanel extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Learning outcomes',
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            color: AppColors.textMain,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 18,
-                            letterSpacing: -0.2,
-                          ),
-                        ),
-                        if (outcomes.isNotEmpty) ...[
-                          const SizedBox(width: 10),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 9,
-                              vertical: 2.5,
-                            ),
-                            decoration: BoxDecoration(
-                              color: AppColors.primaryBg,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                color: AppColors.primary.withOpacity(0.15),
-                              ),
-                            ),
-                            child: Text(
-                              '${outcomes.length} outcomes',
-                              style: theme.textTheme.labelSmall?.copyWith(
-                                color: AppColors.primaryDark,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 11.5,
-                              ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        spacing: 10,
+                        runSpacing: 4,
+                        children: [
+                          Text(
+                            'Learning outcomes',
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              color: AppColors.textMain,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                              letterSpacing: -0.2,
                             ),
                           ),
+                          if (outcomes.isNotEmpty)
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 9,
+                                vertical: 2.5,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.primaryBg,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: AppColors.primary.withOpacity(0.15),
+                                ),
+                              ),
+                              child: Text(
+                                '${outcomes.length} outcomes',
+                                style: theme.textTheme.labelSmall?.copyWith(
+                                  color: AppColors.primaryDark,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 11.5,
+                                ),
+                              ),
+                            ),
                         ],
-                      ],
-                    ),
-                    const SizedBox(height: 2),
-                    const Text(
-                      'Course Learning Outcomes (CLOs) defined in the syllabus',
-                      style: TextStyle(
-                        color: AppColors.textSub,
-                        fontSize: 12.5,
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 2),
+                      const Text(
+                        'Course Learning Outcomes (CLOs) defined in the syllabus',
+                        style: TextStyle(
+                          color: AppColors.textSub,
+                          fontSize: 12.5,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -941,55 +944,58 @@ class OtherSyllabusFieldsPanel extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Other syllabus fields',
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            color: AppColors.textMain,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 18,
-                            letterSpacing: -0.2,
-                          ),
-                        ),
-                        if (fields.isNotEmpty) ...[
-                          const SizedBox(width: 10),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 9,
-                              vertical: 2.5,
-                            ),
-                            decoration: BoxDecoration(
-                              color: AppColors.primaryBg,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                color: AppColors.primary.withOpacity(0.15),
-                              ),
-                            ),
-                            child: Text(
-                              '${fields.length} fields',
-                              style: theme.textTheme.labelSmall?.copyWith(
-                                color: AppColors.primaryDark,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 11.5,
-                              ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        spacing: 10,
+                        runSpacing: 4,
+                        children: [
+                          Text(
+                            'Other syllabus fields',
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              color: AppColors.textMain,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                              letterSpacing: -0.2,
                             ),
                           ),
+                          if (fields.isNotEmpty)
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 9,
+                                vertical: 2.5,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.primaryBg,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: AppColors.primary.withOpacity(0.15),
+                                ),
+                              ),
+                              child: Text(
+                                '${fields.length} fields',
+                                style: theme.textTheme.labelSmall?.copyWith(
+                                  color: AppColors.primaryDark,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 11.5,
+                                ),
+                              ),
+                            ),
                         ],
-                      ],
-                    ),
-                    const SizedBox(height: 2),
-                    const Text(
-                      'Additional course metadata, evaluation rules, and administrative records',
-                      style: TextStyle(
-                        color: AppColors.textSub,
-                        fontSize: 12.5,
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 2),
+                      const Text(
+                        'Additional course metadata, evaluation rules, and administrative records',
+                        style: TextStyle(
+                          color: AppColors.textSub,
+                          fontSize: 12.5,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -1132,12 +1138,14 @@ class _MetadataSection extends StatelessWidget {
         children: [
           Icon(icon, size: 18, color: AppColors.primary),
           const SizedBox(width: 8),
-          Text(
-            title,
-            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-              color: AppColors.textMain,
-              fontWeight: FontWeight.w700,
-              fontSize: 15,
+          Flexible(
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                color: AppColors.textMain,
+                fontWeight: FontWeight.w700,
+                fontSize: 15,
+              ),
             ),
           ),
         ],
@@ -1211,6 +1219,41 @@ class _ResponsiveMetadataGrid extends StatelessWidget {
   );
 }
 
+String _formatKey(String key) {
+  final norm = _normalizedMetadataKey(key);
+  switch (norm) {
+    case 'decisionnommddyyyy':
+    case 'decisionno':
+      return 'Decision Reference';
+    case 'approveddate':
+      return 'Approval Date';
+    case 'isapproved':
+      return 'Approval Status';
+    case 'isscored':
+      return 'Scoring Status';
+    case 'isactive':
+      return 'Active Status';
+    case 'timeallocation':
+      return 'Time Allocation';
+    case 'studenttasks':
+      return 'Student Tasks & Duties';
+    case 'scoringscale':
+      return 'Scoring Scale';
+    case 'minavgmarktopass':
+      return 'Minimum Pass Mark';
+    case 'note':
+      return 'Notes & Passing Rules';
+    default:
+      return key
+          .replaceAllMapped(
+            RegExp(r'(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])'),
+            (m) => ' ',
+          )
+          .replaceAll('_', ' ')
+          .trim();
+  }
+}
+
 class _MetadataCard extends StatefulWidget {
   const _MetadataCard({required this.entry});
 
@@ -1225,12 +1268,16 @@ class _MetadataCardState extends State<_MetadataCard> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     final normalizedKey = _normalizedMetadataKey(widget.entry.key);
     final isBoolean = const {
       'isapproved',
       'isscored',
       'isactive',
     }.contains(normalizedKey);
+    final isNumeric = RegExp(r'^\d+(\.\d+)?$').hasMatch(widget.entry.value.trim());
+    final formattedTitle = _formatKey(widget.entry.key);
+    final rawKeyName = widget.entry.key;
     final icon = _metadataKeyIcon(widget.entry.key);
 
     return MouseRegion(
@@ -1264,26 +1311,41 @@ class _MetadataCardState extends State<_MetadataCard> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(
-              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5.5),
                   decoration: BoxDecoration(
                     color: AppColors.primaryBg,
-                    borderRadius: BorderRadius.circular(6),
+                    borderRadius: BorderRadius.circular(7),
                   ),
                   child: Icon(icon, size: 14, color: AppColors.primary),
                 ),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
-                    widget.entry.key,
-                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                      color: AppColors.textMain,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13,
-                    ),
-                    overflow: TextOverflow.ellipsis,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        formattedTitle,
+                        style: theme.textTheme.labelLarge?.copyWith(
+                          color: AppColors.textMain,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      if (formattedTitle != rawKeyName)
+                        Text(
+                          rawKeyName,
+                          style: const TextStyle(
+                            color: Color(0xFF94A3B8),
+                            fontSize: 10,
+                            height: 1.1,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                    ],
                   ),
                 ),
               ],
@@ -1291,11 +1353,62 @@ class _MetadataCardState extends State<_MetadataCard> {
             const SizedBox(height: 10),
             if (isBoolean)
               _BooleanStatusBadge(value: widget.entry.value)
+            else if (isNumeric)
+              _NumericStatValue(
+                value: widget.entry.value,
+                keyName: normalizedKey,
+              )
             else
               _MetadataTextValue(value: widget.entry.value),
           ],
         ),
       ),
+    );
+  }
+}
+
+class _NumericStatValue extends StatelessWidget {
+  const _NumericStatValue({required this.value, required this.keyName});
+
+  final String value;
+  final String keyName;
+
+  @override
+  Widget build(BuildContext context) {
+    final subText = keyName.contains('score') || keyName.contains('mark')
+        ? 'Points'
+        : 'Scale';
+
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.baseline,
+      textBaseline: TextBaseline.alphabetic,
+      children: [
+        Text(
+          value.trim(),
+          style: const TextStyle(
+            color: AppColors.primaryDark,
+            fontWeight: FontWeight.w800,
+            fontSize: 22,
+            letterSpacing: -0.5,
+          ),
+        ),
+        const SizedBox(width: 6),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+          decoration: BoxDecoration(
+            color: AppColors.primaryBg,
+            borderRadius: BorderRadius.circular(6),
+          ),
+          child: Text(
+            subText,
+            style: const TextStyle(
+              color: AppColors.primary,
+              fontWeight: FontWeight.w600,
+              fontSize: 10.5,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
