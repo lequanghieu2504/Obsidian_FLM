@@ -75,6 +75,47 @@ class AppTheme {
         thickness: 1,
         space: 1,
       ),
+
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.android: _SmoothPageTransitionsBuilder(),
+          TargetPlatform.iOS: _SmoothPageTransitionsBuilder(),
+          TargetPlatform.linux: _SmoothPageTransitionsBuilder(),
+          TargetPlatform.macOS: _SmoothPageTransitionsBuilder(),
+          TargetPlatform.windows: _SmoothPageTransitionsBuilder(),
+        },
+      ),
     );
   }
 }
+
+class _SmoothPageTransitionsBuilder extends PageTransitionsBuilder {
+  const _SmoothPageTransitionsBuilder();
+
+  @override
+  Widget buildTransitions<T>(
+    PageRoute<T> route,
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    final fadeAnimation = CurvedAnimation(
+      parent: animation,
+      curve: Curves.easeOutCubic,
+    );
+    final slideAnimation = Tween<Offset>(
+      begin: const Offset(0, 0.03),
+      end: Offset.zero,
+    ).animate(fadeAnimation);
+
+    return FadeTransition(
+      opacity: fadeAnimation,
+      child: SlideTransition(
+        position: slideAnimation,
+        child: child,
+      ),
+    );
+  }
+}
+
