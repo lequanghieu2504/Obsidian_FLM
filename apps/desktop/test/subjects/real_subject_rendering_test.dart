@@ -47,7 +47,7 @@ void main() {
       expect(find.text('PRJ301'), findsWidgets);
       expect(find.text('Java Web Application Development'), findsOneWidget);
       expect(find.text('Phát triển ứng dụng Java web'), findsOneWidget);
-      expect(find.text('Code'), findsOneWidget);
+      expect(find.text('Code'), findsNothing);
       expect(find.text('Semester'), findsOneWidget);
       expect(find.text('4'), findsOneWidget);
       expect(find.text('Credits'), findsOneWidget);
