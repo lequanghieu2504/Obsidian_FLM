@@ -125,67 +125,82 @@ class _AppSidebarState extends State<AppSidebar> {
       color: AppColors.sidebarBackground,
       child: Column(
         children: [
-          // Brand Logo & Toggle
+          // Brand Logo & Toggle Header (Same Row)
           Padding(
-            padding: const EdgeInsets.only(
-                top: 32.0, bottom: 24.0, left: 16, right: 16),
+            padding: const EdgeInsets.fromLTRB(16, 24, 16, 16),
             child: Row(
               mainAxisAlignment: widget.isOpen
-                  ? MainAxisAlignment.start
+                  ? MainAxisAlignment.spaceBetween
                   : MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Icon(Icons.school_rounded,
-                      color: Colors.white, size: 20),
-                ),
                 if (widget.isOpen) ...[
-                  const SizedBox(width: 12),
-                  const Expanded(
-                    child: Text(
-                      'Lộ Trình',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: AppColors.textMain,
+                  Row(
+                    children: [
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: AppColors.primary,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(Icons.school_rounded,
+                            color: Colors.white, size: 20),
                       ),
-                      maxLines: 1,
-                      overflow: TextOverflow.clip,
-                      softWrap: false,
+                      const SizedBox(width: 12),
+                      const Text(
+                        'Lộ Trình',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.textMain,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: widget.onToggle,
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        padding: const EdgeInsets.all(7),
+                        decoration: BoxDecoration(
+                          color: AppColors.background,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: const Color(0xFFE2E8F0)),
+                        ),
+                        child: const Icon(
+                          Icons.keyboard_double_arrow_left_rounded,
+                          color: AppColors.textSub,
+                          size: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ] else ...[
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: widget.onToggle,
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        width: 44,
+                        height: 44,
+                        decoration: BoxDecoration(
+                          color: AppColors.background,
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: const Color(0xFFE2E8F0)),
+                        ),
+                        child: const Icon(
+                          Icons.keyboard_double_arrow_right_rounded,
+                          color: AppColors.primary,
+                          size: 20,
+                        ),
+                      ),
                     ),
                   ),
                 ],
               ],
-            ),
-          ),
-
-          // Toggle Button (Dễ nhìn hơn)
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: InkWell(
-              onTap: widget.onToggle,
-              borderRadius: BorderRadius.circular(12),
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 12),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: AppColors.background,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: const Color(0xFFE2E8F0)),
-                ),
-                child: Icon(
-                  widget.isOpen
-                      ? Icons.keyboard_double_arrow_left_rounded
-                      : Icons.keyboard_double_arrow_right_rounded,
-                  color: AppColors.textSub,
-                  size: 20,
-                ),
-              ),
             ),
           ),
 

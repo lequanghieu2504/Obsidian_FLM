@@ -10,6 +10,7 @@ import '../../assistant/infrastructure/local_chat_attachment_processor.dart';
 import '../../knowledge_graph/presentation/subject_knowledge_graph_tab.dart';
 import '../application/subject_detail_controller.dart';
 import '../data/local_subject_workspace_repository.dart';
+import '../domain/subject_display.dart';
 import '../domain/subject_workspace.dart';
 import '../../../ui/widgets/min_width_guard.dart';
 import 'subject_chat_panel.dart';
@@ -281,22 +282,62 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final controller = _controller;
+    final displayName = subjectDisplayName(widget.subject);
+    final hasVietnamese = displayName.secondary != null && displayName.secondary!.isNotEmpty;
+
     return Scaffold(
       backgroundColor: const Color(0xFFEAF4FF),
       appBar: AppBar(
-        toolbarHeight: 52,
+        toolbarHeight: hasVietnamese ? 72 : 62,
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.transparent,
-        title: FittedBox(
-          fit: BoxFit.scaleDown,
-          alignment: Alignment.centerLeft,
-          child: Text(
-            widget.subject.code,
-            style: const TextStyle(
-              color: Color(0xFF082F73),
-              fontWeight: FontWeight.w700,
+        elevation: 0,
+        titleSpacing: 20,
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  '${widget.subject.code} - ',
+                  style: const TextStyle(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w800,
+                    color: Color(0xFF082F73),
+                    letterSpacing: -0.3,
+                  ),
+                ),
+                Flexible(
+                  child: Text(
+                    displayName.primary,
+                    style: const TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.w800,
+                      color: Color(0xFF082F73),
+                      letterSpacing: -0.3,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
             ),
-          ),
+            if (hasVietnamese) ...[
+              const SizedBox(height: 3),
+              Text(
+                displayName.secondary!,
+                style: const TextStyle(
+                  fontSize: 13.5,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFF475569),
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ],
         ),
       ),
       body: SafeArea(

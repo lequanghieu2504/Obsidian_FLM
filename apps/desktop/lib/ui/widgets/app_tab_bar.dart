@@ -20,7 +20,9 @@ class AppTabModel {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AppTabModel && runtimeType == other.runtimeType && id == other.id;
+      other is AppTabModel &&
+          runtimeType == other.runtimeType &&
+          id == other.id;
 
   @override
   int get hashCode => id.hashCode;
@@ -129,66 +131,78 @@ class AppTabBar extends StatelessWidget {
           width: 180,
           height: 36,
           margin: const EdgeInsets.only(right: 4),
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
           decoration: BoxDecoration(
             color: isActive ? Colors.white : const Color(0xFFCBD5E1),
             borderRadius: const BorderRadius.vertical(top: Radius.circular(8)),
             boxShadow: isActive
                 ? [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.08),
+                      color: Colors.black.withValues(alpha: 0.08),
                       blurRadius: 4,
                       offset: const Offset(0, -1),
-                    )
+                    ),
                   ]
                 : null,
-            border: Border(
-              top: BorderSide(
-                color: isActive ? AppColors.primary : Colors.transparent,
-                width: 2.5,
-              ),
-              left: BorderSide(
-                color: isActive ? const Color(0xFFCBD5E1) : Colors.transparent,
-              ),
-              right: BorderSide(
-                color: isActive ? const Color(0xFFCBD5E1) : Colors.transparent,
-              ),
-            ),
+            // A rounded BoxDecoration cannot paint borders with different
+            // colors. Keep this border uniform and draw the blue active
+            // indicator as a separate child below.
+            border: isActive
+                ? Border.all(color: const Color(0xFFCBD5E1))
+                : null,
           ),
-          child: DefaultTextStyle(
-            style: textStyle,
-            child: IconTheme(
-              data: IconThemeData(color: iconColor, size: 15),
-              child: Row(
-                children: [
-                  Icon(tab.icon, size: 15, color: iconColor),
-                  const SizedBox(width: 6),
-                  Expanded(
-                    child: Text(
-                      tab.title,
-                      style: textStyle,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  if (tab.isCloseable) ...[
-                    const SizedBox(width: 4),
-                    GestureDetector(
-                      onTap: () => onTabClosed(tab),
-                      behavior: HitTestBehavior.opaque,
-                      child: Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: Icon(
-                          Icons.close_rounded,
-                          size: 14,
-                          color: isActive ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
-                        ),
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 2.5,
+                width: double.infinity,
+                child: ColoredBox(
+                  color: isActive ? AppColors.primary : Colors.transparent,
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 3.5, 10, 5),
+                  child: DefaultTextStyle(
+                    style: textStyle,
+                    child: IconTheme(
+                      data: IconThemeData(color: iconColor, size: 15),
+                      child: Row(
+                        children: [
+                          Icon(tab.icon, size: 15, color: iconColor),
+                          const SizedBox(width: 6),
+                          Expanded(
+                            child: Text(
+                              tab.title,
+                              style: textStyle,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          if (tab.isCloseable) ...[
+                            const SizedBox(width: 4),
+                            GestureDetector(
+                              onTap: () => onTabClosed(tab),
+                              behavior: HitTestBehavior.opaque,
+                              child: Padding(
+                                padding: const EdgeInsets.all(2),
+                                child: Icon(
+                                  Icons.close_rounded,
+                                  size: 14,
+                                  color: isActive
+                                      ? const Color(0xFF64748B)
+                                      : const Color(0xFF94A3B8),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ],
                       ),
                     ),
-                  ],
-                ],
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),

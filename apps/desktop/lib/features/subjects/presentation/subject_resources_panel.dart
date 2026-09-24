@@ -124,13 +124,11 @@ class SubjectOverviewPanel extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _SubjectHero(
+                  _SubjectFacts(
                     curriculumCode: controller.workspace.curriculumCode,
                     subject: subject,
-                    displayName: displayName,
+                    syllabus: syllabus,
                   ),
-                  const SizedBox(height: 10),
-                  _SubjectFacts(subject: subject, syllabus: syllabus),
                   const SizedBox(height: 10),
                   _PrerequisiteCard(value: prerequisiteDisplay(subject)),
                   if (controller.syllabusLoading) ...[
@@ -355,7 +353,12 @@ class _SubjectHero extends StatelessWidget {
 }
 
 class _SubjectFacts extends StatelessWidget {
-  const _SubjectFacts({required this.subject, required this.syllabus});
+  const _SubjectFacts({
+    required this.curriculumCode,
+    required this.subject,
+    required this.syllabus,
+  });
+  final String curriculumCode;
   final Subject subject;
   final SubjectRecord? syllabus;
 
@@ -363,6 +366,7 @@ class _SubjectFacts extends StatelessWidget {
   Widget build(BuildContext context) => LayoutBuilder(
     builder: (context, constraints) {
       final facts = <(String, String)>[
+        ('Curriculum', curriculumCode),
         ('Semester', subject.semester.toString()),
         ('Credits', subject.credits),
         if (syllabus?.degreeLevel.isNotEmpty ?? false)
@@ -402,6 +406,7 @@ class _FactTileState extends State<_FactTile> {
 
   IconData _iconForLabel(String label) {
     final lower = label.toLowerCase();
+    if (lower.contains('curriculum')) return Icons.folder_special_rounded;
     if (lower.contains('semester')) return Icons.calendar_today_rounded;
     if (lower.contains('credit')) return Icons.workspace_premium_rounded;
     if (lower.contains('degree')) return Icons.school_rounded;
