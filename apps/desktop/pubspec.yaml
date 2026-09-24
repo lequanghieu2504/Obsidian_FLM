@@ -3,13 +3,39 @@ description: Local-first desktop client for Obsidian_FLM.
 publish_to: none
 version: 0.1.0+1
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ">=3.10.0 <4.0.0"
+  flutter: ">=3.38.0"
 dependencies:
   flutter:
     sdk: flutter
+  # --- Subject browser / knowledge graph (feature/knowledge-graph-subject-browser-merge) ---
+  # The knowledge graph is drawn with a hand-rolled canvas
+  # (lib/features/knowledge_graph/presentation/widgets/concept_graph_canvas.dart),
+  # see its README.md "Lần 5". `graphview` below is only used by the
+  # curriculum screens (lib/ui/screens/subjects_screen.dart).
+  file_selector: ^1.1.0
+  # ^10 (not ^11): v11 needs win32 6.x, which conflicts with file_picker ^8 (win32 5.x).
+  flutter_secure_storage: ^10.0.0
+  http: ^1.6.0
+  path: ^1.9.1
+  path_provider: ^2.1.6
+  url_launcher: ^6.3.2
+  uuid: ^4.6.0
+  # --- Curriculum / transcript / dashboard (feature/curriculum-and-transcript) ---
+  dio: any
+  html: any
+  google_fonts: ^6.1.0
+  graphview: any
+  file_picker: ^8.0.0+1
+  google_generative_ai: any
+  spreadsheet_decoder: ^2.3.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
 flutter:
   uses-material-design: true
+  assets:
+    - data/
+    - data/subject/
+    - data/concepts/

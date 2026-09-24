@@ -1,0 +1,4965 @@
+{
+  "id": "11717",
+  "metadata": {
+    "Syllabus ID": "11717",
+    "Syllabus Name": "Data Science - Capstone Project_Dự án KHDL",
+    "Course Name English": "Data Science - Capstone Project",
+    "Subject Code": "DSP391m",
+    "Learning-Teaching Method": "Blended,Project based learning,Active learning,Presentation,Offline",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "45h (60 sessions) contact hours + 1h final exam + 104h self-study;",
+    "Pre-Requisite": "DSR301m, DBM302m, BDI302c",
+    "Description": "This capstone project course is designed to consolidate and apply students' knowledge in data science to tackle real-world challenges. The course emphasizes: - The application of data science techniques to solve practical problems. - The identification and adaptation of data science methodologies from current research for specific problems. - The development of a comprehensive solution approach using data science. - The evaluation and analysis of results from data science projects. - Recognition of appropriate scenarios for data science applications. - Selection of suitable metrics for project evaluation. - Understanding the ethical and legal implications of data handling. - Implementation and reflection on various data science algorithms including preprocessing, machine learning models, and advanced analytical techniques. - Effective teamwork and project management.",
+    "StudentTasks": "- Select a suitable project and form teams. - Allocate and schedule tasks among team members. - Develop a project output that meets the specified requirements and demonstrates individual contributions. - Present and defend the project in front of a review",
+    "Tools": "- Programming Languages: Python, R - Software Tools: Jupyter Notebook, TensorFlow, Scikit-Learn, Pandas - Databases and Datasets: Kaggle, UCI Machine Learning Repository, Government databases - Additional Resources: Google Scholar for research papers, GitHub for code repositories",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "765/QĐ-ĐHFPT dated 07/29/2024",
+    "IsApproved": "True",
+    "Note": "\"- The essential capstone project is mandatory, focusing on solving a real-world data challenge. It comprises 100% of assessments, culminating in a final exam by oral presentation. - The final mark is determined by summing the weighted scores of Report 1 (10%), Report 2 (20%), Report 3 (40%), Final Report (10%), and Final Exam[Oral presentation] (20%). - The final exam [oral group presentation] takes place in class, individually evaluated by one professor. Retakes are permissible, involving the submission of a revised final report and presentation, also evaluated by one professor.\"",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "7/29/2024"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "11717"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "11717"
+        ],
+        [
+          "Syllabus Name:",
+          "Data Science - Capstone Project_Dự án KHDL"
+        ],
+        [
+          "Course Name English:",
+          "Data Science - Capstone Project"
+        ],
+        [
+          "Subject Code:",
+          "DSP391m"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Blended,Project based learning,Active learning,Presentation,Offline"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "45h (60 sessions) contact hours + 1h final exam + 104h self-study;"
+        ],
+        [
+          "Pre-Requisite:",
+          "DSR301m, DBM302m, BDI302c"
+        ],
+        [
+          "Description:",
+          "This capstone project course is designed to consolidate and apply students' knowledge in data science to tackle real-world challenges. The course emphasizes: - The application of data science techniques to solve practical problems. - The identification and adaptation of data science methodologies from current research for specific problems. - The development of a comprehensive solution approach using data science. - The evaluation and analysis of results from data science projects. - Recognition of appropriate scenarios for data science applications. - Selection of suitable metrics for project evaluation. - Understanding the ethical and legal implications of data handling. - Implementation and reflection on various data science algorithms including preprocessing, machine learning models, and advanced analytical techniques. - Effective teamwork and project management."
+        ],
+        [
+          "StudentTasks:",
+          "- Select a suitable project and form teams. - Allocate and schedule tasks among team members. - Develop a project output that meets the specified requirements and demonstrates individual contributions. - Present and defend the project in front of a review"
+        ],
+        [
+          "Tools:",
+          "- Programming Languages: Python, R - Software Tools: Jupyter Notebook, TensorFlow, Scikit-Learn, Pandas - Databases and Datasets: Kaggle, UCI Machine Learning Repository, Government databases - Additional Resources: Google Scholar for research papers, GitHub for code repositories"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "765/QĐ-ĐHFPT dated 07/29/2024"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          "\"- The essential capstone project is mandatory, focusing on solving a real-world data challenge. It comprises 100% of assessments, culminating in a final exam by oral presentation. - The final mark is determined by summing the weighted scores of Report 1 (10%), Report 2 (20%), Report 3 (40%), Final Report (10%), and Final Exam[Oral presentation] (20%). - The final exam [oral group presentation] takes place in class, individually evaluated by one professor. Retakes are permissible, involving the submission of a revised final report and presentation, also evaluated by one professor.\""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "7/29/2024"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11717",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Science - Capstone Project_Dự án KHDL",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Science - Capstone Project",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DSP391m",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Blended,Project based learning,Active learning,Presentation,Offline",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45h (60 sessions) contact hours + 1h final exam + 104h self-study;",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DSR301m, DBM302m, BDI302c",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This capstone project course is designed to consolidate and apply students' knowledge in data science to tackle real-world challenges. The course emphasizes: - The application of data science techniques to solve practical problems. - The identification and adaptation of data science methodologies from current research for specific problems. - The development of a comprehensive solution approach using data science. - The evaluation and analysis of results from data science projects. - Recognition of appropriate scenarios for data science applications. - Selection of suitable metrics for project evaluation. - Understanding the ethical and legal implications of data handling. - Implementation and reflection on various data science algorithms including preprocessing, machine learning models, and advanced analytical techniques. - Effective teamwork and project management.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Select a suitable project and form teams. - Allocate and schedule tasks among team members. - Develop a project output that meets the specified requirements and demonstrates individual contributions. - Present and defend the project in front of a review",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Programming Languages: Python, R - Software Tools: Jupyter Notebook, TensorFlow, Scikit-Learn, Pandas - Databases and Datasets: Kaggle, UCI Machine Learning Repository, Government databases - Additional Resources: Google Scholar for research papers, GitHub for code repositories",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "765/QĐ-ĐHFPT dated 07/29/2024",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "\"- The essential capstone project is mandatory, focusing on solving a real-world data challenge. It comprises 100% of assessments, culminating in a final exam by oral presentation. - The final mark is determined by summing the weighted scores of Report 1 (10%), Report 2 (20%), Report 3 (40%), Final Report (10%), and Final Exam[Oral presentation] (20%). - The final exam [oral group presentation] takes place in class, individually evaluated by one professor. Retakes are permissible, involving the submission of a revised final report and presentation, also evaluated by one professor.\"",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "7/29/2024",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Data Mining Pipeline",
+          "University of Colorado Boulder",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/data-mining-pipeline?specialization=data-mining-foundations-practice"
+        ],
+        [
+          "2",
+          "Data Visualization",
+          "University of Illinois at Urbana-Champaign",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/datavisualization?specialization=data-mining"
+        ],
+        [
+          "3",
+          "Pattern Discovery in Data Mining",
+          "University of Illinois at Urbana-Champaign",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/data-patterns?specialization=data-mining"
+        ],
+        [
+          "4",
+          "Cluster Analysis in Data Mining",
+          "University of Illinois at Urbana-Champaign",
+          "Coursera",
+          "",
+          "",
+          "",
+          "True",
+          "False",
+          "True",
+          "https://www.coursera.org/learn/cluster-analysis?specialization=data-mining"
+        ],
+        [
+          "5",
+          "Research Paper: Various research papers on machine learning algorithms",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://scholar.google.com/"
+        ],
+        [
+          "6",
+          "Dataset: Publicly available datasets from Kaggle",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          "https://www.kaggle.com/"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Mining Pipeline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "University of Colorado Boulder",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/data-mining-pipeline?specialization=data-mining-foundations-practice",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Data Visualization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "University of Illinois at Urbana-Champaign",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/datavisualization?specialization=data-mining",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Pattern Discovery in Data Mining",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "University of Illinois at Urbana-Champaign",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/data-patterns?specialization=data-mining",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cluster Analysis in Data Mining",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "University of Illinois at Urbana-Champaign",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/cluster-analysis?specialization=data-mining",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Research Paper: Various research papers on machine learning algorithms",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://scholar.google.com/",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Dataset: Publicly available datasets from Kaggle",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.kaggle.com/",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "10 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Identify relevant data science techniques for addressing Capstone Project topics."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Formulate clear problem statements and objectives in project proposals."
+        ],
+        [
+          "3",
+          "CLO3",
+          "Plan and execute data collection and cleaning procedures effectively."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Conduct exploratory data analysis (EDA) to uncover patterns and insights in data."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Develop and deploy machine learning models tailored to project requirements."
+        ],
+        [
+          "6",
+          "CLO6",
+          "Evaluate, refine, and optimize machine learning models for improved performance."
+        ],
+        [
+          "7",
+          "CLO7",
+          "Interpret and visualize results effectively to communicate findings to stakeholders."
+        ],
+        [
+          "8",
+          "CLO8",
+          "Summarize conclusions drawn from data analysis and provide actionable recommendations."
+        ],
+        [
+          "9",
+          "CLO9",
+          "Compile comprehensive final project reports integrating insights and methodologies learned throughout the course."
+        ],
+        [
+          "10",
+          "CLO10",
+          "Enhance oral presentation skills through participation in Team Meetings and Final Presentations."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Identify relevant data science techniques for addressing Capstone Project topics.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Formulate clear problem statements and objectives in project proposals.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Plan and execute data collection and cleaning procedures effectively.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Conduct exploratory data analysis (EDA) to uncover patterns and insights in data.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop and deploy machine learning models tailored to project requirements.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Evaluate, refine, and optimize machine learning models for improved performance.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Interpret and visualize results effectively to communicate findings to stakeholders.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Summarize conclusions drawn from data analysis and provide actionable recommendations.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Compile comprehensive final project reports integrating insights and methodologies learned throughout the course.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Enhance oral presentation skills through participation in Team Meetings and Final Presentations.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "[Chapter 1: Course Introduction and Group Formation] Introduction to the course",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Syllabus DSP391m, Instructional Slide Chapter 1",
+          "mat1",
+          "Attend lecture, participate in discussions on course intro & Capstone Project importance.",
+          ""
+        ],
+        [
+          "2",
+          "Discussion on the Capstone Project (CP) topic",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Syllabus DSP391m, Instructional Slide Chapter 1",
+          "",
+          "Attend lecture, engage in course objectives & structure intro.",
+          ""
+        ],
+        [
+          "3",
+          "Formation of teams/groups",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Syllabus DSP391m, Instructional Slide Chapter 1",
+          "",
+          "Collaborate to form project teams or groups.",
+          ""
+        ],
+        [
+          "4",
+          "Discuss and choose a project topic",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Syllabus DSP391m, Instructional Slide Chapter 1",
+          "",
+          "Discuss and help select suitable project topics.",
+          ""
+        ],
+        [
+          "5",
+          "[Chapter 2: Project Proposal ] Guide Report No.1: Project Proposal",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Instructional Slide Chapter 2",
+          "",
+          "Attend lecture and participate in discussions on proposal preparation",
+          ""
+        ],
+        [
+          "6",
+          "Report No.1: Project Proposal (Discussion)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Project Template",
+          "",
+          "Actively participate, provide feedback on proposal",
+          ""
+        ],
+        [
+          "7",
+          "References related to Report 1",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Instructional Slide Chapter 2",
+          "",
+          "Search, review relevant references for proposal",
+          ""
+        ],
+        [
+          "8",
+          "Team Meeting: Project Proposal Writing",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Instructional Slide Chapter 2",
+          "",
+          "Draft introduction, problem statement of proposal",
+          ""
+        ],
+        [
+          "9",
+          "Report No.1 Submission: Introduction & Problem Statement",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Instructional Slide Chapter 2",
+          "",
+          "Draft introduction, problem statement of proposal",
+          ""
+        ],
+        [
+          "10",
+          "Team Meeting: Instructor's feedbacks for Project Proposal & Group Division",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Instructional Slide Chapter 2",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "11",
+          "Team Meeting: Project Proposal Improvement",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Instructional Slide Chapter 2",
+          "",
+          "Engage in discussions, finalize proposal, allocate tasks",
+          ""
+        ],
+        [
+          "12",
+          "Report No.1 Final Submission",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Instructional Slide Chapter 2",
+          "",
+          "Engage in discussions, finalize proposal, allocate tasks",
+          ""
+        ],
+        [
+          "13",
+          "[Chapter 3: Data Collection and Cleaning] Guide Report No.2: Data Tasks [Part 1: Data Collection and Cleaning]",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Attend lecture and participate in discussions on data collection and cleaning plan.",
+          ""
+        ],
+        [
+          "14",
+          "References related to Report No.2: Data Collection and Cleaning Plan",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Review references related to data collection and cleaning plan.",
+          ""
+        ],
+        [
+          "15",
+          "Team Meeting: Data Collection(Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Participate in team meeting to discuss data collection and cleaning.",
+          ""
+        ],
+        [
+          "16",
+          "Team Meeting: Instructor's feedbacks for Data Collection",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "17",
+          "Team Meeting: Data Collection Improvement",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Participate in team meeting to discuss data collection and cleaning.",
+          ""
+        ],
+        [
+          "18",
+          "Team Meeting: Data Cleaning (Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Participate in team meeting to discuss data collection and cleaning.",
+          ""
+        ],
+        [
+          "19",
+          "Team Meeting: Instructor's feedbacks for Data Cleaning",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "20",
+          "Team Meeting: Data Cleaning Improvement",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Instructional Slide Chapter 3",
+          "",
+          "Participate in team meeting to discuss data collection and cleaning.",
+          ""
+        ],
+        [
+          "21",
+          "[Chapter 4: Exploratory Data Analysis ] Guide Report No.2: Data Tasks [Part 2: Exploratory Data Analysis]",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Instructional Slide Chapter 4",
+          "",
+          "Attend lecture and participate in discussions on exploratory data analysis.",
+          ""
+        ],
+        [
+          "22",
+          "References related to Report No.2: Exploratory Data Analysis",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Instructional Slide Chapter 4",
+          "",
+          "Review references related to exploratory data analysis.",
+          ""
+        ],
+        [
+          "23",
+          "Team Meeting: Exploratory Data Analysis (Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Instructional Slide Chapter 4",
+          "",
+          "Participate in team meeting to discuss exploratory data analysis.",
+          ""
+        ],
+        [
+          "24",
+          "Team Meeting: Instructor's feedback for Exploratory Data Analysis",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Instructional Slide Chapter 4",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "25",
+          "Team Meeting: Exploratory Data Analysis Improvement",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Instructional Slide Chapter 4",
+          "",
+          "Participate in team meeting to EDA",
+          ""
+        ],
+        [
+          "26",
+          "Report No.2 Submission: Data Tasks",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Project Template",
+          "",
+          "Submit report 2 of exploratory data analysis report.",
+          ""
+        ],
+        [
+          "27",
+          "Team Meeting: Instructor's feedbacks for Data Tasks all phase",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Instructional Slide Chapter 4",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "28",
+          "Team Meeting: Data Tasks Improvement",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Instructional Slide Chapter 4",
+          "",
+          "Participate in team meeting to discuss all data tasks phase.",
+          ""
+        ],
+        [
+          "29",
+          "[Chapter 5: Model Development] Guide Report No.3: Model & Result [ Part 1: Model Development]",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Instructional Slide Chapter 5",
+          "",
+          "Attend lecture and participate in discussions on model development.",
+          ""
+        ],
+        [
+          "30",
+          "References related to Report No.3: Model Development",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Instructional Slide Chapter 5",
+          "",
+          "Review references related to model development.",
+          ""
+        ],
+        [
+          "31",
+          "Team Meeting: Model Development (Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Instructional Slide Chapter 5",
+          "",
+          "Participate in team meeting to discuss model development.",
+          ""
+        ],
+        [
+          "32",
+          "Team Meeting: Instructor's feedback for Model Development",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Instructional Slide Chapter 5",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "33",
+          "Team Meeting: Model Development Improvement",
+          "Offline",
+          "CLO5",
+          "TU",
+          "Instructional Slide Chapter 5",
+          "",
+          "Participate in team meeting to discuss model development.",
+          ""
+        ],
+        [
+          "34",
+          "[Chapter 6:Model Evaluation and Fine-Tuning] Guide Report No.3: Model & Result [ Part 2: Model Evaluation and Fine-Tuning]",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Instructional Slide Chapter 6",
+          "",
+          "Attend lecture and participate in discussions on model evaluation and fine-tuning.",
+          ""
+        ],
+        [
+          "35",
+          "References related to Report No.3: Model Evaluation and Fine-Tuning",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Instructional Slide Chapter 6",
+          "",
+          "Review references related to model evaluation and fine-tuning.",
+          ""
+        ],
+        [
+          "36",
+          "Team Meeting: Model Evaluation and Fine-Tuning (Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Instructional Slide Chapter 6",
+          "",
+          "Participate in team meeting to discuss model evaluation and fine-tuning.",
+          ""
+        ],
+        [
+          "37",
+          "Team Meeting: Instructor's feedbacks for Model Evaluation and Fine-Tuning",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Instructional Slide Chapter 6",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "38",
+          "Team Meeting: Model Evaluation and Fine-Tuning Improvement",
+          "Offline",
+          "CLO6",
+          "TU",
+          "Instructional Slide Chapter 6",
+          "",
+          "Participate in team meeting to discuss model evaluation and fine-tuning.",
+          ""
+        ],
+        [
+          "39",
+          "[Chapter 7: Results Interpretation and Visualization]Guide Report No.3: Model & Result [ Part 3: Results Interpretation and Visualization]",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Instructional Slide Chapter 7",
+          "",
+          "Attend lecture and participate in discussions on results interpretation and visualization.",
+          ""
+        ],
+        [
+          "40",
+          "References related to Report No.3: Results Interpretation and Visualization",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Instructional Slide Chapter 7",
+          "",
+          "Review references related to results interpretation and visualization.",
+          ""
+        ],
+        [
+          "41",
+          "Team Meeting: Results Interpretation and Visualization (Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Instructional Slide Chapter 7",
+          "",
+          "Participate in team meeting to discuss results interpretation and visualization.",
+          ""
+        ],
+        [
+          "42",
+          "Team Meeting: Instructor's feedbacks for Results Interpretation and Visualization",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Instructional Slide Chapter 7",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "43",
+          "Team Meeting: Results Interpretation and Visualization Improvement",
+          "Offline",
+          "CLO7",
+          "TU",
+          "Instructional Slide Chapter 7",
+          "",
+          "Participate in team meeting to discuss results interpretation and visualization.",
+          ""
+        ],
+        [
+          "44",
+          "[Chapter 8: Conclusion and Recommendations ]Guide Report No.3: Model & Result [ Part 4: Conclusion and Recommendations]",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Instructional Slide Chapter 8",
+          "",
+          "Attend lecture and participate in discussions on conclusions and recommendations.",
+          ""
+        ],
+        [
+          "45",
+          "References related to Report No.3: Conclusion and Recommendations",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Instructional Slide Chapter 8",
+          "",
+          "Review references related to conclusions and recommendations.",
+          ""
+        ],
+        [
+          "46",
+          "Team Meeting: Conclusion and Recommendations (Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Instructional Slide Chapter 8",
+          "",
+          "Participate in team meeting to discuss conclusions and recommendations.",
+          ""
+        ],
+        [
+          "47",
+          "Team Meeting: Instructor's feedbacks for Conclusion and Recommendations",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Instructional Slide Chapter 8",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "48",
+          "Team Meeting: Conclusion and Recommendations Improvement",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Instructional Slide Chapter 8",
+          "",
+          "Participate in team meeting to discuss conclusions and recommendations.",
+          ""
+        ],
+        [
+          "49",
+          "Report No.3 Submission: Model & Results",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Project Template",
+          "",
+          "Submit report 3 of Model & Results",
+          ""
+        ],
+        [
+          "50",
+          "Team Meeting: Instructor's feedbacks for Model & Results all phase",
+          "Offline",
+          "CLO8",
+          "TU",
+          "Instructional Slide Chapter 8",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "51",
+          "Team Meeting: Model & Results Improvement",
+          "Offline",
+          "CLO9",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in team meeting to Model & Results",
+          ""
+        ],
+        [
+          "52",
+          "[Chapter 9: Finalization and Presentations] Guide Final Report",
+          "Offline",
+          "CLO9",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in discussions related to the final report.",
+          ""
+        ],
+        [
+          "53",
+          "References related to Final Report",
+          "Offline",
+          "CLO9",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in team meeting for practicing the final report",
+          ""
+        ],
+        [
+          "54",
+          "Team Meeting: Final Report (Present the issues discussed and agreed upon by the group)",
+          "Offline",
+          "CLO9",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in team meeting for practicing the final report",
+          ""
+        ],
+        [
+          "55",
+          "Team Meeting: Instructor's discussion for Final Report",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Present discussed and agreed-upon issues from team meeting.",
+          ""
+        ],
+        [
+          "56",
+          "Team Meeting: Final Report Improvement",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in team meeting for practicing the final report",
+          ""
+        ],
+        [
+          "57",
+          "Final Report Submission",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Project Template",
+          "",
+          "Submit the final report according to the submission guidelines.",
+          ""
+        ],
+        [
+          "58",
+          "Team Meeting: Practice for Presentation of Capstone Project",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in team meeting for practicing the project presentation.",
+          ""
+        ],
+        [
+          "59",
+          "Team Meeting: Practice for Presentation of Capstone Project",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in team meeting for practicing the project presentation.",
+          ""
+        ],
+        [
+          "60",
+          "Team Meeting: Practice for Presentation of Capstone Project",
+          "Offline",
+          "CLO10",
+          "TU",
+          "Instructional Slide Chapter 9",
+          "",
+          "Participate in team meeting for practicing the project presentation.",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 1: Course Introduction and Group Formation] Introduction to the course",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Syllabus DSP391m, Instructional Slide Chapter 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "mat1",
+            "links": [
+              {
+                "text": "mat1",
+                "href": "https://flm.fpt.edu.vn/download/11232/S/1_mat1.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture, participate in discussions on course intro & Capstone Project importance.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discussion on the Capstone Project (CP) topic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Syllabus DSP391m, Instructional Slide Chapter 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture, engage in course objectives & structure intro.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Formation of teams/groups",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Syllabus DSP391m, Instructional Slide Chapter 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Collaborate to form project teams or groups.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss and choose a project topic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Syllabus DSP391m, Instructional Slide Chapter 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Discuss and help select suitable project topics.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 2: Project Proposal ] Guide Report No.1: Project Proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture and participate in discussions on proposal preparation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report No.1: Project Proposal (Discussion)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Actively participate, provide feedback on proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Report 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Search, review relevant references for proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Project Proposal Writing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draft introduction, problem statement of proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report No.1 Submission: Introduction & Problem Statement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Draft introduction, problem statement of proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Project Proposal & Group Division",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Project Proposal Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Engage in discussions, finalize proposal, allocate tasks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report No.1 Final Submission",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Engage in discussions, finalize proposal, allocate tasks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 3: Data Collection and Cleaning] Guide Report No.2: Data Tasks [Part 1: Data Collection and Cleaning]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture and participate in discussions on data collection and cleaning plan.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Report No.2: Data Collection and Cleaning Plan",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review references related to data collection and cleaning plan.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Data Collection(Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss data collection and cleaning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Data Collection",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Data Collection Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss data collection and cleaning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Data Cleaning (Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss data collection and cleaning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Data Cleaning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Data Cleaning Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss data collection and cleaning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 4: Exploratory Data Analysis ] Guide Report No.2: Data Tasks [Part 2: Exploratory Data Analysis]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture and participate in discussions on exploratory data analysis.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Report No.2: Exploratory Data Analysis",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review references related to exploratory data analysis.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Exploratory Data Analysis (Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss exploratory data analysis.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedback for Exploratory Data Analysis",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Exploratory Data Analysis Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to EDA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report No.2 Submission: Data Tasks",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit report 2 of exploratory data analysis report.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Data Tasks all phase",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Data Tasks Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss all data tasks phase.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 5: Model Development] Guide Report No.3: Model & Result [ Part 1: Model Development]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture and participate in discussions on model development.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Report No.3: Model Development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review references related to model development.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Model Development (Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss model development.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedback for Model Development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Model Development Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss model development.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 6:Model Evaluation and Fine-Tuning] Guide Report No.3: Model & Result [ Part 2: Model Evaluation and Fine-Tuning]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture and participate in discussions on model evaluation and fine-tuning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Report No.3: Model Evaluation and Fine-Tuning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review references related to model evaluation and fine-tuning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Model Evaluation and Fine-Tuning (Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss model evaluation and fine-tuning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Model Evaluation and Fine-Tuning",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Model Evaluation and Fine-Tuning Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss model evaluation and fine-tuning.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 7: Results Interpretation and Visualization]Guide Report No.3: Model & Result [ Part 3: Results Interpretation and Visualization]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture and participate in discussions on results interpretation and visualization.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Report No.3: Results Interpretation and Visualization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review references related to results interpretation and visualization.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Results Interpretation and Visualization (Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss results interpretation and visualization.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Results Interpretation and Visualization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Results Interpretation and Visualization Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss results interpretation and visualization.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 8: Conclusion and Recommendations ]Guide Report No.3: Model & Result [ Part 4: Conclusion and Recommendations]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Attend lecture and participate in discussions on conclusions and recommendations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Report No.3: Conclusion and Recommendations",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Review references related to conclusions and recommendations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Conclusion and Recommendations (Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss conclusions and recommendations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Conclusion and Recommendations",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Conclusion and Recommendations Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to discuss conclusions and recommendations.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report No.3 Submission: Model & Results",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit report 3 of Model & Results",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's feedbacks for Model & Results all phase",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Model & Results Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting to Model & Results",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "[Chapter 9: Finalization and Presentations] Guide Final Report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in discussions related to the final report.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "References related to Final Report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting for practicing the final report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Final Report (Present the issues discussed and agreed upon by the group)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting for practicing the final report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Instructor's discussion for Final Report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Present discussed and agreed-upon issues from team meeting.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Final Report Improvement",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting for practicing the final report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final Report Submission",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Template",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Submit the final report according to the submission guidelines.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Practice for Presentation of Capstone Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting for practicing the project presentation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Practice for Presentation of Capstone Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting for practicing the project presentation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Team Meeting: Practice for Presentation of Capstone Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Instructional Slide Chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Participate in team meeting for practicing the project presentation.",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Report 1: Project Proposal",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "225'",
+          "CLO1, CLO2",
+          "Home work, class",
+          "1",
+          "- cover chapter 1,2",
+          "homework, class, by instructor",
+          ""
+        ],
+        [
+          "2",
+          "Report 2: Data Tasks [ Data Collection and Cleaning + Exploratory Data Analysis]",
+          "on-going",
+          "1",
+          "20.0%",
+          ">0",
+          "225'",
+          "CLO3, CLO4",
+          "Home work, class",
+          "1",
+          "- cover chapter 3,4",
+          "homework, class, by instructor",
+          ""
+        ],
+        [
+          "3",
+          "Report 3: Model & Results[ Model Development + Model Evaluation and Fine-Tuning + Results Interpretation and Visualization + Conclusion and Recommendations]",
+          "on-going",
+          "1",
+          "40.0%",
+          ">0",
+          "225'",
+          "CLO5, CLO6, CLO7, CLO8",
+          "Home work, class",
+          "1",
+          "- cover chapter 5,6,7,8",
+          "homework, class, by instructor",
+          ""
+        ],
+        [
+          "4",
+          "Report 4: Final Project Report",
+          "on-going",
+          "1",
+          "10.0%",
+          ">0",
+          "225'",
+          "CLO9",
+          "Home work, class",
+          "1",
+          "- cover chapter 9",
+          "homework, class, by instructor",
+          ""
+        ],
+        [
+          "5",
+          "Final exam[ Oral group presentatation]",
+          "Final exam",
+          "1",
+          "20.0%",
+          "4",
+          "30'",
+          "CLO10",
+          "Oral Group Presentation",
+          "10",
+          "- cover chapter 1, 2, 3,4,5,6,7,8,9,10",
+          "class, by instructor",
+          "- The final exam [oral group presentation] takes place in class, individually evaluated by one professor. Retakes are permissible, involving the submission of a revised final report and presentation, also evaluated by one professor. - The operation is operated by the Testing Department."
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report 1: Project Proposal",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "225'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Home work, class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 1,2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "homework, class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report 2: Data Tasks [ Data Collection and Cleaning + Exploratory Data Analysis]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "225'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Home work, class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 3,4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "homework, class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report 3: Model & Results[ Model Development + Model Evaluation and Fine-Tuning + Results Interpretation and Visualization + Conclusion and Recommendations]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "225'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5, CLO6, CLO7, CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Home work, class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 5,6,7,8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "homework, class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Report 4: Final Project Report",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "225'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Home work, class",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "homework, class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam[ Oral group presentatation]",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Oral Group Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- cover chapter 1, 2, 3,4,5,6,7,8,9,10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "class, by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- The final exam [oral group presentation] takes place in class, individually evaluated by one professor. Retakes are permissible, involving the submission of a revised final report and presentation, also evaluated by one professor. - The operation is operated by the Testing Department.",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

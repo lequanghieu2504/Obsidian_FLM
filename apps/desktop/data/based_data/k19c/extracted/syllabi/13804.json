@@ -1,0 +1,5029 @@
+{
+  "id": "13804",
+  "metadata": {
+    "Syllabus ID": "13804",
+    "Syllabus Name": "Working with Spring Framework_Làm việc với Spring Framework",
+    "Course Name English": "Working with Spring Framework",
+    "Subject Code": "HSF302",
+    "Learning-Teaching Method": "Project based learning,Problem based learning,Active learning,In-class lecture",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study",
+    "Pre-Requisite": "PRJ301",
+    "Description": "Upon completion of this course students shoud: 1. Understand the followings: • Basic concepts of Java FX to build Desktop Application • Basics of Object-Relational Mapping (ORM) with JPA and how it simplifies database interactions. • Spring Framework, Spring Boot, which provides a comprehensive ecosystem for building enterprise-level applications. • Spring Framework's dependency injection, and web frameworks to build robust and scalable applications 2. Be able to: • Use JPA ORM tool to map Java objects to database tables. • Use Spring Framework's dependency injection, and web frameworks to build robust and scalable applications. • Develop Cross-platform Desktop applications and support for user experience (UI & UX) 3. Be able to work in team and present group's results",
+    "StudentTasks": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information",
+    "Tools": "- Internet - IntelliJ IDEA - Platform : Java Development Kit 21 - Scene Builder 23",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1402/QĐ-ĐHFPT dated 12/12/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "12/12/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13804"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13804"
+        ],
+        [
+          "Syllabus Name:",
+          "Working with Spring Framework_Làm việc với Spring Framework"
+        ],
+        [
+          "Course Name English:",
+          "Working with Spring Framework"
+        ],
+        [
+          "Subject Code:",
+          "HSF302"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Project based learning,Problem based learning,Active learning,In-class lecture"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "PRJ301"
+        ],
+        [
+          "Description:",
+          "Upon completion of this course students shoud: 1. Understand the followings: • Basic concepts of Java FX to build Desktop Application • Basics of Object-Relational Mapping (ORM) with JPA and how it simplifies database interactions. • Spring Framework, Spring Boot, which provides a comprehensive ecosystem for building enterprise-level applications. • Spring Framework's dependency injection, and web frameworks to build robust and scalable applications 2. Be able to: • Use JPA ORM tool to map Java objects to database tables. • Use Spring Framework's dependency injection, and web frameworks to build robust and scalable applications. • Develop Cross-platform Desktop applications and support for user experience (UI & UX) 3. Be able to work in team and present group's results"
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Internet - IntelliJ IDEA - Platform : Java Development Kit 21 - Scene Builder 23"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1402/QĐ-ĐHFPT dated 12/12/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "12/12/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13804",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working with Spring Framework_Làm việc với Spring Framework",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working with Spring Framework",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HSF302",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project based learning,Problem based learning,Active learning,In-class lecture",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 145-minute final exam + 102,6h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PRJ301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Upon completion of this course students shoud: 1. Understand the followings: • Basic concepts of Java FX to build Desktop Application • Basics of Object-Relational Mapping (ORM) with JPA and how it simplifies database interactions. • Spring Framework, Spring Boot, which provides a comprehensive ecosystem for building enterprise-level applications. • Spring Framework's dependency injection, and web frameworks to build robust and scalable applications 2. Be able to: • Use JPA ORM tool to map Java objects to database tables. • Use Spring Framework's dependency injection, and web frameworks to build robust and scalable applications. • Develop Cross-platform Desktop applications and support for user experience (UI & UX) 3. Be able to work in team and present group's results",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Internet - IntelliJ IDEA - Platform : Java Development Kit 21 - Scene Builder 23",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1402/QĐ-ĐHFPT dated 12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "JPA",
+          "",
+          "",
+          "",
+          "",
+          "N/A",
+          "True",
+          "False",
+          "True",
+          "https://docs.spring.io/spring-data/jpa/reference/jpa.html"
+        ],
+        [
+          "2",
+          "Spring Framework Essentials",
+          "",
+          "Spring Academy",
+          "",
+          "",
+          "N/A",
+          "False",
+          "False",
+          "True",
+          "https://spring.academy/courses/spring-framework-essentials"
+        ],
+        [
+          "3",
+          "Spring Framework - Core Technologies",
+          "",
+          "Spring Academy",
+          "",
+          "",
+          "N/A",
+          "True",
+          "False",
+          "True",
+          "https://docs.spring.io/spring-framework/reference/core.html"
+        ],
+        [
+          "4",
+          "Spring Framework Specialization",
+          "",
+          "Coursera",
+          "",
+          "",
+          "N/A",
+          "False",
+          "False",
+          "True",
+          "https://www.coursera.org/specializations/spring-framework"
+        ],
+        [
+          "5",
+          "Java FX",
+          "",
+          "Java FX",
+          "",
+          "",
+          "N/A",
+          "True",
+          "False",
+          "True",
+          "https://openjfx.io/openjfx-docs/"
+        ],
+        [
+          "6",
+          "Spring 6 & Spring Boot 3 for Beginners",
+          "",
+          "Udemy",
+          "",
+          "",
+          "N/A",
+          "False",
+          "False",
+          "True",
+          "https://www.udemy.com/course/learn-spring-boot/"
+        ],
+        [
+          "7",
+          "Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3",
+          "Andres Sacco",
+          "Apress",
+          "29/12/2022",
+          "1st",
+          "1484287630",
+          "False",
+          "True",
+          "False",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "JPA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Framework Essentials",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Academy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.academy/courses/spring-framework-essentials",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Framework - Core Technologies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Academy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Framework Specialization",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Coursera",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/specializations/spring-framework",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Java FX",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Java FX",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring 6 & Spring Boot 3 for Beginners",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Udemy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.udemy.com/course/learn-spring-boot/",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Andres Sacco",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Apress",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "29/12/2022",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1st",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1484287630",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Describe the basics of Object-Relational Mapping (ORM) and how it simplifies database interactions."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Describe the concepts of Spring Framework and Spring Boot"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Describe how Spring Data working with various data sources"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Undersatnd Spring MVC provides a comprehensive programming and configuration model for modern Java-based enterprise applications."
+        ],
+        [
+          "5",
+          "CLO5",
+          "Create Cross-Platform applications using JavaFX. JavaFX is platform-independent, which means that JavaFX applications (CRUD) can run on different operating systems such as Windows, macOS, and Linux"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Develop teamwork skills, communication skills (including presentation skills)"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe the basics of Object-Relational Mapping (ORM) and how it simplifies database interactions.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe the concepts of Spring Framework and Spring Boot",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Describe how Spring Data working with various data sources",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Undersatnd Spring MVC provides a comprehensive programming and configuration model for modern Java-based enterprise applications.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Create Cross-Platform applications using JavaFX. JavaFX is platform-independent, which means that JavaFX applications (CRUD) can run on different operating systems such as Windows, macOS, and Linux",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Develop teamwork skills, communication skills (including presentation skills)",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction",
+          "Offline",
+          "CLO1",
+          "IT",
+          "Slide",
+          "HSF302",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "2",
+          "Working Environment",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.oracle.com/java/technologies/downloads/https://www.eclipse.org/downloads/packages/https://www.jetbrains.com/idea/download/https://spring.io/toolshttps://gluonhq.com/products/scene-builder/https://spring.io/tools",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "3",
+          "Project Introduction",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Project List",
+          "",
+          "- Choose Group- Choose Topic- Collect requirements about topic",
+          ""
+        ],
+        [
+          "4",
+          "Chapter 01: JPA, JPA Mapping",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "5",
+          "Chapter 01: JPA, JPA Mapping (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "6",
+          "Chapter 01: JPA, JPA Mapping (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "7",
+          "Chapter 01: JPA, JPA Mapping (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "8",
+          "Chapter 01: JPA, JPA Mapping (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "9",
+          "Chapter 01: JPA, JPA Mapping (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "10",
+          "Chapter 02: Introduction to Spring Framework",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "11",
+          "Chapter 02: Introduction to Spring Framework (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "12",
+          "Chapter 05: Introduction to Spring Framework (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "13",
+          "Chapter 03: Spring Boot Concepts",
+          "Offline",
+          "CLO2",
+          "ITU",
+          "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3: Chapter 02",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "14",
+          "Chapter 03: Spring Boot Concepts (contd.)",
+          "Offline",
+          "CLO2",
+          "ITU",
+          "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 02",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "15",
+          "Chapter 03: Spring Boot Concepts (contd.)",
+          "Offline",
+          "CLO2",
+          "ITU",
+          "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 02",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "16",
+          "Chapter 03: Spring Boot Concepts (contd.)",
+          "Offline",
+          "CLO2",
+          "ITU",
+          "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 03",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "17",
+          "Chapter 03: Spring Boot Concepts (contd.)",
+          "Offline",
+          "CLO2",
+          "ITU",
+          "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "18",
+          "Chapter 03: Spring Boot Concepts (contd.)",
+          "Offline",
+          "CLO2",
+          "ITU",
+          "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 05",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "19",
+          "Chapter 04. Spring Data JPA",
+          "Offline",
+          "CLO3",
+          "IT",
+          "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "20",
+          "Chapter 04. Spring Data JPA (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "21",
+          "Chapter 04. Spring Data JPA (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "22",
+          "Chapter 04. Spring Data JPA (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "23",
+          "Chapter 04. Spring Data JPA (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "24",
+          "Chapter 04. Spring Data JPA (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "25",
+          "Guiding Assignment 01",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Assignment 01",
+          "",
+          "- Read the requirements of Assignment 01- Self practice",
+          ""
+        ],
+        [
+          "26",
+          "Progress Test 01",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Quiz LMS",
+          "",
+          "- Take Quiz 01",
+          ""
+        ],
+        [
+          "27",
+          "Project Assistant - 01",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Group Project List",
+          "",
+          "- Discuss project problems",
+          ""
+        ],
+        [
+          "28",
+          "Chapter 05: Spring MVC",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "29",
+          "Chapter 05: Spring MVC (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "30",
+          "Chapter 05: Spring MVC (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "31",
+          "Guiding Assignment 02",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Assignment 02",
+          "",
+          "- Read the requirements of Assignment 02- Self practice",
+          ""
+        ],
+        [
+          "32",
+          "Progress Test 02",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Quiz LMS",
+          "",
+          "- Take Quiz 02",
+          ""
+        ],
+        [
+          "33",
+          "Project Assistant - 02",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Group Project List",
+          "",
+          "- Discuss project problems",
+          ""
+        ],
+        [
+          "34",
+          "Chapter 05: Spring MVC (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "35",
+          "Chapter 05: Spring MVC (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "36",
+          "Chapter 05: Spring MVC (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "37",
+          "Chapter 06: Spring Web Development with Thymeleaf",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "38",
+          "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "39",
+          "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "40",
+          "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "41",
+          "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "42",
+          "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "43",
+          "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "44",
+          "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "45",
+          "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "46",
+          "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "47",
+          "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "48",
+          "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "49",
+          "Chapter 08: Introduction to JavaFX",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "50",
+          "Chapter 08: Introduction to JavaFX (contd.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "51",
+          "Chapter 08: Introduction to JavaFX (contd.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "52",
+          "Chapter 08: Introduction to JavaFX (contd.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "53",
+          "Chapter 08: Introduction to JavaFX (contd.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "54",
+          "Chapter 08: Introduction to JavaFX (contd.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "55",
+          "Chapter 09: Build application with JavaFX",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "56",
+          "Chapter 09: Build application with JavaFX (contd.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "57",
+          "Chapter 09: Build application with JavaFX (contd.)",
+          "Offline",
+          "CLO5",
+          "TU",
+          "https://openjfx.io/openjfx-docs/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "58",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "59",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "60",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "https://docs.spring.io/spring-framework/reference/core.html",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HSF302",
+            "links": [
+              {
+                "text": "HSF302",
+                "href": "https://flm.fpt.edu.vn/download/12221/S/1_HSF302.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working Environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.oracle.com/java/technologies/downloads/https://www.eclipse.org/downloads/packages/https://www.jetbrains.com/idea/download/https://spring.io/toolshttps://gluonhq.com/products/scene-builder/https://spring.io/tools",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Choose Group- Choose Topic- Collect requirements about topic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: JPA, JPA Mapping",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: JPA, JPA Mapping (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: JPA, JPA Mapping (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: JPA, JPA Mapping (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: JPA, JPA Mapping (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 01: JPA, JPA Mapping (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 02: Introduction to Spring Framework",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 02: Introduction to Spring Framework (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Introduction to Spring Framework (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Spring Boot Concepts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3: Chapter 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Spring Boot Concepts (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Spring Boot Concepts (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Spring Boot Concepts (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 03",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Spring Boot Concepts (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 03: Spring Boot Concepts (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-boot/docs/current/reference/html/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 05",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04. Spring Data JPA",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04. Spring Data JPA (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04. Spring Data JPA (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04. Spring Data JPA (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04. Spring Data JPA (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 04. Spring Data JPA (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-data/jpa/reference/Beginning Spring Data: Data Access and Persistence for Spring Framework 6and Boot 3 : Chapter 04",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Assignment 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the requirements of Assignment 01- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz LMS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Take Quiz 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Assistant - 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss project problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Spring MVC",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Spring MVC (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Spring MVC (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Assignment 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the requirements of Assignment 02- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz LMS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Take Quiz 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Assistant - 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss project problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Spring MVC (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Spring MVC (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 05: Spring MVC (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Spring Web Development with Thymeleaf",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 06: Spring Web Development with Thymeleaf (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 07: Build a simple application with Data Access using Spring & Spring JDBC, Spring ORM (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Introduction to JavaFX",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Introduction to JavaFX (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Introduction to JavaFX (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Introduction to JavaFX (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Introduction to JavaFX (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 08: Introduction to JavaFX (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Build application with JavaFX",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Build application with JavaFX (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 09: Build application with JavaFX (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://openjfx.io/openjfx-docs/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-framework/reference/core.html",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "12 slots",
+          "CLO2, CLO3, CLO4",
+          "",
+          "",
+          "Subjects in syllabus",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "Group Project",
+          "on-going",
+          "1",
+          "25.0%",
+          ">0",
+          "20 slots",
+          "CLO2, CLO3, CLO4, CLO5",
+          "",
+          "",
+          "Subjects in syllabus",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "30'",
+          "CLO1, CLO2, CLO3, CLO4",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "20/each",
+          "",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "2",
+          "55.0%",
+          "4",
+          "145 minutes",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "Each part of the final exam must be >=4/10 & Final Result >=5/10."
+        ],
+        [
+          "5",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "85'",
+          "CLO2, CLO3, CLO4",
+          "",
+          "",
+          "Subjects in syllabus",
+          "By exam board Manual evaluating",
+          ""
+        ],
+        [
+          "6",
+          "Theory Exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "CLO1, CLO2, CLO3, CLO4, CLO5",
+          "",
+          "50",
+          "All subjects in syllabus",
+          "By exam board",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "55.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145 minutes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Each part of the final exam must be >=4/10 & Final Result >=5/10.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theory Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4, CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

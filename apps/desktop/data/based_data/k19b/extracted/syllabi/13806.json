@@ -1,0 +1,4705 @@
+{
+  "id": "13806",
+  "metadata": {
+    "Syllabus ID": "13806",
+    "Syllabus Name": "Microservices with Spring Cloud_Microservices với Spring Cloud",
+    "Course Name English": "Microservices with Spring Cloud",
+    "Subject Code": "MSS301",
+    "Learning-Teaching Method": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 145-minute final exam +102.6h self-study",
+    "Pre-Requisite": "SBA301",
+    "Description": "Upon completion of this course students shoud: 1. Understand the followings: • Microservices, Microservices architecture. • The basics of Spring Cloud and its architecture • The configuration and implementation using Spring Cloud • The microservices architecture using Spring Cloud. • The deployment of microservices-based applications using Docker and Spring Cloud tools 2. Be able to: • Explain about Microservices architecture and its benefits, including scalability, resilience, and fault tolerance. • Explain about Spring Cloud and its architecture • Configure and implement Spring Cloud in a project • Design and implement a microservices architecture using Spring Cloud • Design, build, and deploy microservices-based applications using Docker and Spring Cloud tools 3. Be able to work in team and present group's results",
+    "StudentTasks": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information",
+    "Tools": "- Internet - IntelliJ IDEA or Sping Tool 4 for Eclipse/Visual Studio Code - JDK 20 - Platform: SpringBoot 3",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1402/QĐ-ĐHFPT dated 12/12/2025",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "12/12/2025"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "13806"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "13806"
+        ],
+        [
+          "Syllabus Name:",
+          "Microservices with Spring Cloud_Microservices với Spring Cloud"
+        ],
+        [
+          "Course Name English:",
+          "Microservices with Spring Cloud"
+        ],
+        [
+          "Subject Code:",
+          "MSS301"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Social Constructivism,In-class lecture,Inquiry-based Teaching"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 145-minute final exam +102.6h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "SBA301"
+        ],
+        [
+          "Description:",
+          "Upon completion of this course students shoud: 1. Understand the followings: • Microservices, Microservices architecture. • The basics of Spring Cloud and its architecture • The configuration and implementation using Spring Cloud • The microservices architecture using Spring Cloud. • The deployment of microservices-based applications using Docker and Spring Cloud tools 2. Be able to: • Explain about Microservices architecture and its benefits, including scalability, resilience, and fault tolerance. • Explain about Spring Cloud and its architecture • Configure and implement Spring Cloud in a project • Design and implement a microservices architecture using Spring Cloud • Design, build, and deploy microservices-based applications using Docker and Spring Cloud tools 3. Be able to work in team and present group's results"
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information"
+        ],
+        [
+          "Tools:",
+          "- Internet - IntelliJ IDEA or Sping Tool 4 for Eclipse/Visual Studio Code - JDK 20 - Platform: SpringBoot 3"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1402/QĐ-ĐHFPT dated 12/12/2025"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "12/12/2025"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13806",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Cloud_Microservices với Spring Cloud",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Cloud",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MSS301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Social Constructivism,In-class lecture,Inquiry-based Teaching",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 145-minute final exam +102.6h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SBA301",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Upon completion of this course students shoud: 1. Understand the followings: • Microservices, Microservices architecture. • The basics of Spring Cloud and its architecture • The configuration and implementation using Spring Cloud • The microservices architecture using Spring Cloud. • The deployment of microservices-based applications using Docker and Spring Cloud tools 2. Be able to: • Explain about Microservices architecture and its benefits, including scalability, resilience, and fault tolerance. • Explain about Spring Cloud and its architecture • Configure and implement Spring Cloud in a project • Design and implement a microservices architecture using Spring Cloud • Design, build, and deploy microservices-based applications using Docker and Spring Cloud tools 3. Be able to work in team and present group's results",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact sessions in order to be accepted to the final examination. - Student is responsible to do all assigned exercises given by instructor in class or at home and submit on time - Use laptop in class only for learning purpose - Promptly access to the FU CMS at http://flm.fpt.edu.vn for up-to-date course information",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Internet - IntelliJ IDEA or Sping Tool 4 for Eclipse/Visual Studio Code - JDK 20 - Platform: SpringBoot 3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1402/QĐ-ĐHFPT dated 12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12/12/2025",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Spring Cloud",
+          "Spring Academy",
+          "Spring Academy",
+          "",
+          "",
+          "N/A",
+          "True",
+          "False",
+          "True",
+          "https://docs.spring.io/spring-cloud-release/reference/index.html"
+        ],
+        [
+          "2",
+          "Microservices with Spring Cloud",
+          "Udemy",
+          "Udemy",
+          "",
+          "",
+          "N/A",
+          "False",
+          "False",
+          "True",
+          "https://www.udemy.com/course/microservices-with-spring-cloud/; https://www.udemy.com/course/understanding-microservices-architecture"
+        ],
+        [
+          "3",
+          "Microservices with Spring Boot 3and Spring Cloud",
+          "Magnus Larsson",
+          "Packt Publishing",
+          "Third Edition",
+          "",
+          "1805128698",
+          "False",
+          "False",
+          "False",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Cloud",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Academy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Spring Academy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://docs.spring.io/spring-cloud-release/reference/index.html",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Cloud",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Udemy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Udemy",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "N/A",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.udemy.com/course/microservices-with-spring-cloud/; https://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Magnus Larsson",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Packt Publishing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Third Edition",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1805128698",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "4 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand of Microservices architecture and its benefits, including scalability, resilience, and fault tolerance."
+        ],
+        [
+          "2",
+          "CLO2",
+          "Understand the basics of Spring Cloud and its architecture"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Design and implement a microservices architecture using Spring Cloud."
+        ],
+        [
+          "4",
+          "CLO4",
+          "Design, build, and deploy microservices-based applications using Docker and Spring Cloud tools, including configuration and management of services"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand of Microservices architecture and its benefits, including scalability, resilience, and fault tolerance.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand the basics of Spring Cloud and its architecture",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design and implement a microservices architecture using Spring Cloud.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Design, build, and deploy microservices-based applications using Docker and Spring Cloud tools, including configuration and management of services",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction",
+          "Offline",
+          "CLO1",
+          "IT",
+          "Slide",
+          "MSS301",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "2",
+          "Working Environment",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.oracle.com/java/technologies/downloads/https://www.eclipse.org/downloads/packages/https://www.jetbrains.com/idea/download/https://spring.io/toolshttps://cloud.google.com/https://www.docker.com/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "3",
+          "Project Introduction",
+          "Offline",
+          "CLO1",
+          "TU",
+          "Project List",
+          "",
+          "- Choose Group- Choose Topic- Collect requirements about topic",
+          ""
+        ],
+        [
+          "4",
+          "Chapter 1. Introduction to Microservices",
+          "Offline",
+          "CLO1",
+          "ITU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 01https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/microservices-with-spring-cloud/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "5",
+          "Chapter 1. Introduction to Microservices (contd)",
+          "Offline",
+          "CLO1",
+          "ITU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 01https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/microservices-with-spring-cloud/",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "6",
+          "Chapter 2. Microservices Architecture",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "7",
+          "Chapter 2. Microservices Architecture (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "8",
+          "Chapter 2. Microservices Architecture (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "9",
+          "Chapter 2. Microservices Architecture (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "10",
+          "Chapter 3. Design patterns for microservices",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "11",
+          "Chapter 3. Design patterns for microservices (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "12",
+          "Chapter 3. Design patterns for microservices (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "13",
+          "Chapter 3. Design patterns for microservices (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "14",
+          "Chapter 3. Design patterns for microservices (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "15",
+          "Chapter 3. Design patterns for microservices (contd.)",
+          "Offline",
+          "CLO1",
+          "TU",
+          "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "16",
+          "Chapter 4. Spring Cloud",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "17",
+          "Chapter 4. Spring Cloud (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "18",
+          "Chapter 4. Spring Cloud (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "19",
+          "Chapter 4. Spring Cloud (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "20",
+          "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "21",
+          "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "22",
+          "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "23",
+          "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration (contd.)",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "24",
+          "Guiding Assignment 01",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Assignment 01",
+          "",
+          "- Read the requirements of Assignment 01- Self practice",
+          ""
+        ],
+        [
+          "25",
+          "Progress Test 01",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Quiz LMS",
+          "",
+          "- Take Quiz 01",
+          ""
+        ],
+        [
+          "26",
+          "Project Assistant - 01",
+          "Offline",
+          "CLO2",
+          "TU",
+          "Group Project List",
+          "",
+          "- Discuss project problems",
+          ""
+        ],
+        [
+          "27",
+          "Chapter 6. Transactions in Microservices",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://www.baeldung.com/cs/saga-pattern-microservices",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "28",
+          "Chapter 6. Transactions in Microservices (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://www.baeldung.com/cs/saga-pattern-microservices",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "29",
+          "Chapter 6. Transactions in Microservices (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://www.baeldung.com/cs/saga-pattern-microservices",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "30",
+          "Chapter 6. Transactions in Microservices (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "https://www.baeldung.com/cs/saga-pattern-microservices",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "31",
+          "Chapter 7. Microservices Security",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "32",
+          "Chapter 7. Microservices Security (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "33",
+          "Chapter 7. Microservices Security (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "34",
+          "Chapter 7. Microservices Security (contd.)",
+          "Offline",
+          "CLO3",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference documents- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "35",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "36",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "37",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "38",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "39",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "40",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "41",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "42",
+          "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "43",
+          "Guiding Assignment 02",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Assignment 02",
+          "",
+          "- Read the requirements of Assignment 02- Self practice",
+          ""
+        ],
+        [
+          "44",
+          "Progress Test 02",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Quiz LMS",
+          "",
+          "- Take Quiz 02",
+          ""
+        ],
+        [
+          "45",
+          "Project Assistant - 02",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Group Project List",
+          "",
+          "- Discuss project problems",
+          ""
+        ],
+        [
+          "46",
+          "Chapter 9. Working with Microservices - Spring Boot Google Cloud",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://www.coursera.org/learn/google-cloud-java-spring",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "47",
+          "Chapter 9. Working with Microservices - Spring Boot Google Cloud (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://www.coursera.org/learn/google-cloud-java-spring",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "48",
+          "Chapter 9. Working with Microservices - Spring Boot Google Cloud (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://www.coursera.org/learn/google-cloud-java-spring",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "49",
+          "Chapter 9. Working with Microservices - Spring Boot Google Cloud (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://www.coursera.org/learn/google-cloud-java-spring",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "50",
+          "Chapter 10. Working with Microservices - Spring Boot with Docker container",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "51",
+          "Chapter 10. Working with Microservices - Spring Boot with Docker container (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "52",
+          "Chapter 10. Working with Microservices - Spring Boot with Docker container (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "53",
+          "Chapter 10. Working with Microservices - Spring Boot with Docker container (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "54",
+          "Chapter 11. Working with Microservices - Deploying Microservices using Docker",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "55",
+          "Chapter 11. Working with Microservices - Deploying Microservices using Docker (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "56",
+          "Chapter 11. Working with Microservices - Deploying Microservices using Docker (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "57",
+          "Chapter 11. Working with Microservices - Deploying Microservices using Docker (contd.)",
+          "Offline",
+          "CLO4",
+          "TU",
+          "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "58",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "59",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ],
+        [
+          "60",
+          "Project Evaluation",
+          "Offline",
+          "CLO1, CLO2, CLO3, CLO4",
+          "TU",
+          "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+          "",
+          "- Read the slide, related reference document- Do exercises- Self practice",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "IT",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slide",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "MSS301",
+            "links": [
+              {
+                "text": "MSS301",
+                "href": "https://flm.fpt.edu.vn/download/12587/S/1_MSS301.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Working Environment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.oracle.com/java/technologies/downloads/https://www.eclipse.org/downloads/packages/https://www.jetbrains.com/idea/download/https://spring.io/toolshttps://cloud.google.com/https://www.docker.com/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Choose Group- Choose Topic- Collect requirements about topic",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1. Introduction to Microservices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 01https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/microservices-with-spring-cloud/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1. Introduction to Microservices (contd)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ITU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 01https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/microservices-with-spring-cloud/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2. Microservices Architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2. Microservices Architecture (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2. Microservices Architecture (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 2. Microservices Architecture (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://cloud.google.com/architecture/microservices-architecture-introductionhttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Design patterns for microservices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Design patterns for microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Design patterns for microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Design patterns for microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Design patterns for microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 3. Design patterns for microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.atlassian.com/microservices/cloud-computing/microservices-design-patternshttps://www.udemy.com/course/understanding-microservices-architecture",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4. Spring Cloud",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4. Spring Cloud (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4. Spring Cloud (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 4. Spring Cloud (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 08https://docs.spring.io/spring-cloud/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 5. Spring Cloud Configuration - Centralized, Versioned Configuration (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 12https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Assignment 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the requirements of Assignment 01- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz LMS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Take Quiz 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Assistant - 01",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss project problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6. Transactions in Microservices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.baeldung.com/cs/saga-pattern-microservices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6. Transactions in Microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.baeldung.com/cs/saga-pattern-microservices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6. Transactions in Microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.baeldung.com/cs/saga-pattern-microservices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 6. Transactions in Microservices (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.baeldung.com/cs/saga-pattern-microservices",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7. Microservices Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7. Microservices Security (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7. Microservices Security (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 7. Microservices Security (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 11https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference documents- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 8. Apply Security into Microservices E-Commerce Application (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 20https://spring.io/projects/spring-cloud-security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guiding Assignment 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the requirements of Assignment 02- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Quiz LMS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Take Quiz 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Assistant - 02",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project List",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Discuss project problems",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 9. Working with Microservices - Spring Boot Google Cloud",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/google-cloud-java-spring",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 9. Working with Microservices - Spring Boot Google Cloud (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/google-cloud-java-spring",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 9. Working with Microservices - Spring Boot Google Cloud (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/google-cloud-java-spring",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 9. Working with Microservices - Spring Boot Google Cloud (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.coursera.org/learn/google-cloud-java-spring",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Microservices - Spring Boot with Docker container",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Microservices - Spring Boot with Docker container (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Microservices - Spring Boot with Docker container (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 10. Working with Microservices - Spring Boot with Docker container (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Microservices with Spring Boot 3and Spring Cloud - Chapter 04https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11. Working with Microservices - Deploying Microservices using Docker",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11. Working with Microservices - Deploying Microservices using Docker (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11. Working with Microservices - Deploying Microservices using Docker (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 11. Working with Microservices - Deploying Microservices using Docker (contd.)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Evaluation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1, CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "TU",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://spring.io/guides/gs/spring-boot-dockerhttps://docs.docker.com/guides/https://docs.spring.io/spring-cloud-config/docs/current/reference/html/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Read the slide, related reference document- Do exercises- Self practice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "6 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "16 slots",
+          "",
+          "",
+          "",
+          "Assignment 1: Chapter 1, 2, 3, 4, 5; Assignment 2: Chapter 6, 7, 8",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "Group Project",
+          "on-going",
+          "1",
+          "25.0%",
+          ">0",
+          "30 slots",
+          "",
+          "",
+          "",
+          "Chapter 1, 2, 3, 4, 5, 7, 8, 9, 10, 11",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "2",
+          "10.0%",
+          ">0",
+          "30'",
+          "",
+          "Multiple choicesMarked by Computer or a suitable format",
+          "20/each",
+          "Progress Test 1: Chapter 1, 2, 3, 4, 5; Progress Test 2: Chapter 6, 7, 8",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "Final exam",
+          "Final exam",
+          "2",
+          "55.0%",
+          "4",
+          "145 minutes",
+          "CLO1,CLO2, CLO3, CLO4",
+          "",
+          "",
+          "All subjects in syllabus",
+          "By exam board Manual evaluating",
+          "Each part of the final exam must be >=4/10 & Final Result >=5/10."
+        ],
+        [
+          "5",
+          "Practical Exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "85'",
+          "CLO1,CLO2, CLO3, CLO4",
+          "",
+          "",
+          "Subjects in syllabus",
+          "By exam board Manual evaluating",
+          ""
+        ],
+        [
+          "6",
+          "Theory Exam",
+          "Final exam",
+          "1",
+          "30.0%",
+          "4",
+          "60'",
+          "",
+          "",
+          "50",
+          "All subjects in syllabus",
+          "",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "16 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment 1: Chapter 1, 2, 3, 4, 5; Assignment 2: Chapter 6, 7, 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Group Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30 slots",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Chapter 1, 2, 3, 4, 5, 7, 8, 9, 10, 11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Multiple choicesMarked by Computer or a suitable format",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20/each",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test 1: Chapter 1, 2, 3, 4, 5; Progress Test 2: Chapter 6, 7, 8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "55.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "145 minutes",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Each part of the final exam must be >=4/10 & Final Result >=5/10.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,CLO2, CLO3, CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "By exam board Manual evaluating",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Theory Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All subjects in syllabus",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}

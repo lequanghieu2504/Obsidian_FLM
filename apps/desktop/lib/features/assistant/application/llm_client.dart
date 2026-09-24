@@ -1,0 +1,222 @@
+import '../../knowledge_graph/domain/subject_record.dart';
+import '../../subjects/domain/subject_workspace.dart';
+
+abstract interface class LlmClient {
+  Future<String> send({
+    required String context,
+    required List<ChatMessage> messages,
+    List<ChatAttachment> attachments = const [],
+  });
+  void close();
+}
+
+class ChatAttachment {
+  const ChatAttachment({
+    required this.resourceId,
+    required this.fileName,
+    required this.mimeType,
+    this.bytes,
+    this.text,
+  });
+
+  final String resourceId;
+  final String fileName;
+  final String mimeType;
+  final List<int>? bytes;
+  final String? text;
+}
+
+abstract interface class ChatAttachmentProcessor {
+  Future<ChatAttachment> process(UserResource resource, String appOwnedPath);
+}
+
+abstract interface class GeminiKeyStore {
+  Future<String?> read();
+  Future<void> write(String key);
+  Future<void> delete();
+}
+
+class SubjectPromptBuilder {
+  const SubjectPromptBuilder();
+
+  /// Metadata keys already surfaced as named fields (here, and in
+  /// `SubjectOverviewPanel`'s UI) — public so both skip the same set
+  /// when dumping [SubjectRecord.metadata]'s remaining entries, instead
+  /// of drifting out of sync with two separately maintained lists.
+  static const namedMetadataKeys = {
+    'Syllabus ID',
+    'Subject Code',
+    'Syllabus Name',
+    'Course Name English',
+    'Degree Level',
+    'NoCredit',
+    'Learning-Teaching Method',
+    'Pre-Requisite',
+    'Description',
+  };
+
+  /// [syllabus] is this subject's full FLM syllabus record, loaded from
+  /// `data/subject/` (see `SubjectRepository.loadByCode`) — null if no
+  /// matching file was found, in which case the prompt falls back to just
+  /// the curriculum's own [SubjectWorkspace.subject] fields.
+  String build(SubjectWorkspace workspace, {SubjectRecord? syllabus}) {
+    final subject = workspace.subject;
+    final buffer = StringBuffer();
+
+    buffer.writeln('You are assisting the user with the selected Subject.');
+    buffer.writeln('Current curriculum: ${workspace.curriculumCode}');
+    buffer.writeln('Current subject:');
+    buffer.writeln('Code: ${subject.code}');
+    buffer.writeln('Name: ${subject.name}');
+    buffer.writeln('Semester: ${subject.semester}');
+    buffer.writeln('Credits: ${subject.credits}');
+    buffer.writeln(
+      'Prerequisite: '
+      '${subject.preRequisite.isEmpty ? 'Not provided' : subject.preRequisite}',
+    );
+
+    if (syllabus == null) {
+      buffer.writeln(
+        'No detailed syllabus record was found for this subject in '
+        'data/subject/ — only the fields above are available.',
+      );
+    } else {
+      buffer.writeln();
+      buffer.writeln('Full syllabus (from data/subject/):');
+      buffer.writeln('Syllabus name: ${syllabus.syllabusName}');
+      buffer.writeln('Course name (English): ${syllabus.courseNameEnglish}');
+      buffer.writeln('Degree level: ${syllabus.degreeLevel}');
+      buffer.writeln(
+        'Learning-teaching method: ${syllabus.learningTeachingMethod}',
+      );
+      buffer.writeln(
+        'Prerequisite (syllabus wording): '
+        '${syllabus.prerequisiteRaw.isEmpty ? 'Not provided' : syllabus.prerequisiteRaw}',
+      );
+      buffer.writeln(
+        'Description: '
+        '${syllabus.description.isEmpty ? 'Not provided' : syllabus.description}',
+      );
+      if (syllabus.learningOutcomes.isNotEmpty) {
+        buffer.writeln('Course learning outcomes (CLOs):');
+        for (final outcome in syllabus.learningOutcomes) {
+          buffer.writeln('- ${outcome.code}: ${outcome.detail}');
+        }
+      }
+
+      final materialLines = syllabus.sections
+          .where(
+            (section) =>
+                section.heading == SubjectRecord.referenceMaterialsHeading,
+          )
+          .expand(_materialLines)
+          .toList();
+      if (materialLines.isNotEmpty) {
+        buffer.writeln();
+        buffer.writeln(
+          'Reference materials / Tài liệu môn học (from data/subject/):',
+        );
+        for (final line in materialLines) {
+          buffer.writeln('- $line');
+        }
+      }
+
+      final extraMetadata = syllabus.metadata.entries.where(
+        (entry) =>
+            !namedMetadataKeys.contains(entry.key) && entry.value.isNotEmpty,
+      );
+      if (extraMetadata.isNotEmpty) {
+        buffer.writeln();
+        buffer.writeln(
+          'Other syllabus fields (grading scale, tools, workload, '
+          'approval/administrative info, ...):',
+        );
+        for (final entry in extraMetadata) {
+          buffer.writeln('- ${entry.key}: ${entry.value}');
+        }
+      }
+
+      for (final section in syllabus.sections) {
+        // Already surfaced above as its own labeled block.
+        if (section.heading == SubjectRecord.referenceMaterialsHeading) {
+          continue;
+        }
+        if (section.rows.isEmpty) continue;
+        buffer.writeln();
+        buffer.writeln('${section.heading}:');
+        for (final row in section.rows) {
+          final cells = section.headers.length == row.length
+              ? [
+                  for (var i = 0; i < row.length; i++)
+                    if (row[i].isNotEmpty) '${section.headers[i]}: ${row[i]}',
+                ]
+              : row.where((cell) => cell.isNotEmpty).toList();
+          if (cells.isEmpty) continue;
+          buffer.writeln('- ${cells.join(' | ')}');
+        }
+      }
+    }
+
+    buffer.writeln();
+    buffer.writeln(
+      'These fields are the only academic source context provided. Do not '
+      'invent syllabus content or claim that general knowledge came from '
+      'FLM. Clearly distinguish general explanations from the provided '
+      'metadata. If information is unavailable, say so. Files are included '
+      'only when the user explicitly attaches them to the current message.',
+    );
+    buffer.writeln(
+      'When the user asks for a study roadmap from a transcript or grade '
+      'report, read only information visible in the attached files, identify '
+      'uncertain or missing values, and never invent grades. Relate verified '
+      'strengths and gaps to this subject’s prerequisites, CLOs, session plan, '
+      'assessment rules, and reference materials. Produce practical weekly '
+      'goals, activities, time estimates, checkpoints, and adjustment rules. '
+      'Ask a focused follow-up question when the evidence is insufficient.',
+    );
+    return buffer.toString();
+  }
+
+  /// Turns each row of a [SubjectRecord.referenceMaterialsHeading] table
+  /// into one human-readable line: `<description> (detail, detail, ...)`.
+  /// Reads columns by name rather than position, since which of
+  /// author/publisher/edition/ISBN/note are actually filled in varies a lot
+  /// per subject (a plain URL reference usually only has
+  /// `materialdescription` + the `is*` flags) — this skips whatever's blank
+  /// instead of printing bare `key: ` noise for it.
+  static Iterable<String> _materialLines(SyllabusSection section) sync* {
+    final columnIndex = {
+      for (var i = 0; i < section.headers.length; i++)
+        section.headers[i].toLowerCase(): i,
+    };
+    String cell(List<String> row, String column) {
+      final index = columnIndex[column];
+      if (index == null || index >= row.length) return '';
+      return row[index].trim();
+    }
+
+    for (final row in section.rows) {
+      final description = cell(row, 'materialdescription');
+      if (description.isEmpty) continue;
+      final author = cell(row, 'author');
+      final publisher = cell(row, 'publisher');
+      final edition = cell(row, 'edition');
+      final isbn = cell(row, 'isbn');
+      final note = cell(row, 'note');
+      final details = <String>[
+        if (author.isNotEmpty) 'author: $author',
+        if (publisher.isNotEmpty) 'publisher: $publisher',
+        if (edition.isNotEmpty) 'edition: $edition',
+        if (isbn.isNotEmpty) 'ISBN: $isbn',
+        if (cell(row, 'ismainmaterial').toLowerCase() == 'true')
+          'main material',
+        if (cell(row, 'isonline').toLowerCase() == 'true') 'available online',
+        if (cell(row, 'ishardcopy').toLowerCase() == 'true') 'hardcopy',
+        if (note.isNotEmpty) 'note: $note',
+      ];
+      yield details.isEmpty
+          ? description
+          : '$description (${details.join(', ')})';
+    }
+  }
+}

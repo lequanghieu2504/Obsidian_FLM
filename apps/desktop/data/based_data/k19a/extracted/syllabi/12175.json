@@ -1,0 +1,5141 @@
+{
+  "id": "12175",
+  "metadata": {
+    "Syllabus ID": "12175",
+    "Syllabus Name": "Server-Side development with NodeJS, Express, and MongoDB_Phát triển Server-Side với NodeJS, Express và MongoDB",
+    "Course Name English": "Server-Side development with NodeJS, Express, and MongoDB",
+    "Subject Code": "SDN302",
+    "Learning-Teaching Method": "Lecture,Project based learning,Active learning,Social Constructivism, Discussion",
+    "NoCredit": "3",
+    "Degree Level": "Bachelor",
+    "Time Allocation": "Study hour (150h) = 45h contact hours + 1 h final exam + 85' practical exam + 104h self-study",
+    "Pre-Requisite": "DBI202, FER202",
+    "Description": "This course tackles all the problems related to NodeJS-based web servers. Contents to be implemented include: - Overview of Web protocols: HTTP and HTTPS. - Introduction of NodeJS and frameworks such as ExpressJS, NestJS, Hono to build a web server. - Introduction of simple templating languages such as EJB and HandleBar . - Deploy the application on a web server with basic CRUD operations. Work with NoSQL databases, specifically MongoDB and Mongoose, to access MongoDB from NodeJS. - Overview of REST and building a RESTful API. - Learn Authentication and security-related issues for web applications. - Integrate React app with server NodeJs - Deploy server-based applications with Hosting Services",
+    "StudentTasks": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Constantly follow announcements on FU CMS at https://cmshn.fpt.edu.vn/ and FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information regarding assignment submission and feedback on assignments and project work.",
+    "Tools": "- Visual Studio Code (https://code.visualstudio.com) - Postman - MongoDBCompass - Internet",
+    "Scoring Scale": "10",
+    "DecisionNo MM/dd/yyyy": "1286/QĐ-ĐHFPT dated 11/22/2024",
+    "IsApproved": "True",
+    "Note": "",
+    "Is Scored": "True",
+    "MinAvgMarkToPass": "5",
+    "IsActive": "True",
+    "ApprovedDate": "11/22/2024"
+  },
+  "sections": [
+    {
+      "heading": "Syllabus Details",
+      "headers": [
+        "syllabusid",
+        "12175"
+      ],
+      "rows": [
+        [
+          "Syllabus ID:",
+          "12175"
+        ],
+        [
+          "Syllabus Name:",
+          "Server-Side development with NodeJS, Express, and MongoDB_Phát triển Server-Side với NodeJS, Express và MongoDB"
+        ],
+        [
+          "Course Name English:",
+          "Server-Side development with NodeJS, Express, and MongoDB"
+        ],
+        [
+          "Subject Code:",
+          "SDN302"
+        ],
+        [
+          "Learning-Teaching Method:",
+          "Lecture,Project based learning,Active learning,Social Constructivism, Discussion"
+        ],
+        [
+          "NoCredit:",
+          "3"
+        ],
+        [
+          "Degree Level:",
+          "Bachelor"
+        ],
+        [
+          "Time Allocation:",
+          "Study hour (150h) = 45h contact hours + 1 h final exam + 85' practical exam + 104h self-study"
+        ],
+        [
+          "Pre-Requisite:",
+          "DBI202, FER202"
+        ],
+        [
+          "Description:",
+          "This course tackles all the problems related to NodeJS-based web servers. Contents to be implemented include: - Overview of Web protocols: HTTP and HTTPS. - Introduction of NodeJS and frameworks such as ExpressJS, NestJS, Hono to build a web server. - Introduction of simple templating languages such as EJB and HandleBar . - Deploy the application on a web server with basic CRUD operations. Work with NoSQL databases, specifically MongoDB and Mongoose, to access MongoDB from NodeJS. - Overview of REST and building a RESTful API. - Learn Authentication and security-related issues for web applications. - Integrate React app with server NodeJs - Deploy server-based applications with Hosting Services"
+        ],
+        [
+          "StudentTasks:",
+          "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Constantly follow announcements on FU CMS at https://cmshn.fpt.edu.vn/ and FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information regarding assignment submission and feedback on assignments and project work."
+        ],
+        [
+          "Tools:",
+          "- Visual Studio Code (https://code.visualstudio.com) - Postman - MongoDBCompass - Internet"
+        ],
+        [
+          "Scoring Scale:",
+          "10"
+        ],
+        [
+          "DecisionNo MM/dd/yyyy:",
+          "1286/QĐ-ĐHFPT dated 11/22/2024"
+        ],
+        [
+          "IsApproved:",
+          "True"
+        ],
+        [
+          "Note:",
+          ""
+        ],
+        [
+          "Is Scored:",
+          "True"
+        ],
+        [
+          "MinAvgMarkToPass:",
+          "5"
+        ],
+        [
+          "IsActive:",
+          "True"
+        ],
+        [
+          "ApprovedDate:",
+          "11/22/2024"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "Syllabus ID:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "12175",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Syllabus Name:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Server-Side development with NodeJS, Express, and MongoDB_Phát triển Server-Side với NodeJS, Express và MongoDB",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Course Name English:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Server-Side development with NodeJS, Express, and MongoDB",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Subject Code:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SDN302",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Learning-Teaching Method:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Lecture,Project based learning,Active learning,Social Constructivism, Discussion",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "NoCredit:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Degree Level:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Bachelor",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Time Allocation:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Study hour (150h) = 45h contact hours + 1 h final exam + 85' practical exam + 104h self-study",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Pre-Requisite:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "DBI202, FER202",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Description:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "This course tackles all the problems related to NodeJS-based web servers. Contents to be implemented include: - Overview of Web protocols: HTTP and HTTPS. - Introduction of NodeJS and frameworks such as ExpressJS, NestJS, Hono to build a web server. - Introduction of simple templating languages such as EJB and HandleBar . - Deploy the application on a web server with basic CRUD operations. Work with NoSQL databases, specifically MongoDB and Mongoose, to access MongoDB from NodeJS. - Overview of REST and building a RESTful API. - Learn Authentication and security-related issues for web applications. - Integrate React app with server NodeJs - Deploy server-based applications with Hosting Services",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "StudentTasks:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Students must attend at least 80% of contact slots in order to be accepted to the final examination. - Student is responsible to do all exercises given by instructor in class or at home and submit on time - Constantly follow announcements on FU CMS at https://cmshn.fpt.edu.vn/ and FU FLM at https://flm.fpt.edu.vn/ for up-to-date course information regarding assignment submission and feedback on assignments and project work.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Tools:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "- Visual Studio Code (https://code.visualstudio.com) - Postman - MongoDBCompass - Internet",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Scoring Scale:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "DecisionNo MM/dd/yyyy:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1286/QĐ-ĐHFPT dated 11/22/2024",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsApproved:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Note:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "Is Scored:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "MinAvgMarkToPass:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "IsActive:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "ApprovedDate:",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "11/22/2024",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 2",
+      "headers": [
+        "no",
+        "materialdescription",
+        "author",
+        "publisher",
+        "publisheddate",
+        "edition",
+        "isbn",
+        "ismainmaterial",
+        "ishardcopy",
+        "isonline",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Full Stack Web Development Guide: Everything Node JS, Express, APIs, Embedded JavaScript (EJS), React JS, Database Fundamentals, SQL Databases, NoSQL …",
+          "Sammie Smith",
+          "Independently published",
+          "2022",
+          "",
+          "979-8848179330",
+          "True",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "2",
+          "Ultimate Full-Stack Web Development with MERN_ Design, Build, Test and Deploy Production-Grade Web Applications with MongoDB, Express, React and NodeJS",
+          "Nabendu Biswas",
+          "Orange Education Pvt Ltd",
+          "2023",
+          "",
+          "978-8119416424",
+          "False",
+          "True",
+          "False",
+          ""
+        ],
+        [
+          "3",
+          "https://www.mongodb.com/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "4",
+          "https://ejs.co/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "5",
+          "https://expressjs.com/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "6",
+          "https://nodejs.org/docs/latest/api/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "7",
+          "https://handlebarsjs.com/",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "8",
+          "NestJS - A progressive Node.js framework",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ],
+        [
+          "9",
+          "Hono - Ultrafast web framework for the Edges",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "False",
+          "False",
+          "True",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Full Stack Web Development Guide: Everything Node JS, Express, APIs, Embedded JavaScript (EJS), React JS, Database Fundamentals, SQL Databases, NoSQL …",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Sammie Smith",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Independently published",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2022",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "979-8848179330",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Ultimate Full-Stack Web Development with MERN_ Design, Build, Test and Deploy Production-Grade Web Applications with MongoDB, Express, React and NodeJS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Nabendu Biswas",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Orange Education Pvt Ltd",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2023",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "978-8119416424",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://www.mongodb.com/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://ejs.co/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://expressjs.com/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://nodejs.org/docs/latest/api/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "https://handlebarsjs.com/",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NestJS - A progressive Node.js framework",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Hono - Ultrafast web framework for the Edges",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "False",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "True",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "8 LO(s)",
+      "headers": [
+        "no",
+        "cloname",
+        "clodetails"
+      ],
+      "rows": [
+        [
+          "1",
+          "CLO1",
+          "Understand Node, Node modules, API and the Node HTTP server"
+        ],
+        [
+          "2",
+          "CLO2",
+          "Understand Express, NestJS and Hono framework, operating principles, and methods of building a web server that supports REST API"
+        ],
+        [
+          "3",
+          "CLO3",
+          "Be able to use the Express Generator tool to generate Express applications"
+        ],
+        [
+          "4",
+          "CLO4",
+          "Understand MongoDB basics, develop Node applications that work with data through MongoDB and Mongoose ODM"
+        ],
+        [
+          "5",
+          "CLO5",
+          "Be able to implement REST APIs with Express, MongoDB, Mongoose and Mongoose Population"
+        ],
+        [
+          "6",
+          "CLO6",
+          "Be able to implement user authentication mechanisms for applications"
+        ],
+        [
+          "7",
+          "CLO7",
+          "Be able to use Backend as a Service (BaaS) to enhance secure communication between client and server applications"
+        ],
+        [
+          "8",
+          "CLO8",
+          "Be able to use EJB and HandleBar"
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand Node, Node modules, API and the Node HTTP server",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand Express, NestJS and Hono framework, operating principles, and methods of building a web server that supports REST API",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to use the Express Generator tool to generate Express applications",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Understand MongoDB basics, develop Node applications that work with data through MongoDB and Mongoose ODM",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to implement REST APIs with Express, MongoDB, Mongoose and Mongoose Population",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to implement user authentication mechanisms for applications",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to use Backend as a Service (BaaS) to enhance secure communication between client and server applications",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Be able to use EJB and HandleBar",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "Table 4",
+      "headers": [
+        "session",
+        "topic",
+        "learningteachingtype",
+        "lo",
+        "itu",
+        "studentmaterials",
+        "sdownload",
+        "studentstasks",
+        "urls"
+      ],
+      "rows": [
+        [
+          "1",
+          "Course Introduction:1.1 Full Stack Web Development: The Big Picture1.2 NodeJS Introduction",
+          "Offline",
+          "CLO1",
+          "I",
+          "Slot1.1_What-is-Back-End-Development",
+          "SDN302_Slides_1",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "2",
+          "2.1 Features of node.js- Single Threaded but Highly Scalable- Event-driven and Asynchronous- Event Loop",
+          "Offline",
+          "CLO1",
+          "I, T, U",
+          "Slot1.1_What-is-Back-End-Development",
+          "SDN302_Slides_2",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "3",
+          "3.1 Node.js - Environment setup- Setting up node.js and npm- Basics of node.js and npm3.2 Node.js - First application",
+          "Offline",
+          "CLO1",
+          "I, T, U",
+          "Slot1.2_NodeJS",
+          "SDN302_Slides_3",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "4",
+          "API:4.1 What is API4.2 How do APIs work?4.3 What does an api do?",
+          "Offline",
+          "CLO1",
+          "I, T",
+          "Slot2.1_API",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "5",
+          "HTTP:5.1 HTTP Overview5.2 Receiving an HTTP Request with Express",
+          "Offline",
+          "CLO1",
+          "U",
+          "Slot2.2_Node&Http",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "6",
+          "NodeJS and HTTP:6.1 Node.JS HTTP Module6.2 Node.JS as a web server",
+          "Offline",
+          "CLO1",
+          "I, T, U",
+          "Slot2.2_Node&Http",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "7",
+          "EXPRESSJS:7.1 Express Introduction7.2 Using Express js to create your first program",
+          "Offline",
+          "CLO2",
+          "I, T, U",
+          "Slot3.1_ExpressJS",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "8",
+          "NODE and EXPRESS:8.1 Restful routing with express8.2 Understand and use middleware for node applications8.3 Types of middleware in node.js8.4 Writing express middleware8.5 Express- Generator- Express Generator Introduction- Using Express - Generator To Create Your First Program",
+          "Offline",
+          "CLO2, CLO3",
+          "T, U",
+          "Slot3.1_ExpressJS",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "9",
+          "Nosql Databases With Mongodb:9.1 Nosql Introduction9.2 Document Databases (Mongodb)9.3 Create-Read-Update-Destroy (Crud)",
+          "Offline",
+          "CLO4",
+          "T, U",
+          "Slot3.2_NoSQL-Database-With-MongoDB",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "10",
+          "10.1 Nosql Best Practices10.2 Mongodb Mongo Shell Features10.3 NodeJs and MongoDB",
+          "Offline",
+          "CLO4",
+          "T, U",
+          "Slot3.3_NodeJS-with-MongoDB",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "11",
+          "Mongoose:11 What is Mongoose",
+          "Offline",
+          "CLO4",
+          "I, T, U",
+          "Slot4.1_Mongoose",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "12",
+          "Mongoose Population12 Use Mongoose population to cross-reference users within a comment",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slot4.1_Mongoose",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "13",
+          "13 Populate the comments with the users’ information upon querying",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slot5.1_Mongoose Population",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "14",
+          "14 Match with mongodb regex",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slot5.1_Mongoose Population",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "15",
+          "REST API with Express, MongoDB and Mongoose:15 Develop a full-fledged REST API server with Express, MongoDB and Mongoose",
+          "Offline",
+          "CLO5",
+          "I, T, U",
+          "Slot6_RestfulApi-with-Express-mongodb-and-mongoose",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "16",
+          "16 Implement the end-to-end solution integrating Express, Node and MongoDB",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slot6_RestfulApi-with-Express-mongodb-and-mongoose",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "17",
+          "17 Model - View - Controller",
+          "Offline",
+          "CLO5",
+          "T, U",
+          "Slot6_RestfulApi-with-Express-mongodb-and-mongoose",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "18",
+          "ASSIGNMENT 1",
+          "Offline",
+          "CLO5",
+          "U",
+          "",
+          "",
+          "Read textbookLearn materrialsRedo sample examplesDo Assigment 1",
+          ""
+        ],
+        [
+          "19",
+          "Embedded Javascript (EJS):19 What is EJS?",
+          "Offline",
+          "CLO8",
+          "T, U",
+          "Slot7_EJS(EmbbedJavascript)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "20",
+          "20 Understand what EJS does and how to use it with node and express",
+          "Offline",
+          "CLO8",
+          "I, T, U",
+          "Slot7_EJS(EmbbedJavascript)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "21",
+          "21 Templating with EJS",
+          "Offline",
+          "CLO8",
+          "T, U",
+          "Slot7_EJS(EmbbedJavascript)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "22",
+          "HandleBars:22.1 What Is Handlebars?22.2 Understand What Handlebars Does And How To Use It With Node And Express23.3 Templating With Handlebars",
+          "Offline",
+          "CLO8",
+          "U",
+          "Slot8_HandleBars",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "23",
+          "Progress Test - 1",
+          "Offline",
+          "CLO1,2,3,4,5,8",
+          "",
+          "",
+          "",
+          "Do Progress Test - 1",
+          ""
+        ],
+        [
+          "24",
+          "ASSIGNMENT 2",
+          "Offline",
+          "CLO1,2,3,4,5,8",
+          "U",
+          "",
+          "",
+          "Read textbookLearn materrialsRedo sample examplesDo Assigment 2",
+          ""
+        ],
+        [
+          "25",
+          "Authentication And Security:25 Authentication And Keeping User Details Secure- Password authentication- Multi-factor authentication- Biometric authentication",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot9-10_Authentication_and_Security",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "26",
+          "26.1 Encryption And Useencryption To Keep Your Database Secure- Database Encryption26.2 Hashing Passwords With Bcrypt",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot9-10_Authentication_and_Security",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "27",
+          "27 Sessions And Cookies",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot9-10_Authentication_and_Security",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "28",
+          "Authentication And Security (Cont'd)28 User Authentication With Passport- Use Passport Module Together With Passport-Local",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot9-10_Authentication_and_Security",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "29",
+          "29.1 use passport-local-mongoose for setting up local authentication within server 29.2 use passport together with sessions to set up user authentication",
+          "Offline",
+          "CLO6",
+          "I, T, U",
+          "Slot9-10_Authentication_and_Security",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "30",
+          "30 Token Based Authentication",
+          "Offline",
+          "CLO6",
+          "I, T, U",
+          "Slot9-10_Authentication_and_Security",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "31",
+          "HTTPS and Secure Communication:31 Configure a secure server in Node using the core HTTPS module",
+          "Offline",
+          "CLO6",
+          "I, T, U",
+          "Slot11_HTTPS_Secure-communication",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "32",
+          "32.1 Generate the private key and public certificate and configure the HTTPS server32.2 Redirect traffic from the insecure HTTP server to a secure HTTPS server",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot11_HTTPS_Secure-communication",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "33",
+          "Uploading Files:33 Configure the Multer module to enable file uploading",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot12_Upload-Download-Files",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "34",
+          "34 Setup Express server to use Multer to upload files to a designated folder",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot12_Upload-Download-Files",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "35",
+          "Download Files:35 Configure the module to enable file downloading",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot12_Upload-Download-Files",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "36",
+          "36 Setup Express server to use Multer to download files to a designated folder",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot12_Upload-Download-Files",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "37",
+          "Cross-Origin Resource Sharing:37 Use the CORS NPM module to enable CORS support",
+          "Offline",
+          "CLO6",
+          "I, T",
+          "Slot13_Cors",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "38",
+          "38 Enable Express application to support CORS requests by configuring the CORS module",
+          "Offline",
+          "CLO6",
+          "T",
+          "Slot13_Cors",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "39",
+          "OAuth and User Authentication:39 Use an OAuth providers for authenticating users within server",
+          "Offline",
+          "CLO6",
+          "T, U",
+          "Slot13_Cors",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "40",
+          "40 Setup server using Passport OAuth modules",
+          "Offline",
+          "CLO6",
+          "I, T",
+          "Slot13_Cors",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "41",
+          "Progress Test - 2",
+          "Offline",
+          "CLO6",
+          "",
+          "",
+          "",
+          "Do Progress Test - 2",
+          ""
+        ],
+        [
+          "42",
+          "ASSIGNMENT 3",
+          "Offline",
+          "CLO6",
+          "U",
+          "",
+          "",
+          "Read textbookLearn materrialsRedo sample examplesDo Assigment 3",
+          ""
+        ],
+        [
+          "43",
+          "Backend as a Service (BaaS):43 Introduction",
+          "Offline",
+          "CLO7",
+          "I, T",
+          "Slot15-16_Backend-as-a-Service-(BaaS)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "44",
+          "44 Hosting static websites with GitHub Pages",
+          "Offline",
+          "CLO7",
+          "I, T",
+          "Slot15-16_Backend-as-a-Service-(BaaS)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "45",
+          "45 Understand and use to quickly build backend support for applications",
+          "Offline",
+          "CLO7",
+          "T",
+          "Slot15-16_Backend-as-a-Service-(BaaS)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "46",
+          "Deployment:46 Web hosting",
+          "Offline",
+          "CLO7",
+          "I, T, U",
+          "Slot15-16_Backend-as-a-Service-(BaaS)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "47",
+          "47 Website Deployment",
+          "Offline",
+          "CLO7",
+          "T, U",
+          "Slot15-16_Backend-as-a-Service-(BaaS)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "48",
+          "48 Deploying Server-Based Applications with Heroku",
+          "Offline",
+          "CLO7",
+          "I,T",
+          "Slot15-16_Backend-as-a-Service-(BaaS)",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "49",
+          "Frameworks: NestJS:49 Introduction",
+          "Offline",
+          "CLO2",
+          "T, I, U",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "50",
+          "50 Installing",
+          "Offline",
+          "CLO2",
+          "I, T",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "51",
+          "51 Using Nestjs To Create Your First Program",
+          "Offline",
+          "CLO2",
+          "T, U",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "52",
+          "52 Overview Techniques",
+          "Offline",
+          "CLO2",
+          "I, T",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "53",
+          "53 Overview Techniques",
+          "Offline",
+          "CLO2",
+          "T, U",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "54",
+          "54 Overview Security",
+          "Offline",
+          "CLO2",
+          "T, U",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "55",
+          "Framework Hono:55 Introduction and Installing",
+          "Offline",
+          "CLO2",
+          "I, T",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "56",
+          "56 Using Hono To Create Your First Program",
+          "Offline",
+          "CLO2",
+          "U",
+          "Slot17-18-19_Frameworks-NestJS-Hono",
+          "",
+          "Read textbookLearn materrials,Discuss key points",
+          ""
+        ],
+        [
+          "57",
+          "ASSIGNMENT 4",
+          "Offline",
+          "CLO7, 2",
+          "",
+          "",
+          "",
+          "Read textbookLearn materrialsRedo sample examplesDo Assigment 4",
+          ""
+        ],
+        [
+          "58",
+          "Project Presentation",
+          "Offline",
+          "All CLOs",
+          "",
+          "",
+          "",
+          "Do Project Presentation",
+          ""
+        ],
+        [
+          "59",
+          "Project Presentation",
+          "Offline",
+          "All CLOs",
+          "",
+          "",
+          "",
+          "Do Project Presentation",
+          ""
+        ],
+        [
+          "60",
+          "Progress Test - 3",
+          "Offline",
+          "CLO7, 2",
+          "",
+          "",
+          "",
+          "Do Progress Test - 3",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Course Introduction:1.1 Full Stack Web Development: The Big Picture1.2 NodeJS Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot1.1_What-is-Back-End-Development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SDN302_Slides_1",
+            "links": [
+              {
+                "text": "SDN302_Slides_1",
+                "href": "https://flm.fpt.edu.vn/download/12175/S/1_SDN302_Slides_1.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "2.1 Features of node.js- Single Threaded but Highly Scalable- Event-driven and Asynchronous- Event Loop",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot1.1_What-is-Back-End-Development",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SDN302_Slides_2",
+            "links": [
+              {
+                "text": "SDN302_Slides_2",
+                "href": "https://flm.fpt.edu.vn/download/12175/S/2_SDN302_Slides_2.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3.1 Node.js - Environment setup- Setting up node.js and npm- Basics of node.js and npm3.2 Node.js - First application",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot1.2_NodeJS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "SDN302_Slides_3",
+            "links": [
+              {
+                "text": "SDN302_Slides_3",
+                "href": "https://flm.fpt.edu.vn/download/12175/S/3_SDN302_Slides_3.zip"
+              }
+            ],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "API:4.1 What is API4.2 How do APIs work?4.3 What does an api do?",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot2.1_API",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HTTP:5.1 HTTP Overview5.2 Receiving an HTTP Request with Express",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot2.2_Node&Http",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NodeJS and HTTP:6.1 Node.JS HTTP Module6.2 Node.JS as a web server",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot2.2_Node&Http",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "EXPRESSJS:7.1 Express Introduction7.2 Using Express js to create your first program",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot3.1_ExpressJS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "NODE and EXPRESS:8.1 Restful routing with express8.2 Understand and use middleware for node applications8.3 Types of middleware in node.js8.4 Writing express middleware8.5 Express- Generator- Express Generator Introduction- Using Express - Generator To Create Your First Program",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2, CLO3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot3.1_ExpressJS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "9",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Nosql Databases With Mongodb:9.1 Nosql Introduction9.2 Document Databases (Mongodb)9.3 Create-Read-Update-Destroy (Crud)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot3.2_NoSQL-Database-With-MongoDB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "10",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "10.1 Nosql Best Practices10.2 Mongodb Mongo Shell Features10.3 NodeJs and MongoDB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot3.3_NodeJS-with-MongoDB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "11",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mongoose:11 What is Mongoose",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot4.1_Mongoose",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Mongoose Population12 Use Mongoose population to cross-reference users within a comment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot4.1_Mongoose",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "13",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "13 Populate the comments with the users’ information upon querying",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot5.1_Mongoose Population",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "14",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "14 Match with mongodb regex",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot5.1_Mongoose Population",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "15",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "REST API with Express, MongoDB and Mongoose:15 Develop a full-fledged REST API server with Express, MongoDB and Mongoose",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot6_RestfulApi-with-Express-mongodb-and-mongoose",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "16",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "16 Implement the end-to-end solution integrating Express, Node and MongoDB",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot6_RestfulApi-with-Express-mongodb-and-mongoose",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "17",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "17 Model - View - Controller",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot6_RestfulApi-with-Express-mongodb-and-mongoose",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "18",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ASSIGNMENT 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrialsRedo sample examplesDo Assigment 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "19",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Embedded Javascript (EJS):19 What is EJS?",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot7_EJS(EmbbedJavascript)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "20",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20 Understand what EJS does and how to use it with node and express",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot7_EJS(EmbbedJavascript)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "21",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "21 Templating with EJS",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot7_EJS(EmbbedJavascript)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "22",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HandleBars:22.1 What Is Handlebars?22.2 Understand What Handlebars Does And How To Use It With Node And Express23.3 Templating With Handlebars",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot8_HandleBars",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "23",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test - 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,2,3,4,5,8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Progress Test - 1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ASSIGNMENT 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO1,2,3,4,5,8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrialsRedo sample examplesDo Assigment 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "25",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Authentication And Security:25 Authentication And Keeping User Details Secure- Password authentication- Multi-factor authentication- Biometric authentication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot9-10_Authentication_and_Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "26",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "26.1 Encryption And Useencryption To Keep Your Database Secure- Database Encryption26.2 Hashing Passwords With Bcrypt",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot9-10_Authentication_and_Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "27",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "27 Sessions And Cookies",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot9-10_Authentication_and_Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "28",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Authentication And Security (Cont'd)28 User Authentication With Passport- Use Passport Module Together With Passport-Local",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot9-10_Authentication_and_Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "29",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "29.1 use passport-local-mongoose for setting up local authentication within server 29.2 use passport together with sessions to set up user authentication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot9-10_Authentication_and_Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "30",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "30 Token Based Authentication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot9-10_Authentication_and_Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "31",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "HTTPS and Secure Communication:31 Configure a secure server in Node using the core HTTPS module",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot11_HTTPS_Secure-communication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "32",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "32.1 Generate the private key and public certificate and configure the HTTPS server32.2 Redirect traffic from the insecure HTTP server to a secure HTTPS server",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot11_HTTPS_Secure-communication",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "33",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Uploading Files:33 Configure the Multer module to enable file uploading",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot12_Upload-Download-Files",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "34",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "34 Setup Express server to use Multer to upload files to a designated folder",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot12_Upload-Download-Files",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "35",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Download Files:35 Configure the module to enable file downloading",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot12_Upload-Download-Files",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "36",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "36 Setup Express server to use Multer to download files to a designated folder",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot12_Upload-Download-Files",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "37",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Cross-Origin Resource Sharing:37 Use the CORS NPM module to enable CORS support",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot13_Cors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "38",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "38 Enable Express application to support CORS requests by configuring the CORS module",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot13_Cors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "39",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "OAuth and User Authentication:39 Use an OAuth providers for authenticating users within server",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot13_Cors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "40",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "40 Setup server using Passport OAuth modules",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot13_Cors",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "41",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test - 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Progress Test - 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "42",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ASSIGNMENT 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO6",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrialsRedo sample examplesDo Assigment 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "43",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Backend as a Service (BaaS):43 Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot15-16_Backend-as-a-Service-(BaaS)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "44",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "44 Hosting static websites with GitHub Pages",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot15-16_Backend-as-a-Service-(BaaS)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "45",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "45 Understand and use to quickly build backend support for applications",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot15-16_Backend-as-a-Service-(BaaS)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "46",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Deployment:46 Web hosting",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot15-16_Backend-as-a-Service-(BaaS)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "47",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "47 Website Deployment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot15-16_Backend-as-a-Service-(BaaS)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "48",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "48 Deploying Server-Based Applications with Heroku",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I,T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot15-16_Backend-as-a-Service-(BaaS)",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "49",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Frameworks: NestJS:49 Introduction",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, I, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50 Installing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "51",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "51 Using Nestjs To Create Your First Program",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "52",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "52 Overview Techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "53",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "53 Overview Techniques",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "54",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "54 Overview Security",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "T, U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "55",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Framework Hono:55 Introduction and Installing",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "I, T",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "56",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "56 Using Hono To Create Your First Program",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "U",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Slot17-18-19_Frameworks-NestJS-Hono",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrials,Discuss key points",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "57",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "ASSIGNMENT 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Read textbookLearn materrialsRedo sample examplesDo Assigment 4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "58",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "59",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Project Presentation",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "60",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress Test - 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Offline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "CLO7, 2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Do Progress Test - 3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    },
+    {
+      "heading": "5 assessment(s)",
+      "headers": [
+        "no",
+        "category",
+        "type",
+        "part",
+        "weight",
+        "completioncriteria",
+        "duration",
+        "clo",
+        "questiontype",
+        "noquestion",
+        "knowledgeandskill",
+        "gradingguide",
+        "note"
+      ],
+      "rows": [
+        [
+          "1",
+          "Assignment",
+          "on-going",
+          "4",
+          "20.0%",
+          ">0",
+          "Guided and reviewed in tutorial sesions; Cont. at home",
+          "All CLOs",
+          "a problem similar to real one",
+          "",
+          "problem(s) to solve by programming using LO1 - LO8",
+          "Individual or team work, guided by instructor, submission by a given deadline",
+          ""
+        ],
+        [
+          "2",
+          "Practical Exam",
+          "on-going",
+          "1",
+          "25.0%",
+          "4",
+          "85'",
+          "All CLOs",
+          "Preferable to be marked by scripts",
+          "",
+          "problem(s) to solve by programming using LO1 - LO8",
+          "supervised by proctor(s) sent by exam board",
+          ""
+        ],
+        [
+          "3",
+          "Progress test",
+          "on-going",
+          "3",
+          "15.0%",
+          ">0",
+          "20'-40'",
+          "PT1: CLO1,2,3,4,5,8PT2: CLO6PT3: CLO7",
+          "essay or multiple choice",
+          "15-30if multiple choice",
+          "PT 1LO1,2,3,4,5,8PT 2LO6PT 3LO6, 8Number of questions:3-8 for each LOx",
+          "supervised by instructor",
+          "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded."
+        ],
+        [
+          "4",
+          "Project",
+          "on-going",
+          "1",
+          "15.0%",
+          ">0",
+          "Guided and reviewed in tutorial sesions; Cont. at home",
+          "All CLOs",
+          "a problem similar to real one",
+          "",
+          "problem(s) to solve by programming using LO1 - LO8",
+          "Individual or team work, guided by instructor, submission by a given deadline",
+          ""
+        ],
+        [
+          "5",
+          "Final exam",
+          "Final exam",
+          "1",
+          "25.0%",
+          "4",
+          "60'",
+          "All CLOs",
+          "multiple choice",
+          "50",
+          "all topics; more than 70% new questions (for the current semester);",
+          "supervised by proctor(s) sent by exam board",
+          ""
+        ]
+      ],
+      "richRows": [
+        [
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Assignment",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guided and reviewed in tutorial sesions; Cont. at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "a problem similar to real one",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "problem(s) to solve by programming using LO1 - LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by a given deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "2",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Practical Exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "85'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Preferable to be marked by scripts",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "problem(s) to solve by programming using LO1 - LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "supervised by proctor(s) sent by exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "3",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "20'-40'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PT1: CLO1,2,3,4,5,8PT2: CLO6PT3: CLO7",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "essay or multiple choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15-30if multiple choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "PT 1LO1,2,3,4,5,8PT 2LO6PT 3LO6, 8Number of questions:3-8 for each LOx",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "supervised by instructor",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Progress test must be taken right after the last lectures of required material. Instructor has responsibility to review the test for students after graded.",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Project",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "on-going",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "15.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": ">0",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Guided and reviewed in tutorial sesions; Cont. at home",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "a problem similar to real one",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "problem(s) to solve by programming using LO1 - LO8",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Individual or team work, guided by instructor, submission by a given deadline",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ],
+        [
+          {
+            "text": "5",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "Final exam",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "1",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "25.0%",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "4",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "60'",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "All CLOs",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "multiple choice",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "50",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "all topics; more than 70% new questions (for the current semester);",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "supervised by proctor(s) sent by exam board",
+            "links": [],
+            "controls": []
+          },
+          {
+            "text": "",
+            "links": [],
+            "controls": []
+          }
+        ]
+      ]
+    }
+  ]
+}
