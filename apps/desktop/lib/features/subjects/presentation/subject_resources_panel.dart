@@ -388,28 +388,88 @@ class _SubjectFacts extends StatelessWidget {
   );
 }
 
-class _FactTile extends StatelessWidget {
+class _FactTile extends StatefulWidget {
   const _FactTile({required this.label, required this.value});
   final String label;
   final String value;
 
   @override
-  Widget build(BuildContext context) => Container(
-    constraints: const BoxConstraints(minHeight: 76),
-    padding: const EdgeInsets.all(14),
-    decoration: BoxDecoration(
-      color: const Color(0xFFEEF6FF),
-      borderRadius: BorderRadius.circular(14),
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(label, style: Theme.of(context).textTheme.labelMedium),
-        const SizedBox(height: 6),
-        Text(value, style: const TextStyle(fontWeight: FontWeight.w700)),
-      ],
-    ),
-  );
+  State<_FactTile> createState() => _FactTileState();
+}
+
+class _FactTileState extends State<_FactTile> {
+  bool _isHovered = false;
+
+  IconData _iconForLabel(String label) {
+    final lower = label.toLowerCase();
+    if (lower.contains('semester')) return Icons.calendar_today_rounded;
+    if (lower.contains('credit')) return Icons.workspace_premium_rounded;
+    if (lower.contains('degree')) return Icons.school_rounded;
+    if (lower.contains('method')) return Icons.auto_stories_rounded;
+    return Icons.info_outline_rounded;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final icon = _iconForLabel(widget.label);
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        curve: Curves.easeOutCubic,
+        constraints: const BoxConstraints(minHeight: 76),
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: _isHovered ? AppColors.primary : const Color(0xFFE2E8F0),
+            width: 1.0,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: _isHovered
+                  ? AppColors.primary.withOpacity(0.08)
+                  : Colors.black.withOpacity(0.02),
+              blurRadius: _isHovered ? 12 : 6,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(icon, size: 14, color: AppColors.primary),
+                const SizedBox(width: 6),
+                Expanded(
+                  child: Text(
+                    widget.label,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF64748B),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 6),
+            Text(
+              widget.value,
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 14,
+                color: Color(0xFF1E293B),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class _PrerequisiteCard extends StatelessWidget {
@@ -419,24 +479,66 @@ class _PrerequisiteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
     width: double.infinity,
-    padding: const EdgeInsets.fromLTRB(18, 14, 18, 14),
     decoration: BoxDecoration(
-      color: const Color(0xFFEDF6FF),
-      border: const Border(
-        left: BorderSide(color: Color(0xFF8BBEFF), width: 6),
-      ),
+      color: Colors.white,
       borderRadius: BorderRadius.circular(14),
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          'Prerequisite',
-          style: TextStyle(fontWeight: FontWeight.w700),
+      border: Border.all(color: const Color(0xFFE2E8F0)),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.03),
+          blurRadius: 8,
+          offset: const Offset(0, 2),
         ),
-        const SizedBox(height: 6),
-        SelectableText(value),
       ],
+    ),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(14),
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              width: 5,
+              color: AppColors.primary,
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: const [
+                        Icon(Icons.account_tree_rounded, size: 16, color: AppColors.primary),
+                        SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            'Prerequisite',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF1E293B),
+                              fontSize: 13.5,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    SelectableText(
+                      value,
+                      style: const TextStyle(
+                        fontSize: 13.5,
+                        color: Color(0xFF334155),
+                        height: 1.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     ),
   );
 }
@@ -1493,6 +1595,62 @@ class _BooleanStatusBadge extends StatelessWidget {
 /// instead of joined bullet text. All the scrolling (and the scrollbars
 /// for it) now lives in [_DataGrid]; see its doc comment for why the two
 /// axes are nested the way they are.
+IconData? _columnHeaderIcon(String rawKey) {
+  final key = _normalizedMetadataKey(rawKey);
+  switch (key) {
+    case 'no':
+      return Icons.numbers_rounded;
+    case 'materialdescription':
+    case 'description':
+    case 'topic':
+      return Icons.book_rounded;
+    case 'author':
+      return Icons.person_rounded;
+    case 'publisher':
+      return Icons.business_rounded;
+    case 'publisheddate':
+      return Icons.calendar_month_rounded;
+    case 'edition':
+      return Icons.auto_stories_rounded;
+    case 'isbn':
+      return Icons.qr_code_2_rounded;
+    case 'ismainmaterial':
+      return Icons.star_rounded;
+    case 'ishardcopy':
+      return Icons.menu_book_rounded;
+    case 'isonline':
+      return Icons.language_rounded;
+    case 'note':
+    case 'details':
+      return Icons.notes_rounded;
+    case 'session':
+      return Icons.event_note_rounded;
+    case 'clo':
+      return Icons.flag_rounded;
+    case 'itu':
+      return Icons.extension_rounded;
+    case 'learningteachingtype':
+      return Icons.school_rounded;
+    case 'studentmaterials':
+      return Icons.folder_open_rounded;
+    case 'studentstasks':
+      return Icons.task_alt_rounded;
+    case 'sdownload':
+      return Icons.download_rounded;
+    default:
+      return null;
+  }
+}
+
+IconData _syllabusTableIcon(String rawHeading) {
+  final key = _normalizedMetadataKey(rawHeading);
+  if (key.contains('reference') || key.contains('material')) return Icons.menu_book_rounded;
+  if (key.contains('session') || key.contains('plan') || key.contains('schedule')) return Icons.calendar_today_rounded;
+  if (key.contains('assessment') || key.contains('grade') || key.contains('exam')) return Icons.quiz_rounded;
+  if (key.contains('question') || key.contains('constructive')) return Icons.help_outline_rounded;
+  return Icons.table_chart_rounded;
+}
+
 class SyllabusTablePanel extends StatelessWidget {
   const SyllabusTablePanel({super.key, required this.section});
   final SyllabusSection section;
@@ -1500,41 +1658,105 @@ class SyllabusTablePanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Container(
-      clipBehavior: Clip.antiAlias,
+    final icon = _syllabusTableIcon(section.heading);
+    return DecoratedBox(
       decoration: BoxDecoration(
-        color: const Color(0xFFF7FBFF),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: const Color(0xFFDCEBFF)),
+        color: AppColors.background,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 20, 20, 8),
+            padding: const EdgeInsets.all(22),
             child: Row(
               children: [
-                Expanded(
-                  child: Text(
-                    section.heading,
-                    style: theme.textTheme.titleLarge?.copyWith(
-                      color: theme.colorScheme.primary,
-                      fontWeight: FontWeight.w700,
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF2563EB), Color(0xFF3B82F6)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x252563EB),
+                        blurRadius: 8,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: Icon(
+                    icon,
+                    size: 18,
+                    color: Colors.white,
                   ),
                 ),
-                Text(
-                  '${section.rows.length} dòng',
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        spacing: 10,
+                        runSpacing: 4,
+                        children: [
+                          Text(
+                            section.heading,
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              color: AppColors.textMain,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                              letterSpacing: -0.2,
+                            ),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 9,
+                              vertical: 2.5,
+                            ),
+                            decoration: BoxDecoration(
+                              color: AppColors.primaryBg,
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: AppColors.primary.withOpacity(0.15),
+                              ),
+                            ),
+                            child: Text(
+                              '${section.rows.length} rows',
+                              style: theme.textTheme.labelSmall?.copyWith(
+                                color: AppColors.primaryDark,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 11.5,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 2),
+                      const Text(
+                        'Structured syllabus records and reference details',
+                        style: TextStyle(
+                          color: AppColors.textSub,
+                          fontSize: 12.5,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
             ),
           ),
-          Divider(height: 1, color: theme.colorScheme.outlineVariant),
+          const Divider(height: 1, color: Color(0xFFE2E8F0)),
           Expanded(
-            child: _DataGrid(headers: section.headers, rows: section.rows),
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: _DataGrid(headers: section.headers, rows: section.rows),
+            ),
           ),
         ],
       ),
@@ -1542,25 +1764,6 @@ class SyllabusTablePanel extends StatelessWidget {
   }
 }
 
-/// A plain, scrollable data grid — header row + zebra-striped body rows —
-/// for tabular `SyllabusSection` data whose columns aren't known ahead of
-/// time. Column widths are sized from each column's longest cell (capped),
-/// so short columns (session number, Yes/No flags) stay narrow and
-/// long-text columns (topic, description) get room to wrap rather than
-/// forcing every column to the same width.
-///
-/// Tall tables (the session plan alone runs 60 rows) need a vertical
-/// scrollbar, and wide ones (most syllabus tables have 6+ columns) need a
-/// horizontal one. The two scroll views used to be nested with vertical on
-/// the *outside* and horizontal on the *inside*, which put the horizontal
-/// [Scrollbar] at the bottom of the full scrolled content instead of the
-/// bottom of the visible panel — on a 60-row table it sat some 3000px
-/// below the fold, effectively undiscoverable. They're nested the other
-/// way round here instead: horizontal is the outer scroll view, sized by
-/// the [Expanded] this widget sits in, so its `Scrollbar` is always pinned
-/// to the bottom of the visible panel regardless of vertical scroll
-/// position; vertical scrolling happens inside a fixed-width [SizedBox]
-/// (the table's full rendered width) nested inside that.
 class _DataGrid extends StatefulWidget {
   const _DataGrid({required this.headers, required this.rows});
   final List<String> headers;
@@ -1579,6 +1782,164 @@ class _DataGridState extends State<_DataGrid> {
     _horizontalController.dispose();
     _verticalController.dispose();
     super.dispose();
+  }
+
+  Widget _buildCell({
+    required String text,
+    required String headerKey,
+    required bool isHeader,
+    required bool isCentered,
+    required bool isFirstColumn,
+    required bool isStatusColumn,
+    required TextStyle? baseStyle,
+  }) {
+    if (isHeader) {
+      final icon = _columnHeaderIcon(headerKey);
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: isCentered ? MainAxisAlignment.center : MainAxisAlignment.start,
+          children: [
+            if (icon != null) ...[
+              Icon(icon, size: 13, color: AppColors.primary),
+              const SizedBox(width: 6),
+            ],
+            Flexible(
+              child: Text(
+                text,
+                maxLines: 1,
+                softWrap: false,
+                overflow: TextOverflow.visible,
+                textAlign: isCentered ? TextAlign.center : TextAlign.left,
+                style: const TextStyle(
+                  color: Color(0xFF1E293B),
+                  fontWeight: FontWeight.w700,
+                  fontSize: 12.5,
+                  letterSpacing: 0.3,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    final trimmed = text.trim();
+    final lower = trimmed.toLowerCase();
+    final normHeader = _normalizedMetadataKey(headerKey);
+    final isBooleanValue = lower == 'true' || lower == 'yes' || lower == 'false' || lower == 'no';
+    final shouldShowStatusBadge = isStatusColumn || isBooleanValue;
+    final isIsbn = normHeader == 'isbn' && trimmed.isNotEmpty;
+
+    if (shouldShowStatusBadge && (isBooleanValue || trimmed.isEmpty)) {
+      if (trimmed.isEmpty) {
+        return const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+          child: SizedBox.shrink(),
+        );
+      }
+      final isPositive = lower == 'true' || lower == 'yes';
+      final foreground = isPositive ? const Color(0xFF047857) : const Color(0xFF64748B);
+      final background = isPositive ? const Color(0xFFECFDF5) : const Color(0xFFF1F5F9);
+      final border = isPositive ? const Color(0xFFA7F3D0) : const Color(0xFFE2E8F0);
+      final icon = isPositive ? Icons.check_circle_rounded : Icons.remove_circle_outline_rounded;
+
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        child: Center(
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
+            decoration: BoxDecoration(
+              color: background,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: border),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(icon, size: 12, color: foreground),
+                const SizedBox(width: 4),
+                Text(
+                  text,
+                  style: TextStyle(
+                    color: foreground,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 11.5,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
+    if (isIsbn) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        child: Align(
+          alignment: isCentered ? Alignment.center : Alignment.centerLeft,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF1F5F9),
+              borderRadius: BorderRadius.circular(6),
+              border: Border.all(color: const Color(0xFFE2E8F0)),
+            ),
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontFamily: 'monospace',
+                fontSize: 11.5,
+                color: Color(0xFF334155),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    if (isFirstColumn && trimmed.isNotEmpty && RegExp(r'^\d+$').hasMatch(trimmed)) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        child: Center(
+          child: Container(
+            constraints: const BoxConstraints(minWidth: 26, minHeight: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+            decoration: BoxDecoration(
+              color: AppColors.primaryBg,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: AppColors.primaryDark,
+                fontWeight: FontWeight.w700,
+                fontSize: 12,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      child: Text(
+        text,
+        textAlign: isCentered ? TextAlign.center : TextAlign.left,
+        softWrap: true,
+        style: baseStyle?.copyWith(
+          color: isFirstColumn ? const Color(0xFF475569) : const Color(0xFF334155),
+          fontWeight: isFirstColumn ? FontWeight.w600 : FontWeight.w400,
+          height: 1.5,
+          fontSize: 13.5,
+        ),
+      ),
+    );
   }
 
   @override
@@ -1618,13 +1979,9 @@ class _DataGridState extends State<_DataGrid> {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        const horizontalPadding =
-            32.0; // matches the SingleChildScrollView below
+        const horizontalPadding = 32.0;
         final available = constraints.maxWidth - horizontalPadding;
 
-        // Keep every column at a useful minimum. Extra room is distributed
-        // only to prose columns; compact/status columns never consume a
-        // disproportionate share of a wide window.
         final resolvedWidths = List<double>.from(columnWidths);
         var tableWidth = naturalWidth;
         if (available.isFinite && naturalWidth < available) {
@@ -1641,73 +1998,64 @@ class _DataGridState extends State<_DataGrid> {
           tableWidth = available;
         }
 
-        final table = Table(
-          border: TableBorder(
-            horizontalInside: BorderSide(
-              color: theme.colorScheme.outlineVariant,
+        final table = ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: const Color(0xFFE2E8F0)),
             ),
-            top: BorderSide(color: theme.colorScheme.outlineVariant),
-            bottom: BorderSide(color: theme.colorScheme.outlineVariant),
-          ),
-          columnWidths: {
-            for (var i = 0; i < headers.length; i++)
-              i: FixedColumnWidth(resolvedWidths[i]),
-          },
-          defaultVerticalAlignment: TableCellVerticalAlignment.top,
-          children: [
-            TableRow(
-              decoration: const BoxDecoration(color: Color(0xFFEAF4FF)),
+            child: Table(
+              border: const TableBorder(
+                horizontalInside: BorderSide(color: Color(0xFFF1F5F9)),
+                top: BorderSide(color: Color(0xFFE2E8F0)),
+                bottom: BorderSide(color: Color(0xFFE2E8F0)),
+              ),
+              columnWidths: {
+                for (var i = 0; i < headers.length; i++)
+                  i: FixedColumnWidth(resolvedWidths[i]),
+              },
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
               children: [
-                for (var index = 0; index < headers.length; index++)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 10,
-                    ),
-                    child: Text(
-                      specs[index].label,
-                      maxLines: 1,
-                      softWrap: false,
-                      overflow: TextOverflow.visible,
-                      textAlign: specs[index].centered
-                          ? TextAlign.center
-                          : TextAlign.left,
-                      style: theme.textTheme.labelLarge?.copyWith(
-                        color: const Color(0xFF123E7C),
-                        fontWeight: FontWeight.w700,
+                TableRow(
+                  decoration: const BoxDecoration(color: Color(0xFFF1F5F9)),
+                  children: [
+                    for (var index = 0; index < headers.length; index++)
+                      _buildCell(
+                        text: specs[index].label,
+                        headerKey: headers[index],
+                        isHeader: true,
+                        isCentered: specs[index].centered,
+                        isFirstColumn: index == 0,
+                        isStatusColumn: false,
+                        baseStyle: theme.textTheme.labelLarge,
                       ),
+                  ],
+                ),
+                for (var r = 0; r < rows.length; r++)
+                  TableRow(
+                    decoration: BoxDecoration(
+                      color: r.isEven ? Colors.white : const Color(0xFFFAFCFF),
                     ),
+                    children: [
+                      for (var c = 0; c < headers.length; c++)
+                        _buildCell(
+                          text: c < rows[r].length ? rows[r][c] : '',
+                          headerKey: headers[c],
+                          isHeader: false,
+                          isCentered: specs[c].centered,
+                          isFirstColumn: c == 0,
+                          isStatusColumn: _statusDataGridColumns.contains(
+                            _normalizedMetadataKey(headers[c]),
+                          ),
+                          baseStyle: theme.textTheme.bodyMedium,
+                        ),
+                    ],
                   ),
               ],
             ),
-            for (var r = 0; r < rows.length; r++)
-              TableRow(
-                decoration: BoxDecoration(
-                  color: r.isEven
-                      ? theme.colorScheme.surface
-                      : theme.colorScheme.surfaceContainerLow,
-                ),
-                children: [
-                  for (var c = 0; c < headers.length; c++)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 10,
-                      ),
-                      child: Text(
-                        c < rows[r].length ? rows[r][c] : '',
-                        textAlign: specs[c].centered
-                            ? TextAlign.center
-                            : TextAlign.left,
-                        softWrap: true,
-                        style: theme.textTheme.bodyMedium?.copyWith(
-                          height: 1.4,
-                        ),
-                      ),
-                    ),
-                ],
-              ),
-          ],
+          ),
         );
 
         return Scrollbar(
@@ -1718,7 +2066,7 @@ class _DataGridState extends State<_DataGrid> {
           child: SingleChildScrollView(
             controller: _horizontalController,
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+            padding: const EdgeInsets.fromLTRB(4, 4, 4, 12),
             child: SizedBox(
               width: tableWidth,
               child: Scrollbar(
@@ -1736,6 +2084,7 @@ class _DataGridState extends State<_DataGrid> {
     );
   }
 }
+
 
 class _DataColumnSpec {
   const _DataColumnSpec({
