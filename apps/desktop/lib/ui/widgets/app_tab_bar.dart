@@ -112,73 +112,83 @@ class AppTabBar extends StatelessWidget {
 
   Widget _buildBrowserTab(BuildContext context, int index, AppTabModel tab) {
     final isActive = index == activeIndex;
+    final textStyle = TextStyle(
+      fontSize: 12,
+      fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
+      color: isActive ? const Color(0xFF0F172A) : const Color(0xFF334155),
+      inherit: false,
+    );
+    final iconColor = isActive ? AppColors.primary : const Color(0xFF475569);
 
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: () => onTabSelected(index),
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 150),
-          constraints: const BoxConstraints(minWidth: 140, maxWidth: 220),
-          margin: const EdgeInsets.only(right: 3),
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+    return GestureDetector(
+      onTap: () => onTabSelected(index),
+      behavior: HitTestBehavior.opaque,
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: Container(
+          width: 180,
+          height: 36,
+          margin: const EdgeInsets.only(right: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
           decoration: BoxDecoration(
-            color: isActive ? Colors.white : const Color(0xFFCBD5E1).withOpacity(0.6),
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
+            color: isActive ? Colors.white : const Color(0xFFCBD5E1),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(8)),
             boxShadow: isActive
                 ? [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.06),
-                      blurRadius: 6,
-                      offset: const Offset(0, -2),
+                      color: Colors.black.withOpacity(0.08),
+                      blurRadius: 4,
+                      offset: const Offset(0, -1),
                     )
                   ]
                 : null,
-            border: isActive
-                ? const Border(
-                    top: BorderSide(color: AppColors.primary, width: 2.5),
-                    left: BorderSide(color: Color(0xFFCBD5E1)),
-                    right: BorderSide(color: Color(0xFFCBD5E1)),
-                  )
-                : null,
+            border: Border(
+              top: BorderSide(
+                color: isActive ? AppColors.primary : Colors.transparent,
+                width: 2.5,
+              ),
+              left: BorderSide(
+                color: isActive ? const Color(0xFFCBD5E1) : Colors.transparent,
+              ),
+              right: BorderSide(
+                color: isActive ? const Color(0xFFCBD5E1) : Colors.transparent,
+              ),
+            ),
           ),
-          child: Row(
-            children: [
-              Icon(
-                tab.icon,
-                size: 15,
-                color: isActive ? AppColors.primary : const Color(0xFF475569),
-              ),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Text(
-                  tab.title,
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: isActive ? FontWeight.bold : FontWeight.w600,
-                    color: isActive ? const Color(0xFF0F172A) : const Color(0xFF334155),
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              if (tab.isCloseable) ...[
-                const SizedBox(width: 4),
-                InkWell(
-                  onTap: () => onTabClosed(tab),
-                  borderRadius: BorderRadius.circular(10),
-                  child: Padding(
-                    padding: const EdgeInsets.all(2),
-                    child: Icon(
-                      Icons.close_rounded,
-                      size: 14,
-                      color: isActive ? const Color(0xFF64748B) : const Color(0xFF64748B),
+          child: DefaultTextStyle(
+            style: textStyle,
+            child: IconTheme(
+              data: IconThemeData(color: iconColor, size: 15),
+              child: Row(
+                children: [
+                  Icon(tab.icon, size: 15, color: iconColor),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(
+                      tab.title,
+                      style: textStyle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                ),
-              ],
-            ],
+                  if (tab.isCloseable) ...[
+                    const SizedBox(width: 4),
+                    GestureDetector(
+                      onTap: () => onTabClosed(tab),
+                      behavior: HitTestBehavior.opaque,
+                      child: Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Icon(
+                          Icons.close_rounded,
+                          size: 14,
+                          color: isActive ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
           ),
         ),
       ),
