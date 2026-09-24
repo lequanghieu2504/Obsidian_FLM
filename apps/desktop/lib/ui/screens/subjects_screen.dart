@@ -8,10 +8,12 @@ import '../../features/subjects/presentation/subject_detail_screen.dart';
 
 class SubjectsScreen extends StatefulWidget {
   final CurriculumData curriculumData;
+  final Function(Subject subject)? onOpenSubjectTab;
 
   const SubjectsScreen({
     super.key,
     required this.curriculumData,
+    this.onOpenSubjectTab,
   });
 
   @override
@@ -75,6 +77,12 @@ class _SubjectsScreenState extends State<SubjectsScreen>
         widget.curriculumData.subjects.indexWhere((s) => s.code == code);
     if (subIdx == -1) return;
     final subject = widget.curriculumData.subjects[subIdx];
+
+    if (widget.onOpenSubjectTab != null) {
+      widget.onOpenSubjectTab!(subject);
+      return;
+    }
+
     final curriculumCode =
         widget.curriculumData.metadata['curriculumCode']?.toString() ??
             'Curriculum';
