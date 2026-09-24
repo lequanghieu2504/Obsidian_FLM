@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import '../../app/theme/app_colors.dart';
 import '../screens/home_screen.dart';
 import '../../utils/user_settings.dart';
+import '../../models/curriculum_data.dart';
+import '../../models/subject.dart';
+import 'semester_tree_widget.dart';
 
 class AppSidebar extends StatefulWidget {
   final int selectedIndex;
@@ -9,6 +12,9 @@ class AppSidebar extends StatefulWidget {
   final String? curriculumCode;
   final bool isOpen;
   final VoidCallback onToggle;
+  final CurriculumData? curriculumData;
+  final Function(Subject subject)? onSubjectSelected;
+  final String? selectedSubjectCode;
 
   const AppSidebar({
     super.key,
@@ -17,6 +23,9 @@ class AppSidebar extends StatefulWidget {
     this.curriculumCode,
     required this.isOpen,
     required this.onToggle,
+    this.curriculumData,
+    this.onSubjectSelected,
+    this.selectedSubjectCode,
   });
 
   @override
@@ -186,16 +195,26 @@ class _AppSidebarState extends State<AppSidebar> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
-                children: [
-                  _buildNavItem(0, Icons.grid_view_rounded, 'Tổng quan'),
-                  _buildNavItem(1, Icons.menu_book_rounded, 'Môn học'),
-                  // Index 2 (Trợ lý học vụ) has no sidebar item: the AI
-                  // assistant is opened from the "Trợ lý" button in the
-                  // topbar, which is available on every screen.
-                  _buildNavItem(3, Icons.search_rounded, 'Khám phá'),
-                  _buildNavItem(4, Icons.assessment_rounded, 'Bảng điểm'),
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    _buildNavItem(0, Icons.grid_view_rounded, 'Tổng quan'),
+                    _buildNavItem(1, Icons.menu_book_rounded, 'Môn học'),
+                    _buildNavItem(3, Icons.search_rounded, 'Khám phá'),
+                    _buildNavItem(4, Icons.assessment_rounded, 'Bảng điểm'),
+                    if (widget.isOpen && widget.curriculumData != null) ...[
+                      const SizedBox(height: 12),
+                      SemesterTreeWidget(
+                        curriculumData: widget.curriculumData,
+                        curriculumCode: widget.curriculumCode,
+                        selectedSubjectCode: widget.selectedSubjectCode,
+                        onSubjectTap: (subject) {
+                          widget.onSubjectSelected?.call(subject);
+                        },
+                      ),
+                    ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -305,7 +324,9 @@ class _AppSidebarState extends State<AppSidebar> {
         child: InkWell(
           onTap: () => widget.onItemSelected(index),
           borderRadius: BorderRadius.circular(12),
-          child: Container(
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 220),
+            curve: Curves.easeOutCubic,
             padding: EdgeInsets.symmetric(
                 horizontal: widget.isOpen ? 16 : 0, vertical: 12),
             width: double.infinity,
@@ -315,9 +336,10 @@ class _AppSidebarState extends State<AppSidebar> {
               boxShadow: isSelected
                   ? [
                       BoxShadow(
-                          color: Colors.black.withOpacity(0.05),
-                          blurRadius: 10,
-                          offset: const Offset(0, 2))
+                        color: AppColors.primary.withOpacity(0.08),
+                        blurRadius: 14,
+                        offset: const Offset(0, 3),
+                      )
                     ]
                   : null,
             ),
@@ -326,10 +348,15 @@ class _AppSidebarState extends State<AppSidebar> {
                   ? MainAxisAlignment.start
                   : MainAxisAlignment.center,
               children: [
-                Icon(
-                  icon,
-                  color: isSelected ? AppColors.primary : AppColors.textSub,
-                  size: 20,
+                AnimatedScale(
+                  duration: const Duration(milliseconds: 200),
+                  curve: Curves.easeOutBack,
+                  scale: isSelected ? 1.1 : 1.0,
+                  child: Icon(
+                    icon,
+                    color: isSelected ? AppColors.primary : AppColors.textSub,
+                    size: 20,
+                  ),
                 ),
                 if (widget.isOpen) ...[
                   const SizedBox(width: 12),
@@ -348,7 +375,8 @@ class _AppSidebarState extends State<AppSidebar> {
                     ),
                   ),
                   if (badge != null)
-                    Container(
+                    AnimatedContainer(
+                      duration: const Duration(milliseconds: 200),
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8, vertical: 2),
                       decoration: BoxDecoration(
