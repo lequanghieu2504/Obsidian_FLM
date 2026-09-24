@@ -1,12 +1,19 @@
+import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 
 import '../../../ui/widgets/assistant_chat_layout.dart';
+import '../../../ui/widgets/ai_settings_form.dart';
 import '../../../utils/user_settings.dart';
 import '../application/subject_detail_controller.dart';
+import '../domain/study_roadmap_prompt.dart';
 import '../domain/subject_workspace.dart';
 
 class SubjectChatPanel extends StatefulWidget {
-  const SubjectChatPanel({super.key, required this.controller, this.onCollapse});
+  const SubjectChatPanel({
+    super.key,
+    required this.controller,
+    this.onCollapse,
+  });
   final SubjectDetailController controller;
 
   /// Shown as a "Minimize" button in the header when set. The panel itself
@@ -109,6 +116,44 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
     );
   }
 
+  Future<void> _buildRoadmapFromTranscript() async {
+    const transcriptTypes = XTypeGroup(
+      label: 'Bảng điểm',
+      extensions: [
+        'xlsx',
+        'csv',
+        'md',
+        'markdown',
+        'pdf',
+        'png',
+        'jpg',
+        'jpeg',
+        'webp',
+      ],
+    );
+    final files = await openFiles(acceptedTypeGroups: const [transcriptTypes]);
+    if (files.isEmpty || !mounted) return;
+    final imported = await widget.controller.importFiles(
+      files.map((file) => file.path).toList(),
+    );
+    if (!mounted || imported.isEmpty) return;
+    for (final resource in imported) {
+      widget.controller.setResourceSelected(resource.id, true);
+    }
+    final prompt = buildStudyRoadmapRequest(
+      subjectCode: widget.controller.workspace.subjectCode,
+      fileNames: imported.map((resource) => resource.originalFileName).toList(),
+    );
+    _text.text = prompt;
+    _text.selection = TextSelection.collapsed(offset: prompt.length);
+    _focus.requestFocus();
+  }
+
+  Future<void> _openAiSettings() async {
+    await showAiSettingsDialog(context);
+    await widget.controller.loadKey();
+  }
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -127,6 +172,10 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
             'tập. Thông tin môn học và tin nhắn được gửi cho Gemini khi bạn '
             'hỏi; tài liệu chỉ được gửi khi bạn đính kèm.',
         children: [
+          _RoadmapQuickStart(
+            enabled: controller.resourcesReady && !controller.resourceBusy,
+            onPressed: _buildRoadmapFromTranscript,
+          ),
           if (!controller.hasKey)
             const Text(
               'Chưa có Gemini API Key. Hãy mở Trợ lý học vụ (nút "Trợ lý" '
@@ -172,14 +221,18 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
       framed: true,
       title: 'Trợ lý môn học',
       subtitle:
-          '${controller.workspace.subjectCode} · dựa trên syllabus của môn',
+          '${controller.workspace.subjectCode} · BYOK · ${UserSettings.modelLabels[UserSettings.geminiModel] ?? UserSettings.geminiModel}',
       actions: [
-        // No API-key button here: the key/model are configured only in
-        // "Trợ lý học vụ" (shared app-wide via UserSettings).
+        AssistantHeaderAction(
+          icon: Icons.key_outlined,
+          tooltip: 'Cấu hình API Key & model',
+          onPressed: controller.sending ? null : _openAiSettings,
+        ),
         AssistantHeaderAction(
           icon: Icons.delete_sweep_outlined,
           tooltip: 'Xóa lịch sử chat',
-          onPressed: controller.sending ||
+          onPressed:
+              controller.sending ||
                   !controller.chatReady ||
                   controller.messages.isEmpty
               ? null
@@ -261,7 +314,18 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
         ],
         secondaryActions: [
           OutlinedButton.icon(
-            onPressed: controller.sending ||
+            onPressed:
+                controller.sending ||
+                    !controller.resourcesReady ||
+                    controller.resourceBusy
+                ? null
+                : _buildRoadmapFromTranscript,
+            icon: const Icon(Icons.route_outlined),
+            label: const Text('Lộ trình từ bảng điểm'),
+          ),
+          OutlinedButton.icon(
+            onPressed:
+                controller.sending ||
                     !controller.resourcesReady ||
                     controller.resources.isEmpty
                 ? null
@@ -273,6 +337,46 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
       ),
     );
   }
+}
+
+class _RoadmapQuickStart extends StatelessWidget {
+  const _RoadmapQuickStart({required this.enabled, required this.onPressed});
+
+  final bool enabled;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: double.infinity,
+    padding: const EdgeInsets.all(14),
+    decoration: BoxDecoration(
+      color: const Color(0xFFF0F6FF),
+      borderRadius: BorderRadius.circular(12),
+      border: Border.all(color: const Color(0xFFD8E8FF)),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Lộ trình học cá nhân hóa',
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+            color: const Color(0xFF123E7C),
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        const SizedBox(height: 4),
+        const Text(
+          'Chọn bảng điểm dạng Excel, CSV, Markdown, PDF hoặc ảnh để đối chiếu với syllabus và gợi ý cách học môn này.',
+        ),
+        const SizedBox(height: 10),
+        FilledButton.tonalIcon(
+          onPressed: enabled ? onPressed : null,
+          icon: const Icon(Icons.upload_file_outlined),
+          label: const Text('Chọn bảng điểm'),
+        ),
+      ],
+    ),
+  );
 }
 
 class _AttachmentPicker extends StatefulWidget {

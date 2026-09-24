@@ -165,6 +165,15 @@ class SubjectPromptBuilder {
       'metadata. If information is unavailable, say so. Files are included '
       'only when the user explicitly attaches them to the current message.',
     );
+    buffer.writeln(
+      'When the user asks for a study roadmap from a transcript or grade '
+      'report, read only information visible in the attached files, identify '
+      'uncertain or missing values, and never invent grades. Relate verified '
+      'strengths and gaps to this subject’s prerequisites, CLOs, session plan, '
+      'assessment rules, and reference materials. Produce practical weekly '
+      'goals, activities, time estimates, checkpoints, and adjustment rules. '
+      'Ask a focused follow-up question when the evidence is insufficient.',
+    );
     return buffer.toString();
   }
 
@@ -201,8 +210,7 @@ class SubjectPromptBuilder {
         if (isbn.isNotEmpty) 'ISBN: $isbn',
         if (cell(row, 'ismainmaterial').toLowerCase() == 'true')
           'main material',
-        if (cell(row, 'isonline').toLowerCase() == 'true')
-          'available online',
+        if (cell(row, 'isonline').toLowerCase() == 'true') 'available online',
         if (cell(row, 'ishardcopy').toLowerCase() == 'true') 'hardcopy',
         if (note.isNotEmpty) 'note: $note',
       ];

@@ -7,10 +7,26 @@ import 'package:obsidian_flm_desktop/features/assistant/application/llm_client.d
 import 'package:obsidian_flm_desktop/features/assistant/infrastructure/gemini_llm_client.dart';
 import 'package:obsidian_flm_desktop/features/subjects/application/subject_detail_controller.dart';
 import 'package:obsidian_flm_desktop/features/subjects/domain/subject_workspace.dart';
+import 'package:obsidian_flm_desktop/features/subjects/domain/study_roadmap_prompt.dart';
 
 import 'test_support.dart';
 
 void main() {
+  test(
+    'study roadmap request binds transcript evidence to selected subject',
+    () {
+      final request = buildStudyRoadmapRequest(
+        subjectCode: 'NWC204',
+        fileNames: const ['transcript.xlsx', 'grades.png'],
+      );
+      expect(request, contains('NWC204'));
+      expect(request, contains('transcript.xlsx'));
+      expect(request, contains('grades.png'));
+      expect(request, contains('không tự suy đoán'));
+      expect(request, contains('lộ trình theo tuần'));
+    },
+  );
+
   test('prompt includes only selected subject academic context', () {
     const builder = SubjectPromptBuilder();
     final java = builder.build(workspace());
@@ -20,6 +36,7 @@ void main() {
     expect(java, contains('Semester: 4'));
     expect(java, contains('Credits: 3'));
     expect(java, contains('Prerequisite: DBI202, PRO192'));
+    expect(java, contains('never invent grades'));
     final database = builder.build(workspace('DBI202'));
     expect(database, isNot(contains('PRJ301')));
     expect(database, isNot(contains('Java Web')));

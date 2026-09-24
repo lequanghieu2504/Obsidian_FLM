@@ -185,17 +185,19 @@ class SubjectDetailController extends ChangeNotifier {
     }
   }
 
-  Future<void> importFiles(List<String> paths) async {
-    if (resourceBusy || !resourcesReady) return;
+  Future<List<UserResource>> importFiles(List<String> paths) async {
+    if (resourceBusy || !resourcesReady) return const [];
     resourceBusy = true;
     resourceError = null;
     _changed();
     var failed = 0;
+    final imported = <UserResource>[];
     try {
       for (final path in paths) {
         try {
           final resource = await repository.importResource(workspace, path);
           _resources = [..._resources, resource];
+          imported.add(resource);
           _changed();
         } catch (_) {
           failed++;
@@ -209,6 +211,7 @@ class SubjectDetailController extends ChangeNotifier {
       resourceBusy = false;
       _changed();
     }
+    return imported;
   }
 
   void reportResourceError(String message) {
@@ -306,7 +309,10 @@ class SubjectDetailController extends ChangeNotifier {
         id: DateTime.now().microsecondsSinceEpoch.toString(),
         role: ChatRole.assistant,
         content: await llm.send(
-          context: const SubjectPromptBuilder().build(workspace, syllabus: syllabus),
+          context: const SubjectPromptBuilder().build(
+            workspace,
+            syllabus: syllabus,
+          ),
           messages: messages,
           attachments: attachments,
         ),

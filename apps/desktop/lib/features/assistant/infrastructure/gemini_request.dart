@@ -53,18 +53,26 @@ class GeminiRequestBuilder {
                   'parts': [
                     {'text': m.content},
                     if (isCurrentMessage)
-                      ...attachments.map(
+                      ...attachments.expand(
                         (attachment) => attachment.text != null
-                            ? {
-                                'text':
-                                    'Attached file ${attachment.fileName}:\n${attachment.text}',
-                              }
-                            : {
-                                'inlineData': {
-                                  'mimeType': attachment.mimeType,
-                                  'data': base64Encode(attachment.bytes!),
+                            ? [
+                                {
+                                  'text':
+                                      'Attached file ${attachment.fileName}:\n${attachment.text}',
                                 },
-                              },
+                              ]
+                            : [
+                                {
+                                  'text':
+                                      'Attached file: ${attachment.fileName}',
+                                },
+                                {
+                                  'inlineData': {
+                                    'mimeType': attachment.mimeType,
+                                    'data': base64Encode(attachment.bytes!),
+                                  },
+                                },
+                              ],
                       ),
                   ],
                 };
