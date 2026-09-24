@@ -142,37 +142,58 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                 ),
                 // Nơi chứa màn hình thực tế (CurriculumDetailScreen, SubjectsScreen)
                 Expanded(
-                  child: _selectedIndex == 2 && !_isChatOverlay 
-                    // Fullscreen Chat Mode
-                    ? ChatBox(
-                        key: _chatBoxKey,
-                        curriculumData: widget.curriculumData,
-                        isOverlay: false,
-                        onToggleMode: () {
-                          setState(() => _isChatOverlay = true);
-                        },
-                        onClose: () {
-                          setState(() => _selectedIndex = _lastMainIndex);
-                        },
-                      )
-                    // Normal Main Screen
-                    : IndexedStack(
-                        index: _lastMainIndex,
-                        children: [
-                          CurriculumDetailScreen(
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 250),
+                    switchInCurve: Curves.easeOutCubic,
+                    switchOutCurve: Curves.easeInCubic,
+                    transitionBuilder: (child, animation) {
+                      final slide = Tween<Offset>(
+                        begin: const Offset(0.015, 0),
+                        end: Offset.zero,
+                      ).animate(animation);
+                      return FadeTransition(
+                        opacity: animation,
+                        child: SlideTransition(
+                          position: slide,
+                          child: child,
+                        ),
+                      );
+                    },
+                    child: KeyedSubtree(
+                      key: ValueKey<int>(_selectedIndex == 2 && !_isChatOverlay ? -1 : _lastMainIndex),
+                      child: _selectedIndex == 2 && !_isChatOverlay 
+                        // Fullscreen Chat Mode
+                        ? ChatBox(
+                            key: _chatBoxKey,
                             curriculumData: widget.curriculumData,
+                            isOverlay: false,
+                            onToggleMode: () {
+                              setState(() => _isChatOverlay = true);
+                            },
+                            onClose: () {
+                              setState(() => _selectedIndex = _lastMainIndex);
+                            },
+                          )
+                        // Normal Main Screen
+                        : IndexedStack(
+                            index: _lastMainIndex,
+                            children: [
+                              CurriculumDetailScreen(
+                                curriculumData: widget.curriculumData,
+                              ),
+                              // Subject list from feature/curriculum-and-transcript;
+                              // tapping a subject opens the detail page from
+                              // lib/features/subjects (SubjectDetailScreen).
+                              SubjectsScreen(
+                                curriculumData: widget.curriculumData,
+                              ),
+                              const SizedBox.shrink(), // Index 2 is Chat
+                              const ExploreCurriculumsScreen(),
+                              const TranscriptScreen(),
+                            ],
                           ),
-                          // Subject list from feature/curriculum-and-transcript;
-                          // tapping a subject opens the detail page from
-                          // lib/features/subjects (SubjectDetailScreen).
-                          SubjectsScreen(
-                            curriculumData: widget.curriculumData,
-                          ),
-                          const SizedBox.shrink(), // Index 2 is Chat
-                          const ExploreCurriculumsScreen(),
-                          const TranscriptScreen(),
-                        ],
-                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
