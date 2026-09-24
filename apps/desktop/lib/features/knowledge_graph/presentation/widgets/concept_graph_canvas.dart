@@ -72,14 +72,7 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
   static const double _canvasSize = 6000;
   static const Offset _canvasOrigin = Offset(_canvasSize / 2, _canvasSize / 2);
 
-  static const double _topicRadius = 220;
-  static const double _subtopicRadius = 130;
-
-  /// How wide an arc (radians) a topic's subtopics fan out across, centred
-  /// on that topic's own direction from the subject — so they spread away
-  /// from the subject instead of circling all the way round it and
-  /// overlapping neighbouring topics. ~109°.
-  static const double _subtopicArcSpan = 1.9;
+  static const double _topicRadius = 290;
 
   final GlobalKey _viewportKey = GlobalKey();
   final TransformationController _transformController =
@@ -103,34 +96,21 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
     super.dispose();
   }
 
-  /// Deterministic radial/tree layout: the subject sits at the centre, its
-  /// topics are spread evenly around it, and each topic's own subtopics
-  /// fan out on the arc facing away from the subject. No physics, no
-  /// iterations — nothing here ever needs to "converge", so there's
-  /// nothing to reshuffle on a rebuild the way `graphview`'s force-directed
-  /// algorithm did.
-  ///
-  /// Not collision-aware: for a subject with many topics that each have
-  /// many subtopics, neighbouring topics' subtopic fans could overlap.
-  /// Fine for this app's actual data (curated by hand — a handful of
-  /// topics, a few subtopics each; see `data/concepts/concepts.json`), and
-  /// the person can always drag nodes apart by hand regardless.
+  /// Dynamic radial layout with multi-ring staggered distribution and
+  /// collision relaxation pass to guarantee zero node overlaps.
   Map<String, Offset> _layoutRadial() {
     final positions = <String, Offset>{widget.subjectId: Offset.zero};
 
-    final topicIds = [
-      for (final e in widget.knowledgeGraph.edges)
-        if (e.relation == RelationType.hasTopic &&
+    final topicEdges = widget.knowledgeGraph.edges
+        .where((e) =>
+            e.relation == RelationType.hasTopic &&
             e.sourceId == widget.subjectId)
-          e.targetId,
-    ];
-    final topicCount = topicIds.length;
+        .toList();
+    final topicCount = topicEdges.length;
+    if (topicCount == 0) return positions;
 
     for (var i = 0; i < topicCount; i++) {
-      final topicId = topicIds[i];
-      // Start at the top (-pi/2) and go clockwise, purely so the first
-      // topic lands at 12 o'clock instead of 3 o'clock — no functional
-      // difference either way.
+      final topicId = topicEdges[i].targetId;
       final topicAngle = (2 * math.pi * i / topicCount) - math.pi / 2;
       final topicPos = Offset(
         _topicRadius * math.cos(topicAngle),
@@ -138,34 +118,103 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
       );
       positions[topicId] = topicPos;
 
-      final subtopicIds = [
-        for (final e in widget.knowledgeGraph.edges)
-          if (e.relation == RelationType.hasSubtopic &&
+      final subtopicEdges = widget.knowledgeGraph.edges
+          .where((e) =>
+              e.relation == RelationType.hasSubtopic &&
               e.sourceId == topicId)
-            e.targetId,
-      ];
-      final subtopicCount = subtopicIds.length;
+          .toList();
+      final subtopicCount = subtopicEdges.length;
+      if (subtopicCount == 0) continue;
+
+      // Dynamic arc span according to child count
+      final arcSpan = math.min(math.pi * 1.35, 0.45 * subtopicCount);
+
       for (var j = 0; j < subtopicCount; j++) {
-        final subAngle = subtopicCount == 1
-            ? topicAngle
-            : topicAngle -
-                _subtopicArcSpan / 2 +
-                _subtopicArcSpan * j / (subtopicCount - 1);
-        positions[subtopicIds[j]] = topicPos +
+        final subtopicId = subtopicEdges[j].targetId;
+        final fraction = subtopicCount == 1 ? 0.5 : j / (subtopicCount - 1);
+        final subAngle = topicAngle - (arcSpan / 2) + (arcSpan * fraction);
+
+        // Stagger radii between adjacent subtopics to eliminate side-by-side overlaps
+        final double r = subtopicCount > 3
+            ? (j.isEven ? 175.0 : 255.0)
+            : 185.0;
+
+        positions[subtopicId] = topicPos +
             Offset(
-              _subtopicRadius * math.cos(subAngle),
-              _subtopicRadius * math.sin(subAngle),
+              r * math.cos(subAngle),
+              r * math.sin(subAngle),
             );
       }
     }
+
+    _applyCollisionRelaxation(positions);
+
     return positions;
   }
 
-  /// Moves the viewport so the subject node sits exactly in the middle of
-  /// whatever space this canvas currently has on screen. Needs the
-  /// viewport's actual rendered size, which isn't known until after the
-  /// first layout pass — hence the post-frame callback rather than doing
-  /// this inline in `initState`/`build`.
+  /// 30 iterations of node collision relaxation to push any overlapping node boxes apart
+  void _applyCollisionRelaxation(Map<String, Offset> positions) {
+    final keys = positions.keys.toList();
+    for (var iter = 0; iter < 30; iter++) {
+      var moved = false;
+      for (var i = 0; i < keys.length; i++) {
+        final keyA = keys[i];
+        if (keyA == widget.subjectId) continue;
+        final posA = positions[keyA]!;
+        final nodeA = widget.knowledgeGraph.nodesById[keyA];
+        final sizeA = _estimateNodeSize(nodeA);
+
+        for (var j = i + 1; j < keys.length; j++) {
+          final keyB = keys[j];
+          final posB = positions[keyB]!;
+          final nodeB = widget.knowledgeGraph.nodesById[keyB];
+          final sizeB = _estimateNodeSize(nodeB);
+
+          final minDx = (sizeA.width + sizeB.width) / 2 + 24;
+          final minDy = (sizeA.height + sizeB.height) / 2 + 18;
+
+          final dx = posB.dx - posA.dx;
+          final dy = posB.dy - posA.dy;
+
+          final absDx = dx.abs();
+          final absDy = dy.abs();
+
+          if (absDx < minDx && absDy < minDy) {
+            final overlapX = minDx - absDx;
+            final overlapY = minDy - absDy;
+
+            Offset push;
+            if (overlapX < overlapY) {
+              final signX = dx >= 0 ? 1.0 : -1.0;
+              push = Offset(signX * overlapX * 0.45, 0);
+            } else {
+              final signY = dy >= 0 ? 1.0 : -1.0;
+              push = Offset(0, signY * overlapY * 0.45);
+            }
+
+            if (keyB == widget.subjectId) {
+              positions[keyA] = posA - push * 2;
+            } else {
+              positions[keyA] = posA - push;
+              positions[keyB] = posB + push;
+            }
+            moved = true;
+          }
+        }
+      }
+      if (!moved) break;
+    }
+  }
+
+  Size _estimateNodeSize(GraphNodeData? node) {
+    if (node == null) return const Size(120, 40);
+    if (node.type == NodeType.subject) return const Size(240, 95);
+    if (node.type == NodeType.topic) {
+      return Size((node.label.length * 8.5 + 48).clamp(140.0, 260.0), 44);
+    }
+    return Size((node.label.length * 7.5 + 32).clamp(100.0, 220.0), 38);
+  }
+
   void _centerOnSubject() {
     if (!mounted) return;
     final renderBox =
@@ -185,10 +234,6 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
   }
 
   void _onNodeDrag(String id, Offset delta) {
-    // A plain setState — safe to call on every pointer-move frame here,
-    // unlike the `graphview`-based version this replaced (see this class's
-    // doc comment): it only ever repositions/repaints from [_positions],
-    // nothing here recomputes a layout from scratch.
     setState(() {
       _positions[id] = (_positions[id] ?? Offset.zero) + delta;
     });
@@ -201,10 +246,6 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
       key: _viewportKey,
       child: InteractiveViewer(
         transformationController: _transformController,
-        // The canvas is a fixed, generously-sized virtual surface the
-        // person pans/zooms around in — not something that shrinks to fit
-        // its content — which is what `constrained: false` plus an
-        // explicitly-sized child (below) means in `InteractiveViewer`.
         constrained: false,
         boundaryMargin: const EdgeInsets.all(4000),
         minScale: 0.2,
@@ -218,6 +259,7 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
                 child: CustomPaint(
                   painter: _EdgePainter(
                     edges: graph.edges,
+                    nodesById: graph.nodesById,
                     positions: _positions,
                     canvasOrigin: _canvasOrigin,
                   ),
@@ -228,10 +270,6 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
                   Positioned(
                     left: _canvasOrigin.dx + pos.dx,
                     top: _canvasOrigin.dy + pos.dy,
-                    // Centres the card on (left, top) regardless of the
-                    // card's own rendered size (topic/subtopic pills vary
-                    // in width with their label) — a plain `Positioned`
-                    // would anchor its *top-left corner* there instead.
                     child: FractionalTranslation(
                       translation: const Offset(-0.5, -0.5),
                       child: Tooltip(
@@ -258,39 +296,61 @@ class _ConceptGraphCanvasState extends State<ConceptGraphCanvas> {
   }
 }
 
-/// Paints every edge as a straight line between its two nodes' *current*
-/// positions, read fresh from [positions] on every paint — so edges track
-/// a dragged node live, in the same frame, with no separate "catch up"
-/// step (unlike the `graphview`-based version this replaced).
+/// Paints edges with smooth anti-aliased curves and connection dots
 class _EdgePainter extends CustomPainter {
   _EdgePainter({
     required this.edges,
+    required this.nodesById,
     required this.positions,
     required this.canvasOrigin,
   });
 
   final List<GraphEdgeData> edges;
+  final Map<String, GraphNodeData> nodesById;
   final Map<String, Offset> positions;
   final Offset canvasOrigin;
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.indigo.withOpacity(0.6)
-      ..strokeWidth = 1.4
-      ..style = PaintingStyle.stroke;
+    final linePaint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    final dotPaint = Paint()..style = PaintingStyle.fill;
+
     for (final edge in edges) {
       final from = positions[edge.sourceId];
       final to = positions[edge.targetId];
       if (from == null || to == null) continue;
-      canvas.drawLine(canvasOrigin + from, canvasOrigin + to, paint);
+
+      final start = canvasOrigin + from;
+      final end = canvasOrigin + to;
+
+      if (edge.relation == RelationType.hasTopic) {
+        linePaint
+          ..color = const Color(0xFF60A5FA).withOpacity(0.65)
+          ..strokeWidth = 2.2;
+
+        final path = Path()..moveTo(start.dx, start.dy);
+        final control = Offset((start.dx + end.dx) / 2, (start.dy + end.dy) / 2);
+        path.quadraticBezierTo(control.dx, control.dy, end.dx, end.dy);
+        canvas.drawPath(path, linePaint);
+
+        dotPaint.color = const Color(0xFF2563EB);
+        canvas.drawCircle(end, 4.0, dotPaint);
+      } else {
+        linePaint
+          ..color = const Color(0xFF94A3B8).withOpacity(0.55)
+          ..strokeWidth = 1.6;
+
+        canvas.drawLine(start, end, linePaint);
+
+        dotPaint.color = const Color(0xFF64748B);
+        canvas.drawCircle(end, 3.0, dotPaint);
+      }
     }
   }
 
-  // Always true, deliberately: this graph is small (a handful of topics, a
-  // few subtopics each) and repainting is cheap, so a finer-grained check
-  // isn't worth the risk of getting it subtly wrong and having edges not
-  // repaint when they should.
   @override
   bool shouldRepaint(covariant _EdgePainter oldDelegate) => true;
 }
