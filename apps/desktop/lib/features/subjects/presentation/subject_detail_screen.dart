@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:path/path.dart' as p;
@@ -218,7 +217,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   /// the split never drags past them, and [MinWidthGuard] scrolls instead
   /// of squashing if the window itself is too small.
   static const double _minInfoWidth = 560;
-  static const double _minChatWidth = 360;
+  static const double _minChatWidth = 540;
   static const double _handleWidth = 20;
 
   /// Lays out the page's one chat panel next to (wide) or under (narrow)
@@ -232,13 +231,15 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   }) {
     information = KeyedSubtree(
       key: _infoKey,
-      child: MinWidthGuard(minWidth: _minInfoWidth, child: information),
+      child: wide
+          ? MinWidthGuard(minWidth: _minInfoWidth, child: information)
+          : information,
     );
     chat = MinWidthGuard(minWidth: _minChatWidth, child: chat);
     if (wide) {
       if (_chatCollapsed) {
         return Padding(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -250,7 +251,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
         );
       }
       return Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(10),
         child: _ResizableSplit(
           left: information,
           right: chat,
@@ -274,23 +275,30 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
         ),
       );
     }
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
-          Expanded(flex: 3, child: information),
-          const SizedBox(height: 12),
-          Expanded(flex: 2, child: chat),
-        ],
-      ),
-    );
+    return Padding(padding: const EdgeInsets.all(12), child: chat);
   }
 
   @override
   Widget build(BuildContext context) {
     final controller = _controller;
     return Scaffold(
-      appBar: AppBar(title: Text('${widget.subject.code} · Subject Detail')),
+      backgroundColor: const Color(0xFFEAF4FF),
+      appBar: AppBar(
+        toolbarHeight: 52,
+        backgroundColor: Colors.white,
+        surfaceTintColor: Colors.transparent,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            widget.subject.code,
+            style: const TextStyle(
+              color: Color(0xFF082F73),
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+      ),
       body: SafeArea(
         child: _failed
             ? Center(
@@ -328,21 +336,36 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                   );
                   return LayoutBuilder(
                     builder: (context, constraints) {
-                      final wide = constraints.maxWidth >=
+                      final wide =
+                          constraints.maxWidth >=
                           _minInfoWidth + _minChatWidth + _handleWidth + 48;
 
                       return DefaultTabController(
                         length: detailTabs.length + 1,
                         child: Column(
                           children: [
-                            TabBar(
-                              isScrollable: true,
-                              tabAlignment: TabAlignment.start,
-                              tabs: [
-                                for (final tab in detailTabs)
-                                  Tab(text: tab.title),
-                                const Tab(text: 'Knowledge Graph'),
-                              ],
+                            ColoredBox(
+                              color: Colors.white,
+                              child: TabBar(
+                                isScrollable: true,
+                                tabAlignment: TabAlignment.start,
+                                dividerColor: const Color(0xFFDCEBFF),
+                                indicatorSize: TabBarIndicatorSize.tab,
+                                labelColor: const Color(0xFF075CE5),
+                                unselectedLabelColor: const Color(0xFF29466F),
+                                labelStyle: const TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                ),
+                                tabs: [
+                                  for (final tab in detailTabs)
+                                    Tab(
+                                      text: wide
+                                          ? tab.title
+                                          : _compactTabTitle(tab.title),
+                                    ),
+                                  Tab(text: wide ? 'Knowledge Graph' : 'Graph'),
+                                ],
+                              ),
                             ),
                             Expanded(
                               child: _tabBody(
@@ -367,6 +390,15 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   }
 }
 
+String _compactTabTitle(String title) => switch (title) {
+  'Subject & resources' => 'Subject',
+  'Learning outcomes' => 'Outcomes',
+  'Other syllabus fields' => 'Other',
+  'Reference materials' => 'Materials',
+  'Session plan' => 'Sessions',
+  _ => title,
+};
+
 class _ResizableSplit extends StatefulWidget {
   const _ResizableSplit({
     required this.left,
@@ -374,7 +406,6 @@ class _ResizableSplit extends StatefulWidget {
     required this.leftMinWidth,
     required this.rightMinWidth,
     required this.handleWidth,
-    this.initialFraction = 0.58,
     this.initialWidth,
     this.onWidthChanged,
   });
@@ -384,7 +415,6 @@ class _ResizableSplit extends StatefulWidget {
   final double leftMinWidth;
   final double rightMinWidth;
   final double handleWidth;
-  final double initialFraction;
 
   /// A previously-dragged width to start from instead of [initialFraction]
   /// (e.g. restored after the chat panel was minimized and re-expanded,
@@ -447,11 +477,10 @@ class _ResizableSplitState extends State<_ResizableSplit> {
           widget.leftMinWidth,
           double.infinity,
         );
-        final leftWidth =
-            (_leftWidth ?? available * widget.initialFraction).clamp(
-              widget.leftMinWidth,
-              maxLeftWidth,
-            );
+        final leftWidth = (_leftWidth ?? available * 0.58).clamp(
+          widget.leftMinWidth,
+          maxLeftWidth,
+        );
         _minWidthForFrame = widget.leftMinWidth;
         _maxWidthForFrame = maxLeftWidth;
         return Row(
@@ -461,10 +490,7 @@ class _ResizableSplitState extends State<_ResizableSplit> {
               width: leftWidth,
               child: RepaintBoundary(child: widget.left),
             ),
-            _PaneResizeHandle(
-              width: widget.handleWidth,
-              onDrag: _queueDrag,
-            ),
+            _PaneResizeHandle(width: widget.handleWidth, onDrag: _queueDrag),
             Expanded(child: RepaintBoundary(child: widget.right)),
           ],
         );

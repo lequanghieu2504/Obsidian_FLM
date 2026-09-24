@@ -37,14 +37,28 @@ void main() {
     },
   );
 
+  test('markdown resources are sent as readable text attachments', () async {
+    final file = File('${root.path}/study.md');
+    await file.writeAsString('# Bảng điểm\n\n- PRF192: 8.5');
+
+    final attachment = await const LocalChatAttachmentProcessor().process(
+      resource('.md'),
+      file.path,
+    );
+
+    expect(attachment.mimeType, 'text/markdown');
+    expect(attachment.text, contains('PRF192: 8.5'));
+    expect(attachment.bytes, isNull);
+  });
+
   test(
     'unsupported local files fail explicitly instead of being ignored',
     () async {
-      final file = File('${root.path}/study.xlsx');
+      final file = File('${root.path}/study.docx');
       await file.writeAsBytes([1, 2, 3, 4]);
       expect(
         () => const LocalChatAttachmentProcessor().process(
-          resource('.xlsx'),
+          resource('.docx'),
           file.path,
         ),
         throwsA(
@@ -57,6 +71,24 @@ void main() {
       );
     },
   );
+
+  test('malformed spreadsheets fail with an actionable message', () async {
+    final file = File('${root.path}/study.xlsx');
+    await file.writeAsBytes([1, 2, 3, 4]);
+    expect(
+      () => const LocalChatAttachmentProcessor().process(
+        resource('.xlsx'),
+        file.path,
+      ),
+      throwsA(
+        isA<WorkspaceFailure>().having(
+          (failure) => failure.message,
+          'message',
+          contains('could not be read as a spreadsheet'),
+        ),
+      ),
+    );
+  });
 
   test('chat JSON persists resource IDs but never binary file data', () {
     final message = ChatMessage(

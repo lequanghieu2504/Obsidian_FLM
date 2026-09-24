@@ -2,9 +2,11 @@ import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../models/subject.dart';
 import '../../assistant/application/llm_client.dart';
 import '../../knowledge_graph/domain/subject_record.dart';
 import '../application/subject_detail_controller.dart';
+import '../domain/course_description_formatter.dart';
 import '../domain/subject_display.dart';
 import '../domain/subject_workspace.dart';
 
@@ -105,156 +107,136 @@ class SubjectOverviewPanel extends StatelessWidget {
     final subject = controller.workspace.subject;
     final displayName = subjectDisplayName(subject);
     final theme = Theme.of(context);
-    return Card(
+    final syllabus = controller.syllabus;
+    return Material(
+      color: const Color(0xFFF7FBFF),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18),
+        side: const BorderSide(color: Color(0xFFDCEBFF)),
+      ),
+      clipBehavior: Clip.antiAlias,
       child: CustomScrollView(
         slivers: [
           SliverPadding(
-            padding: const EdgeInsets.all(24),
+            padding: const EdgeInsets.all(16),
             sliver: SliverToBoxAdapter(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    controller.workspace.curriculumCode,
-                    style: theme.textTheme.labelLarge?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant,
-                      letterSpacing: 0.4,
-                    ),
+                  _SubjectHero(
+                    curriculumCode: controller.workspace.curriculumCode,
+                    subject: subject,
+                    displayName: displayName,
                   ),
-                  const SizedBox(height: 8),
-                  SelectableText(
-                    subject.code,
-                    style: theme.textTheme.headlineMedium?.copyWith(
-                      color: theme.colorScheme.primary,
-                      fontWeight: FontWeight.w700,
+                  const SizedBox(height: 10),
+                  _SubjectFacts(subject: subject, syllabus: syllabus),
+                  const SizedBox(height: 10),
+                  _PrerequisiteCard(value: prerequisiteDisplay(subject)),
+                  if (controller.syllabusLoading) ...[
+                    const SizedBox(height: 10),
+                    const _StatusCard(
+                      icon: Icons.hourglass_top_rounded,
+                      message: 'Loading full syllabus…',
                     ),
-                  ),
-                  const SizedBox(height: 4),
-                  SelectableText(
-                    displayName.primary,
-                    style: theme.textTheme.headlineSmall,
-                  ),
-                  if (displayName.secondary case final secondary?) ...[
-                    const SizedBox(height: 4),
-                    SelectableText(
-                      secondary,
-                      style: theme.textTheme.titleLarge?.copyWith(
-                        color: theme.colorScheme.onSurfaceVariant,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
+                  ] else if (syllabus?.description.isNotEmpty ?? false) ...[
+                    const SizedBox(height: 10),
+                    _AboutCourseCard(description: syllabus!.description),
                   ],
-                  const SizedBox(height: 32),
-                  const _SectionHeader(
-                    icon: Icons.menu_book_outlined,
-                    title: 'Subject information',
-                  ),
                   const SizedBox(height: 16),
-                  Wrap(
-                    spacing: 12,
-                    runSpacing: 12,
-                    children: [
-                      _InformationField(label: 'Code', value: subject.code),
-                      _InformationField(
-                        label: 'Semester',
-                        value: subject.semester.toString(),
-                      ),
-                      _InformationField(
-                        label: 'Credits',
-                        value: subject.credits,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-                  _InformationField(
-                    label: 'Prerequisite',
-                    value: prerequisiteDisplay(subject),
-                    wide: true,
-                  ),
-                  const SizedBox(height: 32),
-                  _SyllabusSection(controller: controller),
-                  const SizedBox(height: 32),
-                  Divider(color: theme.colorScheme.outlineVariant),
-                  const SizedBox(height: 24),
-                  Wrap(
-                    alignment: WrapAlignment.spaceBetween,
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    spacing: 16,
-                    runSpacing: 12,
-                    children: [
-                      _SectionHeader(
-                        icon: Icons.folder_outlined,
-                        title: 'Your resources (${controller.resources.length})',
-                      ),
-                      FilledButton.icon(
-                        onPressed:
-                            controller.resourceBusy ||
-                                !controller.resourcesReady
-                            ? null
-                            : () => _import(context),
-                        icon: const Icon(Icons.add),
-                        label: const Text('Upload resource'),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  Text(
-                    'Resources stay on this device unless you explicitly attach them to a Gemini message.',
-                    style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant,
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: const Color(0xFFDCEBFF)),
                     ),
-                  ),
-                  if (controller.resourceBusy ||
-                      controller.resourcesLoading) ...[
-                    const SizedBox(height: 16),
-                    const LinearProgressIndicator(
-                      semanticsLabel: 'Updating local resources',
-                    ),
-                  ],
-                  if (controller.resourceError != null) ...[
-                    const SizedBox(height: 16),
-                    Semantics(
-                      liveRegion: true,
-                      child: Text(
-                        controller.resourceError!,
-                        style: TextStyle(color: theme.colorScheme.error),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: controller.resourceBusy
-                          ? null
-                          : controller.loadResources,
-                      child: const Text('Reload resources'),
-                    ),
-                  ],
-                  if (!controller.resourcesLoading &&
-                      controller.resourcesReady &&
-                      controller.resources.isEmpty)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 32),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.folder_open_outlined,
-                            size: 40,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Wrap(
+                          alignment: WrapAlignment.spaceBetween,
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          spacing: 16,
+                          runSpacing: 12,
+                          children: [
+                            _SectionHeader(
+                              icon: Icons.folder_outlined,
+                              title:
+                                  'Your resources (${controller.resources.length})',
+                            ),
+                            FilledButton.icon(
+                              onPressed:
+                                  controller.resourceBusy ||
+                                      !controller.resourcesReady
+                                  ? null
+                                  : () => _import(context),
+                              icon: const Icon(Icons.add),
+                              label: const Text('Upload resource'),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          'Resources stay on this device unless you explicitly attach them to a Gemini message.',
+                          style: theme.textTheme.bodySmall?.copyWith(
                             color: theme.colorScheme.onSurfaceVariant,
                           ),
-                          const SizedBox(height: 12),
-                          Text(
-                            'Keep your study files together',
-                            style: theme.textTheme.titleMedium,
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            'Add notes, slides, spreadsheets, images, or any other file. A local copy will be kept for this Subject.',
-                            style: theme.textTheme.bodyMedium?.copyWith(
-                              color: theme.colorScheme.onSurfaceVariant,
-                            ),
+                        ),
+                        if (controller.resourceBusy ||
+                            controller.resourcesLoading) ...[
+                          const SizedBox(height: 16),
+                          const LinearProgressIndicator(
+                            semanticsLabel: 'Updating local resources',
                           ),
                         ],
-                      ),
+                        if (controller.resourceError != null) ...[
+                          const SizedBox(height: 16),
+                          Semantics(
+                            liveRegion: true,
+                            child: Text(
+                              controller.resourceError!,
+                              style: TextStyle(color: theme.colorScheme.error),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: controller.resourceBusy
+                                ? null
+                                : controller.loadResources,
+                            child: const Text('Reload resources'),
+                          ),
+                        ],
+                        if (!controller.resourcesLoading &&
+                            controller.resourcesReady &&
+                            controller.resources.isEmpty)
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 32),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.folder_open_outlined,
+                                  size: 40,
+                                  color: theme.colorScheme.onSurfaceVariant,
+                                ),
+                                const SizedBox(height: 12),
+                                Text(
+                                  'Keep your study files together',
+                                  style: theme.textTheme.titleMedium,
+                                ),
+                                const SizedBox(height: 8),
+                                Text(
+                                  'Add notes, slides, spreadsheets, images, or any other file. A local copy will be kept for this Subject.',
+                                  style: theme.textTheme.bodyMedium?.copyWith(
+                                    color: theme.colorScheme.onSurfaceVariant,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                      ],
                     ),
+                  ),
                 ],
               ),
             ),
@@ -297,6 +279,326 @@ class SubjectOverviewPanel extends StatelessWidget {
   }
 }
 
+class _SubjectHero extends StatelessWidget {
+  const _SubjectHero({
+    required this.curriculumCode,
+    required this.subject,
+    required this.displayName,
+  });
+
+  final String curriculumCode;
+  final Subject subject;
+  final SubjectDisplayName displayName;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(24, 20, 24, 20),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFFF1F8FF), Color(0xFFD6E9FF)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          DecoratedBox(
+            decoration: BoxDecoration(
+              color: const Color(0xFFDCEBFF),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+              child: Text(
+                curriculumCode,
+                style: theme.textTheme.labelMedium?.copyWith(
+                  color: const Color(0xFF2457A6),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 12),
+          SelectableText(
+            subject.code,
+            style: theme.textTheme.displaySmall?.copyWith(
+              color: const Color(0xFF082F73),
+              fontWeight: FontWeight.w800,
+              letterSpacing: .5,
+            ),
+          ),
+          SelectableText(
+            displayName.primary,
+            style: theme.textTheme.headlineSmall?.copyWith(
+              color: const Color(0xFF082F73),
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          if (displayName.secondary case final secondary?)
+            SelectableText(
+              secondary,
+              style: theme.textTheme.titleLarge?.copyWith(
+                color: const Color(0xFF123E7C),
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SubjectFacts extends StatelessWidget {
+  const _SubjectFacts({required this.subject, required this.syllabus});
+  final Subject subject;
+  final SubjectRecord? syllabus;
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final facts = <(String, String)>[
+        ('Semester', subject.semester.toString()),
+        ('Credits', subject.credits),
+        if (syllabus?.degreeLevel.isNotEmpty ?? false)
+          ('Degree level', syllabus!.degreeLevel),
+        if (syllabus?.learningTeachingMethod.isNotEmpty ?? false)
+          ('Learning–teaching method', syllabus!.learningTeachingMethod),
+      ];
+      final width = constraints.maxWidth < 620
+          ? constraints.maxWidth
+          : (constraints.maxWidth - (facts.length - 1) * 8) / facts.length;
+      return Wrap(
+        spacing: 8,
+        runSpacing: 8,
+        children: [
+          for (final fact in facts)
+            SizedBox(
+              width: width,
+              child: _FactTile(label: fact.$1, value: fact.$2),
+            ),
+        ],
+      );
+    },
+  );
+}
+
+class _FactTile extends StatelessWidget {
+  const _FactTile({required this.label, required this.value});
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    constraints: const BoxConstraints(minHeight: 76),
+    padding: const EdgeInsets.all(14),
+    decoration: BoxDecoration(
+      color: const Color(0xFFEEF6FF),
+      borderRadius: BorderRadius.circular(14),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(label, style: Theme.of(context).textTheme.labelMedium),
+        const SizedBox(height: 6),
+        Text(value, style: const TextStyle(fontWeight: FontWeight.w700)),
+      ],
+    ),
+  );
+}
+
+class _PrerequisiteCard extends StatelessWidget {
+  const _PrerequisiteCard({required this.value});
+  final String value;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: double.infinity,
+    padding: const EdgeInsets.fromLTRB(18, 14, 18, 14),
+    decoration: BoxDecoration(
+      color: const Color(0xFFEDF6FF),
+      border: const Border(
+        left: BorderSide(color: Color(0xFF8BBEFF), width: 6),
+      ),
+      borderRadius: BorderRadius.circular(14),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Prerequisite',
+          style: TextStyle(fontWeight: FontWeight.w700),
+        ),
+        const SizedBox(height: 6),
+        SelectableText(value),
+      ],
+    ),
+  );
+}
+
+class _AboutCourseCard extends StatelessWidget {
+  const _AboutCourseCard({required this.description});
+  final String description;
+
+  @override
+  Widget build(BuildContext context) {
+    final blocks = formatCourseDescription(description);
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFDCEBFF)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const _SectionHeader(
+            icon: Icons.menu_book_outlined,
+            title: 'About this course',
+          ),
+          const SizedBox(height: 12),
+          SelectionArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (var index = 0; index < blocks.length; index++) ...[
+                  if (index > 0) const SizedBox(height: 12),
+                  _CourseDescriptionBlockView(block: blocks[index]),
+                ],
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _CourseDescriptionBlockView extends StatelessWidget {
+  const _CourseDescriptionBlockView({required this.block});
+
+  final CourseDescriptionBlock block;
+
+  @override
+  Widget build(BuildContext context) {
+    switch (block.type) {
+      case CourseDescriptionBlockType.heading:
+        return Text(
+          block.text,
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+            color: const Color(0xFF123E7C),
+            fontWeight: FontWeight.w700,
+          ),
+        );
+      case CourseDescriptionBlockType.bullets:
+        return Column(
+          children: [for (final item in block.items) _DescriptionBullet(item)],
+        );
+      case CourseDescriptionBlockType.table:
+        return _DescriptionTable(rows: block.rows);
+      case CourseDescriptionBlockType.paragraph:
+        return Text(block.text, style: const TextStyle(height: 1.55));
+    }
+  }
+}
+
+class _DescriptionBullet extends StatelessWidget {
+  const _DescriptionBullet(this.text);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.only(bottom: 7),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(top: 8, right: 10),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              color: Color(0xFF075CE5),
+              shape: BoxShape.circle,
+            ),
+            child: SizedBox.square(dimension: 6),
+          ),
+        ),
+        Expanded(child: Text(text, style: const TextStyle(height: 1.45))),
+      ],
+    ),
+  );
+}
+
+class _DescriptionTable extends StatelessWidget {
+  const _DescriptionTable({required this.rows});
+
+  final List<CourseDescriptionRow> rows;
+
+  @override
+  Widget build(BuildContext context) => Table(
+    columnWidths: const {0: FlexColumnWidth(2), 1: FlexColumnWidth(5)},
+    border: TableBorder.all(color: const Color(0xFFD7E6F8)),
+    children: [
+      for (final row in rows)
+        TableRow(
+          decoration: const BoxDecoration(color: Color(0xFFF7FAFE)),
+          children: [
+            _DescriptionCell(text: row.label, isLabel: true),
+            _DescriptionCell(text: row.value),
+          ],
+        ),
+    ],
+  );
+}
+
+class _DescriptionCell extends StatelessWidget {
+  const _DescriptionCell({required this.text, this.isLabel = false});
+
+  final String text;
+  final bool isLabel;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 9),
+    child: Text(
+      text,
+      style: TextStyle(
+        height: 1.35,
+        fontWeight: isLabel ? FontWeight.w700 : null,
+      ),
+    ),
+  );
+}
+
+class _StatusCard extends StatelessWidget {
+  const _StatusCard({required this.icon, required this.message});
+  final IconData icon;
+  final String message;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: double.infinity,
+    padding: const EdgeInsets.all(14),
+    decoration: BoxDecoration(
+      color: const Color(0xFFEEF6FF),
+      borderRadius: BorderRadius.circular(14),
+    ),
+    child: Row(
+      children: [
+        Icon(icon, size: 18, color: const Color(0xFF075CE5)),
+        const SizedBox(width: 10),
+        Expanded(child: Text(message)),
+      ],
+    ),
+  );
+}
+
 /// Consistent section header — icon + a colored, bold title — used for
 /// every major block of this panel so the visual hierarchy comes from
 /// size/weight/color (per the design system), not from every header
@@ -309,156 +611,25 @@ class _SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final titleWidth = (MediaQuery.sizeOf(context).width - 150).clamp(
+      120.0,
+      360.0,
+    );
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
         Icon(icon, size: 22, color: theme.colorScheme.primary),
         const SizedBox(width: 8),
-        Text(
-          title,
-          style: theme.textTheme.titleLarge?.copyWith(
-            color: theme.colorScheme.primary,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _InformationField extends StatelessWidget {
-  const _InformationField({
-    required this.label,
-    required this.value,
-    this.wide = false,
-    this.fill = false,
-  });
-
-  final String label;
-  final String value;
-  final bool wide;
-
-  /// Take all the width available (no 720px cap) — for long prose such as
-  /// the Description, so it reflows with the panel/window width.
-  final bool fill;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-        minWidth: fill ? 0 : (wide ? 280 : 120),
-        maxWidth: fill ? double.infinity : (wide ? 720 : 220),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            label,
-            style: theme.textTheme.labelMedium?.copyWith(
-              color: theme.colorScheme.onSurfaceVariant,
-              fontWeight: FontWeight.w600,
+        SizedBox(
+          width: titleWidth,
+          child: Text(
+            title,
+            style: theme.textTheme.titleLarge?.copyWith(
+              color: theme.colorScheme.primary,
+              fontWeight: FontWeight.w700,
             ),
           ),
-          const SizedBox(height: 4),
-          SelectableText(
-            value,
-            style: theme.textTheme.bodyLarge?.copyWith(height: 1.4),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-/// The subject's full FLM syllabus (`data/subject/<id>.json`, loaded by
-/// `SubjectDetailController.loadSyllabus` via the knowledge-graph feature's
-/// `SubjectRepository`) — description, learning outcomes, and the other
-/// fields the curriculum file (`Subject`) doesn't carry. This is the same
-/// record sent to Gemini as context (`SubjectPromptBuilder`), shown here so
-/// the user can see exactly what the assistant already knows about the
-/// subject.
-class _SyllabusSection extends StatelessWidget {
-  const _SyllabusSection({required this.controller});
-  final SubjectDetailController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    if (controller.syllabusLoading) {
-      return const Padding(
-        padding: EdgeInsets.symmetric(vertical: 12),
-        child: LinearProgressIndicator(
-          semanticsLabel: 'Loading full syllabus',
         ),
-      );
-    }
-
-    final syllabus = controller.syllabus;
-    if (syllabus == null) {
-      return Row(
-        children: [
-          Icon(
-            Icons.info_outline,
-            size: 18,
-            color: theme.colorScheme.onSurfaceVariant,
-          ),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              controller.syllabusError ??
-                  'No detailed syllabus found in data/subject/ for this subject.',
-              style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
-              ),
-            ),
-          ),
-        ],
-      );
-    }
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const _SectionHeader(icon: Icons.article_outlined, title: 'Syllabus'),
-        const SizedBox(height: 16),
-        Wrap(
-          spacing: 12,
-          runSpacing: 12,
-          children: [
-            if (syllabus.syllabusName.isNotEmpty)
-              _InformationField(
-                label: 'Syllabus name',
-                value: syllabus.syllabusName,
-                wide: true,
-              ),
-            if (syllabus.courseNameEnglish.isNotEmpty)
-              _InformationField(
-                label: 'Course name (English)',
-                value: syllabus.courseNameEnglish,
-                wide: true,
-              ),
-            if (syllabus.degreeLevel.isNotEmpty)
-              _InformationField(
-                label: 'Degree level',
-                value: syllabus.degreeLevel,
-              ),
-            if (syllabus.learningTeachingMethod.isNotEmpty)
-              _InformationField(
-                label: 'Learning-teaching method',
-                value: syllabus.learningTeachingMethod,
-                wide: true,
-              ),
-          ],
-        ),
-        if (syllabus.description.isNotEmpty) ...[
-          const SizedBox(height: 16),
-          _InformationField(
-            label: 'Description',
-            value: syllabus.description,
-            fill: true,
-          ),
-        ],
       ],
     );
   }
@@ -474,9 +645,14 @@ class LearningOutcomesPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final outcomes = controller.syllabus?.learningOutcomes ?? const [];
-    return Card(
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: const Color(0xFFF7FBFF),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: const Color(0xFFDCEBFF)),
+      ),
       child: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -486,24 +662,49 @@ class LearningOutcomesPanel extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             for (final outcome in outcomes)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: SelectableText.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: '${outcome.code}: ',
-                        style: theme.textTheme.bodyLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: theme.colorScheme.primary,
+              Container(
+                margin: const EdgeInsets.only(bottom: 8),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: const Color(0xFFE2EEFF)),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      constraints: const BoxConstraints(minWidth: 66),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 6,
+                      ),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFDCEBFF),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Text(
+                        outcome.code,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Color(0xFF075CE5),
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
-                      TextSpan(
-                        text: outcome.detail,
-                        style: theme.textTheme.bodyLarge,
+                    ),
+                    const SizedBox(width: 14),
+                    Expanded(
+                      child: SelectableText(
+                        outcome.detail,
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          height: 1.45,
+                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
           ],
@@ -526,9 +727,15 @@ class OtherSyllabusFieldsPanel extends StatelessWidget {
     final fields = syllabus == null
         ? const <String, String>{}
         : otherSyllabusMetadata(syllabus);
-    return Card(
+    final grouped = _SyllabusFieldGroups.from(fields);
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: const Color(0xFFF7FBFF),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: const Color(0xFFDCEBFF)),
+      ),
       child: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -537,19 +744,282 @@ class OtherSyllabusFieldsPanel extends StatelessWidget {
               title: 'Other syllabus fields',
             ),
             const SizedBox(height: 16),
-            Wrap(
-              spacing: 12,
-              runSpacing: 12,
-              children: [
-                for (final entry in fields.entries)
-                  _InformationField(
-                    label: entry.key,
-                    value: entry.value,
-                    wide: entry.value.length > 48,
-                  ),
-              ],
-            ),
+            if (grouped.requirements.isNotEmpty)
+              _MetadataSection(
+                title: 'Course Requirements',
+                tint: const Color(0xFFF1F7FF),
+                entries: grouped.requirements,
+                preferredWeights: const [1, 1.5],
+                wideColumnCount: 2,
+              ),
+            if (grouped.resources.isNotEmpty) ...[
+              if (grouped.requirements.isNotEmpty) const SizedBox(height: 24),
+              _MetadataSection(
+                title: 'Course Resources & Evaluation',
+                tint: const Color(0xFFF5F9FF),
+                entries: grouped.resources,
+                wideColumnCount: 3,
+              ),
+            ],
+            if (grouped.administration.isNotEmpty) ...[
+              if (grouped.requirements.isNotEmpty ||
+                  grouped.resources.isNotEmpty)
+                const SizedBox(height: 24),
+              _MetadataSection(
+                title: 'Administrative Information',
+                tint: const Color(0xFFF8FAFD),
+                entries: grouped.administration,
+                wideColumnCount: 3,
+              ),
+            ],
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SyllabusFieldGroups {
+  const _SyllabusFieldGroups({
+    required this.requirements,
+    required this.resources,
+    required this.administration,
+  });
+
+  factory _SyllabusFieldGroups.from(Map<String, String> fields) {
+    const requirementKeys = {'timeallocation', 'studenttasks'};
+    const resourceKeys = {'tools', 'scoringscale', 'minavgmarktopass'};
+    const administrationKeys = {
+      'decisionnommddyyyy',
+      'decisionno',
+      'approveddate',
+      'isapproved',
+      'isscored',
+      'isactive',
+    };
+    final requirements = <MapEntry<String, String>>[];
+    final resources = <MapEntry<String, String>>[];
+    final administration = <MapEntry<String, String>>[];
+    for (final entry in fields.entries) {
+      final key = _normalizedMetadataKey(entry.key);
+      if (requirementKeys.contains(key)) {
+        requirements.add(entry);
+      } else if (resourceKeys.contains(key)) {
+        resources.add(entry);
+      } else if (administrationKeys.contains(key)) {
+        administration.add(entry);
+      } else {
+        // Unknown fields still remain visible; FLM exports evolve over time.
+        administration.add(entry);
+      }
+    }
+    return _SyllabusFieldGroups(
+      requirements: requirements,
+      resources: resources,
+      administration: administration,
+    );
+  }
+
+  final List<MapEntry<String, String>> requirements;
+  final List<MapEntry<String, String>> resources;
+  final List<MapEntry<String, String>> administration;
+}
+
+String _normalizedMetadataKey(String key) =>
+    key.toLowerCase().replaceAll(RegExp('[^a-z0-9]'), '');
+
+class _MetadataSection extends StatelessWidget {
+  const _MetadataSection({
+    required this.title,
+    required this.tint,
+    required this.entries,
+    required this.wideColumnCount,
+    this.preferredWeights,
+  });
+
+  final String title;
+  final Color tint;
+  final List<MapEntry<String, String>> entries;
+  final int wideColumnCount;
+  final List<double>? preferredWeights;
+
+  @override
+  Widget build(BuildContext context) => Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        title,
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+          color: const Color(0xFF123E7C),
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+      const SizedBox(height: 12),
+      _ResponsiveMetadataGrid(
+        entries: entries,
+        tint: tint,
+        wideColumnCount: wideColumnCount,
+        preferredWeights: preferredWeights,
+      ),
+    ],
+  );
+}
+
+class _ResponsiveMetadataGrid extends StatelessWidget {
+  const _ResponsiveMetadataGrid({
+    required this.entries,
+    required this.tint,
+    required this.wideColumnCount,
+    this.preferredWeights,
+  });
+
+  final List<MapEntry<String, String>> entries;
+  final Color tint;
+  final int wideColumnCount;
+  final List<double>? preferredWeights;
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, constraints) {
+      final width = constraints.maxWidth;
+      final responsiveColumnCount = width >= 960
+          ? wideColumnCount
+          : width >= 620
+          ? 2
+          : 1;
+      final columnCount = entries.length < responsiveColumnCount
+          ? entries.length
+          : responsiveColumnCount;
+      const gap = 16.0;
+      final canUseWeights =
+          columnCount == entries.length &&
+          preferredWeights != null &&
+          preferredWeights!.length == entries.length;
+      if (canUseWeights) {
+        return Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            for (var index = 0; index < entries.length; index++) ...[
+              if (index > 0) const SizedBox(width: gap),
+              Expanded(
+                flex: (preferredWeights![index] * 10).round(),
+                child: _MetadataCard(entry: entries[index], tint: tint),
+              ),
+            ],
+          ],
+        );
+      }
+
+      final cardWidth = (width - gap * (columnCount - 1)) / columnCount;
+      return Wrap(
+        spacing: gap,
+        runSpacing: gap,
+        children: [
+          for (final entry in entries)
+            SizedBox(
+              width: cardWidth,
+              child: _MetadataCard(entry: entry, tint: tint),
+            ),
+        ],
+      );
+    },
+  );
+}
+
+class _MetadataCard extends StatelessWidget {
+  const _MetadataCard({required this.entry, required this.tint});
+
+  final MapEntry<String, String> entry;
+  final Color tint;
+
+  @override
+  Widget build(BuildContext context) {
+    final normalizedKey = _normalizedMetadataKey(entry.key);
+    final isBoolean = const {
+      'isapproved',
+      'isscored',
+      'isactive',
+    }.contains(normalizedKey);
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: tint,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFFDCE8F6)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            entry.key,
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+              color: const Color(0xFF31557F),
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 8),
+          if (isBoolean)
+            _BooleanStatusBadge(value: entry.value)
+          else
+            _MetadataTextValue(value: entry.value),
+        ],
+      ),
+    );
+  }
+}
+
+class _MetadataTextValue extends StatelessWidget {
+  const _MetadataTextValue({required this.value});
+
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    final blocks = formatCourseDescription(value);
+    return SelectionArea(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (var index = 0; index < blocks.length; index++) ...[
+            if (index > 0) const SizedBox(height: 8),
+            _CourseDescriptionBlockView(block: blocks[index]),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _BooleanStatusBadge extends StatelessWidget {
+  const _BooleanStatusBadge({required this.value});
+
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    final isPositive = {
+      'true',
+      'yes',
+      '1',
+    }.contains(value.trim().toLowerCase());
+    final foreground = isPositive
+        ? const Color(0xFF176B4D)
+        : const Color(0xFF675B42);
+    final background = isPositive
+        ? const Color(0xFFE5F5ED)
+        : const Color(0xFFF4F0E7);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      decoration: BoxDecoration(
+        color: background,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        value,
+        style: Theme.of(context).textTheme.labelMedium?.copyWith(
+          color: foreground,
+          fontWeight: FontWeight.w700,
         ),
       ),
     );
@@ -570,8 +1040,13 @@ class SyllabusTablePanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Card(
+    return Container(
       clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+        color: const Color(0xFFF7FBFF),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: const Color(0xFFDCEBFF)),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -583,6 +1058,7 @@ class SyllabusTablePanel extends StatelessWidget {
                   child: Text(
                     section.heading,
                     style: theme.textTheme.titleLarge?.copyWith(
+                      color: theme.colorScheme.primary,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -645,22 +1121,6 @@ class _DataGridState extends State<_DataGrid> {
     super.dispose();
   }
 
-  /// Longest cell (in characters, header included) in column [index] —
-  /// the raw signal both [_columnWidth] and the panel-filling logic in
-  /// [build] size off of.
-  int _maxContentLength(int index) {
-    var maxLen = index < widget.headers.length ? widget.headers[index].length : 0;
-    for (final row in widget.rows) {
-      if (index < row.length && row[index].length > maxLen) {
-        maxLen = row[index].length;
-      }
-    }
-    return maxLen;
-  }
-
-  double _columnWidth(int maxContentLength) =>
-      (maxContentLength * 6.8 + 28).clamp(90, 320);
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -692,31 +1152,32 @@ class _DataGridState extends State<_DataGrid> {
       );
     }
 
-    final contentLengths = [
-      for (var i = 0; i < headers.length; i++) _maxContentLength(i),
-    ];
-    final columnWidths = [for (final len in contentLengths) _columnWidth(len)];
+    final specs = [for (final header in headers) _DataColumnSpec.from(header)];
+    final columnWidths = [for (final spec in specs) spec.preferredWidth];
     final naturalWidth = columnWidths.fold<double>(0, (sum, w) => sum + w);
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        const horizontalPadding = 32.0; // matches the SingleChildScrollView below
+        const horizontalPadding =
+            32.0; // matches the SingleChildScrollView below
         final available = constraints.maxWidth - horizontalPadding;
 
-        // When the columns' own (content-sized) widths already fit the
-        // panel, stretch the column with the longest content — normally
-        // the free-text one, e.g. "details" — to fill the rest of the
-        // width instead of leaving the remainder of the panel blank. Only
-        // a table that genuinely doesn't fit falls back to a fixed,
-        // horizontally-scrolling width.
+        // Keep every column at a useful minimum. Extra room is distributed
+        // only to prose columns; compact/status columns never consume a
+        // disproportionate share of a wide window.
         final resolvedWidths = List<double>.from(columnWidths);
         var tableWidth = naturalWidth;
         if (available.isFinite && naturalWidth < available) {
-          var widest = 0;
-          for (var i = 1; i < contentLengths.length; i++) {
-            if (contentLengths[i] > contentLengths[widest]) widest = i;
+          final totalWeight = specs.fold<double>(
+            0,
+            (sum, spec) => sum + spec.growWeight,
+          );
+          final extra = available - naturalWidth;
+          if (totalWeight > 0) {
+            for (var i = 0; i < specs.length; i++) {
+              resolvedWidths[i] += extra * specs[i].growWeight / totalWeight;
+            }
           }
-          resolvedWidths[widest] += available - naturalWidth;
           tableWidth = available;
         }
 
@@ -735,19 +1196,24 @@ class _DataGridState extends State<_DataGrid> {
           defaultVerticalAlignment: TableCellVerticalAlignment.top,
           children: [
             TableRow(
-              decoration: BoxDecoration(
-                color: theme.colorScheme.surfaceContainerHighest,
-              ),
+              decoration: const BoxDecoration(color: Color(0xFFEAF4FF)),
               children: [
-                for (final header in headers)
+                for (var index = 0; index < headers.length; index++)
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 12,
                       vertical: 10,
                     ),
                     child: Text(
-                      header,
+                      specs[index].label,
+                      maxLines: 1,
+                      softWrap: false,
+                      overflow: TextOverflow.visible,
+                      textAlign: specs[index].centered
+                          ? TextAlign.center
+                          : TextAlign.left,
                       style: theme.textTheme.labelLarge?.copyWith(
+                        color: const Color(0xFF123E7C),
                         fontWeight: FontWeight.w700,
                       ),
                     ),
@@ -770,7 +1236,13 @@ class _DataGridState extends State<_DataGrid> {
                       ),
                       child: Text(
                         c < rows[r].length ? rows[r][c] : '',
-                        style: theme.textTheme.bodyMedium,
+                        textAlign: specs[c].centered
+                            ? TextAlign.center
+                            : TextAlign.left,
+                        softWrap: true,
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          height: 1.4,
+                        ),
                       ),
                     ),
                 ],
@@ -781,6 +1253,8 @@ class _DataGridState extends State<_DataGrid> {
         return Scrollbar(
           controller: _horizontalController,
           thumbVisibility: true,
+          trackVisibility: true,
+          interactive: true,
           child: SingleChildScrollView(
             controller: _horizontalController,
             scrollDirection: Axis.horizontal,
@@ -801,4 +1275,121 @@ class _DataGridState extends State<_DataGrid> {
       },
     );
   }
+}
+
+class _DataColumnSpec {
+  const _DataColumnSpec({
+    required this.label,
+    required this.preferredWidth,
+    required this.growWeight,
+    this.centered = false,
+  });
+
+  factory _DataColumnSpec.from(String rawHeader) {
+    final key = _normalizedMetadataKey(rawHeader);
+    final label = _dataGridHeaderLabels[key] ?? _readableHeader(rawHeader);
+    final headerWidth = (label.length * 7.5 + 24).clamp(64.0, 220.0);
+
+    if (_compactDataGridColumns.contains(key)) {
+      return _DataColumnSpec(
+        label: label,
+        preferredWidth: headerWidth.clamp(64.0, 110.0),
+        growWeight: 0,
+        centered: true,
+      );
+    }
+    if (_statusDataGridColumns.contains(key)) {
+      return _DataColumnSpec(
+        label: label,
+        preferredWidth: headerWidth.clamp(92.0, 136.0),
+        growWeight: 0,
+        centered: true,
+      );
+    }
+    if (_wideDataGridColumns.contains(key)) {
+      final base = switch (key) {
+        'topic' => 340.0,
+        'materialdescription' => 300.0,
+        'studentmaterials' => 250.0,
+        'studentstasks' => 280.0,
+        _ => 260.0,
+      };
+      return _DataColumnSpec(
+        label: label,
+        preferredWidth: base < headerWidth ? headerWidth : base,
+        growWeight: 2,
+      );
+    }
+    return _DataColumnSpec(
+      label: label,
+      preferredWidth: headerWidth.clamp(110.0, 180.0),
+      growWeight: 0.6,
+    );
+  }
+
+  final String label;
+  final double preferredWidth;
+  final double growWeight;
+  final bool centered;
+}
+
+const _dataGridHeaderLabels = <String, String>{
+  'no': 'No.',
+  'materialdescription': 'Material Description',
+  'publisheddate': 'Published Date',
+  'ismainmaterial': 'Main Material',
+  'ishardcopy': 'Hardcopy',
+  'isonline': 'Online',
+  'learningteachingtype': 'Teaching Method',
+  'studentmaterials': 'Student Materials',
+  'studentstasks': 'Student Tasks',
+  'sdownload': 'Download',
+  'clo': 'CLO',
+  'itu': 'ITU',
+  'isbn': 'ISBN',
+};
+
+const _compactDataGridColumns = <String>{
+  'no',
+  'session',
+  'part',
+  'clo',
+  'itu',
+  'edition',
+};
+
+const _statusDataGridColumns = <String>{
+  'ismainmaterial',
+  'ishardcopy',
+  'isonline',
+  'sdownload',
+};
+
+const _wideDataGridColumns = <String>{
+  'materialdescription',
+  'description',
+  'details',
+  'topic',
+  'studentmaterials',
+  'studentstasks',
+  'name',
+};
+
+String _readableHeader(String header) {
+  final spaced = header
+      .trim()
+      .replaceAll(RegExp(r'[_-]+'), ' ')
+      .replaceAllMapped(
+        RegExp(r'([a-z0-9])([A-Z])'),
+        (match) => '${match.group(1)} ${match.group(2)}',
+      );
+  if (spaced.isEmpty) return header;
+  return spaced
+      .split(RegExp(r'\s+'))
+      .map(
+        (word) => word.isEmpty
+            ? word
+            : '${word[0].toUpperCase()}${word.substring(1)}',
+      )
+      .join(' ');
 }
