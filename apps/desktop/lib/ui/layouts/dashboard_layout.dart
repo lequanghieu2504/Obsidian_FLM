@@ -53,22 +53,12 @@ class _DashboardLayoutState extends State<DashboardLayout> {
   @override
   void initState() {
     super.initState();
-    final curriculumCode =
-        widget.curriculumData.metadata['curriculumCode']?.toString() ??
-            'BIT_SE';
-
     _tabs = [
       AppTabModel(
         id: 'overview',
         title: 'Khung chương trình & Môn học',
         icon: Icons.grid_view_rounded,
         isCloseable: false,
-      ),
-      AppTabModel(
-        id: 'graph',
-        title: 'Đồ thị tri thức (Graph view)',
-        icon: Icons.hub_rounded,
-        isCloseable: true,
       ),
     ];
     _tabHistory.add(0);
@@ -92,7 +82,10 @@ class _DashboardLayoutState extends State<DashboardLayout> {
     if (_historyPointer > 0) {
       setState(() {
         _historyPointer--;
-        _activeTabIndex = _tabHistory[_historyPointer].clamp(0, _tabs.length - 1);
+        _activeTabIndex = _tabHistory[_historyPointer].clamp(
+          0,
+          _tabs.length - 1,
+        );
         _selectedSubjectCode = _tabs[_activeTabIndex].subject?.code;
       });
     }
@@ -102,7 +95,10 @@ class _DashboardLayoutState extends State<DashboardLayout> {
     if (_historyPointer < _tabHistory.length - 1) {
       setState(() {
         _historyPointer++;
-        _activeTabIndex = _tabHistory[_historyPointer].clamp(0, _tabs.length - 1);
+        _activeTabIndex = _tabHistory[_historyPointer].clamp(
+          0,
+          _tabs.length - 1,
+        );
         _selectedSubjectCode = _tabs[_activeTabIndex].subject?.code;
       });
     }
@@ -158,9 +154,6 @@ class _DashboardLayoutState extends State<DashboardLayout> {
     showDialog(
       context: context,
       builder: (context) {
-        final curriculumCode =
-            widget.curriculumData.metadata['curriculumCode']?.toString() ??
-                'BIT_SE';
         String search = '';
 
         return StatefulBuilder(
@@ -172,10 +165,15 @@ class _DashboardLayoutState extends State<DashboardLayout> {
             }).toList();
 
             return AlertDialog(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
               title: const Text(
                 'Mở Tab mới',
-                style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.primaryDark),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primaryDark,
+                ),
               ),
               content: SizedBox(
                 width: 440,
@@ -186,8 +184,13 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                       decoration: InputDecoration(
                         hintText: 'Tìm môn học (VD: CSD201, PRJ301)...',
                         prefixIcon: const Icon(Icons.search_rounded),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
                       ),
                       onChanged: (val) => setDialogState(() => search = val),
                     ),
@@ -210,7 +213,10 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                           ),
                           const SizedBox(width: 8),
                           ActionChip(
-                            avatar: const Icon(Icons.assessment_rounded, size: 16),
+                            avatar: const Icon(
+                              Icons.assessment_rounded,
+                              size: 16,
+                            ),
                             label: const Text('Bảng điểm'),
                             onPressed: () {
                               Navigator.pop(context);
@@ -245,12 +251,20 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                         itemBuilder: (context, index) {
                           final subject = filteredSubjects[index];
                           return ListTile(
-                            leading: const Icon(Icons.description_outlined, color: AppColors.primary),
+                            leading: const Icon(
+                              Icons.description_outlined,
+                              color: AppColors.primary,
+                            ),
                             title: Text(
                               '${subject.code} - ${subject.name}',
-                              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 13,
+                              ),
                             ),
-                            subtitle: Text('Học kỳ ${subject.semester} · ${subject.credits} TC'),
+                            subtitle: Text(
+                              'Học kỳ ${subject.semester} · ${subject.credits} TC',
+                            ),
                             onTap: () {
                               Navigator.pop(context);
                               _openSubjectTab(subject);
@@ -309,7 +323,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
     final activeTab = _tabs[_activeTabIndex];
     final curriculumCode =
         widget.curriculumData.metadata['curriculumCode']?.toString() ??
-            'BIT_SE';
+        'BIT_SE';
 
     if (activeTab.subject != null) {
       return SubjectDetailScreen(
@@ -340,9 +354,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
         );
       case 'overview':
       default:
-        return CurriculumDetailScreen(
-          curriculumData: widget.curriculumData,
-        );
+        return CurriculumDetailScreen(curriculumData: widget.curriculumData);
     }
   }
 
@@ -356,8 +368,8 @@ class _DashboardLayoutState extends State<DashboardLayout> {
           AppSidebar(
             selectedIndex: _lastMainIndex,
             curriculumData: widget.curriculumData,
-            curriculumCode:
-                widget.curriculumData.metadata['curriculumCode']?.toString(),
+            curriculumCode: widget.curriculumData.metadata['curriculumCode']
+                ?.toString(),
             isOpen: _isSidebarOpen,
             selectedSubjectCode: _selectedSubjectCode,
             onSubjectSelected: _openSubjectTab,
@@ -375,15 +387,27 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                 } else if (index == 1) {
                   _selectedIndex = 1;
                   _lastMainIndex = 1;
-                  _openCustomTab('subjects_screen', 'Quản lý môn học', Icons.menu_book_rounded);
+                  _openCustomTab(
+                    'subjects_screen',
+                    'Quản lý môn học',
+                    Icons.menu_book_rounded,
+                  );
                 } else if (index == 3) {
                   _selectedIndex = 3;
                   _lastMainIndex = 3;
-                  _openCustomTab('explore', 'Khám phá chuyên ngành', Icons.search_rounded);
+                  _openCustomTab(
+                    'explore',
+                    'Khám phá chuyên ngành',
+                    Icons.search_rounded,
+                  );
                 } else if (index == 4) {
                   _selectedIndex = 4;
                   _lastMainIndex = 4;
-                  _openCustomTab('transcript', 'Quản lý điểm', Icons.assessment_rounded);
+                  _openCustomTab(
+                    'transcript',
+                    'Quản lý điểm',
+                    Icons.assessment_rounded,
+                  );
                 }
               });
             },
@@ -431,10 +455,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                         ).animate(animation);
                         return FadeTransition(
                           opacity: animation,
-                          child: SlideTransition(
-                            position: slide,
-                            child: child,
-                          ),
+                          child: SlideTransition(position: slide, child: child),
                         );
                       },
                       child: KeyedSubtree(
@@ -452,7 +473,9 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                                   setState(() => _isChatOverlay = true);
                                 },
                                 onClose: () {
-                                  setState(() => _selectedIndex = _lastMainIndex);
+                                  setState(
+                                    () => _selectedIndex = _lastMainIndex,
+                                  );
                                 },
                               )
                             : _buildActiveTabContent(),
@@ -470,8 +493,10 @@ class _DashboardLayoutState extends State<DashboardLayout> {
               onDragStart: () => setState(() => _resizingChat = true),
               onDragEnd: () => setState(() => _resizingChat = false),
               onDrag: (dx) => setState(() {
-                _chatWidth = (_chatWidth - dx)
-                    .clamp(_minChatWidth, _maxChatWidth(context));
+                _chatWidth = (_chatWidth - dx).clamp(
+                  _minChatWidth,
+                  _maxChatWidth(context),
+                );
               }),
             ),
           AnimatedContainer(
@@ -482,15 +507,19 @@ class _DashboardLayoutState extends State<DashboardLayout> {
             width: (_selectedIndex == 2 && _isChatOverlay)
                 ? _chatWidth.clamp(_minChatWidth, _maxChatWidth(context))
                 : 0,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-            ),
+            decoration: const BoxDecoration(color: Colors.white),
             child: ClipRect(
               child: (_selectedIndex == 2 && _isChatOverlay)
                   ? OverflowBox(
                       alignment: Alignment.centerLeft,
-                      minWidth: _chatWidth.clamp(_minChatWidth, _maxChatWidth(context)),
-                      maxWidth: _chatWidth.clamp(_minChatWidth, _maxChatWidth(context)),
+                      minWidth: _chatWidth.clamp(
+                        _minChatWidth,
+                        _maxChatWidth(context),
+                      ),
+                      maxWidth: _chatWidth.clamp(
+                        _minChatWidth,
+                        _maxChatWidth(context),
+                      ),
                       child: ChatBox(
                         key: _chatBoxKey,
                         curriculumData: widget.curriculumData,
@@ -505,7 +534,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                     )
                   : const SizedBox.shrink(),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -1,11 +1,9 @@
-import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 
 import '../../../ui/widgets/assistant_chat_layout.dart';
 import '../../../ui/widgets/ai_settings_form.dart';
 import '../../../utils/user_settings.dart';
 import '../application/subject_detail_controller.dart';
-import '../domain/study_roadmap_prompt.dart';
 import '../domain/subject_workspace.dart';
 
 class SubjectChatPanel extends StatefulWidget {
@@ -109,46 +107,6 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
     if (confirmed == true) await widget.controller.clearChat();
   }
 
-  Future<void> _pickAttachments() async {
-    await showDialog<void>(
-      context: context,
-      builder: (_) => _AttachmentPicker(controller: widget.controller),
-    );
-  }
-
-  Future<void> _buildRoadmapFromTranscript() async {
-    const transcriptTypes = XTypeGroup(
-      label: 'Bảng điểm',
-      extensions: [
-        'xlsx',
-        'csv',
-        'md',
-        'markdown',
-        'pdf',
-        'png',
-        'jpg',
-        'jpeg',
-        'webp',
-      ],
-    );
-    final files = await openFiles(acceptedTypeGroups: const [transcriptTypes]);
-    if (files.isEmpty || !mounted) return;
-    final imported = await widget.controller.importFiles(
-      files.map((file) => file.path).toList(),
-    );
-    if (!mounted || imported.isEmpty) return;
-    for (final resource in imported) {
-      widget.controller.setResourceSelected(resource.id, true);
-    }
-    final prompt = buildStudyRoadmapRequest(
-      subjectCode: widget.controller.workspace.subjectCode,
-      fileNames: imported.map((resource) => resource.originalFileName).toList(),
-    );
-    _text.text = prompt;
-    _text.selection = TextSelection.collapsed(offset: prompt.length);
-    _focus.requestFocus();
-  }
-
   Future<void> _openAiSettings() async {
     await showAiSettingsDialog(context);
     await widget.controller.loadKey();
@@ -172,10 +130,6 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
             'tập. Thông tin môn học và tin nhắn được gửi cho Gemini khi bạn '
             'hỏi; tài liệu chỉ được gửi khi bạn đính kèm.',
         children: [
-          _RoadmapQuickStart(
-            enabled: controller.resourcesReady && !controller.resourceBusy,
-            onPressed: _buildRoadmapFromTranscript,
-          ),
           if (!controller.hasKey)
             const Text(
               'Chưa có Gemini API Key. Hãy mở Trợ lý học vụ (nút "Trợ lý" '
@@ -312,141 +266,7 @@ class _SubjectChatPanelState extends State<SubjectChatPanel>
             const SizedBox(height: 8),
           ],
         ],
-        secondaryActions: [
-          OutlinedButton.icon(
-            onPressed:
-                controller.sending ||
-                    !controller.resourcesReady ||
-                    controller.resourceBusy
-                ? null
-                : _buildRoadmapFromTranscript,
-            icon: const Icon(Icons.route_outlined),
-            label: const Text('Lộ trình từ bảng điểm'),
-          ),
-          OutlinedButton.icon(
-            onPressed:
-                controller.sending ||
-                    !controller.resourcesReady ||
-                    controller.resources.isEmpty
-                ? null
-                : _pickAttachments,
-            icon: const Icon(Icons.attach_file),
-            label: const Text('Đính kèm tài liệu'),
-          ),
-        ],
       ),
     );
   }
-}
-
-class _RoadmapQuickStart extends StatelessWidget {
-  const _RoadmapQuickStart({required this.enabled, required this.onPressed});
-
-  final bool enabled;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) => Container(
-    width: double.infinity,
-    padding: const EdgeInsets.all(14),
-    decoration: BoxDecoration(
-      color: const Color(0xFFF0F6FF),
-      borderRadius: BorderRadius.circular(12),
-      border: Border.all(color: const Color(0xFFD8E8FF)),
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Lộ trình học cá nhân hóa',
-          style: Theme.of(context).textTheme.titleSmall?.copyWith(
-            color: const Color(0xFF123E7C),
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        const SizedBox(height: 4),
-        const Text(
-          'Chọn bảng điểm dạng Excel, CSV, Markdown, PDF hoặc ảnh để đối chiếu với syllabus và gợi ý cách học môn này.',
-        ),
-        const SizedBox(height: 10),
-        FilledButton.tonalIcon(
-          onPressed: enabled ? onPressed : null,
-          icon: const Icon(Icons.upload_file_outlined),
-          label: const Text('Chọn bảng điểm'),
-        ),
-      ],
-    ),
-  );
-}
-
-class _AttachmentPicker extends StatefulWidget {
-  const _AttachmentPicker({required this.controller});
-  final SubjectDetailController controller;
-  @override
-  State<_AttachmentPicker> createState() => _AttachmentPickerState();
-}
-
-class _AttachmentPickerState extends State<_AttachmentPicker> {
-  late final Set<String> selected = Set.of(
-    widget.controller.selectedResourceIds,
-  );
-
-  String _size(int bytes) => bytes < 1024
-      ? '$bytes B'
-      : bytes < 1024 * 1024
-      ? '${(bytes / 1024).toStringAsFixed(1)} KB'
-      : '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
-
-  @override
-  Widget build(BuildContext context) => AlertDialog(
-    title: Text(
-      'Attach resources from ${widget.controller.workspace.subjectCode}',
-    ),
-    content: SizedBox(
-      width: 520,
-      height: 360,
-      child: ListView.builder(
-        itemCount: widget.controller.resources.length,
-        itemBuilder: (context, index) {
-          final resource = widget.controller.resources[index];
-          return CheckboxListTile(
-            value: selected.contains(resource.id),
-            onChanged: (value) => setState(() {
-              if (value ?? false) {
-                selected.add(resource.id);
-              } else {
-                selected.remove(resource.id);
-              }
-            }),
-            title: Text(
-              resource.originalFileName,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-            subtitle: Text(
-              '${resource.extension.isEmpty ? 'File' : resource.extension.substring(1).toUpperCase()} · ${_size(resource.size)}',
-            ),
-          );
-        },
-      ),
-    ),
-    actions: [
-      TextButton(
-        onPressed: () => Navigator.pop(context),
-        child: const Text('Cancel'),
-      ),
-      FilledButton(
-        onPressed: () {
-          for (final resource in widget.controller.resources) {
-            widget.controller.setResourceSelected(
-              resource.id,
-              selected.contains(resource.id),
-            );
-          }
-          Navigator.pop(context);
-        },
-        child: Text('Attach ${selected.length} files'),
-      ),
-    ],
-  );
 }
