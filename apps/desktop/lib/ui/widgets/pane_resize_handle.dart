@@ -8,7 +8,7 @@ class PaneResizeHandle extends StatefulWidget {
     required this.onDrag,
     this.onDragStart,
     this.onDragEnd,
-    this.width = 12,
+    this.width = 8,
   });
 
   final double width;
@@ -57,13 +57,12 @@ class _PaneResizeHandleState extends State<PaneResizeHandle> {
                     ? Duration.zero
                     : const Duration(milliseconds: 150),
                 curve: Curves.easeOut,
-                width: active ? 6 : 4,
+                width: active ? 2 : 1,
                 height: double.infinity,
                 decoration: BoxDecoration(
                   color: active
                       ? theme.colorScheme.primary
                       : theme.colorScheme.outlineVariant,
-                  borderRadius: BorderRadius.circular(4),
                 ),
               ),
             ),

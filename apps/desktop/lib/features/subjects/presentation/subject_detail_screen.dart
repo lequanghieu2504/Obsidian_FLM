@@ -219,7 +219,9 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   /// of squashing if the window itself is too small.
   static const double _minInfoWidth = 560;
   static const double _minChatWidth = 540;
-  static const double _handleWidth = 20;
+  // A narrow hit area around the pane border; the visible divider itself is
+  // only 1px (2px while hovered/dragged).
+  static const double _handleWidth = 8;
 
   /// Lays out the page's one chat panel next to (wide) or under (narrow)
   /// [information] — the latter now being the whole tab-switching area, not
@@ -283,12 +285,13 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
   Widget build(BuildContext context) {
     final controller = _controller;
     final displayName = subjectDisplayName(widget.subject);
-    final hasVietnamese = displayName.secondary != null && displayName.secondary!.isNotEmpty;
+    final hasVietnamese =
+        displayName.secondary != null && displayName.secondary!.isNotEmpty;
 
     return Scaffold(
       backgroundColor: const Color(0xFFEAF4FF),
       appBar: AppBar(
-        toolbarHeight: hasVietnamese ? 72 : 62,
+        toolbarHeight: hasVietnamese ? 84 : 72,
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.transparent,
         elevation: 0,
@@ -303,7 +306,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                 Text(
                   '${widget.subject.code} - ',
                   style: const TextStyle(
-                    fontSize: 19,
+                    fontSize: 24,
                     fontWeight: FontWeight.w800,
                     color: Color(0xFF082F73),
                     letterSpacing: -0.3,
@@ -313,7 +316,7 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
                   child: Text(
                     displayName.primary,
                     style: const TextStyle(
-                      fontSize: 19,
+                      fontSize: 24,
                       fontWeight: FontWeight.w800,
                       color: Color(0xFF082F73),
                       letterSpacing: -0.3,
@@ -325,11 +328,11 @@ class _SubjectDetailScreenState extends State<SubjectDetailScreen> {
               ],
             ),
             if (hasVietnamese) ...[
-              const SizedBox(height: 3),
+              const SizedBox(height: 4),
               Text(
                 displayName.secondary!,
                 style: const TextStyle(
-                  fontSize: 13.5,
+                  fontSize: 16,
                   fontWeight: FontWeight.w500,
                   color: Color(0xFF475569),
                 ),
@@ -575,13 +578,12 @@ class _PaneResizeHandleState extends State<_PaneResizeHandle> {
                   ? Duration.zero
                   : const Duration(milliseconds: 150),
               curve: Curves.easeOut,
-              width: active ? 6 : 4,
+              width: active ? 2 : 1,
               height: double.infinity,
               decoration: BoxDecoration(
                 color: active
                     ? theme.colorScheme.primary
                     : theme.colorScheme.outlineVariant,
-                borderRadius: BorderRadius.circular(4),
               ),
             ),
           ),
@@ -620,7 +622,7 @@ class _CollapsedChatButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF2563EB).withOpacity(0.25),
+                  color: const Color(0xFF2563EB).withValues(alpha: 0.25),
                   blurRadius: 8,
                   offset: const Offset(0, 3),
                 ),

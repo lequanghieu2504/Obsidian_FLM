@@ -48,13 +48,13 @@ void main() {
       expect(find.text('DBI202, PRO192'), findsOneWidget);
       await tester.tap(find.byTooltip('Expand chat'));
       await tester.pumpAndSettle();
-      expect(find.text('Lộ trình từ bảng điểm'), findsOneWidget);
+      expect(find.text('Lộ trình từ bảng điểm'), findsNothing);
       expect(find.byTooltip('Cấu hình API Key & model'), findsOneWidget);
       await tester.enterText(find.byType(TextField), 'Explain a servlet');
       tester.view.physicalSize = const Size(600, 850);
       await tester.pumpAndSettle();
       expect(find.text('Explain a servlet'), findsOneWidget);
-      await tester.tap(find.widgetWithText(FilledButton, 'Gửi'));
+      await tester.tap(find.byTooltip('Gửi tin nhắn'));
       await tester.pumpAndSettle();
       expect(find.text('Gemini is unavailable. Please retry.'), findsOneWidget);
       expect(tester.takeException(), isNull);
@@ -211,7 +211,12 @@ void main() {
       await tester.enterText(find.byType(TextField), 'Question');
       expect(
         tester
-            .widget<FilledButton>(find.widgetWithText(FilledButton, 'Gửi'))
+            .widget<FilledButton>(
+              find.descendant(
+                of: find.byTooltip('Gửi tin nhắn'),
+                matching: find.byType(FilledButton),
+              ),
+            )
             .onPressed,
         isNull,
       );
@@ -231,7 +236,12 @@ void main() {
       expect(find.text('new-test-key'), findsNothing);
       expect(
         tester
-            .widget<FilledButton>(find.widgetWithText(FilledButton, 'Gửi'))
+            .widget<FilledButton>(
+              find.descendant(
+                of: find.byTooltip('Gửi tin nhắn'),
+                matching: find.byType(FilledButton),
+              ),
+            )
             .onPressed,
         isNotNull,
       );

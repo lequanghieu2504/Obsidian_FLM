@@ -41,20 +41,36 @@ class AssistantChatLayout extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Container(
-          padding: const EdgeInsets.fromLTRB(16, 14, 8, 14),
-          decoration: BoxDecoration(border: Border(bottom: divider)),
+          padding: const EdgeInsets.fromLTRB(18, 16, 10, 16),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                theme.colorScheme.primaryContainer.withValues(alpha: .72),
+                theme.colorScheme.surface,
+              ],
+            ),
+            border: Border(bottom: divider),
+          ),
           child: Row(
             children: [
               Container(
-                width: 40,
-                height: 40,
+                width: 42,
+                height: 42,
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.primaryContainer,
-                  borderRadius: BorderRadius.circular(12),
+                  color: theme.colorScheme.primary,
+                  borderRadius: BorderRadius.circular(14),
+                  boxShadow: [
+                    BoxShadow(
+                      color: theme.colorScheme.primary.withValues(alpha: .24),
+                      blurRadius: 12,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
                 ),
                 child: Icon(
-                  Icons.smart_toy_rounded,
-                  color: theme.colorScheme.onPrimaryContainer,
+                  Icons.auto_awesome_rounded,
+                  size: 21,
+                  color: theme.colorScheme.onPrimary,
                 ),
               ),
               const SizedBox(width: 12),
@@ -88,7 +104,10 @@ class AssistantChatLayout extends StatelessWidget {
         ),
         Expanded(child: body),
         Container(
-          decoration: BoxDecoration(border: Border(top: divider)),
+          decoration: BoxDecoration(
+            color: theme.colorScheme.surfaceContainerLowest,
+            border: Border(top: divider),
+          ),
           child: composer,
         ),
       ],
@@ -122,10 +141,10 @@ class AssistantHeaderAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => IconButton(
-        tooltip: tooltip,
-        onPressed: onPressed,
-        icon: Icon(icon, size: 20),
-      );
+    tooltip: tooltip,
+    onPressed: onPressed,
+    icon: Icon(icon, size: 20),
+  );
 }
 
 /// Shown in the body before the first message.
@@ -145,25 +164,41 @@ class AssistantEmptyState extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 36),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(Icons.chat_bubble_outline,
-              size: 36, color: theme.colorScheme.primary),
-          const SizedBox(height: 16),
-          Text(title, style: theme.textTheme.titleMedium),
-          const SizedBox(height: 8),
-          Text(
-            description,
-            style: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.colorScheme.onSurfaceVariant,
+          Container(
+            width: 64,
+            height: 64,
+            decoration: BoxDecoration(
+              color: theme.colorScheme.primaryContainer,
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              Icons.auto_awesome_rounded,
+              size: 28,
+              color: theme.colorScheme.primary,
             ),
           ),
-          if (children.isNotEmpty) ...[
-            const SizedBox(height: 16),
-            ...children,
-          ],
+          const SizedBox(height: 18),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: theme.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            description,
+            textAlign: TextAlign.center,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+              height: 1.45,
+            ),
+          ),
+          if (children.isNotEmpty) ...[const SizedBox(height: 16), ...children],
         ],
       ),
     );
@@ -208,59 +243,88 @@ class AssistantMessageCard extends StatelessWidget {
     final onBubbleColor = isUser
         ? theme.colorScheme.onPrimaryContainer
         : theme.colorScheme.onSurface;
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: bubbleColor,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(
-                isUser ? Icons.person_outline : Icons.auto_awesome_outlined,
-                size: 16,
-                color: onBubbleColor,
-              ),
-              const SizedBox(width: 6),
-              Text(
-                isUser ? 'Bạn' : 'Gemini',
-                style: theme.textTheme.labelLarge?.copyWith(
-                  color: onBubbleColor,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              const Spacer(),
-              SizedBox(
-                width: 28,
-                height: 28,
-                child: IconButton(
-                  padding: EdgeInsets.zero,
-                  tooltip: 'Copy tin nhắn',
-                  iconSize: 16,
-                  color: onBubbleColor,
-                  onPressed: () => _copy(context),
-                  icon: const Icon(Icons.copy_outlined),
-                ),
-              ),
-            ],
+    return Align(
+      alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 680),
+        child: Container(
+          margin: EdgeInsets.only(
+            bottom: 14,
+            left: isUser ? 40 : 0,
+            right: isUser ? 0 : 40,
           ),
-          const SizedBox(height: 10),
-          SimpleMarkdown(
-            data: text,
-            baseStyle: theme.textTheme.bodyLarge?.copyWith(
-              color: onBubbleColor,
-              height: 1.5,
+          padding: const EdgeInsets.fromLTRB(16, 12, 14, 14),
+          decoration: BoxDecoration(
+            color: bubbleColor,
+            borderRadius: BorderRadius.only(
+              topLeft: const Radius.circular(18),
+              topRight: const Radius.circular(18),
+              bottomLeft: Radius.circular(isUser ? 18 : 5),
+              bottomRight: Radius.circular(isUser ? 5 : 18),
+            ),
+            border: Border.all(
+              color: isUser
+                  ? theme.colorScheme.primary.withValues(alpha: .12)
+                  : theme.colorScheme.outlineVariant.withValues(alpha: .7),
             ),
           ),
-          if (footer != null) ...[
-            const SizedBox(height: 10),
-            footer!,
-          ],
-        ],
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(
+                      color: isUser
+                          ? theme.colorScheme.primary.withValues(alpha: .12)
+                          : theme.colorScheme.primaryContainer,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      isUser
+                          ? Icons.person_rounded
+                          : Icons.auto_awesome_rounded,
+                      size: 13,
+                      color: onBubbleColor,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    isUser ? 'Bạn' : 'Gemini',
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      color: onBubbleColor,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const Spacer(),
+                  SizedBox(
+                    width: 28,
+                    height: 28,
+                    child: IconButton(
+                      padding: EdgeInsets.zero,
+                      tooltip: 'Copy tin nhắn',
+                      iconSize: 15,
+                      color: onBubbleColor.withValues(alpha: .72),
+                      onPressed: () => _copy(context),
+                      icon: const Icon(Icons.copy_rounded),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 9),
+              SimpleMarkdown(
+                data: text,
+                baseStyle: theme.textTheme.bodyMedium?.copyWith(
+                  color: onBubbleColor,
+                  height: 1.5,
+                ),
+              ),
+              if (footer != null) ...[const SizedBox(height: 10), footer!],
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -302,7 +366,8 @@ class AssistantComposer extends StatelessWidget {
     required VoidCallback onSend,
   }) {
     return (node, event) {
-      final isEnter = event.logicalKey == LogicalKeyboardKey.enter ||
+      final isEnter =
+          event.logicalKey == LogicalKeyboardKey.enter ||
           event.logicalKey == LogicalKeyboardKey.numpadEnter;
       if (event is! KeyDownEvent ||
           !isEnter ||
@@ -322,15 +387,13 @@ class AssistantComposer extends StatelessWidget {
         maxHeight: MediaQuery.sizeOf(context).height * .35,
       ),
       child: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ...top,
             if (busy) ...[
-              const LinearProgressIndicator(
-                semanticsLabel: 'Đang chờ Gemini',
-              ),
+              const LinearProgressIndicator(semanticsLabel: 'Đang chờ Gemini'),
               const SizedBox(height: 8),
               Semantics(
                 liveRegion: true,
@@ -338,35 +401,71 @@ class AssistantComposer extends StatelessWidget {
               ),
               const SizedBox(height: 8),
             ],
-            TextField(
-              controller: controller,
-              focusNode: focusNode,
-              readOnly: busy,
-              minLines: 1,
-              maxLines: 4,
-              maxLength: maxLength,
-              decoration: InputDecoration(
-                labelText: label,
-                helperText: 'Enter để gửi · Shift+Enter để xuống dòng',
-                border: const OutlineInputBorder(),
-                counterText: '',
+            if (secondaryActions.isNotEmpty) ...[
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                alignment: WrapAlignment.end,
+                children: secondaryActions,
               ),
-            ),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              alignment: WrapAlignment.end,
+              const SizedBox(height: 10),
+            ],
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                ...secondaryActions,
-                SizedBox(
-                  width: 120,
-                  child: ValueListenableBuilder(
-                    valueListenable: controller,
-                    builder: (context, value, _) => FilledButton.icon(
-                      onPressed: canSend(value.text) ? onSend : null,
-                      icon: const Icon(Icons.send_outlined),
-                      label: const Text('Gửi'),
+                Expanded(
+                  child: TextField(
+                    controller: controller,
+                    focusNode: focusNode,
+                    readOnly: busy,
+                    minLines: 1,
+                    maxLines: 4,
+                    maxLength: maxLength,
+                    decoration: InputDecoration(
+                      hintText: label,
+                      filled: true,
+                      fillColor: Theme.of(context).colorScheme.surface,
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 14,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16),
+                        borderSide: BorderSide(
+                          color: Theme.of(context).colorScheme.outlineVariant,
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16),
+                        borderSide: BorderSide(
+                          color: Theme.of(context).colorScheme.outlineVariant,
+                        ),
+                      ),
+                      counterText: '',
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                ValueListenableBuilder(
+                  valueListenable: controller,
+                  builder: (context, value, _) => Tooltip(
+                    message: 'Gửi tin nhắn',
+                    child: SizedBox.square(
+                      dimension: 46,
+                      child: FilledButton(
+                        style: FilledButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                        ),
+                        onPressed: canSend(value.text) ? onSend : null,
+                        child: const Icon(
+                          Icons.send_rounded,
+                          size: 20,
+                          semanticLabel: 'Gửi',
+                        ),
+                      ),
                     ),
                   ),
                 ),
