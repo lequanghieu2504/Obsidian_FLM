@@ -51,4 +51,26 @@ void main() {
     expect(records, hasLength(3));
     expect(records.last.subjectCode, 'DXD391c');
   });
+
+  test('parses raw FAP export with header row in thead/th', () async {
+    const fapHtml = """<Table class='table'><thead class='thead-inverse'><tr><th>No</th><th>Term</th><th>Semester</th><th>Subject Code</th><th>prerequisite</th><th>Replaced Subject</th><th>Subject Name</th><th>Credit</th><th>Grade</th><th>Status</th><th></th></tr></thead>
+<tbody><tr><td>1</td><td>0</td><td>Fall2023</td><td>VOV114</td><td></td><td></td><td>Vovinam 1</td><td>2</td><td><span class='label'>8.3</span></td><td><span class='label'>Passed</span></td><td><span style='color:red'>*</span></td></tr></tbody></Table>
+<Table class='table'><thead><tr><th>No</th><th>Semester</th><th>SubjectCode</th><th>SubjectName</th><th>Credit</th><th>Grade</th><th>Status</th></tr></thead>
+<tbody><tr><td>1</td><td>Fall2023</td><td>TRS403</td><td>English 4</td><td>0</td><td><span>6.4</span></td><td><span>Passed</span></td></tr></tbody><Table>""";
+    final bytes = <int>[0xFF, 0xFE];
+    for (final codeUnit in fapHtml.codeUnits) {
+      bytes
+        ..add(codeUnit & 0xFF)
+        ..add(codeUnit >> 8);
+    }
+    final file = await writeFixture(bytes);
+
+    final records = await TranscriptParser.parseTranscript(file.path);
+    expect(records, hasLength(2));
+    expect(records[0].subjectCode, 'VOV114');
+    expect(records[0].grade, '8.3');
+    expect(records[0].isScored, isFalse);
+    expect(records[1].subjectCode, 'TRS403');
+    expect(records[1].status, 'Passed');
+  });
 }

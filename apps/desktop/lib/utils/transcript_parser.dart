@@ -91,13 +91,15 @@ class TranscriptParser {
     final htmlString = _decodeHtml(bytes);
 
     final document = parser.parse(htmlString);
-    final rows = document.querySelectorAll('tbody tr');
+    // FAP puts the header row in <thead> as <th> cells, so scan every row
+    // and read both th and td (the file also holds a second table).
+    final rows = document.querySelectorAll('tr');
 
     final records = <TranscriptRecord>[];
     Map<String, int>? columns;
 
     for (var row in rows) {
-      final tds = row.querySelectorAll('td');
+      final tds = row.querySelectorAll('th, td');
       if (tds.isEmpty) continue;
       final cells = _logicalCells(tds);
 
