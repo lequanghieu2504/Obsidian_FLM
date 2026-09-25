@@ -192,14 +192,14 @@ class _TranscriptScreenState extends State<TranscriptScreen> {
                           _buildStatCard('Tín chỉ', '$passedCredits', Icons.military_tech),
                           const SizedBox(width: 16),
                           _buildStatCard('GPA Hiện tại', currentGPA.toStringAsFixed(2), Icons.grade),
-                          if (estimatedGPA != currentGPA) ...[
-                            const SizedBox(width: 16),
-                            _buildStatCard(
-                                'GPA Ước tính',
-                                estimatedGPA.toStringAsFixed(2),
-                                Icons.trending_up,
-                                color: AppColors.warning),
-                          ],
+                          // if (estimatedGPA != currentGPA) ...[
+                          //   const SizedBox(width: 16),
+                          //   _buildStatCard(
+                          //       'GPA Ước tính',
+                          //       estimatedGPA.toStringAsFixed(2),
+                          //       Icons.trending_up,
+                          //       color: AppColors.warning),
+                          // ],
                           const SizedBox(width: 24),
                           Expanded(
                             flex: 2,

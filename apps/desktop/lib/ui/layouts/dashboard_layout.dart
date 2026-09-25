@@ -406,6 +406,16 @@ class _DashboardLayoutState extends State<DashboardLayout> {
                     onTabSelected: _selectTab,
                     onTabClosed: _closeTab,
                     onAddTab: _showAddTabDialog,
+                    onToggleAssistant: () {
+                      setState(() {
+                        if (_selectedIndex == 2 && _isChatOverlay) {
+                          _selectedIndex = _lastMainIndex;
+                        } else {
+                          _selectedIndex = 2;
+                          _isChatOverlay = true;
+                        }
+                      });
+                    },
                   ),
 
                   // Active Tab Content Viewport

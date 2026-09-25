@@ -604,9 +604,45 @@ class _CollapsedChatButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tooltip(
       message: 'Expand chat',
-      child: IconButton.filledTonal(
-        onPressed: onExpand,
-        icon: const Icon(Icons.chat_bubble_outline),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onExpand,
+          borderRadius: BorderRadius.circular(12),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [Color(0xFF2563EB), Color(0xFF3B82F6)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFF2563EB).withOpacity(0.25),
+                  blurRadius: 8,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 18),
+                SizedBox(width: 6),
+                Text(
+                  'AI Chat',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
