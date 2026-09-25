@@ -36,6 +36,7 @@ class AppTabBar extends StatelessWidget {
   final VoidCallback onAddTab;
   final VoidCallback? onGoBack;
   final VoidCallback? onGoForward;
+  final VoidCallback? onToggleAssistant;
   final bool canGoBack;
   final bool canGoForward;
 
@@ -48,6 +49,7 @@ class AppTabBar extends StatelessWidget {
     required this.onAddTab,
     this.onGoBack,
     this.onGoForward,
+    this.onToggleAssistant,
     this.canGoBack = false,
     this.canGoForward = false,
   });
@@ -106,7 +108,53 @@ class AppTabBar extends StatelessWidget {
             constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
             color: AppColors.textMain,
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 6),
+
+          // Always Visible [ 💬 Trợ lý ] Button on Top-Right Corner
+          if (onToggleAssistant != null) ...[
+            Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: onToggleAssistant,
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: const Color(0xFFCBD5E1)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.04),
+                        blurRadius: 4,
+                        offset: const Offset(0, 1),
+                      ),
+                    ],
+                  ),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        Icons.chat_bubble_outline_rounded,
+                        size: 15,
+                        color: Color(0xFF334155),
+                      ),
+                      SizedBox(width: 6),
+                      Text(
+                        'Trợ lý',
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFF334155),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+          ],
         ],
       ),
     );
